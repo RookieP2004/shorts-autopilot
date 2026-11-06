@@ -38,7 +38,8 @@ DEFAULT_STYLE = {
 ENTER = {"none", "pop", "fade", "slide_up", "slide_down", "slide_left", "slide_right",
          "zoom", "drop", "typewriter"}
 LOOP = {"none", "bob", "pulse", "shake", "spin", "float", "wiggle"}
-LAYER_TYPES = {"character", "text", "shape", "image", "counter"}
+LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d"}
+SHAPES3D = {"box", "sphere", "cylinder", "cone", "plane", "terrain", "person", "tree", "building"}
 SHAPES = {"circle", "ring", "rect", "arrow", "line", "burst"}
 TRANSITIONS = {"cut", "fade", "slide_left", "slide_up", "zoom", "flash"}
 SFX = {"pop", "whoosh", "ding", "click", "boom", "riser", "none"}
@@ -162,6 +163,12 @@ def validate_job(job, style, chars, root=ROOT):
                     errs.append(f"{w}: image needs 'svg' (inline) or 'path'")
                 elif L.get("path") and not os.path.exists(os.path.join(root, L["path"])):
                     errs.append(f"{w}: file {L['path']} not found")
+            elif t == "scene3d":
+                for k, o in enumerate(L.get("objects", [])):
+                    if o.get("shape", "box") not in SHAPES3D:
+                        errs.append(f"{w}: 3D object {k} shape '{o.get('shape')}' not in {sorted(SHAPES3D)}")
+                if not L.get("objects"):
+                    errs.append(f"{w}: scene3d needs 'objects'")
             elif t == "counter" and "to" not in L:
                 errs.append(f"{w}: counter needs 'to'")
     return errs

@@ -10,7 +10,8 @@ channel/style.json     locked look + sound (palette, fonts, captions, voice, mus
 channel/docs.json      links to the 4 Google Docs (bible, log, insights, ideas)
 characters/ved/        Professor Ved: make.py (one base drawing -> every pose) + character.json
 assets/bg/             The Vast World sets: study, world, cosmos (make_backgrounds.py)
-docs/sheets/           character model sheet + look & lighting bible (scripts/build_sheets.py)
+docs/sheets/           character model sheet, look & lighting bible, 3D guide (scripts/build_sheets.py)
+autopilot/three.py     simple 3D layer: low-poly scenes, faceless people, camera moves (no GPU)
 jobs/<id>/job.json     one video (kept as a record)
 jobs/_templates/       one skeleton per format
 docs/job-spec.md       job.json reference

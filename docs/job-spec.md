@@ -22,6 +22,8 @@ Render it with `python -m autopilot render`, then publish with `scripts/push_med
   "publish_at": "2026-11-07T13:30:00Z",          // optional scheduled publish (forces private until then)
   "speaker": "host",                             // default speaker for scenes
   "music": {"style": "lofi"},                    // optional per-video override (avoid: consistency)
+  "style_override": {"captions": {"y": 0.38}},   // ONE-OFF changes for this video only (deep-merged over style.json)
+                                                 // also record them in meta.overrides (plain words) for the log
   "scenes": [ /* see below */ ]
 }
 ```
@@ -64,6 +66,18 @@ Mouth uses `<pose>_talk.svg` while this character speaks; blinks with `<pose>_bl
 ### type: shape
 `shape`: `circle` `ring` `rect` `arrow` (points right; use `rotate`) `line` `burst`;
 `w`, `h` (0–1 of width), `color`, `stroke_width`, `radius`, `outline`.
+
+### type: scene3d  (simple 3D, drawn in code)
+Usually a full-frame backdrop or a cutaway: `x` 0.5, `y` 0.5, `w` 1, `h` 1 (fractions of the frame).
+`sky`: 2–3 colours top→bottom (omit for transparent), `fog`: `{color, near, far, max}` (distance fades to it),
+`camera`: `{pos:[x,y,z], target:[x,y,z], fov, orbit: deg/s, dolly:[from,to], move:{to, target_to, dur}}`,
+`objects`: list of `{shape, pos, rot, scale, color, ...}`:
+- `person` faceless mannequin: `color` (clothes), `legs`, `skin`, `walk` (steps/s), `travel` (m/s forward),
+  `action`: `idle` `wave` `point` `cheer`, `height`, `phase` (desync crowds)
+- `building` (`w`,`d`,`h`,`roof`,`windows`), `tree` (`seed`), `terrain` (`w`,`d`,`n`,`height`,`seed`,`flat_center`),
+  `plane` (`w`,`d`), `box` (`size`), `sphere` (`r`), `cylinder`/`cone` (`r`,`h`)
+- animation on any object: `spin:[dx,dy,dz]` deg/s, `bob`, `move:{to, dur, at}`
+Units are metres; y is up; a person is 1.75 tall. Light comes from the upper-left like the 2D sets.
 
 ### type: image
 `svg` (inline SVG string, preferred: draw props yourself) or `path` (repo file), `w` (0–1 of width).

@@ -184,6 +184,10 @@ def layer_image(ctx, L, scene_idx, t, scene, reveal):
     if typ == "shape":
         svg, w = sprites.shape_svg(st, L, ctx.W, ctx.H)
         return sprites.svg_image(svg, w)
+    if typ == "scene3d":
+        from .three import render as render3d
+        return render3d(ctx.style, L, t - L.get("at", 0.0), ctx.dur[scene_idx],
+                        int(L.get("w", 1.0) * ctx.W), int(L.get("h", 1.0) * ctx.H), L.get("ss", 2))
     if typ == "image":
         svg = L.get("svg") or sprites.read_file(os.path.join(ctx.root, L["path"]))
         return sprites.svg_image(svg, L.get("w", 0.4) * W)

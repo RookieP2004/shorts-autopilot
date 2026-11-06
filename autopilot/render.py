@@ -12,7 +12,7 @@ import numpy as np
 
 from . import audio
 from .scene import render_frame
-from .spec import ROOT, load_characters, load_style, validate_job, load_json
+from .spec import ROOT, deep_merge, load_characters, load_style, validate_job, load_json
 
 
 class Ctx:
@@ -166,7 +166,7 @@ def mix(ctx):
 def render(job_path, out_dir, root=ROOT, workers=None, log=print):
     global _CTX
     job = load_json(job_path)
-    style = load_style(root)
+    style = deep_merge(load_style(root), job.get("style_override", {}))  # one-off, this video only
     chars = load_characters(root)
     errs = validate_job(job, style, chars, root)
     if errs:
@@ -230,7 +230,7 @@ def draw_guides(img, style):
 def frames(job_path, out_dir, times=None, root=ROOT, log=print, guides=True):
     """Draw stills for review. times=None -> the busiest moment of every scene."""
     job = load_json(job_path)
-    style = load_style(root)
+    style = deep_merge(load_style(root), job.get("style_override", {}))  # one-off, this video only
     chars = load_characters(root)
     errs = validate_job(job, style, chars, root)
     if errs:

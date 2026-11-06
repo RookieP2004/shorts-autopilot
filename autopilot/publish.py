@@ -43,4 +43,6 @@ def log_line(job_path, youtube_id=""):
     now = dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).strftime("%Y-%m-%d %H:%M IST")
     cells = [job["id"], now, job["title"], m.get("format", ""), m.get("hook", ""), m.get("topic", ""),
              f"{dur}s" if dur else "", url, youtube_id]
+    if m.get("overrides"):
+        cells.append("one-off: " + m["overrides"])
     return " | ".join(str(c).replace("|", "/") for c in cells)

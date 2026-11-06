@@ -58,7 +58,7 @@ def character_sheet():
     d = ImageDraw.Draw(c)
     d.text((120, 70), "PROFESSOR VED", font=F(SERIF, 120), fill=INK)
     label(d, (124, 210), "Character model sheet  ·  Main explainer  ·  The Vast World", 40, SEMI, ACCENT)
-    label(d, (124, 268), "Older, wise, unhurried. Explains the world like a favourite teacher: warm, precise, a little playful.",
+    label(d, (124, 268), "Late 20s to early 30s. Sharp, calm, wise beyond his years: explains the world like your favourite teacher.",
           32, SEMI, MUTED)
 
     # turnaround with proportion guides
@@ -107,9 +107,9 @@ def character_sheet():
           24, SEMI, MUTED)
 
     # palette strip
-    pal = [("Skin", ved.SKIN), ("Silver hair", ved.HAIR), ("Spectacles", ved.GOLD), ("Navy suit", ved.JACKET),
+    pal = [("Skin", ved.SKIN), ("Hair", ved.HAIR), ("Beard", ved.BEARD), ("Spectacles", ved.GOLD), ("Navy suit", ved.JACKET),
            ("Waistcoat", ved.VEST), ("Tie", ved.TIE), ("Shirt", ved.SHIRT), ("Trousers", ved.TROUSER),
-           ("Shoes", ved.SHOE), ("Line", ved.LINE), ("Rim light", ved.RIM)]
+           ("Line", ved.LINE), ("Rim light", ved.RIM)]
     x0, y0 = 100, 2530
     for i, (nm, hx) in enumerate(pal):
         x = x0 + i * 350
@@ -204,7 +204,7 @@ def style_guide():
         x = 1430 + i * 490
         paste(c, im, (x + 60, 450))
         label(d, (x + 210, 770), nm, 28, BOLD, INK, "ma")
-    label(d, (1410, 812), "Shadow = base × 0.68, pushed 28% toward cool blue  ·  Silver hair & beard: softer shadow (× 0.8)",
+    label(d, (1410, 812), "Shadow = base × 0.68, pushed 28% toward cool blue  ·  Hair & beard: softer shadow (× 0.8) + light sheen strands",
           24, SEMI, MUTED)
 
     # 3 line weights
@@ -268,6 +268,90 @@ def style_guide():
     return p
 
 
+def three_d_guide():
+    from autopilot import three
+    from autopilot.spec import load_style
+    st = load_style()
+    Wc, Hc = 4000, 2500
+    c = Image.new("RGBA", (Wc, Hc), PAPER + (255,))
+    d = ImageDraw.Draw(c)
+    d.text((120, 70), "THE VAST WORLD  ·  3D", font=F(SERIF, 120), fill=INK)
+    label(d, (124, 210), "Simple 3D mixed with the 2D style: faceless people, easy locations, same light", 40, SEMI, ACCENT)
+
+    card(d, (100, 300, 2440, 1240))
+    heading(d, (150, 330), "1  Faceless people  (shape: person)")
+    acts = [("idle", 0, 0, "idle"), ("walk", 1.6, 0.25, "walk"), ("walk", 1.6, 0.55, "walk (other foot)"),
+            ("wave", 0, 0.2, "wave"), ("point", 0, 0, "point"), ("cheer", 0, 0.1, "cheer")]
+    cols = ["#7c2533", "#3c6e70", "#3c6e70", "#d9a441", "#6e4b33", "#34425c"]
+    for i, ((act, walk, tt, nm), col) in enumerate(zip(acts, cols)):
+        L = {"sky": ["#efe6d6", "#e2d6c0"], "fog": {"color": "#e2d6c0", "near": 30, "far": 60, "max": 0},
+             "camera": {"pos": [2.2, 1.4, 4.6], "target": [0, 0.95, 0], "fov": 36},
+             "objects": [{"shape": "plane", "w": 6, "d": 6, "color": "#cbbd9f"},
+                         {"shape": "person", "action": "idle" if act == "walk" else act, "walk": walk,
+                          "color": col, "legs": "#3a3e48", "rot": [0, 20, 0]}]}
+        im = three.render(st, L, tt, 1.0, 340, 640, 2)
+        c.alpha_composite(im, (150 + i * 375, 440))
+        label(d, (150 + i * 375 + 170, 1100), nm, 28, BOLD, INK, "ma")
+    label(d, (150, 1160), "No faces, ever: silhouette + clothing colour tell the story. Skin tones vary. Crowds: set a different phase per person.",
+          24, SEMI, MUTED)
+
+    card(d, (2500, 300, 3900, 1240))
+    heading(d, (2550, 330), "2  Rules")
+    rules = ["Ved is always 2D, in front. 3D sits behind him",
+             "   or fills cutaways (crowds, scale, places).",
+             "Same key light: upper-left, warm. Cool shadows.",
+             "Low-poly flat shading, no outlines on 3D.",
+             "Fog = sky colour: far things fade (aerial depth).",
+             "Camera: slow. Orbit ≤ 8°/s, gentle dolly.",
+             "Palette only: clothes in the channel colours.",
+             "Keep it simple: ≤ 40 objects, ≤ 12 people.",
+             "One 3D shot per video, at most two.",
+             "The colour grade runs over 2D and 3D alike."]
+    for i, r in enumerate(rules):
+        label(d, (2560, 450 + i * 74), r, 30, SEMI if r.startswith("   ") else BOLD, INK if not r.startswith("   ") else MUTED)
+
+    card(d, (100, 1290, 3900, 2420))
+    heading(d, (150, 1320), "3  Easy locations")
+    town = {"sky": ["#3e6f8e", "#9fc0c4", "#f3cf96"], "fog": {"color": "#e9dcc4", "near": 14, "far": 70, "max": 0.8},
+            "camera": {"pos": [0, 3.0, 13], "target": [0, 1.6, 0], "fov": 46},
+            "objects": [{"shape": "terrain", "w": 140, "d": 140, "n": 28, "height": 8, "seed": 4, "flat_center": 14, "color": "#6f8a45"},
+                        {"shape": "plane", "w": 6, "d": 40, "color": "#b9a88f", "pos": [0, 0.02, -8]},
+                        {"shape": "building", "pos": [-6, 0, -10], "h": 9, "color": "#cdb796"},
+                        {"shape": "building", "pos": [6.5, 0, -14], "h": 13, "w": 5, "color": "#a9b3b8", "roof": "#34425c"},
+                        {"shape": "tree", "pos": [4, 0, -3], "seed": 1}, {"shape": "tree", "pos": [-4.5, 0, -2], "seed": 2},
+                        {"shape": "person", "pos": [-1.2, 0, -4], "walk": 1.6, "color": "#7c2533", "legs": "#3a3e48"},
+                        {"shape": "person", "pos": [1.2, 0, 1], "rot": [0, 180, 0], "walk": 1.5, "color": "#3c6e70", "phase": 1.3}]}
+    land = {"sky": ["#2f5f80", "#9fc0c4", "#f0a56c"], "fog": {"color": "#efd2a8", "near": 10, "far": 90, "max": 0.85},
+            "camera": {"pos": [0, 3.2, 16], "target": [0, 4.5, -20], "fov": 50},
+            "objects": [{"shape": "terrain", "w": 260, "d": 260, "n": 36, "height": 26, "seed": 9, "flat_center": 30, "color": "#5f7a3c"}]
+            + [{"shape": "tree", "pos": [x, 0, z], "seed": k} for k, (x, z) in enumerate([(-6, 2), (5, -4), (-9, -10), (8, 4), (2, -14)])]
+            + [{"shape": "person", "pos": [0, 0, 6], "rot": [0, 180, 0], "action": "cheer", "color": "#d9a441", "legs": "#34425c"}]}
+    space = {"sky": ["#070b1e", "#141640", "#241a3e"], "fog": {"color": "#141640", "near": 30, "far": 90, "max": 0.5},
+             "camera": {"pos": [0, 1.5, 14], "target": [0, 1.5, 0], "fov": 45},
+             "objects": [{"shape": "sphere", "r": 3, "pos": [2.5, 2.5, -4], "color": "#e9a066"},
+                         {"shape": "sphere", "r": 1.2, "pos": [-3.5, 4, -2], "color": "#8fb6c8"},
+                         {"shape": "sphere", "r": 0.5, "pos": [-1.5, 0.5, 3], "color": "#d3cec7"},
+                         {"shape": "cylinder", "r": 4, "h": 0.4, "r2": 3.4, "pos": [0, -2.2, 2], "color": "#6b6a78"},
+                         {"shape": "person", "pos": [0, -1.8, 3], "rot": [0, 160, 0], "action": "point", "color": "#3c6e70"}]}
+    for i, (L, nm) in enumerate(((town, "Town / street"), (land, "Open land"), (space, "Objects & space"))):
+        im = three.render(st, L, 0.6, 2.0, 420, 746, 2)
+        c.alpha_composite(im, (170 + i * 520, 1430))
+        label(d, (170 + i * 520 + 210, 2190), nm, 28, BOLD, INK, "ma")
+    fr = Image.open("/tmp/vout2/mixframe.png").convert("RGBA") if os.path.exists("/tmp/vout2/mixframe.png") else None
+    if fr:
+        c.alpha_composite(fr.resize((420, 746)), (1830, 1430))
+        label(d, (2040, 2190), "Mixed: 2D Ved + 3D scene", 28, BOLD, ACCENT, "ma")
+    label(d, (2350, 1440), "Build a location from parts:", 30, BOLD, INK)
+    for i, t in enumerate(["terrain  - hills that fade into fog", "plane  - roads, floors, rivers", "building  - walls, roof, lit windows",
+                           "tree  - three stacked cones", "sphere / box / cylinder / cone", "person  - faceless crowd member",
+                           "", "Animate: spin, bob, move, walk + travel,", "camera orbit / dolly / move"]):
+        label(d, (2350, 1500 + i * 52), t, 28, SEMI, MUTED)
+    p = os.path.join(OUT, "vast_world_3d_guide.png")
+    c.convert("RGB").save(p, quality=92)
+    return p
+
+
 if __name__ == "__main__":
     print(character_sheet())
     print(style_guide())
+    print(three_d_guide())
