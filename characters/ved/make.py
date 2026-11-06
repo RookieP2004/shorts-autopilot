@@ -1,42 +1,43 @@
-"""Professor Ved - the channel's explainer (late 20s to early 30s: young, sharp, calm, wise beyond his years).
+"""Professor Ved - the channel's explainer.  Style v8: clean flat-vector illustration.
 
-Semi-realistic 2D ("animated imitation of the real world"). Every pose is generated from the SAME
-parts below, so he never drifts between videos. Style rules baked in:
-  * key light: warm, from upper-left  -> shadows fall on his right side (viewer's right)
-  * shadows: one hard-edged cel shadow per part, colour = base darkened and pushed toward cool blue
-  * highlights: small warm sheen on the lit side; cool rim light on the right contour
-  * lines: warm dark brown, never black; outer contour 4.5, inner detail 2.2, fine detail 1.3
-Run:  python make.py        -> writes every pose SVG next to this file
+Look: 25 years old, handsome, athletic. Black hair in a swept-up quiff with a skin fade, crisp full beard
+and a distinct moustache (they meet at the mouth corners; clean skin right below the lower lip), slightly
+narrow jaw. White shirt, top button open, sleeves folded below the elbow; black trousers, belt, shoes;
+gold watch on his left wrist.
+
+Rendering rules (same light as every set: warm key from the viewer's left):
+  * NO outlines. Forms are separated by tone only.
+  * Two-tone flat shading per surface: base + one hard-edged shadow plane (viewer's right),
+    plus a small warm highlight plane on the lit side. Shadows are cool (pushed toward blue).
+  * Features (eyes, brows, nostrils, lips) are drawn as dark shapes, not lines.
+Every pose is generated from the SAME parts below, so he never drifts.   Run: python make.py
 """
 import math
 import os
+import re
 
 D = os.path.dirname(os.path.abspath(__file__))
-W, H = 600, 1400
+W, H = 600, 1500
 
 # ---------------- palette ----------------
-LINE = "#2b1d16"
-SKIN = "#dba077"
-HAIR = "#17171c"
-BEARD = "#3a2c26"
-SHEEN = "#5d6680"
-BROW = "#18171a"
-IRIS = "#5a3a22"
-SHIRT = "#fbf9f4"
-BELT = "#17140f"
+SKIN = "#e7b089"
+HAIR = "#16161b"
+BEARD = "#1d1919"
+SHEEN = "#474b5a"
+BROW = "#141317"
+IRIS = "#4a2e1c"
+LIPS = "#c27f6c"
+SHIRT = "#f8f8f6"
+TROUSER = "#24272e"
+BELT = "#141416"
 SILVER = "#c9ccd1"
-STRAP = "#3a2a20"
-TIE = "#7c2533"
-VEST = "#6e4b33"
-JACKET = "#34425c"
-TROUSER = "#262a33"
-SHOE = "#1a1412"
+SHOE = "#18181b"
 GOLD = "#d4a64a"
-SQUARE = "#d9a441"
+STRAP = "#3a2a20"
+LINE = "#2b1d16"          # only used for tiny details now (kept for sheet palette)
 RIM = "#bfe6ff"
 KEY = "#fff1d6"
 COOL = (46, 58, 110)
-LW_OUT, LW_IN, LW_FINE = 4.5, 2.2, 1.3
 
 
 def rgb(h):
@@ -48,19 +49,18 @@ def hexc(c):
     return "#%02x%02x%02x" % tuple(max(0, min(255, int(round(v)))) for v in c)
 
 
-def shade(c, k=0.76, cool=0.22):
+def mix(a, b, t):
+    A, B = rgb(a), rgb(b)
+    return hexc([A[i] * (1 - t) + B[i] * t for i in range(3)])
+
+
+def shade(c, k=0.8, cool=0.2):
     r = rgb(c)
     return hexc([r[i] * k * (1 - cool) + COOL[i] * cool for i in range(3)])
 
 
-def soft_shade(c, soft):
-    if soft == "white":
-        return shade(c, 0.92, 0.12)
-    return shade(c, 0.8, 0.22) if soft else shade(c)
-
-
 def deep(c):
-    return shade(c, 0.5, 0.35)
+    return shade(c, 0.62, 0.3)
 
 
 def light(c, k=0.3):
@@ -68,110 +68,77 @@ def light(c, k=0.3):
     return hexc([r[i] * (1 - k) + w[i] * k for i in range(3)])
 
 
+SKIN_SH, SKIN_DEEP, SKIN_HL = shade(SKIN), deep(SKIN), light(SKIN, 0.35)
+SHIRT_SH, SHIRT_DEEP = "#d6dbe5", "#bcc3d1"
+TROUSER_SH, TROUSER_HL = "#16181d", "#3a3f4b"
+
+
 class Svg:
     def __init__(self):
         self.defs, self.body, self.n = [], [], 0
-        # one light falloff for the whole figure: warm top-left -> cool dark bottom-right
-        self.defs.append('<linearGradient id="form" gradientUnits="userSpaceOnUse" x1="170" y1="120" x2="470" y2="1500">'
-                         '<stop offset="0" stop-color="#fff1d6" stop-opacity="0.16"/>'
-                         '<stop offset="0.45" stop-color="#fff1d6" stop-opacity="0"/>'
-                         '<stop offset="1" stop-color="#0b1030" stop-opacity="0.18"/></linearGradient>')
-        # skin fade: hair colour at the top fading to bare skin lower down (sides and nape)
         self.defs.append(f'<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">'
                          f'<stop offset="0" stop-color="{HAIR}" stop-opacity="1"/>'
-                         f'<stop offset="0.5" stop-color="{HAIR}" stop-opacity="0.7"/>'
-                         f'<stop offset="1" stop-color="{HAIR}" stop-opacity="0.05"/></linearGradient>')
+                         f'<stop offset="0.55" stop-color="{HAIR}" stop-opacity="0.55"/>'
+                         f'<stop offset="1" stop-color="{HAIR}" stop-opacity="0"/></linearGradient>')
 
     def uid(self, p="c"):
         self.n += 1
         return f"{p}{self.n}"
 
-    def add(self, s):
-        self.body.append(s)
+    def add(self, x):
+        self.body.append(x)
 
-    def part(self, d, base, shadow=None, hl=None, lw=LW_OUT, deep_d=None, rim=None, line=True, soft=False):
-        """A filled shape with cel shadow / highlight clipped inside it, then its outline."""
+    def part(self, d, base, shadow=None, hl=None, deep_d=None, shadow_col=None, hl_col=None, deep_col=None,
+             line=False, **_):
+        """Flat shape with hard-edged shadow / highlight planes clipped inside it. No outline."""
         cid = self.uid()
         self.defs.append(f'<clipPath id="{cid}"><path d="{d}"/></clipPath>')
-        out = [f'<path d="{d}" fill="{base}"/>']
+        g = [f'<path d="{d}" fill="{base}"/>']
         inner = []
         if shadow:
-            inner.append(f'<path d="{shadow}" fill="{soft_shade(base, soft)}"/>')
+            inner.append(f'<path d="{shadow}" fill="{shadow_col or shade(base)}"/>')
         if deep_d:
-            inner.append(f'<path d="{deep_d}" fill="{deep(base)}"/>')
+            inner.append(f'<path d="{deep_d}" fill="{deep_col or deep(base)}"/>')
         if hl:
-            inner.append(f'<path d="{hl}" fill="{light(base)}" opacity="0.85"/>')
-        inner.append(f'<rect x="0" y="0" width="{W}" height="{H}" fill="url(#form)"/>')
-        out.append(f'<g clip-path="url(#{cid})">{"".join(inner)}</g>')
-        if line:
-            out.append(f'<path d="{d}" fill="none" stroke="{LINE}" stroke-width="{lw}" stroke-linejoin="round"/>')
-        if rim:
-            out.append(f'<path d="{rim}" fill="none" stroke="{RIM}" stroke-width="2.6" stroke-linecap="round" opacity="0.75"/>')
-        self.add("".join(out))
+            inner.append(f'<path d="{hl}" fill="{hl_col or light(base, 0.3)}"/>')
+        if inner:
+            g.append(f'<g clip-path="url(#{cid})">{"".join(inner)}</g>')
+        self.add("".join(g))
 
-    def line(self, d, w=LW_IN, color=LINE, op=1.0, cap="round"):
-        self.add(f'<path d="{d}" fill="none" stroke="{color}" stroke-width="{w}" stroke-linecap="{cap}" '
-                 f'stroke-linejoin="round" opacity="{op}"/>')
+    def line(self, d, w=2.0, color=None, op=1.0, cap="round"):
+        self.add(f'<path d="{d}" fill="none" stroke="{color or SKIN_DEEP}" stroke-width="{w}" '
+                 f'stroke-linecap="{cap}" stroke-linejoin="round" opacity="{op}"/>')
 
-    def tube(self, pts, width, base, shadow_side=1, soft=False, cap="round"):
-        """Limb: an outlined thick stroke along pts, with a cel shadow strip on one side."""
-        d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
-        self.add(f'<path d="{d}" fill="none" stroke="{LINE}" stroke-width="{width + 2 * LW_OUT}" '
-                 f'stroke-linecap="{cap}" stroke-linejoin="round"/>')
-        self.add(f'<path d="{d}" fill="none" stroke="{base}" stroke-width="{width}" stroke-linecap="{cap}" '
-                 f'stroke-linejoin="round"/>')
-        # shadow strip offset to the shadow side, perpendicular to each segment
-        segs = []
-        for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
-            L = math.hypot(x1 - x0, y1 - y0) or 1
-            nx, ny = -(y1 - y0) / L, (x1 - x0) / L
-            if nx < 0:
-                nx, ny = -nx, -ny  # always toward +x (viewer's right) = shadow side
-            o = width * 0.27 * shadow_side
-            segs.append(((x0 + nx * o, y0 + ny * o), (x1 + nx * o, y1 + ny * o)))
-        sd = "M" + " L".join(f"{a[0]:.1f},{a[1]:.1f}" for a, _ in segs) + f" L{segs[-1][1][0]:.1f},{segs[-1][1][1]:.1f}"
-        self.add(f'<path d="{sd}" fill="none" stroke="{soft_shade(base, soft)}" stroke-width="{width * 0.42}" '
-                 f'stroke-linecap="{cap}" stroke-linejoin="round"/>')
-        hd = "M" + " L".join(f"{x - width * 0.22:.1f},{y:.1f}" for x, y in pts)
-        self.add(f'<path d="{hd}" fill="none" stroke="{light(base, 0.18)}" stroke-width="{width * 0.12}" '
-                 f'stroke-linecap="{cap}" opacity="0.6"/>')
-
-    def grad(self, x1, y1, x2, y2, base, soft=False):
-        """Across-the-limb gradient: lit edge -> mid -> core shadow -> bounce light at the far edge."""
+    def two_tone(self, x1, y1, x2, y2, base, sh, split=0.58, hl=None):
+        """Across-the-limb gradient with a HARD edge: flat base, then flat shadow (flat-vector look)."""
         gid = self.uid("g")
-        sh = soft_shade(base, soft) if soft else shade(base)
-        stops = [(0, light(base, 0.28)), (0.18, light(base, 0.12)), (0.42, base), (0.66, base),
-                 (0.78, sh), (0.93, sh), (1, hexc([rgb(sh)[i] * 0.75 + rgb(RIM)[i] * 0.25 for i in range(3)]))]
+        stops = []
+        if hl:
+            stops += [(0, hl), (0.14, hl), (0.14, base)]
+        else:
+            stops += [(0, base)]
+        stops += [(split, base), (split, sh), (1, sh)]
         self.defs.append(f'<linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="{x1:.1f}" y1="{y1:.1f}" '
                          f'x2="{x2:.1f}" y2="{y2:.1f}">' +
                          "".join(f'<stop offset="{o}" stop-color="{c}"/>' for o, c in stops) + '</linearGradient>')
         return gid
 
-    def limb(self, pts, widths, base, soft=False):
-        """Tapered limb with round shading. pts: polyline, widths: one per point."""
-        def quad(a, b, wa, wb, pad=0.0):
+    def limb(self, pts, widths, base, sh, hl=None, split=0.58):
+        """Tapered limb, no outline, two-tone across its width (light from the viewer's left)."""
+        for i, (a, b, wa, wb) in enumerate(zip(pts, pts[1:], widths, widths[1:])):
             dx, dy = b[0] - a[0], b[1] - a[1]
             L = math.hypot(dx, dy) or 1
             nx, ny = -dy / L, dx / L
             if nx < 0:
                 nx, ny = -nx, -ny
-            ha, hb = wa / 2 + pad, wb / 2 + pad
-            return (f"M{a[0]-nx*ha:.1f},{a[1]-ny*ha:.1f} L{b[0]-nx*hb:.1f},{b[1]-ny*hb:.1f} "
-                    f"L{b[0]+nx*hb:.1f},{b[1]+ny*hb:.1f} L{a[0]+nx*ha:.1f},{a[1]+ny*ha:.1f} Z"), (nx, ny)
-        segs = list(zip(pts, pts[1:], widths, widths[1:]))
-        for a, b, wa, wb in segs:                                   # outline backdrop
-            d, _ = quad(a, b, wa, wb, LW_OUT)
-            self.add(f'<path d="{d}" fill="{LINE}"/>')
-        for p_, w in zip(pts[1:-1], widths[1:-1]):
-            self.add(f'<circle cx="{p_[0]:.1f}" cy="{p_[1]:.1f}" r="{w/2+LW_OUT:.1f}" fill="{LINE}"/>')
-        for i, (a, b, wa, wb) in enumerate(segs):                   # shaded fills
-            d, (nx, ny) = quad(a, b, wa, wb)
+            d = (f"M{a[0]-nx*wa/2:.1f},{a[1]-ny*wa/2:.1f} L{b[0]-nx*wb/2:.1f},{b[1]-ny*wb/2:.1f} "
+                 f"L{b[0]+nx*wb/2:.1f},{b[1]+ny*wb/2:.1f} L{a[0]+nx*wa/2:.1f},{a[1]+ny*wa/2:.1f} Z")
             m = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
             w = (wa + wb) / 2
-            gid = self.grad(m[0] - nx * w / 2, m[1] - ny * w / 2, m[0] + nx * w / 2, m[1] + ny * w / 2, base, soft)
+            gid = self.two_tone(m[0] - nx * w / 2, m[1] - ny * w / 2, m[0] + nx * w / 2, m[1] + ny * w / 2,
+                                base, sh, split, hl)
             if i > 0:
-                jp, jw = a, wa
-                self.add(f'<circle cx="{jp[0]:.1f}" cy="{jp[1]:.1f}" r="{jw/2:.1f}" fill="url(#{gid})"/>')
+                self.add(f'<circle cx="{a[0]:.1f}" cy="{a[1]:.1f}" r="{wa/2:.1f}" fill="url(#{gid})"/>')
             self.add(f'<path d="{d}" fill="url(#{gid})"/>')
 
     def svg(self):
@@ -180,8 +147,7 @@ class Svg:
 
 
 def mirror(d):
-    """Mirror an SVG path (absolute M/L/C/Q/Z commands, x,y pairs) around x=300."""
-    import re
+    """Mirror an absolute SVG path (M/L/C/Q/Z) around x=300."""
     out = []
     for tok in re.findall(r"[MLCQZ]|-?[\d.]+,-?[\d.]+", d):
         if "," in tok:
@@ -192,343 +158,238 @@ def mirror(d):
     return " ".join(out)
 
 
-def curls(cx, cy, rx, ry, a0, a1, n, amp=0.06, seed=3):
-    """Scalloped arc (wavy hair silhouette) from angle a0 to a1 (radians, y down). Returns 'L x,y Q ...' fragments."""
-    import random
-    rnd = random.Random(seed)
-    pts = []
-    for i in range(n + 1):
-        a = a0 + (a1 - a0) * i / n
-        k = 1 + rnd.uniform(-0.02, 0.03)
-        pts.append((cx + rx * k * math.cos(a), cy + ry * k * math.sin(a)))
-    d = f"{pts[0][0]:.1f},{pts[0][1]:.1f}"
-    out = []
-    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
-        mx, my = (x0 + x1) / 2, (y0 + y1) / 2
-        ox, oy = mx - cx, my - cy
-        L = math.hypot(ox, oy) or 1
-        b = (amp + rnd.uniform(0, amp * 0.6)) * max(rx, ry)
-        out.append(f"Q{mx + ox / L * b:.1f},{my + oy / L * b:.1f} {x1:.1f},{y1:.1f}")
-    return d, " ".join(out)
-
-
 # =====================================================================================
 #  HEAD (front)
 # =====================================================================================
-FACE = ("M300,50 C352,50 380,86 382,128 C384,158 380,182 372,200 L358,228 C344,248 324,260 300,262 "
-        "C276,260 256,248 242,228 L228,200 C220,182 216,158 218,128 C220,86 248,50 300,50 Z")
+FACE = ("M300,64 C341,64 369,88 370,126 C372,152 370,176 364,196 L355,216 C343,234 324,247 300,249 "
+        "C276,247 257,234 245,216 L236,196 C230,176 228,152 230,126 C231,88 259,64 300,64 Z")
+BROWS = {"neutral": (0, 0), "warm": (-2, 1), "smile": (-2, 1), "talk": (-2, 0), "talk2": (-1, 0),
+         "think": (5, 0), "surprised": (-10, -7), "serious": (6, -1), "laugh": (-3, 2)}
 
 
 def head(s, expr="neutral", blink=False, look=(0, 0)):
-    # ears (short hair leaves them visible)
-    ear = "M226,132 C212,122 203,132 205,149 C207,165 217,176 230,172 Z"
-    s.part(ear, SKIN, shadow="M190,150 L240,150 L240,190 L190,190 Z", lw=LW_IN + 0.8)
-    s.part(mirror(ear), SKIN, shadow="M360,110 L410,110 L410,190 L360,190 Z", lw=LW_IN + 0.8)
-    s.line("M212,140 C208,150 210,162 218,168", LW_FINE, op=0.6)
-    s.line("M388,140 C392,150 390,162 382,168", LW_FINE, op=0.6)
-
-    # face
+    # ears
+    ear = "M233,134 C222,128 215,136 216,152 C217,166 224,176 236,174 Z"
+    s.part(ear, SKIN, shadow="M200,160 L240,160 L240,190 L200,190 Z", shadow_col=SKIN_SH)
+    s.part(mirror(ear), SKIN, shadow="M360,120 L400,120 L400,190 L360,190 Z", shadow_col=SKIN_SH)
+    s.add(f'<path d="M226,142 C222,150 223,160 228,166 L230,164 C227,158 226,150 229,144 Z" fill="{SKIN_DEEP}" opacity="0.6"/>')
+    s.add(f'<path d="{mirror("M226,142 C222,150 223,160 228,166 L230,164 C227,158 226,150 229,144 Z")}" fill="{SKIN_DEEP}" opacity="0.7"/>')
+    # neck (shadowed by the jaw)
+    s.part("M266,220 L266,304 L334,304 L334,220 Z", SKIN,
+           shadow="M308,210 L340,210 L340,310 L308,310 Z", shadow_col=SKIN_SH,
+           deep_d="M260,210 L340,210 L340,262 Q300,282 260,262 Z", deep_col=SKIN_SH)
+    # face: base, right-side shadow plane, cheekbone light, nose
     s.part(FACE, SKIN,
-           shadow=("M300,40 C356,46 386,86 384,130 C384,170 376,198 362,224 C346,250 322,264 300,266 "
-                   "C328,244 348,214 354,176 C360,132 350,82 300,40 Z"),
-           hl="M246,96 C252,78 266,66 284,62 C270,74 262,90 258,108 Z",
-           rim="M372,96 C382,136 378,186 356,226")
-    # eye sockets + cheek warmth
-    # facial structure: cheekbone planes, under-cheekbone hollows, temples, brow ridge
-    s.add(f'<path d="M240,176 C252,166 270,166 282,172 C270,174 256,180 246,190 Z" fill="{light(SKIN, 0.35)}" opacity="0.55"/>')
-    s.add(f'<path d="M360,176 C348,166 330,166 318,172 C330,174 344,180 354,190 Z" fill="{light(SKIN, 0.2)}" opacity="0.35"/>')
-    s.add(f'<path d="M236,178 C246,188 256,194 268,196 C256,200 244,196 236,188 Z" fill="{shade(SKIN)}" opacity="0.35"/>')
-    s.add(f'<path d="M364,178 C354,188 344,194 332,196 C344,200 356,196 364,188 Z" fill="{shade(SKIN)}" opacity="0.6"/>')
-    s.add(f'<path d="M360,100 C372,114 378,130 378,148 L370,146 C368,130 364,116 356,104 Z" fill="{shade(SKIN)}" opacity="0.45"/>')
-    s.add(f'<path d="M250,128 C270,122 288,124 296,132 C286,128 268,128 252,134 Z" fill="{shade(SKIN)}" opacity="0.3"/>')
-    s.add(f'<path d="M350,128 C330,122 312,124 304,132 C314,128 332,128 348,134 Z" fill="{shade(SKIN)}" opacity="0.4"/>')
-    s.add('<ellipse cx="256" cy="186" rx="16" ry="8" fill="#d9706a" opacity="0.14"/>')
-    # forehead wrinkles (age / wisdom)
+           shadow=("M318,60 C352,70 376,96 376,130 C378,170 368,204 350,228 C336,244 318,252 300,254 "
+                   "C322,236 340,206 346,172 C352,134 342,94 318,60 Z"), shadow_col=SKIN_SH,
+           hl="M244,104 C250,86 264,74 282,70 C268,82 260,96 256,114 Z", hl_col=SKIN_HL)
+    s.add(f'<path d="M248,160 C256,156 266,156 274,159 C266,161 258,165 252,170 Z" fill="{SKIN_HL}" opacity="0.25"/>')
+    s.add(f'<path d="M244,178 C252,188 262,194 272,196 C262,200 250,196 244,188 Z" fill="{SKIN_SH}" opacity="0.55"/>')
+    s.add('<ellipse cx="256" cy="176" rx="14" ry="7" fill="#e07e70" opacity="0.14"/>')
 
-    # faded short hair: short textured top, sides faded down to skin
-    for d in ("M217,160 C212,128 216,100 230,82 L248,94 C236,112 232,134 234,162 Z",):
-        s.add(f'<path d="{d}" fill="url(#fade)"/>')
-        s.add(f'<path d="{mirror(d)}" fill="url(#fade)"/>')
-    st, arc = curls(300, 124, 82, 90, math.pi * 1.06, math.pi * 1.94, 11, 0.045, seed=12)
-    hair = (f"M{st} {arc} C380,116 376,124 374,128 C370,112 362,102 350,96 C338,92 326,92 314,95 "
-            f"C304,88 290,86 278,90 C264,94 252,100 244,108 C236,114 230,120 226,128 C224,124 222,118 {st} Z")
-    s.part(hair, HAIR, soft=True,
-           shadow="M330,28 C372,40 392,86 380,130 L360,130 C366,96 356,60 330,42 Z",
-           hl="M242,68 C258,48 284,40 312,38 C288,48 266,60 254,80 Z",
-           rim="M370,60 C382,80 386,104 380,124")
-    for d in ("M248,100 C256,80 274,64 300,58", "M280,90 C292,72 316,62 342,66", "M316,95 C330,84 350,82 364,94",
-              "M300,58 C320,50 342,54 358,66"):
-        s.line(d, 1.7, color=SHEEN, op=0.85)
-    s.line("M252,60 C266,48 282,42 300,40", 2.6, color="#a3abc0", op=0.5)
-    s.line("M226,128 C224,120 224,110 228,100", LW_FINE, color=SHEEN, op=0.6)   # fade line
-
-    # brows by expression: (inner_dy, outer_dy)
-    bi, bo = {"neutral": (2, -1), "smile": (-3, 1), "talk": (-3, -1), "talk2": (-1, 0), "think": (6, 1),
-              "surprised": (-14, -9), "serious": (8, -1), "warm": (-4, 2), "laugh": (-5, 2)}.get(expr, (0, 0))
-    rlift = -9 if expr == "think" else 0     # thinking: one sceptical raised brow
-    lb = (f"M245,{122+bo} C250,{110+bo} 268,{103+bi} 292,{110+bi} C286,{114+bi} 276,{115+bi} 268,{117+bi} "
-          f"C259,{119+bo} 251,{123+bo} 245,{128+bo} Z")
-    s.part(lb, BROW, lw=LW_FINE + 0.5)
+    # eyebrows: thick, straight, confident
+    bi, bo = BROWS.get(expr, (0, 0))
+    lb = (f"M246,{122+bo} C254,{113+bo} 272,{109+bi} 292,{114+bi} L291,{121+bi} C276,{118+bi} 262,{120+bo} "
+          f"249,{127+bo} Z")
+    s.add(f'<path d="{lb}" fill="{BROW}"/>')
     rb = mirror(lb)
-    if rlift:
-        rb = f'" transform="translate(0,{rlift}) rotate(-6 330 115)'  # placeholder, replaced below
-        rb = mirror(lb)
-        s.add(f'<g transform="translate(0,{rlift}) rotate(-5 330 115)">')
-        s.part(rb, BROW, soft=True, shadow="M300,90 L360,90 L360,130 L300,130 Z", lw=LW_FINE + 0.5)
-        s.add('</g>')
+    if expr == "think":
+        s.add(f'<g transform="translate(0,-8) rotate(-5 330 115)"><path d="{rb}" fill="{BROW}"/></g>')
     else:
-        s.part(rb, BROW, soft=True, shadow="M300,90 L360,90 L360,130 L300,130 Z", lw=LW_FINE + 0.5)
-    if expr in ("serious", "think"):
-        s.line("M294,118 l2,9 M306,118 l-2,9", LW_FINE, op=0.55)        # frown lines
+        s.add(f'<path d="{rb}" fill="{BROW}"/>')
+    # brow ridge / eye socket shading
+    s.add(f'<path d="M250,128 C264,124 282,125 292,132 C280,130 264,130 252,134 Z" fill="{SKIN_SH}" opacity="0.5"/>')
+    s.add(f'<path d="{mirror("M250,128 C264,124 282,125 292,132 C280,130 264,130 252,134 Z")}" fill="{SKIN_SH}" opacity="0.7"/>')
 
-    for side in (-1, 1):
-        for k in range(4):
-            x0 = 300 + side * (52 - k * 9)
-            s.line(f"M{x0},{118 + (bo if k < 2 else bi) - k} l{side * -9},-5", LW_FINE,
-                   color=shade(BROW, 0.7, 0.3), op=0.8)
-
-    # eyes
+    # eyes: almond, slightly narrowed (confident), dark upper lid
     lx, ly = look
+    open_ = {"surprised": 9, "smile": 4.5, "warm": 5.5, "laugh": 0, "think": 6, "serious": 5.5}.get(expr, 6.5)
     for side in (-1, 1):
-        cx = 300 + side * 29
-        if blink or expr == "laugh":
-            s.line(f"M{cx-17},142 C{cx-8},{149} {cx+8},149 {cx+17},142", 3.0)
+        cx = 300 + side * 31
+        if blink or expr == "laugh" or open_ == 0:
+            s.line(f"M{cx-14},142 C{cx-6},147 {cx+6},147 {cx+14},142", 3.0, color=BROW)
             continue
-        open_ = {"surprised": 12, "smile": 6, "warm": 7.5, "serious": 7.5, "think": 8}.get(expr, 9)
-        eye = (f"M{cx-18},142 C{cx-10},{142-open_-1} {cx+10},{142-open_-1} {cx+18},142 "
-               f"C{cx+10},{142+open_*0.75} {cx-10},{142+open_*0.75} {cx-18},142 Z")
+        eye = (f"M{cx-15},142 C{cx-8},{142-open_} {cx+8},{142-open_} {cx+15},141 "
+               f"C{cx+8},{142+open_*0.7} {cx-8},{142+open_*0.7} {cx-15},142 Z")
         eid = s.uid()
         s.defs.append(f'<clipPath id="{eid}"><path d="{eye}"/></clipPath>')
-        s.add(f'<path d="{eye}" fill="#f4eee6"/>')
-        s.add(f'<g clip-path="url(#{eid})"><circle cx="{cx+lx}" cy="{141.5+ly}" r="7.6" fill="{IRIS}"/>'
-              f'<circle cx="{cx+lx}" cy="{141.5+ly}" r="3.4" fill="#120a07"/>'
-              f'<circle cx="{cx+lx-2}" cy="{139.5+ly}" r="2.2" fill="#fff"/>'
-              f'<path d="M{cx-20},{130} L{cx+20},130 L{cx+20},{140-open_+3} L{cx-20},{140-open_+3} Z" fill="#000" opacity="0.18"/></g>')
-        s.line(f"M{cx-19},142 C{cx-10},{141-open_-2} {cx+10},{141-open_-2} {cx+19},141", 3.0)  # upper lid
-        s.line(f"M{cx-15},{136-open_} C{cx-6},{131-open_} {cx+8},{131-open_} {cx+16},{136-open_}", LW_FINE, op=0.45)  # crease
+        s.add(f'<path d="{eye}" fill="#f6f1ea"/>')
+        s.add(f'<g clip-path="url(#{eid})"><circle cx="{cx+lx}" cy="{141.5+ly}" r="6.2" fill="{IRIS}"/>'
+              f'<circle cx="{cx+lx}" cy="{141.5+ly}" r="3" fill="#0e0907"/>'
+              f'<circle cx="{cx+lx-2}" cy="{139.5+ly}" r="1.7" fill="#fff"/>'
+              f'<rect x="{cx-20}" y="120" width="40" height="{24-open_}" fill="#000" opacity="0.14"/></g>')
+        lid = (f"M{cx-16},142 C{cx-8},{141-open_-1.5} {cx+8},{141-open_-1.5} {cx+16},140 "
+               f"L{cx+16},{138.5} C{cx+8},{138-open_-3} {cx-8},{138-open_-3} {cx-16},{140.5} Z")
+        s.add(f'<path d="{lid}" fill="{BROW}"/>')                                    # upper lid + lashes
+        s.add(f'<path d="M{cx-13},{136-open_} C{cx-5},{131-open_} {cx+6},{131-open_} {cx+14},{135-open_}" '
+              f'fill="none" stroke="{SKIN_SH}" stroke-width="2" opacity="0.8"/>')      # crease
         if expr in ("smile", "warm"):
-            s.line(f"M{cx-14},{148} C{cx-5},{143} {cx+5},{143} {cx+14},{148}", 1.8, op=0.8)   # cheek squint
-        else:
-            s.line(f"M{cx-11},{144+open_*0.5} C{cx-4},{146+open_*0.5} {cx+5},{146+open_*0.5} {cx+12},{143+open_*0.5}",
-                   LW_FINE, op=0.3)
+            s.add(f'<path d="M{cx-12},{146} C{cx-4},{141} {cx+5},{141} {cx+12},{146}" fill="none" stroke="{SKIN_SH}" stroke-width="2"/>')
 
+    # nose: shadow plane on the right, nostrils, tip light
+    s.add(f'<path d="M303,146 C307,164 313,180 314,190 C310,197 304,198 300,196 L304,190 C304,176 303,160 300,148 Z" fill="{SKIN_SH}"/>')
+    s.add(f'<path d="M286,192 C284,196 286,200 292,200 C290,197 290,195 291,192 Z" fill="{SKIN_DEEP}"/>')
+    s.add(f'<path d="M314,192 C316,196 314,200 308,200 C310,197 310,195 309,192 Z" fill="{SKIN_DEEP}"/>')
+    s.add(f'<path d="M290,200 Q300,204 310,200 Q300,202 290,200 Z" fill="{SKIN_DEEP}" opacity="0.7"/>')
+    s.add(f'<ellipse cx="296" cy="190" rx="5" ry="3" fill="{SKIN_HL}"/>')
+    s.add(f'<path d="M294,150 C293,164 292,176 293,186" fill="none" stroke="{SKIN_HL}" stroke-width="3" opacity="0.8"/>')
 
-    # nose
-    s.add('<path d="M306,150 C312,172 316,188 313,198 L303,200 C306,186 305,170 302,152 Z" '
-          f'fill="{shade(SKIN)}" opacity="0.8"/>')
-    s.line("M297,152 C296,170 292,186 289,196", LW_FINE, op=0.5)
-    s.line("M284,199 C290,208 310,208 316,199", LW_IN)
-    s.line("M290,202 q4,3 7,1 M310,202 q-4,3 -7,1", LW_FINE, op=0.7)
-    s.add(f'<ellipse cx="296" cy="194" rx="5" ry="3" fill="{light(SKIN, 0.45)}" opacity="0.8"/>')
-    s.line("M293,150 C292,166 291,178 292,188", 3.2, color=light(SKIN, 0.4), op=0.7)          # bridge highlight
-    s.line("M286,192 C280,196 280,204 288,206", LW_IN, op=0.8)                               # nostril wings
-    s.line("M314,192 C320,196 320,204 312,206", LW_IN, op=0.8)
+    # beard: crisp, full, groomed; follows the jaw; open under the lower lip
+    beard = ("M232,146 C232,174 238,200 249,220 C262,242 282,258 300,261 C318,258 338,242 351,220 "
+             "C362,200 368,174 368,146 L361,150 C359,170 352,188 341,201 C332,211 327,220 325,232 "
+             "C321,241 312,246 300,246 C288,246 279,241 275,232 C273,220 268,211 259,201 C248,188 241,170 239,150 Z")
+    s.part(beard, BEARD,
+           shadow="M316,252 C340,244 360,216 366,150 L380,150 L380,280 L300,280 Z", shadow_col="#0f0d0e",
+           hl="M240,166 C242,190 250,210 262,226 C252,206 246,188 246,168 Z", hl_col="#3a3333")
+    for d in ("M252,214 l3,9", "M262,228 l4,8", "M276,242 l3,8", "M290,250 l1,7", "M244,190 l2,9",
+              "M310,250 l-1,7", "M324,242 l-3,8", "M338,228 l-4,8", "M348,214 l-3,9", "M356,190 l-2,9"):
+        s.line(d, 1.4, color=SHEEN, op=0.7)
+    # moustache: distinct, full, ends turn down to the mouth corners
+    must = ("M272,214 C281,205 292,203 300,207 C308,203 319,205 328,214 C332,219 334,226 332,232 "
+            "C328,226 322,221 314,219 C308,218 303,219 300,220 C297,219 292,218 286,219 C278,221 272,226 268,232 "
+            "C266,226 268,219 272,214 Z")
+    s.part(must, BEARD, shadow="M302,200 L340,200 L340,236 L302,236 Z", shadow_col="#0f0d0e",
+           hl="M278,212 C285,207 293,206 298,208 C291,209 284,211 280,215 Z", hl_col="#3a3333")
 
-    # groomed full beard + distinct moustache, same length; clean skin gap right below the lower lip
-    DENSE = hexc([rgb(SKIN)[i] * 0.2 + rgb(HAIR)[i] * 0.8 for i in range(3)])
-    # beard: wraps the angular jaw, cheek line from the sideburn to the mouth corner, open under the lip
-    beard = ("M222,134 C220,166 224,190 232,206 L248,234 C262,256 282,270 300,272 C318,270 338,256 352,234 "
-             "L368,206 C376,190 380,166 378,134 L370,136 C368,160 362,182 352,198 C344,212 338,224 336,238 "
-             "C332,248 324,254 314,256 C308,258 304,262 300,262 C296,262 292,258 286,256 C276,254 268,248 264,238 "
-             "C262,224 256,212 248,198 C238,182 232,160 230,136 Z")
-    s.part(beard, DENSE, soft=True, line=False,
-           shadow="M320,252 C346,244 366,212 374,136 L400,136 L400,300 L300,300 Z",
-           deep_d="M262,262 C280,280 320,280 338,262 L338,300 L262,300 Z",
-           hl="M232,160 C234,188 242,210 254,228 C244,206 238,186 238,162 Z")
-    bclip = s.uid("bc")
-    s.defs.append(f'<clipPath id="{bclip}"><path d="{beard}"/></clipPath>')
-    s.add(f'<g clip-path="url(#{bclip})">')
-    import random as _r
-    rr = _r.Random(11)
-    for _ in range(170):                    # growth texture along the jaw
-        x = rr.uniform(222, 378)
-        y = rr.uniform(140, 272)
-        side = -1 if x < 300 else 1
-        col = SHEEN if side < 0 and rr.random() < 0.6 else "#0d0d10"
-        s.line(f"M{x:.1f},{y:.1f} l{side*1.5:.1f},5", 1.1, color=col, op=0.4)
-    s.add('</g>')
-    # moustache: full, trimmed at the lip line, ends turn down to meet the beard at the mouth corners
-    must = ("M262,224 C272,212 288,209 300,213 C312,209 328,212 338,224 C341,230 340,238 337,244 "
-            "C333,238 328,233 322,231 C314,228 306,228 300,229 C294,228 286,228 278,231 C272,233 267,238 263,244 "
-            "C260,238 259,230 262,224 Z")
-    s.part(must, DENSE, soft=True, shadow="M304,204 L350,204 L350,250 L304,250 Z", line=False,
-           hl="M270,219 C280,212 292,211 298,214 C289,215 280,218 273,223 Z")
-    for d in ("M276,218 l-3,8", "M287,215 l-2,9", "M313,215 l2,9", "M324,218 l3,8", "M268,226 l-2,8", "M332,226 l2,8"):
-        s.line(d, 1.1, color=SHEEN, op=0.6)
-    s.line(must.replace(" Z", ""), LW_FINE + 0.2, color="#0d0d10", op=0.45)
-    # crisp jaw/beard silhouette + groomed cheek line
-    s.line("M222,134 C220,166 224,190 232,206 L248,234 C262,256 282,270 300,272 C318,270 338,256 352,234 "
-           "L368,206 C376,190 380,166 378,134", LW_IN + 0.6, op=0.92)
-    s.line("M230,136 C232,160 238,182 248,198 C256,212 262,224 264,238", LW_FINE + 0.3, color="#0d0d10", op=0.5)
-    s.line(mirror("M230,136 C232,160 238,182 248,198 C256,212 262,224 264,238"), LW_FINE + 0.3, color="#0d0d10", op=0.5)
-    # clean gap under the lip: lower lip + skin
-    s.add(f'<path d="M289,246 Q300,254 311,246 Q300,251 289,246 Z" fill="{hexc([rgb(SKIN)[i]*0.85+rgb("#b4504e")[i]*0.15 for i in range(3)])}"/>')
-    s.line("M290,258 Q300,262 310,258", LW_FINE, color=shade(SKIN), op=0.5)                     # chin dimple shadow
-    # mouth (drawn before beard/moustache so they overlap it)
-    m = {
-        "neutral": ("line", "M287,239 Q300,246 313,239"),
-        "serious": ("line", "M287,241 Q300,240 313,241"),
-        "think": ("line", "M289,241 Q300,239 311,243"),
-        "smile": ("line", "M284,237 Q300,248 316,237"),
-        "warm": ("line", "M285,238 Q300,246 315,238"),
-        "talk": ("open", "M287,236 Q300,233 313,236 Q310,250 300,251 Q290,250 287,236 Z"),
-        "talk2": ("open", "M289,237 Q300,235 311,237 Q308,245 300,246 Q292,245 289,237 Z"),
-        "surprised": ("open", "M292,235 Q300,231 308,235 Q310,252 300,254 Q290,252 292,235 Z"),
-        "laugh": ("open", "M284,235 Q300,233 316,235 Q312,255 300,256 Q288,255 284,235 Z"),
-    }[expr if expr in ("neutral", "serious", "think", "smile", "warm", "surprised", "laugh", "talk2") else
-      ("talk" if expr == "talk" else "neutral")]
-    if m[0] == "line":
-        s.line(m[1], 2.6)
-        s.line("M293,247 Q300,249 307,247", LW_FINE, op=0.5)
-    else:
+    # mouth (between moustache and the clean gap under the lip)
+    shapes = {
+        "talk": "M287,222 Q300,220 313,222 Q310,236 300,237 Q290,236 287,222 Z",
+        "talk2": "M289,222 Q300,221 311,222 Q308,231 300,232 Q292,231 289,222 Z",
+        "surprised": "M292,221 Q300,218 308,221 Q310,238 300,240 Q290,238 292,221 Z",
+        "laugh": "M284,221 Q300,219 316,221 Q312,240 300,241 Q288,240 284,221 Z",
+    }
+    if expr in shapes:
+        m = shapes[expr]
         mid = s.uid()
-        s.defs.append(f'<clipPath id="{mid}"><path d="{m[1]}"/></clipPath>')
-        s.add(f'<path d="{m[1]}" fill="#3b1612"/>')
-        s.add(f'<g clip-path="url(#{mid})"><rect x="280" y="229" width="40" height="8" fill="#efe8de"/>'
-              f'<ellipse cx="300" cy="256" rx="10" ry="6" fill="#b4504e"/></g>')
-        s.add(f'<path d="{m[1]}" fill="none" stroke="{LINE}" stroke-width="2.4" stroke-linejoin="round"/>')
+        s.defs.append(f'<clipPath id="{mid}"><path d="{m}"/></clipPath>')
+        s.add(f'<path d="{m}" fill="#3a1612"/>')
+        s.add(f'<g clip-path="url(#{mid})"><rect x="280" y="218" width="40" height="7" fill="#f1ece4"/>'
+              f'<ellipse cx="300" cy="241" rx="10" ry="6" fill="#b4504e"/></g>')
+        s.add(f'<path d="M290,{238 if expr != "laugh" else 242} Q300,{244 if expr != "laugh" else 247} 310,{238 if expr != "laugh" else 242} '
+              f'Q300,{241 if expr != "laugh" else 244} 290,{238 if expr != "laugh" else 242} Z" fill="{LIPS}"/>')
+    else:
+        curve = {"smile": 7, "warm": 5, "serious": 1, "think": 2}.get(expr, 3)
+        s.add(f'<path d="M286,224 Q300,{224+curve} 314,224" fill="none" stroke="#5a2c22" stroke-width="2.6" stroke-linecap="round"/>')
+        s.add(f'<path d="M289,227 Q300,{236+curve*0.4:.1f} 311,227 Q300,{231+curve*0.3:.1f} 289,227 Z" fill="{LIPS}"/>')
+    s.add(f'<path d="M292,241 Q300,244 308,241" fill="none" stroke="{SKIN_SH}" stroke-width="2" opacity="0.8"/>')  # chin dimple
 
-    # (no spectacles)
+    # hair: swept-up quiff, black, with a skin fade on the sides
+    for d in ("M231,156 C226,130 228,106 238,90 L252,98 C244,112 240,132 240,158 Z",):
+        s.add(f'<path d="{d}" fill="url(#fade)"/>')
+        s.add(f'<path d="{mirror(d)}" fill="url(#fade)"/>')
+    hair = ("M232,130 C226,104 230,80 244,64 C254,52 268,44 284,40 C292,28 306,20 324,20 C344,20 362,30 372,46 "
+            "C382,62 384,84 378,104 C376,114 374,122 372,130 C368,114 360,102 348,96 C336,90 322,88 308,90 "
+            "C292,86 276,88 264,94 C250,100 240,112 236,122 C234,125 233,128 232,130 Z")
+    s.part(hair, HAIR,
+           shadow="M336,18 C368,24 388,52 384,84 C382,104 376,118 372,132 L356,98 C368,76 362,44 336,30 Z",
+           shadow_col="#0b0b0e",
+           hl="M250,70 C262,52 282,40 304,34 C318,24 336,22 350,26 C332,30 316,38 302,48 C284,56 268,68 258,84 Z",
+           hl_col=SHEEN)
+    for d in ("M262,86 C270,66 292,50 320,42", "M284,86 C298,66 322,54 350,52", "M306,88 C322,72 344,66 366,70"):
+        s.line(d, 2.2, color="#5a5f70", op=0.7)
+    for d in ("M286,42 C292,34 300,30 310,30 C302,36 296,42 292,50 Z", "M328,24 C340,22 352,26 360,34 C350,32 340,32 332,34 Z"):
+        s.add(f'<path d="{d}" fill="#0b0b0e"/>')                  # lock separations
+    s.add(f'<path d="M298,26 C316,18 336,16 352,22 C336,22 318,28 306,36 Z" fill="#6a7083" opacity="0.55"/>')
 
 
 # =====================================================================================
 #  BODY (front)
 # =====================================================================================
-TORSO = ("M300,280 C266,280 196,288 160,304 C134,316 124,342 128,370 C134,398 152,414 170,430 "
-         "C176,520 182,640 190,730 C192,770 194,796 196,814 L404,814 C406,796 408,770 410,730 "
-         "C418,640 424,520 430,430 C448,414 466,398 472,370 C476,342 466,316 440,304 C404,288 334,280 300,280 Z")
+TORSO = ("M300,290 C268,290 204,294 170,304 C146,312 136,330 136,356 L140,404 C148,432 162,452 172,470 "
+         "C176,560 182,660 190,786 L410,786 C418,660 424,560 428,470 C438,452 452,432 460,404 L464,356 "
+         "C464,330 454,312 430,304 C396,294 332,290 300,290 Z")
 
 
 def legs(s):
-    leg = "M196,826 L298,826 L294,1340 L218,1340 C212,1120 204,960 196,826 Z"
-    s.part(leg, TROUSER, shadow="M262,816 L310,816 L304,1348 L270,1348 Z", hl="M208,880 L214,880 L222,1310 L217,1310 Z")
-    s.part(mirror(leg), TROUSER, shadow="M330,816 L420,816 L420,1348 L330,1348 Z")
-    s.line("M248,880 L254,1330", LW_FINE, color="#4a4f5c", op=0.8)
-    s.line("M352,880 L346,1330", LW_FINE, color="#4a4f5c", op=0.6)
-    for x in (240, 360):  # knee folds
-        s.line(f"M{x-14},1050 q14,8 28,0", LW_FINE, color="#4a4f5c", op=0.5)
-    shoe = ("M208,1330 L294,1330 L296,1366 C296,1382 288,1390 272,1390 L188,1390 C172,1390 168,1374 180,1366 "
-            "C192,1356 202,1346 208,1330 Z")
-    hl = "M190,1368 C198,1362 210,1360 222,1362 L218,1368 Z"
-    s.part(shoe, SHOE, shadow="M240,1374 L300,1374 L300,1398 L240,1398 Z", hl=hl)
-    s.part(mirror(shoe), SHOE, shadow="M300,1318 L440,1318 L440,1398 L300,1398 Z", hl=mirror(hl))
+    leg = "M192,796 L298,796 L292,1404 L222,1404 C214,1180 204,980 192,796 Z"
+    s.part(leg, TROUSER, shadow="M258,780 L304,780 L300,1412 L266,1412 Z", shadow_col=TROUSER_SH,
+           hl="M200,840 L214,840 L230,1390 L222,1390 Z", hl_col=TROUSER_HL)
+    s.part(mirror(leg), TROUSER, shadow="M318,780 L420,780 L420,1412 L346,1412 Z", shadow_col=TROUSER_SH,
+           hl=mirror("M290,840 L298,840 L294,1390 L288,1390 Z"), hl_col=TROUSER_HL)
+    s.add(f'<path d="M296,800 L300,880 L304,800 Z" fill="{TROUSER_SH}"/>')       # fly shadow
+    shoe = ("M216,1396 L294,1396 L296,1430 C296,1446 288,1454 272,1454 L190,1454 C176,1454 172,1440 182,1432 "
+            "C194,1422 206,1412 216,1396 Z")
+    s.part(shoe, SHOE, shadow="M240,1440 L300,1440 L300,1460 L240,1460 Z", shadow_col="#0a0a0c",
+           hl="M190,1432 C200,1424 214,1422 226,1424 L222,1430 Z", hl_col="#4a4d58")
+    s.part(mirror(shoe), SHOE, shadow="M300,1380 L440,1380 L440,1460 L300,1460 Z", shadow_col="#0a0a0c",
+           hl=mirror("M190,1432 C200,1424 214,1422 226,1424 L222,1430 Z"), hl_col="#3a3d46")
 
 
 def torso(s):
-    # neck (a little thicker: fit)
-
-    s.part(TORSO, SHIRT, soft="white",
-           shadow="M350,280 C410,290 474,312 472,372 C462,406 440,424 430,444 L412,820 L376,820 C394,700 398,520 386,330 Z",
-           hl="M150,326 C140,344 140,366 148,384 L158,382 C154,366 154,348 160,332 Z")
-    # neck flowing into the open-collar V: one skin shape, outline only on the neck sides
-    neck = ("M262,226 C262,256 258,278 248,292 C266,300 280,330 300,388 C320,330 334,300 352,292 "
-            "C342,278 338,256 338,226 Z")
-    s.part(neck, SKIN, line=False,
-           shadow="M312,220 C330,250 336,280 350,292 C334,306 320,340 300,392 L360,392 L360,220 Z",
-           deep_d="M250,222 L350,222 L350,252 Q300,276 250,252 Z")
-    s.line("M262,226 C262,256 258,278 248,292", LW_OUT)
-    s.line("M338,226 C338,256 342,278 352,292", LW_OUT)
-    s.line("M276,300 C288,312 296,334 300,352", LW_FINE, op=0.25)   # sternocleido hint
-    s.line("M286,352 Q300,360 314,352", LW_FINE, op=0.35)   # collarbone hint
-    # collar flaps lying open
-    for d in ("M262,284 C252,296 250,316 254,338 L286,356 L272,300 Z",):
-        s.part(d, SHIRT, soft="white", lw=LW_IN)
-        s.part(mirror(d), SHIRT, soft="white", shadow="M300,280 L360,280 L360,360 L300,360 Z", lw=LW_IN)
-    # placket + buttons (top button open)
-    s.line("M300,388 L300,806", LW_IN)
-    s.line("M308,392 L308,806", LW_FINE, op=0.4)
-    for y in (430, 500, 570, 640, 710, 780):
-        s.add(f'<circle cx="304" cy="{y}" r="4" fill="#ffffff" stroke="#8a8f9c" stroke-width="1.4"/>')
-    # fit: chest + fabric pull lines, tucked waist folds
-    for d in ("M196,446 C230,486 270,488 294,470", "M236,560 C254,568 276,568 292,560", "M240,630 C256,636 276,636 292,630",
-              "M210,770 Q220,756 234,764", "M250,790 Q260,778 272,788", "M190,340 C210,330 236,322 256,316"):
-        s.line(d, 1.8, color="#a3abbb", op=0.95)
-        s.line(mirror(d), 1.8, color="#a3abbb", op=0.75)
-    s.add('<path d="M206,458 C236,490 270,492 294,478 L294,486 C268,500 234,498 210,474 Z" fill="#c9cfdb" opacity="0.35"/>')
-    s.add('<path d="M394,458 C364,490 330,492 306,478 L306,486 C332,500 366,498 390,474 Z" fill="#b9c0cf" opacity="0.4"/>')
-    # belt + buckle
-    s.part("M194,806 L406,806 L408,838 L192,838 Z", BELT, shadow="M300,800 L420,800 L420,840 L300,840 Z", lw=LW_IN)
-    s.add(f'<rect x="286" y="806" width="28" height="28" rx="4" fill="none" stroke="{SILVER}" stroke-width="5"/>')
-    s.add(f'<rect x="286" y="806" width="28" height="28" rx="4" fill="none" stroke="{LINE}" stroke-width="1.4"/>')
+    s.part(TORSO, SHIRT,
+           shadow="M346,290 C406,296 466,316 464,374 C460,422 444,450 430,474 L414,790 L372,790 C392,660 396,500 382,320 Z",
+           shadow_col=SHIRT_SH,
+           deep_d="M138,392 C148,428 162,452 174,472 L184,472 C172,448 160,422 150,392 Z", deep_col=SHIRT_SH)
+    # chest & fabric planes (fitted shirt on an athletic body)
+    s.add(f'<path d="M196,452 C230,486 270,488 294,472 C270,494 230,494 200,466 Z" fill="{SHIRT_SH}"/>')
+    s.add(f'<path d="M404,452 C370,486 330,488 306,472 C330,494 370,494 400,466 Z" fill="{SHIRT_DEEP}"/>')
+    for d in ("M236,600 C254,610 276,610 292,602 C276,614 252,614 236,600 Z", "M206,760 C220,744 236,742 250,756 C236,752 220,754 206,760 Z",
+              "M350,756 C364,742 380,744 394,760 C380,754 364,752 350,756 Z", "M238,520 C256,530 276,530 292,522 C276,534 254,534 238,520 Z"):
+        s.add(f'<path d="{d}" fill="{SHIRT_SH}"/>')
+    # neck opening (top button open) + collar
+    s.part("M276,296 L324,296 L300,360 Z", SKIN, shadow="M300,290 L330,290 L300,364 Z", shadow_col=SKIN_SH)
+    s.add(f'<path d="M288,312 Q300,318 312,312" fill="none" stroke="{SKIN_SH}" stroke-width="2" opacity="0.8"/>')
+    lc = "M266,284 C258,296 256,314 260,334 L292,350 L276,298 Z"
+    s.part(lc, SHIRT, shadow="M256,320 L292,320 L292,352 L256,352 Z", shadow_col=SHIRT_SH)
+    s.part(mirror(lc), SHIRT, shadow=mirror(lc), shadow_col=SHIRT_SH)
+    s.add(f'<path d="M268,286 Q300,280 332,286 L326,292 Q300,288 274,292 Z" fill="{SHIRT_SH}"/>')   # collar band
+    # placket + buttons
+    s.add(f'<path d="M298,360 L302,360 L304,786 L298,786 Z" fill="{SHIRT_SH}"/>')
+    for y in (420, 490, 560, 630, 700, 770):
+        s.add(f'<circle cx="304" cy="{y}" r="3.6" fill="#e2e5eb"/><circle cx="304" cy="{y}" r="1.6" fill="#b9bfcb"/>')
+    # belt
+    s.part("M188,786 L412,786 L414,814 L186,814 Z", BELT, shadow="M300,780 L420,780 L420,820 L300,820 Z", shadow_col="#0a0a0b")
+    s.add(f'<rect x="286" y="788" width="28" height="24" rx="3" fill="none" stroke="{SILVER}" stroke-width="4"/>')
 
 
-def cuff_and_hand(s, wrist, angle, kind, flip=False, cuff=False, watch=False):
-    """wrist=(x,y), angle in degrees (0 = hand pointing straight down)."""
+# ---------------- arms & hands ----------------
+def hand(s, wrist, angle, kind, flip=False, watch=False):
+    """Natural hand, no outline, two-tone. Local coords: wrist at (0,0), fingers toward +y."""
     x, y = wrist
-    t = f'transform="translate({x:.1f},{y:.1f}) rotate({angle:.1f})"'
-    g = []
-    hg = s.uid("hg")      # hand gradient: light direction fixed in WORLD space (from the viewer's left), whatever the pose
     th = math.radians(angle)
-    lx, ly = -math.cos(th), math.sin(th)          # world (-1, 0) seen in the hand's rotated frame
+    lx, ly = -math.cos(th), math.sin(th)               # world light direction (from the viewer's left) in local frame
     if flip:
         lx = -lx
-    x1, y1, x2, y2 = 30 * lx, 30 * ly, -30 * lx, -30 * ly
-    s.defs.append(f'<linearGradient id="{hg}" gradientUnits="userSpaceOnUse" x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}">'
-                  f'<stop offset="0" stop-color="{light(SKIN, 0.26)}"/><stop offset="0.3" stop-color="{SKIN}"/>'
-                  f'<stop offset="0.62" stop-color="{SKIN}"/><stop offset="0.8" stop-color="{shade(SKIN)}"/>'
-                  f'<stop offset="1" stop-color="{shade(SKIN)}"/></linearGradient>')
-
-    def P(d, base, shadow=None, lw=LW_IN):
-        cid = s.uid()
-        s.defs.append(f'<clipPath id="{cid}"><path d="{d}"/></clipPath>')
-        g.append(f'<path d="{d}" fill="url(#{hg})"/>')
-        g.append(f'<g clip-path="url(#{cid})"><path d="M-40,70 L40,70 L40,120 L-40,120 Z" fill="{shade(SKIN)}" opacity="0.35"/></g>')
-        # outline left open across the wrist so the forearm flows into the hand
-        g.append(f'<path d="{d.rstrip(" Z")}" fill="none" stroke="{LINE}" stroke-width="{lw}" stroke-linejoin="round" stroke-linecap="round"/>')
-    def finger(d, w=13):
-        g.append(f'<path d="{d}" fill="none" stroke="{LINE}" stroke-width="{w+2*LW_IN}" stroke-linecap="round"/>')
-        g.append(f'<path d="{d}" fill="none" stroke="url(#{hg})" stroke-width="{w}" stroke-linecap="round"/>')
-    SH = "M12,-10 L40,-10 L40,120 L12,120 Z"
+    gid = s.two_tone(28 * lx, 28 * ly, -28 * lx, -28 * ly, SKIN, SKIN_SH, 0.6, SKIN_HL)
+    F = f"url(#{gid})"
+    g = []
     if kind == "relaxed":
-        P("M-17,-14 C-23,8 -27,40 -21,70 C-16,86 -6,97 5,98 C15,98 21,88 23,76 C26,56 25,8 17,-14 Z", SKIN, SH)
-        g.append(f'<path d="M-12,54 C-13,66 -12,78 -8,88 M-1,58 C-1,72 0,84 3,94 M10,56 C11,68 12,78 14,86" '
-                 f'stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.5"/>')
-        g.append(f'<path d="M-19,44 Q-12,50 -4,48 Q4,52 12,48 Q18,50 22,44" stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.4"/>')  # knuckles
-        g.append(f'<path d="M-16,20 Q-2,16 12,22" stroke="{light(SKIN, 0.4)}" stroke-width="3" fill="none" opacity="0.7"/>')       # back-of-hand light
-        g.append(f'<ellipse cx="-8" cy="90" rx="3.5" ry="2.2" fill="{light(SKIN, 0.45)}" opacity="0.8"/>'
-                 f'<ellipse cx="3" cy="95" rx="3.5" ry="2.2" fill="{light(SKIN, 0.45)}" opacity="0.8"/>')                         # nails
-        finger("M20,20 C30,32 32,48 26,60", 12)
-    elif kind == "open":   # palm toward viewer, fingers along +y (rotate so they point up)
-        P("M-17,-14 C-26,12 -26,48 -22,58 L22,58 C26,48 26,12 17,-14 Z", SKIN, SH)
-        for fx, ln in ((-17, 40), (-6, 46), (6, 44), (17, 36)):
-            finger(f"M{fx},54 L{fx*1.15:.1f},{54+ln}", 11)
-        finger("M-24,24 C-40,34 -46,46 -48,58", 13)
-        g.append(f'<path d="M-14,40 Q0,48 14,38" stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.5"/>')
-    elif kind == "point":  # fist with index finger along +y
-        P("M-17,-14 C-26,12 -24,56 -10,64 L18,64 C28,54 26,12 17,-14 Z", SKIN, SH)
-        finger("M10,58 L12,118", 12)
-        g.append(f'<path d="M-16,52 q8,10 18,8 M-18,38 q10,8 20,6" stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.6"/>')
-        finger("M-22,24 C-30,36 -24,48 -12,50", 12)
-    elif kind == "chin":   # loose curled hand
-        P("M-17,-14 C-28,20 -24,60 -6,70 C8,76 22,66 26,50 C30,34 26,8 17,-14 Z", SKIN, SH)
-        g.append(f'<path d="M-14,48 q12,8 30,0 M-16,60 q12,6 26,-2" stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.7"/>')
-        finger("M-22,22 C-34,36 -30,52 -16,58", 12)
-    if cuff:
-        g.insert(0, f'<rect x="-28" y="-14" width="56" height="22" rx="5" fill="{SHIRT}" stroke="{LINE}" stroke-width="{LW_IN}"/>')
+        g.append(f'<path d="M-17,-10 C-22,12 -24,38 -20,62 C-18,80 -16,96 -12,110 C-10,118 -3,118 -2,110 L-1,92 '
+                 f'C1,104 2,118 6,124 C9,128 15,126 15,118 L14,96 C16,104 18,112 22,114 C26,116 28,110 27,104 '
+                 f'C26,86 24,62 23,40 C22,20 21,6 17,-10 Z" fill="{F}"/>')
+        g.append(f'<path d="M20,18 C30,26 34,42 32,56 C31,64 25,66 22,60 C22,48 20,36 16,28 Z" fill="{F}"/>')   # thumb
+        g.append(f'<path d="M-6,70 C-5,84 -3,96 -2,108 M6,74 C7,90 8,104 8,118 M15,76 C17,88 18,98 20,108" '
+                 f'fill="none" stroke="{SKIN_DEEP}" stroke-width="1.6" opacity="0.6"/>')
+    elif kind == "open":       # palm toward viewer, fingers spread (rotated to point up)
+        g.append(f'<path d="M-22,-8 C-26,14 -26,38 -22,56 L22,56 C26,38 26,14 22,-8 Z" fill="{F}"/>')
+        for fx, ln, w_ in ((-17, 40, 10), (-6, 48, 10.5), (6, 46, 10.5), (17, 38, 9.5)):
+            g.append(f'<path d="M{fx},52 L{fx*1.12:.1f},{52+ln}" stroke="{F}" stroke-width="{w_}" stroke-linecap="round"/>')
+        g.append(f'<path d="M-22,22 C-36,30 -44,42 -48,56" stroke="{F}" stroke-width="12" stroke-linecap="round" fill="none"/>')
+        g.append(f'<path d="M-14,36 Q0,44 14,34" fill="none" stroke="{SKIN_DEEP}" stroke-width="1.6" opacity="0.6"/>')
+    elif kind == "point":
+        g.append(f'<path d="M-20,-8 C-25,16 -22,50 -10,62 L16,62 C26,52 26,16 20,-8 Z" fill="{F}"/>')
+        g.append(f'<path d="M10,56 L12,116" stroke="{F}" stroke-width="11" stroke-linecap="round"/>')
+        g.append(f'<path d="M-20,22 C-28,34 -22,46 -10,48" stroke="{F}" stroke-width="11" stroke-linecap="round" fill="none"/>')
+        g.append(f'<path d="M-16,50 q8,10 18,8 M-18,38 q10,8 20,6" fill="none" stroke="{SKIN_DEEP}" stroke-width="1.6" opacity="0.6"/>')
+    elif kind == "chin":
+        g.append(f'<path d="M-20,-8 C-28,24 -24,58 -6,68 C8,74 22,64 26,48 C30,30 26,8 20,-8 Z" fill="{F}"/>')
+        g.append(f'<path d="M-20,20 C-32,34 -28,50 -16,56" stroke="{F}" stroke-width="11" stroke-linecap="round" fill="none"/>')
+        g.append(f'<path d="M-14,46 q12,8 30,0 M-16,58 q12,6 26,-2" fill="none" stroke="{SKIN_DEEP}" stroke-width="1.6" opacity="0.6"/>')
+    elif kind == "tuck":       # hand tucked under the opposite arm (arms crossed): only the fingers show
+        g.append(f'<path d="M-18,-8 C-22,10 -20,30 -12,40 L14,40 C20,30 22,10 18,-8 Z" fill="{F}"/>')
+        g.append(f'<path d="M-10,30 L-10,40 M0,32 L0,42 M10,30 L10,40" fill="none" stroke="{SKIN_DEEP}" stroke-width="1.6" opacity="0.6"/>')
     if watch:
-        g.append(f'<rect x="-21" y="-12" width="42" height="13" rx="3" fill="{STRAP}" stroke="{LINE}" stroke-width="1.6"/>'
-                 f'<circle cx="0" cy="-6" r="9" fill="{GOLD}" stroke="{LINE}" stroke-width="1.6"/>'
-                 f'<circle cx="0" cy="-6" r="5.5" fill="#f4efe4"/>')
-    sx = -1.32 if flip else 1.32
-    s.add(f'<g {t} ><g transform="scale({sx},1.32)">{"".join(g)}</g></g>')
+        g.append(f'<rect x="-21" y="-12" width="42" height="12" rx="3" fill="{STRAP}"/>'
+                 f'<circle cx="0" cy="-6" r="8.5" fill="{GOLD}"/><circle cx="0" cy="-6" r="5.5" fill="#f4efe4"/>')
+    sx = -1.25 if flip else 1.25
+    s.add(f'<g transform="translate({x:.1f},{y:.1f}) rotate({angle:.1f})"><g transform="scale({sx},1.25)">{"".join(g)}</g></g>')
 
 
-# arm configurations: (shoulder, elbow, wrist, hand_kind, extra_angle, forearm_in_front)
-L_SH, R_SH = (168, 356), (432, 356)
-ARMS = {
-    "down": [(L_SH, (128, 580), (132, 772), "relaxed", 0, False), (R_SH, (472, 580), (468, 772), "relaxed", 0, False)],
-    "explain": [(L_SH, (120, 594), (76, 464), "open", 0, False), (R_SH, (472, 580), (468, 772), "relaxed", 0, False)],
-    "point": [(L_SH, (98, 440), (44, 316), "point", 0, False), (R_SH, (472, 580), (468, 772), "relaxed", 0, False)],
-    "think": [(L_SH, (190, 610), (262, 350), "chin", 0, True), (R_SH, (472, 580), (468, 772), "relaxed", 0, False)],
-    "welcome": [(L_SH, (118, 580), (70, 706), "open", 0, False), (R_SH, (482, 580), (530, 706), "open", 0, False)],
-    "both_explain": [(L_SH, (120, 594), (76, 464), "open", 0, False), (R_SH, (480, 594), (524, 464), "open", 0, False)],
-}
-SLEEVE = 88
-FOREARM = 60
+SLEEVE, FOREARM = 90, 62
 
 
-def sleeve(s, shoulder, elbow, wrist, upper=True):
-    """Shirt sleeve rolled below the elbow, then a bare forearm (tapers to the wrist). Seams hide under the cuff."""
+def arm(s, shoulder, elbow, wrist, kind, flip, upper=True, watch=False):
+    """Shirt sleeve folded below the elbow, then the bare forearm and the hand. No gaps, no outlines."""
     dx, dy = wrist[0] - elbow[0], wrist[1] - elbow[1]
     L = math.hypot(dx, dy) or 1
     ux, uy = dx / L, dy / L
@@ -536,160 +397,160 @@ def sleeve(s, shoulder, elbow, wrist, upper=True):
     if nx < 0:
         nx, ny = -nx, -ny
     roll = (elbow[0] + 0.3 * dx, elbow[1] + 0.3 * dy)
-    band_len = 26
-    a = (roll[0] - ux * band_len / 2, roll[1] - uy * band_len / 2)
-    b = (roll[0] + ux * band_len / 2, roll[1] + uy * band_len / 2)
-    wx = (wrist[0] + ux * 12, wrist[1] + uy * 12)                                    # runs into the hand
-    fm = (b[0] + (wx[0] - b[0]) * 0.35, b[1] + (wx[1] - b[1]) * 0.35)                 # forearm muscle belly
-    s.limb([b, fm, wx], [FOREARM + 2, FOREARM + 4, FOREARM - 14], SKIN)
-    s.line(f"M{b[0]-nx*10:.1f},{b[1]-ny*10:.1f} Q{fm[0]-nx*18:.1f},{fm[1]-ny*18:.1f} {wrist[0]-nx*12:.1f},{wrist[1]-ny*12:.1f}",
-           LW_FINE, op=0.25)                                                          # muscle separation
+    a = (roll[0] - ux * 13, roll[1] - uy * 13)
+    b = (roll[0] + ux * 13, roll[1] + uy * 13)
+    wx = (wrist[0] + ux * 14, wrist[1] + uy * 14)
+    fm = (b[0] + (wx[0] - b[0]) * 0.35, b[1] + (wx[1] - b[1]) * 0.35)
+    s.limb([b, fm, wx], [FOREARM, FOREARM + 4, FOREARM - 18], SKIN, SKIN_SH, SKIN_HL, 0.6)
     if upper:
-        s.limb([shoulder, elbow, roll], [SLEEVE, SLEEVE - 6, SLEEVE - 8], SHIRT, soft="white")
+        s.limb([shoulder, elbow, roll], [SLEEVE, SLEEVE - 6, SLEEVE - 8], SHIRT, SHIRT_SH, None, 0.62)
     else:
-        s.limb([elbow, roll], [SLEEVE - 6, SLEEVE - 8], SHIRT, soft="white")
-    s.line(f"M{elbow[0]-nx*20-ux*30:.1f},{elbow[1]-ny*20-uy*30:.1f} q{nx*14:.1f},{ny*14+8:.1f} {nx*34:.1f},{ny*34:.1f}",
-           LW_FINE, color="#b6bdcb", op=0.8)                                          # fabric fold at the elbow
+        s.limb([elbow, roll], [SLEEVE - 6, SLEEVE - 8], SHIRT, SHIRT_SH, None, 0.62)
     hw = (SLEEVE + 2) / 2
     band = (f"M{a[0]+nx*hw:.1f},{a[1]+ny*hw:.1f} Q{roll[0]+nx*(hw+4):.1f},{roll[1]+ny*(hw+4):.1f} {b[0]+nx*hw:.1f},{b[1]+ny*hw:.1f} "
             f"L{b[0]-nx*hw:.1f},{b[1]-ny*hw:.1f} Q{roll[0]-nx*(hw+4):.1f},{roll[1]-ny*(hw+4):.1f} {a[0]-nx*hw:.1f},{a[1]-ny*hw:.1f} Z")
-    gid = s.grad(roll[0] - nx * hw, roll[1] - ny * hw, roll[0] + nx * hw, roll[1] + ny * hw, SHIRT, "white")
-    s.add(f'<path d="{band}" fill="url(#{gid})" stroke="{LINE}" stroke-width="{LW_IN}" stroke-linejoin="round"/>')
-    s.line(f"M{roll[0]+nx*hw:.1f},{roll[1]+ny*hw:.1f} L{roll[0]-nx*hw:.1f},{roll[1]-ny*hw:.1f}", LW_FINE, color="#b6bdcb", op=0.9)
+    gid = s.two_tone(roll[0] - nx * hw, roll[1] - ny * hw, roll[0] + nx * hw, roll[1] + ny * hw, SHIRT, SHIRT_SH, 0.62)
+    s.add(f'<path d="{band}" fill="url(#{gid})"/>')
+    s.add(f'<path d="M{a[0]+nx*hw:.1f},{a[1]+ny*hw:.1f} L{a[0]-nx*hw:.1f},{a[1]-ny*hw:.1f}" stroke="{SHIRT_DEEP}" stroke-width="2.4"/>')
+    s.add(f'<path d="M{roll[0]+nx*hw:.1f},{roll[1]+ny*hw:.1f} L{roll[0]-nx*hw:.1f},{roll[1]-ny*hw:.1f}" stroke="{SHIRT_SH}" stroke-width="2"/>')
+    s.add(f'<path d="M{elbow[0]-nx*24-ux*30:.1f},{elbow[1]-ny*24-uy*30:.1f} q{nx*14:.1f},{ny*14+8:.1f} {nx*34:.1f},{ny*34:.1f}" '
+          f'fill="none" stroke="{SHIRT_SH}" stroke-width="3"/>')
+    hand(s, wrist, math.degrees(math.atan2(-dx, dy)), kind, flip, watch)
 
 
-def hand_of(s, elbow, wrist, kind, extra, flip):
-    dx, dy = wrist[0] - elbow[0], wrist[1] - elbow[1]
-    cuff_and_hand(s, wrist, math.degrees(math.atan2(-dx, dy)) + extra, kind, flip, cuff=False, watch=flip)
+L_SH, R_SH = (166, 348), (434, 348)
+ARMS = {
+    "down": [(L_SH, (142, 576), (146, 776), "relaxed", False), (R_SH, (458, 576), (454, 776), "relaxed", False)],
+    "explain": [(L_SH, (132, 592), (84, 462), "open", False), (R_SH, (458, 576), (454, 776), "relaxed", False)],
+    "point": [(L_SH, (106, 444), (50, 320), "point", False), (R_SH, (458, 576), (454, 776), "relaxed", False)],
+    "think": [(L_SH, (196, 604), (266, 352), "chin", True), (R_SH, (458, 576), (454, 776), "relaxed", False)],
+    "welcome": [(L_SH, (128, 576), (80, 704), "open", False), (R_SH, (472, 576), (520, 704), "open", False)],
+    "both_explain": [(L_SH, (132, 592), (84, 462), "open", False), (R_SH, (468, 592), (516, 462), "open", False)],
+}
+
+
+def crossed_arms(s):
+    """Arms folded across the chest: upper arms at the sides, forearms stacked, hands tucked."""
+    s.limb([R_SH, (462, 552)], [SLEEVE, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
+    s.limb([L_SH, (138, 552)], [SLEEVE, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
+    # back forearm (his left), from the right elbow toward his right upper arm
+    arm(s, R_SH, (462, 552), (222, 486), "tuck", True, upper=False, watch=True)
+    # front forearm (his right), from the left elbow across, on top
+    arm(s, L_SH, (138, 552), (378, 510), "tuck", False, upper=False)
 
 
 def figure(pose="down", expr="neutral", blink=False, look=(0, 0)):
     s = Svg()
-    s.add('<ellipse cx="300" cy="1392" rx="200" ry="22" fill="#000" opacity="0.28"/>')
+    s.add('<ellipse cx="300" cy="1456" rx="190" ry="20" fill="#000" opacity="0.22"/>')
     legs(s)
+    if pose == "crossed":
+        torso(s)
+        crossed_arms(s)
+        head(s, expr, blink, look)
+        return s.svg()
     arms = ARMS[pose]
-    for shoulder, elbow, wrist, kind, extra, front in arms:      # sleeves behind the torso
-        if front:
-            s.limb([shoulder, elbow], [SLEEVE, SLEEVE - 6], SHIRT, soft="white")
-        else:
-            sleeve(s, shoulder, elbow, wrist)
-    torso(s)
-    for shoulder, elbow, wrist, kind, extra, front in arms:      # hands in front of the jacket
+    for shoulder, elbow, wrist, kind, front in arms:      # sleeves sit behind the torso's shoulder line
         if not front:
-            hand_of(s, elbow, wrist, kind, extra, shoulder[0] > 300)
+            arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, watch=shoulder[0] > 300)
+    torso(s)
+    # shoulder caps over the sleeve tops (fabric continuity, no seams)
+    for sh_x, right in ((L_SH[0], False), (R_SH[0], True)):
+        d = ("M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z")
+        d = mirror(d) if right else d
+        s.part(d, SHIRT, shadow="M408,290 L470,290 L470,420 L408,420 Z" if right else None, shadow_col=SHIRT_SH)
     head(s, expr, blink, look)
-    for shoulder, elbow, wrist, kind, extra, front in arms:      # forearms crossing the body
+    for shoulder, elbow, wrist, kind, front in arms:      # forearms crossing in front of the body
         if front:
-            sleeve(s, shoulder, elbow, wrist, upper=False)
-            hand_of(s, elbow, wrist, kind, extra, shoulder[0] > 300)
+            s.limb([shoulder, elbow], [SLEEVE, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
+            arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, upper=False)
     return s.svg()
 
 
-
 # =====================================================================================
-#  TURNAROUND: side (facing left) and back views - same palette, light and line rules
+#  TURNAROUND: side (facing left) and back
 # =====================================================================================
 def side_view():
     s = Svg()
-    s.add('<ellipse cx="300" cy="1392" rx="150" ry="20" fill="#000" opacity="0.28"/>')
-    # far leg, near leg, shoes
-    s.part("M286,830 L360,830 L352,1338 L296,1338 Z", shade(TROUSER, 0.8, 0.2))
-    shoe = ("M252,1332 L342,1332 L344,1366 C344,1382 336,1390 322,1390 L230,1390 C214,1390 210,1374 222,1366 "
-            "C236,1358 246,1348 252,1332 Z")
-    s.part(shoe.replace("252,", "264,").replace("222,1428", "236,1428"), shade(SHOE, 0.8, 0.2))
-    s.part("M256,830 L346,830 L338,1338 L274,1338 Z", TROUSER, shadow="M316,824 L360,824 L350,1348 L310,1348 Z")
-    s.line("M300,880 C298,1000 296,1150 300,1328", LW_FINE, op=0.5)
-    s.part(shoe, SHOE, shadow="M290,1374 L350,1374 L350,1398 L290,1398 Z", hl="M226,1366 C236,1360 250,1358 262,1360 L258,1366 Z")
-    # neck + torso
-    snk = "M298,214 C300,250 296,280 286,300 L362,300 C356,280 352,250 352,210 Z"
-    s.part(snk, SKIN, line=False, shadow="M330,200 L380,200 L380,310 L330,310 Z")
-    s.line("M298,226 C300,254 296,280 286,300", LW_OUT)
-    s.line("M352,210 C352,250 356,280 362,300", LW_OUT)
-    torso_d = ("M296,290 C266,292 238,312 230,346 C224,390 232,446 242,500 C250,560 252,620 252,680 "
-               "C252,740 250,790 250,820 L366,820 C368,790 366,740 362,680 C358,600 366,500 372,420 "
-               "C374,370 368,320 352,300 C336,292 316,288 296,290 Z")
-    s.part(torso_d, SHIRT, soft="white", shadow="M330,290 C372,300 376,420 370,520 C366,640 372,760 372,860 L340,860 C348,700 352,500 336,300 Z",
-           hl="M252,340 C248,380 250,430 254,480 L262,480 C258,430 258,384 262,344 Z")
-    s.part("M262,292 L290,292 L270,346 L250,322 Z", SKIN, lw=LW_IN)               # open collar, chest
-    s.part("M262,286 C256,298 252,316 256,334 L272,330 L268,300 Z", SHIRT, soft="white", lw=LW_IN)
-    s.line("M252,360 C250,500 252,640 254,800", LW_FINE, color="#a3abbb", op=0.8)  # placket edge
-    for d in ("M262,770 Q276,760 290,768", "M320,790 Q334,780 348,788", "M270,440 C290,452 310,452 326,444"):
-        s.line(d, LW_FINE, color="#a3abbb", op=0.7)
-    s.part("M248,806 L368,806 L370,840 L250,840 Z", BELT, lw=LW_IN)
-    # near arm: rolled sleeve, bare forearm, watch
-    sleeve(s, (312, 340), (304, 580), (296, 772))
-    cuff_and_hand(s, (296, 772), 3, "relaxed", flip=True, watch=True)
-    # head profile
-    face = ("M318,46 C350,46 380,66 390,100 C398,130 392,170 372,198 C364,210 352,222 340,230 L296,246 "
-            "C284,248 270,242 262,232 C258,224 258,214 258,208 C256,204 254,200 256,196 C252,192 250,190 246,188 "
-            "C240,186 236,182 240,176 L254,148 C258,140 258,134 256,126 C254,116 256,104 262,94 C272,70 292,46 318,46 Z")
-    s.part(face, SKIN, shadow="M330,40 L420,40 L420,260 L330,260 Z", hl="M262,100 C266,86 274,74 286,66 C276,80 270,92 268,106 Z")
-    s.part("M332,128 C346,120 358,130 356,148 C354,166 344,176 334,172 Z", SKIN, shadow="M346,120 L370,120 L370,180 L346,180 Z", lw=LW_IN + 0.8)
-    s.line("M340,138 C348,142 348,156 340,162", LW_FINE, op=0.6)
-    st, arc = curls(326, 128, 80, 96, math.pi * 1.1, math.pi * 2.28, 11, 0.06, seed=5)
-    hair = (f"M{st} {arc} C376,186 370,170 366,150 C362,132 350,114 330,104 C310,96 284,94 {st} Z")
-    s.part(hair, HAIR, soft=True, shadow="M350,36 L420,36 L420,210 L350,210 Z", hl="M276,78 C290,54 312,44 334,42 C314,52 296,64 286,82 Z")
-    for d in ("M266,84 C292,52 336,44 374,62", "M284,94 C314,72 352,72 384,98", "M314,100 C340,96 366,108 386,132"):
-        s.line(d, 1.6, color=SHEEN, op=0.75)
-    s.part("M248,118 C258,110 274,110 284,116 C276,120 264,122 252,126 Z", BROW, lw=LW_FINE + 0.5)
-    eye = "M256,140 C262,134 272,134 278,140 C272,144 262,144 256,140 Z"
-    s.add(f'<path d="{eye}" fill="#f4eee6"/><circle cx="262" cy="140" r="4.4" fill="{IRIS}"/><circle cx="261" cy="139" r="1.2" fill="#fff"/>')
-    s.line("M254,139 C262,132 274,132 280,139", 2.8)
-    s.line("M282,142 l7,-2 M282,146 l7,2", LW_FINE, op=0.4)
-    beard = ("M330,150 C334,180 330,208 318,228 C308,244 292,252 276,252 C264,250 258,242 257,232 "
-             "C258,226 262,220 268,216 C280,216 294,206 302,192 C312,178 320,162 322,146 Z")
-    s.part(beard, hexc([rgb(SKIN)[i] * 0.2 + rgb(HAIR)[i] * 0.8 for i in range(3)]), soft=True, line=False,
-           shadow="M300,236 C320,230 332,200 340,146 L360,146 L360,270 L300,270 Z",
-           deep_d="M256,246 C268,262 290,262 300,256 L300,280 L256,280 Z")
-    s.part("M252,194 C262,190 274,192 282,198 C276,203 264,205 254,202 Z",
-           hexc([rgb(SKIN)[i] * 0.2 + rgb(HAIR)[i] * 0.8 for i in range(3)]), soft=True, line=False)
-    s.add('<path d="M330,96 C340,104 352,118 356,136 L344,140 C340,124 334,112 326,104 Z" fill="url(#fade)"/>')   # side fade
-    s.line("M256,212 Q262,214 268,212", 2.2)
+    s.add('<ellipse cx="300" cy="1456" rx="140" ry="18" fill="#000" opacity="0.22"/>')
+    s.part("M282,800 L356,800 L350,1404 L294,1404 Z", TROUSER_SH)
+    shoe = ("M256,1396 L344,1396 L346,1430 C346,1446 338,1454 324,1454 L232,1454 C216,1454 212,1440 224,1432 "
+            "C238,1424 248,1412 256,1396 Z")
+    s.part(shoe.replace("256,", "268,").replace("224,1432", "238,1432"), "#0e0e10")
+    s.part("M258,800 L346,800 L338,1404 L272,1404 Z", TROUSER, shadow="M316,790 L360,790 L350,1412 L310,1412 Z",
+           shadow_col=TROUSER_SH, hl="M266,840 L274,840 L282,1390 L276,1390 Z", hl_col=TROUSER_HL)
+    s.part(shoe, SHOE, hl="M226,1432 C236,1424 250,1422 262,1424 L258,1430 Z", hl_col="#4a4d58")
+    s.part("M300,224 L350,220 L356,306 L298,306 Z", SKIN, shadow="M330,210 L370,210 L370,310 L330,310 Z", shadow_col=SKIN_SH)
+    torso_d = ("M296,288 C266,290 244,308 236,340 C230,386 238,446 246,500 C250,560 252,640 252,700 "
+               "C252,740 252,770 252,796 L366,796 C368,770 366,740 362,700 C358,620 366,500 372,420 "
+               "C374,370 368,320 352,300 C336,292 316,286 296,288 Z")
+    s.part(torso_d, SHIRT, shadow="M326,288 C372,300 376,420 370,520 C366,640 372,760 372,800 L340,800 "
+                                  "C348,700 352,500 336,300 Z", shadow_col=SHIRT_SH)
+    s.add(f'<path d="M244,420 C254,440 266,448 280,448 C266,454 252,448 244,436 Z" fill="{SHIRT_SH}"/>')
+    s.part("M262,290 L290,290 L270,344 L250,320 Z", SKIN, shadow_col=SKIN_SH)
+    s.part("M262,284 C256,296 252,314 256,332 L272,328 L268,298 Z", SHIRT, shadow="M250,310 L275,310 L275,335 L250,335 Z", shadow_col=SHIRT_SH)
+    s.part("M250,786 L368,786 L370,814 L252,814 Z", BELT)
+    arm(s, (312, 336), (306, 572), (298, 772), "relaxed", True, watch=True)
+    face = ("M318,62 C350,62 378,82 386,114 C392,144 386,172 368,196 L344,230 C330,244 312,250 296,250 "
+            "C284,250 272,244 266,234 C262,226 262,216 262,210 C258,206 256,202 258,198 C254,194 252,192 248,190 "
+            "C242,188 238,184 242,178 L256,150 C260,142 260,136 258,128 C256,118 258,106 264,96 C274,74 294,62 318,62 Z")
+    s.part(face, SKIN, shadow="M334,56 L420,56 L420,260 L334,260 Z", shadow_col=SKIN_SH,
+           hl="M264,104 C268,90 276,80 288,72 C278,84 272,96 270,108 Z", hl_col=SKIN_HL)
+    s.part("M334,130 C346,122 358,132 356,150 C354,168 344,178 334,174 Z", SKIN, shadow="M346,120 L370,120 L370,180 L346,180 Z", shadow_col=SKIN_SH)
+    s.add(f'<path d="M248,118 C258,110 274,110 286,116 C276,120 264,122 252,126 Z" fill="{BROW}"/>')
+    s.add(f'<path d="M256,140 C262,134 272,134 278,140 C272,144 262,144 256,140 Z" fill="#f6f1ea"/>'
+          f'<circle cx="262" cy="140" r="4" fill="{IRIS}"/><path d="M254,139 C262,131 274,131 280,138 L280,136 C274,129 262,129 254,137 Z" fill="{BROW}"/>')
+    s.part("M338,136 C344,170 342,206 328,230 C316,248 296,260 274,260 C262,258 256,250 258,242 "
+           "C264,244 270,242 274,236 C276,226 276,218 280,210 C288,196 298,180 308,164 C316,152 322,144 326,136 Z", BEARD,
+           shadow="M310,170 L360,170 L360,270 L310,270 Z", shadow_col="#0f0d0e")
+    s.add(f'<path d="M250,194 C260,188 274,190 284,198 C278,206 264,208 252,204 Z" fill="{BEARD}"/>')
+    s.add(f'<path d="M258,214 Q264,216 270,214" fill="none" stroke="#5a2c22" stroke-width="2.4"/>')
+    s.add(f'<path d="M336,116 C348,104 366,108 378,124 L384,176 L338,176 Z" fill="url(#fade)"/>')
+    hair = ("M258,100 C254,72 266,44 290,30 C310,18 340,16 362,24 C388,34 402,58 402,88 C402,112 396,132 388,150 "
+            "L378,152 C376,136 370,124 360,118 L344,116 C338,128 336,140 334,152 L326,152 C322,134 312,118 296,108 "
+            "C282,102 270,100 258,100 Z")
+    s.part(hair, HAIR, shadow="M360,18 C392,30 406,70 396,110 L376,146 C380,110 376,60 352,30 Z", shadow_col="#0b0b0e",
+           hl="M266,82 C276,56 300,36 330,26 C312,40 292,56 280,80 Z", hl_col=SHEEN)
+    for d in ("M276,84 C296,58 330,44 370,48", "M300,98 C322,78 352,70 384,82"):
+        s.line(d, 2.2, color="#3a3e4c", op=0.7)
+    s.part("M334,130 C346,122 358,132 356,150 C354,168 344,178 334,174 Z", SKIN,
+           shadow="M346,120 L370,120 L370,180 L346,180 Z", shadow_col=SKIN_SH)          # ear in front of the fade
+    s.add(f'<path d="M340,140 C346,146 346,158 340,164" fill="none" stroke="{SKIN_DEEP}" stroke-width="2" opacity="0.7"/>')
     return s.svg()
 
 
 def back_view():
     s = Svg()
-    s.add('<ellipse cx="300" cy="1392" rx="200" ry="22" fill="#000" opacity="0.28"/>')
+    s.add('<ellipse cx="300" cy="1456" rx="190" ry="20" fill="#000" opacity="0.22"/>')
     legs(s)
-    for shoulder, elbow, wrist, *_ in ARMS["down"]:
-        sleeve(s, shoulder, elbow, wrist)
-    nk = "M262,200 C262,240 258,272 246,294 L354,294 C342,272 338,240 338,200 Z"
-    s.part(nk, SKIN, line=False, shadow="M310,190 L360,190 L360,300 L310,300 Z")
-    s.line("M262,200 C262,240 258,272 246,294", LW_OUT)
-    s.line("M338,200 C338,240 342,272 354,294", LW_OUT)
-    s.part(TORSO, SHIRT, soft="white", shadow="M346,282 C400,290 462,312 460,370 C450,404 430,420 420,440 L414,820 L374,820 C390,700 394,520 382,330 Z",
-           hl="M160,330 C152,346 152,364 158,380 L168,378 C164,364 164,350 170,336 Z")
-    s.part("M256,288 Q300,276 344,288 L340,308 Q300,298 260,308 Z", SHIRT, soft="white", lw=LW_IN)   # collar
-    s.line("M178,330 C230,350 370,350 422,330", LW_FINE, color="#a3abbb", op=0.9)                   # back yoke seam
-    for d in ("M300,360 L300,780", "M236,700 Q250,720 246,760", "M364,700 Q350,720 354,760"):
-        s.line(d, LW_FINE, color="#a3abbb", op=0.7)
-    s.part("M194,806 L406,806 L408,838 L192,838 Z", BELT, shadow="M300,800 L420,800 L420,840 L300,840 Z", lw=LW_IN)
-    for shoulder, elbow, wrist, kind, extra, front in ARMS["down"]:
-        hand_of(s, elbow, wrist, kind, extra, shoulder[0] < 300)
-    for d in ("M228,132 C214,122 205,132 207,149 C209,165 219,176 232,172 Z",):
-        s.part(d, SKIN, lw=LW_IN + 0.8)
-        s.part(mirror(d), SKIN, shadow="M360,110 L410,110 L410,190 L360,190 Z", lw=LW_IN + 0.8)
-    nape = "M216,140 C216,196 248,240 300,244 C352,240 384,196 384,140 Z"           # back of the head (skin)
-    s.part(nape, SKIN, shadow="M310,130 L400,130 L400,250 L310,250 Z", lw=LW_OUT)
+    for shoulder, elbow, wrist, kind, front in ARMS["down"]:
+        arm(s, shoulder, elbow, wrist, kind, shoulder[0] < 300, watch=shoulder[0] < 300)
+    s.part("M272,210 L272,304 L328,304 L328,210 Z", SKIN, shadow="M308,200 L340,200 L340,310 L308,310 Z", shadow_col=SKIN_SH)
+    s.part(TORSO, SHIRT, shadow="M344,290 C400,296 452,316 450,372 C446,420 432,448 424,472 L414,790 L372,790 C390,660 394,500 380,320 Z",
+           shadow_col=SHIRT_SH)
+    s.add(f'<path d="M188,330 C240,350 360,350 412,330 C360,356 240,356 188,330 Z" fill="{SHIRT_SH}"/>')     # yoke seam
+    s.add(f'<path d="M298,360 L302,360 L302,780 L298,780 Z" fill="{SHIRT_SH}" opacity="0.6"/>')
+    s.part("M266,284 Q300,272 334,284 L330,302 Q300,294 270,302 Z", SHIRT, shadow="M300,270 L340,270 L340,306 L300,306 Z", shadow_col=SHIRT_SH)
+    s.part("M188,786 L412,786 L414,814 L186,814 Z", BELT)
+    ear = "M233,134 C222,128 215,136 216,152 C217,166 224,176 236,174 Z"
+    s.part(ear, SKIN, shadow_col=SKIN_SH)
+    s.part(mirror(ear), SKIN, shadow=mirror(ear), shadow_col=SKIN_SH)
+    nape = "M232,122 C232,190 258,226 300,230 C342,226 368,190 368,122 Z"
+    s.part(nape, SKIN, shadow="M310,120 L380,120 L380,240 L310,240 Z", shadow_col=SKIN_SH)
     s.defs.append(f'<clipPath id="napeclip"><path d="{nape}"/></clipPath>')
-    s.add('<g clip-path="url(#napeclip)"><rect x="200" y="150" width="200" height="90" fill="url(#fade)"/></g>')   # nape fade
-    st, arc = curls(300, 124, 88, 96, math.pi * 0.9, math.pi * 2.1, 13, 0.045, seed=4)
-    back = f"M{st} {arc} Q336,196 300,192 Q264,196 {st} Z"
-    s.part(back, HAIR, soft=True, shadow="M320,24 C376,40 396,100 384,150 C376,200 352,236 316,258 L300,258 C340,220 352,150 340,90 Z",
-           hl="M246,70 C262,48 284,38 302,38 C284,48 266,60 256,78 Z", rim="M368,70 C384,100 384,150 372,190")
-    for d in ("M246,80 C258,110 266,140 270,176", "M276,52 C288,96 294,140 294,184", "M324,52 C312,96 306,140 306,184",
-              "M354,80 C342,110 334,140 330,176"):
-        s.line(d, 1.6, color=SHEEN, op=0.7)
+    s.add('<g clip-path="url(#napeclip)"><rect x="220" y="118" width="160" height="96" fill="url(#fade)"/></g>')
+    hair = ("M232,128 C226,96 238,62 262,42 C282,26 318,22 342,34 C366,46 376,74 370,104 C368,114 368,122 368,128 "
+            "C346,124 324,122 300,122 C276,122 254,124 232,128 Z")
+    s.part(hair, HAIR, shadow="M320,20 L390,20 L390,140 L330,140 C352,100 348,60 320,30 Z", shadow_col="#0b0b0e",
+           hl="M256,60 C266,46 282,38 298,36 C284,44 272,54 264,66 Z", hl_col=SHEEN)
+    for d in ("M262,60 C276,80 284,100 288,118", "M300,40 C304,64 304,92 302,118", "M336,56 C328,78 322,100 318,118"):
+        s.line(d, 2, color="#3a3e4c", op=0.7)
     return s.svg()
 
 
 def head_only(expr, blink=False, look=(0, 0)):
     s = Svg()
-    s.add('<rect x="200" y="290" width="200" height="40" fill="none"/>')
-    torso_bits = Svg()
     head(s, expr, blink, look)
-    return s.svg().replace(f'viewBox="0 0 {W} {H}" width="{W}" height="{H}"', 'viewBox="176 4 248 296" width="248" height="296"')
+    return s.svg().replace(f'viewBox="0 0 {W} {H}" width="{W}" height="{H}"', 'viewBox="196 0 208 300" width="208" height="300"')
 
 
 POSES = {
@@ -712,11 +573,17 @@ POSES = {
     "surprised_talk": dict(pose="both_explain", expr="surprised"),
     "serious": dict(pose="down", expr="serious"),
     "serious_talk": dict(pose="down", expr="talk2"),
+    "crossed": dict(pose="crossed", expr="serious"),
+    "crossed_talk": dict(pose="crossed", expr="talk2"),
+    "crossed_blink": dict(pose="crossed", expr="serious", blink=True),
 }
 
 EXPRESSIONS = ["neutral", "warm", "smile", "talk", "think", "surprised", "serious", "laugh"]
 
 if __name__ == "__main__":
+    for f in os.listdir(D):
+        if f.endswith(".svg"):
+            os.remove(os.path.join(D, f))
     for name, kw in POSES.items():
         with open(os.path.join(D, name + ".svg"), "w") as f:
             f.write(figure(**kw))

@@ -58,7 +58,7 @@ def character_sheet():
     d = ImageDraw.Draw(c)
     d.text((120, 70), "PROFESSOR VED", font=F(SERIF, 120), fill=INK)
     label(d, (124, 210), "Character model sheet  ·  Main explainer  ·  The Vast World", 40, SEMI, ACCENT)
-    label(d, (124, 268), "25, handsome, strong angular jaw. Black hair, short top with a skin fade. Groomed full beard + distinct moustache (clean gap under the lip). White shirt, sleeves rolled, black trousers.",
+    label(d, (124, 268), "25, handsome, athletic. Black quiff with a skin fade, crisp full beard + distinct moustache (clean gap under the lip). White shirt, top button open, sleeves folded; black trousers.",
           32, SEMI, MUTED)
 
     # turnaround with proportion guides
@@ -68,10 +68,10 @@ def character_sheet():
     figs = [("FRONT", svg_img(ved.figure("down", "neutral"), height=FH)),
             ("SIDE", svg_img(ved.side_view(), height=FH)),
             ("BACK", svg_img(ved.back_view(), height=FH))]
-    head_px = FH * 252 / ved.H  # head (crown->chin) in sheet px
+    head_px = FH * 236 / ved.H  # head (crown->chin) in sheet px
     top = 520
     for i in range(8):
-        y = top + FH * 26 / ved.H + i * head_px
+        y = top + FH * 20 / ved.H + i * head_px
         if y > 2440:
             break
         d.line([(140, y), (1860, y)], fill=(214, 200, 178), width=2)
@@ -80,7 +80,7 @@ def character_sheet():
         x = 150 + i * 570
         paste(c, im, (x, top))
         label(d, (x + im.width / 2, 2450), name, 34, BOLD, INK, "ma")
-    label(d, (1860, 470), "≈ 5.6 heads tall: compact & strong · broad chest and shoulders, thick arms · grounded, confident stance",
+    label(d, (1860, 470), "≈ 6.3 heads · broad shoulders, slim waist · flat-vector: no outlines, two-tone shading",
           26, SEMI, MUTED, "ra")
 
     # expressions
@@ -98,19 +98,19 @@ def character_sheet():
     # poses
     card(d, (1980, 1330, 3900, 2500))
     heading(d, (2030, 1360), "Acting poses  (renderer pose names)")
-    poses = [("explain", "explain"), ("point", "point"), ("think", "think"), ("welcome", "welcome"), ("surprised", "surprised")]
+    poses = [("explain", "explain"), ("point", "point"), ("think", "think"), ("crossed", "crossed (arms folded)"), ("welcome", "welcome")]
     for i, (p, nm) in enumerate(poses):
         im = svg_img(open(os.path.join(ROOT, "characters", "ved", p + ".svg")).read(), height=900)
         x = 2010 + i * 375
         paste(c, im, (x + 175 - im.width / 2, 1470))
         label(d, (x + 180, 2390), nm, 30, BOLD, INK, "ma")
-    label(d, (2030, 2440), "Each pose has _talk (mouth open) and blink frames. Sleeves always rolled below the elbow; watch on his left wrist.",
+    label(d, (2030, 2440), "Each pose has _talk and blink frames. Sleeves always folded below the elbow; watch on his left wrist.",
           24, SEMI, MUTED)
 
     # palette strip
-    pal = [("Skin", ved.SKIN), ("Hair & beard", ved.HAIR), ("Sheen", ved.SHEEN), ("Watch", ved.GOLD),
+    pal = [("Skin", ved.SKIN), ("Hair", ved.HAIR), ("Beard", ved.BEARD), ("Hair sheen", ved.SHEEN), ("Lips", ved.LIPS),
            ("White shirt", ved.SHIRT), ("Black trousers", ved.TROUSER), ("Belt", ved.BELT), ("Watch strap", ved.STRAP),
-           ("Shoes", ved.SHOE), ("Line", ved.LINE), ("Rim light", ved.RIM)]
+           ("Shoes", ved.SHOE), ("Watch", ved.GOLD)]
     x0, y0 = 100, 2530
     for i, (nm, hx) in enumerate(pal):
         x = x0 + i * 350
@@ -199,7 +199,7 @@ def style_guide():
 
     # 2 shading steps
     card(d, (1360, 300, 3900, 860))
-    heading(d, (1410, 330), "2  Shading build-up (every surface)")
+    heading(d, (1410, 330), "2  Shading build-up (sets & props)")
     names = ["Flat base", "+ cel shadow", "+ warm highlight", "+ light falloff", "+ cool rim & line"]
     for i, (im, nm) in enumerate(zip(demo_shapes(), names)):
         x = 1430 + i * 490
@@ -211,8 +211,9 @@ def style_guide():
     # 3 line weights
     card(d, (1360, 900, 3900, 1260))
     heading(d, (1410, 930), "3  Line weight & colour")
-    rows = [(4.5, "Outer silhouette / foreground", "4.5 px @1500 px figure"), (2.2, "Inner forms: lapels, tie, eyes", "2.2 px"),
-            (1.3, "Fine detail: wrinkles, hair strands", "1.3 px, 40–80% opacity"), (0, "Far background", "no lines, colour only")]
+    rows = [(0, "Characters (Ved)", "NO outlines: flat two-tone, tone separates forms"),
+            (4.5, "Sets: foreground silhouette", "4.5 px"), (2.2, "Inner forms: lapels, tie, eyes", "2.2 px"),
+            (1.3, "Fine detail on props", "1.3 px, 40–80% opacity")]
     for i, (w, a, b) in enumerate(rows):
         y = 1050 + i * 52
         if w:

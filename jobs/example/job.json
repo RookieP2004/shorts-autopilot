@@ -55,10 +55,10 @@
         {
           "type": "character",
           "id": "ved",
-          "pose": "think",
+          "pose": "crossed",
           "x": 0.5,
-          "y": 0.69,
-          "h": 0.38,
+          "y": 0.68,
+          "h": 0.4,
           "enter": "none",
           "loop": "bob",
           "loop_amp": 0.4
@@ -217,8 +217,8 @@
           "id": "ved",
           "pose": "explain",
           "x": 0.5,
-          "y": 0.69,
-          "h": 0.38,
+          "y": 0.68,
+          "h": 0.4,
           "enter": "fade"
         }
       ]
@@ -247,8 +247,8 @@
           "id": "ved",
           "pose": "point",
           "x": 0.52,
-          "y": 0.69,
-          "h": 0.38,
+          "y": 0.68,
+          "h": 0.4,
           "enter": "slide_left"
         }
       ]

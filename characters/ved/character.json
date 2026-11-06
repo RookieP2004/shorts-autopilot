@@ -1,7 +1,7 @@
 {
   "name": "Professor Ved",
-  "description": "The channel's explainer. 25, handsome, muscular-fit and compact. Strong angular jawline, defined jaw corners and chin, cheekbones. Black hair: short textured top with a skin fade. Groomed full beard following the jaw plus a distinct, visible moustache of the same length; they meet only at the mouth corners, with a clean skin gap right below the lower lip. No glasses. Crisp white shirt, top button open, sleeves rolled below the elbow, black trousers, black belt, black shoes, gold watch on his left wrist. Semi-realistic 2D, round shading on arms and hands, warm key light from the left.",
-  "default_h": 0.38,
+  "description": "The channel's explainer, drawn in clean flat-vector style (no outlines, two-tone shading). 25, handsome, athletic: broad shoulders, slim waist. Black hair swept up into a quiff with a skin fade. Crisp full black beard following a slightly narrow jaw, plus a distinct full moustache; they meet only at the mouth corners with a clean skin gap right below the lower lip. No glasses. White shirt, top button open, sleeves folded below the elbow; black trousers, black belt, black shoes; gold watch on his left wrist. Poses include arms crossed.",
+  "default_h": 0.4,
   "voice": {
     "voice": "bm_george",
     "speed": 0.95,
