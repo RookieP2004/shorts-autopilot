@@ -1,209 +1,122 @@
 {
   "id": "example",
-  "title": "Octopuses have THREE hearts 🐙 #shorts",
-  "description": "Why does an octopus need three hearts? A 30-second answer.",
+  "title": "Why is the sky blue? 🌍",
+  "description": "Professor Ved explains why the sky is blue - and why sunsets are orange.",
   "tags": [
-    "octopus",
-    "animal facts",
-    "science"
+    "science",
+    "physics",
+    "sky",
+    "explained"
   ],
   "hashtags": [
-    "#animalfacts",
-    "#science"
+    "#science",
+    "#explained"
   ],
   "meta": {
-    "format": "fact-drop",
-    "topic": "octopus hearts",
-    "hook": "number-shock",
+    "format": "big-question",
+    "topic": "why the sky is blue",
+    "hook": "question",
     "idea_source": "example",
     "characters": [
-      "host"
+      "ved"
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Rayleigh_scattering"
     ]
   },
   "privacy": "private",
+  "speaker": "ved",
   "scenes": [
     {
-      "say": "An octopus has *three* hearts. And one of them stops when it swims.",
-      "speaker": "host",
+      "say": "Why is the sky *blue*? It is not the colour of the air.",
+      "bg": {
+        "type": "image",
+        "path": "assets/bg/world.svg"
+      },
       "camera": {
         "zoom": [
           1.0,
-          1.06
+          1.05
         ]
       },
       "layers": [
         {
-          "type": "shape",
-          "shape": "burst",
-          "color": "accent",
-          "w": 0.62,
-          "x": 0.5,
-          "y": 0.2,
-          "enter": "pop",
-          "loop": "spin",
-          "loop_speed": 0.15,
-          "opacity": 0.9
-        },
-        {
-          "type": "counter",
-          "to": 3,
-          "x": 0.5,
-          "y": 0.2,
-          "size": 300,
-          "color": "ink",
-          "at": 0.1,
-          "enter": "pop",
-          "sfx": "pop"
-        },
-        {
           "type": "text",
-          "text": "HEARTS",
+          "text": "WHY IS THE SKY *BLUE?*",
+          "font": "display",
           "x": 0.5,
-          "y": 0.34,
-          "size": 120,
-          "color": "primary",
-          "at": 0.5,
-          "enter": "slide_up"
+          "y": 0.2,
+          "size": 130,
+          "max_w": 0.84,
+          "enter": "none",
+          "stroke": "#1a1410",
+          "stroke_width": 6
         },
         {
           "type": "character",
-          "id": "host",
-          "pose": "shocked",
-          "x": 0.5,
-          "y": 0.64,
-          "h": 0.3,
-          "enter": "drop",
-          "loop": "bob"
-        }
-      ]
-    },
-    {
-      "say": "Two hearts push blood through the gills. The third pumps it to the rest of the body.",
-      "speaker": "host",
-      "transition": "slide_left",
-      "layers": [
-        {
-          "type": "image",
-          "x": 0.3,
-          "y": 0.2,
-          "w": 0.3,
-          "enter": "pop",
-          "at": 0.2,
-          "loop": "pulse",
-          "sfx": "pop",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 90'><path d='M50 85 L10 45 A22 22 0 0 1 50 15 A22 22 0 0 1 90 45 Z' fill='#f43f5e'/></svg>"
-        },
-        {
-          "type": "image",
-          "x": 0.7,
-          "y": 0.2,
-          "w": 0.3,
-          "enter": "pop",
-          "at": 0.5,
-          "loop": "pulse",
-          "sfx": "pop",
-          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 90'><path d='M50 85 L10 45 A22 22 0 0 1 50 15 A22 22 0 0 1 90 45 Z' fill='#f43f5e'/></svg>"
-        },
-        {
-          "type": "text",
-          "text": "GILLS",
-          "x": 0.5,
-          "y": 0.32,
-          "size": 90,
-          "color": "accent2",
-          "at": 0.6,
-          "enter": "fade"
-        },
-        {
-          "type": "character",
-          "id": "host",
+          "id": "ved",
           "pose": "think",
-          "x": 0.68,
-          "y": 0.64,
-          "h": 0.3,
-          "enter": "slide_left",
-          "flip": true
+          "x": 0.5,
+          "y": 0.68,
+          "h": 0.4,
+          "enter": "none",
+          "loop": "bob",
+          "loop_amp": 0.4
         }
       ]
     },
     {
-      "say": "That's why octopuses would rather *crawl* than swim. Swimming wears them out.",
-      "speaker": "host",
-      "transition": "zoom",
-      "camera": {
-        "punch": [
-          1.2
-        ]
+      "say": "Sunlight holds every colour. When it hits the air, the short *blue* waves bounce in every direction.",
+      "transition": "fade",
+      "layers": [
+        {
+          "type": "image",
+          "x": 0.5,
+          "y": 0.2,
+          "w": 0.7,
+          "enter": "pop",
+          "at": 0.3,
+          "sfx": "pop",
+          "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 160'><path d='M0,80 C40,20 80,140 120,80 C160,20 200,140 240,80' stroke='#f06a5a' stroke-width='10' fill='none'/><path d='M0,80 C20,40 40,120 60,80 C80,40 100,120 120,80 C140,40 160,120 180,80 C200,40 220,120 240,80 C260,40 280,120 300,80 C320,40 340,120 360,80 C380,40 400,120 400,80' stroke='#6fc3f0' stroke-width='8' fill='none' transform='translate(0,0)' opacity='0.95'/></svg>"
+        },
+        {
+          "type": "character",
+          "id": "ved",
+          "pose": "explain",
+          "x": 0.5,
+          "y": 0.68,
+          "h": 0.4,
+          "enter": "fade"
+        }
+      ]
+    },
+    {
+      "say": "So wherever you look, blue light is coming at you. That is the colour of a scattered sky.",
+      "transition": "slide_left",
+      "bg": {
+        "type": "image",
+        "path": "assets/bg/cosmos.svg"
       },
       "layers": [
         {
           "type": "text",
-          "text": "Crawl > *Swim*",
+          "text": "SCATTERED *LIGHT*",
+          "font": "display",
           "x": 0.5,
-          "y": 0.17,
-          "size": 150,
-          "enter": "typewriter"
-        },
-        {
-          "type": "shape",
-          "shape": "arrow",
-          "color": "accent",
-          "w": 0.22,
-          "x": 0.5,
-          "y": 0.29,
-          "rotate": 90,
-          "enter": "pop",
-          "at": 0.9,
-          "loop": "bob"
+          "y": 0.2,
+          "size": 120,
+          "enter": "slide_up",
+          "stroke": "#1a1410",
+          "stroke_width": 6
         },
         {
           "type": "character",
-          "id": "host",
-          "pose": "happy",
-          "x": 0.5,
-          "y": 0.64,
-          "h": 0.3,
-          "enter": "pop",
-          "loop": "wiggle"
-        }
-      ]
-    },
-    {
-      "say": "Follow for a weird animal fact every day.",
-      "speaker": "host",
-      "transition": "flash",
-      "sfx": "ding",
-      "layers": [
-        {
-          "type": "shape",
-          "shape": "rect",
-          "color": "accent",
-          "w": 0.8,
-          "h": 0.2,
-          "x": 0.5,
-          "y": 0.2,
-          "enter": "zoom"
-        },
-        {
-          "type": "text",
-          "text": "FOLLOW FOR MORE",
-          "x": 0.5,
-          "y": 0.2,
-          "size": 110,
-          "color": "ink",
-          "at": 0.15,
-          "enter": "pop",
-          "shadow": false
-        },
-        {
-          "type": "character",
-          "id": "host",
-          "pose": "idle",
-          "x": 0.5,
-          "y": 0.64,
-          "h": 0.3,
-          "enter": "pop",
-          "loop": "float"
+          "id": "ved",
+          "pose": "point",
+          "x": 0.52,
+          "y": 0.68,
+          "h": 0.4,
+          "enter": "slide_left"
         }
       ]
     }

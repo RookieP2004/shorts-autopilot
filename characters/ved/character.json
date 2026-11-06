@@ -1,0 +1,10 @@
+{
+  "name": "Professor Ved",
+  "description": "The channel's explainer. Older, wise, calm. Silver swept-back hair, trimmed beard, round gold spectacles, navy suit, brown waistcoat, burgundy tie, gold pocket-watch chain. Semi-realistic 2D, warm key light from the left.",
+  "default_h": 0.4,
+  "voice": {
+    "voice": "bm_george",
+    "speed": 0.95,
+    "lang": "en-gb"
+  }
+}

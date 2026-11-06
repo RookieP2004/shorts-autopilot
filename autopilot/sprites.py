@@ -186,6 +186,12 @@ def background(style, bg, W, H):
 
     def make():
         t = bg.get("type", "gradient")
+        if t == "image":
+            p = bg["path"] if os.path.isabs(bg["path"]) else os.path.join(ROOT, bg["path"])
+            if p.endswith(".svg"):
+                png = cairosvg.svg2png(url=p, output_width=W, output_height=H)
+                return Image.open(io.BytesIO(png)).convert("RGBA")
+            return Image.open(p).convert("RGBA").resize((W, H), Image.LANCZOS)
         cols = [color(style, c) for c in bg.get("colors", ["bg1", "bg2"])]
         if t == "solid" or len(cols) == 1:
             svg_fill = cols[0]

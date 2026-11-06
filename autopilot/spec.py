@@ -24,6 +24,7 @@ DEFAULT_STYLE = {
     "transition": {"type": "slide_left", "frames": 8},
     "progress_bar": {"enabled": True, "color": "accent", "height": 10},
     "watermark": {"text": "", "size": 34, "opacity": 0.55, "y": 0.05},
+    "grade": {"enabled": False, "shadows": "#1d4a52", "highlights": "#ffb36b", "strength": 0.12, "contrast": 1.06},
     "loudness_lufs": -14,
     "max_duration": 58,
     "safe_zone": {"top": 0.08, "bottom": 0.78, "left": 0.05, "right": 0.86},
@@ -121,6 +122,9 @@ def validate_job(job, style, chars, root=ROOT):
         sp = s.get("speaker")
         if sp and sp not in chars:
             errs.append(f"{where}: speaker '{sp}' is not a character in characters/")
+        bg = s.get("bg") or {}
+        if bg.get("type") == "image" and not os.path.exists(os.path.join(root, bg.get("path", ""))):
+            errs.append(f"{where}: background {bg.get('path')} not found")
         tr = s.get("transition")
         if tr and tr not in TRANSITIONS:
             errs.append(f"{where}: transition '{tr}' not in {sorted(TRANSITIONS)}")

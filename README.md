@@ -8,7 +8,9 @@ insights and idea backlog live in **Google Docs**.
 ```
 channel/style.json     locked look + sound (palette, fonts, captions, voice, music)
 channel/docs.json      links to the 4 Google Docs (bible, log, insights, ideas)
-characters/<id>/       make.py (one base drawing -> every pose) + character.json (voice, size)
+characters/ved/        Professor Ved: make.py (one base drawing -> every pose) + character.json
+assets/bg/             The Vast World sets: study, world, cosmos (make_backgrounds.py)
+docs/sheets/           character model sheet + look & lighting bible (scripts/build_sheets.py)
 jobs/<id>/job.json     one video (kept as a record)
 jobs/_templates/       one skeleton per format
 docs/job-spec.md       job.json reference

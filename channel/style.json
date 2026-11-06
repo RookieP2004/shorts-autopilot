@@ -5,62 +5,58 @@
     "fps": 30
   },
   "palette": {
-    "bg1": "#0f172a",
-    "bg2": "#1e293b",
-    "primary": "#f8fafc",
-    "accent": "#facc15",
-    "accent2": "#38bdf8",
-    "danger": "#f43f5e",
-    "ink": "#0b1020"
+    "bg1": "#16232b",
+    "bg2": "#24343d",
+    "primary": "#f6efe2",
+    "accent": "#f2b04a",
+    "accent2": "#6fc3c0",
+    "danger": "#d9534f",
+    "ink": "#1a1410",
+    "parchment": "#efe3c8",
+    "navy": "#34425c"
   },
   "background": {
-    "type": "gradient",
-    "colors": [
-      "bg1",
-      "bg2"
-    ],
-    "angle": 160,
-    "pattern": "dots",
-    "pattern_color": "#ffffff",
-    "pattern_opacity": 0.05
+    "type": "image",
+    "path": "assets/bg/study.svg"
   },
   "fonts": {
-    "display": "fonts/Anton-Regular.ttf",
+    "display": "fonts/DMSerifDisplay-Regular.ttf",
     "body": "fonts/Poppins-ExtraBold.ttf",
     "light": "fonts/Poppins-SemiBold.ttf"
   },
   "captions": {
     "enabled": true,
     "font": "body",
-    "size": 76,
+    "size": 72,
     "color": "primary",
     "highlight": "accent",
-    "stroke": "#000000",
+    "stroke": "#1a1410",
     "stroke_width": 9,
-    "y": 0.45,
+    "y": 0.41,
     "words_per_chunk": 3,
     "uppercase": true
   },
   "voice": {
-    "voice": "am_michael",
-    "speed": 1.05,
-    "lang": "en-us"
+    "voice": "bm_george",
+    "speed": 0.95,
+    "lang": "en-gb"
   },
   "music": {
     "enabled": true,
-    "style": "lofi",
-    "key": "A",
-    "scale": "minor",
-    "bpm": 90,
+    "style": "ambient",
+    "key": "D",
+    "scale": "dorian",
+    "bpm": 78,
     "progression": [
       1,
+      4,
       6,
-      3,
-      7
+      5
     ],
-    "volume": 0.16,
-    "duck": 0.4,
-    "seed": 7
+    "bars_per_chord": 2,
+    "volume": 0.14,
+    "duck": 0.45,
+    "seed": 21
   },
   "sfx": {
     "volume": 0.45
@@ -75,7 +71,7 @@
     "height": 10
   },
   "watermark": {
-    "text": "@yourchannel",
+    "text": "@thevastworld",
     "size": 34,
     "opacity": 0.55,
     "y": 0.05
@@ -85,7 +81,7 @@
   "scene_lead": 0.12,
   "scene_pad": 0.28,
   "youtube": {
-    "categoryId": "24",
+    "categoryId": "27",
     "privacy": "public",
     "synthetic_media": false,
     "made_for_kids": false,
@@ -99,5 +95,13 @@
     "bottom": 0.78,
     "left": 0.05,
     "right": 0.86
-  }
+  },
+  "grade": {
+    "enabled": true,
+    "shadows": "#1d4a52",
+    "highlights": "#ffb36b",
+    "strength": 0.12,
+    "contrast": 1.06
+  },
+  "default_speaker": "ved"
 }

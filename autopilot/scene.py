@@ -190,6 +190,34 @@ def layer_image(ctx, L, scene_idx, t, scene, reveal):
     return None
 
 
+_LUT = {}
+
+
+def grade_lut(style):
+    g = style.get("grade", {})
+    key = repr(sorted(g.items()))
+    if key not in _LUT:
+        sh = [c / 255 for c in hex_rgba(color(style, g.get("shadows", "#1d4a52")))[:3]]
+        hi = [c / 255 for c in hex_rgba(color(style, g.get("highlights", "#ffb36b")))[:3]]
+        k, con = g.get("strength", 0.12), g.get("contrast", 1.06)
+        lut = []
+        for ch in range(3):
+            for v in range(256):
+                x = v / 255
+                x = 0.5 + (x - 0.5) * con                          # contrast around mid grey
+                x += k * ((sh[ch] - 0.5) * 2 * (1 - x) ** 2 * 0.6   # tint the shadows
+                          + (hi[ch] - 0.5) * 2 * x ** 2 * 0.5)       # tint the highlights
+                lut.append(int(max(0, min(255, round(x * 255)))))
+        _LUT[key] = lut + list(range(256))  # alpha unchanged
+    return _LUT[key]
+
+
+def apply_grade(style, img):
+    if not style.get("grade", {}).get("enabled"):
+        return img
+    return img.point(grade_lut(style))
+
+
 def draw_scene(ctx, scene_idx, t):
     """The scene's picture without captions/overlays (camera applied)."""
     scene = ctx.job["scenes"][scene_idx]
@@ -225,7 +253,7 @@ def draw_scene(ctx, scene_idx, t):
             x0 = clamp(fx * W - cw / 2 + ox, 0, W - cw)
             y0 = clamp(fy * H - chh / 2 + oy, 0, H - chh)
             canvas = canvas.crop((int(x0), int(y0), int(x0 + cw), int(y0 + chh))).resize((W, H), Image.BILINEAR)
-    return canvas
+    return apply_grade(ctx.style, canvas)
 
 
 def draw_overlays(ctx, canvas, scene_idx, t):

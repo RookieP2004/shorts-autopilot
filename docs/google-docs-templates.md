@@ -15,7 +15,7 @@ Only the owner changes sections marked 🔒. The weekly review may tune sections
    country) · language · style reference (channels/videos to resemble, or "fully original") and what we take from them.
 2. **Tone 🔒**: personality in three words · how the narrator talks · things we never do.
 3. **Look 🔒**: palette, fonts, background and captions live in `channel/style.json` in the repo. Layout zones:
-   visuals y 0.10–0.34, captions y≈0.45, character y 0.62–0.66 (h ≤ 0.30), nothing below y 0.78 or right of x 0.86.
+   visuals y 0.10–0.34, captions y≈0.41, Professor Ved y≈0.68 with h≈0.40 (his feet may sit in the UI zone; it's only ground), nothing below y 0.78 or right of x 0.86.
    Recurring visual motifs.
 4. **Cast 🔒**: table of id · name · role · personality · voice · poses. Catchphrases. The rule: characters are made only by
    `characters/<id>/make.py`, and their colours, proportions and voice never change.
