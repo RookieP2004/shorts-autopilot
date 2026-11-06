@@ -22,7 +22,7 @@ class Ctx:
         self.W, self.H, self.fps = c["w"], c["h"], c["fps"]
         self.default_speaker = job.get("speaker") or style.get("default_speaker") or (
             next(iter(chars)) if chars else None)
-        self.vo, self.env, self.captions = [], [], []
+        self.vo, self.env, self.captions, self.vis = [], [], [], []
         self.dur, self.start, self.frames = [], [], []
         self.total = 1.0
 
@@ -30,6 +30,11 @@ class Ctx:
         e = self.env[i]
         k = int((t - self.lead_of(i)) * self.fps)
         return float(e[k]) if 0 <= k < len(e) else 0.0
+
+    def viseme(self, i, t):
+        v = self.vis[i]
+        k = int((t - self.lead_of(i)) * self.fps)
+        return v[k] if 0 <= k < len(v) else None
 
     def lead_of(self, i):
         return self.job["scenes"][i].get("lead", self.style["scene_lead"])
@@ -91,7 +96,9 @@ def prepare(ctx, log=print):
         frames = int(round(dur * ctx.fps))
         dur = frames / ctx.fps
         ctx.vo.append(x)
-        ctx.env.append(audio.envelope(x, ctx.fps) if len(x) else np.zeros(0))
+        env = audio.envelope(x, ctx.fps) if len(x) else np.zeros(0)
+        ctx.env.append(env)
+        ctx.vis.append(audio.visemes(env, audio.brightness(x, ctx.fps)) if len(x) else [])
         ctx.captions.append(caption_chunks(s.get("caption", s.get("say", "")), lead, lead + speech, per)
                             if s.get("say") else [])
         ctx.dur.append(dur)

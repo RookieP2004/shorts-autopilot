@@ -104,7 +104,7 @@ def character_sheet():
         x = 2010 + i * 375
         paste(c, im, (x + 175 - im.width / 2, 1470))
         label(d, (x + 180, 2390), nm, 30, BOLD, INK, "ma")
-    label(d, (2030, 2440), "Each pose has _talk and blink frames. Sleeves always folded below the elbow; watch on his left wrist.",
+    label(d, (2030, 2440), "Every pose has 5 lip-sync mouth shapes (m1, talk, m3, oo, ee) + blink, picked from the voice audio. Watch on his left wrist.",
           24, SEMI, MUTED)
 
     # palette strip

@@ -134,11 +134,12 @@ def character_image(ctx, L, scene_idx, t, scene):
     use = pose
     speaking = scene.get("speaker", ctx.default_speaker) == L["id"] and L.get("talk", True)
     if speaking:
-        env = ctx.envelope(scene_idx, t)
-        talk_pose = f"{pose}_talk" if f"{pose}_talk" in ch["poses"] else (
-            "talk" if pose == "idle" and "talk" in ch["poses"] else None)
-        if talk_pose and env > 0.22:
-            use = talk_pose
+        v = ctx.viseme(scene_idx, t)
+        if v:
+            for cand in (f"{pose}_{v}", f"{pose}_talk", "talk" if pose == "idle" else None):
+                if cand and cand in ch["poses"]:
+                    use = cand
+                    break
     blink_pose = f"{pose}_blink" if f"{pose}_blink" in ch["poses"] else (
         "blink" if pose == "idle" and "blink" in ch["poses"] else None)
     if blink_pose and use == pose:
@@ -237,6 +238,10 @@ def draw_scene(ctx, scene_idx, t):
             continue
         cx = L.get("x", 0.5) * W + dx
         cy = L.get("y", 0.5) * H + dy
+        if L["type"] == "character" and scene.get("speaker", ctx.default_speaker) == L.get("id") and L.get("talk", True):
+            e = ctx.envelope(scene_idx, t)                       # talking body language: nod on stresses + slow sway
+            cy -= e * H * 0.004
+            rot += math.sin(t * 1.7) * 0.7 * min(1.0, e * 2.5) + e * 0.6
         paste(canvas, img, cx, cy, sc * L.get("scale", 1.0), rot, alpha, L.get("flip", False))
     cam = scene.get("camera")
     if cam:

@@ -63,6 +63,55 @@ def envelope(x, fps):
     return np.clip(env, 0, 1)
 
 
+def brightness(x, fps):
+    """Per-frame spectral centroid, 0..1 (low = round vowels 'o/oo', high = 'ee/s/t' sounds)."""
+    hop = int(SR / fps)
+    n = int(np.ceil(len(x) / hop))
+    win = np.hanning(hop * 2)
+    freqs = np.fft.rfftfreq(hop * 2, 1 / SR)
+    out = np.zeros(n)
+    for i in range(n):
+        seg = x[i * hop: i * hop + hop * 2]
+        if len(seg) < hop * 2:
+            seg = np.pad(seg, (0, hop * 2 - len(seg)))
+        mag = np.abs(np.fft.rfft(seg * win))
+        band = (freqs > 80) & (freqs < 6000)
+        tot = mag[band].sum()
+        out[i] = (mag[band] * freqs[band]).sum() / tot if tot > 1e-6 else 0
+    return np.clip((out - 500) / 2500, 0, 1)
+
+
+def visemes(env, bright, hold=2):
+    """Pick a mouth shape per frame from loudness + brightness, holding each shape >= `hold` frames."""
+    import numpy as _np
+    voiced = _np.array([b for e, b in zip(env, bright) if e >= 0.12])
+    if len(voiced) > 4:                       # brightness relative to THIS voice line (deep voices read dark)
+        lo, hi = _np.percentile(voiced, 15), _np.percentile(voiced, 85)
+        bright = _np.clip((_np.asarray(bright) - lo) / max(1e-6, hi - lo), 0, 1)
+    raw = []
+    for e, b in zip(env, bright):
+        if e < 0.12:
+            raw.append(None)                      # closed
+        elif e < 0.32:
+            raw.append("m1")
+        elif e < 0.62:
+            raw.append("oo" if b < 0.18 else ("ee" if b > 0.8 else "talk"))
+        else:
+            raw.append("oo" if b < 0.12 else ("ee" if b > 0.88 else "m3"))
+    out, cur, left = [], None, 0
+    for v in raw:
+        if left > 0 and v != cur:
+            out.append(cur)
+            left -= 1
+            continue
+        if v != cur:
+            cur, left = v, hold - 1
+        else:
+            left = max(0, left - 1)
+        out.append(cur)
+    return out
+
+
 # ---------------- music ----------------
 NOTE = {"C": 0, "C#": 1, "Db": 1, "D": 2, "D#": 3, "Eb": 3, "E": 4, "F": 5, "F#": 6, "Gb": 6,
         "G": 7, "G#": 8, "Ab": 8, "A": 9, "A#": 10, "Bb": 10, "B": 11}

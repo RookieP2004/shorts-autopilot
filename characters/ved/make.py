@@ -167,7 +167,7 @@ BROWS = {"neutral": (0, 0), "warm": (-2, 1), "smile": (-2, 1), "talk": (-2, 0), 
          "think": (5, 0), "surprised": (-10, -7), "serious": (6, -1), "laugh": (-3, 2)}
 
 
-def head(s, expr="neutral", blink=False, look=(0, 0)):
+def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
     # ears
     ear = "M233,134 C222,128 215,136 216,152 C217,166 224,176 236,174 Z"
     s.part(ear, SKIN, shadow="M200,160 L240,160 L240,190 L200,190 Z", shadow_col=SKIN_SH)
@@ -253,20 +253,29 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
 
     # mouth (between moustache and the clean gap under the lip)
     shapes = {
+        "m1": "M290,223 Q300,222 310,223 Q307,229 300,230 Q293,229 290,223 Z",
+        "m3": "M284,221 Q300,219 316,221 Q313,243 300,244 Q287,243 284,221 Z",
+        "oo": "M292,222 Q300,219 308,222 Q311,233 300,237 Q289,233 292,222 Z",
+        "ee": "M281,222 Q300,220 319,222 Q315,232 300,233 Q285,232 281,222 Z",
         "talk": "M287,222 Q300,220 313,222 Q310,236 300,237 Q290,236 287,222 Z",
         "talk2": "M289,222 Q300,221 311,222 Q308,231 300,232 Q292,231 289,222 Z",
         "surprised": "M292,221 Q300,218 308,221 Q310,238 300,240 Q290,238 292,221 Z",
         "laugh": "M284,221 Q300,219 316,221 Q312,240 300,241 Q288,240 284,221 Z",
     }
-    if expr in shapes:
-        m = shapes[expr]
+    mk = mouth or expr
+    if mk in shapes:
+        expr_m = mk
+        m = shapes[mk]
         mid = s.uid()
         s.defs.append(f'<clipPath id="{mid}"><path d="{m}"/></clipPath>')
         s.add(f'<path d="{m}" fill="#3a1612"/>')
-        s.add(f'<g clip-path="url(#{mid})"><rect x="280" y="218" width="40" height="7" fill="#f1ece4"/>'
-              f'<ellipse cx="300" cy="241" rx="10" ry="6" fill="#b4504e"/></g>')
-        s.add(f'<path d="M290,{238 if expr != "laugh" else 242} Q300,{244 if expr != "laugh" else 247} 310,{238 if expr != "laugh" else 242} '
-              f'Q300,{241 if expr != "laugh" else 244} 290,{238 if expr != "laugh" else 242} Z" fill="{LIPS}"/>')
+        teeth_h = {"ee": 8, "m1": 3, "oo": 3}.get(expr_m, 6)
+        s.add(f'<g clip-path="url(#{mid})"><rect x="278" y="218" width="44" height="{teeth_h}" fill="#f1ece4"/>'
+              + ('' if expr_m in ("m1", "ee") else f'<ellipse cx="300" cy="{240 if expr_m != "m3" else 245}" rx="10" ry="6" fill="#b4504e"/>')
+              + '</g>')
+        bottom = {"m1": 230, "ee": 233, "oo": 237, "talk": 237, "talk2": 232, "m3": 244, "surprised": 240, "laugh": 241}.get(expr_m, 237)
+        half = {"oo": 7, "m1": 9, "ee": 12, "m3": 11}.get(expr_m, 10)
+        s.add(f'<path d="M{300-half},{bottom+1} Q300,{bottom+7} {300+half},{bottom+1} Q300,{bottom+4} {300-half},{bottom+1} Z" fill="{LIPS}"/>')
     else:
         curve = {"smile": 7, "warm": 5, "serious": 1, "think": 2}.get(expr, 3)
         s.add(f'<path d="M286,224 Q300,{224+curve} 314,224" fill="none" stroke="#5a2c22" stroke-width="2.6" stroke-linecap="round"/>')
@@ -439,14 +448,14 @@ def crossed_arms(s):
     arm(s, L_SH, (138, 552), (378, 510), "tuck", False, upper=False)
 
 
-def figure(pose="down", expr="neutral", blink=False, look=(0, 0)):
+def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None):
     s = Svg()
     s.add('<ellipse cx="300" cy="1456" rx="190" ry="20" fill="#000" opacity="0.22"/>')
     legs(s)
     if pose == "crossed":
         torso(s)
         crossed_arms(s)
-        head(s, expr, blink, look)
+        head(s, expr, blink, look, mouth)
         return s.svg()
     arms = ARMS[pose]
     for shoulder, elbow, wrist, kind, front in arms:      # sleeves sit behind the torso's shoulder line
@@ -458,7 +467,7 @@ def figure(pose="down", expr="neutral", blink=False, look=(0, 0)):
         d = ("M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z")
         d = mirror(d) if right else d
         s.part(d, SHIRT, shadow="M408,290 L470,290 L470,420 L408,420 Z" if right else None, shadow_col=SHIRT_SH)
-    head(s, expr, blink, look)
+    head(s, expr, blink, look, mouth)
     for shoulder, elbow, wrist, kind, front in arms:      # forearms crossing in front of the body
         if front:
             s.limb([shoulder, elbow], [SLEEVE, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
@@ -553,30 +562,23 @@ def head_only(expr, blink=False, look=(0, 0)):
     return s.svg().replace(f'viewBox="0 0 {W} {H}" width="{W}" height="{H}"', 'viewBox="196 0 208 300" width="208" height="300"')
 
 
-POSES = {
-    # renderer poses: <pose>, <pose>_talk, <pose>_blink
-    "idle": dict(pose="down", expr="neutral"),
-    "talk": dict(pose="down", expr="talk"),
-    "blink": dict(pose="down", expr="neutral", blink=True),
-    "warm": dict(pose="down", expr="warm"),
-    "warm_talk": dict(pose="down", expr="talk"),
-    "explain": dict(pose="explain", expr="warm"),
-    "explain_talk": dict(pose="explain", expr="talk"),
-    "explain_blink": dict(pose="explain", expr="warm", blink=True),
-    "point": dict(pose="point", expr="neutral", look=(-3, -2)),
-    "point_talk": dict(pose="point", expr="talk", look=(-3, -2)),
-    "think": dict(pose="think", expr="think", look=(3, -3)),
-    "think_talk": dict(pose="think", expr="talk2", look=(3, -3)),
-    "welcome": dict(pose="welcome", expr="smile"),
-    "welcome_talk": dict(pose="welcome", expr="talk"),
-    "surprised": dict(pose="both_explain", expr="surprised"),
-    "surprised_talk": dict(pose="both_explain", expr="surprised"),
-    "serious": dict(pose="down", expr="serious"),
-    "serious_talk": dict(pose="down", expr="talk2"),
-    "crossed": dict(pose="crossed", expr="serious"),
-    "crossed_talk": dict(pose="crossed", expr="talk2"),
-    "crossed_blink": dict(pose="crossed", expr="serious", blink=True),
+# base poses: (body pose, expression, eye look). Each gets <name>, <name>_blink and 5 mouth shapes
+# <name>_m1 (slightly open), <name>_talk (open), <name>_m3 (wide), <name>_oo (round), <name>_ee (wide, teeth)
+BASES = {
+    "idle": ("down", "neutral", (0, 0)), "warm": ("down", "warm", (0, 0)), "serious": ("down", "serious", (0, 0)),
+    "explain": ("explain", "warm", (0, 0)), "point": ("point", "neutral", (-3, -2)), "think": ("think", "think", (3, -3)),
+    "welcome": ("welcome", "smile", (0, 0)), "surprised": ("both_explain", "surprised", (0, 0)),
+    "crossed": ("crossed", "serious", (0, 0)),
 }
+MOUTHS = ["m1", "talk", "m3", "oo", "ee"]
+POSES = {}
+for _n, (_p, _e, _l) in BASES.items():
+    POSES[_n] = dict(pose=_p, expr=_e, look=_l)
+    POSES[_n + "_blink"] = dict(pose=_p, expr=_e, look=_l, blink=True)
+    for _m in MOUTHS:
+        POSES[f"{_n}_{_m}"] = dict(pose=_p, expr=_e, look=_l, mouth=_m)
+POSES["talk"] = POSES["idle_talk"]      # legacy names used by older jobs
+POSES["blink"] = POSES["idle_blink"]
 
 EXPRESSIONS = ["neutral", "warm", "smile", "talk", "think", "surprised", "serious", "laugh"]
 
