@@ -239,9 +239,8 @@ def draw_scene(ctx, scene_idx, t):
         cx = L.get("x", 0.5) * W + dx
         cy = L.get("y", 0.5) * H + dy
         if L["type"] == "character" and scene.get("speaker", ctx.default_speaker) == L.get("id") and L.get("talk", True):
-            e = ctx.envelope(scene_idx, t)                       # talking body language: nod on stresses + slow sway
-            cy -= e * H * 0.004
-            rot += math.sin(t * 1.7) * 0.7 * min(1.0, e * 2.5) + e * 0.6
+            e = ctx.envelope(scene_idx, t)                       # talking: a tiny nod on stressed words only
+            cy -= e * H * 0.0012
         paste(canvas, img, cx, cy, sc * L.get("scale", 1.0), rot, alpha, L.get("flip", False))
     cam = scene.get("camera")
     if cam:
