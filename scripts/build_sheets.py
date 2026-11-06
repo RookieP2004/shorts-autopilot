@@ -58,7 +58,7 @@ def character_sheet():
     d = ImageDraw.Draw(c)
     d.text((120, 70), "PROFESSOR VED", font=F(SERIF, 120), fill=INK)
     label(d, (124, 210), "Character model sheet  ·  Main explainer  ·  The Vast World", 40, SEMI, ACCENT)
-    label(d, (124, 268), "Mid 20s, muscular-fit. Short wavy black hair, short neat beard. White shirt (top button open, sleeves rolled), black trousers. Young, sharp, wise beyond his years.",
+    label(d, (124, 268), "Mid 20s, muscular-fit. Black hair, short textured top with a skin fade. Groomed stubble beard joined to the moustache. White shirt, sleeves rolled, black trousers.",
           32, SEMI, MUTED)
 
     # turnaround with proportion guides
