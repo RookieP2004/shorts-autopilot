@@ -57,8 +57,8 @@
           "id": "ved",
           "pose": "think",
           "x": 0.5,
-          "y": 0.68,
-          "h": 0.4,
+          "y": 0.69,
+          "h": 0.38,
           "enter": "none",
           "loop": "bob",
           "loop_amp": 0.4
@@ -217,8 +217,8 @@
           "id": "ved",
           "pose": "explain",
           "x": 0.5,
-          "y": 0.68,
-          "h": 0.4,
+          "y": 0.69,
+          "h": 0.38,
           "enter": "fade"
         }
       ]
@@ -247,8 +247,8 @@
           "id": "ved",
           "pose": "point",
           "x": 0.52,
-          "y": 0.68,
-          "h": 0.4,
+          "y": 0.69,
+          "h": 0.38,
           "enter": "slide_left"
         }
       ]

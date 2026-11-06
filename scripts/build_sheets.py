@@ -58,28 +58,29 @@ def character_sheet():
     d = ImageDraw.Draw(c)
     d.text((120, 70), "PROFESSOR VED", font=F(SERIF, 120), fill=INK)
     label(d, (124, 210), "Character model sheet  ·  Main explainer  ·  The Vast World", 40, SEMI, ACCENT)
-    label(d, (124, 268), "Late 20s to early 30s, fit. Formal-boss-casual: white shirt, top button open, sleeves rolled, black trousers. Calm and wise beyond his years.",
+    label(d, (124, 268), "Late 20s to early 30s, muscular-fit. Wavy black hair, full groomed beard. White shirt (top button open, sleeves rolled), black trousers. Calm, wise, in charge.",
           32, SEMI, MUTED)
 
     # turnaround with proportion guides
     card(d, (100, 340, 1900, 2500))
     heading(d, (150, 370), "Turnaround")
-    figs = [("FRONT", svg_img(ved.figure("down", "neutral"), height=1820)),
-            ("SIDE", svg_img(ved.side_view(), height=1820)),
-            ("BACK", svg_img(ved.back_view(), height=1820))]
-    head_px = 1820 * 226 / 1500  # head (crown->chin) in sheet px
+    FH = 1640
+    figs = [("FRONT", svg_img(ved.figure("down", "neutral"), height=FH)),
+            ("SIDE", svg_img(ved.side_view(), height=FH)),
+            ("BACK", svg_img(ved.back_view(), height=FH))]
+    head_px = FH * 252 / ved.H  # head (crown->chin) in sheet px
     top = 520
     for i in range(8):
-        y = top + 1820 * 28 / 1500 + i * head_px
+        y = top + FH * 26 / ved.H + i * head_px
         if y > 2440:
             break
         d.line([(140, y), (1860, y)], fill=(214, 200, 178), width=2)
         label(d, (150, y + 6), f"{i}", 24, SEMI, (190, 172, 150))
     for i, (name, im) in enumerate(figs):
-        x = 220 + i * 560
+        x = 150 + i * 570
         paste(c, im, (x, top))
         label(d, (x + im.width / 2, 2450), name, 34, BOLD, INK, "ma")
-    label(d, (1860, 470), "≈ 6.6 heads tall · broad shoulders, slim waist (fit, not bulky) · upright, confident stance",
+    label(d, (1860, 470), "≈ 5.6 heads tall: compact & strong · broad chest and shoulders, thick arms · grounded, confident stance",
           26, SEMI, MUTED, "ra")
 
     # expressions
@@ -91,7 +92,7 @@ def character_sheet():
         im = svg_img(ved.head_only(e), width=400)
         x = 2040 + (i % 4) * 465
         y = 470 + (i // 4) * 400
-        paste(c, im.resize((290, 351)), (x + 60, y))
+        paste(c, im.resize((290, 346)), (x + 60, y))
         label(d, (x + 205, y + 352), nm, 26, SEMI, INK, "ma")
 
     # poses
@@ -107,7 +108,7 @@ def character_sheet():
           24, SEMI, MUTED)
 
     # palette strip
-    pal = [("Skin", ved.SKIN), ("Hair", ved.HAIR), ("Stubble", ved.BEARD), ("Spectacles", ved.GOLD),
+    pal = [("Skin", ved.SKIN), ("Hair & beard", ved.HAIR), ("Sheen", ved.SHEEN), ("Watch", ved.GOLD),
            ("White shirt", ved.SHIRT), ("Black trousers", ved.TROUSER), ("Belt", ved.BELT), ("Watch strap", ved.STRAP),
            ("Shoes", ved.SHOE), ("Line", ved.LINE), ("Rim light", ved.RIM)]
     x0, y0 = 100, 2530

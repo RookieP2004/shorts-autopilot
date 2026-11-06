@@ -1,7 +1,7 @@
 {
   "name": "Professor Ved",
-  "description": "The channel's explainer. Late 20s to early 30s, fit (broad shoulders, slim waist, not bulky). Black side-swept quiff, short groomed Italian-style stubble beard, round gold spectacles. Formal-boss-casual: crisp white shirt with the top button open and sleeves rolled below the elbow, black trousers, black belt, black shoes, gold watch on his left wrist. Semi-realistic 2D, warm key light from the left.",
-  "default_h": 0.4,
+  "description": "The channel's explainer. Late 20s to early 30s, muscular-fit and compact (broad chest and shoulders, thick arms). Medium-length wavy black hair, full well-groomed black beard joined to the moustache, no glasses. Formal-boss-casual: crisp white shirt with the top button open and sleeves rolled below the elbow, black trousers, black belt, black shoes, gold watch on his left wrist. Semi-realistic 2D, warm key light from the left.",
+  "default_h": 0.38,
   "voice": {
     "voice": "bm_george",
     "speed": 0.95,
