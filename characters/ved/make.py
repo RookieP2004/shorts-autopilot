@@ -136,6 +136,44 @@ class Svg:
         self.add(f'<path d="{hd}" fill="none" stroke="{light(base, 0.18)}" stroke-width="{width * 0.12}" '
                  f'stroke-linecap="{cap}" opacity="0.6"/>')
 
+    def grad(self, x1, y1, x2, y2, base, soft=False):
+        """Across-the-limb gradient: lit edge -> mid -> core shadow -> bounce light at the far edge."""
+        gid = self.uid("g")
+        sh = soft_shade(base, soft) if soft else shade(base)
+        stops = [(0, light(base, 0.28)), (0.18, light(base, 0.12)), (0.42, base), (0.66, base),
+                 (0.78, sh), (0.93, sh), (1, hexc([rgb(sh)[i] * 0.75 + rgb(RIM)[i] * 0.25 for i in range(3)]))]
+        self.defs.append(f'<linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="{x1:.1f}" y1="{y1:.1f}" '
+                         f'x2="{x2:.1f}" y2="{y2:.1f}">' +
+                         "".join(f'<stop offset="{o}" stop-color="{c}"/>' for o, c in stops) + '</linearGradient>')
+        return gid
+
+    def limb(self, pts, widths, base, soft=False):
+        """Tapered limb with round shading. pts: polyline, widths: one per point."""
+        def quad(a, b, wa, wb, pad=0.0):
+            dx, dy = b[0] - a[0], b[1] - a[1]
+            L = math.hypot(dx, dy) or 1
+            nx, ny = -dy / L, dx / L
+            if nx < 0:
+                nx, ny = -nx, -ny
+            ha, hb = wa / 2 + pad, wb / 2 + pad
+            return (f"M{a[0]-nx*ha:.1f},{a[1]-ny*ha:.1f} L{b[0]-nx*hb:.1f},{b[1]-ny*hb:.1f} "
+                    f"L{b[0]+nx*hb:.1f},{b[1]+ny*hb:.1f} L{a[0]+nx*ha:.1f},{a[1]+ny*ha:.1f} Z"), (nx, ny)
+        segs = list(zip(pts, pts[1:], widths, widths[1:]))
+        for a, b, wa, wb in segs:                                   # outline backdrop
+            d, _ = quad(a, b, wa, wb, LW_OUT)
+            self.add(f'<path d="{d}" fill="{LINE}"/>')
+        for p_, w in zip(pts[1:-1], widths[1:-1]):
+            self.add(f'<circle cx="{p_[0]:.1f}" cy="{p_[1]:.1f}" r="{w/2+LW_OUT:.1f}" fill="{LINE}"/>')
+        for i, (a, b, wa, wb) in enumerate(segs):                   # shaded fills
+            d, (nx, ny) = quad(a, b, wa, wb)
+            m = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
+            w = (wa + wb) / 2
+            gid = self.grad(m[0] - nx * w / 2, m[1] - ny * w / 2, m[0] + nx * w / 2, m[1] + ny * w / 2, base, soft)
+            if i > 0:
+                jp, jw = a, wa
+                self.add(f'<circle cx="{jp[0]:.1f}" cy="{jp[1]:.1f}" r="{jw/2:.1f}" fill="url(#{gid})"/>')
+            self.add(f'<path d="{d}" fill="url(#{gid})"/>')
+
     def svg(self):
         return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">'
                 f'<defs>{"".join(self.defs)}</defs>{"".join(self.body)}</svg>')
@@ -177,8 +215,8 @@ def curls(cx, cy, rx, ry, a0, a1, n, amp=0.06, seed=3):
 # =====================================================================================
 #  HEAD (front)
 # =====================================================================================
-FACE = ("M300,50 C352,50 380,86 382,130 C384,172 374,204 354,226 C336,246 318,256 300,256 "
-        "C282,256 264,246 246,226 C226,204 216,172 218,130 C220,86 248,50 300,50 Z")
+FACE = ("M300,50 C352,50 380,86 382,130 C384,168 378,194 364,214 C348,238 324,254 300,258 "
+        "C276,254 252,238 236,214 C222,194 216,168 218,130 C220,86 248,50 300,50 Z")
 
 
 def head(s, expr="neutral", blink=False, look=(0, 0)):
@@ -196,8 +234,15 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
            hl="M246,96 C252,78 266,66 284,62 C270,74 262,90 258,108 Z",
            rim="M372,96 C382,136 378,186 356,226")
     # eye sockets + cheek warmth
-    s.add('<ellipse cx="252" cy="190" rx="20" ry="11" fill="#d9706a" opacity="0.18"/>')
-    s.add('<ellipse cx="348" cy="190" rx="20" ry="11" fill="#c0605e" opacity="0.15"/>')
+    # facial structure: cheekbone planes, under-cheekbone hollows, temples, brow ridge
+    s.add(f'<path d="M240,176 C252,166 270,166 282,172 C270,174 256,180 246,190 Z" fill="{light(SKIN, 0.35)}" opacity="0.55"/>')
+    s.add(f'<path d="M360,176 C348,166 330,166 318,172 C330,174 344,180 354,190 Z" fill="{light(SKIN, 0.2)}" opacity="0.35"/>')
+    s.add(f'<path d="M236,184 C246,196 256,204 270,208 C256,210 244,204 236,196 Z" fill="{shade(SKIN)}" opacity="0.35"/>')
+    s.add(f'<path d="M364,184 C354,196 344,204 330,208 C344,210 356,204 364,196 Z" fill="{shade(SKIN)}" opacity="0.6"/>')
+    s.add(f'<path d="M360,100 C372,114 378,130 378,148 L370,146 C368,130 364,116 356,104 Z" fill="{shade(SKIN)}" opacity="0.45"/>')
+    s.add(f'<path d="M250,128 C270,122 288,124 296,132 C286,128 268,128 252,134 Z" fill="{shade(SKIN)}" opacity="0.3"/>')
+    s.add(f'<path d="M350,128 C330,122 312,124 304,132 C314,128 332,128 348,134 Z" fill="{shade(SKIN)}" opacity="0.4"/>')
+    s.add('<ellipse cx="256" cy="186" rx="16" ry="8" fill="#d9706a" opacity="0.14"/>')
     # forehead wrinkles (age / wisdom)
 
     # faded short hair: short textured top, sides faded down to skin
@@ -260,6 +305,7 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
               f'<circle cx="{cx+lx-2}" cy="{139.5+ly}" r="2.2" fill="#fff"/>'
               f'<path d="M{cx-20},{130} L{cx+20},130 L{cx+20},{140-open_+3} L{cx-20},{140-open_+3} Z" fill="#000" opacity="0.18"/></g>')
         s.line(f"M{cx-19},142 C{cx-10},{141-open_-2} {cx+10},{141-open_-2} {cx+19},141", 3.0)  # upper lid
+        s.line(f"M{cx-15},{136-open_} C{cx-6},{131-open_} {cx+8},{131-open_} {cx+16},{136-open_}", LW_FINE, op=0.45)  # crease
         if expr in ("smile", "warm"):
             s.line(f"M{cx-14},{148} C{cx-5},{143} {cx+5},{143} {cx+14},{148}", 1.8, op=0.8)   # cheek squint
         else:
@@ -274,35 +320,51 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
     s.line("M284,199 C290,208 310,208 316,199", LW_IN)
     s.line("M290,202 q4,3 7,1 M310,202 q-4,3 -7,1", LW_FINE, op=0.7)
     s.add(f'<ellipse cx="296" cy="194" rx="5" ry="3" fill="{light(SKIN, 0.45)}" opacity="0.8"/>')
+    s.line("M293,150 C292,166 291,178 292,188", 3.2, color=light(SKIN, 0.4), op=0.7)          # bridge highlight
+    s.line("M286,192 C280,196 280,204 288,206", LW_IN, op=0.8)                               # nostril wings
+    s.line("M314,192 C320,196 320,204 312,206", LW_IN, op=0.8)
 
-    # groomed stubble beard joined to the moustache: one region from the cheek line down, around the mouth
-    STUB = hexc([rgb(SKIN)[i] * 0.52 + rgb(HAIR)[i] * 0.48 for i in range(3)])
-    DENSE = hexc([rgb(SKIN)[i] * 0.3 + rgb(HAIR)[i] * 0.7 for i in range(3)])
-    beard = ("M226,140 C224,188 242,234 268,258 C282,270 292,276 300,276 C308,276 318,270 332,258 "
-             "C358,234 376,188 374,140 L366,146 C364,168 356,186 344,198 C334,208 322,212 312,213 "
-             "C306,211 303,210 300,212 C297,210 294,211 288,213 C278,212 266,208 256,198 C244,186 236,168 234,146 Z")
-    s.part(beard, STUB, soft=True, line=False, shadow="M318,252 C344,246 364,214 372,146 L400,146 L400,300 L300,300 Z")
-    # denser hair: moustache, around the mouth, chin and jawline
-    s.add(f'<path d="M272,222 C282,214 292,213 300,216 C308,213 318,214 328,222 C330,228 330,236 333,244 '
-          f'C326,236 314,230 300,230 C286,230 274,236 267,244 C270,236 270,228 272,222 Z" fill="{DENSE}"/>')
-    s.add(f'<path d="M282,256 C290,264 310,264 318,256 C314,268 306,274 300,274 C294,274 286,268 282,256 Z" fill="{DENSE}" opacity="0.9"/>')
-    s.add(f'<path d="M232,190 C240,226 260,254 286,270 C268,266 248,246 238,222 Z" fill="{DENSE}" opacity="0.55"/>')
-    s.add(f'<path d="M368,190 C360,226 340,254 314,270 C332,266 352,246 362,222 Z" fill="{DENSE}" opacity="0.65"/>')
+    # full groomed beard: dense and even, crisp cheek line and neckline, joined to a trimmed moustache
+    DENSE = hexc([rgb(SKIN)[i] * 0.2 + rgb(HAIR)[i] * 0.8 for i in range(3)])
+    beard = ("M224,140 C222,186 236,224 262,250 C276,264 290,270 300,270 C310,270 324,264 338,250 "
+             "C364,224 378,186 376,140 L368,142 C366,164 360,180 350,192 C338,204 324,210 312,212 "
+             "C306,210 303,209 300,210 C297,209 294,210 288,212 C276,210 262,204 250,192 C240,180 234,164 232,142 Z")
+    s.part(beard, DENSE, soft=True, line=False,
+           shadow="M320,252 C346,244 366,212 372,142 L400,142 L400,300 L300,300 Z",
+           deep_d="M262,262 C280,282 320,282 338,262 L338,300 L262,300 Z",
+           hl="M234,168 C238,196 248,220 262,238 C250,216 242,194 240,170 Z")
+    # growth texture: short strokes following the jaw, sheen on the lit side (clipped to the beard)
+    bclip = s.uid("bc")
+    s.defs.append(f'<clipPath id="{bclip}"><path d="{beard}"/></clipPath>')
+    s.add(f'<g clip-path="url(#{bclip})">')
     import random as _r
-    rr = _r.Random(7)
-    for _ in range(420):  # stubble texture
-        x = 300 + rr.choice((-1, 1)) * rr.uniform(0, 72)
-        y = rr.uniform(150, 274)
-        inside = abs(x - 300) < 74 - max(0, y - 196) * 0.95
-        below_cheek = y > 152 + (72 - abs(x - 300)) * 1.0
-        lips = abs(x - 300) < 22 and 232 < y < 254
-        if inside and below_cheek and not lips:
-            s.add(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="0.65" fill="{HAIR}" opacity="0.32"/>')
-    s.line("M226,140 C224,188 242,234 268,258 C282,270 292,276 300,276 C308,276 318,270 332,258 "
-           "C358,234 376,188 374,140", LW_IN, op=0.85)                                          # jaw silhouette
-    s.line("M234,150 C236,170 244,188 256,198", LW_FINE, color=DENSE, op=0.6)                    # clean cheek line
-    s.line(mirror("M234,150 C236,170 244,188 256,198"), LW_FINE, color=DENSE, op=0.6)
-    s.add(f'<path d="M289,246 Q300,253 311,246 Q300,250 289,246 Z" fill="{SKIN}"/>')            # lower lip shows
+    rr = _r.Random(11)
+    for _ in range(140):
+        side = rr.choice((-1, 1))
+        t = rr.random()
+        y = 160 + t * 110
+        xo = 70 - max(0, y - 196) * 0.95
+        xi = 30 + max(0, 210 - y) * 0.6
+        if xo <= xi:
+            continue
+        x = 300 + side * rr.uniform(xi, xo)
+        if abs(x - 300) < 24 and 230 < y < 254:
+            continue
+        ang = side * (0.5 - t * 0.6)
+        col = SHEEN if side < 0 and rr.random() < 0.6 else "#0d0d10"
+        s.line(f"M{x:.1f},{y:.1f} l{ang*5:.1f},{5:.1f}", 1.1, color=col, op=0.45)
+    s.add('</g>')
+    must = ("M266,226 C276,214 290,211 300,215 C310,211 324,214 334,226 C338,232 338,240 336,246 "
+            "C330,236 316,229 300,229 C284,229 270,236 264,246 C262,240 262,232 266,226 Z")
+    s.part(must, DENSE, soft=True, shadow="M304,206 L346,206 L346,250 L304,250 Z", line=False,
+           hl="M274,220 C282,214 292,213 298,216 C290,217 282,219 276,224 Z")
+    for d in ("M278,220 l-3,8", "M289,217 l-2,9", "M311,217 l2,9", "M322,220 l3,8"):
+        s.line(d, 1.1, color=SHEEN, op=0.6)
+    s.line("M224,140 C222,186 236,224 262,250 C276,264 290,270 300,270 C310,270 324,264 338,250 "
+           "C364,224 378,186 376,140", LW_IN + 0.4, op=0.9)                                   # neckline / jaw silhouette
+    s.line("M232,142 C234,164 240,180 250,192 C262,204 276,210 288,212", LW_FINE + 0.3, color="#0d0d10", op=0.55)  # crisp cheek line
+    s.line(mirror("M232,142 C234,164 240,180 250,192 C262,204 276,210 288,212"), LW_FINE + 0.3, color="#0d0d10", op=0.55)
+    s.add(f'<path d="M289,246 Q300,254 311,246 Q300,251 289,246 Z" fill="{hexc([rgb(SKIN)[i]*0.85+rgb("#b4504e")[i]*0.15 for i in range(3)])}"/>')  # lower lip
     # mouth (drawn before beard/moustache so they overlap it)
     m = {
         "neutral": ("line", "M287,239 Q300,246 313,239"),
@@ -396,37 +458,50 @@ def cuff_and_hand(s, wrist, angle, kind, flip=False, cuff=False, watch=False):
     x, y = wrist
     t = f'transform="translate({x:.1f},{y:.1f}) rotate({angle:.1f})"'
     g = []
+    hg = s.uid("hg")      # hand gradient: light direction fixed in WORLD space (from the viewer's left), whatever the pose
+    th = math.radians(angle)
+    lx, ly = -math.cos(th), math.sin(th)          # world (-1, 0) seen in the hand's rotated frame
+    if flip:
+        lx = -lx
+    x1, y1, x2, y2 = 30 * lx, 30 * ly, -30 * lx, -30 * ly
+    s.defs.append(f'<linearGradient id="{hg}" gradientUnits="userSpaceOnUse" x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}">'
+                  f'<stop offset="0" stop-color="{light(SKIN, 0.26)}"/><stop offset="0.3" stop-color="{SKIN}"/>'
+                  f'<stop offset="0.62" stop-color="{SKIN}"/><stop offset="0.8" stop-color="{shade(SKIN)}"/>'
+                  f'<stop offset="1" stop-color="{shade(SKIN)}"/></linearGradient>')
+
     def P(d, base, shadow=None, lw=LW_IN):
         cid = s.uid()
         s.defs.append(f'<clipPath id="{cid}"><path d="{d}"/></clipPath>')
-        g.append(f'<path d="{d}" fill="{base}"/>')
-        if shadow:
-            g.append(f'<g clip-path="url(#{cid})"><path d="{shadow}" fill="{shade(base)}"/></g>')
+        g.append(f'<path d="{d}" fill="url(#{hg})"/>')
+        g.append(f'<g clip-path="url(#{cid})"><path d="M-40,70 L40,70 L40,120 L-40,120 Z" fill="{shade(SKIN)}" opacity="0.35"/></g>')
         # outline left open across the wrist so the forearm flows into the hand
         g.append(f'<path d="{d.rstrip(" Z")}" fill="none" stroke="{LINE}" stroke-width="{lw}" stroke-linejoin="round" stroke-linecap="round"/>')
     def finger(d, w=13):
         g.append(f'<path d="{d}" fill="none" stroke="{LINE}" stroke-width="{w+2*LW_IN}" stroke-linecap="round"/>')
-        g.append(f'<path d="{d}" fill="none" stroke="{SKIN}" stroke-width="{w}" stroke-linecap="round"/>')
+        g.append(f'<path d="{d}" fill="none" stroke="url(#{hg})" stroke-width="{w}" stroke-linecap="round"/>')
     SH = "M12,-10 L40,-10 L40,120 L12,120 Z"
     if kind == "relaxed":
-        P("M-23,-10 C-27,20 -27,52 -21,70 C-16,86 -6,97 5,98 C15,98 21,88 23,76 C26,56 27,20 23,-10 Z", SKIN, SH)
-        g.append(f'<path d="M-12,52 C-13,64 -12,76 -8,86 M-1,56 C-1,70 0,82 3,92 M10,54 C11,66 12,76 14,84" '
-                 f'stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.55"/>')
-        g.append(f'<path d="M-18,40 Q0,46 18,40" stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.35"/>')
+        P("M-17,-14 C-23,8 -27,40 -21,70 C-16,86 -6,97 5,98 C15,98 21,88 23,76 C26,56 25,8 17,-14 Z", SKIN, SH)
+        g.append(f'<path d="M-12,54 C-13,66 -12,78 -8,88 M-1,58 C-1,72 0,84 3,94 M10,56 C11,68 12,78 14,86" '
+                 f'stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.5"/>')
+        g.append(f'<path d="M-19,44 Q-12,50 -4,48 Q4,52 12,48 Q18,50 22,44" stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.4"/>')  # knuckles
+        g.append(f'<path d="M-16,20 Q-2,16 12,22" stroke="{light(SKIN, 0.4)}" stroke-width="3" fill="none" opacity="0.7"/>')       # back-of-hand light
+        g.append(f'<ellipse cx="-8" cy="90" rx="3.5" ry="2.2" fill="{light(SKIN, 0.45)}" opacity="0.8"/>'
+                 f'<ellipse cx="3" cy="95" rx="3.5" ry="2.2" fill="{light(SKIN, 0.45)}" opacity="0.8"/>')                         # nails
         finger("M20,20 C30,32 32,48 26,60", 12)
     elif kind == "open":   # palm toward viewer, fingers along +y (rotate so they point up)
-        P("M-25,-10 C-28,24 -26,48 -22,58 L22,58 C26,48 28,24 25,-10 Z", SKIN, SH)
+        P("M-17,-14 C-26,12 -26,48 -22,58 L22,58 C26,48 26,12 17,-14 Z", SKIN, SH)
         for fx, ln in ((-17, 40), (-6, 46), (6, 44), (17, 36)):
             finger(f"M{fx},54 L{fx*1.15:.1f},{54+ln}", 11)
         finger("M-24,24 C-40,34 -46,46 -48,58", 13)
         g.append(f'<path d="M-14,40 Q0,48 14,38" stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.5"/>')
     elif kind == "point":  # fist with index finger along +y
-        P("M-24,-10 C-28,24 -24,56 -10,64 L18,64 C28,54 28,24 24,-10 Z", SKIN, SH)
+        P("M-17,-14 C-26,12 -24,56 -10,64 L18,64 C28,54 26,12 17,-14 Z", SKIN, SH)
         finger("M10,58 L12,118", 12)
         g.append(f'<path d="M-16,52 q8,10 18,8 M-18,38 q10,8 20,6" stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.6"/>')
         finger("M-22,24 C-30,36 -24,48 -12,50", 12)
     elif kind == "chin":   # loose curled hand
-        P("M-24,-10 C-30,30 -24,60 -6,70 C8,76 22,66 26,50 C30,34 28,14 24,-10 Z", SKIN, SH)
+        P("M-17,-14 C-28,20 -24,60 -6,70 C8,76 22,66 26,50 C30,34 26,8 17,-14 Z", SKIN, SH)
         g.append(f'<path d="M-14,48 q12,8 30,0 M-16,60 q12,6 26,-2" stroke="{LINE}" stroke-width="{LW_FINE}" fill="none" opacity="0.7"/>')
         finger("M-22,22 C-34,36 -30,52 -16,58", 12)
     if cuff:
@@ -454,30 +529,34 @@ FOREARM = 60
 
 
 def sleeve(s, shoulder, elbow, wrist, upper=True):
-    """White shirt sleeve rolled just below the elbow, then a bare forearm. Seams hide under the cuff band."""
+    """Shirt sleeve rolled below the elbow, then a bare forearm (tapers to the wrist). Seams hide under the cuff."""
     dx, dy = wrist[0] - elbow[0], wrist[1] - elbow[1]
     L = math.hypot(dx, dy) or 1
     ux, uy = dx / L, dy / L
     nx, ny = -uy, ux
+    if nx < 0:
+        nx, ny = -nx, -ny
     roll = (elbow[0] + 0.3 * dx, elbow[1] + 0.3 * dy)
     band_len = 26
     a = (roll[0] - ux * band_len / 2, roll[1] - uy * band_len / 2)
     b = (roll[0] + ux * band_len / 2, roll[1] + uy * band_len / 2)
-    wx = (wrist[0] + ux * 10, wrist[1] + uy * 10)                                   # runs into the hand: no gap
-    s.tube([b, wx], FOREARM, SKIN, cap="butt")                                      # forearm, from under the band
-    mid = ((b[0] + wrist[0]) / 2, (b[1] + wrist[1]) / 2)
-    s.line(f"M{b[0]-nx*12:.1f},{b[1]-ny*12:.1f} Q{mid[0]-nx*16:.1f},{mid[1]-ny*16:.1f} {wrist[0]-nx*10:.1f},{wrist[1]-ny*10:.1f}",
-           LW_FINE, op=0.3)                                                          # forearm muscle line
+    wx = (wrist[0] + ux * 12, wrist[1] + uy * 12)                                    # runs into the hand
+    fm = (b[0] + (wx[0] - b[0]) * 0.35, b[1] + (wx[1] - b[1]) * 0.35)                 # forearm muscle belly
+    s.limb([b, fm, wx], [FOREARM + 2, FOREARM + 4, FOREARM - 14], SKIN)
+    s.line(f"M{b[0]-nx*10:.1f},{b[1]-ny*10:.1f} Q{fm[0]-nx*18:.1f},{fm[1]-ny*18:.1f} {wrist[0]-nx*12:.1f},{wrist[1]-ny*12:.1f}",
+           LW_FINE, op=0.25)                                                          # muscle separation
     if upper:
-        s.tube([shoulder, elbow, roll], SLEEVE, SHIRT, soft="white", cap="butt")
+        s.limb([shoulder, elbow, roll], [SLEEVE, SLEEVE - 6, SLEEVE - 8], SHIRT, soft="white")
     else:
-        s.tube([elbow, roll], SLEEVE - 4, SHIRT, soft="white")
-    hw = (SLEEVE + 6) / 2
+        s.limb([elbow, roll], [SLEEVE - 6, SLEEVE - 8], SHIRT, soft="white")
+    s.line(f"M{elbow[0]-nx*20-ux*30:.1f},{elbow[1]-ny*20-uy*30:.1f} q{nx*14:.1f},{ny*14+8:.1f} {nx*34:.1f},{ny*34:.1f}",
+           LW_FINE, color="#b6bdcb", op=0.8)                                          # fabric fold at the elbow
+    hw = (SLEEVE + 2) / 2
     band = (f"M{a[0]+nx*hw:.1f},{a[1]+ny*hw:.1f} Q{roll[0]+nx*(hw+4):.1f},{roll[1]+ny*(hw+4):.1f} {b[0]+nx*hw:.1f},{b[1]+ny*hw:.1f} "
             f"L{b[0]-nx*hw:.1f},{b[1]-ny*hw:.1f} Q{roll[0]-nx*(hw+4):.1f},{roll[1]-ny*(hw+4):.1f} {a[0]-nx*hw:.1f},{a[1]-ny*hw:.1f} Z")
-    s.part(band, SHIRT, soft="white", shadow=f"M{roll[0]:.1f},{roll[1]-60:.1f} L{roll[0]+80:.1f},{roll[1]-60:.1f} L{roll[0]+80:.1f},{roll[1]+60:.1f} L{roll[0]:.1f},{roll[1]+60:.1f} Z", lw=LW_IN)
+    gid = s.grad(roll[0] - nx * hw, roll[1] - ny * hw, roll[0] + nx * hw, roll[1] + ny * hw, SHIRT, "white")
+    s.add(f'<path d="{band}" fill="url(#{gid})" stroke="{LINE}" stroke-width="{LW_IN}" stroke-linejoin="round"/>')
     s.line(f"M{roll[0]+nx*hw:.1f},{roll[1]+ny*hw:.1f} L{roll[0]-nx*hw:.1f},{roll[1]-ny*hw:.1f}", LW_FINE, color="#b6bdcb", op=0.9)
-    s.line(f"M{elbow[0]-16},{elbow[1]-6} q12,10 30,2", LW_FINE, color="#b6bdcb", op=0.8)  # elbow crease
 
 
 def hand_of(s, elbow, wrist, kind, extra, flip):
@@ -492,7 +571,7 @@ def figure(pose="down", expr="neutral", blink=False, look=(0, 0)):
     arms = ARMS[pose]
     for shoulder, elbow, wrist, kind, extra, front in arms:      # sleeves behind the torso
         if front:
-            s.tube([shoulder, elbow], SLEEVE, SHIRT, soft="white")
+            s.limb([shoulder, elbow], [SLEEVE, SLEEVE - 6], SHIRT, soft="white")
         else:
             sleeve(s, shoulder, elbow, wrist)
     torso(s)
@@ -560,11 +639,11 @@ def side_view():
     s.line("M282,142 l7,-2 M282,146 l7,2", LW_FINE, op=0.4)
     beard = ("M330,150 C334,180 330,208 318,228 C308,244 292,252 276,252 C264,250 258,242 257,232 "
              "C258,226 262,220 268,216 C280,216 294,206 302,192 C312,178 320,162 322,146 Z")
-    s.part(beard, hexc([rgb(SKIN)[i] * 0.52 + rgb(HAIR)[i] * 0.48 for i in range(3)]), soft=True, line=False,
+    s.part(beard, hexc([rgb(SKIN)[i] * 0.2 + rgb(HAIR)[i] * 0.8 for i in range(3)]), soft=True, line=False,
            shadow="M300,236 C320,230 332,200 340,146 L360,146 L360,270 L300,270 Z",
            deep_d="M256,246 C268,262 290,262 300,256 L300,280 L256,280 Z")
     s.part("M252,194 C262,190 274,192 282,198 C276,203 264,205 254,202 Z",
-           hexc([rgb(SKIN)[i] * 0.3 + rgb(HAIR)[i] * 0.7 for i in range(3)]), soft=True, line=False)
+           hexc([rgb(SKIN)[i] * 0.2 + rgb(HAIR)[i] * 0.8 for i in range(3)]), soft=True, line=False)
     s.add('<path d="M330,96 C340,104 352,118 356,136 L344,140 C340,124 334,112 326,104 Z" fill="url(#fade)"/>')   # side fade
     s.line("M256,212 Q262,214 268,212", 2.2)
     return s.svg()
