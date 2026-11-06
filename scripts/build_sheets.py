@@ -58,7 +58,7 @@ def character_sheet():
     d = ImageDraw.Draw(c)
     d.text((120, 70), "PROFESSOR VED", font=F(SERIF, 120), fill=INK)
     label(d, (124, 210), "Character model sheet  ·  Main explainer  ·  The Vast World", 40, SEMI, ACCENT)
-    label(d, (124, 268), "Late 20s to early 30s. Sharp, calm, wise beyond his years: explains the world like your favourite teacher.",
+    label(d, (124, 268), "Late 20s to early 30s, fit. Formal-boss-casual: white shirt, top button open, sleeves rolled, black trousers. Calm and wise beyond his years.",
           32, SEMI, MUTED)
 
     # turnaround with proportion guides
@@ -79,7 +79,7 @@ def character_sheet():
         x = 220 + i * 560
         paste(c, im, (x, top))
         label(d, (x + im.width / 2, 2450), name, 34, BOLD, INK, "ma")
-    label(d, (1860, 470), "≈ 6.6 heads tall · narrow shoulders · upright, slightly forward-leaning stance",
+    label(d, (1860, 470), "≈ 6.6 heads tall · broad shoulders, slim waist (fit, not bulky) · upright, confident stance",
           26, SEMI, MUTED, "ra")
 
     # expressions
@@ -103,13 +103,13 @@ def character_sheet():
         x = 2010 + i * 375
         paste(c, im, (x + 175 - im.width / 2, 1470))
         label(d, (x + 180, 2390), nm, 30, BOLD, INK, "ma")
-    label(d, (2030, 2440), "Each pose has _talk (mouth open) and blink frames. Upper arms sit behind the jacket; hands always in front.",
+    label(d, (2030, 2440), "Each pose has _talk (mouth open) and blink frames. Sleeves always rolled below the elbow; watch on his left wrist.",
           24, SEMI, MUTED)
 
     # palette strip
-    pal = [("Skin", ved.SKIN), ("Hair", ved.HAIR), ("Beard", ved.BEARD), ("Spectacles", ved.GOLD), ("Navy suit", ved.JACKET),
-           ("Waistcoat", ved.VEST), ("Tie", ved.TIE), ("Shirt", ved.SHIRT), ("Trousers", ved.TROUSER),
-           ("Line", ved.LINE), ("Rim light", ved.RIM)]
+    pal = [("Skin", ved.SKIN), ("Hair", ved.HAIR), ("Stubble", ved.BEARD), ("Spectacles", ved.GOLD),
+           ("White shirt", ved.SHIRT), ("Black trousers", ved.TROUSER), ("Belt", ved.BELT), ("Watch strap", ved.STRAP),
+           ("Shoes", ved.SHOE), ("Line", ved.LINE), ("Rim light", ved.RIM)]
     x0, y0 = 100, 2530
     for i, (nm, hx) in enumerate(pal):
         x = x0 + i * 350
