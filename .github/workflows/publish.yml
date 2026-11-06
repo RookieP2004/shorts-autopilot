@@ -1,0 +1,98 @@
+name: publish
+# Renders a job and uploads it to YouTube.
+# Fires when a new jobs/<id>/job.json is pushed to main, or manually.
+on:
+  push:
+    branches: [main]
+    paths: ["jobs/**/job.json"]
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Path to job.json, e.g. jobs/2026-11-07-a/job.json"
+        required: true
+      upload:
+        description: "Upload to YouTube (false = render only)"
+        default: "true"
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: System packages
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libcairo2 > /dev/null
+
+      - name: Python packages
+        run: pip install -q -r requirements.txt
+
+      - name: Cache voice model
+        uses: actions/cache@v4
+        with:
+          path: models
+          key: kokoro-v1.0
+
+      - name: Fetch voice model
+        run: bash scripts/fetch_models.sh
+
+      - name: Find jobs
+        id: jobs
+        run: |
+          if [ -n "${{ github.event.inputs.job }}" ]; then
+            echo "list=${{ github.event.inputs.job }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "list=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'jobs/**/job.json' | grep -v '^jobs/example/' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Render and upload
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          DO_UPLOAD: ${{ github.event.inputs.upload || 'true' }}
+        run: |
+          set -e
+          for j in ${{ steps.jobs.outputs.list }}; do
+            d=$(dirname "$j")
+            if [ -f "$d/result.json" ]; then echo "already posted: $j"; continue; fi
+            echo "::group::render $j"
+            python -m autopilot render "$j" --out "$d/out"
+            echo "::endgroup::"
+            if [ "$DO_UPLOAD" = "true" ]; then
+              python -m autopilot upload "$j" "$d/out/final.mp4"
+            fi
+            cp "$d/out/render.json" "$d/render.json"
+          done
+
+      - name: Keep the rendered videos (14 days)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shorts-${{ github.run_id }}
+          path: jobs/**/out/final.mp4
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Commit results
+        run: |
+          git config user.name "shorts-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          git add jobs/*/result.json jobs/*/render.json data/videos.jsonl 2>/dev/null || true
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "posted: ${{ steps.jobs.outputs.list }} [skip ci]"
+          for i in 1 2 3 4; do git pull --rebase -q && git push -q && break; sleep 5; done

@@ -1,0 +1,9 @@
+{
+  "name": "Pip",
+  "description": "PLACEHOLDER host - teal rounded robot with antenna. Replace during channel setup.",
+  "default_h": 0.4,
+  "voice": {
+    "voice": "am_michael",
+    "speed": 1.05
+  }
+}

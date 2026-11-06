@@ -1,0 +1,103 @@
+{
+  "canvas": {
+    "w": 1080,
+    "h": 1920,
+    "fps": 30
+  },
+  "palette": {
+    "bg1": "#0f172a",
+    "bg2": "#1e293b",
+    "primary": "#f8fafc",
+    "accent": "#facc15",
+    "accent2": "#38bdf8",
+    "danger": "#f43f5e",
+    "ink": "#0b1020"
+  },
+  "background": {
+    "type": "gradient",
+    "colors": [
+      "bg1",
+      "bg2"
+    ],
+    "angle": 160,
+    "pattern": "dots",
+    "pattern_color": "#ffffff",
+    "pattern_opacity": 0.05
+  },
+  "fonts": {
+    "display": "fonts/Anton-Regular.ttf",
+    "body": "fonts/Poppins-ExtraBold.ttf",
+    "light": "fonts/Poppins-SemiBold.ttf"
+  },
+  "captions": {
+    "enabled": true,
+    "font": "body",
+    "size": 76,
+    "color": "primary",
+    "highlight": "accent",
+    "stroke": "#000000",
+    "stroke_width": 9,
+    "y": 0.45,
+    "words_per_chunk": 3,
+    "uppercase": true
+  },
+  "voice": {
+    "voice": "am_michael",
+    "speed": 1.05,
+    "lang": "en-us"
+  },
+  "music": {
+    "enabled": true,
+    "style": "lofi",
+    "key": "A",
+    "scale": "minor",
+    "bpm": 90,
+    "progression": [
+      1,
+      6,
+      3,
+      7
+    ],
+    "volume": 0.16,
+    "duck": 0.4,
+    "seed": 7
+  },
+  "sfx": {
+    "volume": 0.45
+  },
+  "transition": {
+    "type": "slide_left",
+    "frames": 8
+  },
+  "progress_bar": {
+    "enabled": true,
+    "color": "accent",
+    "height": 10
+  },
+  "watermark": {
+    "text": "@yourchannel",
+    "size": 34,
+    "opacity": 0.55,
+    "y": 0.05
+  },
+  "loudness_lufs": -14,
+  "max_duration": 58,
+  "scene_lead": 0.12,
+  "scene_pad": 0.28,
+  "youtube": {
+    "categoryId": "24",
+    "privacy": "public",
+    "synthetic_media": false,
+    "made_for_kids": false,
+    "default_language": "en",
+    "hashtags": [
+      "#shorts"
+    ]
+  },
+  "safe_zone": {
+    "top": 0.08,
+    "bottom": 0.78,
+    "left": 0.05,
+    "right": 0.86
+  }
+}

@@ -1,0 +1,7 @@
+models/
+jobs/*/out/
+jobs/*/preview/
+__pycache__/
+*.pyc
+client_secret*.json
+.env
