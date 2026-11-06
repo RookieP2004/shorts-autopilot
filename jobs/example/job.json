@@ -59,9 +59,7 @@
           "x": 0.5,
           "y": 0.68,
           "h": 0.4,
-          "enter": "none",
-          "loop": "bob",
-          "loop_amp": 0.4
+          "enter": "none"
         }
       ]
     },

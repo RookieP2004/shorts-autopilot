@@ -435,43 +435,31 @@ ARMS = {
     "think": [(L_SH, (196, 604), (266, 352), "chin", True), (R_SH, (458, 576), (454, 776), "relaxed", False)],
     "welcome": [(L_SH, (128, 576), (80, 704), "open", False), (R_SH, (472, 576), (520, 704), "open", False)],
     "both_explain": [(L_SH, (132, 592), (84, 462), "open", False), (R_SH, (468, 592), (516, 462), "open", False)],
+    # arms folded: his left forearm (with the watch) underneath, his right forearm on top
+    "crossed": [(R_SH, (462, 552), (222, 486), "tuck", True), (L_SH, (138, 552), (378, 510), "tuck", True)],
 }
 
 
-def crossed_arms(s):
-    """Arms folded across the chest: upper arms at the sides, forearms stacked, hands tucked."""
-    s.limb([R_SH, (462, 552)], [SLEEVE, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
-    s.limb([L_SH, (138, 552)], [SLEEVE, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
-    # back forearm (his left), from the right elbow toward his right upper arm
-    arm(s, R_SH, (462, 552), (222, 486), "tuck", True, upper=False, watch=True)
-    # front forearm (his right), from the left elbow across, on top
-    arm(s, L_SH, (138, 552), (378, 510), "tuck", False, upper=False)
-
-
-def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None):
+def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None, arms=None):
+    """arms: optional list of (shoulder, elbow, wrist, hand_kind, forearm_in_front) - used by the renderer
+    to interpolate smoothly between poses."""
     s = Svg()
     s.add('<ellipse cx="300" cy="1456" rx="190" ry="20" fill="#000" opacity="0.22"/>')
     legs(s)
-    if pose == "crossed":
-        torso(s)
-        crossed_arms(s)
-        head(s, expr, blink, look, mouth)
-        return s.svg()
-    arms = ARMS[pose]
+    arms = arms if arms is not None else ARMS[pose]
     for shoulder, elbow, wrist, kind, front in arms:      # sleeves sit behind the torso's shoulder line
         if not front:
             arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, watch=shoulder[0] > 300)
     torso(s)
-    # shoulder caps over the sleeve tops (fabric continuity, no seams)
-    for sh_x, right in ((L_SH[0], False), (R_SH[0], True)):
-        d = ("M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z")
+    for right in (False, True):                           # shoulder caps over the sleeve tops
+        d = "M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z"
         d = mirror(d) if right else d
         s.part(d, SHIRT, shadow="M408,290 L470,290 L470,420 L408,420 Z" if right else None, shadow_col=SHIRT_SH)
     head(s, expr, blink, look, mouth)
-    for shoulder, elbow, wrist, kind, front in arms:      # forearms crossing in front of the body
+    for shoulder, elbow, wrist, kind, front in arms:      # forearms in front of the body (think, crossed)
         if front:
             s.limb([shoulder, elbow], [SLEEVE, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
-            arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, upper=False)
+            arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, upper=False, watch=shoulder[0] > 300)
     return s.svg()
 
 

@@ -127,6 +127,10 @@ def _paste_clip(canvas, img, x, y):
 # ---------- layers ----------
 def character_image(ctx, L, scene_idx, t, scene):
     ch = ctx.chars[L["id"]]
+    from . import acting
+    r = acting.rig(ch)
+    if r is not None:
+        return rig_image(ctx, L, scene_idx, t, scene, ch, r)
     pose = L.get("pose", "idle")
     d = ch["dir"]
     W, H = ctx.W, ctx.H
@@ -151,6 +155,33 @@ def character_image(ctx, L, scene_idx, t, scene):
     probe = sprites.svg_image(svg, 200)
     width_px = height_px * probe.width / max(1, probe.height)
     return sprites.svg_image(svg, width_px)
+
+
+def rig_image(ctx, L, scene_idx, t, scene, ch, r):
+    """Draw a rigged character fresh for this frame: acting gesture, lip-sync mouth, blinks."""
+    from . import acting
+    tr = acting.track(ctx, scene_idx, L, r)
+    arms, g = acting.arms_at(r, tr, t)
+    _, expr, look = r.BASES[g]
+    speaking = scene.get("speaker", ctx.default_speaker) == L["id"] and L.get("talk", True)
+    mouth = ctx.viseme(scene_idx, t) if speaking else None
+    blink = ((t + (zlib_seed(L["id"]) % 7) * 0.37) % 3.4) < 0.12
+    key = (tuple((tuple(round(v) for v in a[0]), tuple(round(v) for v in a[1]), tuple(round(v) for v in a[2]), a[3], a[4])
+                 for a in arms), expr, look, mouth, blink)
+    cache = ctx.__dict__.setdefault("_rigsvg", {})
+    svg = cache.get(key)
+    if svg is None:
+        if len(cache) > 400:
+            cache.clear()
+        svg = r.figure(arms=[(a[0], a[1], a[2], a[3], a[4]) for a in arms], expr=expr, blink=blink, look=look, mouth=mouth)
+        cache[key] = svg
+    height_px = L.get("h", ch["meta"].get("default_h", 0.42)) * ctx.H
+    return sprites.svg_image(svg, height_px * r.W / r.H)
+
+
+def zlib_seed(s):
+    import zlib
+    return zlib.crc32(s.encode())
 
 
 def layer_image(ctx, L, scene_idx, t, scene, reveal):
@@ -238,9 +269,6 @@ def draw_scene(ctx, scene_idx, t):
             continue
         cx = L.get("x", 0.5) * W + dx
         cy = L.get("y", 0.5) * H + dy
-        if L["type"] == "character" and scene.get("speaker", ctx.default_speaker) == L.get("id") and L.get("talk", True):
-            e = ctx.envelope(scene_idx, t)                       # talking: a tiny nod on stressed words only
-            cy -= e * H * 0.0012
         paste(canvas, img, cx, cy, sc * L.get("scale", 1.0), rot, alpha, L.get("flip", False))
     cam = scene.get("camera")
     if cam:

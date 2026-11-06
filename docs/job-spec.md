@@ -59,6 +59,14 @@ Lip-sync is automatic: while this character speaks, each frame picks one of 5 mo
 least 2 frames so it never flickers. He also nods on stressed words and sways slightly while talking.
 Blinks use `<pose>_blink.svg`. Base poses: idle, warm, serious, explain, point, think, welcome, surprised, crossed.
 
+**Acting** (rigged characters like Ved are drawn fresh every frame): `pose` is the starting gesture, then
+- `"acting": "auto"` (default): while he speaks he changes gesture at natural pauses every ~1.6–2.8 s,
+  moving smoothly (0.4 s) between poses. Between changes he stands still. No wobble.
+- `"acting": "none"`: hold one pose.
+- `"acting": [["explain", 0], ["point", 1.4], ["crossed", 3.2]]`: exact gestures at scene times (use this when a
+  gesture must land on a specific word, e.g. point when the visual appears).
+Never put `loop` animations (bob, float, wiggle, shake) on characters; that reads as shaking. Loops are for props and text.
+
 ### type: text
 `text` (`*word*` highlighted), `size` px, `font` (`display` `body` `light` from style.json),
 `color`, `highlight`, `stroke`, `stroke_width`, `max_w` (0–1), `align`, `uppercase`, `shadow`.
