@@ -1,6 +1,12 @@
-"""Summarise data/stats/latest.json for the weekly review.
+"""Summarise channel stats for the weekly review.
 
-  python scripts/analyze.py [--min-age-hours 48] [--days 28]
+  python scripts/analyze.py stats/latest.json [--min-age-hours 48] [--days 28]
+
+Input JSON (built in the review run from Zapier/YouTube numbers + the Google Docs log):
+  {"pulled_at": "...", "channel": {"title":..,"subscriberCount":..},
+   "videos": [{"youtube_id","title","published" (ISO),"views","likes","comments",
+               "duration" ("PT34S") or "secs", "format","hook","topic",
+               optional "avg_view_pct","subs_gained","privacy"}]}
 
 Prints: channel totals, per-format / per-hook tables (median views, retention, likes per 1k views,
 subs gained), top and bottom videos, and length vs retention. Only public videos older than
@@ -47,28 +53,29 @@ def table(rows, key, title):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("stats", nargs="?", default=os.path.join(ROOT, "stats", "latest.json"))
     ap.add_argument("--min-age-hours", type=float, default=48)
     ap.add_argument("--days", type=int, default=28)
     a = ap.parse_args()
-    p = os.path.join(ROOT, "data", "stats", "latest.json")
+    p = a.stats
     if not os.path.exists(p):
-        raise SystemExit("no stats yet - run the stats workflow first")
+        raise SystemExit(f"no stats file at {p}")
     data = json.load(open(p, encoding="utf-8"))
     now = dt.datetime.now(dt.timezone.utc)
     rows = []
     for v in data["videos"]:
-        if v.get("privacy") != "public" or not v.get("published"):
+        if v.get("privacy", "public") != "public" or not v.get("published"):
             continue
         pub = dt.datetime.fromisoformat(v["published"].replace("Z", "+00:00"))
         age_h = (now - pub).total_seconds() / 3600
         if age_h < a.min_age_hours or age_h > a.days * 24:
             continue
         v["age_h"] = round(age_h)
-        v["secs"] = iso_dur(v.get("duration"))
+        v["secs"] = v.get("secs") or iso_dur(v.get("duration"))
         rows.append(v)
-    ch = data["channel"]
+    ch = data.get("channel", {})
     print(f"# {ch.get('title')}  subs={ch.get('subscriberCount')} views={ch.get('viewCount')} "
-          f"videos={ch.get('videoCount')}  (stats pulled {data['pulled_at']})")
+          f"videos={ch.get('videoCount')}  (stats pulled {data.get('pulled_at', '?')})")
     print(f"{len(rows)} public videos aged {a.min_age_hours:.0f}h-{a.days}d in this analysis")
     if not rows:
         return

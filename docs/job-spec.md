@@ -1,7 +1,7 @@
 # job.json reference
 
 One file per video at `jobs/<id>/job.json`. `<id>` = `YYYY-MM-DD-a` (a = first slot, b = second).
-Pushing a new job.json to `main` renders and uploads it automatically.
+Render it with `python -m autopilot render`, then publish with `scripts/push_media.sh` + Zapier.
 
 ```jsonc
 {
