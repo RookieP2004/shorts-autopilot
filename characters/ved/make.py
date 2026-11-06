@@ -215,8 +215,8 @@ def curls(cx, cy, rx, ry, a0, a1, n, amp=0.06, seed=3):
 # =====================================================================================
 #  HEAD (front)
 # =====================================================================================
-FACE = ("M300,50 C352,50 380,86 382,130 C384,168 378,194 364,214 C348,238 324,254 300,258 "
-        "C276,254 252,238 236,214 C222,194 216,168 218,130 C220,86 248,50 300,50 Z")
+FACE = ("M300,50 C352,50 380,86 382,128 C384,158 380,182 372,200 L358,228 C344,248 324,260 300,262 "
+        "C276,260 256,248 242,228 L228,200 C220,182 216,158 218,128 C220,86 248,50 300,50 Z")
 
 
 def head(s, expr="neutral", blink=False, look=(0, 0)):
@@ -229,16 +229,16 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
 
     # face
     s.part(FACE, SKIN,
-           shadow=("M300,40 C356,46 386,86 384,130 C384,174 372,210 352,232 C334,254 316,266 300,268 "
-                   "C326,246 348,214 354,176 C360,132 350,82 300,40 Z"),
+           shadow=("M300,40 C356,46 386,86 384,130 C384,170 376,198 362,224 C346,250 322,264 300,266 "
+                   "C328,244 348,214 354,176 C360,132 350,82 300,40 Z"),
            hl="M246,96 C252,78 266,66 284,62 C270,74 262,90 258,108 Z",
            rim="M372,96 C382,136 378,186 356,226")
     # eye sockets + cheek warmth
     # facial structure: cheekbone planes, under-cheekbone hollows, temples, brow ridge
     s.add(f'<path d="M240,176 C252,166 270,166 282,172 C270,174 256,180 246,190 Z" fill="{light(SKIN, 0.35)}" opacity="0.55"/>')
     s.add(f'<path d="M360,176 C348,166 330,166 318,172 C330,174 344,180 354,190 Z" fill="{light(SKIN, 0.2)}" opacity="0.35"/>')
-    s.add(f'<path d="M236,184 C246,196 256,204 270,208 C256,210 244,204 236,196 Z" fill="{shade(SKIN)}" opacity="0.35"/>')
-    s.add(f'<path d="M364,184 C354,196 344,204 330,208 C344,210 356,204 364,196 Z" fill="{shade(SKIN)}" opacity="0.6"/>')
+    s.add(f'<path d="M236,178 C246,188 256,194 268,196 C256,200 244,196 236,188 Z" fill="{shade(SKIN)}" opacity="0.35"/>')
+    s.add(f'<path d="M364,178 C354,188 344,194 332,196 C344,200 356,196 364,188 Z" fill="{shade(SKIN)}" opacity="0.6"/>')
     s.add(f'<path d="M360,100 C372,114 378,130 378,148 L370,146 C368,130 364,116 356,104 Z" fill="{shade(SKIN)}" opacity="0.45"/>')
     s.add(f'<path d="M250,128 C270,122 288,124 296,132 C286,128 268,128 252,134 Z" fill="{shade(SKIN)}" opacity="0.3"/>')
     s.add(f'<path d="M350,128 C330,122 312,124 304,132 C314,128 332,128 348,134 Z" fill="{shade(SKIN)}" opacity="0.4"/>')
@@ -324,47 +324,46 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
     s.line("M286,192 C280,196 280,204 288,206", LW_IN, op=0.8)                               # nostril wings
     s.line("M314,192 C320,196 320,204 312,206", LW_IN, op=0.8)
 
-    # full groomed beard: dense and even, crisp cheek line and neckline, joined to a trimmed moustache
+    # groomed full beard + distinct moustache, same length; clean skin gap right below the lower lip
     DENSE = hexc([rgb(SKIN)[i] * 0.2 + rgb(HAIR)[i] * 0.8 for i in range(3)])
-    beard = ("M224,140 C222,186 236,224 262,250 C276,264 290,270 300,270 C310,270 324,264 338,250 "
-             "C364,224 378,186 376,140 L368,142 C366,164 360,180 350,192 C338,204 324,210 312,212 "
-             "C306,210 303,209 300,210 C297,209 294,210 288,212 C276,210 262,204 250,192 C240,180 234,164 232,142 Z")
+    # beard: wraps the angular jaw, cheek line from the sideburn to the mouth corner, open under the lip
+    beard = ("M222,134 C220,166 224,190 232,206 L248,234 C262,256 282,270 300,272 C318,270 338,256 352,234 "
+             "L368,206 C376,190 380,166 378,134 L370,136 C368,160 362,182 352,198 C344,212 338,224 336,238 "
+             "C332,248 324,254 314,256 C308,258 304,262 300,262 C296,262 292,258 286,256 C276,254 268,248 264,238 "
+             "C262,224 256,212 248,198 C238,182 232,160 230,136 Z")
     s.part(beard, DENSE, soft=True, line=False,
-           shadow="M320,252 C346,244 366,212 372,142 L400,142 L400,300 L300,300 Z",
-           deep_d="M262,262 C280,282 320,282 338,262 L338,300 L262,300 Z",
-           hl="M234,168 C238,196 248,220 262,238 C250,216 242,194 240,170 Z")
-    # growth texture: short strokes following the jaw, sheen on the lit side (clipped to the beard)
+           shadow="M320,252 C346,244 366,212 374,136 L400,136 L400,300 L300,300 Z",
+           deep_d="M262,262 C280,280 320,280 338,262 L338,300 L262,300 Z",
+           hl="M232,160 C234,188 242,210 254,228 C244,206 238,186 238,162 Z")
     bclip = s.uid("bc")
     s.defs.append(f'<clipPath id="{bclip}"><path d="{beard}"/></clipPath>')
     s.add(f'<g clip-path="url(#{bclip})">')
     import random as _r
     rr = _r.Random(11)
-    for _ in range(140):
-        side = rr.choice((-1, 1))
-        t = rr.random()
-        y = 160 + t * 110
-        xo = 70 - max(0, y - 196) * 0.95
-        xi = 30 + max(0, 210 - y) * 0.6
-        if xo <= xi:
-            continue
-        x = 300 + side * rr.uniform(xi, xo)
-        if abs(x - 300) < 24 and 230 < y < 254:
-            continue
-        ang = side * (0.5 - t * 0.6)
+    for _ in range(170):                    # growth texture along the jaw
+        x = rr.uniform(222, 378)
+        y = rr.uniform(140, 272)
+        side = -1 if x < 300 else 1
         col = SHEEN if side < 0 and rr.random() < 0.6 else "#0d0d10"
-        s.line(f"M{x:.1f},{y:.1f} l{ang*5:.1f},{5:.1f}", 1.1, color=col, op=0.45)
+        s.line(f"M{x:.1f},{y:.1f} l{side*1.5:.1f},5", 1.1, color=col, op=0.4)
     s.add('</g>')
-    must = ("M266,226 C276,214 290,211 300,215 C310,211 324,214 334,226 C338,232 338,240 336,246 "
-            "C330,236 316,229 300,229 C284,229 270,236 264,246 C262,240 262,232 266,226 Z")
-    s.part(must, DENSE, soft=True, shadow="M304,206 L346,206 L346,250 L304,250 Z", line=False,
-           hl="M274,220 C282,214 292,213 298,216 C290,217 282,219 276,224 Z")
-    for d in ("M278,220 l-3,8", "M289,217 l-2,9", "M311,217 l2,9", "M322,220 l3,8"):
+    # moustache: full, trimmed at the lip line, ends turn down to meet the beard at the mouth corners
+    must = ("M262,224 C272,212 288,209 300,213 C312,209 328,212 338,224 C341,230 340,238 337,244 "
+            "C333,238 328,233 322,231 C314,228 306,228 300,229 C294,228 286,228 278,231 C272,233 267,238 263,244 "
+            "C260,238 259,230 262,224 Z")
+    s.part(must, DENSE, soft=True, shadow="M304,204 L350,204 L350,250 L304,250 Z", line=False,
+           hl="M270,219 C280,212 292,211 298,214 C289,215 280,218 273,223 Z")
+    for d in ("M276,218 l-3,8", "M287,215 l-2,9", "M313,215 l2,9", "M324,218 l3,8", "M268,226 l-2,8", "M332,226 l2,8"):
         s.line(d, 1.1, color=SHEEN, op=0.6)
-    s.line("M224,140 C222,186 236,224 262,250 C276,264 290,270 300,270 C310,270 324,264 338,250 "
-           "C364,224 378,186 376,140", LW_IN + 0.4, op=0.9)                                   # neckline / jaw silhouette
-    s.line("M232,142 C234,164 240,180 250,192 C262,204 276,210 288,212", LW_FINE + 0.3, color="#0d0d10", op=0.55)  # crisp cheek line
-    s.line(mirror("M232,142 C234,164 240,180 250,192 C262,204 276,210 288,212"), LW_FINE + 0.3, color="#0d0d10", op=0.55)
-    s.add(f'<path d="M289,246 Q300,254 311,246 Q300,251 289,246 Z" fill="{hexc([rgb(SKIN)[i]*0.85+rgb("#b4504e")[i]*0.15 for i in range(3)])}"/>')  # lower lip
+    s.line(must.replace(" Z", ""), LW_FINE + 0.2, color="#0d0d10", op=0.45)
+    # crisp jaw/beard silhouette + groomed cheek line
+    s.line("M222,134 C220,166 224,190 232,206 L248,234 C262,256 282,270 300,272 C318,270 338,256 352,234 "
+           "L368,206 C376,190 380,166 378,134", LW_IN + 0.6, op=0.92)
+    s.line("M230,136 C232,160 238,182 248,198 C256,212 262,224 264,238", LW_FINE + 0.3, color="#0d0d10", op=0.5)
+    s.line(mirror("M230,136 C232,160 238,182 248,198 C256,212 262,224 264,238"), LW_FINE + 0.3, color="#0d0d10", op=0.5)
+    # clean gap under the lip: lower lip + skin
+    s.add(f'<path d="M289,246 Q300,254 311,246 Q300,251 289,246 Z" fill="{hexc([rgb(SKIN)[i]*0.85+rgb("#b4504e")[i]*0.15 for i in range(3)])}"/>')
+    s.line("M290,258 Q300,262 310,258", LW_FINE, color=shade(SKIN), op=0.5)                     # chin dimple shadow
     # mouth (drawn before beard/moustache so they overlap it)
     m = {
         "neutral": ("line", "M287,239 Q300,246 313,239"),
