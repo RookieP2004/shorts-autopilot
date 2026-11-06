@@ -207,12 +207,12 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
               "M232,124 C232,100 242,80 258,66", "M300,56 C320,48 344,52 360,66"):
         s.line(d, 1.7, color=SHEEN, op=0.85)
     s.line("M250,60 C264,46 282,40 300,38", 2.6, color="#a3abc0", op=0.5)
-    taper = "M222,146 C220,134 222,122 228,112 L236,116 C232,126 230,136 230,148 Z"   # short sides above the ears
+    taper = "M222,138 C221,130 223,122 227,116 L232,118 C229,124 228,130 228,138 Z"   # short sides above the ears
     s.part(taper, HAIR, soft=True, lw=LW_FINE)
     s.part(mirror(taper), HAIR, soft=True, lw=LW_FINE)
 
     # brows by expression: (inner_dy, outer_dy)
-    bi, bo = {"neutral": (0, 0), "smile": (-3, 1), "talk": (-3, -1), "talk2": (-1, 0), "think": (6, 1),
+    bi, bo = {"neutral": (2, -1), "smile": (-3, 1), "talk": (-3, -1), "talk2": (-1, 0), "think": (6, 1),
               "surprised": (-14, -9), "serious": (8, -1), "warm": (-4, 2), "laugh": (-5, 2)}.get(expr, (0, 0))
     rlift = -9 if expr == "think" else 0     # thinking: one sceptical raised brow
     lb = (f"M245,{122+bo} C250,{110+bo} 268,{103+bi} 292,{110+bi} C286,{114+bi} 276,{115+bi} 268,{117+bi} "
@@ -257,8 +257,8 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
         if expr in ("smile", "warm"):
             s.line(f"M{cx-14},{148} C{cx-5},{143} {cx+5},{143} {cx+14},{148}", 1.8, op=0.8)   # cheek squint
         else:
-            s.line(f"M{cx-12},{147+open_*0.4} C{cx-4},{149+open_*0.4} {cx+6},{149+open_*0.4} {cx+13},{146+open_*0.4}",
-                   LW_FINE, op=0.55)
+            s.line(f"M{cx-11},{144+open_*0.5} C{cx-4},{146+open_*0.5} {cx+5},{146+open_*0.5} {cx+12},{143+open_*0.5}",
+                   LW_FINE, op=0.3)
 
 
     # nose
@@ -271,7 +271,7 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
 
     # mouth (drawn before beard/moustache so they overlap it)
     m = {
-        "neutral": ("line", "M286,240 Q300,245 314,240"),
+        "neutral": ("line", "M287,239 Q300,246 313,239"),
         "serious": ("line", "M287,241 Q300,240 313,241"),
         "think": ("line", "M289,241 Q300,239 311,243"),
         "smile": ("line", "M284,237 Q300,248 316,237"),
@@ -295,16 +295,15 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
 
     # short, neat young beard: dense along the jaw and chin, lighter on the cheeks, trimmed at the chin
     BFILL = hexc([rgb(SKIN)[i] * 0.2 + rgb(HAIR)[i] * 0.8 for i in range(3)])
-    CHEEK = hexc([rgb(SKIN)[i] * 0.55 + rgb(HAIR)[i] * 0.45 for i in range(3)])
+    CHEEK = hexc([rgb(SKIN)[i] * 0.8 + rgb(HAIR)[i] * 0.2 for i in range(3)])
     cheek = ("M224,150 C224,172 230,194 240,212 L262,226 C252,210 244,190 240,166 C238,158 236,152 234,148 Z")
     s.part(cheek, CHEEK, soft=True, line=False)
-    s.part(mirror(cheek), CHEEK, soft=True, line=False, shadow="M300,140 L400,140 L400,240 L300,240 Z")
+    s.part(mirror(cheek), CHEEK, soft=True, line=False)
     beard = ("M226,156 C226,194 242,230 266,252 C280,264 292,272 300,272 C308,272 320,264 334,252 "
              "C358,230 374,194 374,156 L366,160 C364,194 352,216 338,228 L334,240 C324,252 312,256 300,256 "
              "C288,256 276,252 266,240 L262,228 C248,216 236,194 234,160 Z")
     s.part(beard, BFILL, soft=True, line=False,
-           shadow="M316,250 C342,246 360,222 368,160 L400,160 L400,300 L300,300 Z",
-           hl="M234,186 C240,208 250,226 262,238 C252,222 244,206 240,186 Z")
+           shadow="M316,250 C342,246 360,222 368,160 L400,160 L400,300 L300,300 Z")
     import random as _r
     rr = _r.Random(7)
     for _ in range(60):   # short hair texture
@@ -312,9 +311,9 @@ def head(s, expr="neutral", blink=False, look=(0, 0)):
         y = rr.uniform(170, 268)
         if abs(x - 300) < 72 - max(0, y - 200) * 0.95 and abs(x - 300) > 62 - max(0, y - 170) * 0.9 and not (abs(x - 300) < 36 and y < 256):
             s.line(f"M{x:.1f},{y:.1f} l{rr.uniform(-1,1):.1f},{rr.uniform(3,5):.1f}", 1.1, color=SHEEN, op=0.6)
-    must = ("M272,227 C280,220 290,218 300,221 C310,218 320,220 328,227 C329,230 328,232 326,232 "
-            "C318,229 309,228 300,229 C291,228 282,229 274,232 C272,232 271,230 272,227 Z")
-    s.part(must, hexc([rgb(SKIN)[i] * 0.3 + rgb(HAIR)[i] * 0.7 for i in range(3)]), soft=True, shadow="M304,206 L346,206 L346,250 L304,250 Z", line=False)
+    must = ("M276,226 C284,219 292,218 300,220 C308,218 316,219 324,226 C325,228 324,229 322,229 "
+            "C315,227 308,226 300,227 C292,226 285,227 278,229 C276,229 275,228 276,226 Z")
+    s.part(must, hexc([rgb(SKIN)[i] * 0.38 + rgb(HAIR)[i] * 0.62 for i in range(3)]), soft=True, shadow="M304,206 L346,206 L346,250 L304,250 Z", line=False)
     s.line("M226,156 C226,194 242,230 266,252 C280,264 292,272 300,272 C308,272 320,264 334,252 "
            "C358,230 374,194 374,156", LW_IN, op=0.85)                                           # jaw silhouette
 
