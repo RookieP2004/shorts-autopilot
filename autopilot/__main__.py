@@ -66,7 +66,8 @@ def main(argv=None):
         if args.sync is not None:
             print(f"synced: added {budget.sync(args.sync)} calls from outside this channel")
         st = budget.status()
-        span = (f"this cycle (resets {st['reset']}, {st['days_left']} day(s) left)" if st["cycle_day"]
+        span = (f"the Zapier trial (ends {st['reset']}, {st['days_left']} day(s) left)" if st["cycle_day"] == "trial"
+                else f"this cycle (resets {st['reset']}, {st['days_left']} day(s) left)" if st["cycle_day"]
                 else f"the last {st['window_days']} days (set zapier.cycle_day in style.json to enable bonus Shorts)")
         print(f"Zapier: {st['calls_used']} calls ({st['tasks_used']} tasks) in {span}; "
               f"cap {st['cap_calls']} calls of the {st['plan_tasks']}-task plan; {st['calls_left']} left")

@@ -46,6 +46,9 @@ python -m autopilot logline  jobs/<id>/job.json --youtube-id <id>   # line for t
    (Zapier → Settings → Billing). Then `budget --bonus` works out the spare tasks before the reset, and the
    bonus slots (12:50 and 15:50 IST) post up to 2 extra Shorts a day in the last week or so, landing on exactly 100.
    If you use Zapier for anything else, run `budget --sync <tasks used on Zapier's billing page>` to keep the ledger honest.
+   **Trial:** while `zapier.trial_until` is in the future, the budget uses `trial_tasks` (1,000) and posts the full
+   3 Shorts a day; trial uploads don't count against the free plan afterwards. Don't add a card during the trial,
+   and Zapier drops the account to Free automatically when it ends.
    On a paid plan, raise `zapier.plan_tasks` in style.json.
 3. **Google Docs**: add the **Google Docs** and **Google Drive** connectors in claude.ai (not Zapier's Google Docs
    actions, which would use up the free task budget). Setup creates the 4 docs and writes their links to `channel/docs.json`.

@@ -91,7 +91,8 @@
     ]
   },
   "zapier": {"plan_tasks": 100, "tasks_per_call": 2, "reserve_tasks": 4, "window_days": 31, "keep_for_review": 1,
-             "cycle_day": null, "bonus_days": 7, "max_per_day": 3},
+             "cycle_day": null, "bonus_days": 7, "max_per_day": 3,
+             "trial_until": "2026-11-20", "trial_tasks": 1000},
   "safe_zone": {
     "top": 0.08,
     "bottom": 0.78,

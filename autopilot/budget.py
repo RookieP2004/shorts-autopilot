@@ -4,7 +4,11 @@ Every successful Zapier MCP call costs `tasks_per_call` tasks (2). The free plan
 billing cycle. Successful calls are kept in channel/zapier_ledger.json (committed to the repo, so
 every fresh scheduled run sees it). Failed calls cost 0 tasks: only record a call after it succeeded.
 
-Two modes:
+Trial: while today is before `trial_until`, the plan is `trial_tasks` (Zapier's 14-day Pro trial,
+1,000 tasks) and the "reset" is the trial's end, so the bonus logic posts the full `max_per_day`.
+Calls made during the trial never count against the free plan afterwards.
+
+Two modes after the trial:
 - `cycle_day` unknown (null): count calls over a rolling 31 days. Safe whatever day the cycle
   resets, but no end-of-cycle bonus, because we can't know when the leftovers would expire.
 - `cycle_day` set (day of month Zapier's usage resets, from the Zapier billing page): count calls
@@ -21,7 +25,8 @@ from .spec import ROOT, load_style
 LEDGER = os.path.join(ROOT, "channel", "zapier_ledger.json")
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 DEFAULTS = {"plan_tasks": 100, "tasks_per_call": 2, "reserve_tasks": 4, "window_days": 31,
-            "keep_for_review": 1, "cycle_day": None, "bonus_days": 7, "max_per_day": 3}
+            "keep_for_review": 1, "cycle_day": None, "bonus_days": 7, "max_per_day": 3,
+            "trial_until": None, "trial_tasks": 1000}
 NEED = {"upload": 1, "stats": 1, "other": 1}
 
 
@@ -68,13 +73,21 @@ def status(now=None, path=LEDGER, style=None):
     s = settings(style)
     now = now or _now()
     today = now.astimezone(IST).date()
-    if s["cycle_day"]:
+    trial_end = dt.date.fromisoformat(s["trial_until"]) if s.get("trial_until") else None
+    if trial_end and today < trial_end:
+        # trial: big allowance until the trial ends; treat the end as the reset
+        s = {**s, "plan_tasks": s["trial_tasks"], "cycle_day": "trial"}
+        since = dt.datetime.combine(trial_end - dt.timedelta(days=15), dt.time(), IST)
+        reset, days_left = trial_end, (trial_end - today).days
+    elif s["cycle_day"]:
         start, reset = cycle(int(s["cycle_day"]), today)
         # a day's margin either side of midnight: Zapier may reset on UTC or account time
         since = dt.datetime.combine(start - dt.timedelta(days=1), dt.time(), IST)
         days_left = (reset - today).days            # days until reset, today included
     else:
         since, reset, days_left = now - dt.timedelta(days=s["window_days"]), None, None
+    if trial_end and today >= trial_end:     # trial calls never count against the free plan
+        since = max(since, dt.datetime.combine(trial_end, dt.time(), IST))
     used = [e for e in load(path) if dt.datetime.fromisoformat(e["ts"]) > since]
     cap = (s["plan_tasks"] - s["reserve_tasks"]) // s["tasks_per_call"]
     if days_left == 1:
