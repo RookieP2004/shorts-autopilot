@@ -86,6 +86,14 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
     comic beat card.
   Every explanation step gets its own shot, panel or label; something new moves on screen at least every 2–3 s; move captions
   (`caption_y`) off any object they would cover. Never childish clip-art diagrams, never a talking head explaining something we could show.
+- **The town (supporting cast)**: the world is populated. Faceless townspeople (`"id": "extra"`, outfit per layer in
+  `rig_args.outfit`: apron, headscarf, straw hat, fez, suit and bowler, necklace, bag...) play the roles in the story (seller,
+  buyers, banker, crowd) and show feelings with body language: `happy`/`cheer` + `hops` when good news lands, `sad` (head and
+  shoulders drop) and slow walks away when it backfires, `give`/`take` for trades, `shrug`. Name the recurring people in the
+  job builder and keep their outfits identical in every shot. Stage everyone in depth with `autopilot/stage.py` (place by floor
+  position in metres from the plate's saved camera; `walk()` paths shrink/grow with distance) and draw each set's foreground layer
+  (`fg_<set>`, rendered with `still(..., only=[counter])`) between the people behind it and the people in front. Reference:
+  `jobs/2026-11-08-m3/assets.py` + `build_job.py` and `docs/job-spec.md` "The town".
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,
