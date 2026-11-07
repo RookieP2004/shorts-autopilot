@@ -13,7 +13,30 @@ import sys
 import time
 
 
+def assets(script, out):
+    """Run a stills/cut-outs script: it calls reset() + still(name, ...) as many times as it likes."""
+    src = open(script).read()
+    sig = hashlib.sha1(src.encode()).hexdigest()
+    done = os.path.join(out, ".done")
+    if os.path.exists(done) and open(done).read() == sig:
+        print("cached", out)
+        return
+    os.makedirs(out, exist_ok=True)
+    os.environ["BK_ASSETS"] = out
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from autopilot import blendkit
+    blendkit.ASSET_DIR = out
+    ns = {k: getattr(blendkit, k) for k in dir(blendkit) if not k.startswith("_")}
+    ns.update(ASSETS=out, __file__=script, __name__="__assets__")
+    t0 = time.time()
+    exec(compile(src, script, "exec"), ns)
+    open(done, "w").write(sig)
+    print(f"assets done in {time.time() - t0:.0f}s -> {out}")
+
+
 def main():
+    if sys.argv[1] == "--assets":
+        return assets(sys.argv[2], sys.argv[3])
     script, out, dur, fps, w, h = sys.argv[1:7]
     samples = int(sys.argv[7]) if len(sys.argv) > 7 else 24
     dur, fps, w, h = float(dur), int(fps), int(w), int(h)

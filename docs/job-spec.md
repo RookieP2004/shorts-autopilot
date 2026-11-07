@@ -90,7 +90,36 @@ Usually a full-frame backdrop or a cutaway: `x` 0.5, `y` 0.5, `w` 1, `h` 1 (frac
 - animation on any object: `spin:[dx,dy,dz]` deg/s, `bob`, `move:{to, dur, at}`
 Units are metres; y is up; a person is 1.75 tall. Light comes from the upper-left like the 2D sets.
 
-### type: blender  (cinematic 3D, rendered in Blender)
+## The 3D world, cheaply: stills + cut-outs (default)
+Build each video's world the Rick's Clips way: render **stills** in Blender once, then animate everything in 2D at 30 fps.
+- Job field `"assets_script": "jobs/<id>/assets.py"`: a blendkit script run once (cached) before any frame is drawn. It calls
+  `reset(...)`, builds a set, and `still("plate_market_mid", 1080, 1920, 32)` for a background plate (2-3 camera angles of the
+  same set = wide / medium / close-up), and `still("apple", 500, 500, 24, transparent=True, crop=True)` for a prop cut-out
+  (use `sprite_camera(center, dist, height, lens)` to frame it at roughly the plate's camera height). Output: `jobs/<id>/assets/*.png`.
+  `BK_SKIP_EXISTING=1` re-renders only the files you deleted. A full set of 5 plates + 8 cut-outs takes about 6-9 min.
+  See `jobs/2026-11-08-m2/assets.py` (bright island market with a stall and palms, a bank hall, a spotlit vault).
+- Use them as `image` layers with `"path": "jobs/<id>/assets/<name>.png"` (`w` = width as a fraction of the frame, `blur` px for
+  out-of-focus backgrounds behind close-ups). Props then fall, fly, bounce, spin and flip in 2D (see "Motion").
+- Full animated Blender shots (`blender` layers) are expensive (about 7 s per frame); use them only for a moment that really needs
+  a moving 3D camera.
+
+## Motion (any layer)
+`"keys": [{"t": 0, "x": 1.18}, {"t": 1.15, "x": 0.62, "walk": true}, ...]`: keyframes in seconds from the layer's `at`.
+Animatable: `x`, `y`, `scale`, `rot` (deg), `opacity`, `sx` (horizontal scale; 1 -> 0 then a second layer 0 -> 1 = a card flip).
+`"ease"` on the arriving key: `in_out` (default), `linear`, `in`, `out`, `back`, `bounce` (lands and bounces: dropped props).
+Recipes in `jobs/2026-11-08-m2/build_job.py`: `drop()` (falls into place with a bounce), `fly()` (arcs out of a printer and spins).
+
+**Characters act inside the world:** `"walk": true` on a key makes the character walk to it (legs step, body bobs, arms swing),
+`"hops": [[t, height, dur]]` makes them jump (legs tuck; the shadow stays on the floor), and a soft floor shadow follows them
+whenever they move (`"ground": false` to turn it off, e.g. in close-ups). Combine with `acting` for gestures and faces.
+Shot grammar: a **wide** (Ved small in the set), **medium** (Ved h ≈ 0.42 on the floor line next to the props) and **close-up**
+(Ved h ≈ 1.06, x 0.5, y 0.8, `allow_outside_safe`, background plate blurred and scaled 1.35, captions at `caption_y` 0.64).
+Cut between them every 3-5 s.
+
+**Camera moves:** scene `"camera": {"keys": [{"t": 0, "zoom": 1.0, "focus": [0.5, 0.5]}, {"t": 3, "zoom": 1.1, "focus": [0.54, 0.5]}]}`.
+Text layers are part of the scene, so keep `focus` y ≈ 0.5 when zooming or headlines near the top get cropped.
+
+### type: blender  (animated 3D shot, expensive)
 The main explainer visual. `script`: a shot file (path from the repo root, usually `jobs/<id>/shots/<name>.py`),
 `x` 0.5, `y` 0.5, `w` 1, `h` 1, `fps` (15 is the default budget; motion blur hides the steps), `res` (0.4 = 432x768 rendered,
 upscaled), `samples` (10), `dur` (defaults to the rest of the scene; use 0.034 for a single still frame, e.g. a blurred background

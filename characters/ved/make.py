@@ -317,19 +317,39 @@ TORSO = ("M300,290 C268,290 204,294 170,304 C146,312 136,330 136,356 L140,404 C1
          "C464,330 454,312 430,304 C396,294 332,290 300,290 Z")
 
 
-def legs(s):
+def _leg_open(s, lift, hip_x):
+    """Start a group that shortens one leg from the hip (a lifted / bent leg) by `lift` px."""
+    if lift <= 0.5:
+        return False
+    k = 1 - lift / 658.0
+    s.add(f'<g transform="translate({hip_x},796) scale({1 + lift / 2600:.4f},{k:.4f}) translate({-hip_x},-796)">')
+    return True
+
+
+def legs(s, lift=(0.0, 0.0)):
+    """lift = (left, right) in px: walking steps and jump tucks (0 = standing)."""
     leg = "M192,796 L298,796 L292,1404 L222,1404 C214,1180 204,980 192,796 Z"
-    s.part(leg, TROUSER, shadow="M258,780 L304,780 L300,1412 L266,1412 Z", shadow_col=TROUSER_SH,
-           hl="M200,840 L214,840 L230,1390 L222,1390 Z", hl_col=TROUSER_HL)
-    s.part(mirror(leg), TROUSER, shadow="M318,780 L420,780 L420,1412 L346,1412 Z", shadow_col=TROUSER_SH,
-           hl=mirror("M290,840 L298,840 L294,1390 L288,1390 Z"), hl_col=TROUSER_HL)
-    s.add(f'<path d="M296,800 L300,880 L304,800 Z" fill="{TROUSER_SH}"/>')       # fly shadow
     shoe = ("M216,1396 L294,1396 L296,1430 C296,1446 288,1454 272,1454 L190,1454 C176,1454 172,1440 182,1432 "
             "C194,1422 206,1412 216,1396 Z")
+    g = _leg_open(s, lift[0], 245)
+    s.part(leg, TROUSER, shadow="M258,780 L304,780 L300,1412 L266,1412 Z", shadow_col=TROUSER_SH,
+           hl="M200,840 L214,840 L230,1390 L222,1390 Z", hl_col=TROUSER_HL)
     s.part(shoe, SHOE, shadow="M240,1440 L300,1440 L300,1460 L240,1460 Z", shadow_col="#0a0a0c",
            hl="M190,1432 C200,1424 214,1422 226,1424 L222,1430 Z", hl_col="#4a4d58")
+    if g:
+        s.add('</g>')
+    g = _leg_open(s, lift[1], 355)
+    s.part(mirror(leg), TROUSER, shadow="M318,780 L420,780 L420,1412 L346,1412 Z", shadow_col=TROUSER_SH,
+           hl=mirror("M290,840 L298,840 L294,1390 L288,1390 Z"), hl_col=TROUSER_HL)
     s.part(mirror(shoe), SHOE, shadow="M300,1380 L440,1380 L440,1460 L300,1460 Z", shadow_col="#0a0a0c",
            hl=mirror("M190,1432 C200,1424 214,1422 226,1424 L222,1430 Z"), hl_col="#3a3d46")
+    if g:
+        s.add('</g>')
+    _legs_rest(s)
+
+
+def _legs_rest(s):
+    s.add(f'<path d="M296,800 L300,880 L304,800 Z" fill="{TROUSER_SH}"/>')       # fly shadow
 
 
 def torso(s):
@@ -448,12 +468,14 @@ ARMS = {
 }
 
 
-def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None, arms=None):
+def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None, arms=None, lift=(0.0, 0.0), shadow=True):
     """arms: optional list of (shoulder, elbow, wrist, hand_kind, forearm_in_front) - used by the renderer
-    to interpolate smoothly between poses."""
+    to interpolate smoothly between poses. lift: leg lifts for walking/jumping. shadow: draw the floor shadow
+    (the renderer draws its own when the character moves)."""
     s = Svg()
-    s.add('<ellipse cx="300" cy="1456" rx="190" ry="20" fill="#000" opacity="0.22"/>')
-    legs(s)
+    if shadow:
+        s.add('<ellipse cx="300" cy="1456" rx="190" ry="20" fill="#000" opacity="0.22"/>')
+    legs(s, lift)
     arms = arms if arms is not None else ARMS[pose]
     for shoulder, elbow, wrist, kind, front in arms:      # sleeves sit behind the torso's shoulder line
         if not front:

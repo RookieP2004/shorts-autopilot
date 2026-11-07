@@ -6,6 +6,7 @@ import os
 from PIL import Image, ImageEnhance
 
 from . import sprites
+from . import motion
 from .spec import color, hex_rgba
 
 
@@ -93,14 +94,35 @@ def anim_state(L, t, W, H):
         rot += lt * 90 * spd
     elif loop == "wiggle":
         rot += math.sin(lt * 2 * math.pi * 1.4 * spd) * 6 * amp
-    return dx, dy, sc, rot, alpha, reveal
+    sx = 1.0
+    if L.get("keys"):                                    # keyframed path / scale / rotation / card flips
+        kv = motion.keyed(L, lt)
+        if "x" in kv:
+            dx += (kv["x"] - L.get("x", 0.5)) * W
+        if "y" in kv:
+            dy += (kv["y"] - L.get("y", 0.5)) * H
+        sc *= kv.get("scale", 1.0)
+        rot += kv.get("rot", 0.0)
+        alpha *= kv.get("opacity", 1.0)
+        sx = kv.get("sx", 1.0)
+    if L.get("type") == "character" and (L.get("keys") or L.get("hops")):
+        _, bob, _ = motion.legs_and_bob(L, lt)
+        hh, _ = motion.hop(L, lt)
+        dy -= (bob + hh) * H
+    return dx, dy, sc, rot, alpha, reveal, sx
 
 
-def paste(canvas, img, cx, cy, scale=1.0, rot=0.0, alpha=1.0, flip=False):
+def paste(canvas, img, cx, cy, scale=1.0, rot=0.0, alpha=1.0, flip=False, sx=1.0):
     if img is None or alpha <= 0.003 or scale <= 0.01:
         return
+    if sx < 0:
+        flip, sx = not flip, -sx
     if flip:
         img = img.transpose(Image.FLIP_LEFT_RIGHT)
+    if sx < 0.995:
+        if sx < 0.01:
+            return
+        img = img.resize((max(1, int(img.width * sx)), img.height), Image.BILINEAR)
     if abs(scale - 1.0) > 0.004:
         w, h = max(1, int(img.width * scale)), max(1, int(img.height * scale))
         img = img.resize((w, h), Image.BILINEAR)
@@ -163,20 +185,71 @@ def rig_image(ctx, L, scene_idx, t, scene, ch, r):
     tr = acting.track(ctx, scene_idx, L, r)
     arms, g = acting.arms_at(r, tr, t)
     _, expr, look = r.BASES[g]
+    lt = t - L.get("at", 0.0)
+    moving = bool(L.get("keys") or L.get("hops"))
+    lift, _, _ = motion.legs_and_bob(L, lt) if moving else ((0.0, 0.0), 0, False)
+    swing = motion.arm_swing(r.ARMS["down"], lt, L) if moving else None
+    if swing is not None:
+        arms = swing
+    lift = (round(lift[0] / 6) * 6, round(lift[1] / 6) * 6)
     speaking = scene.get("speaker", ctx.default_speaker) == L["id"] and L.get("talk", True)
     mouth = ctx.viseme(scene_idx, t) if speaking else None
     blink = ((t + (zlib_seed(L["id"]) % 7) * 0.37) % 3.4) < 0.12
     key = (tuple((tuple(round(v) for v in a[0]), tuple(round(v) for v in a[1]), tuple(round(v) for v in a[2]), a[3], a[4])
-                 for a in arms), expr, look, mouth, blink)
+                 for a in arms), expr, look, mouth, blink, lift, moving)
     cache = ctx.__dict__.setdefault("_rigsvg", {})
     svg = cache.get(key)
     if svg is None:
         if len(cache) > 400:
             cache.clear()
-        svg = r.figure(arms=[(a[0], a[1], a[2], a[3], a[4]) for a in arms], expr=expr, blink=blink, look=look, mouth=mouth)
+        try:
+            svg = r.figure(arms=[(a[0], a[1], a[2], a[3], a[4]) for a in arms], expr=expr, blink=blink, look=look,
+                           mouth=mouth, lift=lift, shadow=not moving)
+        except TypeError:                                 # older rigs without walking support
+            svg = r.figure(arms=[(a[0], a[1], a[2], a[3], a[4]) for a in arms], expr=expr, blink=blink, look=look, mouth=mouth)
         cache[key] = svg
     height_px = L.get("h", ch["meta"].get("default_h", 0.42)) * ctx.H
     return sprites.svg_image(svg, height_px * r.W / r.H)
+
+
+_RASTER = {}
+
+
+def raster_image(path, width, blur=0):
+    """A PNG/JPG (e.g. a Blender-rendered set or prop cut-out) scaled to `width` px, optionally blurred (cached)."""
+    key = (path, width, blur)
+    img = _RASTER.get(key)
+    if img is None:
+        if not os.path.exists(path):
+            return None
+        src = Image.open(path).convert("RGBA")
+        h = max(1, int(src.height * width / src.width))
+        img = src.resize((max(1, width), h), Image.LANCZOS)
+        if blur:
+            from PIL import ImageFilter
+            img = img.filter(ImageFilter.GaussianBlur(blur))
+        if len(_RASTER) > 64:
+            _RASTER.clear()
+        _RASTER[key] = img
+    return img
+
+
+_SHADOWS = {}
+
+
+def ground_shadow(w):
+    """Soft elliptical floor shadow, w px wide."""
+    w = max(8, w - w % 4)
+    img = _SHADOWS.get(w)
+    if img is None:
+        from PIL import ImageDraw, ImageFilter
+        h = max(4, w // 5)
+        pad = w // 6
+        img = Image.new("RGBA", (w + 2 * pad, h + 2 * pad), (0, 0, 0, 0))
+        ImageDraw.Draw(img).ellipse((pad, pad, pad + w, pad + h), fill=(0, 0, 0, 120))
+        img = img.filter(ImageFilter.GaussianBlur(pad / 2.2))
+        _SHADOWS[w] = img
+    return img
 
 
 def zlib_seed(s):
@@ -251,6 +324,9 @@ def layer_image(ctx, L, scene_idx, t, scene, reveal):
         return render3d(ctx.style, L, t - L.get("at", 0.0), ctx.dur[scene_idx],
                         int(L.get("w", 1.0) * ctx.W), int(L.get("h", 1.0) * ctx.H), L.get("ss", 2))
     if typ == "image":
+        path = L.get("path", "")
+        if path.lower().endswith((".png", ".jpg", ".jpeg", ".webp")):
+            return raster_image(os.path.join(ctx.root, path), int(L.get("w", 0.4) * W), L.get("blur", 0))
         svg = L.get("svg") or sprites.read_file(os.path.join(ctx.root, L["path"]))
         return sprites.svg_image(svg, L.get("w", 0.4) * W)
     return None
@@ -295,18 +371,32 @@ def draw_scene(ctx, scene_idx, t):
         stt = anim_state(L, t, W, H)
         if stt is None:
             continue
-        dx, dy, sc, rot, alpha, reveal = stt
+        dx, dy, sc, rot, alpha, reveal, sx = stt
+        lt = t - L.get("at", 0.0)
+        if L.get("type") == "character" and L.get("ground", bool(L.get("keys") or L.get("hops"))):
+            hh, _ = motion.hop(L, lt)
+            _, bob, _ = motion.legs_and_bob(L, lt)
+            hgt = L.get("h", 0.4) * sc * L.get("scale", 1.0)
+            gx = L.get("x", 0.5) * W + dx
+            gy = L.get("y", 0.5) * H + dy + (hh + bob) * H + hgt * H * 0.485
+            shw = hgt * H * 0.36 * (1 - min(0.6, hh * 4))
+            paste(canvas, ground_shadow(int(shw)), gx, gy, 1.0, 0, alpha * (1 - min(0.5, hh * 3)))
         img = layer_image(ctx, L, scene_idx, t, scene, reveal)
         if img is None:
             continue
         cx = L.get("x", 0.5) * W + dx
         cy = L.get("y", 0.5) * H + dy
-        paste(canvas, img, cx, cy, sc * L.get("scale", 1.0), rot, alpha, L.get("flip", False))
+        paste(canvas, img, cx, cy, sc * L.get("scale", 1.0), rot, alpha, L.get("flip", False), sx)
     t = t_real
     cam = scene.get("camera") or {}
     dur = ctx.dur[scene_idx]
     z0, z1 = cam.get("zoom", [1.0, 1.0])
     z = z0 + (z1 - z0) * ease_in_out(clamp(t / max(dur, 0.01)))
+    if cam.get("keys"):                                  # camera moves: [{"t", "zoom", "focus": [x, y]}, ...]
+        ck = motion.keyed({"keys": [dict(k, x=k.get("focus", [0.5, 0.5])[0], y=k.get("focus", [0.5, 0.5])[1],
+                                         scale=k.get("zoom", 1.0)) for k in cam["keys"]]}, t)
+        z = ck.get("scale", 1.0)
+        cam = dict(cam, focus=[ck.get("x", 0.5), ck.get("y", 0.5)])
     for pt in cam.get("punch", []):  # quick zoom hits at given times
         if 0 <= t - pt < 0.35:
             z *= 1 + 0.07 * math.sin((t - pt) / 0.35 * math.pi)

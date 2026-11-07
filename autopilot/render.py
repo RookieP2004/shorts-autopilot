@@ -42,8 +42,25 @@ class Ctx:
         return self.job["scenes"][i].get("lead", self.style["scene_lead"])
 
 
+def render_assets(ctx, log=print):
+    """Run the job's `assets_script` (Blender stills: sets and prop cut-outs) into jobs/<id>/assets/ (cached)."""
+    sp = ctx.job.get("assets_script")
+    if not sp or not ctx.shots_dir:
+        return
+    script = sp if os.path.isabs(sp) else os.path.join(ctx.root, sp)
+    out = os.path.join(os.path.dirname(ctx.shots_dir), "..", "assets")
+    out = os.path.normpath(out)
+    log(f"  3D assets: {os.path.basename(script)}")
+    r = subprocess.run([sys.executable, "-m", "autopilot.blendrun", "--assets", script, out], cwd=ctx.root,
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        raise RuntimeError(f"assets script failed ({script}):\n" + r.stdout[-1500:] + r.stderr[-3000:])
+    log("   " + (r.stdout.strip().splitlines() or [""])[-1])
+
+
 def render_shots(ctx, log=print):
     """Render every `blender` layer (cached per script + duration) before frames are drawn."""
+    render_assets(ctx, log)
     if not ctx.shots_dir:
         return
     for i, s in enumerate(ctx.job["scenes"]):

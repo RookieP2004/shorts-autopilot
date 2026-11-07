@@ -563,3 +563,43 @@ def printer(loc=(0, 0, 0), scale=1.0, name="printer"):
     root = _tag_group(parts, name, loc)
     slot = (loc[0], loc[1] - 0.6 * s, loc[2] + 0.72 * s)
     return root, slot
+
+
+# ------------------------------------------------------------------ stills and cut-outs (the cheap path)
+ASSET_DIR = os.environ.get("BK_ASSETS", "")
+
+
+def still(name, w=1080, h=1920, samples=32, transparent=False, crop=False, pad=12, frame=1):
+    """Render the current scene once to <assets>/<name>.png. transparent+crop = a prop cut-out (sprite)
+    that the 2D compositor animates. Use reset() before building each new still."""
+    sc = bpy.context.scene
+    if os.environ.get("BK_SKIP_EXISTING") and os.path.exists(os.path.join(ASSET_DIR or ".", name + ".png")):
+        print("kept", name)
+        return os.path.join(ASSET_DIR or ".", name + ".png")
+    sc.render.resolution_x, sc.render.resolution_y = w, h
+    sc.cycles.samples = samples
+    sc.render.film_transparent = transparent
+    sc.render.image_settings.color_mode = "RGBA" if transparent else "RGB"
+    sc.render.use_motion_blur = False
+    sc.frame_set(frame)
+    out = os.path.join(ASSET_DIR or ".", name + ".png")
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    sc.render.filepath = out
+    bpy.ops.render.render(write_still=True)
+    if crop and transparent:
+        from PIL import Image as _I
+        im = _I.open(out)
+        box = im.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox()
+        if box:
+            x0, y0, x1, y1 = box
+            im.crop((max(0, x0 - pad), max(0, y0 - pad), min(im.width, x1 + pad), min(im.height, y1 + pad))).save(out)
+    print("still", out)
+    return out
+
+
+def sprite_camera(obj_center=(0, 0, 0.3), dist=3.0, height=1.2, lens=60, azimuth=-20):
+    """A camera framing one prop for a cut-out (3/4 view from the front-left by default)."""
+    a = math.radians(azimuth)
+    cx, cy, cz = obj_center
+    loc = (cx + dist * math.sin(a), cy - dist * math.cos(a), cz + height)
+    return camera(loc, obj_center, lens=lens, fstop=0)

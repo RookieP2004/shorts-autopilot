@@ -1,0 +1,2596 @@
+{
+ "id": "2026-11-08-m2",
+ "title": "Why can't we just print more money? 💸",
+ "description": "Ten apples, ten dollars, and a money printer: the simplest way to understand inflation, and what happened when Zimbabwe tried it.\n\nSources: Hanke & Kwok, Cato Journal (2009); Reserve Bank of Zimbabwe Z$100 trillion note, Jan 2009.",
+ "tags": [
+  "inflation",
+  "economics",
+  "money",
+  "print money",
+  "zimbabwe",
+  "hyperinflation",
+  "explained",
+  "economy"
+ ],
+ "hashtags": [
+  "#economics",
+  "#inflation"
+ ],
+ "meta": {
+  "format": "big-question",
+  "topic": "why printing money causes inflation",
+  "hook": "question",
+  "idea_source": "owner (manual)",
+  "characters": [
+   "ved"
+  ],
+  "sources": [
+   "https://www.cato.org/publications/commentary/inflation-inferno-roared-away-until-mid-november-2008"
+  ],
+  "humour": {
+   "trend": "'you the birthday' (TikTok slang, this week)",
+   "beat": "deadpan",
+   "scene": 7
+  },
+  "overrides": "style test v2: 2D Ved acting inside 3D sets built from Blender stills + cut-outs"
+ },
+ "privacy": "private",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-08-m2/assets.py",
+ "scenes": [
+  {
+   "say": "Hey! Ever wondered why a country can't just *print more money*?",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.08,
+      "focus": [
+       0.54,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "text",
+     "text": "WHY NOT JUST *PRINT MORE MONEY?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.17,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.62,
+     "y": 0.66,
+     "h": 0.42,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.3
+      ],
+      [
+       "point",
+       2.6
+      ]
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.18
+      },
+      {
+       "t": 1.15,
+       "x": 0.62,
+       "walk": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "I mean, free money for everyone. What could go *wrong*?",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 3,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "welcome",
+       1.4
+      ],
+      [
+       "smirk",
+       2.5
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "Picture a tiny island with just *ten apples*...",
+   "transition": "slide_left",
+   "caption_y": 0.27,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.275,
+     "y": 0.425,
+     "w": 0.11800000000000001,
+     "enter": "none",
+     "at": 0.9,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": -10.744886646993159
+      },
+      {
+       "t": 0.55,
+       "y": 0.425,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.425,
+     "y": 0.425,
+     "w": 0.11800000000000001,
+     "enter": "none",
+     "at": 1.03,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": -35.36008601802345
+      },
+      {
+       "t": 0.55,
+       "y": 0.425,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.575,
+     "y": 0.425,
+     "w": 0.11800000000000001,
+     "enter": "none",
+     "at": 1.1600000000000001,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": 0.5948586551536224
+      },
+      {
+       "t": 0.55,
+       "y": 0.425,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.7249999999999999,
+     "y": 0.425,
+     "w": 0.11800000000000001,
+     "enter": "none",
+     "at": 1.29,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": -37.00034732464121
+      },
+      {
+       "t": 0.55,
+       "y": 0.425,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.875,
+     "y": 0.425,
+     "w": 0.11800000000000001,
+     "enter": "none",
+     "at": 1.42,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": -5.308345307009134
+      },
+      {
+       "t": 0.55,
+       "y": 0.425,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.2,
+     "y": 0.47,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.25,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": -14.093378813347009
+      },
+      {
+       "t": 0.55,
+       "y": 0.47,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.35,
+     "y": 0.47,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.38,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": -27.932066086039846
+      },
+      {
+       "t": 0.55,
+       "y": 0.47,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.5,
+     "y": 0.47,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.51,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": 12.074757843188301
+      },
+      {
+       "t": 0.55,
+       "y": 0.47,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.6499999999999999,
+     "y": 0.47,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.64,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": -34.20509706659658
+      },
+      {
+       "t": 0.55,
+       "y": 0.47,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8,
+     "y": 0.47,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.77,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": 2.8705603445351358
+      },
+      {
+       "t": 0.55,
+       "y": 0.47,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "none"
+    },
+    {
+     "type": "text",
+     "text": "10 APPLES",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.7,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "...and *ten dollars*. So one apple costs one dollar.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.5750000000000001,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.65,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.7250000000000001,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8750000000000001,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.54,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.615,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.6900000000000001,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.765,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8400000000000001,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/stack10.png",
+     "x": 0.36,
+     "y": 0.515,
+     "w": 0.2,
+     "enter": "none",
+     "at": 0.3,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 0
+      },
+      {
+       "t": 0.5,
+       "y": 0.515,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "*$10*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 130,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.4
+    },
+    {
+     "type": "text",
+     "text": "1 APPLE = *$1*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.21,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "slide_up",
+     "at": 2.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2,
+     "y": 0.68,
+     "h": 0.42,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       0.5
+      ],
+      [
+       "warm",
+       2.4
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Now the government prints ten more dollars.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 1.3,
+      "zoom": 1.1,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_bank.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/printer.png",
+     "x": 0.55,
+     "y": 0.6,
+     "w": 0.52,
+     "enter": "none",
+     "loop": "shake",
+     "loop_amp": 0.5,
+     "at": 0.0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 1.4,
+     "until": 2.327355756742754,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": 19.61112748032228,
+       "scale": 0.4
+      },
+      {
+       "t": 0.41731009053423945,
+       "x": 0.3529421694298476,
+       "y": 0.4165141553089478,
+       "rot": -88.005926360931,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.9273557567427543,
+       "x": 0.20588433885969515,
+       "y": 1.0590713013343864,
+       "rot": -195.6229802021843,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 1.5699999999999998,
+     "until": 2.5431308845852496,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": -6.19917152095319,
+       "scale": 0.4
+      },
+      {
+       "t": 0.43790889806336236,
+       "x": 0.5759732889622358,
+       "y": 0.44301259790733655,
+       "rot": 120.72674169368261,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.9731308845852497,
+       "x": 0.6519465779244714,
+       "y": 1.1447708942457004,
+       "rot": 247.65265490831842,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 1.74,
+     "until": 2.583276525007231,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": -22.932465715297898,
+       "scale": 0.4
+      },
+      {
+       "t": 0.37947443625325405,
+       "x": 0.6683873836194718,
+       "y": 0.3275810461319953,
+       "rot": -61.26095859114601,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8432765250072313,
+       "x": 0.8367747672389436,
+       "y": 1.0789609286331676,
+       "rot": -99.58945146699412,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 1.91,
+     "until": 2.901674040677855,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": -7.656147436456127,
+       "scale": 0.4
+      },
+      {
+       "t": 0.4462533183050349,
+       "x": 0.39729055196957497,
+       "y": 0.4405816537540015,
+       "rot": 8.585487366256961,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.9916740406778553,
+       "x": 0.29458110393914994,
+       "y": 1.1081600163662466,
+       "rot": 24.82712216897005,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 2.08,
+     "until": 3.0841199919545357,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": -4.344461659835829,
+       "scale": 0.4
+      },
+      {
+       "t": 0.45185399637954116,
+       "x": 0.34884046798649304,
+       "y": 0.3621657204738542,
+       "rot": -50.49396653195212,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 1.0041199919545358,
+       "x": 0.1976809359729861,
+       "y": 1.0705958712819326,
+       "rot": -96.6434714040684,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 2.25,
+     "until": 3.2883138444567477,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": 11.93966602377428,
+       "scale": 0.4
+      },
+      {
+       "t": 0.46724123000553636,
+       "x": 0.5062737505483101,
+       "y": 0.36383644346119937,
+       "rot": -60.565074200353116,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 1.0383138444567475,
+       "x": 0.5125475010966203,
+       "y": 1.0799766996863682,
+       "rot": -133.0698144244805,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 2.42,
+     "until": 3.438833586831765,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": -12.723734106588807,
+       "scale": 0.4
+      },
+      {
+       "t": 0.45847511407429437,
+       "x": 0.5350786015245805,
+       "y": 0.4322901332617557,
+       "rot": 118.48359329477695,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 1.0188335868317653,
+       "x": 0.5701572030491611,
+       "y": 1.1375137495573429,
+       "rot": 249.6909206961427,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 2.59,
+     "until": 3.4355953603981515,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": -0.6622139714516635,
+       "scale": 0.4
+      },
+      {
+       "t": 0.3805179121791682,
+       "x": 0.4922491287140909,
+       "y": 0.3497676215198407,
+       "rot": -120.13722015339204,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8455953603981515,
+       "x": 0.48449825742818176,
+       "y": 1.1257140929565248,
+       "rot": -239.61222633533242,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 2.76,
+     "until": 3.8226433435492666,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": -11.175149229114194,
+       "scale": 0.4
+      },
+      {
+       "t": 0.47818950459716997,
+       "x": 0.6308283464851252,
+       "y": 0.36084451843424725,
+       "rot": 45.189220616594326,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 1.0626433435492666,
+       "x": 0.7616566929702505,
+       "y": 1.1073025940277383,
+       "rot": 101.55359046230285,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 2.9299999999999997,
+     "until": 3.981990334153762,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": 26.680865706476247,
+       "scale": 0.4
+      },
+      {
+       "t": 0.4733956503691931,
+       "x": 0.5569580817129969,
+       "y": 0.3503771691787988,
+       "rot": 6.606000582345683,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 1.0519903341537624,
+       "x": 0.6139161634259938,
+       "y": 1.0956205331301412,
+       "rot": -13.468864541784882,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 3.1,
+     "until": 4.094138656358301,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": 29.585756367998044,
+       "scale": 0.4
+      },
+      {
+       "t": 0.4473623953612353,
+       "x": 0.3492677710388879,
+       "y": 0.40731067018587763,
+       "rot": 98.49332270252489,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.9941386563583007,
+       "x": 0.19853554207777577,
+       "y": 1.1201492021304422,
+       "rot": 167.40088903705174,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "none",
+     "at": 3.27,
+     "until": 4.076768878416677,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": -2.2982828220140483,
+       "scale": 0.4
+      },
+      {
+       "t": 0.36304599528750453,
+       "x": 0.4793165769786843,
+       "y": 0.43243563082774017,
+       "rot": -87.45656289530544,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8067688784166767,
+       "x": 0.4586331539573686,
+       "y": 1.1168652715884189,
+       "rot": -172.61484296859683,
+       "scale": 1.1,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*+$10* PRINTED",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.29,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.3,
+     "sfx": "boom"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.22,
+     "y": 0.7,
+     "h": 0.4,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ],
+      [
+       "surprised",
+       1.6
+      ]
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.2
+      },
+      {
+       "t": 1.0,
+       "x": 0.2,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       1.5,
+       0.05,
+       0.45
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Everyone feels richer. But look... there are still only *ten apples*.",
+   "transition": "zoom",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.5750000000000001,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.65,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.7250000000000001,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8750000000000001,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.54,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.615,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.6900000000000001,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.765,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8400000000000001,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/stack10.png",
+     "x": 0.36,
+     "y": 0.515,
+     "w": 0.2,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.2906117954796359,
+     "y": 0.5130469896541756,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.2,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": -148.2639111925263
+      },
+      {
+       "t": 0.6,
+       "y": 0.5130469896541756,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.3245706700654446,
+     "y": 0.5017284910939969,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.34,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 148.56878965051976
+      },
+      {
+       "t": 0.6,
+       "y": 0.5017284910939969,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.29450463421602496,
+     "y": 0.50347562202848,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.48000000000000004,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 19.775963657614966
+      },
+      {
+       "t": 0.6,
+       "y": 0.50347562202848,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.43900908875947225,
+     "y": 0.5145783951350722,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.6200000000000001,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 145.59378787940608
+      },
+      {
+       "t": 0.6,
+       "y": 0.5145783951350722,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.3301157916125015,
+     "y": 0.5024588955163509,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.76,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": -56.491533867350086
+      },
+      {
+       "t": 0.6,
+       "y": 0.5024588955163509,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.4391547088956791,
+     "y": 0.5187319361189198,
+     "w": 0.13,
+     "enter": "none",
+     "at": 0.9000000000000001,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": -139.63163768355642
+      },
+      {
+       "t": 0.6,
+       "y": 0.5187319361189198,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.3117191911282667,
+     "y": 0.4969587060045861,
+     "w": 0.13,
+     "enter": "none",
+     "at": 1.04,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": -106.66556652765556
+      },
+      {
+       "t": 0.6,
+       "y": 0.4969587060045861,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.3672932914614442,
+     "y": 0.5076737051119676,
+     "w": 0.13,
+     "enter": "none",
+     "at": 1.1800000000000002,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": -94.90135228058483
+      },
+      {
+       "t": 0.6,
+       "y": 0.5076737051119676,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.28073684860931153,
+     "y": 0.5025683950337598,
+     "w": 0.13,
+     "enter": "none",
+     "at": 1.32,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": -52.298570842109854
+      },
+      {
+       "t": 0.6,
+       "y": 0.5025683950337598,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill.png",
+     "x": 0.38194142026715056,
+     "y": 0.5185929377657529,
+     "w": 0.13,
+     "enter": "none",
+     "at": 1.4600000000000002,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 76.19746285439118
+      },
+      {
+       "t": 0.6,
+       "y": 0.5185929377657529,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 330'><rect width='900' height='330' rx='34' fill='#f6efe2'/>\n<rect width='900' height='330' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/>\n<g transform='translate(70,70)'><rect width='120' height='62' rx='8' fill='#cfe3c6' stroke='#265c40' stroke-width='5'/><circle cx='60' cy='31' r='16' fill='none' stroke='#265c40' stroke-width='5'/></g>\n<text x='230' y='120' font-size='60' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MONEY</text><text x='500' y='122' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>$10</text>\n<path d='M615,100 L660,100 L660,86 L685,108 L660,130 L660,116 L615,116 Z' fill='#f2b04a'/><text x='705' y='122' font-size='74' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>$20</text>\n<line x1='60' y1='168' x2='840' y2='168' stroke='#1a1410' stroke-width='3' opacity='0.25'/>\n<g transform='translate(100,205)'><circle cx='30' cy='42' r='38' fill='#c0212a'/><path d='M30,6 C28,-6 34,-14 40,-16' stroke='#4a3220' stroke-width='6' fill='none' stroke-linecap='round'/><ellipse cx='50' cy='-4' rx='18' ry='8' fill='#3f8a3a'/></g>\n<text x='230' y='268' font-size='60' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>APPLES</text><text x='515' y='270' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>10</text>\n<path d='M615,248 L660,248 L660,234 L685,256 L660,278 L660,264 L615,264 Z' fill='#9aa3ab'/><text x='720' y='270' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>10</text></svg>",
+     "w": 0.82,
+     "x": 0.5,
+     "y": 0.17,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.82,
+     "y": 0.68,
+     "h": 0.42,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "think",
+       1.9
+      ],
+      [
+       "point",
+       3.0
+      ]
+     ],
+     "hops": [
+      [
+       0.25,
+       0.04,
+       0.4
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "say": "So the seller raises the price. Each apple now costs *two dollars*. That's *inflation*.",
+   "transition": "cut",
+   "caption_y": 0.27,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.08
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "punch": [
+     4.2
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.38,
+     "y": 0.5,
+     "w": 0.3,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/tag_1.png",
+     "x": 0.7,
+     "y": 0.45,
+     "w": 0.34,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "sx": 1,
+       "rot": -4
+      },
+      {
+       "t": 2.35,
+       "sx": 1,
+       "rot": -4
+      },
+      {
+       "t": 2.55,
+       "sx": 0.0,
+       "rot": 0,
+       "ease": "in"
+      }
+     ],
+     "until": 2.55,
+     "exit_dur": 0.01
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/tag_2.png",
+     "x": 0.7,
+     "y": 0.45,
+     "w": 0.34,
+     "enter": "none",
+     "at": 2.55,
+     "keys": [
+      {
+       "t": 0,
+       "sx": 0.0,
+       "scale": 1.2
+      },
+      {
+       "t": 0.22,
+       "sx": 1.0,
+       "scale": 1.2,
+       "ease": "out"
+      },
+      {
+       "t": 0.6,
+       "sx": 1.0,
+       "scale": 1.0,
+       "ease": "back"
+      }
+     ],
+     "sfx": "whoosh"
+    },
+    {
+     "type": "text",
+     "text": "*INFLATION*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 150,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 4.1,
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.5,
+    "zoom": 1.15,
+    "focus": [
+     0.5,
+     0.42
+    ],
+    "text": "The printer: \"I'm the birthday.\"\nPrices: *\"Me too.\"*",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "Zimbabwe actually tried this. In 2008, prices *doubled* about every single day...",
+   "transition": "fade",
+   "caption_y": 0.6,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_vault.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.5139422897637005,
+     "y": 0.0,
+     "w": 0.1208796374704564,
+     "enter": "none",
+     "at": 2.366700288573255,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 19.43744156056447
+      },
+      {
+       "t": 3.4894863110637475,
+       "y": 1.1,
+       "rot": 589.9847453530364,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.8370618657210288,
+     "y": 0.0,
+     "w": 0.1298936560598283,
+     "enter": "none",
+     "at": 1.3733261741194402,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 143.63237963529826
+      },
+      {
+       "t": 2.6138908030813566,
+       "y": 1.1,
+       "rot": 517.1447828428545,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.10602303945681882,
+     "y": 0.0,
+     "w": 0.09336738079215123,
+     "enter": "none",
+     "at": 0.7306711490615756,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 58.429147597955065
+      },
+      {
+       "t": 2.874059017455578,
+       "y": 1.1,
+       "rot": 226.28780194513348,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.05020995371122097,
+     "y": 0.0,
+     "w": 0.0975632466139714,
+     "enter": "none",
+     "at": 0.3551252880790878,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 130.89957193244555
+      },
+      {
+       "t": 2.5280509753327602,
+       "y": 1.1,
+       "rot": 637.1661886869099,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.6026620890096308,
+     "y": 0.0,
+     "w": 0.09742752426654457,
+     "enter": "none",
+     "at": 0.8829021479497705,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 125.06023657933255
+      },
+      {
+       "t": 2.9005797834811107,
+       "y": 1.1,
+       "rot": 261.4211153810975,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.8140432338361534,
+     "y": 0.0,
+     "w": 0.13965513608523572,
+     "enter": "none",
+     "at": 1.630963107059768,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 174.180476309857
+      },
+      {
+       "t": 2.5944731277117823,
+       "y": 1.1,
+       "rot": 251.09380837408423,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.3583722544187016,
+     "y": 0.0,
+     "w": 0.10323784458585901,
+     "enter": "none",
+     "at": 2.9009938234254617,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 58.117899789515334
+      },
+      {
+       "t": 2.525405293149773,
+       "y": 1.1,
+       "rot": 675.492786437351,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.5254316555379123,
+     "y": 0.0,
+     "w": 0.09733012694495453,
+     "enter": "none",
+     "at": 1.9011034905874002,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 9.735296911980669
+      },
+      {
+       "t": 3.080920385032137,
+       "y": 1.1,
+       "rot": 689.2506213594863,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.8269925272607019,
+     "y": 0.0,
+     "w": 0.12480983929539011,
+     "enter": "none",
+     "at": 0.9139031903027668,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 132.0119250340244
+      },
+      {
+       "t": 2.68374623798777,
+       "y": 1.1,
+       "rot": 585.9689542010155,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.5293331577435911,
+     "y": 0.0,
+     "w": 0.12895274456690886,
+     "enter": "none",
+     "at": 1.1538274826671682,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 80.29500231714664
+      },
+      {
+       "t": 3.3926623714509545,
+       "y": 1.1,
+       "rot": 692.4630252954454,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.8173659188719945,
+     "y": 0.0,
+     "w": 0.13030392923928338,
+     "enter": "none",
+     "at": 2.8641653016388062,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 266.3542873352571
+      },
+      {
+       "t": 2.7494134390347433,
+       "y": 1.1,
+       "rot": 458.81936212175276,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.3700062890194623,
+     "y": 0.0,
+     "w": 0.09144900753706826,
+     "enter": "none",
+     "at": 0.09777976397722565,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 100.59067405765073
+      },
+      {
+       "t": 2.7850917995945323,
+       "y": 1.1,
+       "rot": 546.2609708500618,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.910863568707204,
+     "y": 0.0,
+     "w": 0.11236138388833618,
+     "enter": "none",
+     "at": 3.279574204466848,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 355.69370095302963
+      },
+      {
+       "t": 3.5505006944534667,
+       "y": 1.1,
+       "rot": 382.317942680933,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.2484160906966137,
+     "y": 0.0,
+     "w": 0.1013422913365364,
+     "enter": "none",
+     "at": 0.6884715719676103,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 73.57441077944029
+      },
+      {
+       "t": 3.1864730371816004,
+       "y": 1.1,
+       "rot": 650.1541689420571,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.8063919745513608,
+     "y": 0.0,
+     "w": 0.11397367131307692,
+     "enter": "none",
+     "at": 2.2854231499435316,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 287.87174814587763
+      },
+      {
+       "t": 2.5932563350954183,
+       "y": 1.1,
+       "rot": 530.2928251024471,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.8687994237965506,
+     "y": 0.0,
+     "w": 0.1291151442049045,
+     "enter": "none",
+     "at": 2.6254916094066045,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 172.09178805384008
+      },
+      {
+       "t": 2.696373890171331,
+       "y": 1.1,
+       "rot": 594.5677155101382,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/note_100t.png",
+     "x": 0.5,
+     "y": 0.36,
+     "w": 0.86,
+     "enter": "zoom",
+     "at": 0.2,
+     "loop": "float",
+     "loop_amp": 0.8
+    },
+    {
+     "type": "text",
+     "text": "ZIMBABWE, 2008",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.11,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.74,
+     "y": 0.72,
+     "h": 0.34,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ],
+      [
+       "serious",
+       3.4
+      ]
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2
+      },
+      {
+       "t": 1.3,
+       "x": 0.74,
+       "walk": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "...and it printed a *one hundred trillion* dollar note.",
+   "transition": "cut",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.15,
+      "focus": [
+       0.5,
+       0.38
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.32,
+      "focus": [
+       0.45,
+       0.36
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_vault.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.5139422897637005,
+     "y": 0.0,
+     "w": 0.1208796374704564,
+     "enter": "none",
+     "at": 2.366700288573255,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 19.43744156056447
+      },
+      {
+       "t": 3.4894863110637475,
+       "y": 1.1,
+       "rot": 589.9847453530364,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.8370618657210288,
+     "y": 0.0,
+     "w": 0.1298936560598283,
+     "enter": "none",
+     "at": 1.3733261741194402,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 143.63237963529826
+      },
+      {
+       "t": 2.6138908030813566,
+       "y": 1.1,
+       "rot": 517.1447828428545,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.10602303945681882,
+     "y": 0.0,
+     "w": 0.09336738079215123,
+     "enter": "none",
+     "at": 0.7306711490615756,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 58.429147597955065
+      },
+      {
+       "t": 2.874059017455578,
+       "y": 1.1,
+       "rot": 226.28780194513348,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.05020995371122097,
+     "y": 0.0,
+     "w": 0.0975632466139714,
+     "enter": "none",
+     "at": 0.3551252880790878,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 130.89957193244555
+      },
+      {
+       "t": 2.5280509753327602,
+       "y": 1.1,
+       "rot": 637.1661886869099,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.6026620890096308,
+     "y": 0.0,
+     "w": 0.09742752426654457,
+     "enter": "none",
+     "at": 0.8829021479497705,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 125.06023657933255
+      },
+      {
+       "t": 2.9005797834811107,
+       "y": 1.1,
+       "rot": 261.4211153810975,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.8140432338361534,
+     "y": 0.0,
+     "w": 0.13965513608523572,
+     "enter": "none",
+     "at": 1.630963107059768,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 174.180476309857
+      },
+      {
+       "t": 2.5944731277117823,
+       "y": 1.1,
+       "rot": 251.09380837408423,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.3583722544187016,
+     "y": 0.0,
+     "w": 0.10323784458585901,
+     "enter": "none",
+     "at": 2.9009938234254617,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 58.117899789515334
+      },
+      {
+       "t": 2.525405293149773,
+       "y": 1.1,
+       "rot": 675.492786437351,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/bill_100t.png",
+     "x": 0.5254316555379123,
+     "y": 0.0,
+     "w": 0.09733012694495453,
+     "enter": "none",
+     "at": 1.9011034905874002,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 9.735296911980669
+      },
+      {
+       "t": 3.080920385032137,
+       "y": 1.1,
+       "rot": 689.2506213594863,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/note_100t.png",
+     "x": 0.5,
+     "y": 0.36,
+     "w": 0.86,
+     "enter": "none",
+     "loop": "float",
+     "loop_amp": 0.8
+    },
+    {
+     "type": "counter",
+     "from": 1,
+     "to": 100000000000000,
+     "count_dur": 1.6,
+     "at": 0.9,
+     "x": 0.5,
+     "y": 0.13,
+     "size": 92,
+     "stroke": "#0b0f12",
+     "stroke_width": 6,
+     "enter": "pop"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.76,
+     "y": 0.74,
+     "h": 0.34,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "surprised",
+       1.0
+      ]
+     ],
+     "hops": [
+      [
+       1.0,
+       0.05,
+       0.45
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "say": "See, money isn't wealth. It's a *ticket* for the stuff we make.",
+   "transition": "slide_left",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.5750000000000001,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.65,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.7250000000000001,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8750000000000001,
+     "y": 0.485,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.54,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.615,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.6900000000000001,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.765,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/apple.png",
+     "x": 0.8400000000000001,
+     "y": 0.507,
+     "w": 0.072,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/stack10.png",
+     "x": 0.36,
+     "y": 0.515,
+     "w": 0.2,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "MONEY = A *TICKET*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "NOT THE *STUFF*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.22,
+     "size": 88,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.9
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.24,
+     "y": 0.68,
+     "h": 0.42,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.8
+      ],
+      [
+       "warm",
+       3.2
+      ]
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.12
+      },
+      {
+       "t": 0.9,
+       "x": 0.24,
+       "walk": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Print more tickets... and each one *buys less*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m2/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 3,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "crossed",
+       1.9
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ]
+  }
+ ]
+}

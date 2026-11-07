@@ -189,7 +189,8 @@ def validate_job(job, style, chars, root=ROOT):
             elif t == "image":
                 if not L.get("svg") and not L.get("path"):
                     errs.append(f"{w}: image needs 'svg' (inline) or 'path'")
-                elif L.get("path") and not os.path.exists(os.path.join(root, L["path"])):
+                elif L.get("path") and not os.path.exists(os.path.join(root, L["path"])) and not (
+                        job.get("assets_script") and "/assets/" in L["path"]):     # rendered later by the assets script
                     errs.append(f"{w}: file {L['path']} not found")
             elif t == "scene3d":
                 for k, o in enumerate(L.get("objects", [])):
