@@ -1,4 +1,4 @@
-"""Simple 3D for The Vast World: low-poly, toon-shaded, drawn in code (no GPU, no outside tools).
+"""Simple 3D for The Explainer: low-poly, toon-shaded, drawn in code (no GPU, no outside tools).
 
 Same rules as the 2D style so both mix in one frame:
   * key light warm from the upper-left, shadows go cool (same shade()/light() maths as the characters)

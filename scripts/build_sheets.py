@@ -57,7 +57,7 @@ def character_sheet():
     c = Image.new("RGBA", (Wc, Hc), PAPER + (255,))
     d = ImageDraw.Draw(c)
     d.text((120, 70), "PROFESSOR VED", font=F(SERIF, 120), fill=INK)
-    label(d, (124, 210), "Character model sheet  ·  Main explainer  ·  The Vast World", 40, SEMI, ACCENT)
+    label(d, (124, 210), "Character model sheet  ·  Main explainer  ·  The Explainer", 40, SEMI, ACCENT)
     label(d, (124, 268), "25, handsome, athletic. Black quiff with a skin fade, crisp full beard + distinct moustache (clean gap under the lip). White shirt, top button open, sleeves folded; black trousers.",
           32, SEMI, MUTED)
 
@@ -177,7 +177,7 @@ def style_guide():
     Wc, Hc = 4000, 2700
     c = Image.new("RGBA", (Wc, Hc), PAPER + (255,))
     d = ImageDraw.Draw(c)
-    d.text((120, 70), "THE VAST WORLD", font=F(SERIF, 120), fill=INK)
+    d.text((120, 70), "THE EXPLAINER", font=F(SERIF, 120), fill=INK)
     label(d, (124, 210), "Look & lighting bible  ·  2D animated imitation of the real world", 40, SEMI, ACCENT)
 
     # 1 lighting
@@ -240,7 +240,7 @@ def style_guide():
 
     # 5 depth / worlds
     card(d, (1760, 1300, 3900, 2160))
-    heading(d, (1810, 1330), "5  The Vast World: sets & depth")
+    heading(d, (1810, 1330), "5  The world: sets & depth")
     sets = [("study", "The Study (home base)"), ("world", "The Open World"), ("cosmos", "The Cosmos")]
     for i, (n, nm) in enumerate(sets):
         im = svg_img(url=os.path.join(ROOT, "assets", "bg", n + ".svg"), width=380).convert("RGB")
@@ -279,7 +279,7 @@ def three_d_guide():
     Wc, Hc = 4000, 2500
     c = Image.new("RGBA", (Wc, Hc), PAPER + (255,))
     d = ImageDraw.Draw(c)
-    d.text((120, 70), "THE VAST WORLD  ·  3D", font=F(SERIF, 120), fill=INK)
+    d.text((120, 70), "THE EXPLAINER  ·  3D", font=F(SERIF, 120), fill=INK)
     label(d, (124, 210), "Simple 3D mixed with the 2D style: faceless people, easy locations, same light", 40, SEMI, ACCENT)
 
     card(d, (100, 300, 2440, 1240))

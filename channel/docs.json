@@ -1,1 +1,16 @@
-{"bible": "", "log": "", "insights": "", "ideas": ""}
+{
+ "mode": "repo+gdocs",
+ "repo": {
+  "bible": "channel/memory/bible.md",
+  "log": "channel/memory/log.md",
+  "insights": "channel/memory/insights.md",
+  "ideas": "channel/memory/ideas.md"
+ },
+ "gdocs": {
+  "bible": "1GXJ7LuJMwy7rO38D3RdHD-R-Z-8S4n4fr_gQ1dkC3e0",
+  "log_insights": "1H0uZjMaNpDCVzumNS8McNBqK1L3F0OCrkOkSgxYrHGg",
+  "bible_url": "https://docs.google.com/document/d/1GXJ7LuJMwy7rO38D3RdHD-R-Z-8S4n4fr_gQ1dkC3e0/edit",
+  "log_insights_url": "https://docs.google.com/document/d/1H0uZjMaNpDCVzumNS8McNBqK1L3F0OCrkOkSgxYrHGg/edit",
+  "connection_id": "02506e53-58fa-866a-8a4c-dae1645084c5"
+ }
+}

@@ -1,4 +1,4 @@
-"""The Vast World - background sets (1080x1920), drawn in the channel's style.
+"""The Explainer - background sets (1080x1920), drawn in the channel's style.
 
 Depth rules (same in every set):
   foreground  : full colour, 4.5px warm-brown outline, hard cel shadow

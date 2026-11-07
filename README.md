@@ -1,5 +1,7 @@
 # shorts-autopilot
 
+Runs the YouTube Shorts channel **The Explainer** (@the_explainer-n3d), hosted by Professor Ved.
+
 Code-made YouTube Shorts. Claude writes a `job.json`, renders it here (2D SVG characters, motion
 graphics, captions, Kokoro AI voice, procedural music and SFX), publishes the file to this repo's
 public `media` branch, and posts it to YouTube through **Zapier**. The channel bible, video log,
@@ -9,7 +11,7 @@ insights and idea backlog live in **Google Docs**.
 channel/style.json     locked look + sound (palette, fonts, captions, voice, music)
 channel/docs.json      links to the 4 Google Docs (bible, log, insights, ideas)
 characters/ved/        Professor Ved: make.py (one base drawing -> every pose) + character.json
-assets/bg/             The Vast World sets: study, world, cosmos (make_backgrounds.py)
+assets/bg/             The Explainer's world: sets: study, world, cosmos (make_backgrounds.py)
 docs/sheets/           character model sheet, look & lighting bible, 3D guide (scripts/build_sheets.py)
 autopilot/three.py     simple 3D layer: low-poly scenes, faceless people, camera moves (no GPU)
 jobs/<id>/job.json     one video (kept as a record)

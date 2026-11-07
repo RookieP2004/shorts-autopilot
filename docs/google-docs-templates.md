@@ -1,4 +1,20 @@
-# Google Docs for the channel
+# Channel memory: repo + Google Docs
+
+The channel's memory lives in the repo (free, always available) and is mirrored to two Google Docs the owner can read and edit:
+
+| repo (working copy) | Google Doc (synced weekly, via Zapier) |
+|---|---|
+| `channel/memory/bible.md` | "The Explainer - Channel Bible": the review reads it each week (owner edits win) and rewrites it when 🔄 sections change |
+| `channel/memory/log.md`, `insights.md` | "The Explainer - Weekly Log & Insights": the review appends one weekly entry |
+| `channel/memory/ideas.md` | repo only |
+
+Doc ids are in `channel/docs.json`. Weekly sync = 2 Zapier calls (read bible, append weekly entry), plus 1 stats call.
+Production runs never touch Google Docs: they append to `log.md` / `ideas.md` in the repo and push.
+`python -m autopilot.gdoc <file.md>` turns a memory file into the simple HTML that Zapier's Google Docs actions accept.
+
+The sections below describe what each memory file contains.
+
+# What goes in each file
 
 Four Google Docs hold everything that isn't code. Setup creates them, and their links go in
 `channel/docs.json` so every run can find them.

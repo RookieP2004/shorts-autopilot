@@ -71,7 +71,7 @@
     "height": 10
   },
   "watermark": {
-    "text": "@thevastworld",
+    "text": "@the_explainer-n3d",
     "size": 34,
     "opacity": 0.55,
     "y": 0.05
@@ -90,7 +90,7 @@
       "#shorts"
     ]
   },
-  "zapier": {"plan_tasks": 100, "tasks_per_call": 2, "reserve_tasks": 4, "window_days": 31, "keep_for_review": 1,
+  "zapier": {"plan_tasks": 100, "tasks_per_call": 2, "reserve_tasks": 4, "window_days": 31, "keep_for_review": 3,
              "cycle_day": null, "bonus_days": 7, "max_per_day": 3,
              "trial_until": "2026-11-20", "trial_tasks": 1000,
              "youtube_connection_id": "029bdbdf-efad-8d4d-99cf-ca39964f214b",

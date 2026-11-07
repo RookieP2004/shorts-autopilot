@@ -25,9 +25,9 @@ from .spec import ROOT, load_style
 LEDGER = os.path.join(ROOT, "channel", "zapier_ledger.json")
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 DEFAULTS = {"plan_tasks": 100, "tasks_per_call": 2, "reserve_tasks": 4, "window_days": 31,
-            "keep_for_review": 1, "cycle_day": None, "bonus_days": 7, "max_per_day": 3,
+            "keep_for_review": 3, "cycle_day": None, "bonus_days": 7, "max_per_day": 3,
             "trial_until": None, "trial_tasks": 1000}
-NEED = {"upload": 1, "stats": 1, "other": 1}
+NEED = {"upload": 1, "stats": 1, "docs": 1, "other": 1}
 
 
 def settings(style=None):
@@ -113,8 +113,9 @@ def status(now=None, path=LEDGER, style=None):
 
 def allowed(kind, st):
     need = NEED.get(kind, 1)
-    if kind == "upload":   # leave room for the weekly review (in cycle mode: only if one is still due)
-        need += st["keep_for_review"] if st["reviews_left"] is None else min(st["keep_for_review"], st["reviews_left"])
+    if kind == "upload":   # leave room for the weekly review's calls (in cycle mode: only if one is still due)
+        review_due = st["reviews_left"] is None or st["reviews_left"] > 0
+        need += st["keep_for_review"] if review_due else 0
     return st["calls_left"] >= need
 
 
@@ -131,13 +132,13 @@ def bonus_today(st):
     owed_today = 0 if st["regular_done"] else 1
     regular = owed_today + (d - 1)
     total_left = st["plan_calls"] - st["calls_used"]
-    spare = total_left - regular - st["reviews_left"]
+    spare = total_left - regular - st["reviews_left"] * st["keep_for_review"]
     extra_per_day = st["max_per_day"] - 1
     if spare <= 0 or d > max(st["bonus_days"], math.ceil(spare / max(1, extra_per_day))):
         return 0
     per_day = math.ceil(spare / d)                   # spread the spare over the days left
     room = st["max_per_day"] - st["today_uploads"] - owed_today    # the daily cap includes the regular Short
-    safe = st["calls_left"] - regular - st["reviews_left"]
+    safe = st["calls_left"] - regular - st["reviews_left"] * st["keep_for_review"]
     return max(0, min(per_day, room, spare, safe if d > 1 else spare))
 
 
