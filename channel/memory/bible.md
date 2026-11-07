@@ -12,9 +12,10 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
 - Promise: "The complicated stuff, made simple, in under a minute."
 - Audience: curious people 16-34, English-speaking worldwide, strong India share.
 - Language: English (Professor Ved speaks with a British voice).
-- Style: fully original and cinematic. Clean 3D shots rendered in Blender (soft studio light, depth of field, gentle camera moves,
-  like Zack D Films) carry the explanation, with bold infographic text and diagrams on top (like The Infographics Show), and
-  Professor Ved as the 2D host. Every idea is turned into a concrete picture or analogy (10 apples and 10 dollars = inflation).
+- Style: fully original, a **mix of 2D and 3D**: Professor Ved and other 2D characters live inside a 3D world (like Rick's Clips:
+  2D cartoon characters in a bright 3D world), standing on the 3D sets, pointing at things and reacting; clean 3D objects with soft
+  light and depth of field (like Zack D Films); bold 2D infographic panels, icons and big text on top (like The Infographics Show).
+  Ved is always 2D. Every idea is turned into a concrete picture or analogy (10 apples and 10 dollars = inflation).
 
 ## 2. Tone 🔒
 - Three words: wise, cool, dry-witted.
@@ -33,10 +34,13 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   two-tone shading; sets keep lines; warm key light from the upper left, cool shadows, teal/amber grade.
 - Layout: visuals and headline y 0.10-0.34, captions y≈0.41, Ved y≈0.68 with h≈0.40, nothing important below y 0.78 or right of x 0.86.
 - Sets: `study.svg` (home), `world.svg` (nature, history outdoors), `cosmos.svg` (space, physics).
-- **Cinematic 3D (main explainer visuals):** Blender shots (`blender` layers, `autopilot/blendkit.py`): dark studio cyclorama,
-  warm key + cool rim light, glossy/clay/metal/paper materials, shallow depth of field, slow dolly/orbit, things popping in,
-  flying and flipping. Real objects stand in for abstract ideas (apples for goods, banknotes for money). 2-4 shots per video,
-  full-screen with Ved as voice-over. Big bold infographic text on top (y 0.10-0.30). Avoid childish clip-art diagrams.
+- **3D world + 2D characters:** Blender shots (`blender` layers, `autopilot/blendkit.py`) are the sets: a studio cyclorama or a
+  bright, colourful little world (street, lab, market, body interior), warm key + cool rim light, glossy/clay/metal/paper materials,
+  shallow depth of field, slow dolly/orbit, things popping in, flying and flipping. Real objects stand in for abstract ideas
+  (apples for goods, banknotes for money). **Ved is composited into most 3D shots** as an on-set host (h 0.30-0.36, on the floor
+  line, soft shadow at his feet, pointing at and reacting to the action). Close-ups can be pure 3D.
+- **2D layer:** flat infographic panels (cream cards, icons, arrows, before/after numbers), bold headlines, counters and the comic
+  beat card, all in the channel palette. Avoid childish clip-art diagrams; every 2D graphic must carry real information.
 - Simple low-poly 3D (`scene3d`) only for quick crowds or maps.
 - References: `docs/sheets/professor_ved_character_sheet.png`, `vast_world_style_guide.png`, `vast_world_3d_guide.png`.
 - **Visual-first: Ved hosts, the pictures explain.** Ved is on screen for the hook, the payoff and the comic beat. The middle of
@@ -92,4 +96,5 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-08 | 1, 3 | style = 2D characters in a 3D world (Rick's Clips) + 2D infographic panels + clean 3D objects | owner request |
 | 2026-11-08 | 1, 2, 3 | niche = complex topics made simple; cinematic Blender 3D + infographic text; even-handed politics/economics; callbacks only when essential | owner request |

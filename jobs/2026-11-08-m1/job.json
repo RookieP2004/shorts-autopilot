@@ -65,8 +65,8 @@
      "text": "WHY NOT JUST *PRINT MORE MONEY?*",
      "font": "display",
      "x": 0.5,
-     "y": 0.17,
-     "size": 118,
+     "y": 0.2,
+     "size": 100,
      "max_w": 0.88,
      "stroke": "#0b0f12",
      "stroke_width": 7,
@@ -149,6 +149,39 @@
      "stroke_width": 7,
      "enter": "slide_up",
      "at": 3.6
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 80'><defs><radialGradient id='g'><stop offset='0' stop-color='#000' stop-opacity='0.55'/><stop offset='1' stop-color='#000' stop-opacity='0'/></radialGradient></defs><ellipse cx='200' cy='40' rx='200' ry='40' fill='url(#g)'/></svg>",
+     "enter": "none",
+     "x": 0.77,
+     "y": 0.794,
+     "w": 0.22319999999999998,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.77,
+     "y": 0.62,
+     "h": 0.36,
+     "enter": "slide_left",
+     "enter_dur": 0.35,
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       0.9
+      ],
+      [
+       "explain",
+       3.4
+      ]
+     ]
     }
    ]
   },
@@ -169,31 +202,51 @@
      "samples": 10
     },
     {
-     "type": "text",
-     "text": "*+$10* PRINTED",
-     "font": "display",
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 330'>\n<rect x='0' y='0' width='900' height='330' rx='34' fill='#f6efe2'/>\n<rect x='0' y='0' width='900' height='330' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/>\n<g transform='translate(70,70)'><rect x='0' y='0' width='120' height='62' rx='8' fill='#cfe3c6' stroke='#265c40' stroke-width='5'/><circle cx='60' cy='31' r='16' fill='none' stroke='#265c40' stroke-width='5'/></g>\n<text x='230' y='120' font-size='60' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MONEY</text>\n<text x='500' y='122' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>$10</text>\n<path d='M615,100 L660,100 L660,86 L685,108 L660,130 L660,116 L615,116 Z' fill='#f2b04a'/>\n<text x='705' y='122' font-size='74' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>$20</text>\n<line x1='60' y1='168' x2='840' y2='168' stroke='#1a1410' stroke-width='3' opacity='0.25'/>\n<g transform='translate(100,205)'><circle cx='30' cy='42' r='38' fill='#c0212a'/><path d='M30,6 C28,-6 34,-14 40,-16' stroke='#4a3220' stroke-width='6' fill='none' stroke-linecap='round'/><ellipse cx='50' cy='-4' rx='18' ry='8' fill='#3f8a3a'/></g>\n<text x='230' y='268' font-size='60' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>APPLES</text>\n<text x='515' y='270' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>10</text>\n<path d='M615,248 L660,248 L660,234 L685,256 L660,278 L660,264 L615,264 Z' fill='#9aa3ab'/>\n<text x='720' y='270' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>10</text>\n</svg>",
+     "w": 0.82,
      "x": 0.5,
-     "y": 0.12,
-     "size": 104,
-     "max_w": 0.88,
-     "stroke": "#0b0f12",
-     "stroke_width": 7,
+     "y": 0.18,
      "enter": "pop",
-     "at": 0.7,
+     "at": 0.5,
      "sfx": "pop"
     },
     {
-     "type": "text",
-     "text": "STILL 10 APPLES",
-     "font": "display",
-     "x": 0.5,
-     "y": 0.21,
-     "size": 84,
-     "max_w": 0.88,
-     "stroke": "#0b0f12",
-     "stroke_width": 7,
-     "enter": "slide_up",
-     "at": 3.6
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 80'><defs><radialGradient id='g'><stop offset='0' stop-color='#000' stop-opacity='0.55'/><stop offset='1' stop-color='#000' stop-opacity='0'/></radialGradient></defs><ellipse cx='200' cy='40' rx='200' ry='40' fill='url(#g)'/></svg>",
+     "enter": "none",
+     "x": 0.8,
+     "y": 0.799,
+     "w": 0.2046,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.8,
+     "y": 0.64,
+     "h": 0.33,
+     "enter": "slide_left",
+     "enter_dur": 0.35,
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "surprised",
+       1.0
+      ],
+      [
+       "think",
+       3.4
+      ],
+      [
+       "point",
+       4.6
+      ]
+     ]
     }
    ]
   },
@@ -232,7 +285,8 @@
      "at": 3.8,
      "sfx": "boom"
     }
-   ]
+   ],
+   "caption_y": 0.66
   },
   {
    "dur": 1.7,
@@ -293,18 +347,52 @@
     },
     {
      "type": "text",
-     "text": "PRICES DOUBLED EVERY *24.7 HOURS*",
+     "text": "PRICES x2 EVERY *24.7 HOURS*",
      "font": "display",
      "x": 0.5,
-     "y": 0.19,
-     "size": 66,
+     "y": 0.175,
+     "size": 58,
      "max_w": 0.88,
      "stroke": "#0b0f12",
      "stroke_width": 7,
      "enter": "slide_up",
      "at": 1.8
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 80'><defs><radialGradient id='g'><stop offset='0' stop-color='#000' stop-opacity='0.55'/><stop offset='1' stop-color='#000' stop-opacity='0'/></radialGradient></defs><ellipse cx='200' cy='40' rx='200' ry='40' fill='url(#g)'/></svg>",
+     "enter": "none",
+     "x": 0.79,
+     "y": 0.804,
+     "w": 0.186,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.79,
+     "y": 0.66,
+     "h": 0.3,
+     "enter": "slide_left",
+     "enter_dur": 0.35,
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "serious",
+       3.2
+      ],
+      [
+       "point",
+       5.2
+      ]
+     ]
     }
-   ]
+   ],
+   "caption_y": 0.27
   },
   {
    "say": "Money isn't wealth. It's a ticket for the stuff we make. Print more tickets, and each one *buys less*.",

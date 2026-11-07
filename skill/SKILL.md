@@ -73,13 +73,18 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   explain how the body works and never tell viewers what to take or do.
 - **Callbacks:** mention an earlier video only when it is genuinely needed to understand this one (a real follow-up on the same
   idea). Check `log.md`; if the link isn't strong, don't mention past videos at all.
-- **Visual-first, cinematic: Ved hosts, the 3D explains.** Ved is on screen for the hook, the payoff and the comic beat (in the hook
-  and payoff he stands in front of a blurred 3D still: a `blender` layer with `dur` 0.034). The middle of every video is 2–4
-  full-screen Blender shots (`blender` layers, section 1 "3D") with Ved as voice-over, and bold infographic text on top (big Anton
-  headlines, `*accent*` words, counters, pop/slide entrances, a sfx on each). Ved full-size for no more than about 40% of the
-  runtime; every explanation step gets its own shot or label; something new moves on screen at least every 2–3 s. Never childish
-  clip-art diagrams, never a talking head explaining something we could show. Inspiration: Zack D Films (clean 3D, soft light,
-  real objects) and The Infographics Show (bold, punchy text and pacing).
+- **The look: 2D characters in a 3D world, plus 2D infographics.** Never all-3D and never all-2D. Inspiration: Rick's Clips
+  (2D cartoon characters acting inside a bright 3D world), Zack D Films (clean 3D objects, soft light, depth of field) and The
+  Infographics Show (bold, punchy text, panels and pacing). Ved is always 2D:
+  - hook and payoff: Ved full-size in front of a blurred 3D still (a `blender` layer with `dur` 0.034) with a big headline;
+  - the middle: 2–4 Blender shots (`blender` layers, section 1 "3D") with **Ved standing inside most of them** as an on-set host
+    (h 0.30–0.36, x ≈ 0.2 or 0.78, feet on the set's floor line, a soft radial-shadow image at his feet with
+    `allow_outside_safe`, scripted `acting` so he points at and reacts to what happens); close-ups can be pure 3D;
+  - 2D on top: at least one flat infographic panel per video (cream card, icons, before/after numbers, arrows, built as inline
+    SVG with plain-ASCII text), bold Anton headlines with `*accent*` words, counters, pop/slide entrances with a sfx each, and the
+    comic beat card.
+  Every explanation step gets its own shot, panel or label; something new moves on screen at least every 2–3 s; move captions
+  (`caption_y`) off any object they would cover. Never childish clip-art diagrams, never a talking head explaining something we could show.
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,
