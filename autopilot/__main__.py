@@ -9,6 +9,7 @@
   python -m autopilot budget [--need upload|stats] [--add upload|stats|other --ref ID] [--bonus] [--sync TASKS]
       (Zapier task budget; --need exits 3 if the call would go over the free-plan cap;
        --bonus prints how many extra Shorts to post today from tasks that would expire at the reset;
+       --spare prints calls free for optional extras (e.g. rewriting the Bible doc) before the reset;
        --sync sets the ledger to the "tasks used" number shown on Zapier's billing page)
 """
 import argparse
@@ -30,7 +31,7 @@ def main(argv=None):
     sub.add_parser("characters")
     b = sub.add_parser("budget"); b.add_argument("--need"); b.add_argument("--add"); b.add_argument("--ref", default="")
     b.add_argument("--n", type=int, default=1)
-    b.add_argument("--bonus", action="store_true"); b.add_argument("--sync", type=int)
+    b.add_argument("--bonus", action="store_true"); b.add_argument("--spare", action="store_true"); b.add_argument("--sync", type=int)
     args = ap.parse_args(argv)
 
     if args.cmd == "validate":
@@ -73,6 +74,8 @@ def main(argv=None):
               f"cap {st['cap_calls']} calls of the {st['plan_tasks']}-task plan; {st['calls_left']} left")
         if args.bonus:
             print(f"BONUS {budget.bonus_today(st)}")
+        if args.spare:
+            print(f"SPARE {budget.spare(st)}")
         if args.need:
             ok = budget.allowed(args.need, st)
             print(("OK: " if ok else "NO BUDGET: ") + args.need)

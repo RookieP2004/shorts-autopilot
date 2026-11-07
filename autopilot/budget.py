@@ -142,6 +142,15 @@ def bonus_today(st):
     return max(0, min(per_day, room, spare, safe if d > 1 else spare))
 
 
+def spare(st):
+    """Calls that can go to optional extras (e.g. rewriting the Bible doc) without costing a regular Short or a
+    weekly review before the reset. 0 when the reset date is unknown (rolling mode): defer extras then."""
+    if not st["cycle_day"] or st["days_left"] is None:
+        return 0
+    regular = (0 if st["regular_done"] else 1) + (st["days_left"] - 1)
+    return max(0, st["calls_left"] - regular - st["reviews_left"] * st["keep_for_review"])
+
+
 def record(kind, ref="", n=1, path=LEDGER):
     entries = load(path)
     ts = _now().isoformat(timespec="seconds")
