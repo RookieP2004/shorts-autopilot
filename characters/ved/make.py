@@ -460,6 +460,7 @@ ARMS = {
     "down": [(L_SH, (142, 576), (146, 776), "relaxed", False), (R_SH, (458, 576), (454, 776), "relaxed", False)],
     "explain": [(L_SH, (132, 592), (84, 462), "open", False), (R_SH, (458, 576), (454, 776), "relaxed", False)],
     "point": [(L_SH, (106, 444), (50, 320), "point", False), (R_SH, (458, 576), (454, 776), "relaxed", False)],
+    "shrug": [(L_SH, (120, 566), (44, 470), "open", False), (R_SH, (480, 566), (556, 470), "open", False)],
     "think": [(L_SH, (196, 604), (266, 352), "chin", True), (R_SH, (458, 576), (454, 776), "relaxed", False)],
     "welcome": [(L_SH, (128, 576), (80, 704), "open", False), (R_SH, (472, 576), (520, 704), "open", False)],
     "both_explain": [(L_SH, (132, 592), (84, 462), "open", False), (R_SH, (468, 592), (516, 462), "open", False)],
@@ -590,6 +591,7 @@ BASES = {
     # reaction faces for comedy beats (job "beats"); never picked by auto acting
     "deadpan": ("crossed", "deadpan", (0, 0)), "side_eye": ("down", "side_eye", (10, 1)),
     "smirk": ("explain", "smirk", (-1, 0)),
+    "shrug": ("shrug", "smirk", (0, 0)),
 }
 MOUTHS = ["m1", "talk", "m3", "oo", "ee"]
 POSES = {}

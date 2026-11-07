@@ -103,6 +103,20 @@ Build each video's world the Rick's Clips way: render **stills** in Blender once
 - Full animated Blender shots (`blender` layers) are expensive (about 7 s per frame); use them only for a moment that really needs
   a moving 3D camera.
 
+## The town: supporting cast and depth staging
+**Townspeople** (`"id": "extra"`): faceless figures in the channel's flat style. Each layer brings its own outfit:
+`"rig_args": {"outfit": {"skin": "#8d5a3b", "hat": ["headscarf", "#d9534f"], "top": ["#f2b04a", "dress"], "bag": "#8a5a3c", ...}}`
+(full list in `characters/extra/make.py`: builds, hair, hats, tops, bottoms, apron, tie, necklace, earrings, belt). Feelings are body
+language: gestures `idle happy cheer sad give take hold shrug point explain wave surprised` via `acting`; they walk and hop like Ved.
+Give the recurring people names and fixed outfits in the job builder, and keep them identical in every shot (continuity).
+
+**Depth staging** (`autopilot/stage.py`): every plate saves its camera (`plate_<set>.json`), so characters are placed by floor
+position in metres and come out the right size: `Stage(...).place(wx, wy, "extra"|"ved")` -> x, y, h; `.walk([(t, wx, wy), ...], base)`
+-> keys that shrink/grow with distance; `.point(x, y, z)` -> where a 3D point is on screen (for props, printers, counters).
+A foreground layer (`still("fg_<set>", only=[counter objects])`) is drawn after the people behind the counter and before the
+people in front, so a seller really stands behind his stall. Order: plate, people behind (far to near), fg, people in front
+(far to near), then props/text. Reference: `jobs/2026-11-08-m3/assets.py` + `build_job.py`.
+
 ## Motion (any layer)
 `"keys": [{"t": 0, "x": 1.18}, {"t": 1.15, "x": 0.62, "walk": true}, ...]`: keyframes in seconds from the layer's `at`.
 Animatable: `x`, `y`, `scale`, `rot` (deg), `opacity`, `sx` (horizontal scale; 1 -> 0 then a second layer 0 -> 1 = a card flip).

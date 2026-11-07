@@ -1,0 +1,6 @@
+{
+  "name": "Townsperson",
+  "description": "Faceless supporting cast in the channel's flat style. Any person, from an outfit given per layer in rig_args.outfit (see make.py). Feelings are body language: happy/cheer lift the head and arms, sad drops head and shoulders.",
+  "default_h": 0.34,
+  "voice": {"voice": "am_michael", "speed": 1.0, "lang": "en-us"}
+}

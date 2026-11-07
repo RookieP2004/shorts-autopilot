@@ -42,6 +42,10 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   shallow depth of field, slow dolly/orbit, things popping in, flying and flipping. Real objects stand in for abstract ideas
   (apples for goods, banknotes for money). **Ved is composited into most 3D shots** as an on-set host (h 0.30-0.36, on the floor
   line, soft shadow at his feet, pointing at and reacting to the action). Close-ups can be pure 3D.
+- **The town:** the world is populated. Faceless townspeople (`extra`, outfits and ornaments show who they are: seller in an apron,
+  banker in a suit and bowler, shoppers in headscarves, straw hats, fezzes) react to the idea with body language (cheer and jump when
+  money arrives, slump and walk away when prices rise). Same people, same outfits through the whole video. Staged in depth with
+  correct perspective; counters and tables sit in front of people behind them.
 - **2D layer:** flat infographic panels (cream cards, icons, arrows, before/after numbers), bold headlines, counters and the comic
   beat card, all in the channel palette. Avoid childish clip-art diagrams; every 2D graphic must carry real information.
 - Simple low-poly 3D (`scene3d`) only for quick crowds or maps.
@@ -99,6 +103,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-08 | 3 | living town: faceless townspeople with outfits, body-language emotions, depth staging (perspective + foreground layers), smoother stall/apples | owner request |
 | 2026-11-08 | 3 | 3D world from stills + cut-outs animated in 2D (smooth, fast); Ved walks/jumps/talks to camera; multi-angle cuts | owner request |
 | 2026-11-08 | 1, 3 | style = 2D characters in a 3D world (Rick's Clips) + 2D infographic panels + clean 3D objects | owner request |
 | 2026-11-08 | 1, 2, 3 | niche = complex topics made simple; cinematic Blender 3D + infographic text; even-handed politics/economics; callbacks only when essential | owner request |

@@ -569,13 +569,41 @@ def printer(loc=(0, 0, 0), scale=1.0, name="printer"):
 ASSET_DIR = os.environ.get("BK_ASSETS", "")
 
 
-def still(name, w=1080, h=1920, samples=32, transparent=False, crop=False, pad=12, frame=1):
-    """Render the current scene once to <assets>/<name>.png. transparent+crop = a prop cut-out (sprite)
-    that the 2D compositor animates. Use reset() before building each new still."""
+def _save_camera(path, w, h):
+    """Camera data next to a plate, so characters can be placed by floor position (autopilot.stage)."""
+    import json
     sc = bpy.context.scene
+    cam = sc.camera
+    if cam is None:
+        return
+    bpy.context.view_layer.update()
+    M = [list(r) for r in cam.matrix_world]
+    json.dump({"matrix_world": M, "lens": cam.data.lens, "sensor": cam.data.sensor_width, "fit": cam.data.sensor_fit,
+               "w": w, "h": h}, open(path, "w"))
+
+
+def still(name, w=1080, h=1920, samples=32, transparent=False, crop=False, pad=12, frame=1, only=None):
+    """Render the current scene once to <assets>/<name>.png. transparent+crop = a prop cut-out (sprite)
+    that the 2D compositor animates. only=[objects] renders just those (transparent, same camera): a foreground
+    layer (counter, table) that sits in front of the 2D characters. Plates also save <name>.json camera data.
+    Use reset() before building each new still."""
+    sc = bpy.context.scene
+    hidden = []
+    if only is not None:
+        keep = set()
+        for o in only:
+            keep.add(o)
+            keep.update(o.children_recursive)
+        for o in sc.objects:
+            if o.type in ("MESH", "FONT", "CURVE", "EMPTY") and o not in keep and not o.hide_render:
+                o.hide_render = True
+                hidden.append(o)
+        transparent = True
     if os.environ.get("BK_SKIP_EXISTING") and os.path.exists(os.path.join(ASSET_DIR or ".", name + ".png")):
         print("kept", name)
         return os.path.join(ASSET_DIR or ".", name + ".png")
+    if os.environ.get("BK_PREVIEW"):                     # quick look: half size, fewer samples
+        w, h, samples = w // 2, h // 2, max(8, samples // 3)
     sc.render.resolution_x, sc.render.resolution_y = w, h
     sc.cycles.samples = samples
     sc.render.film_transparent = transparent
@@ -586,6 +614,10 @@ def still(name, w=1080, h=1920, samples=32, transparent=False, crop=False, pad=1
     os.makedirs(os.path.dirname(out), exist_ok=True)
     sc.render.filepath = out
     bpy.ops.render.render(write_still=True)
+    for o in hidden:
+        o.hide_render = False
+    if not crop:
+        _save_camera(out[:-4] + ".json", w, h)
     if crop and transparent:
         from PIL import Image as _I
         im = _I.open(out)
@@ -603,3 +635,102 @@ def sprite_camera(obj_center=(0, 0, 0.3), dist=3.0, height=1.2, lens=60, azimuth
     cx, cy, cz = obj_center
     loc = (cx + dist * math.sin(a), cy - dist * math.cos(a), cz + height)
     return camera(loc, obj_center, lens=lens, fstop=0)
+
+
+# ------------------------------------------------------------------ nicer materials and props (v3)
+def wood(color="#a8743f", dark="#7a4e2a", name=None, scale=6.0, rough=0.5):
+    """Procedural wood: stretched noise between two browns, light clear coat."""
+    m = bpy.data.materials.new(name or f"wood_{color}")
+    m.use_nodes = True
+    nt = m.node_tree
+    p = nt.nodes.get("Principled BSDF")
+    p.inputs["Roughness"].default_value = rough
+    p.inputs["Coat Weight"].default_value = 0.25
+    tc = nt.nodes.new("ShaderNodeTexCoord")
+    mp = nt.nodes.new("ShaderNodeMapping")
+    mp.inputs["Scale"].default_value = (1.0, scale, scale)
+    nz = nt.nodes.new("ShaderNodeTexNoise")
+    nz.inputs["Scale"].default_value = 3.0
+    nz.inputs["Detail"].default_value = 8.0
+    ramp = nt.nodes.new("ShaderNodeValToRGB")
+    ramp.color_ramp.elements[0].color = (*hexrgb(dark), 1)
+    ramp.color_ramp.elements[1].color = (*hexrgb(color), 1)
+    nt.links.new(tc.outputs["Object"], mp.inputs["Vector"])
+    nt.links.new(mp.outputs["Vector"], nz.inputs["Vector"])
+    nt.links.new(nz.outputs["Fac"], ramp.inputs["Fac"])
+    nt.links.new(ramp.outputs["Color"], p.inputs["Base Color"])
+    return m
+
+
+def apple_mat(red="#b3121b", yellow="#e0a32a", name="apple_v3"):
+    """Red apple skin blushing to yellow, with a soft wax sheen."""
+    m = bpy.data.materials.get(name)
+    if m:
+        return m
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    nt = m.node_tree
+    p = nt.nodes.get("Principled BSDF")
+    p.inputs["Roughness"].default_value = 0.32
+    p.inputs["Coat Weight"].default_value = 0.35
+    p.inputs["Subsurface Weight"].default_value = 0.08
+    nz = nt.nodes.new("ShaderNodeTexNoise")
+    nz.inputs["Scale"].default_value = 1.4
+    nz.inputs["Detail"].default_value = 2.0
+    ramp = nt.nodes.new("ShaderNodeValToRGB")
+    ramp.color_ramp.elements[0].position = 0.55
+    ramp.color_ramp.elements[0].color = (*hexrgb(red), 1)
+    ramp.color_ramp.elements[1].position = 0.95
+    ramp.color_ramp.elements[1].color = (*hexrgb(yellow), 1)
+    nt.links.new(nz.outputs["Fac"], ramp.inputs["Fac"])
+    nt.links.new(ramp.outputs["Color"], p.inputs["Base Color"])
+    return m
+
+
+def lathe(profile, segments=40, loc=(0, 0, 0), material=None, subdiv=1, name="lathe"):
+    """Revolve a profile [(radius, z), ...] (bottom to top) around Z: smooth round objects (apples, vases, bowls)."""
+    import bmesh
+    me = bpy.data.meshes.new(name)
+    bm = bmesh.new()
+    rings = []
+    for r, z in profile:
+        ring = []
+        for k in range(segments):
+            a = 2 * math.pi * k / segments
+            ring.append(bm.verts.new((r * math.cos(a), r * math.sin(a), z)))
+        rings.append(ring)
+    for i in range(len(rings) - 1):
+        for k in range(segments):
+            k2 = (k + 1) % segments
+            bm.faces.new((rings[i][k], rings[i][k2], rings[i + 1][k2], rings[i + 1][k]))
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-5)
+    bm.to_mesh(me)
+    bm.free()
+    o = bpy.data.objects.new(name, me)
+    bpy.context.scene.collection.objects.link(o)
+    o.location = loc
+    for poly in me.polygons:
+        poly.use_smooth = True
+    if subdiv:
+        m = o.modifiers.new("subd", "SUBSURF")
+        m.levels = m.render_levels = subdiv
+    if material is not None:
+        assign(o, material)
+    return o
+
+
+APPLE_PROFILE = [(0.0, 0.04), (0.18, 0.02), (0.42, 0.06), (0.7, 0.2), (0.9, 0.42), (0.95, 0.6), (0.86, 0.8),
+                 (0.66, 0.95), (0.42, 1.0), (0.22, 0.95), (0.08, 0.86), (0.0, 0.84)]
+
+
+def apple2(loc=(0, 0, 0), r=0.08, name="apple", red="#b3121b"):
+    """A smooth, natural apple (lathe profile with a dimpled top), stem and leaf. loc = bottom."""
+    x, y, z = loc
+    prof = [(a * r, b * r * 1.9) for a, b in APPLE_PROFILE]
+    body = lathe(prof, 36, (x, y, z), apple_mat(red, name=f"apple_{red}"), 1, name)
+    stem = cylinder(r * 0.06, r * 0.5, (0, 0, r * 1.9 * 0.95), (8, 0, 0), clay("#4a3220", "stem"), verts=10, bevel=0)
+    stem.parent = body
+    leaf = sphere(r * 0.45, (r * 0.28, 0, r * 1.9 * 0.98), (0.6, 0.24, 0.05), plastic("#4c9a3f", 0.4, "leaf"))
+    leaf.rotation_euler = (0, math.radians(-28), math.radians(25))
+    leaf.parent = body
+    return body

@@ -1,5 +1,6 @@
 """Draw one frame of one scene. Pure function of (scene, t): no hidden state,
 so any frame can be drawn on its own (used for previews and transitions)."""
+import json
 import math
 import os
 
@@ -196,7 +197,7 @@ def rig_image(ctx, L, scene_idx, t, scene, ch, r):
     mouth = ctx.viseme(scene_idx, t) if speaking else None
     blink = ((t + (zlib_seed(L["id"]) % 7) * 0.37) % 3.4) < 0.12
     key = (tuple((tuple(round(v) for v in a[0]), tuple(round(v) for v in a[1]), tuple(round(v) for v in a[2]), a[3], a[4])
-                 for a in arms), expr, look, mouth, blink, lift, moving)
+                 for a in arms), expr, look, mouth, blink, lift, moving, json.dumps(L.get("rig_args", {}), sort_keys=True))
     cache = ctx.__dict__.setdefault("_rigsvg", {})
     svg = cache.get(key)
     if svg is None:
@@ -204,7 +205,7 @@ def rig_image(ctx, L, scene_idx, t, scene, ch, r):
             cache.clear()
         try:
             svg = r.figure(arms=[(a[0], a[1], a[2], a[3], a[4]) for a in arms], expr=expr, blink=blink, look=look,
-                           mouth=mouth, lift=lift, shadow=not moving)
+                           mouth=mouth, lift=lift, shadow=not moving, **L.get("rig_args", {}))
         except TypeError:                                 # older rigs without walking support
             svg = r.figure(arms=[(a[0], a[1], a[2], a[3], a[4]) for a in arms], expr=expr, blink=blink, look=look, mouth=mouth)
         cache[key] = svg
