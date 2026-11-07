@@ -1,6 +1,6 @@
 # job.json reference
 
-One file per video at `jobs/<id>/job.json`. `<id>` = `YYYY-MM-DD-a` (a = first slot, b = second).
+One file per video at `jobs/<id>/job.json`. `<id>` = `YYYY-MM-DD-a` (the daily slot; `-b`, `-c` only if more slots are added on a paid plan; manual runs use `-m1`, `-m2`).
 Render it with `python -m autopilot render`, then publish with `scripts/push_media.sh` + Zapier.
 
 ```jsonc

@@ -37,8 +37,13 @@ python -m autopilot logline  jobs/<id>/job.json --youtube-id <id>   # line for t
 2. **Zapier**: in claude.ai, go to Settings → Connectors → add **Zapier** and sign in. In Zapier, connect your
    YouTube channel's Google account and enable these actions: **YouTube: Upload Video**, plus any YouTube
    "Find Video"/"API Request" action for stats. Set them to run without asking each time, or scheduled runs will stall.
-   Each Zapier action uses 2 tasks, so 3 Shorts/day (about 180–200 tasks a month with stats) needs a paid Zapier plan (the free plan is 100 tasks/month).
-3. **Google Docs**: add the **Google Docs** and **Google Drive** connectors (or enable Zapier's Google Docs
-   actions). Setup creates the 4 docs and writes their links to `channel/docs.json`.
+   The channel is tuned for Zapier's **free plan (100 tasks/month)**. Each successful Zapier call costs 2 tasks, so:
+   1 Short a day (≤31 uploads = 62 tasks) + 1 stats call a week (≤5 = 10 tasks) = **≤72 tasks**, leaving ~28 for
+   retries, the pilot and a few manual videos. `python -m autopilot budget` counts calls in
+   `channel/zapier_ledger.json` over a rolling 31 days and refuses to go past 48 calls (96 tasks).
+   Google Docs go through the claude.ai Google Docs/Drive connectors, never Zapier, so they cost no tasks.
+   On a paid plan, raise `zapier.plan_tasks` in style.json and add slots.
+3. **Google Docs**: add the **Google Docs** and **Google Drive** connectors in claude.ai (not Zapier's Google Docs
+   actions, which would use up the free task budget). Setup creates the 4 docs and writes their links to `channel/docs.json`.
 
 Fonts: Anton, Poppins and Bebas Neue (SIL OFL, fonts/OFL.txt). Voice: Kokoro-82M (Apache-2.0).

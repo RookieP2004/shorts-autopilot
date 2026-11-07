@@ -90,6 +90,7 @@
       "#shorts"
     ]
   },
+  "zapier": {"plan_tasks": 100, "tasks_per_call": 2, "reserve_tasks": 4, "window_days": 31, "keep_for_review": 1},
   "safe_zone": {
     "top": 0.08,
     "bottom": 0.78,

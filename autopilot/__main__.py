@@ -6,6 +6,8 @@
   python -m autopilot zapier   jobs/<id>/job.json   (fields for Zapier's YouTube "Upload Video")
   python -m autopilot logline  jobs/<id>/job.json --youtube-id ID   (row for the Google Docs log)
   python -m autopilot characters
+  python -m autopilot budget [--need upload|stats] [--add upload|stats|other --ref ID]
+      (Zapier task budget; --need exits 3 if the call would go over the free-plan cap)
 """
 import argparse
 import json
@@ -24,6 +26,8 @@ def main(argv=None):
     z = sub.add_parser("zapier"); z.add_argument("job")
     lg = sub.add_parser("logline"); lg.add_argument("job"); lg.add_argument("--youtube-id", default="")
     sub.add_parser("characters")
+    b = sub.add_parser("budget"); b.add_argument("--need"); b.add_argument("--add"); b.add_argument("--ref", default="")
+    b.add_argument("--n", type=int, default=1)
     args = ap.parse_args(argv)
 
     if args.cmd == "validate":
@@ -51,6 +55,19 @@ def main(argv=None):
     elif args.cmd == "characters":
         for cid, c in load_characters().items():
             print(f"{cid}: poses={c['poses']} voice={c['meta'].get('voice')} - {c['meta'].get('description','')}")
+
+    elif args.cmd == "budget":
+        from . import budget
+        if args.add:
+            budget.record(args.add, args.ref, args.n)
+        st = budget.status()
+        print(f"Zapier: {st['calls_used']} calls ({st['tasks_used']} tasks) in the last {st['window_days']} days; "
+              f"cap {st['cap_calls']} calls of the {st['plan_tasks']}-task plan; {st['calls_left']} left")
+        if args.need:
+            ok = budget.allowed(args.need, st)
+            print(("OK: " if ok else "NO BUDGET: ") + args.need)
+            if not ok:
+                sys.exit(3)
 
 
 if __name__ == "__main__":
