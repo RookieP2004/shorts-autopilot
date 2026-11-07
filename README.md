@@ -37,7 +37,7 @@ python -m autopilot logline  jobs/<id>/job.json --youtube-id <id>   # line for t
 2. **Zapier**: in claude.ai, go to Settings → Connectors → add **Zapier** and sign in. In Zapier, connect your
    YouTube channel's Google account and enable these actions: **YouTube: Upload Video**, plus any YouTube
    "Find Video"/"API Request" action for stats. Set them to run without asking each time, or scheduled runs will stall.
-   Each Zapier action uses 2 tasks, so 2 Shorts/day needs a paid Zapier plan (the free plan is 100 tasks/month).
+   Each Zapier action uses 2 tasks, so 3 Shorts/day (about 180–200 tasks a month with stats) needs a paid Zapier plan (the free plan is 100 tasks/month).
 3. **Google Docs**: add the **Google Docs** and **Google Drive** connectors (or enable Zapier's Google Docs
    actions). Setup creates the 4 docs and writes their links to `channel/docs.json`.
 

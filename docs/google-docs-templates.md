@@ -28,7 +28,7 @@ Only the owner changes sections marked 🔒. The weekly review may tune sections
 8. **Titles & descriptions 🔄**: title ≤ 60 chars, at most one emoji, true curiosity. Description = summary + source line.
    5–10 tags, plus `#shorts` and 2 niche hashtags.
 9. **Accuracy 🔒**: every factual claim is checked in the same run, with sources in `meta.sources`. Anything unverified gets dropped.
-10. **Schedule 🔄**: 2 Shorts/day at <slot a> and <slot b> IST. Weekly review on <day>.
+10. **Schedule 🔄**: 3 Shorts/day: slot a 08:40, slot b 13:20, slot c 18:50 IST. Weekly review Sunday 10:20 IST.
 11. **Change log**: date · section · change · evidence.
 
 ---------------------------------------------------------------------------------------------------
