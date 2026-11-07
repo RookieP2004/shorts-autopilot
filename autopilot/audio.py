@@ -291,6 +291,42 @@ def sfx(name, seed=1):
         env = np.sin(np.linspace(0, np.pi, n)) ** (1.5 if name == "whoosh" else 0.6)
         out = out * env
         return (out / (np.abs(out).max() + 1e-9) * 0.6).astype(np.float32)
+    if name == "scratch":
+        # record scratch: a short "recording" (warm chord + crackle) scrubbed forward, back, forward
+        src_n = int(1.2 * SR)
+        ts = np.arange(src_n) / SR
+        src = sum(np.sin(2 * np.pi * f * ts) for f in (196, 247, 294, 392)) * 0.25
+        src = src + np.convolve(rng.standard_normal(src_n), np.ones(6) / 6, mode="same") * 0.35
+        n = int(0.42 * SR)
+        t = np.arange(n) / SR
+        rate = 1.0 - 2.6 * np.sin(np.pi * np.clip(t / 0.22, 0, 1)) + 1.8 * np.clip((t - 0.22) / 0.2, 0, 1)
+        pos = 0.3 * SR + np.cumsum(rate * 3.0)
+        x = np.interp(np.clip(pos, 0, src_n - 1), np.arange(src_n), src)
+        env = np.minimum(1, t / 0.01) * np.exp(-np.maximum(0, t - 0.3) * 18)
+        return (x / (np.abs(x).max() + 1e-9) * env * 0.8).astype(np.float32)
+    if name == "crickets":
+        # awkward-silence crickets: two far-off chirps
+        n = int(1.4 * SR)
+        x = np.zeros(n)
+        for c0, f in ((0.12, 4300), (0.62, 4550)):
+            for k in range(3):
+                a = int((c0 + k * 0.045) * SR)
+                m = int(0.03 * SR)
+                tt = np.arange(m) / SR
+                x[a:a + m] += np.sin(2 * np.pi * f * tt) * np.sin(np.pi * tt / 0.03) ** 2
+        return (x * 0.22).astype(np.float32)
+    if name == "wah":
+        # comic "wah-wah" droop: two falling notes with a wobble
+        out = []
+        for f0, f1, d in ((233, 220, 0.32), (220, 165, 0.75)):
+            n = int(d * SR)
+            t = np.arange(n) / SR
+            f = np.linspace(f0, f1, n) * (1 + 0.025 * np.sin(2 * np.pi * 6 * t) * (t / d))
+            ph = 2 * np.pi * np.cumsum(f) / SR
+            v = np.sin(ph) + 0.5 * np.sin(2 * ph) + 0.25 * np.sin(3 * ph)
+            out.append(v * np.minimum(1, t / 0.02) * np.minimum(1, (d - t) / 0.08))
+        x = np.concatenate(out)
+        return (x / np.abs(x).max() * 0.45).astype(np.float32)
     return np.zeros(1, dtype=np.float32)
 
 

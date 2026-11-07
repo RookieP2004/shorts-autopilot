@@ -12,7 +12,7 @@ import numpy as np
 
 from . import audio
 from .scene import render_frame
-from .spec import ROOT, deep_merge, load_characters, load_style, validate_job, load_json
+from .spec import ROOT, deep_merge, load_characters, load_style, validate_job, load_json, BEATS, scene_beats
 
 
 class Ctx:
@@ -24,6 +24,7 @@ class Ctx:
             next(iter(chars)) if chars else None)
         self.vo, self.env, self.captions, self.vis = [], [], [], []
         self.dur, self.start, self.frames = [], [], []
+        self.beats = []
         self.total = 1.0
 
     def envelope(self, i, t):
@@ -93,6 +94,14 @@ def prepare(ctx, log=print):
             x = np.zeros(0, dtype=np.float32)
         speech = len(x) / audio.SR
         dur = max(s.get("dur", 0), s.get("min_dur", 1.2), lead + speech + s.get("pad", st["scene_pad"]))
+        bl = []
+        for b in scene_beats(s):                      # comedy beats: resolve time, stretch the scene to fit
+            d = {**BEATS[b["kind"]], **b}
+            at = d.get("at", "after_say")
+            d["at"] = lead + speech + 0.15 if at == "after_say" else float(at)
+            bl.append(d)
+        dur = max([dur] + [b["at"] + b["dur"] + 0.3 for b in bl])
+        ctx.beats.append(bl)
         frames = int(round(dur * ctx.fps))
         dur = frames / ctx.fps
         ctx.vo.append(x)
@@ -156,6 +165,9 @@ def mix(ctx):
             name = "whoosh" if tr in ("slide_left", "slide_up", "zoom") else None
         if name and name != "none":
             audio.add(fx, audio.sfx(name, i) * st["sfx"]["volume"], ctx.start[i] + s.get("sfx_at", 0))
+        for b in ctx.beats[i]:
+            if b.get("sfx", "none") != "none":
+                audio.add(fx, audio.sfx(b["sfx"], i) * st["sfx"]["volume"] * b.get("sfx_gain", 1.0), ctx.start[i] + b["at"])
         for L in s.get("layers", []):
             if L.get("sfx") and L["sfx"] != "none":
                 audio.add(fx, audio.sfx(L["sfx"], i) * st["sfx"]["volume"], ctx.start[i] + L.get("at", 0))
@@ -166,7 +178,18 @@ def mix(ctx):
     if m.get("enabled", True):
         mus = audio.music(ctx.total, m)[:n]
         mus = np.pad(mus, (0, n - len(mus)))
-        out = out + mus * m.get("volume", 0.16) * audio.duck_curve(vo, m.get("duck", 0.4))
+        gain = np.ones(n, dtype=np.float32)            # beats with music "cut": a sudden, comic silence
+        r = int(0.05 * audio.SR)
+        for i, bl in enumerate(ctx.beats):
+            for b in bl:
+                if b.get("music") == "cut":
+                    a = int((ctx.start[i] + b["at"]) * audio.SR)
+                    e = int((ctx.start[i] + b["at"] + b["dur"]) * audio.SR)
+                    a0, e1 = max(0, a - r), min(n, e + 4 * r)
+                    gain[a0:a] = np.minimum(gain[a0:a], np.linspace(1, 0, a - a0))
+                    gain[a:e] = 0
+                    gain[e:e1] = np.minimum(gain[e:e1], np.linspace(0, 1, e1 - e))
+        out = out + mus * gain * m.get("volume", 0.16) * audio.duck_curve(vo, m.get("duck", 0.4))
     return out
 
 

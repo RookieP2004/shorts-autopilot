@@ -95,6 +95,30 @@ Units are metres; y is up; a person is 1.75 tall. Light comes from the upper-lef
 
 Colours anywhere: a palette name from style.json (`primary`, `accent`, `accent2`, `danger`, `ink`, `bg1`, `bg2`) or `#hex`.
 
+## Beats (the comedy moment)
+One short, unexpected funny beat per video, tied to a trend that is current this week. Put it on the scene where it lands:
+
+```json
+"beat": {"kind": "deadpan", "at": "after_say", "text": "the air when blue light shows up:", "sfx": "none"}
+```
+
+| kind | what happens | default dur / sfx / music |
+|---|---|---|
+| `deadpan` | Ved crosses his arms and stares flat at camera; camera pushes in on his face | 1.3 s, none, music cuts |
+| `side_eye` | Ved slides his eyes sideways, half-lidded; push-in | 1.1 s, none, music cuts |
+| `smirk` | one brow up, half smile; small push-in | 0.9 s, none, music keeps |
+| `freeze` | freeze-frame, colour drains (the "you're probably wondering how I got here" move) | 1.4 s, `scratch`, music cuts |
+| `zoom_punch` | hard snap zoom on the face or `focus` | 0.5 s, `boom`, music keeps |
+| `silence` | awkward pause, nothing moves | 1.4 s, `crickets`, music cuts |
+
+- `at`: `"after_say"` (default, right after this scene's line; the scene stretches to fit) or seconds into the scene.
+  Never put a beat over speech.
+- `text`: optional meme-caption card (cream card, ink text, tilted −3°), ≤ 60 characters, `*word*` for the accent colour.
+  Position with `text_y` (default 0.24), `text_x`, `tilt`.
+- `sfx`: override (`scratch`, `crickets`, `wah`, `boom`, `ding`, `pop`, `none`). `music`: `"cut"` or `"keep"`.
+  `zoom`, `focus` [x, y], `who` (character id) and `dur` override the defaults.
+- `"beats": [...]` takes a list, but one beat per video is the rule (two only in a video over 40 s).
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

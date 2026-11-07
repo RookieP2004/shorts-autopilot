@@ -164,7 +164,8 @@ def mirror(d):
 FACE = ("M300,64 C341,64 369,88 370,126 C372,152 368,176 360,196 L351,214 C340,232 322,244 300,246 "
         "C278,244 260,232 249,214 L240,196 C232,176 228,152 230,126 C231,88 259,64 300,64 Z")
 BROWS = {"neutral": (0, 0), "warm": (-2, 1), "smile": (-2, 1), "talk": (-2, 0), "talk2": (-1, 0),
-         "think": (5, 0), "surprised": (-10, -7), "serious": (6, -1), "laugh": (-3, 2)}
+         "think": (5, 0), "surprised": (-10, -7), "serious": (6, -1), "laugh": (-3, 2),
+         "deadpan": (4, 4), "side_eye": (3, 1), "smirk": (-1, 1)}
 
 
 def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
@@ -195,6 +196,8 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
     rb = mirror(lb)
     if expr == "think":
         s.add(f'<g transform="translate(0,-8) rotate(-5 330 115)"><path d="{rb}" fill="{BROW}"/></g>')
+    elif expr == "smirk":                                   # one brow up: "oh really?"
+        s.add(f'<g transform="translate(0,-7) rotate(-4 330 115)"><path d="{rb}" fill="{BROW}"/></g>')
     else:
         s.add(f'<path d="{rb}" fill="{BROW}"/>')
     # brow ridge / eye socket shading
@@ -203,7 +206,8 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
 
     # eyes: almond, slightly narrowed (confident), dark upper lid
     lx, ly = look
-    open_ = {"surprised": 9, "smile": 4.5, "warm": 5.5, "laugh": 0, "think": 6, "serious": 5.5}.get(expr, 6.5)
+    open_ = {"surprised": 9, "smile": 4.5, "warm": 5.5, "laugh": 0, "think": 6, "serious": 5.5,
+             "deadpan": 3.2, "side_eye": 4.2, "smirk": 5}.get(expr, 6.5)
     for side in (-1, 1):
         cx = 300 + side * 31
         if blink or expr == "laugh" or open_ == 0:
@@ -277,9 +281,13 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
         half = {"oo": 7, "m1": 9, "ee": 12, "m3": 11}.get(expr_m, 10)
         s.add(f'<path d="M{300-half},{bottom+1} Q300,{bottom+7} {300+half},{bottom+1} Q300,{bottom+4} {300-half},{bottom+1} Z" fill="{LIPS}"/>')
     else:
-        curve = {"smile": 7, "warm": 5, "serious": 1, "think": 2}.get(expr, 3)
-        s.add(f'<path d="M286,224 Q300,{224+curve} 314,224" fill="none" stroke="#5a2c22" stroke-width="2.6" stroke-linecap="round"/>')
-        s.add(f'<path d="M289,227 Q300,{236+curve*0.4:.1f} 311,227 Q300,{231+curve*0.3:.1f} 289,227 Z" fill="{LIPS}"/>')
+        if expr == "smirk":                                 # one corner pulled up
+            s.add('<path d="M286,227 Q301,229 317,216" fill="none" stroke="#5a2c22" stroke-width="2.6" stroke-linecap="round"/>')
+            s.add(f'<path d="M290,230 Q303,237 313,224 Q303,233 290,230 Z" fill="{LIPS}"/>')
+        else:
+            curve = {"smile": 7, "warm": 5, "serious": 1, "think": 2, "deadpan": 0, "side_eye": -1}.get(expr, 3)
+            s.add(f'<path d="M286,224 Q300,{224+curve} 314,224" fill="none" stroke="#5a2c22" stroke-width="2.6" stroke-linecap="round"/>')
+            s.add(f'<path d="M289,227 Q300,{236+curve*0.4:.1f} 311,227 Q300,{231+curve*0.3:.1f} 289,227 Z" fill="{LIPS}"/>')
     s.add(f'<path d="M292,241 Q300,244 308,241" fill="none" stroke="{SKIN_SH}" stroke-width="2" opacity="0.8"/>')  # chin dimple
 
     # hair: swept-up quiff, black, with a skin fade on the sides
@@ -557,6 +565,9 @@ BASES = {
     "explain": ("explain", "warm", (0, 0)), "point": ("point", "neutral", (-3, -2)), "think": ("think", "think", (3, -3)),
     "welcome": ("welcome", "smile", (0, 0)), "surprised": ("both_explain", "surprised", (0, 0)),
     "crossed": ("crossed", "serious", (0, 0)),
+    # reaction faces for comedy beats (job "beats"); never picked by auto acting
+    "deadpan": ("crossed", "deadpan", (0, 0)), "side_eye": ("down", "side_eye", (10, 1)),
+    "smirk": ("explain", "smirk", (-1, 0)),
 }
 MOUTHS = ["m1", "talk", "m3", "oo", "ee"]
 POSES = {}
@@ -568,7 +579,8 @@ for _n, (_p, _e, _l) in BASES.items():
 POSES["talk"] = POSES["idle_talk"]      # legacy names used by older jobs
 POSES["blink"] = POSES["idle_blink"]
 
-EXPRESSIONS = ["neutral", "warm", "smile", "talk", "think", "surprised", "serious", "laugh"]
+EXPRESSIONS = ["neutral", "warm", "smile", "talk", "think", "surprised", "serious", "laugh",
+               "deadpan", "side_eye", "smirk"]
 
 if __name__ == "__main__":
     for f in os.listdir(D):

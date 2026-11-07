@@ -86,6 +86,14 @@ def track(ctx, scene_idx, L, r):
             nxt = rng.choices(choices, weights=w)[0]
             tr.append((best, nxt))
             last, cur = best, nxt
+    for b in getattr(ctx, "beats", [])[scene_idx] if scene_idx < len(getattr(ctx, "beats", [])) else []:
+        if b["kind"] not in r.BASES or (b.get("who") and b["who"] != L.get("id")):
+            continue
+        a, e = b["at"], b["at"] + b["dur"]
+        before = [g for ts, g in tr if ts <= a][-1]
+        tr = [(ts, g) for ts, g in tr if ts == 0 or not (a - 0.6 < ts < e + 0.6)]
+        tr += [(a, b["kind"]), (e, before)]
+        tr.sort(key=lambda x: x[0])
     cache[key] = tr
     return tr
 

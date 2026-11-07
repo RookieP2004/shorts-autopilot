@@ -42,7 +42,25 @@ LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d"}
 SHAPES3D = {"box", "sphere", "cylinder", "cone", "plane", "terrain", "person", "tree", "building"}
 SHAPES = {"circle", "ring", "rect", "arrow", "line", "burst"}
 TRANSITIONS = {"cut", "fade", "slide_left", "slide_up", "zoom", "flash"}
-SFX = {"pop", "whoosh", "ding", "click", "boom", "riser", "none"}
+SFX = {"pop", "whoosh", "ding", "click", "boom", "riser", "scratch", "crickets", "wah", "none"}
+# comedy beats: a short, unexpected moment (see docs/job-spec.md "Beats"). Defaults per kind.
+BEATS = {
+    "deadpan":    {"dur": 1.3, "sfx": "none",     "music": "cut",  "zoom": 1.55},   # flat stare at camera, arms cross
+    "side_eye":   {"dur": 1.1, "sfx": "none",     "music": "cut",  "zoom": 1.55},   # slow side glance
+    "smirk":      {"dur": 0.9, "sfx": "none",     "music": "keep", "zoom": 1.3},   # one brow up, half smile
+    "freeze":     {"dur": 1.4, "sfx": "scratch",  "music": "cut",  "zoom": 1.05},   # freeze-frame, colour drains
+    "zoom_punch": {"dur": 0.5, "sfx": "boom",     "music": "keep", "zoom": 1.28},   # hard snap zoom
+    "silence":    {"dur": 1.4, "sfx": "crickets", "music": "cut",  "zoom": 1.0},    # awkward pause
+}
+FACE_BEATS = {"deadpan", "side_eye", "smirk"}
+
+
+def scene_beats(s):
+    out = list(s.get("beats", []))
+    if s.get("beat"):
+        out.insert(0, s["beat"])
+    return out
+
 
 
 def deep_merge(base, over):
@@ -131,6 +149,16 @@ def validate_job(job, style, chars, root=ROOT):
             errs.append(f"{where}: transition '{tr}' not in {sorted(TRANSITIONS)}")
         if s.get("sfx") and s["sfx"] not in SFX:
             errs.append(f"{where}: sfx '{s['sfx']}' not in {sorted(SFX)}")
+        for b in scene_beats(s):
+            if b.get("kind") not in BEATS:
+                errs.append(f"{where}: beat kind '{b.get('kind')}' not in {sorted(BEATS)}")
+            if b.get("sfx") and b["sfx"] not in SFX:
+                errs.append(f"{where}: beat sfx '{b['sfx']}' not in {sorted(SFX)}")
+            at = b.get("at", "after_say")
+            if at != "after_say" and not isinstance(at, (int, float)):
+                errs.append(f"{where}: beat 'at' must be seconds or \"after_say\"")
+            if len(b.get("text", "")) > 60:
+                errs.append(f"{where}: beat text over 60 characters - keep it punchy")
         for j, L in enumerate(s.get("layers", [])):
             w = f"{where} layer {j}"
             t = L.get("type")

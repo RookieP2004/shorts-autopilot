@@ -3,7 +3,7 @@ so any frame can be drawn on its own (used for previews and transitions)."""
 import math
 import os
 
-from PIL import Image
+from PIL import Image, ImageEnhance
 
 from . import sprites
 from .spec import color, hex_rgba
@@ -258,6 +258,8 @@ def draw_scene(ctx, scene_idx, t):
     """The scene's picture without captions/overlays (camera applied)."""
     scene = ctx.job["scenes"][scene_idx]
     W, H = ctx.W, ctx.H
+    fb, _ = active_beat(ctx, scene_idx, t, ("freeze",))
+    t_real, t = t, (fb["at"] if fb else t)                # a freeze beat holds the picture still
     canvas = sprites.background(ctx.style, scene.get("bg"), W, H).copy()
     for L in scene.get("layers", []):
         stt = anim_state(L, t, W, H)
@@ -270,26 +272,77 @@ def draw_scene(ctx, scene_idx, t):
         cx = L.get("x", 0.5) * W + dx
         cy = L.get("y", 0.5) * H + dy
         paste(canvas, img, cx, cy, sc * L.get("scale", 1.0), rot, alpha, L.get("flip", False))
-    cam = scene.get("camera")
-    if cam:
-        dur = ctx.dur[scene_idx]
-        z0, z1 = cam.get("zoom", [1.0, 1.0])
-        z = z0 + (z1 - z0) * ease_in_out(clamp(t / max(dur, 0.01)))
-        for pt in cam.get("punch", []):  # quick zoom hits at given times
-            if 0 <= t - pt < 0.35:
-                z *= 1 + 0.07 * math.sin((t - pt) / 0.35 * math.pi)
-        ox = oy = 0.0
-        sh = cam.get("shake")
-        if sh and sh[0] <= t < sh[0] + sh[1]:
-            ox = math.sin(t * 73) * 14
-            oy = math.cos(t * 59) * 14
+    t = t_real
+    cam = scene.get("camera") or {}
+    dur = ctx.dur[scene_idx]
+    z0, z1 = cam.get("zoom", [1.0, 1.0])
+    z = z0 + (z1 - z0) * ease_in_out(clamp(t / max(dur, 0.01)))
+    for pt in cam.get("punch", []):  # quick zoom hits at given times
+        if 0 <= t - pt < 0.35:
+            z *= 1 + 0.07 * math.sin((t - pt) / 0.35 * math.pi)
+    ox = oy = 0.0
+    sh = cam.get("shake")
+    if sh and sh[0] <= t < sh[0] + sh[1]:
+        ox = math.sin(t * 73) * 14
+        oy = math.cos(t * 59) * 14
+    fx, fy = cam.get("focus", [0.5, 0.5])
+    b, bt = active_beat(ctx, scene_idx, t)
+    if b and b.get("zoom", 1.0) > 1.0:                  # beat camera: push in on the face, or snap zoom
+        if b["kind"] == "zoom_punch":
+            k = clamp(bt / 0.05) * clamp((b["dur"] - bt) / 0.15)
+        else:
+            k = ease_in_out(clamp(bt / 0.18)) * ease_in_out(clamp((b["dur"] - bt) / 0.22))
+        z *= 1 + (b["zoom"] - 1) * k
+        bfx, bfy = b.get("focus") or face_focus(ctx, scene, b)
+        fx, fy = fx + (bfx - fx) * k, fy + (bfy - fy) * k
+    if True:
         if z > 1.001 or ox or oy:
             cw, chh = W / z, H / z
-            fx, fy = cam.get("focus", [0.5, 0.5])
             x0 = clamp(fx * W - cw / 2 + ox, 0, W - cw)
             y0 = clamp(fy * H - chh / 2 + oy, 0, H - chh)
             canvas = canvas.crop((int(x0), int(y0), int(x0 + cw), int(y0 + chh))).resize((W, H), Image.BILINEAR)
-    return apply_grade(ctx.style, canvas)
+    out = apply_grade(ctx.style, canvas)
+    if fb:                                              # freeze-frame: colour drains out, slightly darker
+        k = clamp((t_real - fb["at"]) / 0.12)
+        grey = ImageEnhance.Brightness(ImageEnhance.Color(out).enhance(0.25)).enhance(0.9)
+        out = Image.blend(out, grey, k)
+    return out
+
+
+def active_beat(ctx, scene_idx, t, kinds=None):
+    beats = ctx.beats[scene_idx] if scene_idx < len(getattr(ctx, "beats", [])) else []
+    for b in beats:
+        if b["at"] <= t < b["at"] + b["dur"] and (kinds is None or b["kind"] in kinds):
+            return b, t - b["at"]
+    return None, 0.0
+
+
+def face_focus(ctx, scene, b):
+    """Where a beat's camera should push in: the face of the reacting character (or the first one)."""
+    for L in scene.get("layers", []):
+        if L.get("type") == "character" and (not b.get("who") or b["who"] == L.get("id")):
+            ch = ctx.chars.get(L.get("id"), {})
+            h = L.get("h", ch.get("meta", {}).get("default_h", 0.42))
+            return L.get("x", 0.5), L.get("y", 0.5) - h / 2 + h * 0.12
+    return 0.5, 0.45
+
+
+def draw_sticker(ctx, canvas, b, bt):
+    """A meme-style caption card for a beat: cream card, ink text, slight tilt, pops in."""
+    st = ctx.style
+    W, H = ctx.W, ctx.H
+    txt = sprites.text_image(st, b["text"], size=b.get("text_size", 58), font_name="body", fill="ink",
+                             highlight="accent", shadow=False, max_w=0.66, uppercase=False)
+    pad = 28
+    card = Image.new("RGBA", (txt.width + pad * 2, txt.height + pad * 2), (0, 0, 0, 0))
+    from PIL import ImageDraw
+    ImageDraw.Draw(card).rounded_rectangle((0, 0, card.width - 1, card.height - 1), radius=22,
+                                           fill=hex_rgba(color(st, "primary")))
+    card.alpha_composite(txt, (pad, pad))
+    p = clamp(bt / 0.16)
+    out_k = clamp((b["dur"] - bt) / 0.12)
+    paste(canvas, card, b.get("text_x", 0.5) * W, b.get("text_y", 0.24) * H,
+          (0.6 + 0.4 * ease_out_back(p)) * (0.85 + 0.15 * out_k), b.get("tilt", -3), out_k)
 
 
 def draw_overlays(ctx, canvas, scene_idx, t):
@@ -312,6 +365,9 @@ def draw_overlays(ctx, canvas, scene_idx, t):
                 y = scene.get("caption_y", cap["y"]) * H
                 paste(canvas, img, W / 2, y, 0.86 + 0.14 * ease_out_back(p), 0, 1.0)
                 break
+    b, bt = active_beat(ctx, scene_idx, t)
+    if b and b.get("text"):
+        draw_sticker(ctx, canvas, b, bt)
     wm = st.get("watermark", {})
     if wm.get("text"):
         img = sprites.text_image(st, wm["text"], size=wm.get("size", 34), font_name="light",

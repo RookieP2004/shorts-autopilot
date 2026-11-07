@@ -87,13 +87,15 @@ def character_sheet():
     card(d, (1980, 340, 3900, 1290))
     heading(d, (2030, 370), "Expressions")
     names = [("neutral", "Neutral"), ("warm", "Warm"), ("smile", "Smile"), ("talk", "Explaining"),
-             ("think", "Sceptical / thinking"), ("surprised", "Amazed"), ("serious", "Serious"), ("laugh", "Laugh")]
+             ("think", "Sceptical"), ("surprised", "Amazed"), ("serious", "Serious"), ("laugh", "Laugh"),
+             ("deadpan", "Deadpan (beat)"), ("side_eye", "Side-eye (beat)"), ("smirk", "Smirk (beat)")]
     for i, (e, nm) in enumerate(names):
-        im = svg_img(ved.head_only(e), width=400)
-        x = 2040 + (i % 4) * 465
-        y = 470 + (i // 4) * 400
-        paste(c, im.resize((290, 346)), (x + 60, y))
-        label(d, (x + 205, y + 352), nm, 26, SEMI, INK, "ma")
+        look = ved.BASES[e][2] if e in ved.BASES else (0, 0)
+        im = svg_img(ved.head_only(e, look=look), width=400)
+        x = 2010 + (i % 6) * 315
+        y = 450 + (i // 6) * 410
+        paste(c, im.resize((246, 294)), (x + 34, y))
+        label(d, (x + 157, y + 300), nm, 24, SEMI, INK, "ma")
 
     # poses
     card(d, (1980, 1330, 3900, 2500))

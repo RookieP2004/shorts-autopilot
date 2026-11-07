@@ -42,7 +42,11 @@ python -m autopilot logline  jobs/<id>/job.json --youtube-id <id>   # line for t
    retries, the pilot and a few manual videos. `python -m autopilot budget` counts calls in
    `channel/zapier_ledger.json` over a rolling 31 days and refuses to go past 48 calls (96 tasks).
    Google Docs go through the claude.ai Google Docs/Drive connectors, never Zapier, so they cost no tasks.
-   On a paid plan, raise `zapier.plan_tasks` in style.json and add slots.
+   **No wasted tasks:** set `zapier.cycle_day` in style.json to the day of the month your Zapier usage resets
+   (Zapier → Settings → Billing). Then `budget --bonus` works out the spare tasks before the reset, and the
+   bonus slots (12:50 and 15:50 IST) post up to 2 extra Shorts a day in the last week or so, landing on exactly 100.
+   If you use Zapier for anything else, run `budget --sync <tasks used on Zapier's billing page>` to keep the ledger honest.
+   On a paid plan, raise `zapier.plan_tasks` in style.json.
 3. **Google Docs**: add the **Google Docs** and **Google Drive** connectors in claude.ai (not Zapier's Google Docs
    actions, which would use up the free task budget). Setup creates the 4 docs and writes their links to `channel/docs.json`.
 

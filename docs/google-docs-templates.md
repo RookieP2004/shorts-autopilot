@@ -29,6 +29,9 @@ Only the owner changes sections marked 🔒. The weekly review may tune sections
    5–10 tags, plus `#shorts` and 2 niche hashtags.
 9. **Accuracy 🔒**: every factual claim is checked in the same run, with sources in `meta.sources`. Anything unverified gets dropped.
 10. **Schedule 🔄**: 1 Short/day (Zapier free plan, 100 tasks/month): slot a 18:50 IST. Weekly review Sunday 10:20 IST (one stats call).
+    Bonus slots b 12:50 and c 15:50 IST post only near the end of the Zapier billing cycle, to spend tasks that would expire.
+11. **Humour 🔄**: one trend-based comic beat per video (see job-spec "Beats"). Dry, quick, on-topic. Banned: dead memes,
+    punching down, politics, tragedy, real people's photos, copyrighted audio or images. Running list of what landed / flopped.
 11. **Change log**: date · section · change · evidence.
 
 ---------------------------------------------------------------------------------------------------
