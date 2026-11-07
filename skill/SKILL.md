@@ -77,9 +77,10 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   (2D cartoon characters acting inside a bright 3D world), Zack D Films (clean 3D objects, soft light, depth of field) and The
   Infographics Show (bold, punchy text, panels and pacing). Ved is always 2D:
   - hook and payoff: Ved full-size in front of a blurred 3D still (a `blender` layer with `dur` 0.034) with a big headline;
-  - the middle: 2–4 Blender shots (`blender` layers, section 1 "3D") with **Ved standing inside most of them** as an on-set host
-    (h 0.30–0.36, x ≈ 0.2 or 0.78, feet on the set's floor line, a soft radial-shadow image at his feet with
-    `allow_outside_safe`, scripted `acting` so he points at and reacts to what happens); close-ups can be pure 3D;
+  - the middle: Ved **lives inside the 3D world**, he is never just pasted over it. He walks in from the side (`keys` with
+    `"walk": true`), talks to camera in close-ups ("Hey, ever wondered why..."), jumps when something surprising happens
+    (`hops`), points at and reacts to props (`acting`), stands on the set's floor line with his moving shadow. Cut between
+    wide / medium / close-up angles every 3–5 s (8–14 cuts in a 40–50 s video), with gentle camera pushes (`camera.keys`);
   - 2D on top: at least one flat infographic panel per video (cream card, icons, before/after numbers, arrows, built as inline
     SVG with plain-ASCII text), bold Anton headlines with `*accent*` words, counters, pop/slide entrances with a sfx each, and the
     comic beat card.
@@ -102,14 +103,16 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   (space, physics) when the topic travels; use plain gradient backgrounds for diagram scenes. New sets are written into
   `assets/bg/make_backgrounds.py` and follow its depth rules: foreground 4.5 px line, midground 2 px at 60%, background no line
   and bluer with distance. Warm key light from the left, cool shadows.
-- **3D (Blender)**: each shot is a script in `jobs/<id>/shots/` using `autopilot/blendkit.py` (see `docs/job-spec.md`
-  "type: blender" and the shots in `jobs/2026-11-08-m1/shots/` as examples). House look: dark studio cyclorama (`floor`), warm key +
-  cool rim (`studio`), glossy/clay/metal/paper/organic materials, shallow depth of field, slow dolly or orbit, objects popping in,
-  flying, flipping. Real objects stand in for abstract ideas; build new props from primitives and add reusable ones to blendkit;
-  textures (labels, notes, screens) are drawn with PIL in `assets/tex/make_textures.py`, always fictional designs. Vertical frames
-  are narrow: keep wide objects small and centred, and preview start/middle/end frames (`BK_FRAMES=...`) before rendering.
-  Budget: 15 fps at `res` 0.4, about 7 s per frame, so keep 3D to roughly 20–30 s per video (35–55 min of rendering).
-  The old low-poly `scene3d` layer is only for quick crowds or maps.
+- **3D (Blender), the cheap way**: build the world from **stills**, then animate in 2D at 30 fps (smooth, minutes to render).
+  The job's `assets_script` (`jobs/<id>/assets.py`, see `docs/job-spec.md` "The 3D world, cheaply" and
+  `jobs/2026-11-08-m2/assets.py` + `build_job.py` as the reference) renders 2–3 sets, each from 2–3 camera angles (wide / medium /
+  close-up plates, 1080x1920), plus every prop as a transparent cut-out (`still(..., transparent=True, crop=True)`). Props then
+  drop, bounce, fly, spin and flip as `image` layers with `keys`. Sets are bright, colourful little worlds (market, lab, street,
+  body interior, bank) or a moody studio when the topic needs drama; warm sun/key light, soft shadows. Real objects stand in for
+  abstract ideas; reuse and extend the props in blendkit; textures are drawn with PIL in `assets/tex/make_textures.py`, always
+  fictional designs. Open every plate and cut-out with Read before using it, and re-render only what's wrong (`BK_SKIP_EXISTING=1`
+  after deleting those files). Budget: about 6–10 min of Blender per video. Animated `blender` shots (about 7 s per frame) only for
+  a moment that truly needs a moving 3D camera; the low-poly `scene3d` layer only for quick crowds or maps.
 - **Look references**: `docs/sheets/professor_ved_character_sheet.png`, `vast_world_style_guide.png` and `vast_world_3d_guide.png`.
   Check new props and sets against them, and rebuild them with `scripts/build_sheets.py` whenever the cast changes.
 - **Formats**: each video uses exactly one format from the Bible (big-question, myth-bust, scale-shock), starting from its skeleton
@@ -175,8 +178,8 @@ nothing overlaps, characters are on-model, frame 0 shows the hook, Ved isn't on 
 the last 3 videos. Also render a still in the middle of the beat (`frames --at <scene start + beat at + 0.4>`) and check the caption
 card is readable and Ved's reaction face reads clearly. Fix and repeat.
 
-**g. Render.** Run `nohup python -m autopilot render jobs/<id>/job.json > /tmp/render.log 2>&1 &` (Blender shots take 35–55 min,
-longer than one tool call) and poll the log and `out/shots/` every few minutes until it prints `done`. Check `out/render.json`: the
+**g. Render.** Run `python -m autopilot render jobs/<id>/job.json` (assets are cached, so this is 2–3 min; if the job has animated
+`blender` shots, run it with `nohup ... > /tmp/render.log 2>&1 &` and poll until it prints `done`). Check `out/render.json`: the
 length must be ≤ 58 s. Then pull 3–4 frames from `out/final.mp4` with ffmpeg and look at them.
 
 **h. Publish.**
