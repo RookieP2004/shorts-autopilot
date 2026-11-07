@@ -184,6 +184,34 @@ def zlib_seed(s):
     return zlib.crc32(s.encode())
 
 
+_SHOT_CACHE = {}
+
+
+def blender_frame(ctx, L, t):
+    """The rendered 3D frame for scene time t, scaled to the layer's size."""
+    d = L.get("_frames_dir")
+    if not d or not os.path.isdir(d):
+        return None
+    files = _SHOT_CACHE.get(d)
+    if files is None:
+        files = sorted(f for f in os.listdir(d) if f.endswith(".png"))
+        _SHOT_CACHE[d] = files
+    if not files:
+        return None
+    k = int((t - L.get("at", 0.0)) * L.get("_fps", ctx.fps))
+    k = max(0, min(len(files) - 1, k))
+    key = (d, k)
+    img = _SHOT_CACHE.get(key)
+    if img is None:
+        if len(_SHOT_CACHE) > 24:
+            for kk in [x for x in _SHOT_CACHE if isinstance(x, tuple)][:12]:
+                _SHOT_CACHE.pop(kk, None)
+        img = Image.open(os.path.join(d, files[k])).convert("RGBA")
+        img = img.resize((int(ctx.W * L.get("w", 1.0)), int(ctx.H * L.get("h", 1.0))), Image.LANCZOS)
+        _SHOT_CACHE[key] = img
+    return img
+
+
 def layer_image(ctx, L, scene_idx, t, scene, reveal):
     st = ctx.style
     W = ctx.W
@@ -216,6 +244,8 @@ def layer_image(ctx, L, scene_idx, t, scene, reveal):
     if typ == "shape":
         svg, w = sprites.shape_svg(st, L, ctx.W, ctx.H)
         return sprites.svg_image(svg, w)
+    if typ == "blender":
+        return blender_frame(ctx, L, t)
     if typ == "scene3d":
         from .three import render as render3d
         return render3d(ctx.style, L, t - L.get("at", 0.0), ctx.dur[scene_idx],

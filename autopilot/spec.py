@@ -38,7 +38,7 @@ DEFAULT_STYLE = {
 ENTER = {"none", "pop", "fade", "slide_up", "slide_down", "slide_left", "slide_right",
          "zoom", "drop", "typewriter"}
 LOOP = {"none", "bob", "pulse", "shake", "spin", "float", "wiggle"}
-LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d"}
+LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d", "blender"}
 SHAPES3D = {"box", "sphere", "cylinder", "cone", "plane", "terrain", "person", "tree", "building"}
 SHAPES = {"circle", "ring", "rect", "arrow", "line", "burst"}
 TRANSITIONS = {"cut", "fade", "slide_left", "slide_up", "zoom", "flash"}
@@ -197,6 +197,10 @@ def validate_job(job, style, chars, root=ROOT):
                         errs.append(f"{w}: 3D object {k} shape '{o.get('shape')}' not in {sorted(SHAPES3D)}")
                 if not L.get("objects"):
                     errs.append(f"{w}: scene3d needs 'objects'")
+            elif t == "blender":
+                sp = L.get("script", "")
+                if not sp or not os.path.exists(sp if os.path.isabs(sp) else os.path.join(root, sp)):
+                    errs.append(f"{w}: blender layer needs 'script' (a blendkit shot file, path from the repo root): {sp!r} not found")
             elif t == "counter" and "to" not in L:
                 errs.append(f"{w}: counter needs 'to'")
     return errs

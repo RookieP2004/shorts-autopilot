@@ -6,29 +6,42 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
 
 ## 1. Identity 🔒
 - Channel: **The Explainer** · @the_explainer-n3d · YouTube Shorts (Instagram Reels later)
-- Niche: how the world works, explained in under a minute: science, nature, space, history, everyday "why" questions.
-- Promise: "One big question, answered properly, in under a minute."
+- Niche: **complex ideas made simple.** Economics and money, philosophy, quantum physics and big science, the human body and
+  medicine, society and psychology, famous experiments, and political-economic systems (capitalism, communism, how governments
+  and markets work), plus surprising facts. Topics people find hard, explained so anyone gets them in under a minute.
+- Promise: "The complicated stuff, made simple, in under a minute."
 - Audience: curious people 16-34, English-speaking worldwide, strong India share.
 - Language: English (Professor Ved speaks with a British voice).
-- Style: fully original. A 2D flat-vector explainer world ("the vast world": the study, the open world, the cosmos)
-  mixed with simple code-made 3D for scale, crowds and places.
+- Style: fully original and cinematic. Clean 3D shots rendered in Blender (soft studio light, depth of field, gentle camera moves,
+  like Zack D Films) carry the explanation, with bold infographic text and diagrams on top (like The Infographics Show), and
+  Professor Ved as the 2D host. Every idea is turned into a concrete picture or analogy (10 apples and 10 dollars = inflation).
 
 ## 2. Tone 🔒
 - Three words: wise, cool, dry-witted.
 - Ved talks like a smart friend who happens to know everything: short sentences, no jargon without a picture, never preachy.
 - One quick, current, on-topic joke per video (§11). Never a clown, never "boomer" humour.
-- Never: clickbait that isn't true, fear-mongering, politics, religion, medical or financial advice, punching down.
+- Never: clickbait that isn't true, fear-mongering, punching down, personal medical or financial advice, partisan politics
+  (no parties, candidates or current elections), or mocking religion.
+- Political and economic ideas (capitalism, communism, socialism, taxes...) are explained even-handedly: what the idea is, how it
+  is meant to work, the strongest case for it and the strongest criticism, with historical facts. Ved never takes a side.
+- Medical topics explain how the body works; they never tell a viewer what to take or do. Philosophy presents the idea, not a verdict.
+- **Callbacks:** refer to an earlier video only when it is genuinely needed to understand this one (e.g. a follow-up on the same
+  idea), never as filler or promotion. Check the log; if there's no strong link, don't mention past videos.
 
 ## 3. Look 🔒
 - Palette, fonts, background and captions live in `channel/style.json`. Characters are flat vector, no outlines,
   two-tone shading; sets keep lines; warm key light from the upper left, cool shadows, teal/amber grade.
 - Layout: visuals and headline y 0.10-0.34, captions y≈0.41, Ved y≈0.68 with h≈0.40, nothing important below y 0.78 or right of x 0.86.
 - Sets: `study.svg` (home), `world.svg` (nature, history outdoors), `cosmos.svg` (space, physics).
-- 3D: one or two low-poly shots per video (faceless people, simple places), slow camera, same light. Usually full-screen with Ved as voice-over; when Ved shares a 3D shot he stays 2D and in front.
+- **Cinematic 3D (main explainer visuals):** Blender shots (`blender` layers, `autopilot/blendkit.py`): dark studio cyclorama,
+  warm key + cool rim light, glossy/clay/metal/paper materials, shallow depth of field, slow dolly/orbit, things popping in,
+  flying and flipping. Real objects stand in for abstract ideas (apples for goods, banknotes for money). 2-4 shots per video,
+  full-screen with Ved as voice-over. Big bold infographic text on top (y 0.10-0.30). Avoid childish clip-art diagrams.
+- Simple low-poly 3D (`scene3d`) only for quick crowds or maps.
 - References: `docs/sheets/professor_ved_character_sheet.png`, `vast_world_style_guide.png`, `vast_world_3d_guide.png`.
 - **Visual-first: Ved hosts, the pictures explain.** Ved is on screen for the hook, the payoff and the comic beat. The middle of
-  every video is full-screen 2D motion graphics (diagrams, maps, labelled cutaways, animated props, counters, before/after) and
-  simple 3D shots (scale, crowds, places, processes), with Ved as voice-over or, at most, small in a corner.
+  every video is full-screen cinematic 3D shots (Blender) with bold infographic text, counters and simple labelled graphics on top,
+  with Ved as voice-over or, at most, small in a corner.
   Ved full-size for no more than about 40% of the runtime; every explanation step gets its own visual; something new moves on
   screen at least every 2-3 seconds; never a talking head explaining something we could show.
 
@@ -47,7 +60,7 @@ Rule: characters are made only by `characters/<id>/make.py`. Colours, proportion
 ## 6. Formats 🔄
 | format | weight | length | structure | hooks |
 |---|---|---|---|---|
-| big-question | 0.45 | 20-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
+| big-question | 0.45 | 25-45 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
 | myth-bust | 0.30 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
 | scale-shock | 0.25 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
 
@@ -79,3 +92,4 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-08 | 1, 2, 3 | niche = complex topics made simple; cinematic Blender 3D + infographic text; even-handed politics/economics; callbacks only when essential | owner request |

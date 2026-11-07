@@ -1,0 +1,384 @@
+{
+ "id": "2026-11-08-m1",
+ "title": "Why can't we just print more money? 💸",
+ "description": "Ten apples, ten dollars, and a money printer: the simplest way to understand inflation, and what happened when Zimbabwe tried it.\n\nSources: Hanke & Kwok, Cato Journal (2009); Reserve Bank of Zimbabwe Z$100 trillion note, Jan 2009.",
+ "tags": [
+  "inflation",
+  "economics",
+  "money",
+  "print money",
+  "zimbabwe",
+  "hyperinflation",
+  "explained",
+  "economy"
+ ],
+ "hashtags": [
+  "#economics",
+  "#inflation"
+ ],
+ "meta": {
+  "format": "big-question",
+  "topic": "why printing money causes inflation",
+  "hook": "question",
+  "idea_source": "owner (manual)",
+  "characters": [
+   "ved"
+  ],
+  "sources": [
+   "https://www.cato.org/publications/commentary/inflation-inferno-roared-away-until-mid-november-2008",
+   "https://siliconcanals.com/m-at-the-peak-of-zimbabwes-2008-meltdown-prices-doubled-roughly-every-day-the-central-bank-answered-by-printing-a-hundred-trillion-dollar-note-worth-only-about-us30-when-it-appeared/"
+  ],
+  "humour": {
+   "trend": "'you the birthday' (TikTok slang this week: you're great)",
+   "beat": "deadpan",
+   "scene": 4
+  },
+  "overrides": "first video with Blender 3D shots (cinematic style test)"
+ },
+ "privacy": "private",
+ "speaker": "ved",
+ "scenes": [
+  {
+   "say": "Why can't a country just *print more money*, and make everyone rich?",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.06
+    ]
+   },
+   "layers": [
+    {
+     "type": "blender",
+     "script": "jobs/2026-11-08-m1/shots/s0_printer_bg.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.5,
+     "samples": 16,
+     "dur": 0.034
+    },
+    {
+     "type": "text",
+     "text": "WHY NOT JUST *PRINT MORE MONEY?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.17,
+     "size": 118,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.5,
+     "y": 0.68,
+     "h": 0.4,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ],
+      [
+       "explain",
+       1.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Picture a tiny country with *ten apples* and *ten dollars*. One apple costs one dollar.",
+   "transition": "fade",
+   "layers": [
+    {
+     "type": "blender",
+     "script": "jobs/2026-11-08-m1/shots/s1_island.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.4,
+     "samples": 10
+    },
+    {
+     "type": "text",
+     "text": "10 APPLES",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "*$10*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.21,
+     "size": 130,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "1 APPLE = *$1*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.29,
+     "size": 80,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "slide_up",
+     "at": 3.6
+    }
+   ]
+  },
+  {
+   "say": "Now the government prints ten more dollars. Everyone feels richer, but there are still only *ten apples*.",
+   "transition": "zoom",
+   "layers": [
+    {
+     "type": "blender",
+     "script": "jobs/2026-11-08-m1/shots/s2_print.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.4,
+     "samples": 10
+    },
+    {
+     "type": "text",
+     "text": "*+$10* PRINTED",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.7,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "STILL 10 APPLES",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.21,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "slide_up",
+     "at": 3.6
+    }
+   ]
+  },
+  {
+   "say": "So sellers raise the price. Each apple now costs *two dollars*. That's *inflation*.",
+   "transition": "cut",
+   "camera": {
+    "punch": [
+     3.9
+    ]
+   },
+   "layers": [
+    {
+     "type": "blender",
+     "script": "jobs/2026-11-08-m1/shots/s3_tag.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.4,
+     "samples": 10
+    },
+    {
+     "type": "text",
+     "text": "*INFLATION*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 150,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 3.8,
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "dur": 1.7,
+   "transition": "cut",
+   "bg": {
+    "type": "image",
+    "path": "assets/bg/study.svg"
+   },
+   "captions": false,
+   "layers": [
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.5,
+     "y": 0.68,
+     "h": 0.4,
+     "enter": "none",
+     "acting": "none"
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.4,
+    "text": "The printer: \"I'm the birthday.\"\nPrices: *\"Me too.\"*"
+   }
+  },
+  {
+   "say": "Zimbabwe tried it. In 2008, prices *doubled* about every day, and it printed a *one hundred trillion* dollar note.",
+   "transition": "fade",
+   "layers": [
+    {
+     "type": "blender",
+     "script": "jobs/2026-11-08-m1/shots/s5_note.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.4,
+     "samples": 10
+    },
+    {
+     "type": "text",
+     "text": "ZIMBABWE, 2008",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.11,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "PRICES DOUBLED EVERY *24.7 HOURS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.19,
+     "size": 66,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "slide_up",
+     "at": 1.8
+    }
+   ]
+  },
+  {
+   "say": "Money isn't wealth. It's a ticket for the stuff we make. Print more tickets, and each one *buys less*.",
+   "transition": "fade",
+   "camera": {
+    "zoom": [
+     1.06,
+     1.0
+    ]
+   },
+   "layers": [
+    {
+     "type": "blender",
+     "script": "jobs/2026-11-08-m1/shots/s0_printer_bg.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.5,
+     "samples": 16,
+     "dur": 0.034
+    },
+    {
+     "type": "text",
+     "text": "MONEY IS A *TICKET*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6
+    },
+    {
+     "type": "text",
+     "text": "NOT THE *STUFF*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.24,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5,
+     "y": 0.68,
+     "h": 0.4,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "warm",
+       2.6
+      ],
+      [
+       "crossed",
+       4.6
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

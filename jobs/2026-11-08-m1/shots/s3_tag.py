@@ -1,0 +1,27 @@
+# Close-up: one apple, its price tag flips from $1 to $2.
+reset(W, H, FPS, DUR, samples=SAMPLES, bloom=0.3)
+world_color(hexrgb("#0b1217"), 1.0)
+floor("#141e25", rough=0.5)
+studio(target=(0, 0, 0.25), scale=0.6, key="#ffd9b0")
+
+cylinder(0.6, 0.12, (0, 0, 0.06), material=mat("plinth", "#7a4b2e", rough=0.4, coat=0.6), bevel=0.02, verts=96)
+a = apple((0.0, 0.12, 0.12), r=0.2, name="hero")
+a.rotation_euler = (0, 0, math.radians(30))
+# tag on a little stand, in front of the apple
+post = cylinder(0.008, 0.36, (0.32, -0.18, 0.3), material=metal("#c9a24a", 0.3, "post"), verts=12, bevel=0)
+tag = price_tag(os.path.join(TEX, "tag_1.png"), os.path.join(TEX, "tag_2.png"), loc=(0.32, -0.2, 0.52), w=0.34)
+key(tag, 0, rot=(0, 0, -12))
+key(tag, 1.9, rot=(0, 0, -12))
+key(tag, 2.35, rot=(0, 0, 192))
+key(tag, 2.6, rot=(0, 0, 168))
+key(tag, 2.8, rot=(0, 0, 180 - 12))
+key(tag, 2.0, scale=1.0)
+key(tag, 2.35, scale=1.25)
+key(tag, 2.8, scale=1.15)
+
+cam, tgt = camera((0.55, -1.9, 0.75), (0.15, -0.05, 0.36), lens=70, fstop=1.8, focus=None)
+key(cam, 0, loc=(0.7, -2.0, 0.8))
+key(cam, DUR, loc=(0.45, -1.55, 0.62))
+key(tgt, 0, loc=(0.15, -0.05, 0.36))
+key(tgt, 1.8, loc=(0.2, -0.1, 0.4))
+key(tgt, 2.4, loc=(0.3, -0.2, 0.5))

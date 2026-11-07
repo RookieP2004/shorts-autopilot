@@ -26,6 +26,7 @@ class Ctx:
         self.dur, self.start, self.frames = [], [], []
         self.beats = []
         self.total = 1.0
+        self.shots_dir = None
 
     def envelope(self, i, t):
         e = self.env[i]
@@ -39,6 +40,31 @@ class Ctx:
 
     def lead_of(self, i):
         return self.job["scenes"][i].get("lead", self.style["scene_lead"])
+
+
+def render_shots(ctx, log=print):
+    """Render every `blender` layer (cached per script + duration) before frames are drawn."""
+    if not ctx.shots_dir:
+        return
+    for i, s in enumerate(ctx.job["scenes"]):
+        for j, L in enumerate(s.get("layers", [])):
+            if L.get("type") != "blender":
+                continue
+            dur = L.get("dur", ctx.dur[i] - L.get("at", 0.0))
+            fps = L.get("fps", ctx.fps)
+            res = L.get("res", 0.5)
+            w = int(round(ctx.W * L.get("w", 1.0) * res / 2)) * 2
+            h = int(round(ctx.H * L.get("h", 1.0) * res / 2)) * 2
+            out = os.path.join(ctx.shots_dir, f"s{i:02d}_l{j:02d}")
+            L["_frames_dir"], L["_fps"] = out, fps
+            script = L["script"] if os.path.isabs(L["script"]) else os.path.join(ctx.root, L["script"])
+            cmd = [sys.executable, "-m", "autopilot.blendrun", script, out, f"{dur:.3f}", str(fps), str(w), str(h),
+                   str(L.get("samples", 24))]
+            log(f"  3D shot scene {i} layer {j}: {os.path.basename(script)} {w}x{h} {dur:.1f}s")
+            r = subprocess.run(cmd, cwd=ctx.root, capture_output=True, text=True)
+            if r.returncode != 0:
+                raise RuntimeError(f"blender shot failed ({script}):\n" + r.stdout[-1500:] + r.stderr[-3000:])
+            log("   " + (r.stdout.strip().splitlines() or [""])[-1])
 
 
 def voice_for(ctx, scene):
@@ -115,6 +141,7 @@ def prepare(ctx, log=print):
         ctx.start.append(t)
         t += dur
     ctx.total = t
+    render_shots(ctx, log)
     return t
 
 
@@ -203,6 +230,7 @@ def render(job_path, out_dir, root=ROOT, workers=None, log=print):
         raise SystemExit("job invalid:\n  " + "\n  ".join(errs))
     os.makedirs(out_dir, exist_ok=True)
     ctx = Ctx(job, style, chars, root)
+    ctx.shots_dir = os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "shots")
     log("voice + timing")
     total = prepare(ctx, log)
     log(f"total {total:.2f}s, {sum(ctx.frames)} frames")
@@ -266,6 +294,7 @@ def frames(job_path, out_dir, times=None, root=ROOT, log=print, guides=True):
     if errs:
         raise SystemExit("job invalid:\n  " + "\n  ".join(errs))
     ctx = Ctx(job, style, chars, root)
+    ctx.shots_dir = os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "shots")
     prepare(ctx, log=lambda *a: None)
     os.makedirs(out_dir, exist_ok=True)
     outs = []

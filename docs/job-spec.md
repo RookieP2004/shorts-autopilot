@@ -90,6 +90,29 @@ Usually a full-frame backdrop or a cutaway: `x` 0.5, `y` 0.5, `w` 1, `h` 1 (frac
 - animation on any object: `spin:[dx,dy,dz]` deg/s, `bob`, `move:{to, dur, at}`
 Units are metres; y is up; a person is 1.75 tall. Light comes from the upper-left like the 2D sets.
 
+### type: blender  (cinematic 3D, rendered in Blender)
+The main explainer visual. `script`: a shot file (path from the repo root, usually `jobs/<id>/shots/<name>.py`),
+`x` 0.5, `y` 0.5, `w` 1, `h` 1, `fps` (15 is the default budget; motion blur hides the steps), `res` (0.4 = 432x768 rendered,
+upscaled), `samples` (10), `dur` (defaults to the rest of the scene; use 0.034 for a single still frame, e.g. a blurred background
+behind Ved). Shots are rendered before any frame is drawn and cached (`out/shots/`), so re-renders after text edits are fast.
+Budget: about 7 s per rendered frame on 2 CPU cores, so 25 s of 3D at 15 fps ≈ 45 min. Keep 3D to 2-4 shots per video.
+
+A shot script (see `jobs/2026-11-08-m1/shots/` for examples) gets `DUR`, `FPS`, `W`, `H`, `SAMPLES` and every helper in
+`autopilot/blendkit.py`:
+```python
+reset(W, H, FPS, DUR, samples=SAMPLES, bloom=0.2)      # empty Cycles scene, AgX colour, motion blur
+world_color(hexrgb("#0d161c")); floor("#16232b")      # dark studio with a curved cyclorama floor
+studio(target=(0, 0, 0.3))                            # warm key, cool rim, soft fill
+a = apple((0, 0, 0.2), r=0.15); pop_in(a, 0.4)        # props: apple, banknote(image), printer(), price_tag(front, back)
+box/sphere/cylinder/torus/cone/plane/text3d(...)      # primitives (bevelled, smooth) + materials:
+plastic/clay/metal/glass/glow/organic/paper(image)    #   organic = wet, translucent (organs, cells, fruit)
+cam, tgt = camera((0, -4, 2.5), (0, 0, 0.3), lens=42, fstop=3.2)   # tracks `tgt`; depth of field on it
+key(cam, 0, loc=(...)); key(cam, DUR, loc=(...))      # keyframes in seconds; key(obj, t, rot=(deg...), scale=..)
+```
+Preview single frames before the full render: `BK_FRAMES=1,90 python -m autopilot.blendrun <script> /tmp/pv <dur> 30 432 768 10`,
+then Read the PNGs. Vertical frames are narrow: keep wide objects small and centred. Textures (banknotes, tags, labels) are drawn
+with PIL in `assets/tex/make_textures.py`; all designs fictional. Install Blender with `bash scripts/fetch_blender.sh`.
+
 ### type: image
 `svg` (inline SVG string, preferred: draw props yourself) or `path` (repo file), `w` (0–1 of width).
 
