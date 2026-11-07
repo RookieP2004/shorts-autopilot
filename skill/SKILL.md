@@ -6,8 +6,8 @@ description: "Run Sujal's automated YouTube Shorts channel The Explainer: channe
 # Shorts Autopilot: The Explainer
 
 You run the YouTube Shorts channel **The Explainer** (@the_explainer-n3d, host Professor Ved) on your own. Every video is made
-**entirely in code by you**: script, original 2D SVG characters and motion graphics, simple code-made 3D, captions, Kokoro TTS voice,
-procedural music and SFX. No stock footage and no outside AI video or image services (the owner asked for this).
+**entirely in code by you**: script, cinematic 3D shots rendered in Blender (bpy), original 2D SVG host and infographic text,
+captions, Kokoro TTS voice, procedural music and SFX. No stock footage and no outside AI video or image services (the owner asked for this).
 
 How it fits together:
 - **Tool**: the public GitHub repo `RookieP2004/shorts-autopilot`. Inside it, `python -m autopilot` renders videos from `job.json`,
@@ -54,7 +54,8 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
 1. **Repo**: `add_repo(owner="RookieP2004", repo="shorts-autopilot", access="push")`, run the clone command it returns, then
    `register_repo_root`. If the repo can't be attached, stop and tell the owner.
    For a bonus run (slot `b`/`c`), run section 3c step 1 now, before installing anything.
-   Then `pip install -q -r requirements.txt --break-system-packages` and `bash scripts/fetch_models.sh` (~350 MB, about 1 minute).
+   Then `pip install -q -r requirements.txt --break-system-packages`, `bash scripts/fetch_models.sh` (~350 MB, about 1 minute)
+   and `bash scripts/fetch_blender.sh` (Blender from the repo's `deps` branch, about 10 s).
 2. **Connectors**: load the Zapier tools with ToolSearch ("zapier"). Check *YouTube: Upload Video* is enabled (in a review, also
    *YouTube: Make API GET Request* and the Google Docs actions *Get Document Content* and *Append Text to Document*);
    enable missing ones with Zapier's discover/enable tools. If Zapier isn't connected at all, stop and tell the owner.
@@ -63,11 +64,22 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
 
 ## 1. Consistency rules (never break these)
 - **Look**: use only the palette, fonts, background and caption style in `style.json`. Don't override them per video unless the Bible's format allows it.
-- **Visual-first: Ved hosts, the pictures explain.** Ved is on screen for the hook, the payoff and the comic beat. The middle of every
-  video is full-screen 2D motion graphics (diagrams, maps, labelled cutaways, animated props, counters, before/after) and simple 3D
-  (scale, crowds, places, processes), with Ved as voice-over (no character layer; the scene's `speaker` still voices it) or, at most,
-  small in a corner. Ved full-size for no more than about 40% of the runtime; every explanation step gets its own visual; something
-  new moves on screen at least every 2–3 s; never a talking head explaining something we could show.
+- **Topics: complex ideas made simple.** Economics and money, philosophy, quantum physics and big science, the human body and
+  medicine, society and psychology, famous experiments, political-economic systems (capitalism, communism, how markets and
+  governments work), surprising facts. The skill is making the hard thing feel easy: one concrete analogy (10 apples and 10 dollars
+  = inflation), shown, not just said.
+- **Even-handed:** political and economic ideas are explained neutrally (what it is, how it's meant to work, the strongest case for
+  and the strongest criticism, historical facts). No parties, candidates or current elections; Ved never takes a side. Medical videos
+  explain how the body works and never tell viewers what to take or do.
+- **Callbacks:** mention an earlier video only when it is genuinely needed to understand this one (a real follow-up on the same
+  idea). Check `log.md`; if the link isn't strong, don't mention past videos at all.
+- **Visual-first, cinematic: Ved hosts, the 3D explains.** Ved is on screen for the hook, the payoff and the comic beat (in the hook
+  and payoff he stands in front of a blurred 3D still: a `blender` layer with `dur` 0.034). The middle of every video is 2–4
+  full-screen Blender shots (`blender` layers, section 1 "3D") with Ved as voice-over, and bold infographic text on top (big Anton
+  headlines, `*accent*` words, counters, pop/slide entrances, a sfx on each). Ved full-size for no more than about 40% of the
+  runtime; every explanation step gets its own shot or label; something new moves on screen at least every 2–3 s. Never childish
+  clip-art diagrams, never a talking head explaining something we could show. Inspiration: Zack D Films (clean 3D, soft light,
+  real objects) and The Infographics Show (bold, punchy text and pacing).
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,
@@ -85,11 +97,14 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   (space, physics) when the topic travels; use plain gradient backgrounds for diagram scenes. New sets are written into
   `assets/bg/make_backgrounds.py` and follow its depth rules: foreground 4.5 px line, midground 2 px at 60%, background no line
   and bluer with distance. Warm key light from the left, cool shadows.
-- **3D**: simple code-made 3D (`scene3d` layers, see `docs/job-spec.md` and `docs/sheets/vast_world_3d_guide.png`) for crowds,
-  scale, places and processes. People are faceless low-poly mannequins; locations are built from terrain, planes, cones, buildings,
-  trees and primitives. Usually full-screen with Ved as voice-over; when Ved shares a 3D shot he stays 2D and in front. Same
-  upper-left warm light, fog = sky colour, slow camera (orbit ≤ 8°/s), one or two 3D shots per video. Don't put a huge flat plane
-  right in front of the camera: it fills the frame with one colour.
+- **3D (Blender)**: each shot is a script in `jobs/<id>/shots/` using `autopilot/blendkit.py` (see `docs/job-spec.md`
+  "type: blender" and the shots in `jobs/2026-11-08-m1/shots/` as examples). House look: dark studio cyclorama (`floor`), warm key +
+  cool rim (`studio`), glossy/clay/metal/paper/organic materials, shallow depth of field, slow dolly or orbit, objects popping in,
+  flying, flipping. Real objects stand in for abstract ideas; build new props from primitives and add reusable ones to blendkit;
+  textures (labels, notes, screens) are drawn with PIL in `assets/tex/make_textures.py`, always fictional designs. Vertical frames
+  are narrow: keep wide objects small and centred, and preview start/middle/end frames (`BK_FRAMES=...`) before rendering.
+  Budget: 15 fps at `res` 0.4, about 7 s per frame, so keep 3D to roughly 20–30 s per video (35–55 min of rendering).
+  The old low-poly `scene3d` layer is only for quick crowds or maps.
 - **Look references**: `docs/sheets/professor_ved_character_sheet.png`, `vast_world_style_guide.png` and `vast_world_3d_guide.png`.
   Check new props and sets against them, and rebuild them with `scripts/build_sheets.py` whenever the cast changes.
 - **Formats**: each video uses exactly one format from the Bible (big-question, myth-bust, scale-shock), starting from its skeleton
@@ -140,7 +155,8 @@ simple 3D (not just talked about). Take the top score.
 **d. Script.** The hook lands in the first 1.5 s and frame 0 must already show it (`enter: none`, or `at: 0` with a fast pop).
 One idea per scene, each with its own visual, about 2.6 spoken words per second (30 s ≈ 75 words). End on a payoff, or a line that
 loops back to the start. Write it in the channel's voice. Clickbait must still be true.
-Plan the visuals scene by scene (what is on screen while each line is spoken), and the comic beat: which line sets it up, which
+Plan the visuals scene by scene (which 3D shot and which infographic text is on screen while each line is spoken; the analogy
+object for every abstract idea), and the comic beat: which line sets it up, which
 trend it borrows, which `beat` kind and caption pay it off. Read it back: if it needs explaining, or a 20-year-old would cringe,
 cut it or swap it for a plain dry reaction.
 
@@ -154,8 +170,9 @@ nothing overlaps, characters are on-model, frame 0 shows the hook, Ved isn't on 
 the last 3 videos. Also render a still in the middle of the beat (`frames --at <scene start + beat at + 0.4>`) and check the caption
 card is readable and Ved's reaction face reads clearly. Fix and repeat.
 
-**g. Render.** Run `python -m autopilot render jobs/<id>/job.json`. Check `out/render.json`: the length must be ≤ 58 s. Then pull 3–4 frames from
-`out/final.mp4` with ffmpeg and look at them.
+**g. Render.** Run `nohup python -m autopilot render jobs/<id>/job.json > /tmp/render.log 2>&1 &` (Blender shots take 35–55 min,
+longer than one tool call) and poll the log and `out/shots/` every few minutes until it prints `done`. Check `out/render.json`: the
+length must be ≤ 58 s. Then pull 3–4 frames from `out/final.mp4` with ffmpeg and look at them.
 
 **h. Publish.**
 1. Run `scripts/push_media.sh jobs/<id>/out/final.mp4 <id>`. It prints the public URL and waits until the URL serves the file.
