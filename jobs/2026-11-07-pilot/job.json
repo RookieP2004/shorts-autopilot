@@ -1,0 +1,409 @@
+{
+ "id": "2026-11-07-pilot",
+ "title": "Why is the ocean salty but rivers aren't? 🌊",
+ "description": "Rain, rocks and four billion tons of salt a year: why the sea is salty when the rivers that fill it are fresh.\n\nSources: USGS Water Science School; NOAA Ocean Service.",
+ "tags": [
+  "ocean",
+  "science",
+  "why is the ocean salty",
+  "earth science",
+  "explained",
+  "geography",
+  "water cycle"
+ ],
+ "hashtags": [
+  "#science",
+  "#ocean"
+ ],
+ "meta": {
+  "format": "big-question",
+  "topic": "why the ocean is salty",
+  "hook": "question",
+  "idea_source": "backlog",
+  "characters": [
+   "ved"
+  ],
+  "sources": [
+   "https://www.usgs.gov/water-science-school/science/why-ocean-salty",
+   "https://webarchive.library.unt.edu/web/20090115093033/http:/oceanservice.noaa.gov/facts/whysalty.html",
+   "https://phys.org/news/2022-07-ocean-salty-world-biggest-bodies.html"
+  ],
+  "humour": {
+   "trend": "'Remember November 2026 is coming' (polar bear meme, Know Your Meme, Sep 2026)",
+   "beat": "side_eye",
+   "scene": 4
+  },
+  "pilot": true
+ },
+ "privacy": "private",
+ "speaker": "ved",
+ "scenes": [
+  {
+   "say": "Why is the ocean *salty*, when the rivers that fill it are *not*?",
+   "bg": {
+    "type": "image",
+    "path": "assets/bg/world.svg"
+   },
+   "camera": {
+    "zoom": [
+     1.0,
+     1.04
+    ]
+   },
+   "layers": [
+    {
+     "type": "text",
+     "text": "WHY IS THE OCEAN *SALTY?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 128,
+     "max_w": 0.86,
+     "stroke": "#1a1410",
+     "stroke_width": 6,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.5,
+     "y": 0.68,
+     "h": 0.4,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Rain picks up *carbon dioxide*, so it is slightly acidic. Over millions of years, it eats into rocks.",
+   "transition": "fade",
+   "layers": [
+    {
+     "type": "scene3d",
+     "enter": "none",
+     "sky": [
+      "#3e6f8e",
+      "#9fc0c4",
+      "#e9dcc4"
+     ],
+     "fog": {
+      "color": "#dfd8c4",
+      "near": 20,
+      "far": 110,
+      "max": 0.75
+     },
+     "camera": {
+      "pos": [
+       0,
+       5,
+       22
+      ],
+      "target": [
+       0,
+       4,
+       -20
+      ],
+      "fov": 50,
+      "orbit": 3
+     },
+     "objects": [
+      {
+       "shape": "terrain",
+       "w": 200,
+       "d": 200,
+       "n": 34,
+       "height": 16,
+       "seed": 11,
+       "flat_center": 12,
+       "color": "#6f8a45"
+      },
+      {
+       "shape": "plane",
+       "w": 4,
+       "d": 70,
+       "color": "#3e7fa0",
+       "pos": [
+        0,
+        0.35,
+        -8
+       ]
+      },
+      {
+       "shape": "cone",
+       "r": 7,
+       "h": 13,
+       "pos": [
+        -12,
+        0,
+        -30
+       ],
+       "color": "#8a7f72"
+      },
+      {
+       "shape": "cone",
+       "r": 9,
+       "h": 17,
+       "pos": [
+        6,
+        0,
+        -40
+       ],
+       "color": "#7c7266"
+      },
+      {
+       "shape": "cone",
+       "r": 6,
+       "h": 10,
+       "pos": [
+        16,
+        0,
+        -26
+       ],
+       "color": "#8a7f72"
+      },
+      {
+       "shape": "tree",
+       "pos": [
+        5,
+        0,
+        4
+       ],
+       "seed": 4
+      },
+      {
+       "shape": "tree",
+       "pos": [
+        -6,
+        0,
+        1
+       ],
+       "seed": 5
+      },
+      {
+       "shape": "tree",
+       "pos": [
+        8,
+        0,
+        -8
+       ],
+       "seed": 6
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 330'>\n<g stroke='#6fc3c0' stroke-width='9' stroke-linecap='round'>\n<line x1='150' y1='215' x2='132' y2='265'/><line x1='230' y1='225' x2='212' y2='290'/><line x1='310' y1='220' x2='292' y2='275'/>\n<line x1='390' y1='228' x2='372' y2='300'/><line x1='465' y1='215' x2='447' y2='262'/></g>\n<path d='M120,200 C70,200 60,140 110,128 C110,80 170,60 205,92 C225,40 320,30 345,90 C380,60 450,75 452,128 C510,125 525,200 470,205 Z' fill='#f6efe2'/>\n<path d='M120,200 C95,200 82,186 84,170 C140,182 380,186 512,172 C510,192 495,205 470,205 Z' fill='#d8cdb8'/>\n<circle cx='470' cy='88' r='46' fill='#f2b04a'/><text x='470' y='103' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>CO2</text>\n</svg>",
+     "w": 0.62,
+     "x": 0.5,
+     "y": 0.15,
+     "enter": "drop",
+     "at": 0.2,
+     "loop": "float",
+     "loop_amp": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "RAIN + CO2 = WEAK *ACID*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.31,
+     "size": 74,
+     "max_w": 0.86,
+     "stroke": "#1a1410",
+     "stroke_width": 6,
+     "enter": "pop",
+     "at": 1.2
+    }
+   ]
+  },
+  {
+   "say": "Rivers carry the dissolved salt to the sea. About *four billion* tons, every year.",
+   "transition": "slide_left",
+   "bg": {
+    "type": "gradient",
+    "colors": [
+     "#24343d",
+     "#16232b"
+    ],
+    "angle": 180,
+    "pattern": "dots"
+   },
+   "layers": [
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 820 420'>\n<path d='M300,330 C420,300 520,350 640,320 C700,305 760,320 820,300 L820,380 C700,400 560,370 420,395 C360,405 320,390 300,380 Z' fill='#3e7fa0'/>\n<path d='M330,350 C430,330 520,368 640,345' fill='none' stroke='#9fd3e0' stroke-width='6' stroke-linecap='round' opacity='0.8'/>\n<path d='M40,360 L90,190 L170,120 L270,150 L330,250 L320,360 Z' fill='#8a7f72'/>\n<path d='M170,120 L270,150 L330,250 L320,360 L230,360 L240,240 Z' fill='#6d635a'/>\n<path d='M110,250 L150,210 L175,240 M200,300 L235,270' fill='none' stroke='#1a1410' stroke-width='5' stroke-linecap='round'/>\n<g font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800' font-size='30' text-anchor='middle'>\n<circle cx='380' cy='250' r='34' fill='#f2b04a'/><text x='380' y='261' fill='#1a1410'>Na+</text>\n<circle cx='470' cy='195' r='34' fill='#6fc3c0'/><text x='470' y='206' fill='#1a1410'>Cl-</text>\n<circle cx='560' cy='265' r='34' fill='#f2b04a'/><text x='560' y='276' fill='#1a1410'>Na+</text>\n<circle cx='650' cy='205' r='34' fill='#6fc3c0'/><text x='650' y='216' fill='#1a1410'>Cl-</text></g>\n\n</svg>",
+     "w": 1.0,
+     "x": 0.5,
+     "y": 0.63,
+     "enter": "slide_left",
+     "at": 0.0
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 4000000000,
+     "count_dur": 2.0,
+     "at": 1.8,
+     "x": 0.5,
+     "y": 0.17,
+     "size": 120,
+     "stroke": "#1a1410",
+     "stroke_width": 6,
+     "enter": "pop"
+    },
+    {
+     "type": "text",
+     "text": "TONS OF SALT, *EVERY YEAR*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.27,
+     "size": 64,
+     "max_w": 0.86,
+     "stroke": "#1a1410",
+     "stroke_width": 6,
+     "enter": "fade",
+     "at": 2.2
+    }
+   ]
+  },
+  {
+   "say": "The sun lifts the water back into the sky. The salt cannot leave, so it piles up.",
+   "transition": "slide_up",
+   "bg": {
+    "type": "gradient",
+    "colors": [
+     "#9fc0c4",
+     "#3e6f8e"
+    ],
+    "angle": 180
+   },
+   "layers": [
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 820 560'>\n<g stroke='#f2b04a' stroke-width='8' stroke-linecap='round'><line x1='120' y1='20' x2='120' y2='0'/><line x1='60' y1='60' x2='40' y2='45'/><line x1='180' y1='60' x2='200' y2='45'/><line x1='40' y1='120' x2='15' y2='120'/><line x1='200' y1='120' x2='225' y2='120'/></g>\n<circle cx='120' cy='120' r='62' fill='#f2b04a'/>\n<g fill='#f6efe2'>\n<path d='M330,330 L330,170 L300,170 L350,110 L400,170 L370,170 L370,330 Z'/>\n<path d='M500,330 L500,150 L470,150 L520,90 L570,150 L540,150 L540,330 Z'/>\n<path d='M670,330 L670,180 L640,180 L690,120 L740,180 L710,180 L710,330 Z'/></g>\n<g font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800' font-size='30' fill='#1a1410' text-anchor='middle'><text x='350' y='260'>H2O</text><text x='520' y='240'>H2O</text><text x='690' y='270'>H2O</text></g>\n<path d='M0,360 C80,330 160,390 240,360 C320,330 400,390 480,360 C560,330 640,390 720,360 C780,340 800,350 820,360 L820,560 L0,560 Z' fill='#2f6f8f'/>\n<path d='M0,400 C80,375 160,425 240,400 C320,375 400,425 480,400 C560,375 640,425 720,400 C780,385 800,395 820,400 L820,560 L0,560 Z' fill='#255a75'/>\n<g fill='#ffffff'><rect x='120' y='450' width='26' height='26' transform='rotate(15 133 463)'/><rect x='250' y='480' width='22' height='22' transform='rotate(-10 261 491)'/>\n<rect x='390' y='455' width='28' height='28' transform='rotate(25 404 469)'/><rect x='540' y='490' width='22' height='22'/><rect x='660' y='450' width='26' height='26' transform='rotate(-20 673 463)'/></g>\n</svg>",
+     "w": 0.95,
+     "x": 0.5,
+     "y": 0.66,
+     "enter": "slide_up"
+    },
+    {
+     "type": "text",
+     "text": "THE WATER LEAVES.",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 84,
+     "max_w": 0.86,
+     "stroke": "#1a1410",
+     "stroke_width": 6,
+     "enter": "pop",
+     "at": 0.3
+    },
+    {
+     "type": "text",
+     "text": "THE *SALT STAYS.*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.25,
+     "size": 84,
+     "max_w": 0.86,
+     "stroke": "#1a1410",
+     "stroke_width": 6,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "bg": {
+    "type": "image",
+    "path": "assets/bg/study.svg"
+   },
+   "captions": false,
+   "layers": [
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.5,
+     "y": 0.68,
+     "h": 0.4,
+     "enter": "none",
+     "acting": "none"
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.3,
+    "text": "November 2026 is here. The ocean? *Still salty.*"
+   }
+  },
+  {
+   "say": "That is why seawater is about *3.5 percent* salt, and every river is still topping it up.",
+   "transition": "cut",
+   "bg": {
+    "type": "image",
+    "path": "assets/bg/world.svg"
+   },
+   "layers": [
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 150'>\n<rect x='0' y='30' width='760' height='90' rx='45' fill='#6fc3c0'/>\n<rect x='640' y='30' width='120' height='90' rx='45' fill='#f2b04a'/><rect x='640' y='30' width='50' height='90' fill='#f2b04a'/>\n<text x='40' y='90' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WATER 96.5%</text>\n<text x='700' y='90' font-size='36' fill='#1a1410' text-anchor='middle' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SALT</text>\n</svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.25,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "ding"
+    },
+    {
+     "type": "text",
+     "text": "*3.5%* SALT",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 120,
+     "max_w": 0.86,
+     "stroke": "#1a1410",
+     "stroke_width": 6,
+     "enter": "pop",
+     "at": 0.2
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5,
+     "y": 0.68,
+     "h": 0.4,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "warm",
+       2.4
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

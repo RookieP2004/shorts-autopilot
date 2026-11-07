@@ -56,7 +56,7 @@ Render it with `python -m autopilot render`, then publish with `scripts/push_med
 `id`, `pose` (an SVG in `characters/<id>/`), `h` (height, 0–1 of frame), `talk` (default true).
 Lip-sync is automatic: while this character speaks, each frame picks one of 5 mouth shapes from the voice audio
 (loudness = how open, brightness = round "oo" vs wide "ee"): `<pose>_m1`, `_talk`, `_m3`, `_oo`, `_ee`, held for at
-least 2 frames so it never flickers. He also nods on stressed words and sways slightly while talking.
+least 2 frames so it never flickers. He changes gesture at natural pauses (see Acting); no nodding or swaying.
 Blinks use `<pose>_blink.svg`. Base poses: idle, warm, serious, explain, point, think, welcome, surprised, crossed.
 
 **Acting** (rigged characters like Ved are drawn fresh every frame): `pose` is the starting gesture, then
