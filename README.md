@@ -14,6 +14,7 @@ docs/sheets/           character model sheet, look & lighting bible, 3D guide (s
 autopilot/three.py     simple 3D layer: low-poly scenes, faceless people, camera moves (no GPU)
 jobs/<id>/job.json     one video (kept as a record)
 jobs/_templates/       one skeleton per format
+skill/SKILL.md         the Claude skill that runs the channel (research, render, post, weekly review)
 docs/job-spec.md       job.json reference
 docs/google-docs-templates.md   what goes in each Google Doc
 scripts/push_media.sh  publish a video to the media branch -> public URL for Zapier
