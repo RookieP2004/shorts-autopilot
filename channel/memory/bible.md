@@ -40,8 +40,8 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   wide / medium / close-up shots. Animated Blender shots only when a moving 3D camera is essential. The sets are: a studio cyclorama or a
   bright, colourful little world (street, lab, market, body interior), warm key + cool rim light, glossy/clay/metal/paper materials,
   shallow depth of field, slow dolly/orbit, things popping in, flying and flipping. Real objects stand in for abstract ideas
-  (apples for goods, banknotes for money). **Ved is composited into most 3D shots** as an on-set host (h 0.30-0.36, on the floor
-  line, soft shadow at his feet, pointing at and reacting to the action). Close-ups can be pure 3D.
+  (apples for goods, banknotes for money). Ved stands on the set's floor line with his moving shadow, scaled by perspective
+  (`autopilot/stage.py`). Close-ups can be pure 3D.
 - **The town:** the world is populated. Faceless townspeople (`extra`, outfits and ornaments show who they are: seller in an apron,
   banker in a suit and bowler, shoppers in headscarves, straw hats, fezzes) react to the idea with body language (cheer and jump when
   money arrives, slump and walk away when prices rise). Same people, same outfits through the whole video. Staged in depth with
@@ -50,11 +50,11 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   beat card, all in the channel palette. Avoid childish clip-art diagrams; every 2D graphic must carry real information.
 - Simple low-poly 3D (`scene3d`) only for quick crowds or maps.
 - References: `docs/sheets/professor_ved_character_sheet.png`, `vast_world_style_guide.png`, `vast_world_3d_guide.png`.
-- **Visual-first: Ved hosts, the pictures explain.** Ved is on screen for the hook, the payoff and the comic beat. The middle of
-  every video is full-screen cinematic 3D shots (Blender) with bold infographic text, counters and simple labelled graphics on top,
-  with Ved as voice-over or, at most, small in a corner.
-  Ved full-size for no more than about 40% of the runtime; every explanation step gets its own visual; something new moves on
-  screen at least every 2-3 seconds; never a talking head explaining something we could show.
+- **Visual-first: the pictures explain, Ved and the town act it out.** Every explanation step gets its own shot, prop or
+  panel; something new moves on screen at least every 2-3 seconds; never a talking head explaining something we could show.
+- **Reference video (owner-approved, 2026-11-08):** `jobs/2026-11-08-m3` ("Why can't countries just print more money?",
+  youtu.be/QFhXI3hT9Ik). This is the quality bar and the house style: every new video should look at least this alive, in its own
+  new world and story.
 
 ## 4. Cast 🔒
 | id | name | role | personality | voice | poses |
@@ -103,6 +103,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-08 | 3 | v3 (2026-11-08-m3) approved as the final house style and reference video; removed the old "Ved small in a corner" rule | owner: "final this" |
 | 2026-11-08 | 3 | living town: faceless townspeople with outfits, body-language emotions, depth staging (perspective + foreground layers), smoother stall/apples | owner request |
 | 2026-11-08 | 3 | 3D world from stills + cut-outs animated in 2D (smooth, fast); Ved walks/jumps/talks to camera; multi-angle cuts | owner request |
 | 2026-11-08 | 1, 3 | style = 2D characters in a 3D world (Rick's Clips) + 2D infographic panels + clean 3D objects | owner request |
