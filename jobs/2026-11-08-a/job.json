@@ -1,0 +1,1869 @@
+{
+ "id": "2026-11-08-a",
+ "title": "Why do smart people both make the worse choice? 🤝",
+ "description": "The prisoner's dilemma in under a minute: why two people acting rationally can both end up worse off, why price wars happen, and the simple strategy that won a 1980 computer tournament (tit for tat).\n\nSources:\nhttps://www.econlib.org/library/Enc/PrisonersDilemma.html\nhttps://www.geeksforgeeks.org/?p=141634\nhttps://praxis.ac.in/tit-for-tat-how-a-1980-game-theory-experiment-proved-co-operation-triumphs-above-all/",
+ "tags": [
+  "prisoners dilemma",
+  "game theory",
+  "tit for tat",
+  "economics explained",
+  "psychology",
+  "decision making",
+  "price war",
+  "nash equilibrium",
+  "explained simply"
+ ],
+ "hashtags": [
+  "#gametheory",
+  "#economics"
+ ],
+ "meta": {
+  "format": "big-question",
+  "topic": "the prisoner's dilemma (game theory)",
+  "hook": "question",
+  "idea_source": "backlog",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.econlib.org/library/Enc/PrisonersDilemma.html",
+   "https://www.geeksforgeeks.org/?p=141634",
+   "https://praxis.ac.in/tit-for-tat-how-a-1980-game-theory-experiment-proved-co-operation-triumphs-above-all/"
+  ],
+  "humour": {
+   "trend": "'W chews / L nibbles' food-rating videos (KYM weekly roundup, 2026-11-06), as a text card",
+   "beat": "side_eye",
+   "scene": 10
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-08-a/assets.py",
+ "scenes": [
+  {
+   "say": "Why would two smart people both pick the *worse* option?",
+   "caption_y": 0.32,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2908,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7092,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/fg_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.584,
+     "h": 0.1734,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "think",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.0337,
+       "y": 0.5933,
+       "scale": 1.0802
+      },
+      {
+       "t": 1.2,
+       "x": 0.5,
+       "y": 0.584,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "WHY WOULD TWO SMART PEOPLE PICK THE *WORSE* OPTION?",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.165,
+     "size": 88,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "It's called the *prisoner's dilemma*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_left.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.2,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "point",
+       0.8
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 200'><rect x='10' y='10' width='1380' height='180' rx='22' fill='#f6efe2' fill-opacity='0.88' stroke='#f2b04a' stroke-width='14'/><rect x='30' y='30' width='1340' height='140' rx='12' fill='none' stroke='#f2b04a' stroke-width='5'/><text x='700.0' y='140' text-anchor='middle' font-size='120' fill='#f2b04a' font-family='Anton, DejaVu Sans, sans-serif'>PRISONER'S DILEMMA</text></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.17,
+     "rot": -5,
+     "at": 0.5,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 2.0,
+       "opacity": 0
+      },
+      {
+       "t": 0.18,
+       "scale": 1.0,
+       "opacity": 1,
+       "ease": "out"
+      }
+     ],
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "Two suspects, separate rooms. They *can't* talk.",
+   "transition": "slide_left",
+   "caption_y": 0.3,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.1,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2908,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "hold",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7092,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "hold",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/fg_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 196 96'><rect x='4' y='4' width='188' height='88' rx='44' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='46' cy='48' r='16' fill='#7c2533'/><text x='118.0' y='64' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text></svg>",
+     "w": 0.24,
+     "x": 0.28869752819713923,
+     "y": 0.38565540238093654,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 230 96'><rect x='4' y='4' width='222' height='88' rx='44' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='46' cy='48' r='16' fill='#6fc3c0'/><text x='135.0' y='64' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text></svg>",
+     "w": 0.27,
+     "x": 0.7113024718028608,
+     "y": 0.38565540238093654,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><path d='M40 50 h120 a20 20 0 0 1 20 20 v50 a20 20 0 0 1 -20 20 h-70 l-30 28 v-28 h-20 a20 20 0 0 1 -20 -20 v-50 a20 20 0 0 1 20 -20 z' fill='#f6efe2' stroke='#1a1410' stroke-width='8'/><circle cx='100' cy='100' r='88' fill='none' stroke='#d9534f' stroke-width='16'/><line x1='38' y1='162' x2='162' y2='38' stroke='#d9534f' stroke-width='16'/></svg>",
+     "w": 0.2,
+     "x": 0.5,
+     "y": 0.4199569781074014,
+     "enter": "zoom",
+     "at": 2.1,
+     "sfx": "boom"
+    },
+    {
+     "type": "text",
+     "text": "SEPARATE *ROOMS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 96,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "say": "If both stay *silent*: one year each.",
+   "transition": "cut",
+   "caption_y": 0.44,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2908,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7092,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/fg_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 940 600'><rect width='940' height='600' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='615' y='46' text-anchor='middle' font-size='34' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='462' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='767' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><text x='150' y='100' text-anchor='middle' font-size='34' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='150' y='242' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='150' y='492' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><rect x='320' y='125' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/><rect x='625' y='125' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/><rect x='320' y='375' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/><rect x='625' y='375' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.225,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 940 600'><rect width='940' height='600' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='615' y='46' text-anchor='middle' font-size='34' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='462' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='767' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><text x='150' y='100' text-anchor='middle' font-size='34' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='150' y='242' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='150' y='492' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><rect x='320' y='125' width='285' height='210' rx='22' fill='#6fc3c0' stroke='#1a1410' stroke-width='10'/><text x='340' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><text x='340' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><rect x='625' y='125' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/><rect x='320' y='375' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/><rect x='625' y='375' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.225,
+     "enter": "pop",
+     "at": 0.9,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "If one *betrays*, he walks free, and the other gets *three*.",
+   "transition": "cut",
+   "caption_y": 0.44,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2908,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "cheer",
+       0.9
+      ],
+      [
+       "sad",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.9,
+       0.04,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7092,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "sad",
+       0.9
+      ],
+      [
+       "cheer",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.6,
+       0.04,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/fg_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 940 600'><rect width='940' height='600' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='615' y='46' text-anchor='middle' font-size='34' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='462' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='767' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><text x='150' y='100' text-anchor='middle' font-size='34' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='150' y='242' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='150' y='492' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><rect x='320' y='125' width='285' height='210' rx='22' fill='#6fc3c0' stroke='none' stroke-width='10'/><text x='340' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><text x='340' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><rect x='625' y='125' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/><rect x='320' y='375' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/><rect x='625' y='375' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.225,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 940 600'><rect width='940' height='600' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='615' y='46' text-anchor='middle' font-size='34' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='462' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='767' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><text x='150' y='100' text-anchor='middle' font-size='34' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='150' y='242' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='150' y='492' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><rect x='320' y='125' width='285' height='210' rx='22' fill='#6fc3c0' stroke='none' stroke-width='10'/><text x='340' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><text x='340' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><rect x='625' y='125' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/><rect x='320' y='375' width='285' height='210' rx='22' fill='#f2b04a' stroke='#1a1410' stroke-width='10'/><text x='340' y='460' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='463' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE</text><text x='340' y='535' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='538' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>3 YRS</text><rect x='625' y='375' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.225,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 940 600'><rect width='940' height='600' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='615' y='46' text-anchor='middle' font-size='34' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='462' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='767' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><text x='150' y='100' text-anchor='middle' font-size='34' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='150' y='242' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='150' y='492' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><rect x='320' y='125' width='285' height='210' rx='22' fill='#6fc3c0' stroke='none' stroke-width='10'/><text x='340' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><text x='340' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><rect x='625' y='125' width='285' height='210' rx='22' fill='#f2b04a' stroke='#1a1410' stroke-width='10'/><text x='645' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='890' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>3 YRS</text><text x='645' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='890' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE</text><rect x='320' y='375' width='285' height='210' rx='22' fill='#f2b04a' stroke='none' stroke-width='10'/><text x='340' y='460' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='463' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE</text><text x='340' y='535' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='538' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>3 YRS</text><rect x='625' y='375' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.225,
+     "enter": "pop",
+     "at": 2.5,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "If both betray: *two* years each.",
+   "transition": "cut",
+   "caption_y": 0.44,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2908,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "sad",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7092,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "sad",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/fg_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 940 600'><rect width='940' height='600' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='615' y='46' text-anchor='middle' font-size='34' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='462' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='767' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><text x='150' y='100' text-anchor='middle' font-size='34' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='150' y='242' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='150' y='492' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><rect x='320' y='125' width='285' height='210' rx='22' fill='#6fc3c0' stroke='none' stroke-width='10'/><text x='340' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><text x='340' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><rect x='625' y='125' width='285' height='210' rx='22' fill='#f2b04a' stroke='none' stroke-width='10'/><text x='645' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='890' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>3 YRS</text><text x='645' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='890' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE</text><rect x='320' y='375' width='285' height='210' rx='22' fill='#f2b04a' stroke='none' stroke-width='10'/><text x='340' y='460' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='463' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE</text><text x='340' y='535' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='538' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>3 YRS</text><rect x='625' y='375' width='285' height='210' rx='22' fill='#e3d8c4' stroke='none' stroke-width='10'/></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.225,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 940 600'><rect width='940' height='600' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='615' y='46' text-anchor='middle' font-size='34' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='462' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='767' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><text x='150' y='100' text-anchor='middle' font-size='34' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='150' y='242' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='150' y='492' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><rect x='320' y='125' width='285' height='210' rx='22' fill='#6fc3c0' stroke='none' stroke-width='10'/><text x='340' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><text x='340' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><rect x='625' y='125' width='285' height='210' rx='22' fill='#f2b04a' stroke='none' stroke-width='10'/><text x='645' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='890' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>3 YRS</text><text x='645' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='890' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE</text><rect x='320' y='375' width='285' height='210' rx='22' fill='#f2b04a' stroke='none' stroke-width='10'/><text x='340' y='460' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='463' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE</text><text x='340' y='535' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='538' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>3 YRS</text><rect x='625' y='375' width='285' height='210' rx='22' fill='#d9534f' stroke='#1a1410' stroke-width='10'/><text x='645' y='460' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='890' y='463' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>2 YRS</text><text x='645' y='535' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='890' y='538' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>2 YRS</text></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.225,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Ravi thinks: whatever Tomas does, betraying means *less* time.",
+   "transition": "slide_left",
+   "caption_y": 0.36,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_left.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.4951,
+     "y": 0.5803,
+     "h": 0.2652,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ],
+      [
+       "explain",
+       1.8
+      ],
+      [
+       "point",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/fg_station_left.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "think",
+     "x": 0.149,
+     "y": 0.6459,
+     "h": 0.4126,
+     "enter": "none",
+     "acting": [
+      [
+       "think",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ],
+      [
+       "point",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 330'><rect width='900' height='330' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='78' text-anchor='middle' font-size='46' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI'S LOGIC</text><text x='60' y='170' font-size='36' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Tomas silent? Betray:</text><text x='840' y='170' text-anchor='end' font-size='40' fill='#46965a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE, not 1</text><text x='60' y='260' font-size='36' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Tomas betrays? Betray:</text><text x='840' y='260' text-anchor='end' font-size='40' fill='#46965a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>2, not 3</text></svg>",
+     "w": 0.84,
+     "x": 0.5,
+     "y": 0.17,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "BETRAY *WINS* EITHER WAY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.285,
+     "size": 64,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "Tomas thinks the *exact same* thing.",
+   "transition": "slide_left",
+   "caption_y": 0.36,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_right.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.5049,
+     "y": 0.5803,
+     "h": 0.2652,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/fg_station_right.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 330'><rect width='900' height='330' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='78' text-anchor='middle' font-size='46' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS'S LOGIC</text><text x='60' y='170' font-size='36' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Ravi silent? Betray:</text><text x='840' y='170' text-anchor='end' font-size='40' fill='#46965a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE, not 1</text><text x='60' y='260' font-size='36' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Ravi betrays? Betray:</text><text x='840' y='260' text-anchor='end' font-size='40' fill='#46965a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>2, not 3</text></svg>",
+     "w": 0.84,
+     "x": 0.5,
+     "y": 0.17,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "So both betray, and get *two* years instead of one.",
+   "transition": "cut",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.2908,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "sad",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.7092,
+     "y": 0.5407,
+     "h": 0.1056,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "sad",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/fg_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 940 600'><rect width='940' height='600' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='615' y='46' text-anchor='middle' font-size='34' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='462' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='767' y='100' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><text x='150' y='100' text-anchor='middle' font-size='34' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='150' y='242' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SILENT</text><text x='150' y='492' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BETRAYS</text><rect x='320' y='125' width='285' height='210' rx='22' fill='#6fc3c0' stroke='none' stroke-width='10'/><text x='340' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><text x='340' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 YR</text><rect x='625' y='125' width='285' height='210' rx='22' fill='#f2b04a' stroke='none' stroke-width='10'/><text x='645' y='210' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='890' y='213' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>3 YRS</text><text x='645' y='285' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='890' y='288' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE</text><rect x='320' y='375' width='285' height='210' rx='22' fill='#f2b04a' stroke='none' stroke-width='10'/><text x='340' y='460' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='585' y='463' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FREE</text><text x='340' y='535' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='585' y='538' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>3 YRS</text><rect x='625' y='375' width='285' height='210' rx='22' fill='#d9534f' stroke='#1a1410' stroke-width='10'/><text x='645' y='460' font-size='26' fill='#7c2533' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI</text><text x='890' y='463' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>2 YRS</text><text x='645' y='535' font-size='26' fill='#2d5a5e' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><text x='890' y='538' text-anchor='end' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>2 YRS</text></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.225,
+     "enter": "none"
+    },
+    {
+     "type": "shape",
+     "shape": "ring",
+     "x": 0.493,
+     "y": 0.191,
+     "w": 0.3,
+     "h": 0.3,
+     "color": "#46965a",
+     "stroke_width": 10,
+     "at": 2.4,
+     "enter": "zoom",
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "BOTH *LOSE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.41,
+     "size": 92,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.3,
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "dur": 1.9,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_right.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.6,
+    "zoom": 1.12,
+    "focus": [
+     0.5,
+     0.42
+    ],
+    "text": "The logic: *W chews*.\nThe result: *L nibbles*.",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "Same trap in a price war: both shops cut prices. Both earn *less*.",
+   "transition": "slide_left",
+   "caption_y": 0.29,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.2,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_market_two.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.278,
+     "y": 0.5312,
+     "h": 0.1486,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ],
+      [
+       "give",
+       1.4
+      ],
+      [
+       "sad",
+       3.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.722,
+     "y": 0.5312,
+     "h": 0.1486,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ],
+      [
+       "give",
+       1.8
+      ],
+      [
+       "sad",
+       3.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "hat": [
+        "fez",
+        "#b03a2e"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#5a4636",
+        "trousers"
+       ],
+       "build": "round",
+       "apron": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/fg_market_two.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5558,
+     "y": 0.5564,
+     "h": 0.1927,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.0005,
+       "y": 0.5603,
+       "scale": 1.0353
+      },
+      {
+       "t": 2.0,
+       "x": 0.5558,
+       "y": 0.5564,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "PRICE *WAR*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 104,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 170'><path d='M40 10 H290 V160 H40 L6 85 Z' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='42' cy='85' r='12' fill='#1a1410'/><circle cx='120' cy='85' r='34' fill='#f2b04a' stroke='#b8822a' stroke-width='6'/><text x='225' y='118' text-anchor='middle' font-size='96' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>10</text></svg>",
+     "w": 0.26,
+     "x": 0.23899280476121842,
+     "y": 0.5647226854610883,
+     "enter": "pop",
+     "at": 0.2,
+     "until": 1.68,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "sx": 1
+      },
+      {
+       "t": 1.3,
+       "sx": 1
+      },
+      {
+       "t": 1.5,
+       "sx": 0.02
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 170'><path d='M40 10 H290 V160 H40 L6 85 Z' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='42' cy='85' r='12' fill='#1a1410'/><circle cx='120' cy='85' r='34' fill='#f2b04a' stroke='#b8822a' stroke-width='6'/><text x='225' y='118' text-anchor='middle' font-size='96' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>8</text></svg>",
+     "w": 0.26,
+     "x": 0.23899280476121842,
+     "y": 0.5647226854610883,
+     "enter": "none",
+     "at": 1.5,
+     "sfx": "click",
+     "keys": [
+      {
+       "t": 0,
+       "sx": 0.02
+      },
+      {
+       "t": 0.2,
+       "sx": 1
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 170'><path d='M40 10 H290 V160 H40 L6 85 Z' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='42' cy='85' r='12' fill='#1a1410'/><circle cx='120' cy='85' r='34' fill='#f2b04a' stroke='#b8822a' stroke-width='6'/><text x='225' y='118' text-anchor='middle' font-size='96' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>10</text></svg>",
+     "w": 0.26,
+     "x": 0.7110071952387815,
+     "y": 0.5647226854610883,
+     "enter": "pop",
+     "at": 0.2,
+     "until": 2.2800000000000002,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "sx": 1
+      },
+      {
+       "t": 1.9000000000000001,
+       "sx": 1
+      },
+      {
+       "t": 2.1,
+       "sx": 0.02
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 170'><path d='M40 10 H290 V160 H40 L6 85 Z' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='42' cy='85' r='12' fill='#1a1410'/><circle cx='120' cy='85' r='34' fill='#f2b04a' stroke='#b8822a' stroke-width='6'/><text x='225' y='118' text-anchor='middle' font-size='96' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>6</text></svg>",
+     "w": 0.26,
+     "x": 0.7110071952387815,
+     "y": 0.5647226854610883,
+     "enter": "none",
+     "at": 2.1,
+     "sfx": "click",
+     "keys": [
+      {
+       "t": 0,
+       "sx": 0.02
+      },
+      {
+       "t": 0.2,
+       "sx": 1
+      }
+     ]
+    },
+    {
+     "type": "shape",
+     "shape": "arrow",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.16,
+     "h": 0.05,
+     "rotate": 90,
+     "color": "#d9534f",
+     "at": 3.4,
+     "enter": "pop",
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "The way out? Repeat the game. In a *1980* computer tournament, the winner was simple:",
+   "transition": "fade",
+   "caption_y": 0.44,
+   "bg": {
+    "type": "radial",
+    "colors": [
+     "#24343d",
+     "#0e1418"
+    ],
+    "pattern": "grid"
+   },
+   "layers": [
+    {
+     "type": "text",
+     "text": "REPEAT THE *GAME*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 96,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/computer.png",
+     "x": 0.3,
+     "y": 0.62,
+     "w": 0.36,
+     "enter": "none",
+     "at": 1.6,
+     "keys": [
+      {
+       "t": 0,
+       "y": 1.1
+      },
+      {
+       "t": 0.5,
+       "y": 0.62,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/computer.png",
+     "x": 0.7,
+     "y": 0.62,
+     "w": 0.36,
+     "enter": "none",
+     "at": 1.9,
+     "flip": true,
+     "keys": [
+      {
+       "t": 0,
+       "y": 1.1
+      },
+      {
+       "t": 0.5,
+       "y": 0.62,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "counter",
+     "from": 1900,
+     "to": 1980,
+     "count_dur": 0.9,
+     "commas": false,
+     "at": 2.2,
+     "x": 0.5,
+     "y": 0.25,
+     "size": 160,
+     "color": "#f2b04a",
+     "enter": "pop",
+     "sfx": "ding"
+    },
+    {
+     "type": "text",
+     "text": "VS",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.6,
+     "size": 90,
+     "color": "#f6efe2",
+     "stroke": "#0b0f12",
+     "stroke_width": 6,
+     "enter": "zoom",
+     "at": 2.6
+    }
+   ]
+  },
+  {
+   "say": "be nice first, then *copy* whatever the other player did last.",
+   "transition": "cut",
+   "caption_y": 0.41,
+   "bg": {
+    "type": "radial",
+    "colors": [
+     "#24343d",
+     "#0e1418"
+    ],
+    "pattern": "grid"
+   },
+   "layers": [
+    {
+     "type": "text",
+     "text": "THEM",
+     "font": "body",
+     "x": 0.5,
+     "y": 0.11,
+     "size": 60,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "color": "#6fc3c0",
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "WINNER",
+     "font": "body",
+     "x": 0.5,
+     "y": 0.73,
+     "size": 60,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "color": "#f2b04a",
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'><circle cx='75' cy='75' r='66' fill='#46965a' stroke='#1a1410' stroke-width='6'/><text x='75' y='92' text-anchor='middle' font-size='46' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>NICE</text></svg>",
+     "w": 0.15,
+     "x": 0.2,
+     "y": 0.2,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'><circle cx='75' cy='75' r='66' fill='#46965a' stroke='#1a1410' stroke-width='6'/><text x='75' y='92' text-anchor='middle' font-size='46' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>NICE</text></svg>",
+     "w": 0.15,
+     "x": 0.2,
+     "y": 0.62,
+     "enter": "pop",
+     "at": 0.6
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'><circle cx='75' cy='75' r='66' fill='#d9534f' stroke='#1a1410' stroke-width='6'/><text x='75' y='92' text-anchor='middle' font-size='46' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MEAN</text></svg>",
+     "w": 0.15,
+     "x": 0.4,
+     "y": 0.2,
+     "enter": "pop",
+     "at": 1.05,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'><circle cx='75' cy='75' r='66' fill='#46965a' stroke='#1a1410' stroke-width='6'/><text x='75' y='92' text-anchor='middle' font-size='46' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>NICE</text></svg>",
+     "w": 0.15,
+     "x": 0.4,
+     "y": 0.62,
+     "enter": "pop",
+     "at": 1.35
+    },
+    {
+     "type": "shape",
+     "shape": "arrow",
+     "x": 0.30000000000000004,
+     "y": 0.41,
+     "w": 0.34,
+     "h": 0.022,
+     "rotate": 75,
+     "color": "#f2b04a",
+     "at": 1.2,
+     "enter": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'><circle cx='75' cy='75' r='66' fill='#46965a' stroke='#1a1410' stroke-width='6'/><text x='75' y='92' text-anchor='middle' font-size='46' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>NICE</text></svg>",
+     "w": 0.15,
+     "x": 0.6000000000000001,
+     "y": 0.2,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'><circle cx='75' cy='75' r='66' fill='#d9534f' stroke='#1a1410' stroke-width='6'/><text x='75' y='92' text-anchor='middle' font-size='46' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MEAN</text></svg>",
+     "w": 0.15,
+     "x": 0.6000000000000001,
+     "y": 0.62,
+     "enter": "pop",
+     "at": 2.1
+    },
+    {
+     "type": "shape",
+     "shape": "arrow",
+     "x": 0.5000000000000001,
+     "y": 0.41,
+     "w": 0.34,
+     "h": 0.022,
+     "rotate": 75,
+     "color": "#f2b04a",
+     "at": 1.95,
+     "enter": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'><circle cx='75' cy='75' r='66' fill='#46965a' stroke='#1a1410' stroke-width='6'/><text x='75' y='92' text-anchor='middle' font-size='46' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>NICE</text></svg>",
+     "w": 0.15,
+     "x": 0.8,
+     "y": 0.2,
+     "enter": "pop",
+     "at": 2.55,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'><circle cx='75' cy='75' r='66' fill='#46965a' stroke='#1a1410' stroke-width='6'/><text x='75' y='92' text-anchor='middle' font-size='46' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>NICE</text></svg>",
+     "w": 0.15,
+     "x": 0.8,
+     "y": 0.62,
+     "enter": "pop",
+     "at": 2.8499999999999996
+    },
+    {
+     "type": "shape",
+     "shape": "arrow",
+     "x": 0.7000000000000001,
+     "y": 0.41,
+     "w": 0.34,
+     "h": 0.022,
+     "rotate": 75,
+     "color": "#f2b04a",
+     "at": 2.6999999999999997,
+     "enter": "fade"
+    }
+   ]
+  },
+  {
+   "say": "*Tit for tat*. Trust first, but keep *score*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-a/assets/plate_station_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      },
+      {
+       "t": 3.5,
+       "scale": 1.38
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ],
+      [
+       "smirk",
+       2.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "TIT FOR *TAT*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 150,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 0.1,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}

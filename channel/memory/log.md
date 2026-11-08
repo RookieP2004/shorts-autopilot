@@ -10,3 +10,4 @@ One line per posted video, appended by every production run (`python -m autopilo
 2026-11-08-m3 | 2026-11-08 02:48 IST | Why can't we just print more money? 💸 | big-question | question | why printing money causes inflation | 54.27s | https://youtube.com/shorts/QFhXI3hT9Ik | QFhXI3hT9Ik | one-off: style test v3: living town (faceless townspeople), depth staging, smoother stall/apples | PILOT (private, style test v3)
 - 2026-11-08: owner approved v3 (2026-11-08-m3, QFhXI3hT9Ik) as the final house style; it is the reference video for every new Short.
 2026-11-08-b | 2026-11-08 18:29 IST | Do we really only use 10% of our brain? 🧠 | myth-bust | myth-bust | the 10% of the brain myth | 39.13s | https://youtube.com/shorts/AFpQ3oii2KQ | AFpQ3oii2KQ
+2026-11-08-a | 2026-11-08 19:19 IST | Why do smart people both make the worse choice? 🤝 | big-question | question | the prisoner's dilemma (game theory) | 54.47s | https://youtube.com/shorts/XEU9J3jCoUQ | XEU9J3jCoUQ

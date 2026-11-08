@@ -9,6 +9,7 @@
 - [big-question] What is opportunity cost? · one apple vs one hour, everyday economics made concrete · https://en.wikipedia.org/wiki/Opportunity_cost
 - [myth-bust] "Your blood is blue inside your body" · body niche, easy before/after visual · https://en.wikipedia.org/wiki/Blood#Color
 - [scale-shock] How many atoms are in one grain of sand? · physics niche, counter-up hook · https://en.wikipedia.org/wiki/Avogadro_constant
-- [big-question] What is the prisoner's dilemma? · psychology/game theory, two townspeople act it out · https://plato.stanford.edu/entries/prisoner-dilemma/
 - [big-question] Why does your brain eat 20% of your energy? · follow-up angle on the brain myth: the costliest organ, shown as a city power grid · https://www.livescience.com/health/neuroscience/do-we-really-use-only-10-of-our-brains
 - [myth-bust] "Goldfish have a 3-second memory" · classic myth, cute 3D fishbowl set, real studies show months · https://en.wikipedia.org/wiki/Goldfish
+- [big-question] What is a Nash equilibrium? · natural follow-up to the prisoner's dilemma, two rival stalls choosing prices · https://www.econlib.org/library/Enc/PrisonersDilemma.html
+- [big-question] What is the tragedy of the commons? · shared fishing pond, every villager takes one more fish · https://en.wikipedia.org/wiki/Tragedy_of_the_commons
