@@ -69,6 +69,16 @@ def cycle(day, today):
     return start, _on_day(ny, nm, day)
 
 
+def _private_tests(log=None):
+    """Slot ids logged as PILOT (private test uploads) in channel/memory/log.md."""
+    log = log or os.path.join(os.path.dirname(LEDGER), "memory", "log.md")
+    try:
+        lines = open(log, encoding="utf-8").read().splitlines()
+    except OSError:
+        return set()
+    return {ln.split("|")[0].strip() for ln in lines if "|" in ln and "PILOT" in ln}
+
+
 def status(now=None, path=LEDGER, style=None):
     s = settings(style)
     now = now or _now()
@@ -100,7 +110,8 @@ def status(now=None, path=LEDGER, style=None):
                              for e in used)
         reviews_left = sum(1 for k in range(days_left) if (today + dt.timedelta(days=k)).weekday() == 6
                            and not (k == 0 and reviewed_today))
-    todays = [e for e in used if e["kind"] == "upload"
+    tests = _private_tests()   # private pilots/style tests aren't real posts, so they don't fill the daily cap
+    todays = [e for e in used if e["kind"] == "upload" and e.get("ref") not in tests
               and dt.datetime.fromisoformat(e["ts"]).astimezone(IST).date() == today]
     today_uploads = len(todays)
     regular_done = any(e.get("ref", "").endswith("-a") for e in todays)   # slot a = the daily regular Short
