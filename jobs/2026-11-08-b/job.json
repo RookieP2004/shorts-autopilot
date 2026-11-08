@@ -1,0 +1,1412 @@
+{
+ "id": "2026-11-08-b",
+ "title": "Do we really only use 10% of our brain? 🧠",
+ "description": "The 10% brain myth, busted: scans show activity all over the brain, and a 2% organ that burns 20% of your energy isn't sitting idle.\n\nSources:\nhttps://www.livescience.com/health/neuroscience/do-we-really-use-only-10-of-our-brains\nhttps://en.wikipedia.org/wiki/Ten-percent-of-the-brain_myth\nhttps://www.sciencefocus.com/author/deanburnett/news/myth-use-10-per-cent-brain",
+ "tags": [
+  "10 percent brain myth",
+  "brain",
+  "neuroscience",
+  "myth busted",
+  "psychology",
+  "science explained",
+  "human body",
+  "brain facts"
+ ],
+ "hashtags": [
+  "#brain",
+  "#science"
+ ],
+ "meta": {
+  "format": "myth-bust",
+  "topic": "the 10% of the brain myth",
+  "hook": "myth-bust",
+  "idea_source": "backlog",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.livescience.com/health/neuroscience/do-we-really-use-only-10-of-our-brains",
+   "https://en.wikipedia.org/wiki/Ten-percent-of-the-brain_myth",
+   "https://lenz.io/c/adult-human-brain-body-weight-energy-consumption-50c89742"
+  ],
+  "humour": {
+   "trend": "'Always Has Been' format (rising on Imgflip this week), as a text card",
+   "beat": "deadpan",
+   "scene": 7
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-08-b/assets.py",
+ "scenes": [
+  {
+   "say": "You've heard you only use *ten percent* of your brain.",
+   "caption_y": 0.33,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.06,
+      "focus": [
+       0.45,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.8018,
+     "y": 0.5518,
+     "h": 0.3,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a8704e",
+       "hair": [
+        "#140f0c",
+        "bun"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "earrings": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.204,
+     "y": 0.6121,
+     "h": 0.4298,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ],
+      [
+       "crossed",
+       2.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.7158,
+       "y": 0.6529,
+       "scale": 1.1908
+      },
+      {
+       "t": 1.0,
+       "x": 0.204,
+       "y": 0.6121,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "MYTH:",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.085,
+     "size": 80,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "color": "#d9534f",
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "YOU ONLY USE *10%* OF YOUR BRAIN",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.175,
+     "size": 92,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 110'><rect x='5' y='5' width='750' height='100' rx='50' fill='#16232b' stroke='#f6efe2' stroke-width='8'/><rect x='18' y='18' width='76' height='74' rx='37' fill='#f2b04a'/><text x='430' y='74' text-anchor='middle' font-size='50' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800' opacity='0.55'>90% UNUSED?</text></svg>",
+     "w": 0.66,
+     "x": 0.5,
+     "y": 0.27,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Nope. You use *all* of it.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.2,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "point",
+       0.9
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 468 200'><rect x='10' y='10' width='448' height='180' rx='22' fill='#f6efe2' fill-opacity='0.85' stroke='#d9534f' stroke-width='14'/><rect x='30' y='30' width='408' height='140' rx='12' fill='none' stroke='#d9534f' stroke-width='5'/><text x='234.0' y='140' text-anchor='middle' font-size='120' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>BUSTED</text></svg>",
+     "w": 0.62,
+     "x": 0.5,
+     "y": 0.17,
+     "rot": -8,
+     "at": 0.55,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 2.2,
+       "opacity": 0
+      },
+      {
+       "t": 0.18,
+       "scale": 1.0,
+       "opacity": 1,
+       "ease": "out"
+      }
+     ],
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "Brain scans light up *everywhere*, even when you're resting.",
+   "transition": "slide_left",
+   "caption_y": 0.24,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.5,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_lab_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.414,
+     "y": 0.425,
+     "w": 0.225,
+     "opacity": 0.85,
+     "at": 0.5,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.6362181433337714,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.542,
+     "y": 0.474,
+     "w": 0.166,
+     "opacity": 0.85,
+     "at": 0.63,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.8537178665947102,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.475,
+     "y": 0.58,
+     "w": 0.172,
+     "opacity": 0.85,
+     "at": 0.76,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.7116194823035072,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.566,
+     "y": 0.481,
+     "w": 0.258,
+     "opacity": 0.85,
+     "at": 0.89,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.6232913403088781,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.735,
+     "y": 0.457,
+     "w": 0.174,
+     "opacity": 0.85,
+     "at": 1.02,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.6588961190391842,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.405,
+     "y": 0.578,
+     "w": 0.178,
+     "opacity": 0.85,
+     "at": 1.15,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.8908000818312332,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.603,
+     "y": 0.476,
+     "w": 0.215,
+     "opacity": 0.85,
+     "at": 1.28,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.6313944874866616,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.628,
+     "y": 0.488,
+     "w": 0.191,
+     "opacity": 0.85,
+     "at": 1.41,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.8927809317538193,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.492,
+     "y": 0.459,
+     "w": 0.239,
+     "opacity": 0.85,
+     "at": 1.54,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.9494972168647857,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.366,
+     "y": 0.522,
+     "w": 0.213,
+     "opacity": 0.85,
+     "at": 1.67,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 1.0375687477867146,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.658,
+     "y": 0.456,
+     "w": 0.258,
+     "opacity": 0.85,
+     "at": 1.8,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.659032889127481,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.471,
+     "y": 0.564,
+     "w": 0.175,
+     "opacity": 0.85,
+     "at": 1.93,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.8444815502379028,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.679,
+     "y": 0.522,
+     "w": 0.248,
+     "opacity": 0.85,
+     "at": 2.06,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.7568737564240484,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.637,
+     "y": 0.527,
+     "w": 0.218,
+     "opacity": 0.85,
+     "at": 2.19,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.8281026656507066,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.504,
+     "y": 0.543,
+     "w": 0.166,
+     "opacity": 0.85,
+     "at": 2.32,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.950746010652212,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><radialGradient id='g'><stop offset='0' stop-color='#fff3a0'/><stop offset='0.35' stop-color='#ffb23a' stop-opacity='0.9'/><stop offset='1' stop-color='#ff6a00' stop-opacity='0'/></radialGradient></defs><circle cx='100' cy='100' r='100' fill='url(#g)'/></svg>",
+     "x": 0.713,
+     "y": 0.455,
+     "w": 0.199,
+     "opacity": 0.85,
+     "at": 2.45,
+     "enter": "zoom",
+     "enter_dur": 0.25,
+     "loop": "pulse",
+     "loop_speed": 0.9343263579420942,
+     "loop_amp": 0.5
+    },
+    {
+     "type": "shape",
+     "shape": "ring",
+     "x": 0.5000000084621987,
+     "y": 0.5082087071990267,
+     "w": 0.6,
+     "h": 0.6,
+     "color": "#ffcf73",
+     "stroke_width": 8,
+     "at": 0.6,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 0.5,
+       "opacity": 0.9
+      },
+      {
+       "t": 1.0,
+       "scale": 1.5,
+       "opacity": 0
+      }
+     ],
+     "until": 1.6
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 264 96'><rect x='4' y='4' width='256' height='88' rx='44' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='46' cy='48' r='16' fill='#f2b04a'/><text x='152.0' y='64' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MOVING</text></svg>",
+     "w": 0.36,
+     "x": 0.27,
+     "y": 0.36,
+     "enter": "pop",
+     "at": 1.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 264 96'><rect x='4' y='4' width='256' height='88' rx='44' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='46' cy='48' r='16' fill='#6fc3c0'/><text x='152.0' y='64' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SEEING</text></svg>",
+     "w": 0.36,
+     "x": 0.74,
+     "y": 0.37,
+     "enter": "pop",
+     "at": 1.5,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 264 96'><rect x='4' y='4' width='256' height='88' rx='44' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='46' cy='48' r='16' fill='#d9534f'/><text x='152.0' y='64' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MEMORY</text></svg>",
+     "w": 0.36,
+     "x": 0.25,
+     "y": 0.66,
+     "enter": "pop",
+     "at": 1.9,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 366 96'><rect x='4' y='4' width='358' height='88' rx='44' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='46' cy='48' r='16' fill='#9b59b6'/><text x='203.0' y='64' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BREATHING</text></svg>",
+     "w": 0.36,
+     "x": 0.7,
+     "y": 0.68,
+     "enter": "pop",
+     "at": 2.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "EVEN AT *REST*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 100,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.9,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "Your brain is just *2%* of your weight, but it burns about *20%* of your energy.",
+   "transition": "cut",
+   "caption_y": 0.39,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8634,
+     "y": 0.558,
+     "h": 0.1642,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       3.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a8704e",
+       "hair": [
+        "#140f0c",
+        "bun"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "earrings": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.3965,
+     "y": 0.5625,
+     "h": 0.1722,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ],
+      [
+       "surprised",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.0232,
+       "y": 0.5775,
+       "scale": 1.0906
+      },
+      {
+       "t": 1.1,
+       "x": 0.3965,
+       "y": 0.5625,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       3.5,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 420'><rect width='900' height='420' rx='36' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='225' y='80' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WEIGHT</text><text x='675' y='80' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>ENERGY</text><line x1='450' y1='40' x2='450' y2='380' stroke='#1a1410' stroke-width='3' opacity='0.25'/><rect x='95' y='300' width='260' height='40' rx='20' fill='#d8cdb8'/><rect x='95' y='300' width='16' height='40' rx='8' fill='#6fc3c0'/><rect x='545' y='300' width='260' height='40' rx='20' fill='#d8cdb8'/><rect x='545' y='300' width='62' height='40' rx='20' fill='#f2b04a'/><text x='225' y='385' text-anchor='middle' font-size='30' fill='#5a4e44' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>of your body</text><text x='675' y='385' text-anchor='middle' font-size='30' fill='#5a4e44' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>at rest</text></svg>",
+     "w": 0.84,
+     "x": 0.5,
+     "y": 0.2,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 2,
+     "suffix": "%",
+     "count_dur": 0.6,
+     "at": 0.9,
+     "x": 0.29,
+     "y": 0.205,
+     "size": 120,
+     "color": "#34425c",
+     "enter": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 20,
+     "suffix": "%",
+     "count_dur": 1.0,
+     "at": 2.9,
+     "x": 0.71,
+     "y": 0.205,
+     "size": 120,
+     "color": "#d98a1a",
+     "enter": "pop",
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "Think of a city at night. Not every light is on at once...",
+   "transition": "fade",
+   "caption_y": 0.41,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_town_west.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_town_east.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0
+      },
+      {
+       "t": 2.2,
+       "opacity": 0
+      },
+      {
+       "t": 2.7,
+       "opacity": 1
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3573,
+     "y": 0.6045,
+     "h": 0.1212,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3622,
+       "y": 0.5972,
+       "scale": 0.9158
+      },
+      {
+       "t": 4.0,
+       "x": 0.3413,
+       "y": 0.6184,
+       "scale": 1.1584,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6644,
+     "y": 0.6671,
+     "h": 0.2075,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6511,
+       "y": 0.6314,
+       "scale": 0.7629
+      },
+      {
+       "t": 4.0,
+       "x": 0.651,
+       "y": 0.6769,
+       "scale": 1.066,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.217,
+     "y": 0.6905,
+     "h": 0.245,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ],
+      [
+       "explain",
+       2.8
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.253,
+       "y": 0.7019,
+       "scale": 1.0653
+      },
+      {
+       "t": 1.2,
+       "x": 0.217,
+       "y": 0.6905,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "YOUR BRAIN = A *CITY*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 86,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "NOT ALL *AT ONCE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 80,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.5,
+     "sfx": "whoosh"
+    }
+   ]
+  },
+  {
+   "say": "...but over a day, every neighbourhood gets *busy*.",
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.07,
+     1.0
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_town_all.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5339,
+     "y": 0.5943,
+     "h": 0.1071,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6208,
+       "y": 0.5887,
+       "scale": 0.9272
+      },
+      {
+       "t": 3.0,
+       "x": 0.5208,
+       "y": 0.6049,
+       "scale": 1.1363,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.3413,
+     "y": 0.6184,
+     "h": 0.1404,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3413,
+       "y": 0.6184,
+       "scale": 1.0
+      },
+      {
+       "t": 3.0,
+       "x": 0.3383,
+       "y": 0.6457,
+       "scale": 1.2685,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2077,
+     "y": 0.6372,
+     "h": 0.1663,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#9b59b6",
+        "dress"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.651,
+     "y": 0.6769,
+     "h": 0.2212,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "cheer",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.0,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.217,
+     "y": 0.6905,
+     "h": 0.245,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "EVERY DISTRICT *USED*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 86,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_town_all.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.5,
+    "zoom": 1.15,
+    "focus": [
+     0.5,
+     0.42
+    ],
+    "text": "\"Wait, it's ALL brain?\"\n*\"Always has been.\"*",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "The ten percent idea? Probably a *1936* self-help book, misquoting a *Harvard* psychologist.",
+   "transition": "slide_left",
+   "caption_y": 0.36,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "think",
+     "x": 0.2247,
+     "y": 0.6117,
+     "h": 0.4291,
+     "enter": "none",
+     "acting": [
+      [
+       "think",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ],
+      [
+       "shrug",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/book.png",
+     "x": 0.5,
+     "y": 0.19,
+     "w": 0.3,
+     "enter": "none",
+     "at": 0.3,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": -30
+      },
+      {
+       "t": 0.6,
+       "y": 0.19,
+       "rot": -6,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 642 200'><rect x='10' y='10' width='622' height='180' rx='22' fill='#f6efe2' fill-opacity='0.85' stroke='#d9534f' stroke-width='14'/><rect x='30' y='30' width='582' height='140' rx='12' fill='none' stroke='#d9534f' stroke-width='5'/><text x='321.0' y='140' text-anchor='middle' font-size='120' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>MISQUOTED</text></svg>",
+     "w": 0.66,
+     "x": 0.5,
+     "y": 0.27,
+     "rot": 7,
+     "at": 3.3,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 2.0,
+       "opacity": 0
+      },
+      {
+       "t": 0.18,
+       "scale": 1.0,
+       "opacity": 1,
+       "ease": "out"
+      }
+     ],
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "So there's no secret ninety percent to unlock. You already use *all of it*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-b/assets/plate_lab_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      },
+      {
+       "t": 4,
+       "scale": 1.38
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "warm",
+       2.0
+      ],
+      [
+       "point",
+       3.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "*100%*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 220,
+     "max_w": 0.86,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 3.0,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
