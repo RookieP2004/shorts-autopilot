@@ -3,7 +3,6 @@
 `- [format] idea · why it should work · source link`. Production runs add runners-up and delete what they use.
 
 - [big-question] Why do we have leap years? · everyone knows Feb 29, few know the 11-minutes-a-year reason · https://en.wikipedia.org/wiki/Leap_year
-- [scale-shock] How many ants live on Earth? · 20 quadrillion is a number people love · https://www.pnas.org/doi/10.1073/pnas.2201550119
 - [myth-bust] "The Great Wall is visible from space" · classic myth, cosmos set fits · https://en.wikipedia.org/wiki/Great_Wall_of_China
 - [big-question] Why do banks pay you interest? · money niche, town/bank set reuses the market cast · https://www.investopedia.com/terms/i/interest.asp
 - [big-question] What is opportunity cost? · one apple vs one hour, everyday economics made concrete · https://en.wikipedia.org/wiki/Opportunity_cost
@@ -13,3 +12,5 @@
 - [myth-bust] "Goldfish have a 3-second memory" · classic myth, cute 3D fishbowl set, real studies show months · https://en.wikipedia.org/wiki/Goldfish
 - [big-question] What is a Nash equilibrium? · natural follow-up to the prisoner's dilemma, two rival stalls choosing prices · https://www.econlib.org/library/Enc/PrisonersDilemma.html
 - [big-question] What is the tragedy of the commons? · shared fishing pond, every villager takes one more fish · https://en.wikipedia.org/wiki/Tragedy_of_the_commons
+- [scale-shock] How many cells are in your body? · ~37 trillion, counter-up hook, body-interior set · https://pubmed.ncbi.nlm.nih.gov/23829164/
+- [scale-shock] How heavy is a cloud? · a fluffy cumulus weighs ~500 tonnes, shown as elephants on a town scale · https://www.usgs.gov/special-topics/water-science-school/science/how-much-does-a-cloud-weigh

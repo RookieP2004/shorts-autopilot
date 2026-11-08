@@ -1,0 +1,3584 @@
+{
+ "id": "2026-11-08-c",
+ "title": "There are 2.5 million ants for every human 🐜",
+ "description": "Twenty quadrillion ants live on Earth. Shared out, that's about two and a half million each, and together they outweigh every wild bird and wild mammal combined.\n\nSources: Schultheiss et al., \"The abundance, biomass, and distribution of ants on Earth\", PNAS (2022) https://www.pnas.org/doi/10.1073/pnas.2201550119 ; https://phys.org/news/2022-09-earth-harbours-ants-wild-birds.html ; world population: https://www.census.gov/newsroom/stories/world-population-day.html",
+ "tags": [
+  "ants",
+  "how many ants",
+  "science",
+  "nature",
+  "biology",
+  "insects",
+  "scale",
+  "facts",
+  "explained"
+ ],
+ "hashtags": [
+  "#science",
+  "#ants"
+ ],
+ "meta": {
+  "format": "scale-shock",
+  "topic": "how many ants live on Earth (20 quadrillion)",
+  "hook": "number-shock",
+  "idea_source": "backlog (ideas.md) + PNAS 2022",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.pnas.org/doi/10.1073/pnas.2201550119",
+   "https://phys.org/news/2022-09-earth-harbours-ants-wild-birds.pdf",
+   "https://cdn.www.census.gov/newsroom/stories/world-population-day.html"
+  ],
+  "humour": {
+   "trend": "'What's up brah?' unbothered walk-up meme (Nov 2026)",
+   "beat": "side_eye",
+   "scene": 9
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-08-c/assets.py",
+ "scenes": [
+  {
+   "say": "Twenty *quadrillion* ants are alive on Earth, right now.",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.07,
+      "focus": [
+       0.55,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3184,
+     "y": 0.4826,
+     "h": 0.2784,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.6102,
+     "y": 0.4812,
+     "h": 0.2755,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "surprised",
+       1.9
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/fg_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.8666,
+     "y": 0.6061,
+     "h": 0.5513,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.5
+      ],
+      [
+       "warm",
+       2.8
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7096734162587128,
+     "w": 0.035,
+     "enter": "none",
+     "at": 0.0,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7096734162587128,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6757700156133841,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.4,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7185004863761528,
+     "w": 0.035,
+     "enter": "none",
+     "at": 0.25,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7185004863761528,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6845970857308241,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.65,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7084689167299505,
+     "w": 0.035,
+     "enter": "none",
+     "at": 0.5,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7084689167299505,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6745655160846218,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.9,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7154107490205995,
+     "w": 0.035,
+     "enter": "none",
+     "at": 0.75,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7154107490205995,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6815073483752708,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.15,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7079751691627493,
+     "w": 0.035,
+     "enter": "none",
+     "at": 1.0,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7079751691627493,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6740717685174206,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.4,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7099222377652893,
+     "w": 0.035,
+     "enter": "none",
+     "at": 1.25,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7099222377652893,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6760188371199606,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.65,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7189424884160912,
+     "w": 0.035,
+     "enter": "none",
+     "at": 1.5,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7189424884160912,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6850390877707625,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.9,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7094657175288072,
+     "w": 0.035,
+     "enter": "none",
+     "at": 1.75,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7094657175288072,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6755623168834785,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.15,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7146553671670055,
+     "w": 0.035,
+     "enter": "none",
+     "at": 2.0,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7146553671670055,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6807519665216768,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.4,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.712462551099409,
+     "w": 0.035,
+     "enter": "none",
+     "at": 2.25,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.712462551099409,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6785591504540803,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.65,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7123905351197979,
+     "w": 0.035,
+     "enter": "none",
+     "at": 2.5,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7123905351197979,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6784871344744692,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.9,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7128927382728104,
+     "w": 0.035,
+     "enter": "none",
+     "at": 2.75,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7128927382728104,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6789893376274817,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.15,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7092597160530524,
+     "w": 0.035,
+     "enter": "none",
+     "at": 3.0,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7092597160530524,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6753563154077237,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.4,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7169192012297358,
+     "w": 0.035,
+     "enter": "none",
+     "at": 3.25,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7169192012297358,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6830158005844071,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.65,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "text",
+     "text": "20,000,000,000,000,000",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 80,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none",
+     "color": "accent"
+    },
+    {
+     "type": "text",
+     "text": "ANTS ON EARTH, *RIGHT NOW*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 66,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "That's a two, followed by *sixteen zeros*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.6,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "explain",
+       1.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "2 + *16 ZEROS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Way too big to picture. So let's *share them out*.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.08,
+      "focus": [
+       0.6,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_park_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5906241175023373,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.0,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5906241175023373,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5132928482621714,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.6,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5923595255349268,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.2,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5923595255349268,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5150282562947608,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.8000000000000003,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5897892256957404,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.4,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5897892256957404,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5124579564555745,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.0,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5927505395530887,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.6000000000000001,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5927505395530887,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5154192703129227,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.2,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5944412963765817,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.8,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5944412963765817,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5171100271364157,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.4000000000000004,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.6003741016259898,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.0,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.6003741016259898,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5230428323858238,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.6,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5940982350711493,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.2000000000000002,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5940982350711493,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5167669658309834,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.8000000000000003,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5909141011484199,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.4000000000000001,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5909141011484199,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5135828319082539,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.0,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5926496104934332,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.6,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5926496104934332,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5153183412532673,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.2,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.6014485587859031,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.8,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.6014485587859031,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5241172895457371,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.4,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5903063941894768,
+     "w": 0.07,
+     "enter": "none",
+     "at": 2.0,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5903063941894768,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5129751249493109,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.6,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5969913455642905,
+     "w": 0.07,
+     "enter": "none",
+     "at": 2.2,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5969913455642905,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5196600763241245,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.800000000000001,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5940757916319394,
+     "w": 0.07,
+     "enter": "none",
+     "at": 2.4000000000000004,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5940757916319394,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5167445223917734,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.0,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5974794480803922,
+     "w": 0.07,
+     "enter": "none",
+     "at": 2.6,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5974794480803922,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5201481788402262,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.2,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.593610593066816,
+     "w": 0.07,
+     "enter": "none",
+     "at": 2.8000000000000003,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.593610593066816,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.51627932382665,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.4,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5978449368803219,
+     "w": 0.07,
+     "enter": "none",
+     "at": 3.0,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5978449368803219,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5205136676401559,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.6,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5955202964409311,
+     "w": 0.07,
+     "enter": "none",
+     "at": 3.2,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5955202964409311,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5181890272007651,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.800000000000001,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 0.7393168109171787,
+     "y": 0.5973459864076174,
+     "w": 0.07,
+     "enter": "none",
+     "at": 3.4000000000000004,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7393168109171787,
+       "y": 0.5973459864076174,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3141299579856312,
+       "y": 0.5200147171674514,
+       "scale": 0.6428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 6.0,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/fg_park_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "TOO BIG TO *PICTURE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Split them between all *eight billion* people on Earth...",
+   "transition": "zoom",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_park_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4567,
+     "y": 0.5246,
+     "h": 0.1342,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "wave",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.6001,
+     "y": 0.5264,
+     "h": 0.1359,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/fg_park_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.2191,
+     "y": 0.5148,
+     "h": 0.1241,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#9b59b6"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bag": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.9564,
+     "y": 0.557,
+     "h": 0.1672,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#46965a"
+       ],
+       "top": [
+        "#34425c",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.062,
+       "y": 0.5447,
+       "scale": 0.9252
+      },
+      {
+       "t": 2.2,
+       "x": 0.8541,
+       "y": 0.5637,
+       "scale": 1.0413,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": -0.0769,
+     "y": 0.5895,
+     "h": 0.2001,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#f6efe2",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.2842,
+       "y": 0.602,
+       "scale": 1.0635
+      },
+      {
+       "t": 2.4,
+       "x": 0.1934,
+       "y": 0.5722,
+       "scale": 0.913,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.649,
+     "y": 0.6002,
+     "h": 0.2154,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 300'><rect width='900' height='300' rx='34' fill='#f6efe2'/><rect width='900' height='300' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><text x='450' y='118' text-anchor='middle' font-size='66' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>20 QUADRILLION ANTS</text><text x='450' y='200' text-anchor='middle' font-size='64' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>/  8 BILLION PEOPLE</text><rect x='300' y='228' width='300' height='10' rx='5' fill='#1a1410' opacity='0.2'/></svg>",
+     "w": 0.82,
+     "x": 0.5,
+     "y": 0.17,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "...and every single person gets around *two and a half million* ants.",
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "punch": [
+     2.2
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3184,
+     "y": 0.4826,
+     "h": 0.2784,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.3
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6102,
+     "y": 0.4812,
+     "h": 0.2755,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.2
+      ],
+      [
+       "sad",
+       3.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.25,
+       0.04,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/fg_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8907,
+     "y": 0.4902,
+     "h": 0.294,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.3
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#46965a"
+       ],
+       "top": [
+        "#34425c",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.35,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": -0.145,
+     "y": 0.5222,
+     "h": 0.3596,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#f6efe2",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7177694454661961,
+     "w": 0.035,
+     "enter": "none",
+     "at": 0.0,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7177694454661961,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6838660448208674,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.4,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7139313844852035,
+     "w": 0.035,
+     "enter": "none",
+     "at": 0.22,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7139313844852035,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6800279838398748,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.62,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7086586016943928,
+     "w": 0.035,
+     "enter": "none",
+     "at": 0.44,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7086586016943928,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6747552010490641,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.84,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7077254279127295,
+     "w": 0.035,
+     "enter": "none",
+     "at": 0.66,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7077254279127295,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6738220272674008,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.06,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7183055631536791,
+     "w": 0.035,
+     "enter": "none",
+     "at": 0.88,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7183055631536791,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6844021625083504,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.28,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7128169479088454,
+     "w": 0.035,
+     "enter": "none",
+     "at": 1.1,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7128169479088454,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6789135472635167,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.5,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.70927919391972,
+     "w": 0.035,
+     "enter": "none",
+     "at": 1.32,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.70927919391972,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6753757932743913,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.7199999999999998,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7183054778435938,
+     "w": 0.035,
+     "enter": "none",
+     "at": 1.54,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7183054778435938,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6844020771982651,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.94,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7139004873728224,
+     "w": 0.035,
+     "enter": "none",
+     "at": 1.76,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7139004873728224,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6799970867274937,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.16,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7157002434641879,
+     "w": 0.035,
+     "enter": "none",
+     "at": 1.98,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7157002434641879,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6817968428188592,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.38,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7175244621719374,
+     "w": 0.035,
+     "enter": "none",
+     "at": 2.2,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7175244621719374,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6836210615266087,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.6,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7103807847088992,
+     "w": 0.035,
+     "enter": "none",
+     "at": 2.42,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7103807847088992,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6764773840635705,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 4.82,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7112333068106936,
+     "w": 0.035,
+     "enter": "none",
+     "at": 2.64,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7112333068106936,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6773299061653649,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.04,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7174898639985263,
+     "w": 0.035,
+     "enter": "none",
+     "at": 2.86,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7174898639985263,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6835864633531976,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.26,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7085726547367673,
+     "w": 0.035,
+     "enter": "none",
+     "at": 3.08,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7085726547367673,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6746692540914386,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.48,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant_side.png",
+     "x": 1.126665177561537,
+     "y": 0.7161244895384721,
+     "w": 0.035,
+     "enter": "none",
+     "at": 3.3,
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.6,
+     "loop_speed": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.126665177561537,
+       "y": 0.7161244895384721,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": 0.603063619880301,
+       "y": 0.6822210888931434,
+       "scale": 0.7428571428571428,
+       "ease": "linear"
+      }
+     ],
+     "until": 5.699999999999999,
+     "exit": "fade",
+     "exit_dur": 0.15
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 2500000,
+     "count_dur": 1.4,
+     "at": 1.0,
+     "x": 0.5,
+     "y": 0.13,
+     "prefix": "~",
+     "size": 130,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop"
+    },
+    {
+     "type": "text",
+     "text": "ANTS *EACH*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.215,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "Yes. Including *you*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.4
+      },
+      {
+       "t": 1.6,
+       "scale": 1.46
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "smirk",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "smirk",
+       0
+      ],
+      [
+       "point",
+       0.5
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "Now put every ant on Earth on one side of a giant scale...",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_square_empty.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": -0.0297,
+     "y": 0.6265,
+     "h": 0.1528,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "idle",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.9321,
+     "y": 0.6397,
+     "h": 0.1726,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "idle",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.0565,
+     "y": 0.6428,
+     "h": 0.1772,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#9b59b6"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bag": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5701,
+     "y": 0.646,
+     "h": 0.182,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "idle",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#f6efe2",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2743,
+     "y": 0.655,
+     "h": 0.1954,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "idle",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#46965a"
+       ],
+       "top": [
+        "#34425c",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.8299,
+     "y": 0.6658,
+     "h": 0.2161,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ],
+      [
+       "point",
+       2.2
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.3231,
+       "y": 0.673,
+       "scale": 1.0509
+      },
+      {
+       "t": 1.2,
+       "x": 0.8299,
+       "y": 0.6658,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/crate_ants.png",
+     "x": 0.2456126695320991,
+     "y": 0.513620475024085,
+     "w": 0.21821613908874188,
+     "enter": "none",
+     "at": 2.0,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.12,
+       "rot": -8
+      },
+      {
+       "t": 0.55,
+       "y": 0.513620475024085,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "ANTS",
+     "font": "display",
+     "x": 0.2456126695320991,
+     "y": 0.513620475024085,
+     "size": 52,
+     "max_w": 0.3,
+     "color": "#1a1410",
+     "stroke": "#f6efe2",
+     "stroke_width": 5,
+     "shadow": false,
+     "enter": "none",
+     "at": 2.0,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.12,
+       "rot": -8
+      },
+      {
+       "t": 0.55,
+       "y": 0.513620475024085,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "ALL THE *ANTS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.1
+    }
+   ]
+  },
+  {
+   "say": "...and every wild *bird* and wild *mammal* on the other.",
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.06,
+     1.1
+    ],
+    "focus": [
+     0.5,
+     0.48
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_square_empty.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": -0.0297,
+     "y": 0.6265,
+     "h": 0.1528,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.9321,
+     "y": 0.6397,
+     "h": 0.1726,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.0565,
+     "y": 0.6428,
+     "h": 0.1772,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#9b59b6"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bag": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5701,
+     "y": 0.646,
+     "h": 0.182,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#f6efe2",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2743,
+     "y": 0.655,
+     "h": 0.1954,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#46965a"
+       ],
+       "top": [
+        "#34425c",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.8299,
+     "y": 0.6658,
+     "h": 0.2161,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       1.8
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/crate_ants.png",
+     "x": 0.2456126695320991,
+     "y": 0.513620475024085,
+     "w": 0.21821613908874188,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "ANTS",
+     "font": "display",
+     "x": 0.2456126695320991,
+     "y": 0.513620475024085,
+     "size": 52,
+     "max_w": 0.3,
+     "color": "#1a1410",
+     "stroke": "#f6efe2",
+     "stroke_width": 5,
+     "shadow": false,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/crate_wild.png",
+     "x": 0.754387330467901,
+     "y": 0.513620475024085,
+     "w": 0.21821613908874188,
+     "enter": "none",
+     "at": 1.2,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.12,
+       "rot": 8
+      },
+      {
+       "t": 0.55,
+       "y": 0.513620475024085,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "BIRDS + MAMMALS",
+     "font": "display",
+     "x": 0.754387330467901,
+     "y": 0.513620475024085,
+     "size": 40,
+     "max_w": 0.2,
+     "color": "#1a1410",
+     "stroke": "#f6efe2",
+     "stroke_width": 5,
+     "shadow": false,
+     "enter": "none",
+     "at": 1.2,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.12,
+       "rot": 8
+      },
+      {
+       "t": 0.55,
+       "y": 0.513620475024085,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "ALL WILD *BIRDS + MAMMALS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.3
+    }
+   ]
+  },
+  {
+   "say": "The ants are *heavier*.",
+   "transition": "flash",
+   "sfx": "boom",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.12,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     },
+     {
+      "t": 1.8,
+      "zoom": 1.02,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ],
+    "shake": [
+     0.05,
+     0.35
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_square_tipped.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": -0.0297,
+     "y": 0.6265,
+     "h": 0.1528,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "cheer",
+       0.7
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.189046596085453,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.9321,
+     "y": 0.6397,
+     "h": 0.1726,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.42607250307138744,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.0565,
+     "y": 0.6428,
+     "h": 0.1772,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "cheer",
+       0.7
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#9b59b6"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bag": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.4308581660897448,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.5701,
+     "y": 0.646,
+     "h": 0.182,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#f6efe2",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.5299998928424908,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.2743,
+     "y": 0.655,
+     "h": 0.1954,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "cheer",
+       0.7
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#46965a"
+       ],
+       "top": [
+        "#34425c",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.4873971864421126,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.8299,
+     "y": 0.6658,
+     "h": 0.2161,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "warm",
+       1.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.1,
+       0.05,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "text": "ANTS",
+     "font": "display",
+     "x": 0.25002910070918855,
+     "y": 0.5361790990443064,
+     "size": 52,
+     "max_w": 0.3,
+     "color": "#1a1410",
+     "stroke": "#f6efe2",
+     "stroke_width": 5,
+     "shadow": false,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "BIRDS + MAMMALS",
+     "font": "display",
+     "x": 0.7493480898855661,
+     "y": 0.4815917511070982,
+     "size": 40,
+     "max_w": 0.2,
+     "color": "#1a1410",
+     "stroke": "#f6efe2",
+     "stroke_width": 5,
+     "shadow": false,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "*ANTS* WIN",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 150,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 0.15
+    }
+   ]
+  },
+  {
+   "dur": 1.7,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_square_tipped.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.4,
+    "zoom": 1.12,
+    "focus": [
+     0.5,
+     0.42
+    ],
+    "text": "Ants walking past every lion on Earth:\n*\"What's up, brah?\"*",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "All together, they weigh about *a fifth* as much as every human alive.",
+   "transition": "slide_up",
+   "caption_y": 0.6,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_square_tipped.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 4,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 380'><rect width='900' height='380' rx='34' fill='#f6efe2'/><rect width='900' height='380' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><text x='60' y='92' font-size='54' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WEIGHT OF ALL...</text><text x='60' y='170' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>HUMANS</text><rect x='280' y='128' width='560' height='54' rx='14' fill='#34425c'/><text x='60' y='270' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>ANTS</text><rect x='280' y='228' width='112' height='54' rx='14' fill='#7a2e1c'/><text x='410' y='270' font-size='60' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>~ 1/5</text><text x='60' y='340' font-size='30' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>about 12 million tonnes of carbon</text></svg>",
+     "w": 0.84,
+     "x": 0.5,
+     "y": 0.22,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant.png",
+     "x": 0.72,
+     "y": 0.74,
+     "w": 0.3,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop",
+     "rot": -6
+    }
+   ]
+  },
+  {
+   "say": "So next time one ant *crashes your picnic*...",
+   "transition": "cut",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.12,
+      "focus": [
+       0.52,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_park_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/fg_park_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/ant.png",
+     "x": 0.95,
+     "y": 0.74,
+     "w": 0.34,
+     "enter": "none",
+     "flip": true,
+     "loop": "bob",
+     "loop_amp": 0.8,
+     "loop_speed": 4.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.1,
+       "y": 0.78,
+       "scale": 1.0
+      },
+      {
+       "t": 2.6,
+       "x": 0.3941299579856312,
+       "y": 0.5482180607808843,
+       "scale": 0.45,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "ONE ANT?",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "...relax. He's just one of *your* two and a half million.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-c/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 3.2,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.0
+      ],
+      [
+       "crossed",
+       2.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "*1* OF YOUR *2,500,000*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
