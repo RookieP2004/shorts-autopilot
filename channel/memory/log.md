@@ -12,3 +12,4 @@ One line per posted video, appended by every production run (`python -m autopilo
 2026-11-08-b | 2026-11-08 18:29 IST | Do we really only use 10% of our brain? 🧠 | myth-bust | myth-bust | the 10% of the brain myth | 39.13s | https://youtube.com/shorts/AFpQ3oii2KQ | AFpQ3oii2KQ
 2026-11-08-a | 2026-11-08 19:19 IST | Why do smart people both make the worse choice? 🤝 | big-question | question | the prisoner's dilemma (game theory) | 54.47s | https://youtube.com/shorts/XEU9J3jCoUQ | XEU9J3jCoUQ
 2026-11-08-c | 2026-11-08 20:45 IST | There are 2.5 million ants for every human 🐜 | scale-shock | number-shock | how many ants live on Earth (20 quadrillion) | 46.17s | https://youtube.com/shorts/ApIoYYJuzq8 | ApIoYYJuzq8
+2026-11-09-b | 2026-11-09 13:21 IST | Why does the bank pay YOU interest? 🏦 | big-question | question | why banks pay interest on deposits (net interest margin) | 41.3s | https://youtube.com/shorts/EIaPJkwLWpo | EIaPJkwLWpo

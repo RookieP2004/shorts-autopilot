@@ -1,0 +1,3093 @@
+{
+ "id": "2026-11-09-b",
+ "title": "Why does the bank pay YOU interest? 🏦",
+ "description": "One deposit, one baker, one bigger oven: the simplest way to see where the interest on your savings actually comes from.\n\nRates in the video are example numbers. Sources: Reserve Bank of Australia, 'What are interest margins?'; Capital One, 'How does savings interest work?'",
+ "tags": [
+  "interest",
+  "banks",
+  "how banks work",
+  "savings",
+  "economics",
+  "money",
+  "finance explained",
+  "net interest margin"
+ ],
+ "hashtags": [
+  "#economics",
+  "#money"
+ ],
+ "meta": {
+  "format": "big-question",
+  "topic": "why banks pay interest on deposits (net interest margin)",
+  "hook": "question",
+  "idea_source": "backlog",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.rba.gov.au/publications/submissions/financial-sector/international-comparisons-of-bank-margins/what-are-interest-margins.html",
+   "https://www.capitalone.com/bank/money-management/banking-basics/how-does-savings-interest-work/",
+   "https://www.fool.com/money/banks/articles/explain-it-to-me-like-im-five-heres-how-interest-rates-work"
+  ],
+  "humour": {
+   "trend": "'how X acts 0.1 seconds after...' captions from the Skull Cap trend (rising, late Oct-Nov 2026)",
+   "beat": "smirk",
+   "scene": 8
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-09-b/assets.py",
+ "scenes": [
+  {
+   "say": "Why does a bank *pay you*... just for keeping your money there?",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.07,
+      "focus": [
+       0.52,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bank_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4807,
+     "y": 0.5434,
+     "h": 0.2954,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "wave",
+       1.6
+      ],
+      [
+       "idle",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/fg_bank_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.8223,
+     "y": 0.6529,
+     "h": 0.538,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ],
+      [
+       "think",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.895,
+       "y": 0.6927,
+       "scale": 1.158
+      },
+      {
+       "t": 1.1,
+       "x": 0.8223,
+       "y": 0.6529,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "WHY DOES THE BANK *PAY YOU?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin_stack.png",
+     "x": 0.24,
+     "y": 0.47,
+     "w": 0.11,
+     "enter": "none",
+     "at": 0.6,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15,
+       "rot": 0
+      },
+      {
+       "t": 0.55,
+       "y": 0.47,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Sounds way too generous, right? Here's the trick.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bank_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.8,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "smirk",
+       1.5
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "Amina puts *100 coins* in the bank.",
+   "transition": "slide_left",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.04
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bank_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3602,
+     "y": 0.5491,
+     "h": 0.1204,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "take",
+       1.8
+      ],
+      [
+       "happy",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/fg_bank_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.514,
+     "y": 0.571,
+     "h": 0.1444,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "give",
+       1.6
+      ],
+      [
+       "happy",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.0215,
+       "y": 0.5925,
+       "scale": 1.1634
+      },
+      {
+       "t": 1.5,
+       "x": 0.514,
+       "y": 0.571,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7645,
+     "y": 0.6034,
+     "h": 0.1835,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.5125202943126008,
+     "y": 0.5209999999999999,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.6,
+     "until": 2.227707882502891,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5125202943126008,
+       "y": 0.5209999999999999,
+       "rot": 29.324947998907305,
+       "scale": 0.5
+      },
+      {
+       "t": 0.282468547126301,
+       "x": 0.42638568279957983,
+       "y": 0.40077743359582324,
+       "rot": -84.05051518432168,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.627707882502891,
+       "x": 0.34025107128655885,
+       "y": 0.5375117500163327,
+       "rot": -197.42597836755067,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.5299319188012775,
+     "y": 0.5209999999999999,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.6900000000000002,
+     "until": 2.4008540936356573,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5299319188012775,
+       "y": 0.5209999999999999,
+       "rot": 9.332003414689474,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3198843421360458,
+       "x": 0.42631657651755694,
+       "y": 0.41067843164836504,
+       "rot": -87.15484519569296,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7108540936356572,
+       "x": 0.32270123423383634,
+       "y": 0.5375117500163327,
+       "rot": -183.64169380607538,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.5221392156917499,
+     "y": 0.5209999999999999,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.78,
+     "until": 2.525013073716442,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5221392156917499,
+       "y": 0.5209999999999999,
+       "rot": -27.427427072269932,
+       "scale": 0.5
+      },
+      {
+       "t": 0.33525588317239885,
+       "x": 0.4335564131608039,
+       "y": 0.4321241977617587,
+       "rot": -66.11127304282842,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7450130737164419,
+       "x": 0.3449736106298579,
+       "y": 0.5375117500163327,
+       "rot": -104.7951190133869,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.5142507620667593,
+     "y": 0.5209999999999999,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.87,
+     "until": 2.5880856914271826,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5142507620667593,
+       "y": 0.5209999999999999,
+       "rot": 21.936757378840888,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3231385611422321,
+       "x": 0.4437664523271767,
+       "y": 0.3813123826460456,
+       "rot": -12.298652340049916,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7180856914271825,
+       "x": 0.373282142587594,
+       "y": 0.5375117500163327,
+       "rot": -46.53406205894072,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.4980667775031791,
+     "y": 0.5209999999999999,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.96,
+     "until": 2.694847200251074,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4980667775031791,
+       "y": 0.5209999999999999,
+       "rot": 18.056508179304387,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3306812401129834,
+       "x": 0.41669490882260996,
+       "y": 0.4339830093547223,
+       "rot": -6.620666908956807,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7348472002510742,
+       "x": 0.33532304014204073,
+       "y": 0.5375117500163327,
+       "rot": -31.297841997218,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.5046693428490696,
+     "y": 0.5209999999999999,
+     "w": 0.06,
+     "enter": "none",
+     "at": 2.05,
+     "until": 2.7062368830169135,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5046693428490696,
+       "y": 0.5209999999999999,
+       "rot": 24.760856058117582,
+       "scale": 0.5
+      },
+      {
+       "t": 0.29530659735761117,
+       "x": 0.41755755303005737,
+       "y": 0.3700880215136577,
+       "rot": -47.722927752972154,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6562368830169137,
+       "x": 0.3304457632110452,
+       "y": 0.5375117500163327,
+       "rot": -120.20671156406189,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.529174927536007,
+     "y": 0.5209999999999999,
+     "w": 0.06,
+     "enter": "none",
+     "at": 2.14,
+     "until": 2.81576328045995,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.529174927536007,
+       "y": 0.5209999999999999,
+       "rot": -0.663061059032195,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3040934762069775,
+       "x": 0.42515732215276425,
+       "y": 0.4070219718597926,
+       "rot": -95.6348987451764,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.67576328045995,
+       "x": 0.3211397167695214,
+       "y": 0.5375117500163327,
+       "rot": -190.6067364313206,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin_pile.png",
+     "x": 0.3478523554028563,
+     "y": 0.5275117500163327,
+     "w": 0.11,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "*100* COINS",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "The bank keeps a few safe in the vault...",
+   "transition": "cut",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.8,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bank_vault.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.7700514003055849,
+     "y": 0.666722776277667,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.4,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 38.73825670443361
+      },
+      {
+       "t": 0.55,
+       "y": 0.666722776277667,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.5187943810566977,
+     "y": 0.694722017883213,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.52,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 158.1213797694337
+      },
+      {
+       "t": 0.55,
+       "y": 0.694722017883213,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.5449770220046442,
+     "y": 0.6604951536174754,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.64,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": -166.59856100921814
+      },
+      {
+       "t": 0.55,
+       "y": 0.6604951536174754,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.6527262208882748,
+     "y": 0.661047890559198,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.76,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": -166.0653752893861
+      },
+      {
+       "t": 0.55,
+       "y": 0.661047890559198,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.6389573276939098,
+     "y": 0.7152555791429469,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.88,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": -31.957030091225562
+      },
+      {
+       "t": 0.55,
+       "y": 0.7152555791429469,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.6074031429103959,
+     "y": 0.6983230522714098,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.0,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": -162.63288050637348
+      },
+      {
+       "t": 0.55,
+       "y": 0.6983230522714098,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.6655360487588815,
+     "y": 0.6703533115713517,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.12,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 43.55533933530822
+      },
+      {
+       "t": 0.55,
+       "y": 0.6703533115713517,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.7866642905263903,
+     "y": 0.6632503922000503,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.24,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": 22.024287829473536
+      },
+      {
+       "t": 0.55,
+       "y": 0.6632503922000503,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.6740418621349042,
+     "y": 0.6689582686477079,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.3599999999999999,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": -92.6757790539193
+      },
+      {
+       "t": 0.55,
+       "y": 0.6689582686477079,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.798362850130276,
+     "y": 0.7198778562400809,
+     "w": 0.07,
+     "enter": "none",
+     "at": 1.48,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.08,
+       "rot": -151.46575013202414
+      },
+      {
+       "t": 0.55,
+       "y": 0.7198778562400809,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*10* KEPT SAFE",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.145,
+     "y": 0.659,
+     "h": 0.5831,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.4384,
+       "y": 0.6656,
+       "scale": 1.0345
+      },
+      {
+       "t": 0.9,
+       "x": 0.145,
+       "y": 0.659,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "...and *lends* the rest to Ravi, the baker.",
+   "transition": "cut",
+   "caption_y": 0.27,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bank_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "give",
+     "x": 0.4807,
+     "y": 0.5434,
+     "h": 0.2954,
+     "enter": "none",
+     "acting": [
+      [
+       "give",
+       0
+      ],
+      [
+       "idle",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/fg_bank_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2043,
+     "y": 0.6064,
+     "h": 0.4248,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "take",
+       0.6
+      ],
+      [
+       "cheer",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#f6efe2"
+       ],
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.5557,
+       "y": 0.6228,
+       "scale": 1.0793
+      },
+      {
+       "t": 0.6,
+       "x": 0.2043,
+       "y": 0.6064,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       1.5,
+       0.04,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.47115782570647424,
+     "y": 0.5038120918225305,
+     "w": 0.06,
+     "enter": "none",
+     "at": 0.6,
+     "until": 1.247357219698637,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.47115782570647424,
+       "y": 0.5038120918225305,
+       "rot": 8.890195789880373,
+       "scale": 0.5
+      },
+      {
+       "t": 0.2913107488643868,
+       "x": 0.3512565964479427,
+       "y": 0.394536343184815,
+       "rot": -86.94875324222745,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6473572196986372,
+       "x": 0.23135536718941124,
+       "y": 0.5564,
+       "rot": -182.7877022743353,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.469904084954639,
+     "y": 0.5038120918225305,
+     "w": 0.06,
+     "enter": "none",
+     "at": 0.69,
+     "until": 1.444925000202229,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.469904084954639,
+       "y": 0.5038120918225305,
+       "rot": -33.060870845692804,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3397162500910031,
+       "x": 0.3398098137410153,
+       "y": 0.35468920702346224,
+       "rot": -47.090805048584805,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7549250002022291,
+       "x": 0.20971554252739166,
+       "y": 0.5564,
+       "rot": -61.120739251476806,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.46630468826197835,
+     "y": 0.5038120918225305,
+     "w": 0.06,
+     "enter": "none",
+     "at": 0.78,
+     "until": 1.4604340603929344,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.46630468826197835,
+       "y": 0.5038120918225305,
+       "rot": 38.88573285752727,
+       "scale": 0.5
+      },
+      {
+       "t": 0.30619532717682046,
+       "x": 0.33384134425697043,
+       "y": 0.42234276259714276,
+       "rot": 34.33005144459001,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6804340603929343,
+       "x": 0.2013780002519625,
+       "y": 0.5564,
+       "rot": 29.77437003165275,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.47491388934819506,
+     "y": 0.5038120918225305,
+     "w": 0.06,
+     "enter": "none",
+     "at": 0.87,
+     "until": 1.5567144988651687,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.47491388934819506,
+       "y": 0.5038120918225305,
+       "rot": -22.925823794778644,
+       "scale": 0.5
+      },
+      {
+       "t": 0.30902152448932596,
+       "x": 0.3344683091878706,
+       "y": 0.3978353267771863,
+       "rot": -22.660018035801503,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6867144988651688,
+       "x": 0.19402272902754616,
+       "y": 0.5564,
+       "rot": -22.394212276824362,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.44649175772022015,
+     "y": 0.5038120918225305,
+     "w": 0.06,
+     "enter": "none",
+     "at": 0.96,
+     "until": 1.5806138871870998,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.44649175772022015,
+       "y": 0.5038120918225305,
+       "rot": 22.72790196845753,
+       "scale": 0.5
+      },
+      {
+       "t": 0.2792762492341949,
+       "x": 0.3292811838516132,
+       "y": 0.3613543851562787,
+       "rot": -83.55783106026865,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6206138871870998,
+       "x": 0.21207060998300625,
+       "y": 0.5564,
+       "rot": -189.84356408899484,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.47524108809824134,
+     "y": 0.5038120918225305,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.0499999999999998,
+     "until": 1.7918895822432384,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.47524108809824134,
+       "y": 0.5038120918225305,
+       "rot": -20.139132996781797,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3338503120094573,
+       "x": 0.3396904620824699,
+       "y": 0.38981153019904485,
+       "rot": 37.45378461403463,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7418895822432384,
+       "x": 0.20413983606669844,
+       "y": 0.5564,
+       "rot": 95.04670222485106,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.4521772280594652,
+     "y": 0.5038120918225305,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.1400000000000001,
+     "until": 1.8201808051912147,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4521772280594652,
+       "y": 0.5038120918225305,
+       "rot": -10.162444737052212,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3060813623360466,
+       "x": 0.3421608572435514,
+       "y": 0.3942632935361308,
+       "rot": 66.89907752220617,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6801808051912147,
+       "x": 0.23214448642763758,
+       "y": 0.5564,
+       "rot": 143.96059978146457,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.4696393100266171,
+     "y": 0.5038120918225305,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.23,
+     "until": 1.998654742651458,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4696393100266171,
+       "y": 0.5038120918225305,
+       "rot": -19.28703544773203,
+       "scale": 0.5
+      },
+      {
+       "t": 0.34589463419315614,
+       "x": 0.327101447668742,
+       "y": 0.34579137562647855,
+       "rot": -99.54276718892754,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7686547426514581,
+       "x": 0.18456358531086695,
+       "y": 0.5564,
+       "rot": -179.79849893012306,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*90* LENT",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Ravi buys a bigger oven... and bakes *twice* the bread.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     },
+     {
+      "t": 3.5,
+      "zoom": 1.06,
+      "focus": [
+       0.55,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bakery_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5021,
+     "y": 0.5292,
+     "h": 0.1413,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       0.9
+      ],
+      [
+       "cheer",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#f6efe2"
+       ],
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.5,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/fg_bakery_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.7083,
+     "y": 0.5722,
+     "h": 0.1861,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "surprised",
+       1.2
+      ],
+      [
+       "explain",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.25,
+       0.04,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/oven.png",
+     "x": 0.12403675823797176,
+     "y": 0.5456198382104207,
+     "w": 0.27646147045283975,
+     "enter": "none",
+     "at": 0.8,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.2
+      },
+      {
+       "t": 0.6,
+       "y": 0.5456198382104207,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "boom"
+    },
+    {
+     "type": "text",
+     "text": "*2x* THE BREAD",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 116,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "ding"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/loaf.png",
+     "x": 0.08403675823797177,
+     "y": 0.5456198382104207,
+     "w": 0.12,
+     "enter": "none",
+     "at": 2.3,
+     "until": 5.6,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.08403675823797177,
+       "y": 0.5456198382104207,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.17748303243241598,
+       "y": 0.2135823045649062,
+       "rot": 19.446643924791303,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.2709293066268602,
+       "y": 0.3135823045649062,
+       "rot": 38.893287849582606,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/loaf.png",
+     "x": 0.08403675823797177,
+     "y": 0.5456198382104207,
+     "w": 0.12,
+     "enter": "none",
+     "at": 2.48,
+     "until": 5.78,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.08403675823797177,
+       "y": 0.5456198382104207,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.32931355522203953,
+       "y": 0.10142496828629943,
+       "rot": -17.563571497667482,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.5745903522061073,
+       "y": 0.20142496828629944,
+       "rot": -35.127142995334964,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/loaf.png",
+     "x": 0.08403675823797177,
+     "y": 0.5456198382104207,
+     "w": 0.12,
+     "enter": "none",
+     "at": 2.6599999999999997,
+     "until": 5.96,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.08403675823797177,
+       "y": 0.5456198382104207,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.1900290277219978,
+       "y": 0.14666543748459718,
+       "rot": 4.4619470878821375,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.2960212972060239,
+       "y": 0.24666543748459718,
+       "rot": 8.923894175764275,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/loaf.png",
+     "x": 0.08403675823797177,
+     "y": 0.5456198382104207,
+     "w": 0.12,
+     "enter": "none",
+     "at": 2.84,
+     "until": 6.14,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.08403675823797177,
+       "y": 0.5456198382104207,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.4552700315351267,
+       "y": 0.14254373248071406,
+       "rot": -14.374219631875587,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.8265033048322816,
+       "y": 0.24254373248071406,
+       "rot": -28.748439263751173,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/loaf.png",
+     "x": 0.08403675823797177,
+     "y": 0.5456198382104207,
+     "w": 0.12,
+     "enter": "none",
+     "at": 3.0199999999999996,
+     "until": 6.319999999999999,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.08403675823797177,
+       "y": 0.5456198382104207,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.3136946311354433,
+       "y": 0.1164759525314912,
+       "rot": -16.53646953478489,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.5433525040329149,
+       "y": 0.2164759525314912,
+       "rot": -33.07293906956978,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/loaf.png",
+     "x": 0.08403675823797177,
+     "y": 0.5456198382104207,
+     "w": 0.12,
+     "enter": "none",
+     "at": 3.1999999999999997,
+     "until": 6.5,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.08403675823797177,
+       "y": 0.5456198382104207,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.31160428586003586,
+       "y": 0.18351858060174972,
+       "rot": -17.376124435684893,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.5391718134821,
+       "y": 0.2835185806017497,
+       "rot": -34.75224887136979,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/loaf.png",
+     "x": 0.08403675823797177,
+     "y": 0.5456198382104207,
+     "w": 0.12,
+     "enter": "none",
+     "at": 3.38,
+     "until": 6.68,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.08403675823797177,
+       "y": 0.5456198382104207,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.2750085348596805,
+       "y": 0.18446126660280718,
+       "rot": 10.566810010340895,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.4659803114813893,
+       "y": 0.2844612666028072,
+       "rot": 21.13362002068179,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/loaf.png",
+     "x": 0.08403675823797177,
+     "y": 0.5456198382104207,
+     "w": 0.12,
+     "enter": "none",
+     "at": 3.5599999999999996,
+     "until": 6.859999999999999,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.08403675823797177,
+       "y": 0.5456198382104207,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.25106868621299866,
+       "y": 0.20646120023972872,
+       "rot": -13.236805300954483,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.4181006141880256,
+       "y": 0.3064612002397287,
+       "rot": -26.473610601908966,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Business booms! So he pays the bank back... *plus interest*.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bakery_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.5023,
+     "y": 0.5133,
+     "h": 0.2976,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "take",
+       1.0
+      ],
+      [
+       "cheer",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#f6efe2"
+       ],
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/fg_bakery_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1705,
+     "y": 0.5685,
+     "h": 0.4041,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "give",
+       1.0
+      ],
+      [
+       "happy",
+       1.7999999999999998
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.9954,
+       "y": 0.6161,
+       "scale": 1.2262
+      },
+      {
+       "t": 0.9,
+       "x": 0.1705,
+       "y": 0.5685,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       2.0,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7884,
+     "y": 0.5555,
+     "h": 0.379,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "give",
+       1.5
+      ],
+      [
+       "happy",
+       2.3
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#9b59b6",
+        "dress"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a",
+       "bag": "#d9534f"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.6662,
+       "y": 0.5544,
+       "scale": 0.9947
+      },
+      {
+       "t": 1.4,
+       "x": 0.7884,
+       "y": 0.5555,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       2.5,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.20861865945880273,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.0,
+     "until": 1.7760511452085979,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.20861865945880273,
+       "y": 0.52,
+       "rot": -0.4451350278431576,
+       "scale": 0.5
+      },
+      {
+       "t": 0.349223015343869,
+       "x": 0.3636104714170229,
+       "y": 0.3494232302922896,
+       "rot": -80.37727565621822,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7760511452085977,
+       "x": 0.5186022833752431,
+       "y": 0.43329999999999996,
+       "rot": -160.30941628459328,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.20115350846300847,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.09,
+     "until": 1.8159367463296365,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.20115350846300847,
+       "y": 0.52,
+       "rot": -33.25821628437946,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3266715358483364,
+       "x": 0.341926614893371,
+       "y": 0.33550737048440615,
+       "rot": 39.40070304586521,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7259367463296365,
+       "x": 0.48269972132373357,
+       "y": 0.43329999999999996,
+       "rot": 112.05962237610987,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.18052056855049553,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.18,
+     "until": 1.8713395011298704,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.18052056855049553,
+       "y": 0.52,
+       "rot": 4.739625183049576,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3111027755084417,
+       "x": 0.33168580059310016,
+       "y": 0.33945601924144053,
+       "rot": -19.973386239561737,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6913395011298704,
+       "x": 0.4828510326357048,
+       "y": 0.43329999999999996,
+       "rot": -44.68639766217305,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.1992824663498794,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.27,
+     "until": 1.9770859612026561,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.1992824663498794,
+       "y": 0.52,
+       "rot": 35.30299046699038,
+       "scale": 0.5
+      },
+      {
+       "t": 0.31818868254119526,
+       "x": 0.3641843499759718,
+       "y": 0.2738476894466485,
+       "rot": -76.59384234066371,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7070859612026561,
+       "x": 0.5290862336020643,
+       "y": 0.43329999999999996,
+       "rot": -188.49067514831782,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.21555976493231935,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.3599999999999999,
+     "until": 2.06469908494799,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.21555976493231935,
+       "y": 0.52,
+       "rot": 2.9699180374238026,
+       "scale": 0.5
+      },
+      {
+       "t": 0.3171145882265956,
+       "x": 0.36026049401743576,
+       "y": 0.34805366838131924,
+       "rot": 83.39184511369898,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7046990849479902,
+       "x": 0.5049612231025522,
+       "y": 0.43329999999999996,
+       "rot": 163.81377218997415,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.20571241842921836,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.45,
+     "until": 2.110063631928443,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.20571241842921836,
+       "y": 0.52,
+       "rot": 17.99417628305686,
+       "scale": 0.5
+      },
+      {
+       "t": 0.29702863436779936,
+       "x": 0.35527074871465997,
+       "y": 0.34504319440149145,
+       "rot": 53.13232806669368,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.660063631928443,
+       "x": 0.5048290790001015,
+       "y": 0.43329999999999996,
+       "rot": 88.2704798503305,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.8079808236633739,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.6,
+     "until": 2.298043142093564,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.8079808236633739,
+       "y": 0.52,
+       "rot": 10.940927104652275,
+       "scale": 0.5
+      },
+      {
+       "t": 0.31411941394210374,
+       "x": 0.6537463638845589,
+       "y": 0.3050665690009572,
+       "rot": -83.93992390588961,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6980431420935639,
+       "x": 0.4995119041057438,
+       "y": 0.43329999999999996,
+       "rot": -178.8207749164315,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.7949257097374325,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.6900000000000002,
+     "until": 2.33622105713372,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7949257097374325,
+       "y": 0.52,
+       "rot": 25.84972379358247,
+       "scale": 0.5
+      },
+      {
+       "t": 0.29079947571017395,
+       "x": 0.6599748756425983,
+       "y": 0.30330112027172995,
+       "rot": 58.842776068567524,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6462210571337199,
+       "x": 0.5250240415477642,
+       "y": 0.43329999999999996,
+       "rot": 91.83582834355258,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.8150339756140429,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.78,
+     "until": 2.4993918438026785,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.8150339756140429,
+       "y": 0.52,
+       "rot": 9.061916498488564,
+       "scale": 0.5
+      },
+      {
+       "t": 0.32372632971120524,
+       "x": 0.6447469563837023,
+       "y": 0.32076588195052347,
+       "rot": 40.142148761666604,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7193918438026783,
+       "x": 0.4744599371533616,
+       "y": 0.43329999999999996,
+       "rot": 71.22238102484465,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.7827585894110017,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.87,
+     "until": 2.591623193849104,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7827585894110017,
+       "y": 0.52,
+       "rot": -25.494961092225957,
+       "scale": 0.5
+      },
+      {
+       "t": 0.32473043723209694,
+       "x": 0.6332019964593506,
+       "y": 0.32491646209681047,
+       "rot": -99.77217071243295,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7216231938491042,
+       "x": 0.48364540350769947,
+       "y": 0.43329999999999996,
+       "rot": -174.04938033263994,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.7988096688827924,
+     "y": 0.52,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.96,
+     "until": 2.5651943312638172,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7988096688827924,
+       "y": 0.52,
+       "rot": 22.045927092620417,
+       "scale": 0.5
+      },
+      {
+       "t": 0.2723374490687177,
+       "x": 0.6516219089357487,
+       "y": 0.29067433593185144,
+       "rot": -22.211167663837657,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.605194331263817,
+       "x": 0.504434148988705,
+       "y": 0.43329999999999996,
+       "rot": -66.46826242029573,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "90 COINS BACK",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "+ *INTEREST*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.215,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.9
+    }
+   ]
+  },
+  {
+   "say": "Say Ravi pays *8%*. The bank gives Amina *3%*... and keeps the *gap*.",
+   "transition": "zoom",
+   "caption_y": 0.45,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bank_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 14,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='5' y='5' width='890' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><g transform='translate(16,15)'><ellipse cx='60' cy='66' rx='40' ry='22' fill='#b8742e'/><path d='M40,58 L48,74 M58,54 L66,72 M76,56 L82,72' stroke='#f3d39a' stroke-width='6' stroke-linecap='round'/></g><text x='150' y='78' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RAVI PAYS</text><rect x='150' y='100' width='520' height='22' rx='11' fill='#1a1410' opacity='0.12'/><rect x='150' y='100' width='416' height='22' rx='11' fill='#d9534f'/><text x='860' y='112' text-anchor='end' font-size='96' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>8%</text></svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.12,
+     "enter": "slide_right",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='5' y='5' width='890' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><g transform='translate(16,15)'><circle cx='60' cy='60' r='34' fill='#e2b041'/><circle cx='60' cy='60' r='24' fill='none' stroke='#b8862a' stroke-width='5'/></g><text x='150' y='78' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>AMINA EARNS</text><rect x='150' y='100' width='520' height='22' rx='11' fill='#1a1410' opacity='0.12'/><rect x='150' y='100' width='156' height='22' rx='11' fill='#46965a'/><text x='860' y='112' text-anchor='end' font-size='96' fill='#46965a' font-family='Anton, DejaVu Sans, sans-serif'>3%</text></svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.215,
+     "enter": "slide_right",
+     "at": 1.5,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='5' y='5' width='890' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><g transform='translate(16,15)'><path d='M24,48 L60,24 L96,48 Z' fill='#34425c'/><rect x='30' y='52' width='10' height='34' fill='#34425c'/><rect x='55' y='52' width='10' height='34' fill='#34425c'/><rect x='80' y='52' width='10' height='34' fill='#34425c'/><rect x='22' y='88' width='76' height='10' fill='#34425c'/></g><text x='150' y='96' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BANK KEEPS THE GAP</text><text x='860' y='112' text-anchor='end' font-size='96' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>5%</text></svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.31,
+     "enter": "slide_right",
+     "at": 3.4,
+     "sfx": "ding"
+    },
+    {
+     "type": "text",
+     "text": "example rates",
+     "font": "light",
+     "size": 38,
+     "x": 0.8,
+     "y": 0.37,
+     "color": "primary",
+     "stroke": "#0b0f12",
+     "stroke_width": 4,
+     "enter": "fade",
+     "at": 0.6
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5,
+     "y": 0.72,
+     "h": 0.42,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ],
+      [
+       "warm",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bakery_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "smirk",
+    "at": 0.1,
+    "dur": 1.5,
+    "zoom": 1.12,
+    "focus": [
+     0.5,
+     0.42
+    ],
+    "sfx": "pop",
+    "text": "Your coins 0.1 sec after deposit:\n*\"I work at a bakery now\"*",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "Amina earns. Ravi grows. The bank profits.",
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.04,
+     1.0
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bank_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "give",
+     "x": 0.3602,
+     "y": 0.5491,
+     "h": 0.1204,
+     "enter": "none",
+     "acting": [
+      [
+       "give",
+       0
+      ],
+      [
+       "happy",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/fg_bank_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.514,
+     "y": 0.571,
+     "h": 0.1444,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ],
+      [
+       "cheer",
+       0.7
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.8,
+       0.04,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.6497,
+     "y": 0.5801,
+     "h": 0.1544,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "cheer",
+       1.3
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#f6efe2"
+       ],
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.0867,
+       "y": 0.5925,
+       "scale": 1.0881
+      },
+      {
+       "t": 1.2,
+       "x": 0.6497,
+       "y": 0.5801,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       1.4,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.8627,
+     "y": 0.608,
+     "h": 0.1887,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "warm",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.3281951743377288,
+     "y": 0.5375117500163327,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.1,
+     "until": 0.8180490466186103,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3281951743377288,
+       "y": 0.5375117500163327,
+       "rot": 38.10920321112279,
+       "scale": 0.5
+      },
+      {
+       "t": 0.32312207097837464,
+       "x": 0.43471877179713286,
+       "y": 0.364377249158676,
+       "rot": 116.31756448068072,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7180490466186104,
+       "x": 0.5412423692565369,
+       "y": 0.5109999999999999,
+       "rot": 194.52592575023863,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.3321017674902636,
+     "y": 0.5375117500163327,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.19,
+     "until": 0.8362632945947102,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3321017674902636,
+       "y": 0.5375117500163327,
+       "rot": 22.398766356346407,
+       "scale": 0.5
+      },
+      {
+       "t": 0.29081848256761955,
+       "x": 0.418513787648088,
+       "y": 0.41330764203740644,
+       "rot": -50.368064948077475,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.6462632945947101,
+       "x": 0.5049258078059123,
+       "y": 0.5109999999999999,
+       "rot": -123.13489625250136,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/coin.png",
+     "x": 0.3322766094187582,
+     "y": 0.5375117500163327,
+     "w": 0.07,
+     "enter": "none",
+     "at": 0.28,
+     "until": 1.0676261735637778,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3322766094187582,
+       "y": 0.5375117500163327,
+       "rot": 38.09546594771781,
+       "scale": 0.5
+      },
+      {
+       "t": 0.35443177810369997,
+       "x": 0.41174103692251124,
+       "y": 0.37171550367864714,
+       "rot": -6.466687738701346,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7876261735637777,
+       "x": 0.4912054644262643,
+       "y": 0.5109999999999999,
+       "rot": -51.028841425120504,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "AMINA *+3*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "RAVI *+OVEN*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 88,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "BANK *+GAP*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.28,
+     "size": 88,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "So interest isn't a gift. It's *rent*... for borrowing your money.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-b/assets/plate_bank_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "serious",
+       1.8
+      ],
+      [
+       "crossed",
+       3.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "INTEREST = *RENT* FOR YOUR MONEY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
