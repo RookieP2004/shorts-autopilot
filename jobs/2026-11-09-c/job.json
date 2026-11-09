@@ -1,0 +1,1650 @@
+{
+ "id": "2026-11-09-c",
+ "title": "Goldfish have a 3-second memory? Total myth 🐟",
+ "description": "Goldfish learned to push a lever on a schedule, and even to drive a tank on wheels. Here's what their memory can really do.\n\nSources: Discover Wildlife, 'Do goldfish really only have a 3 second memory?'; Science ABC; Global News / VOA on the 2022 Ben-Gurion University goldfish-driving study.",
+ "tags": [
+  "goldfish",
+  "goldfish memory",
+  "myth busting",
+  "animal facts",
+  "fish intelligence",
+  "science explained",
+  "animal memory",
+  "biology"
+ ],
+ "hashtags": [
+  "#science",
+  "#animals"
+ ],
+ "meta": {
+  "format": "myth-bust",
+  "topic": "the goldfish 3-second memory myth",
+  "hook": "myth-bust",
+  "idea_source": "backlog",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.discoverwildlife.com/animal-facts/fish/goldfish-memory",
+   "https://www.scienceabc.com/nature/animals/do-goldfish-really-have-a-3-second-memory.html",
+   "https://www.earth.com/news/goldfish-memory-much-better-than-previously-believed",
+   "https://globalnews.ca/news/8496803/goldfish-drive-cars-study/",
+   "https://learningenglish.voanews.com/amp/israeli-researchers-teach-goldfish-to-drive-robotic-car/6395501.html"
+  ],
+  "humour": {
+   "trend": "timeless dry reaction (no current trend fit naturally): 'got its licence before me'",
+   "beat": "deadpan",
+   "scene": 7
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-09-c/assets.py",
+ "scenes": [
+  {
+   "say": "Goldfish have a *three-second* memory? Total myth.",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2157,
+     "y": 0.5349,
+     "h": 0.3132,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a",
+       "belt": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/fg_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.6993,
+     "y": 0.5944,
+     "h": 0.4924,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ],
+      [
+       "deadpan",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "GOLDFISH HAVE A *3-SECOND* MEMORY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 170'><rect x='10' y='10' width='500' height='150' rx='18' fill='none' stroke='#d9534f' stroke-width='14'/><text x='260.0' y='128' text-anchor='middle' font-size='118' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>MYTH</text></svg>",
+     "x": 0.5,
+     "y": 0.1,
+     "w": 0.42,
+     "rotate": -6,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.0
+      },
+      {
+       "t": 2.2,
+       "scale": 1.0
+      },
+      {
+       "t": 2.45,
+       "scale": 1.15,
+       "ease": "back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Scientists at Plymouth gave goldfish a *lever*.",
+   "transition": "slide_left",
+   "caption_y": 0.86,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.06,
+      "focus": [
+       0.55,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_tank_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/goldfish.png",
+     "x": -0.2,
+     "y": 0.7,
+     "w": 0.26,
+     "enter": "none",
+     "at": 0.6,
+     "flip": false,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.2,
+       "y": 0.7,
+       "rot": 0
+      },
+      {
+       "t": 2.0,
+       "x": 0.25,
+       "y": 0.66,
+       "rot": 6
+      },
+      {
+       "t": 3.2,
+       "x": 0.3,
+       "y": 0.7,
+       "rot": -6
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/goldfish.png",
+     "x": 1.15,
+     "y": 0.62,
+     "w": 0.3,
+     "enter": "none",
+     "at": 0.2,
+     "flip": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.15,
+       "y": 0.62,
+       "rot": 0
+      },
+      {
+       "t": 1.6,
+       "x": 0.62,
+       "y": 0.58,
+       "rot": -6
+      },
+      {
+       "t": 3.0,
+       "x": 0.42,
+       "y": 0.62,
+       "rot": 6
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "PLYMOUTH *UNIVERSITY*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "shape",
+     "shape": "arrow",
+     "x": 0.5177777753557478,
+     "y": 0.4155555461096387,
+     "w": 0.12,
+     "h": 0.05,
+     "color": "accent",
+     "enter": "pop",
+     "at": 1.4,
+     "sfx": "pop",
+     "loop": "pulse"
+    }
+   ]
+  },
+  {
+   "say": "Push it... and *food* drops in.",
+   "transition": "cut",
+   "caption_y": 0.86,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_tank_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/goldfish.png",
+     "x": 0.5577777753557478,
+     "y": 0.4755555461096387,
+     "w": 0.28,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25,
+       "y": 0.66,
+       "rot": -10
+      },
+      {
+       "t": 0.8,
+       "x": 0.5477777753557478,
+       "y": 0.4855555461096387,
+       "rot": -18
+      },
+      {
+       "t": 1.0,
+       "x": 0.5777777753557478,
+       "y": 0.4655555461096387,
+       "rot": -22
+      },
+      {
+       "t": 1.3,
+       "x": 0.5177777753557478,
+       "y": 0.5055555461096387,
+       "rot": -10
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/goldfish.png",
+     "x": 1.2,
+     "y": 0.74,
+     "w": 0.24,
+     "enter": "none",
+     "at": 1.3,
+     "flip": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2,
+       "y": 0.74,
+       "rot": 0
+      },
+      {
+       "t": 1.4,
+       "x": 0.7077777753557477,
+       "y": 0.6555555461096387,
+       "rot": -6
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/goldfish.png",
+     "x": -0.2,
+     "y": 0.6,
+     "w": 0.24,
+     "enter": "none",
+     "at": 1.3,
+     "flip": false,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.2,
+       "y": 0.6,
+       "rot": 0
+      },
+      {
+       "t": 1.4,
+       "x": 0.48777777535574773,
+       "y": 0.6955555461096388,
+       "rot": 6
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/pellet.png",
+     "x": 0.5930157307067296,
+     "y": 0.6155555461096387,
+     "w": 0.03,
+     "enter": "none",
+     "at": 1.1,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.2,
+       "x": 0.5977777753557478
+      },
+      {
+       "t": 0.9,
+       "y": 0.6147396131352734,
+       "x": 0.6656514687995445,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/pellet.png",
+     "x": 0.5943427823657251,
+     "y": 0.6155555461096387,
+     "w": 0.03,
+     "enter": "none",
+     "at": 1.2200000000000002,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.2,
+       "x": 0.5977777753557478
+      },
+      {
+       "t": 0.9,
+       "y": 0.6111044352239977,
+       "x": 0.6117593479717314,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/pellet.png",
+     "x": 0.5662438097412354,
+     "y": 0.6155555461096387,
+     "w": 0.03,
+     "enter": "none",
+     "at": 1.34,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.2,
+       "x": 0.5977777753557478
+      },
+      {
+       "t": 0.9,
+       "y": 0.6113891508425651,
+       "x": 0.6185590105904362,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/pellet.png",
+     "x": 0.627075462607743,
+     "y": 0.6155555461096387,
+     "w": 0.03,
+     "enter": "none",
+     "at": 1.46,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.2,
+       "x": 0.5977777753557478
+      },
+      {
+       "t": 0.9,
+       "y": 0.582144188045684,
+       "x": 0.5663219773756719,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/pellet.png",
+     "x": 0.5568448291049317,
+     "y": 0.6155555461096387,
+     "w": 0.03,
+     "enter": "none",
+     "at": 1.58,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.2,
+       "x": 0.5977777753557478
+      },
+      {
+       "t": 0.9,
+       "y": 0.6322306635153412,
+       "x": 0.628727932562346,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/pellet.png",
+     "x": 0.5519658089927324,
+     "y": 0.6155555461096387,
+     "w": 0.03,
+     "enter": "none",
+     "at": 1.7000000000000002,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.2,
+       "x": 0.5977777753557478
+      },
+      {
+       "t": 0.9,
+       "y": 0.6443090855655532,
+       "x": 0.6721390203358385,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/pellet.png",
+     "x": 0.6131700287091318,
+     "y": 0.6155555461096387,
+     "w": 0.03,
+     "enter": "none",
+     "at": 1.82,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.2,
+       "x": 0.5977777753557478
+      },
+      {
+       "t": 0.9,
+       "y": 0.6186449354301387,
+       "x": 0.5429768305781738,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/pellet.png",
+     "x": 0.5492778490507083,
+     "y": 0.6155555461096387,
+     "w": 0.03,
+     "enter": "none",
+     "at": 1.94,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.2,
+       "x": 0.5977777753557478
+      },
+      {
+       "t": 0.9,
+       "y": 0.6125422347415722,
+       "x": 0.5273059521827647,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "PUSH = *FOOD*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "The catch? It only worked for *one hour* a day.",
+   "transition": "cut",
+   "caption_y": 0.45,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.2157,
+     "y": 0.5349,
+     "h": 0.3132,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a",
+       "belt": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/fg_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.6993,
+     "y": 0.5944,
+     "h": 0.4924,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.3
+      ],
+      [
+       "serious",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><circle cx='150' cy='150' r='138' fill='#f6efe2' stroke='#d9534f' stroke-width='16'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(0 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(30 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(60 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(90 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(120 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(150 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(180 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(210 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(240 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(270 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(300 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(330 150 150)'/><path d='M150,150 L150,60 A90,90 0 0,1 240,150 Z' fill='#6fc3c0' opacity='0.85'/><rect x='144' y='92' width='12' height='62' rx='6' fill='#1a1410'/><circle cx='150' cy='150' r='12' fill='#1a1410'/></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.3,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect x='146' y='40' width='8' height='114' rx='4' fill='#d9534f'/><circle cx='150' cy='150' r='8' fill='#d9534f'/></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.3,
+     "enter": "pop",
+     "at": 0.3,
+     "keys": [
+      {
+       "t": 0,
+       "rot": 0
+      },
+      {
+       "t": 2.6,
+       "rot": 90,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*1 HOUR* A DAY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.34,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "The fish learned the schedule... and showed up *right on time*.",
+   "transition": "cut",
+   "caption_y": 0.86,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.08,
+      "focus": [
+       0.55,
+       0.42
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_tank_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/goldfish.png",
+     "x": 1.2,
+     "y": 0.7,
+     "w": 0.24,
+     "enter": "none",
+     "at": 0.9,
+     "flip": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2,
+       "y": 0.7,
+       "rot": 0
+      },
+      {
+       "t": 1.2,
+       "x": 0.6777777753557478,
+       "y": 0.6155555461096387,
+       "rot": -6
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/goldfish.png",
+     "x": -0.2,
+     "y": 0.62,
+     "w": 0.24,
+     "enter": "none",
+     "at": 1.15,
+     "flip": false,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.2,
+       "y": 0.62,
+       "rot": 0
+      },
+      {
+       "t": 1.2,
+       "x": 0.4277777753557478,
+       "y": 0.6955555461096387,
+       "rot": 6
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/goldfish.png",
+     "x": 1.2,
+     "y": 0.5,
+     "w": 0.24,
+     "enter": "none",
+     "at": 1.4,
+     "flip": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2,
+       "y": 0.5,
+       "rot": 0
+      },
+      {
+       "t": 1.2,
+       "x": 0.5977777753557478,
+       "y": 0.7555555461096387,
+       "rot": -6
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><circle cx='150' cy='150' r='138' fill='#f6efe2' stroke='#d9534f' stroke-width='16'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(0 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(30 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(60 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(90 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(120 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(150 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(180 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(210 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(240 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(270 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(300 150 150)'/><rect x='146' y='24' width='8' height='22' fill='#1a1410' transform='rotate(330 150 150)'/><path d='M150,150 L150,60 A90,90 0 0,1 240,150 Z' fill='#6fc3c0' opacity='0.85'/><rect x='144' y='92' width='12' height='62' rx='6' fill='#1a1410'/><circle cx='150' cy='150' r='12' fill='#1a1410'/></svg>",
+     "x": 0.2,
+     "y": 0.13,
+     "w": 0.22,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><rect x='146' y='40' width='8' height='114' rx='4' fill='#d9534f'/><circle cx='150' cy='150' r='8' fill='#d9534f'/></svg>",
+     "x": 0.2,
+     "y": 0.13,
+     "w": 0.22,
+     "enter": "pop",
+     "at": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "rot": -60
+      },
+      {
+       "t": 2.2,
+       "rot": 0,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "RIGHT *ON TIME*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.25,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.3,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "So, three seconds? Try *at least three months*.",
+   "transition": "zoom",
+   "caption_y": 0.45,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 14,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='5' y='5' width='890' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='40' y='96' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>THE MYTH</text><text x='860' y='112' text-anchor='end' font-size='96' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>3 SEC</text></svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.13,
+     "enter": "slide_right",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='5' y='5' width='890' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='40' y='96' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>THE MYTH</text><text x='860' y='112' text-anchor='end' font-size='96' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>3 SEC</text><line x1='40' y1='75' x2='860' y2='75' stroke='#d9534f' stroke-width='12' stroke-linecap='round'/></svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.13,
+     "enter": "fade",
+     "at": 1.0,
+     "enter_dur": 0.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='5' y='5' width='890' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='40' y='96' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>REAL</text><text x='860' y='112' text-anchor='end' font-size='96' fill='#46965a' font-family='Anton, DejaVu Sans, sans-serif'>3+ MONTHS</text></svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.26,
+     "enter": "slide_right",
+     "at": 1.5,
+     "sfx": "ding"
+    },
+    {
+     "type": "counter",
+     "from": 3,
+     "to": 7776000,
+     "count_dur": 1.6,
+     "suffix": " SECONDS",
+     "x": 0.5,
+     "y": 0.35,
+     "size": 64,
+     "color": "accent",
+     "at": 1.7,
+     "enter": "pop"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5,
+     "y": 0.72,
+     "h": 0.42,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ],
+      [
+       "smirk",
+       2.8
+      ]
+     ],
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "And in 2022, researchers in Israel taught goldfish to *drive*.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_lab_floor.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7355,
+     "y": 0.4755,
+     "h": 0.2825,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "curly"
+       ],
+       "tie": "#d9534f",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.3,
+       0.04,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.2372,
+     "y": 0.4537,
+     "h": 0.4918,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "surprised",
+       2.2
+      ],
+      [
+       "explain",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.25,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/fish_car.png",
+     "x": 0.66,
+     "y": 0.7,
+     "w": 0.36,
+     "enter": "none",
+     "at": 0.3,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.25,
+       "y": 0.73
+      },
+      {
+       "t": 1.8,
+       "x": 0.66,
+       "y": 0.7,
+       "ease": "out"
+      }
+     ],
+     "sfx": "whoosh"
+    },
+    {
+     "type": "text",
+     "text": "GOLDFISH. *DRIVING.*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 92,
+     "max_w": 0.95,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.1,
+     "sfx": "boom"
+    },
+    {
+     "type": "text",
+     "text": "BEN-GURION UNIVERSITY, 2022",
+     "font": "light",
+     "x": 0.5,
+     "y": 0.172,
+     "size": 46,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 4,
+     "enter": "fade",
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_lab_floor.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.6,
+    "zoom": 1.1,
+    "focus": [
+     0.5,
+     0.42
+    ],
+    "text": "the goldfish got its licence\nbefore *me*",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "It steered its tank on wheels toward a *target*... and hit it.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_lab_floor.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7355,
+     "y": 0.4755,
+     "h": 0.2825,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "cheer",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "curly"
+       ],
+       "tie": "#d9534f",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.7,
+       0.04,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.4749,
+     "y": 0.4737,
+     "h": 0.3032,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "happy",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a",
+       "belt": "#25262b"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.0572,
+       "y": 0.4735,
+       "scale": 1.0096
+      },
+      {
+       "t": 1.2,
+       "x": 0.4749,
+       "y": 0.4737,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/fish_car.png",
+     "x": 0.66,
+     "y": 0.7,
+     "w": 0.36,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.66,
+       "y": 0.7,
+       "scale": 1.0
+      },
+      {
+       "t": 1.2,
+       "x": 0.5247727809210453,
+       "y": 0.6339854535818065,
+       "scale": 0.72
+      },
+      {
+       "t": 2.5,
+       "x": 0.5295455618420905,
+       "y": 0.567970907163613,
+       "scale": 0.45,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "shape",
+     "shape": "burst",
+     "x": 0.5495455618420905,
+     "y": 0.48797090716361297,
+     "w": 0.3,
+     "color": "accent",
+     "at": 2.5,
+     "enter": "pop",
+     "sfx": "ding",
+     "until": 3.6,
+     "exit": "fade"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.2372,
+     "y": 0.4537,
+     "h": 0.4918,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "warm",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "*TARGET* HIT",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.5
+    }
+   ]
+  },
+  {
+   "say": "So where did the myth come from? Nobody really knows. We just never *checked*.",
+   "transition": "cut",
+   "caption_y": 0.45,
+   "camera": {
+    "zoom": [
+     1.05,
+     1.0
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8498,
+     "y": 0.5357,
+     "h": 0.3153,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "curly"
+       ],
+       "tie": "#d9534f",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.4608,
+       "y": 0.5363,
+       "scale": 1.0054
+      },
+      {
+       "t": 1.0,
+       "x": 0.8498,
+       "y": 0.5357,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.2157,
+     "y": 0.5349,
+     "h": 0.3132,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ],
+      [
+       "idle",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a",
+       "belt": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/fg_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "think",
+     "x": 0.6993,
+     "y": 0.5944,
+     "h": 0.4924,
+     "enter": "none",
+     "acting": [
+      [
+       "think",
+       0
+      ],
+      [
+       "shrug",
+       1.8
+      ],
+      [
+       "serious",
+       3.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "ORIGIN: *UNKNOWN*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "TIMES ANYONE CHECKED: *0*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.24,
+     "size": 72,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.6,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "So next time you forget why you walked into a room... don't blame the *goldfish*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.5,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "smirk",
+       2.6
+      ],
+      [
+       "crossed",
+       3.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-c/assets/goldfish.png",
+     "x": 1.2,
+     "y": 0.3,
+     "w": 0.26,
+     "enter": "none",
+     "at": 1.0,
+     "flip": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2,
+       "y": 0.3,
+       "rot": 0
+      },
+      {
+       "t": 2.6,
+       "x": -0.2,
+       "y": 0.26,
+       "rot": -6
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "DON'T BLAME *THE GOLDFISH*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.8,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
