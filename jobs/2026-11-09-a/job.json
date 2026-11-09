@@ -1,0 +1,1446 @@
+{
+ "id": "2026-11-09-a",
+ "title": "This fluffy cloud weighs 100 elephants ☁️",
+ "description": "A normal puffy cumulus cloud holds about 500 tonnes of water, roughly 100 elephants. So why doesn't it fall? Tiny droplets, rising warm air, and a sky that weighs far more.\n\nSources: https://www.loc.gov/everyday-mysteries/meteorology-climatology/item/how-much-does-a-cloud-weigh/ ; https://www.earthdate.org/episodes/puffy-clouds-weigh-in ; https://www.zmescience.com/science/how-much-do-clouds-weigh ; https://www.sciencealert.com/this-is-how-much-a-cloud-weighs",
+ "tags": [
+  "clouds",
+  "how heavy is a cloud",
+  "cloud weight",
+  "weather",
+  "science",
+  "physics",
+  "science explained",
+  "facts",
+  "nature"
+ ],
+ "hashtags": [
+  "#science",
+  "#weather"
+ ],
+ "meta": {
+  "format": "scale-shock",
+  "topic": "how much a cloud weighs (~500 tonnes)",
+  "hook": "number-shock",
+  "idea_source": "backlog (ideas.md)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.loc.gov/everyday-mysteries/meteorology-climatology/item/how-much-does-a-cloud-weigh/",
+   "https://www.earthdate.org/episodes/puffy-clouds-weigh-in",
+   "https://www.zmescience.com/science/how-much-do-clouds-weigh",
+   "https://www.sciencealert.com/this-is-how-much-a-cloud-weighs"
+  ],
+  "humour": {
+   "trend": "'They don't know' format (rising on Imgflip, Nov 7-8 2026), as a text card",
+   "beat": "zoom_punch",
+   "scene": 7
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-09-a/assets.py",
+ "scenes": [
+  {
+   "say": "This fluffy cloud weighs about *five hundred tonnes*.",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.5,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_meadow_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4426,
+     "y": 0.7366,
+     "h": 0.1362,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1552,
+     "y": 0.7552,
+     "h": 0.1698,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       0.9
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5878,
+     "y": 0.8387,
+     "h": 0.3272,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "THIS CLOUD WEIGHS",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.11,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "*500 TONNES*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.18,
+     "size": 150,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "shape",
+     "shape": "arrow",
+     "w": 0.16,
+     "h": 0.05,
+     "color": "accent",
+     "x": 0.5300934058582567,
+     "y": 0.2712163072118574,
+     "rotate": 90,
+     "enter": "none",
+     "loop": "bob",
+     "loop_amp": 1.2
+    }
+   ]
+  },
+  {
+   "say": "Sounds fake. So let's do the *maths*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_meadow_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.4,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "smirk",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "smirk",
+       0
+      ],
+      [
+       "explain",
+       0.9
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "LET'S DO THE *MATHS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "A normal puffy cloud is about *one kilometre* wide, tall and deep.",
+   "transition": "slide_up",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_meadow_sky.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'><g fill='none' stroke='#f2b04a' stroke-width='7' stroke-linejoin='round'><rect x='60' y='160' width='380' height='380'/><path d='M60 160 L160 60 L540 60 L540 440 L440 540 M440 160 L540 60'/><path d='M60 540 L160 440 L540 440 M160 440 L160 60' stroke-dasharray='18 14' opacity='0.7'/></g></svg>",
+     "w": 0.78,
+     "x": 0.5,
+     "y": 0.47,
+     "enter": "zoom",
+     "at": 0.6,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "text",
+     "text": "1 KM",
+     "font": "display",
+     "x": 0.36,
+     "y": 0.67,
+     "size": 64,
+     "color": "accent",
+     "stroke": "#0b0f12",
+     "stroke_width": 6,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "1 KM",
+     "font": "display",
+     "x": 0.85,
+     "y": 0.5,
+     "size": 64,
+     "color": "accent",
+     "stroke": "#0b0f12",
+     "stroke_width": 6,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "1 KM",
+     "font": "display",
+     "x": 0.24,
+     "y": 0.29,
+     "size": 64,
+     "color": "accent",
+     "stroke": "#0b0f12",
+     "stroke_width": 6,
+     "enter": "pop",
+     "at": 2.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "A NORMAL *CUMULUS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "say": "That's a *billion* boxes of air, each one metre across.",
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.08,
+     1.14
+    ],
+    "focus": [
+     0.5,
+     0.48
+    ]
+   },
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_meadow_sky.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'><g fill='none' stroke='#f2b04a' stroke-width='7' stroke-linejoin='round'><rect x='60' y='160' width='380' height='380'/><path d='M60 160 L160 60 L540 60 L540 440 L440 540 M440 160 L540 60'/><path d='M60 540 L160 440 L540 440 M160 440 L160 60' stroke-dasharray='18 14' opacity='0.7'/></g></svg>",
+     "w": 0.78,
+     "x": 0.5,
+     "y": 0.47,
+     "enter": "none",
+     "opacity": 0.5
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 1000000000,
+     "count_dur": 1.6,
+     "at": 0.3,
+     "x": 0.5,
+     "y": 0.13,
+     "size": 118,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop"
+    },
+    {
+     "type": "text",
+     "text": "BOXES, *1 M3* EACH",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.21,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.9,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Each box holds just *half a gram* of water. About one *marble*.",
+   "transition": "slide_left",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_meadow_sky.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 4,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 420'><rect width='900' height='420' rx='34' fill='#f6efe2'/><rect width='900' height='420' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><text x='60' y='100' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WATER IN ONE BOX</text><rect x='60' y='140' width='230' height='230' rx='10' fill='#cfe6f2' stroke='#34425c' stroke-width='6'/><text x='175' y='395' text-anchor='middle' font-size='30' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 m x 1 m x 1 m</text><text x='600' y='250' text-anchor='middle' font-size='120' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>0.5 g</text><text x='600' y='330' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>= ABOUT 1 MARBLE</text></svg>",
+     "w": 0.84,
+     "x": 0.5,
+     "y": 0.24,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/marble.png",
+     "x": 0.29,
+     "y": 0.255,
+     "w": 0.12,
+     "enter": "drop",
+     "at": 1.8,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Half a gram, a billion times, is *five hundred tonnes*.",
+   "transition": "cut",
+   "sfx": "boom",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.1,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ],
+    "punch": [
+     2.4
+    ]
+   },
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_meadow_sky.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "text",
+     "text": "0.5 g  x  1,000,000,000",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 500,
+     "count_dur": 1.3,
+     "at": 1.0,
+     "x": 0.5,
+     "y": 0.21,
+     "suffix": " TONNES",
+     "size": 140,
+     "color": "accent",
+     "stroke": "#0b0f12",
+     "stroke_width": 8,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "say": "That's about *a hundred elephants*. Heavier than a fully loaded *jumbo jet*.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.3,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_seesaw_level.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 1.0517,
+     "y": 0.6025,
+     "h": 0.1243,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.45,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1607,
+     "y": 0.611,
+     "h": 0.1353,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8003,
+     "y": 0.6159,
+     "h": 0.1415,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#f6efe2",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.368,
+     "y": 0.6241,
+     "h": 0.1521,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#46965a"
+       ],
+       "top": [
+        "#34425c",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5605,
+     "y": 0.6668,
+     "h": 0.2109,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       0.9
+      ],
+      [
+       "warm",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/cloud.png",
+     "x": 0.22489088981377237,
+     "y": 0.49084418070280655,
+     "w": 0.32254171539074966,
+     "enter": "none",
+     "at": 0.0,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.12,
+       "rot": -6
+      },
+      {
+       "t": 0.55,
+       "y": 0.49084418070280655,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/elephant.png",
+     "x": 0.7861360681044188,
+     "y": 0.48793458269543033,
+     "w": 0.24664954706351438,
+     "enter": "none",
+     "at": 0.7,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.12,
+       "rot": -6
+      },
+      {
+       "t": 0.55,
+       "y": 0.48793458269543033,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/elephant.png",
+     "x": 0.7061360681044188,
+     "y": 0.49193458269543033,
+     "w": 0.23431706971033867,
+     "enter": "none",
+     "at": 0.9,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.12,
+       "rot": -6
+      },
+      {
+       "t": 0.55,
+       "y": 0.49193458269543033,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ],
+     "flip": true
+    },
+    {
+     "type": "text",
+     "text": "x100",
+     "font": "display",
+     "x": 0.7561360681044188,
+     "y": 0.39793458269543036,
+     "size": 84,
+     "color": "accent",
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "= *100 ELEPHANTS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.9
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 170'><rect width='900' height='170' rx='30' fill='#f6efe2'/><rect width='900' height='170' rx='30' fill='none' stroke='#1a1410' stroke-width='6'/><text x='450' y='78' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FULLY LOADED JUMBO JET</text><text x='450' y='140' text-anchor='middle' font-size='52' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>~410 t  &lt;  CLOUD 500 t</text></svg>",
+     "w": 0.8,
+     "x": 0.5,
+     "y": 0.215,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.7,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_seesaw_level.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "zoom_punch",
+    "at": 0.1,
+    "dur": 1.5,
+    "zoom": 1.14,
+    "focus": [
+     0.5,
+     0.42
+    ],
+    "text": "*They don't know* it weighs 100 elephants",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "So why doesn't it *fall* on us?",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_meadow_sky.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.2,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "think",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "think",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "WHY DOESN'T IT *FALL?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "The water is split into billions of droplets, far thinner than a *hair*. And rising *warm air* keeps pushing them up.",
+   "transition": "slide_up",
+   "caption_y": 0.66,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_meadow_sky.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.22
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 560'><rect width='900' height='560' rx='34' fill='#f6efe2'/><rect width='900' height='560' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><text x='450' y='80' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>ZOOMED IN, SAME SCALE</text><rect x='120' y='120' width='120' height='320' rx='20' fill='#3a2a20'/><text x='180' y='500' text-anchor='middle' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>1 HAIR</text><circle cx='707' cy='341' r='5' fill='#6fc3c0'/><circle cx='540' cy='245' r='6' fill='#6fc3c0'/><circle cx='473' cy='323' r='6' fill='#6fc3c0'/><circle cx='707' cy='191' r='5' fill='#6fc3c0'/><circle cx='753' cy='170' r='6' fill='#6fc3c0'/><circle cx='664' cy='236' r='6' fill='#6fc3c0'/><circle cx='701' cy='366' r='4' fill='#6fc3c0'/><circle cx='556' cy='271' r='4' fill='#6fc3c0'/><circle cx='526' cy='217' r='6' fill='#6fc3c0'/><circle cx='772' cy='182' r='6' fill='#6fc3c0'/><circle cx='666' cy='202' r='5' fill='#6fc3c0'/><circle cx='574' cy='264' r='6' fill='#6fc3c0'/><circle cx='685' cy='194' r='5' fill='#6fc3c0'/><circle cx='577' cy='353' r='5' fill='#6fc3c0'/><circle cx='644' cy='172' r='4' fill='#6fc3c0'/><circle cx='832' cy='152' r='5' fill='#6fc3c0'/><circle cx='498' cy='343' r='5' fill='#6fc3c0'/><circle cx='541' cy='162' r='4' fill='#6fc3c0'/><circle cx='687' cy='207' r='6' fill='#6fc3c0'/><circle cx='471' cy='212' r='6' fill='#6fc3c0'/><circle cx='571' cy='253' r='5' fill='#6fc3c0'/><circle cx='474' cy='192' r='4' fill='#6fc3c0'/><circle cx='746' cy='158' r='6' fill='#6fc3c0'/><circle cx='513' cy='404' r='6' fill='#6fc3c0'/><circle cx='571' cy='365' r='4' fill='#6fc3c0'/><circle cx='673' cy='248' r='6' fill='#6fc3c0'/><circle cx='517' cy='224' r='4' fill='#6fc3c0'/><circle cx='781' cy='171' r='4' fill='#6fc3c0'/><circle cx='608' cy='226' r='6' fill='#6fc3c0'/><circle cx='607' cy='167' r='4' fill='#6fc3c0'/><circle cx='831' cy='356' r='4' fill='#6fc3c0'/><circle cx='552' cy='408' r='4' fill='#6fc3c0'/><circle cx='657' cy='417' r='6' fill='#6fc3c0'/><circle cx='759' cy='194' r='5' fill='#6fc3c0'/><circle cx='526' cy='337' r='5' fill='#6fc3c0'/><circle cx='577' cy='355' r='4' fill='#6fc3c0'/><circle cx='764' cy='159' r='5' fill='#6fc3c0'/><circle cx='781' cy='318' r='4' fill='#6fc3c0'/><circle cx='691' cy='207' r='4' fill='#6fc3c0'/><circle cx='583' cy='377' r='5' fill='#6fc3c0'/><text x='655' y='500' text-anchor='middle' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>CLOUD DROPLETS</text><g fill='#d98a1a'><path d='M330 430 L330 210 L300 210 L350 140 L400 210 L370 210 L370 430 Z'/></g><text x='350' y='470' text-anchor='middle' font-size='26' fill='#d98a1a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WARM AIR</text></svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.29,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/cloud.png",
+     "x": 0.5,
+     "y": 0.56,
+     "w": 0.3,
+     "enter": "fade",
+     "at": 3.6,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.57
+      },
+      {
+       "t": 2.5,
+       "y": 0.53
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "And the *air* in that same box? About *a million tonnes*.",
+   "transition": "flash",
+   "sfx": "boom",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.1,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.0,
+      "zoom": 1.02,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ],
+    "shake": [
+     1.6,
+     0.35
+    ]
+   },
+   "caption_y": 0.3,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_seesaw_tipped.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 1.0517,
+     "y": 0.6025,
+     "h": 0.1243,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ],
+      [
+       "cheer",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.547412868920041,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1607,
+     "y": 0.611,
+     "h": 0.1353,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8003,
+     "y": 0.6159,
+     "h": 0.1415,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#f6efe2",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.368,
+     "y": 0.6241,
+     "h": 0.1521,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ],
+      [
+       "cheer",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "hat": [
+        "cap",
+        "#46965a"
+       ],
+       "top": [
+        "#34425c",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.476644968927995,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5605,
+     "y": 0.6668,
+     "h": 0.2109,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ],
+      [
+       "warm",
+       2.8
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.65,
+       0.04,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/cloud.png",
+     "x": 0.23418652030219064,
+     "y": 0.4561918591727566,
+     "w": 0.32240756897791384,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/crate_air.png",
+     "x": 0.7518036624153519,
+     "y": 0.5364656816793438,
+     "w": 0.20878500414200396,
+     "enter": "none",
+     "at": 1.3,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.12,
+       "rot": 8
+      },
+      {
+       "t": 0.4,
+       "y": 0.5364656816793438,
+       "rot": -13,
+       "ease": "bounce"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "AIR",
+     "font": "display",
+     "x": 0.7518036624153519,
+     "y": 0.5364656816793438,
+     "size": 80,
+     "color": "#1a1410",
+     "stroke": "#f6efe2",
+     "stroke_width": 5,
+     "shadow": false,
+     "at": 1.3,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.12,
+       "rot": 8
+      },
+      {
+       "t": 0.4,
+       "y": 0.5364656816793438,
+       "rot": -13,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "AIR IN THE SAME BOX",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.11,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3
+    },
+    {
+     "type": "text",
+     "text": "*~1,000,000 TONNES*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.18,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 1.6
+    }
+   ]
+  },
+  {
+   "say": "So the cloud isn't light. The *sky* around it is just *heavier*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-09-a/assets/plate_meadow_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 3.6,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ],
+      [
+       "crossed",
+       2.8
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "THE AIR: *2,000x* HEAVIER",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}

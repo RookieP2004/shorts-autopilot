@@ -11,9 +11,10 @@
 - [big-question] What is a Nash equilibrium? · natural follow-up to the prisoner's dilemma, two rival stalls choosing prices · https://www.econlib.org/library/Enc/PrisonersDilemma.html
 - [big-question] What is the tragedy of the commons? · shared fishing pond, every villager takes one more fish · https://en.wikipedia.org/wiki/Tragedy_of_the_commons
 - [scale-shock] How many cells are in your body? · ~37 trillion, counter-up hook, body-interior set · https://pubmed.ncbi.nlm.nih.gov/23829164/
-- [scale-shock] How heavy is a cloud? · a fluffy cumulus weighs ~500 tonnes, shown as elephants on a town scale · https://www.usgs.gov/special-topics/water-science-school/science/how-much-does-a-cloud-weigh
 - [big-question] What does a bank do when everyone wants their money back at once? · bank-run follow-up, reuses the town bank + vault set · https://www.rba.gov.au/education/resources/explainers/
 - [myth-bust] "Saving money in a bank makes you rich" · interest vs inflation, before/after shopping basket · https://www.capitalone.com/bank/money-management/banking-basics/how-does-savings-interest-work/
 - [big-question] Why does compound interest snowball? · one coin that grows a coin each year, shown as a growing pile · https://www.fool.com/money/banks/articles/explain-it-to-me-like-im-five-heres-how-interest-rates-work
 - [myth-bust] "Bulls hate the colour red" · they're red-green colourblind; it's the cape's movement · https://en.wikipedia.org/wiki/Bullfighting#Red_cape
 - [big-question] How do fish learn without a cortex? · follow-up to the goldfish myth: fish brains, landmarks and routines · https://www.discoverwildlife.com/animal-facts/fish/goldfish-memory
+- [big-question] How do planes stay up if clouds can't fall either? · lift vs updrafts, follow-up angle on the cloud weight video · https://www.earthdate.org/episodes/puffy-clouds-weigh-in
+- [scale-shock] How much water is in one thunderstorm? · up to ~25 million tonnes, same see-saw set scaled up · https://www.zmescience.com/science/how-much-do-clouds-weigh
