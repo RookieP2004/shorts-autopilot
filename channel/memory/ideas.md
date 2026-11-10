@@ -8,7 +8,6 @@
 - [scale-shock] How many atoms are in one grain of sand? · physics niche, counter-up hook · https://en.wikipedia.org/wiki/Avogadro_constant
 - [big-question] Why does your brain eat 20% of your energy? · follow-up angle on the brain myth: the costliest organ, shown as a city power grid · https://www.livescience.com/health/neuroscience/do-we-really-use-only-10-of-our-brains
 - [big-question] What is a Nash equilibrium? · natural follow-up to the prisoner's dilemma, two rival stalls choosing prices · https://www.econlib.org/library/Enc/PrisonersDilemma.html
-- [big-question] What is the tragedy of the commons? · shared fishing pond, every villager takes one more fish · https://en.wikipedia.org/wiki/Tragedy_of_the_commons
 - [scale-shock] How many cells are in your body? · ~37 trillion, counter-up hook, body-interior set · https://pubmed.ncbi.nlm.nih.gov/23829164/
 - [big-question] What does a bank do when everyone wants their money back at once? · bank-run follow-up, reuses the town bank + vault set · https://www.rba.gov.au/education/resources/explainers/
 - [myth-bust] "Saving money in a bank makes you rich" · interest vs inflation, before/after shopping basket · https://www.capitalone.com/bank/money-management/banking-basics/how-does-savings-interest-work/
@@ -20,3 +19,6 @@
 - [myth-bust] "Hair and nails keep growing after death" · body niche, skin shrinking is the real reason, easy before/after · https://en.wikipedia.org/wiki/List_of_common_misconceptions
 - [big-question] Why do we get goosebumps? · leftover fur-fluffing reflex, a cold town scene with a fluffy cat for contrast · https://en.wikipedia.org/wiki/Goose_bumps
 - [big-question] Why is a flamingo pink? · it's the food (carotenoids), not the bird; shrimp-to-pink visual · https://en.wikipedia.org/wiki/Flamingo
+- [big-question] Why can't the sea just refill the cod? · the Grand Banks collapse and why stocks still haven't fully recovered, a fishing-harbour set · https://www.heritage.nf.ca/articles/economy/moratorium.php
+- [big-question] What is a free rider? · one villager never pays for the shared well; public goods made concrete · https://en.wikipedia.org/wiki/Free-rider_problem
+- [big-question] What is an externality? · a bakery's smoke costs the neighbours, not the baker; pollution as a hidden price tag · https://en.wikipedia.org/wiki/Externality

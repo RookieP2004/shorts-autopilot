@@ -16,3 +16,4 @@ One line per posted video, appended by every production run (`python -m autopilo
 2026-11-09-c | 2026-11-09 16:16 IST | Goldfish have a 3-second memory? Total myth 🐟 | myth-bust | myth-bust | the goldfish 3-second memory myth | 43.1s | https://youtube.com/shorts/T60TVT78GqY | T60TVT78GqY
 2026-11-09-a | 2026-11-09 19:23 IST | This fluffy cloud weighs 100 elephants ☁️ | scale-shock | number-shock | how much a cloud weighs (~500 tonnes) | 51.27s | https://youtube.com/shorts/Y7NZaafqWkE | Y7NZaafqWkE
 2026-11-10-b | 2026-11-10 13:26 IST | Is your blood blue inside you? Total myth 🩸 | myth-bust | myth-bust | the blue-blood myth (why veins look blue) | 50.63s | https://youtube.com/shorts/RrF4AORd73E | RrF4AORd73E
+2026-11-10-c | 2026-11-10 16:21 IST | Why do we wreck the things we all share? 🐄 | big-question | question | the tragedy of the commons (Hardin vs Ostrom) | 54.83s | https://youtube.com/shorts/biZJ7EfdoOo | biZJ7EfdoOo
