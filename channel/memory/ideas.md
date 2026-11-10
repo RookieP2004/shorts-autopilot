@@ -5,7 +5,6 @@
 - [big-question] Why do we have leap years? · everyone knows Feb 29, few know the 11-minutes-a-year reason · https://en.wikipedia.org/wiki/Leap_year
 - [myth-bust] "The Great Wall is visible from space" · classic myth, cosmos set fits · https://en.wikipedia.org/wiki/Great_Wall_of_China
 - [big-question] What is opportunity cost? · one apple vs one hour, everyday economics made concrete · https://en.wikipedia.org/wiki/Opportunity_cost
-- [myth-bust] "Your blood is blue inside your body" · body niche, easy before/after visual · https://en.wikipedia.org/wiki/Blood#Color
 - [scale-shock] How many atoms are in one grain of sand? · physics niche, counter-up hook · https://en.wikipedia.org/wiki/Avogadro_constant
 - [big-question] Why does your brain eat 20% of your energy? · follow-up angle on the brain myth: the costliest organ, shown as a city power grid · https://www.livescience.com/health/neuroscience/do-we-really-use-only-10-of-our-brains
 - [big-question] What is a Nash equilibrium? · natural follow-up to the prisoner's dilemma, two rival stalls choosing prices · https://www.econlib.org/library/Enc/PrisonersDilemma.html
@@ -18,3 +17,6 @@
 - [big-question] How do fish learn without a cortex? · follow-up to the goldfish myth: fish brains, landmarks and routines · https://www.discoverwildlife.com/animal-facts/fish/goldfish-memory
 - [big-question] How do planes stay up if clouds can't fall either? · lift vs updrafts, follow-up angle on the cloud weight video · https://www.earthdate.org/episodes/puffy-clouds-weigh-in
 - [scale-shock] How much water is in one thunderstorm? · up to ~25 million tonnes, same see-saw set scaled up · https://www.zmescience.com/science/how-much-do-clouds-weigh
+- [myth-bust] "Hair and nails keep growing after death" · body niche, skin shrinking is the real reason, easy before/after · https://en.wikipedia.org/wiki/List_of_common_misconceptions
+- [big-question] Why do we get goosebumps? · leftover fur-fluffing reflex, a cold town scene with a fluffy cat for contrast · https://en.wikipedia.org/wiki/Goose_bumps
+- [big-question] Why is a flamingo pink? · it's the food (carotenoids), not the bird; shrimp-to-pink visual · https://en.wikipedia.org/wiki/Flamingo

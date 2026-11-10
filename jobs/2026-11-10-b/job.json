@@ -1,0 +1,1479 @@
+{
+ "id": "2026-11-10-b",
+ "title": "Is your blood blue inside you? Total myth 🩸",
+ "description": "Your blood is never blue: it's bright red with oxygen and dark red without. Veins only look blue because of how light travels through skin.\n\nSources: The Naked Scientists, 'Mythconception: Venous blood is blue'; Science ABC, 'If blood is red, why do veins appear blue?'; Kienle et al. 1996, 'Why do veins appear blue? A new look at an old question'; Discover Wildlife on horseshoe crab blood.",
+ "tags": [
+  "blood",
+  "blue blood",
+  "why are veins blue",
+  "myth busting",
+  "human body",
+  "biology",
+  "science explained",
+  "horseshoe crab"
+ ],
+ "hashtags": [
+  "#science",
+  "#humanbody"
+ ],
+ "meta": {
+  "format": "myth-bust",
+  "topic": "the blue-blood myth (why veins look blue)",
+  "hook": "myth-bust",
+  "idea_source": "backlog",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.thenakedscientists.com/node/195994",
+   "https://www.scienceabc.com/humans/if-blood-is-red-why-do-veins-appear-blue-through-the-skin.html",
+   "https://experts.mcmaster.ca/display/publication276400",
+   "https://www.discoverwildlife.com/animal-facts/marine-animals/horseshoe-crab-blue-blood"
+  ],
+  "humour": {
+   "trend": "'What's up brah?' (unbothered loudmouth walks into a confrontation, Nov 2026 wave)",
+   "beat": "smirk",
+   "scene": 6
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-10-b/assets.py",
+ "scenes": [
+  {
+   "say": "Your blood is *blue* until it hits the air? Total myth.",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1861,
+     "y": 0.5348,
+     "h": 0.3129,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#6fc3c0",
+        "trousers"
+       ],
+       "hair": [
+        "#2a1d17",
+        "bun"
+       ],
+       "earrings": "#f2b04a",
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/fg_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.6993,
+     "y": 0.5944,
+     "h": 0.4924,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ],
+      [
+       "deadpan",
+       2.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "YOUR BLOOD IS *BLUE* INSIDE YOU",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 170'><rect x='10' y='10' width='500' height='150' rx='18' fill='none' stroke='#d9534f' stroke-width='14'/><text x='260.0' y='128' text-anchor='middle' font-size='118' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>MYTH</text></svg>",
+     "x": 0.5,
+     "y": 0.1,
+     "w": 0.42,
+     "rotate": -6,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "scale": 1.0
+      },
+      {
+       "t": 2.65,
+       "scale": 1.15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/vial_blue.png",
+     "x": 0.8,
+     "y": 0.3,
+     "w": 0.1,
+     "enter": "none",
+     "at": 0.0,
+     "rotate": 8,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 1
+      },
+      {
+       "t": 2.5,
+       "opacity": 1
+      },
+      {
+       "t": 2.9,
+       "opacity": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Your blood is *always* red.",
+   "transition": "slide_left",
+   "caption_y": 0.74,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     },
+     {
+      "t": 2.2,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_rack_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "text",
+     "text": "ALWAYS *RED*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 130,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Full of oxygen, it's bright cherry red. Low on oxygen, in your veins, it's a darker, *maroon* red.",
+   "transition": "zoom",
+   "caption_y": 0.45,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 14,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/vial_bright.png",
+     "x": 0.3,
+     "y": 0.215,
+     "w": 0.15,
+     "enter": "none",
+     "at": 0.2,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15
+      },
+      {
+       "t": 0.6,
+       "y": 0.215,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 620 140'><rect x='5' y='5' width='610' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='310.0' y='92' text-anchor='middle' font-size='62' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>ARTERY: BRIGHT</text></svg>",
+     "x": 0.27,
+     "y": 0.36,
+     "w": 0.44,
+     "enter": "pop",
+     "at": 0.9,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/vial_dark.png",
+     "x": 0.7,
+     "y": 0.215,
+     "w": 0.15,
+     "enter": "none",
+     "at": 2.6,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.15
+      },
+      {
+       "t": 0.6,
+       "y": 0.215,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 620 140'><rect x='5' y='5' width='610' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='310.0' y='92' text-anchor='middle' font-size='62' fill='#7c2533' font-family='Anton, DejaVu Sans, sans-serif'>VEIN: MAROON</text></svg>",
+     "x": 0.73,
+     "y": 0.36,
+     "w": 0.44,
+     "enter": "pop",
+     "at": 3.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 840 170'><rect x='10' y='10' width='820' height='150' rx='18' fill='none' stroke='#2f6fd6' stroke-width='14'/><text x='420.0' y='128' text-anchor='middle' font-size='118' fill='#2f6fd6' font-family='Anton, DejaVu Sans, sans-serif'>NEVER BLUE</text></svg>",
+     "x": 0.5,
+     "y": 0.58,
+     "w": 0.66,
+     "rotate": -5,
+     "enter": "zoom",
+     "at": 4.6,
+     "sfx": "boom"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.78,
+     "h": 0.36,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       0.8
+      ],
+      [
+       "explain",
+       2.4
+      ],
+      [
+       "point",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "So why do your veins *look* blue? Blame the *light*.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5477,
+     "y": 0.5421,
+     "h": 0.1233,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "tie": "#7c2533",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.2593,
+     "y": 0.5431,
+     "h": 0.1245,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "shrug",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#6fc3c0",
+        "trousers"
+       ],
+       "hair": [
+        "#2a1d17",
+        "bun"
+       ],
+       "earrings": "#f2b04a",
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/fg_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.6694,
+     "y": 0.5846,
+     "h": 0.1766,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "think",
+       1.4
+      ],
+      [
+       "point",
+       2.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.1438,
+       "y": 0.5846,
+       "scale": 1.0
+      },
+      {
+       "t": 1.3,
+       "x": 0.6694,
+       "y": 0.5846,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "WHY DO VEINS *LOOK* BLUE?",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><circle cx='120' cy='120' r='62' fill='#f2b04a' stroke='#1a1410' stroke-width='10'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(0 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(45 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(90 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(135 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(180 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(225 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(270 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(315 120 120)'/></svg>",
+     "x": 0.5,
+     "y": 0.27,
+     "w": 0.16,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "pop",
+     "loop": "pulse"
+    }
+   ]
+  },
+  {
+   "say": "Here's your skin, cut open.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 2.4,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.58
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_skin_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.7629,
+     "y": 0.5463,
+     "h": 0.2914,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2015,
+       "y": 0.5551,
+       "scale": 1.0642
+      },
+      {
+       "t": 1.0,
+       "x": 0.7629,
+       "y": 0.5463,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "YOUR SKIN, *CUT OPEN*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Red light dives *deep* into your skin... and the blood in the vein soaks it up.",
+   "transition": "cut",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.06,
+      "focus": [
+       0.52,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_skin_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><circle cx='120' cy='120' r='62' fill='#f2b04a' stroke='#1a1410' stroke-width='10'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(0 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(45 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(90 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(135 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(180 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(225 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(270 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(315 120 120)'/></svg>",
+     "x": 0.16,
+     "y": 0.2,
+     "w": 0.18,
+     "enter": "pop",
+     "at": 0.0,
+     "loop": "pulse"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 1920'><path d='M173,384 L440,807 L613,1005' fill='none' stroke='#1a1410' stroke-width='46' stroke-linecap='round' stroke-linejoin='round' opacity='0.55'/><path d='M173,384 L440,807 L613,1005' fill='none' stroke='#ff3b3b' stroke-width='34' stroke-linecap='round' stroke-linejoin='round'/><polygon points='639,1035 583,1001 613,975' fill='#ff3b3b' stroke='#1a1410' stroke-width='6'/></svg>",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "fade",
+     "at": 0.4,
+     "enter_dur": 0.5,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "shape",
+     "shape": "circle",
+     "x": 0.16,
+     "y": 0.2,
+     "w": 0.06,
+     "h": 0.06,
+     "color": "#ffe0e0",
+     "at": 0.4,
+     "enter": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.16,
+       "y": 0.2
+      },
+      {
+       "t": 0.6,
+       "x": 0.4074499246376006,
+       "y": 0.42045454655397757,
+       "ease": "linear"
+      },
+      {
+       "t": 1.2,
+       "x": 0.5673215074147303,
+       "y": 0.5232672128076981,
+       "ease": "linear"
+      }
+     ],
+     "until": 1.75,
+     "exit": "fade"
+    },
+    {
+     "type": "shape",
+     "shape": "burst",
+     "x": 0.5673215074147303,
+     "y": 0.5232672128076981,
+     "w": 0.3,
+     "color": "#ff3b3b",
+     "at": 2.6,
+     "enter": "pop",
+     "sfx": "pop",
+     "until": 3.6,
+     "exit": "fade"
+    },
+    {
+     "type": "text",
+     "text": "RED: *ABSORBED*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.6,
+     "color": "primary",
+     "highlight": "#ff6b6b"
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_skin_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "smirk",
+    "at": 0.1,
+    "dur": 1.5,
+    "zoom": 1.08,
+    "focus": [
+     0.5,
+     0.42
+    ],
+    "text": "red light walking into your skin like:\n*what's up brah*",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "Blue light barely gets in. It *bounces* right back to your eyes.",
+   "transition": "cut",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.06,
+      "focus": [
+       0.55,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_skin_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 1920'><path d='M173,384 L440,807 L613,1005' fill='none' stroke='#1a1410' stroke-width='46' stroke-linecap='round' stroke-linejoin='round' opacity='0.55'/><path d='M173,384 L440,807 L613,1005' fill='none' stroke='#ff3b3b' stroke-width='34' stroke-linecap='round' stroke-linejoin='round'/><polygon points='639,1035 583,1001 613,975' fill='#ff3b3b' stroke='#1a1410' stroke-width='6'/></svg>",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "opacity": 0.35
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><circle cx='120' cy='120' r='62' fill='#f2b04a' stroke='#1a1410' stroke-width='10'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(0 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(45 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(90 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(135 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(180 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(225 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(270 120 120)'/><rect x='114' y='8' width='12' height='36' rx='6' fill='#f2b04a' stroke='#1a1410' stroke-width='4' transform='rotate(315 120 120)'/></svg>",
+     "x": 0.16,
+     "y": 0.2,
+     "w": 0.18,
+     "enter": "none",
+     "loop": "pulse"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'><path d='M10,90 Q150,-30 290,90 Q150,210 10,90 Z' fill='#f6efe2' stroke='#1a1410' stroke-width='12'/><circle cx='150' cy='90' r='52' fill='#4f9cff' stroke='#1a1410' stroke-width='8'/><circle cx='150' cy='90' r='24' fill='#1a1410'/><circle cx='166' cy='74' r='10' fill='#ffffff'/></svg>",
+     "x": 0.8,
+     "y": 0.2,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 1920'><path d='M173,384 L750,807 L788,857 L864,499' fill='none' stroke='#1a1410' stroke-width='46' stroke-linecap='round' stroke-linejoin='round' opacity='0.55'/><path d='M173,384 L750,807 L788,857 L864,499' fill='none' stroke='#4f9cff' stroke-width='34' stroke-linecap='round' stroke-linejoin='round'/><polygon points='872,460 879,525 840,517' fill='#4f9cff' stroke='#1a1410' stroke-width='6'/></svg>",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "fade",
+     "at": 0.5,
+     "enter_dur": 0.5,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "shape",
+     "shape": "circle",
+     "x": 0.16,
+     "y": 0.2,
+     "w": 0.06,
+     "h": 0.06,
+     "color": "#e0f0ff",
+     "at": 0.5,
+     "enter": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.16,
+       "y": 0.2
+      },
+      {
+       "t": 0.5,
+       "x": 0.6943551539858177,
+       "y": 0.42045454655397757,
+       "ease": "linear"
+      },
+      {
+       "t": 1.0,
+       "x": 0.729635520650047,
+       "y": 0.44611529083755025,
+       "ease": "linear"
+      },
+      {
+       "t": 1.5,
+       "x": 0.8,
+       "y": 0.26,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.15,
+     "exit": "fade"
+    },
+    {
+     "type": "text",
+     "text": "BLUE: *BOUNCES BACK*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.34,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "ding",
+     "highlight": "#4f9cff"
+    }
+   ]
+  },
+  {
+   "say": "So above a vein, more blue comes back than red. And your brain goes: *blue*.",
+   "transition": "zoom",
+   "caption_y": 0.51,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_skin_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 14,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 620'><rect x='5' y='5' width='890' height='610' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>LIGHT BOUNCING BACK</text><text x='450' y='112' text-anchor='middle' font-size='32' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>from skin above a vein</text><line x1='120' y1='520' x2='780' y2='520' stroke='#1a1410' stroke-width='8'/><rect x='200' y='370' width='190' height='150' rx='14' fill='#d9534f' stroke='#1a1410' stroke-width='6'/><rect x='510' y='140' width='190' height='380' rx='14' fill='#4f9cff' stroke='#1a1410' stroke-width='6'/><text x='295' y='580' text-anchor='middle' font-size='52' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>RED</text><text x='605' y='580' text-anchor='middle' font-size='52' fill='#2f6fd6' font-family='Anton, DejaVu Sans, sans-serif'>BLUE</text></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.8,
+     "enter": "slide_up",
+     "at": 0.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 0.34,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ],
+      [
+       "think",
+       2.8
+      ],
+      [
+       "smirk",
+       3.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "BRAIN: *BLUE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.43,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.5,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "And the blue veins in your school diagrams? Just a *colour code*.",
+   "transition": "slide_left",
+   "caption_y": 0.45,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.9058,
+     "y": 0.5339,
+     "h": 0.3105,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#6fc3c0",
+        "trousers"
+       ],
+       "hair": [
+        "#2a1d17",
+        "bun"
+       ],
+       "earrings": "#f2b04a",
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.1271,
+     "y": 0.5345,
+     "h": 0.3121,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "tie": "#7c2533",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/fg_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.6993,
+     "y": 0.5944,
+     "h": 0.4924,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ],
+      [
+       "warm",
+       2.8
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 520'><rect x='5' y='5' width='890' height='510' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='42' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SCHOOL DIAGRAM</text><path d='M450,330 C380,270 330,230 360,180 C390,140 440,160 450,200 C460,160 510,140 540,180 C570,230 520,270 450,330 Z' fill='#e8a39a' stroke='#1a1410' stroke-width='8'/><path d='M360,210 C250,210 200,300 150,420' fill='none' stroke='#2f6fd6' stroke-width='22' stroke-linecap='round'/><path d='M540,210 C650,210 700,300 750,420' fill='none' stroke='#d9534f' stroke-width='22' stroke-linecap='round'/><text x='150' y='480' text-anchor='middle' font-size='40' fill='#2f6fd6' font-family='Anton, DejaVu Sans, sans-serif'>VEINS</text><text x='750' y='480' text-anchor='middle' font-size='40' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>ARTERIES</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.66,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop",
+     "rotate": -2
+    },
+    {
+     "type": "text",
+     "text": "JUST A *COLOUR CODE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.355,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Want *truly* blue blood? Meet the horseshoe crab. Its blood runs on copper, not iron.",
+   "transition": "cut",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.9419,
+     "y": 0.5361,
+     "h": 0.3164,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.7
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "tie": "#7c2533",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1861,
+     "y": 0.5348,
+     "h": 0.3129,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#6fc3c0",
+        "trousers"
+       ],
+       "hair": [
+        "#2a1d17",
+        "bun"
+       ],
+       "earrings": "#f2b04a",
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.7,
+       0.04,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/fg_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.6993,
+     "y": 0.5944,
+     "h": 0.4924,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "surprised",
+       1.5
+      ],
+      [
+       "explain",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.55,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/crab.png",
+     "x": 0.2823033351054518,
+     "y": 0.5021312919417472,
+     "w": 0.42,
+     "enter": "none",
+     "at": 1.2,
+     "sfx": "boom",
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.2,
+       "rot": -20
+      },
+      {
+       "t": 0.6,
+       "y": 0.5021312919417472,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/vial_blue.png",
+     "x": 0.82,
+     "y": 0.22,
+     "w": 0.12,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "pop",
+     "loop": "float",
+     "loop_amp": 0.01
+    },
+    {
+     "type": "text",
+     "text": "HORSESHOE *CRAB*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.4
+    },
+    {
+     "type": "text",
+     "text": "COPPER, NOT *IRON*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.19,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.6,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "You, though? *Red*. All the way through.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 3.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "smirk",
+       1.4
+      ],
+      [
+       "crossed",
+       2.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-b/assets/vial_bright.png",
+     "x": 0.84,
+     "y": 0.2,
+     "w": 0.14,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop",
+     "rotate": -8
+    },
+    {
+     "type": "text",
+     "text": "RED. *ALL THE WAY.*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
