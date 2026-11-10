@@ -1,0 +1,1546 @@
+{
+ "id": "2026-11-10-a",
+ "title": "You are 30 trillion cells. Try counting them 🧬",
+ "description": "Your body is roughly 30 trillion human cells (about 84% of them red blood cells), plus around 38 trillion bacteria, and it replaces about 330 billion cells every day. Counting them at one per second would take about 950,000 years.\n\nSources: https://pmc.ncbi.nlm.nih.gov/articles/4991899 ; https://www.smithsonianmag.com/smart-news/there-are-372-trillion-cells-inyour-body-4941473/ ; https://wis-wander.weizmann.ac.il/node/11205 ; https://www.mpg.de/11322481/oldest-homo-sapiens-fossils-at-jebel-irhoud-morocco",
+ "tags": [
+  "human body",
+  "cells",
+  "how many cells",
+  "red blood cells",
+  "gut bacteria",
+  "biology",
+  "science explained",
+  "facts",
+  "anatomy"
+ ],
+ "hashtags": [
+  "#biology",
+  "#science"
+ ],
+ "meta": {
+  "format": "scale-shock",
+  "topic": "how many cells are in your body (~30 trillion) and how fast they're replaced",
+  "hook": "number-shock",
+  "idea_source": "backlog (ideas.md: How many cells are in your body?)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://pmc.ncbi.nlm.nih.gov/articles/4991899",
+   "https://www.smithsonianmag.com/smart-news/there-are-372-trillion-cells-inyour-body-4941473/",
+   "https://wis-wander.weizmann.ac.il/node/11205",
+   "https://www.mpg.de/11322481/oldest-homo-sapiens-fossils-at-jebel-irhoud-morocco"
+  ],
+  "humour": {
+   "trend": "'Remember November 2026' (polar-bear 'meme from the future', revived late Aug 2026, it's now November 2026), as a deadpan text card",
+   "beat": "deadpan",
+   "scene": 9
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-10-a/assets.py",
+ "scenes": [
+  {
+   "say": "You are made of about *thirty trillion* cells.",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.5,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_tissue_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.8048,
+     "y": 0.631,
+     "h": 0.1614,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "surprised",
+       1.5
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1306,
+     "y": 0.6447,
+     "h": 0.1757,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       0.9
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.4815,
+     "y": 0.7567,
+     "h": 0.2981,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/rbc.png",
+     "x": 0.2,
+     "y": 0.33,
+     "w": 0.12,
+     "enter": "none",
+     "at": 0.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.2,
+       "y": 0.33,
+       "rot": 0
+      },
+      {
+       "t": 5.0,
+       "x": 0.24000000000000002,
+       "y": 0.30000000000000004,
+       "rot": 40,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/rbc.png",
+     "x": 0.83,
+     "y": 0.3,
+     "w": 0.09,
+     "enter": "none",
+     "at": 0.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.83,
+       "y": 0.3,
+       "rot": 0
+      },
+      {
+       "t": 5.0,
+       "x": 0.7999999999999999,
+       "y": 0.27,
+       "rot": -30,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "YOU ARE",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "counter",
+     "from": 29000000000000,
+     "to": 30000000000000,
+     "count_dur": 1.0,
+     "x": 0.5,
+     "y": 0.17,
+     "size": 104,
+     "color": "accent",
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "*CELLS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.235,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Sounds made up. So let's try *counting* them.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_tissue_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.6,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "smirk",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "smirk",
+       0
+      ],
+      [
+       "explain",
+       1.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/clicker.png",
+     "x": 0.78,
+     "y": 0.16,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "click",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -10
+      },
+      {
+       "t": 0.5,
+       "rot": 8
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "LET'S *COUNT*",
+     "font": "display",
+     "x": 0.42,
+     "y": 0.14,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.9,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "One cell per second. No sleep, no snacks, no weekends.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.22,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.624,
+     "y": 0.6375,
+     "h": 0.1534,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "shrug",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 1.008,
+     "y": 0.658,
+     "h": 0.1819,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#7c2533",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2117,
+     "y": 0.6984,
+     "h": 0.2427,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.5344,
+       "y": 0.6956,
+       "scale": 0.9839
+      },
+      {
+       "t": 1.1,
+       "x": 0.2117,
+       "y": 0.6984,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/clicker.png",
+     "x": 0.6750873423451301,
+     "y": 0.6215272935747953,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "click"
+    },
+    {
+     "type": "text",
+     "text": "*1* CELL / SECOND",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "You'd finish in about *nine hundred and fifty thousand* years.",
+   "transition": "slide_up",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 7,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 4,
+       "scale": 1.21
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 560'><rect width='900' height='560' rx='34' fill='#f6efe2'/><rect width='900' height='560' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><text x='450' y='86' text-anchor='middle' font-size='48' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>COUNTING 30 TRILLION</text><rect x='80' y='250' width='740' height='22' rx='11' fill='#34425c'/><rect x='80' y='250' width='506' height='22' rx='11' fill='#f2b04a'/><circle cx='92' cy='261' r='26' fill='#d9534f'/><circle cx='586' cy='261' r='22' fill='#6fc3c0'/><circle cx='808' cy='261' r='26' fill='#46965a'/><text x='92' y='200' text-anchor='middle' font-size='34' fill='#d9534f' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>START</text><text x='92' y='340' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>950,000</text><text x='92' y='378' text-anchor='middle' font-size='26' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>YEARS AGO</text><text x='586' y='200' text-anchor='middle' font-size='30' fill='#2f8f8a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FIRST HUMANS</text><text x='586' y='340' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>~300,000</text><text x='586' y='378' text-anchor='middle' font-size='26' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>YEARS AGO</text><text x='808' y='200' text-anchor='middle' font-size='34' fill='#46965a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>DONE</text><text x='808' y='340' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TODAY</text><text x='450' y='500' text-anchor='middle' font-size='42' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>1 PER SECOND = ~950,000 YEARS</text></svg>",
+     "w": 0.88,
+     "x": 0.5,
+     "y": 0.27,
+     "enter": "pop",
+     "at": 0.15,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/hourglass.png",
+     "x": 0.8,
+     "y": 0.5,
+     "w": 0.16,
+     "enter": "drop",
+     "at": 1.4,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 0
+      },
+      {
+       "t": 0.6,
+       "rot": 0
+      },
+      {
+       "t": 1.1,
+       "rot": 180
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "You'd have to start before *humans* even existed.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.6,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       1.3
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "BEFORE *HUMANS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "And most of them aren't skin or brain. About *twenty-five trillion* are red blood cells.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.46,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_tissue_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1528,
+     "y": 0.5887,
+     "h": 0.2751,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.7,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.654,
+     "y": 0.6405,
+     "h": 0.4002,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ],
+      [
+       "warm",
+       4.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/rbc.png",
+     "x": 0.4,
+     "y": 0.6,
+     "w": 0.15,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.66,
+       "rot": -20
+      },
+      {
+       "t": 0.5,
+       "y": 0.6,
+       "rot": 0,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/rbc.png",
+     "x": 0.28,
+     "y": 0.69,
+     "w": 0.11,
+     "enter": "pop",
+     "at": 2.45,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.76,
+       "rot": 30
+      },
+      {
+       "t": 0.5,
+       "y": 0.7,
+       "rot": 10,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/rbc.png",
+     "x": 0.48,
+     "y": 0.72,
+     "w": 0.1,
+     "enter": "pop",
+     "at": 2.7,
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.79,
+       "rot": -40
+      },
+      {
+       "t": 0.5,
+       "y": 0.73,
+       "rot": -15,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 250'><rect width='900' height='250' rx='30' fill='#f6efe2'/><rect width='900' height='250' rx='30' fill='none' stroke='#1a1410' stroke-width='6'/><text x='60' y='72' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>YOUR 30 TRILLION CELLS</text><rect x='60' y='110' width='780' height='70' rx='14' fill='#34425c'/><rect x='60' y='110' width='655' height='70' rx='14' fill='#c8141f'/><text x='387' y='160' text-anchor='middle' font-size='44' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>RED BLOOD CELLS 84%</text><text x='778' y='160' text-anchor='middle' font-size='28' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>REST</text><text x='450' y='226' text-anchor='middle' font-size='28' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>skin, brain, muscle, bone... all in that last slice</text></svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.31,
+     "enter": "pop",
+     "at": 2.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 25000000000000,
+     "count_dur": 1.3,
+     "at": 2.0,
+     "x": 0.5,
+     "y": 0.14,
+     "size": 96,
+     "color": "#ff5a5a",
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop"
+    },
+    {
+     "type": "text",
+     "text": "RED BLOOD CELLS",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.205,
+     "size": 70,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.2
+    }
+   ]
+  },
+  {
+   "say": "Then there are the guests. Roughly *thirty-eight trillion* bacteria, mostly in your gut.",
+   "transition": "slide_up",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.7,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_tissue_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/bacterium.png",
+     "x": 0.25,
+     "y": 0.55,
+     "w": 0.22,
+     "enter": "fade",
+     "at": 0.3,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25,
+       "y": 0.55,
+       "rot": 0
+      },
+      {
+       "t": 5.0,
+       "x": 0.3,
+       "y": 0.52,
+       "rot": 15,
+       "ease": "linear"
+      }
+     ],
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/bacterium.png",
+     "x": 0.72,
+     "y": 0.62,
+     "w": 0.18,
+     "enter": "fade",
+     "at": 0.7,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.72,
+       "y": 0.62,
+       "rot": 0
+      },
+      {
+       "t": 5.0,
+       "x": 0.6799999999999999,
+       "y": 0.59,
+       "rot": -20,
+       "ease": "linear"
+      }
+     ],
+     "flip": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/bacterium.png",
+     "x": 0.55,
+     "y": 0.5,
+     "w": 0.14,
+     "enter": "fade",
+     "at": 1.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.55,
+       "y": 0.5,
+       "rot": 0
+      },
+      {
+       "t": 5.0,
+       "x": 0.5900000000000001,
+       "y": 0.53,
+       "rot": 30,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 420'><rect width='900' height='420' rx='34' fill='#f6efe2'/><rect width='900' height='420' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='42' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WHO LIVES IN YOU</text><rect x='120' y='190' width='260' height='140' rx='12' fill='#d9534f'/><rect x='520' y='150' width='260' height='180' rx='12' fill='#7cc35a'/><text x='250' y='175' text-anchor='middle' font-size='52' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>30 T</text><text x='650' y='135' text-anchor='middle' font-size='52' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>38 T</text><text x='250' y='380' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>YOUR CELLS</text><text x='650' y='380' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>BACTERIA</text><text x='450' y='272' text-anchor='middle' font-size='44' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>~1:1</text></svg>",
+     "w": 0.82,
+     "x": 0.5,
+     "y": 0.24,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "GUESTS",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 80,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop",
+     "color": "#9fe07a"
+    }
+   ]
+  },
+  {
+   "say": "And none of it stays. Your body replaces about *three hundred and thirty billion* cells a day.",
+   "transition": "cut",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.5,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_tissue_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8048,
+     "y": 0.631,
+     "h": 0.1614,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       3.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       3.3,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1306,
+     "y": 0.6447,
+     "h": 0.1757,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.4815,
+     "y": 0.7567,
+     "h": 0.2981,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "explain",
+       1.8
+      ],
+      [
+       "point",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.18,
+     "y": 0.34,
+     "w": 0.12,
+     "enter": "fade",
+     "at": 0.4,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.18,
+       "y": 0.34,
+       "rot": 0
+      },
+      {
+       "t": 5.0,
+       "x": 0.22,
+       "y": 0.32,
+       "rot": 0,
+       "ease": "linear"
+      }
+     ],
+     "until": 1.8,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.82,
+     "y": 0.32,
+     "w": 0.11,
+     "enter": "fade",
+     "at": 1.2,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.82,
+       "y": 0.32,
+       "rot": 0
+      },
+      {
+       "t": 5.0,
+       "x": 0.86,
+       "y": 0.3,
+       "rot": 0,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.6,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.18,
+     "y": 0.34,
+     "w": 0.12,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.82,
+     "y": 0.32,
+     "w": 0.11,
+     "enter": "pop",
+     "at": 2.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "REPLACED EVERY DAY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.11,
+     "size": 76,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 330000000000,
+     "count_dur": 1.4,
+     "at": 2.6,
+     "x": 0.5,
+     "y": 0.18,
+     "size": 110,
+     "color": "accent",
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "say": "That's nearly *four million* every second.",
+   "transition": "zoom",
+   "sfx": "boom",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.6,
+      "zoom": 1.1,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ],
+    "punch": [
+     0.9
+    ]
+   },
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_tissue_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 3,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 3800000,
+     "count_dur": 1.0,
+     "at": 0.3,
+     "x": 0.5,
+     "y": 0.2,
+     "size": 150,
+     "color": "accent",
+     "stroke": "#0b0f12",
+     "stroke_width": 8,
+     "enter": "pop"
+    },
+    {
+     "type": "text",
+     "text": "EVERY *SECOND*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.29,
+     "size": 90,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.466665687456873,
+     "y": 0.5359772386080496,
+     "w": 0.10696842336094917,
+     "enter": "pop",
+     "at": 0.4,
+     "loop": "pulse",
+     "loop_amp": 0.6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.4759550490698413,
+     "y": 0.530784127306227,
+     "w": 0.09349539315399588,
+     "enter": "pop",
+     "at": 0.5800000000000001,
+     "loop": "pulse",
+     "loop_amp": 0.6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.27926224069841366,
+     "y": 0.5311908639041805,
+     "w": 0.09519530880867208,
+     "enter": "pop",
+     "at": 0.76,
+     "loop": "pulse",
+     "loop_amp": 0.6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.7050838107639669,
+     "y": 0.48941234562292185,
+     "w": 0.08213605050498102,
+     "enter": "pop",
+     "at": 0.9400000000000001,
+     "loop": "pulse",
+     "loop_amp": 0.6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.21346937624428758,
+     "y": 0.5609644534367177,
+     "w": 0.09773753930164956,
+     "enter": "pop",
+     "at": 1.12,
+     "loop": "pulse",
+     "loop_amp": 0.6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.1793162354588922,
+     "y": 0.5782193420798778,
+     "w": 0.10859031124502266,
+     "enter": "pop",
+     "at": 1.2999999999999998,
+     "loop": "pulse",
+     "loop_amp": 0.6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.6077457734736883,
+     "y": 0.541556270457857,
+     "w": 0.0762997638056065,
+     "enter": "pop",
+     "at": 1.48,
+     "loop": "pulse",
+     "loop_amp": 0.6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.16050051586472344,
+     "y": 0.5328381266170479,
+     "w": 0.0723820442067542,
+     "enter": "pop",
+     "at": 1.6600000000000001,
+     "loop": "pulse",
+     "loop_amp": 0.6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/cell.png",
+     "x": 0.2831457839585504,
+     "y": 0.5041943013665214,
+     "w": 0.07120330356899154,
+     "enter": "pop",
+     "at": 1.8399999999999999,
+     "loop": "pulse",
+     "loop_amp": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_tissue_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.6,
+    "text": "Remember November 2026? *Most of your cells won't.*",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "So while you watched this, over a *hundred million* of you got swapped out. Same you. *New parts.*",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-10-a/assets/plate_tissue_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 5.0,
+       "scale": 1.43
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ],
+      [
+       "smirk",
+       4.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "100,000,000+",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.11,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop",
+     "color": "accent"
+    },
+    {
+     "type": "text",
+     "text": "SWAPPED SINCE YOU HIT PLAY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.18,
+     "size": 62,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6
+    },
+    {
+     "type": "text",
+     "text": "SAME YOU. *NEW PARTS.*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.25,
+     "size": 80,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 4.0,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
