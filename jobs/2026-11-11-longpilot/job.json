@@ -1,0 +1,6413 @@
+{
+ "id": "2026-11-11-longpilot",
+ "kind": "long",
+ "title": "How Money Actually Works (From Barter to Bank Loans)",
+ "description": "Why will a stranger hand you real apples for a piece of paper? Professor Ved builds money from scratch on a tiny island: barter (and why no pure barter economy has ever been found), the first coins, goldsmith receipts, the end of gold in 1971, Zimbabwe's 100 trillion dollar note, and the plot twist: most money today is created when banks make loans.\n\nSources: Bank of England Quarterly Bulletin 2014 Q1 (Money in the modern economy; Money creation in the modern economy); Federal Reserve History, Nixon Ends Convertibility of U.S. Dollars to Gold (1971); Hanke & Kwok, Cato Journal (2009) on Zimbabwe's hyperinflation; Caroline Humphrey, Barter and Economic Disintegration (1985); Herodotus, Histories 1.94.",
+ "tags": [
+  "how money works",
+  "money explained",
+  "economics",
+  "inflation",
+  "banks create money",
+  "fiat money",
+  "gold standard",
+  "barter",
+  "history of money",
+  "zimbabwe",
+  "nixon shock",
+  "explained",
+  "education"
+ ],
+ "chapters": [
+  {
+   "scene": 0,
+   "title": "A piece of paper"
+  },
+  {
+   "scene": 4,
+   "title": "The barter problem"
+  },
+  {
+   "scene": 10,
+   "title": "Something everyone accepts"
+  },
+  {
+   "scene": 15,
+   "title": "Paper promises"
+  },
+  {
+   "scene": 22,
+   "title": "Money with nothing behind it"
+  },
+  {
+   "scene": 28,
+   "title": "When trust breaks"
+  },
+  {
+   "scene": 32,
+   "title": "Where money really comes from"
+  },
+  {
+   "scene": 39,
+   "title": "So, what is money?"
+  }
+ ],
+ "thumbnail": {
+  "at": 2.5,
+  "text": "WHY IS PAPER *MONEY?*",
+  "x": 0.29,
+  "y": 0.45,
+  "size": 190,
+  "max_w": 0.5,
+  "zoom": 1.45,
+  "focus": [
+   0.62,
+   0.38
+  ]
+ },
+ "meta": {
+  "format": "deep-dive",
+  "topic": "how money works: barter, coins, receipts, fiat, hyperinflation, bank money",
+  "hook": "question",
+  "idea_source": "owner (manual): first long video",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/quarterly-bulletin-2014-q1",
+   "https://www.federalreservehistory.org/essays/gold-convertibility-ends",
+   "https://clips.cato.org/sites/default/files/Hanke_bulawayo_inflation.pdf",
+   "https://en.wikipedia.org/wiki/Barter",
+   "https://en.wikipedia.org/wiki/Goldsmith_banker",
+   "https://www.thecollector.com/paper-money-history-develop-premodern-world/"
+  ],
+  "humour": {
+   "trend": "'They don't know' (rising Nov 2026), 'Always Has Been' (rising on Imgflip), plus a timeless dry 'temporary' line",
+   "beat": "side_eye, deadpan, deadpan",
+   "scene": [
+    20,
+    24,
+    36
+   ]
+  },
+  "overrides": "pilot: first long-form (16:9) Deep Dive"
+ },
+ "privacy": "private",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-11-longpilot/assets.py",
+ "scenes": [
+  {
+   "say": "Hey. This... is a piece of paper.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5129,
+     "y": 0.6312,
+     "h": 0.3485,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3788,
+     "y": 0.7027,
+     "h": 0.4683,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.6504,
+     "y": 0.7097,
+     "h": 0.4923,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.0015,
+       "y": 0.7116,
+       "scale": 1.0067
+      },
+      {
+       "t": 1.2,
+       "x": 0.6504,
+       "y": 0.7097,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill.png",
+     "x": 0.72,
+     "y": 0.3,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 1.5,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -8
+      },
+      {
+       "t": 2.5,
+       "rot": 6
+      }
+     ]
+    }
+   ],
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.55,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "And yet, this man will hand you an apple for it.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5603,
+     "y": 0.5693,
+     "h": 0.683,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "take",
+       0.9
+      ],
+      [
+       "give",
+       1.9
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill.png",
+     "x": 0.12,
+     "y": 0.7,
+     "w": 0.14,
+     "enter": "none",
+     "at": 0.5,
+     "until": 1.2,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.12,
+       "y": 0.7,
+       "rot": -10,
+       "scale": 0.5
+      },
+      {
+       "t": 0.315,
+       "x": 0.27,
+       "y": 0.42,
+       "rot": 1.0,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7,
+       "x": 0.42,
+       "y": 0.5,
+       "rot": 12,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/apple.png",
+     "x": 0.47,
+     "y": 0.56,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.9,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.47,
+       "y": 0.56
+      },
+      {
+       "t": 0.7,
+       "x": 0.1,
+       "y": 0.72,
+       "ease": "out"
+      }
+     ]
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Paper doesn't taste good. You can't plant it. So what makes money... money?",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.27,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "shrug",
+       2.3
+      ],
+      [
+       "point",
+       4.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "WHAT MAKES MONEY *MONEY?*",
+     "font": "display",
+     "x": 0.68,
+     "y": 0.3,
+     "size": 92,
+     "max_w": 0.5,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.6,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Let's build money from scratch, right here, on our little island. And by the end, you'll know who really creates most of the world's money. Hint: it's probably not who you think.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.5233,
+     "y": 0.5827,
+     "h": 0.2267,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ],
+      [
+       "idle",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.6752,
+     "y": 0.5773,
+     "h": 0.2156,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.3557,
+     "y": 0.5792,
+     "h": 0.2195,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "hat": [
+        "fez",
+        "#b03a2e"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#5a4636",
+        "trousers"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7883,
+     "y": 0.6139,
+     "h": 0.2912,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#9b59b6",
+        "dress"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9634,
+       "y": 0.6102,
+       "scale": 0.9736
+      },
+      {
+       "t": 3.0,
+       "x": 0.7332,
+       "y": 0.6191,
+       "scale": 1.0371,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4173,
+     "y": 0.6104,
+     "h": 0.284,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1574,
+     "y": 0.6283,
+     "h": 0.3209,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.0461,
+       "y": 0.6359,
+       "scale": 1.0489
+      },
+      {
+       "t": 3.2,
+       "x": 0.2468,
+       "y": 0.6225,
+       "scale": 0.9626,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.5875,
+     "y": 0.6516,
+     "h": 0.3795,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "HOW MONEY *ACTUALLY* WORKS",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 100,
+     "max_w": 0.8,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 0.4,
+     "sfx": "boom",
+     "until": 5.0,
+     "exit": "fade"
+    },
+    {
+     "type": "text",
+     "text": "WHO *REALLY* MAKES MONEY?",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 92,
+     "max_w": 0.8,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 5.2,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "slide_left",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   }
+  },
+  {
+   "say": "Before money, the story goes, people simply swapped. Tomas has a fish. He wants apples.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5129,
+     "y": 0.6312,
+     "h": 0.3485,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       3.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.4076,
+     "y": 0.7011,
+     "h": 0.4656,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "give",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.0205,
+       "y": 0.7525,
+       "scale": 1.1845
+      },
+      {
+       "t": 1.6,
+       "x": 0.4076,
+       "y": 0.7011,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7196,
+     "y": 0.7172,
+     "h": 0.5053,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       3.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fish.png",
+     "x": 0.05550000000000001,
+     "y": 0.6924999999999999,
+     "w": 0.07,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.05550000000000001,
+       "y": 0.68143,
+       "scale": 1.1845
+      },
+      {
+       "t": 1.6,
+       "x": 0.4426,
+       "y": 0.6411,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "BARTER",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 96,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "slide_left"
+  },
+  {
+   "say": "But the seller doesn't want fish. He wants a clay pot.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.5603,
+     "y": 0.5693,
+     "h": 0.683,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fish.png",
+     "x": 0.2,
+     "y": 0.62,
+     "w": 0.12,
+     "enter": "none",
+     "rot": -8
+    },
+    {
+     "type": "shape",
+     "shape": "circle",
+     "x": 0.72,
+     "y": 0.27,
+     "w": 0.15,
+     "color": "primary",
+     "enter": "pop",
+     "at": 1.4
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/pot.png",
+     "x": 0.72,
+     "y": 0.27,
+     "w": 0.07,
+     "enter": "pop",
+     "at": 1.5,
+     "sfx": "pop"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Omar makes pots... but he wants bread. Nobody's wants line up.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.5233,
+     "y": 0.5827,
+     "h": 0.2267,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.3557,
+     "y": 0.5792,
+     "h": 0.2195,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "shrug",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "hat": [
+        "fez",
+        "#b03a2e"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#5a4636",
+        "trousers"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.4021,
+     "y": 0.6178,
+     "h": 0.2993,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "sad",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "shrug",
+     "x": 0.6598,
+     "y": 0.641,
+     "h": 0.3569,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1100 300'><rect width='1100' height='300' rx='30' fill='#f6efe2'/><rect x='3' y='3' width='1094' height='294' rx='28' fill='none' stroke='#1a1410' stroke-width='6'/>\n<text x='70' y='70' font-size='34' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='600'>WHO WANTS WHAT</text>\n<text x='70' y='175' font-size='54' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TOMAS</text><path d='M260,152 L306,152 L306,138 L332,160 L306,182 L306,168 L260,168 Z' fill='#f2b04a'/>\n<text x='350' y='175' font-size='54' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SELLER</text><path d='M570,152 L616,152 L616,138 L642,160 L616,182 L616,168 L570,168 Z' fill='#f2b04a'/>\n<text x='660' y='175' font-size='54' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>OMAR</text><path d='M835,152 L881,152 L881,138 L907,160 L881,182 L881,168 L835,168 Z' fill='#d9534f'/>\n<text x='925' y='175' font-size='54' fill='#d9534f' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>???</text>\n<text x='70' y='255' font-size='30' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='600'>fish for apples? apples for a pot? pots for bread?</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.56,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Economists call this the double coincidence of wants. Both of you must want exactly what the other one has.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.27,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       3.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "THE *DOUBLE COINCIDENCE* OF WANTS",
+     "font": "display",
+     "x": 0.68,
+     "y": 0.32,
+     "size": 84,
+     "max_w": 0.5,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Here's the twist. Anthropologists have never found a society that ran purely on barter. When people did barter, it was usually with strangers they'd never see again.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5129,
+     "y": 0.6312,
+     "h": 0.3485,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.5452,
+     "y": 0.7103,
+     "h": 0.4933,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "point",
+       2.2
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7625,
+       "y": 0.7145,
+       "scale": 1.015
+      },
+      {
+       "t": 1.0,
+       "x": 0.5452,
+       "y": 0.7103,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "NO PURE BARTER ECONOMY *EVER FOUND*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 84,
+     "max_w": 0.7,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.8,
+     "sfx": "boom"
+    }
+   ],
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "punch": [
+     3.0
+    ]
+   }
+  },
+  {
+   "say": "Real villages ran on trust. Take the apples now, help me later. Everyone just remembered who owed whom.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "give",
+     "x": 0.5233,
+     "y": 0.5827,
+     "h": 0.2267,
+     "enter": "none",
+     "acting": [
+      [
+       "give",
+       0
+      ],
+      [
+       "happy",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.3557,
+     "y": 0.5792,
+     "h": 0.2195,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "hat": [
+        "fez",
+        "#b03a2e"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#5a4636",
+        "trousers"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.4333,
+     "y": 0.6124,
+     "h": 0.288,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ],
+      [
+       "happy",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.6768,
+     "y": 0.6359,
+     "h": 0.3462,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 820 380'><rect width='820' height='380' rx='30' fill='#f6efe2'/><rect x='3' y='3' width='814' height='374' rx='28' fill='none' stroke='#1a1410' stroke-width='6'/>\n<text x='60' y='80' font-size='36' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='600'>THE VILLAGE MEMORY</text>\n<line x1='60' y1='105' x2='760' y2='105' stroke='#1a1410' stroke-width='3' opacity='0.3'/>\n<text x='60' y='175' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Tomas owes seller</text><text x='560' y='175' font-size='54' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>3 apples</text>\n<text x='60' y='250' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Seller owes Omar</text><text x='560' y='250' font-size='54' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>1 pot</text>\n<text x='60' y='325' font-size='46' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Omar owes Tomas</text><text x='560' y='325' font-size='54' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>2 fish</text></svg>",
+     "x": 0.74,
+     "y": 0.3,
+     "w": 0.38,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "pop"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "But trust is hard with strangers. So people settled on one thing that everyone would accept.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5233,
+     "y": 0.5827,
+     "h": 0.2267,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.4173,
+     "y": 0.6104,
+     "h": 0.284,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.7674,
+     "y": 0.6175,
+     "h": 0.2986,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a882",
+       "hat": [
+        "tophat",
+        "#2a2320"
+       ],
+       "top": [
+        "#2f5f4f",
+        "jacket"
+       ],
+       "bottom": [
+        "#2a2320",
+        "trousers"
+       ],
+       "belt": "#8a5a3c",
+       "bag": "#5a3a22",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9871,
+       "y": 0.6121,
+       "scale": 0.9628
+      },
+      {
+       "t": 2.4,
+       "x": 0.7332,
+       "y": 0.6191,
+       "scale": 1.0114,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2775,
+     "y": 0.6366,
+     "h": 0.3477,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "ONE THING *EVERYONE* ACCEPTS",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 88,
+     "max_w": 0.7,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.0
+    }
+   ],
+   "transition": "slide_left"
+  },
+  {
+   "say": "Shells. Salt. Cattle. And eventually... metal.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 4,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/shell.png",
+     "x": 0.2,
+     "y": 0.45,
+     "w": 0.13,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "SHELLS",
+     "font": "display",
+     "x": 0.2,
+     "y": 0.68,
+     "size": 64,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/salt.png",
+     "x": 0.4,
+     "y": 0.45,
+     "w": 0.1,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "SALT",
+     "font": "display",
+     "x": 0.4,
+     "y": 0.68,
+     "size": 64,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.9
+    },
+    {
+     "type": "text",
+     "text": "CATTLE",
+     "font": "display",
+     "x": 0.6,
+     "y": 0.47,
+     "size": 64,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.4,
+     "color": "accent2"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/coin.png",
+     "x": 0.8,
+     "y": 0.45,
+     "w": 0.14,
+     "enter": "pop",
+     "at": 2.3,
+     "sfx": "pop",
+     "loop": "float",
+     "loop_amp": 0.6
+    },
+    {
+     "type": "text",
+     "text": "*METAL*",
+     "font": "display",
+     "x": 0.8,
+     "y": 0.68,
+     "size": 72,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Good money has to last, be easy to carry, split into small amounts, and be hard to fake. Metal ticks every box.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.27,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       3.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 330'><rect width='900' height='330' rx='30' fill='#f6efe2'/><rect x='3' y='3' width='894' height='324' rx='28' fill='none' stroke='#1a1410' stroke-width='6'/>\n<text x='60' y='78' font-size='36' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='600'>GOOD MONEY IS...</text>\n<text x='60' y='165' font-size='54' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>DURABLE</text><text x='440' y='165' font-size='48' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>EASY TO CARRY</text>\n<text x='60' y='270' font-size='54' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SPLITTABLE</text><text x='440' y='270' font-size='48' fill='#d98a1a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>HARD TO FAKE</text></svg>",
+     "x": 0.68,
+     "y": 0.36,
+     "w": 0.44,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Around 600 BC, the kingdom of Lydia, in today's Turkey, began stamping gold and silver into coins.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/coin.png",
+     "x": 0.68,
+     "y": 0.45,
+     "w": 0.24,
+     "enter": "zoom",
+     "at": 0.2,
+     "keys": [
+      {
+       "t": 0,
+       "sx": 1
+      },
+      {
+       "t": 0.4,
+       "sx": -1
+      },
+      {
+       "t": 0.8,
+       "sx": 1
+      },
+      {
+       "t": 1.2,
+       "sx": -1
+      },
+      {
+       "t": 1.6,
+       "sx": 1,
+       "ease": "out"
+      }
+     ],
+     "sfx": "ding"
+    },
+    {
+     "type": "text",
+     "text": "LYDIA, *~600 BC*",
+     "font": "display",
+     "x": 0.68,
+     "y": 0.13,
+     "size": 92,
+     "max_w": 0.5,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.5
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.25,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "A coin of known weight meant no more arguing over every nugget. Prices could finally be counted.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.5603,
+     "y": 0.5693,
+     "h": 0.683,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ],
+      [
+       "happy",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/tag_1.png",
+     "x": 0.75,
+     "y": 0.48,
+     "w": 0.13,
+     "enter": "none",
+     "rot": -6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/coin.png",
+     "x": 0.1,
+     "y": 0.72,
+     "w": 0.06,
+     "enter": "none",
+     "at": 0.6,
+     "until": 1.2999999999999998,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.1,
+       "y": 0.72,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.315,
+       "x": 0.25,
+       "y": 0.4,
+       "rot": 100.0,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7,
+       "x": 0.4,
+       "y": 0.52,
+       "rot": 200,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "PRICE = *COUNTED*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 88,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "But coins are heavy, and easy to steal. In 1600s London, merchants left their gold with goldsmiths, who had strong vaults.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_goldsmith_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5433,
+     "y": 0.6151,
+     "h": 0.2795,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "wave",
+       2.0
+      ],
+      [
+       "take",
+       3.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e8bfa0",
+       "hat": [
+        "beret",
+        "#3a2a4a"
+       ],
+       "top": [
+        "#6b2e2e",
+        "jacket"
+       ],
+       "apron": "#3a2a1a",
+       "bottom": [
+        "#2a2320",
+        "trousers"
+       ],
+       "necklace": "#e0b040",
+       "build": "regular",
+       "hair": [
+        "#cfcfcf",
+        "short"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_goldsmith_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.4079,
+     "y": 0.675,
+     "h": 0.3675,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "give",
+       3.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a882",
+       "hat": [
+        "tophat",
+        "#2a2320"
+       ],
+       "top": [
+        "#2f5f4f",
+        "jacket"
+       ],
+       "bottom": [
+        "#2a2320",
+        "trousers"
+       ],
+       "belt": "#8a5a3c",
+       "bag": "#5a3a22",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.0606,
+       "y": 0.6944,
+       "scale": 1.0776
+      },
+      {
+       "t": 2.2,
+       "x": 0.4079,
+       "y": 0.675,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7504,
+     "y": 0.7036,
+     "h": 0.4191,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       4.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/coinstack.png",
+     "x": 0.0906,
+     "y": 0.6444,
+     "w": 0.045,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.0906,
+       "y": 0.64052,
+       "scale": 1.0776
+      },
+      {
+       "t": 2.2,
+       "x": 0.43789999999999996,
+       "y": 0.625,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "LONDON, *1600s*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 92,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "fade"
+  },
+  {
+   "say": "The goldsmith handed back a receipt: a written promise to return the gold.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_goldsmith_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "give",
+     "x": 0.5279,
+     "y": 0.6421,
+     "h": 0.49,
+     "enter": "none",
+     "acting": [
+      [
+       "give",
+       0
+      ],
+      [
+       "point",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e8bfa0",
+       "hat": [
+        "beret",
+        "#3a2a4a"
+       ],
+       "top": [
+        "#6b2e2e",
+        "jacket"
+       ],
+       "apron": "#3a2a1a",
+       "bottom": [
+        "#2a2320",
+        "trousers"
+       ],
+       "necklace": "#e0b040",
+       "build": "regular",
+       "hair": [
+        "#cfcfcf",
+        "short"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_goldsmith_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.3627,
+     "y": 0.7626,
+     "h": 0.7242,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ],
+      [
+       "happy",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a882",
+       "hat": [
+        "tophat",
+        "#2a2320"
+       ],
+       "top": [
+        "#2f5f4f",
+        "jacket"
+       ],
+       "bottom": [
+        "#2a2320",
+        "trousers"
+       ],
+       "belt": "#8a5a3c",
+       "bag": "#5a3a22",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/receipt.png",
+     "x": 0.7,
+     "y": 0.3,
+     "w": 0.3,
+     "enter": "zoom",
+     "at": 0.8,
+     "sfx": "whoosh",
+     "loop": "float",
+     "loop_amp": 0.5
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Soon people stopped fetching the gold at all. They just traded the receipts. Paper money had arrived in Europe.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_goldsmith_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.5433,
+     "y": 0.6151,
+     "h": 0.2795,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e8bfa0",
+       "hat": [
+        "beret",
+        "#3a2a4a"
+       ],
+       "top": [
+        "#6b2e2e",
+        "jacket"
+       ],
+       "apron": "#3a2a1a",
+       "bottom": [
+        "#2a2320",
+        "trousers"
+       ],
+       "necklace": "#e0b040",
+       "build": "regular",
+       "hair": [
+        "#cfcfcf",
+        "short"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_goldsmith_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "give",
+     "x": 0.2385,
+     "y": 0.6865,
+     "h": 0.3843,
+     "enter": "none",
+     "acting": [
+      [
+       "give",
+       0
+      ],
+      [
+       "happy",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a882",
+       "hat": [
+        "tophat",
+        "#2a2320"
+       ],
+       "top": [
+        "#2f5f4f",
+        "jacket"
+       ],
+       "bottom": [
+        "#2a2320",
+        "trousers"
+       ],
+       "belt": "#8a5a3c",
+       "bag": "#5a3a22",
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.6416,
+     "y": 0.6927,
+     "h": 0.3935,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       2.4
+      ],
+      [
+       "happy",
+       3.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.4207,
+     "y": 0.7056,
+     "h": 0.4124,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ],
+      [
+       "give",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0cdb0",
+       "hat": [
+        "bowler",
+        "#7c2533"
+       ],
+       "top": [
+        "#34425c",
+        "dress"
+       ],
+       "necklace": "#f6efe2",
+       "earrings": "#e0b040"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/receipt_small.png",
+     "x": 0.27,
+     "y": 0.62,
+     "w": 0.06,
+     "enter": "none",
+     "at": 0.6,
+     "until": 1.4,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.27,
+       "y": 0.62,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.35,
+       "y": 0.48,
+       "rot": 15.0,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.43,
+       "y": 0.6,
+       "rot": 30,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/receipt_small.png",
+     "x": 0.45,
+     "y": 0.6,
+     "w": 0.06,
+     "enter": "none",
+     "at": 2.6,
+     "until": 3.4000000000000004,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.45,
+       "y": 0.6,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.36000000000000004,
+       "x": 0.535,
+       "y": 0.48,
+       "rot": -15.0,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.62,
+       "y": 0.6,
+       "rot": -30,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "RECEIPTS *=* MONEY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 92,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 4.0,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "China actually got there first. Its Song dynasty government was issuing paper notes in the 1020s.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_goldsmith_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.27,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "smirk",
+       2.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "CHINA, *1020s*",
+     "font": "display",
+     "x": 0.68,
+     "y": 0.3,
+     "size": 100,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "ding"
+    },
+    {
+     "type": "text",
+     "text": "THE FIRST GOVERNMENT PAPER MONEY",
+     "font": "body",
+     "x": 0.68,
+     "y": 0.45,
+     "size": 52,
+     "max_w": 0.45,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "And the goldsmiths noticed something. Only a few owners ever came back for their gold at the same time.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_goldsmith_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5279,
+     "y": 0.6421,
+     "h": 0.49,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e8bfa0",
+       "hat": [
+        "beret",
+        "#3a2a4a"
+       ],
+       "top": [
+        "#6b2e2e",
+        "jacket"
+       ],
+       "apron": "#3a2a1a",
+       "bottom": [
+        "#2a2320",
+        "trousers"
+       ],
+       "necklace": "#e0b040",
+       "build": "regular",
+       "hair": [
+        "#cfcfcf",
+        "short"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_goldsmith_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.3393,
+     "y": 0.785,
+     "h": 0.7675,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0cdb0",
+       "hat": [
+        "bowler",
+        "#7c2533"
+       ],
+       "top": [
+        "#34425c",
+        "dress"
+       ],
+       "necklace": "#f6efe2",
+       "earrings": "#e0b040"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3393,
+       "y": 0.785,
+       "scale": 1.0
+      },
+      {
+       "t": 2.4,
+       "x": -0.6069,
+       "y": 1.0371,
+       "scale": 1.6349,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "ONLY *A FEW* COME BACK",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 88,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.0
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "dur": 1.9,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_goldsmith_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.3,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.5,
+    "zoom": 1.08,
+    "focus": [
+     0.3,
+     0.3
+    ],
+    "text": "The goldsmith, lending\nyour gold out:\n*\"They don't know.\"*",
+    "text_x": 0.66,
+    "text_y": 0.3,
+    "text_w": 0.4,
+    "text_size": 54
+   }
+  },
+  {
+   "say": "So they lent some of it out, and wrote more receipts than they had gold. More paper than metal. That was the seed of modern banking.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_goldsmith_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "give",
+     "x": 0.5433,
+     "y": 0.6151,
+     "h": 0.2795,
+     "enter": "none",
+     "acting": [
+      [
+       "give",
+       0
+      ],
+      [
+       "happy",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e8bfa0",
+       "hat": [
+        "beret",
+        "#3a2a4a"
+       ],
+       "top": [
+        "#6b2e2e",
+        "jacket"
+       ],
+       "apron": "#3a2a1a",
+       "bottom": [
+        "#2a2320",
+        "trousers"
+       ],
+       "necklace": "#e0b040",
+       "build": "regular",
+       "hair": [
+        "#cfcfcf",
+        "short"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_goldsmith_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.3055,
+     "y": 0.6911,
+     "h": 0.3911,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0.6
+      ],
+      [
+       "happy",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "hat": [
+        "fez",
+        "#b03a2e"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#5a4636",
+        "trousers"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.7504,
+     "y": 0.7036,
+     "h": 0.4191,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "explain",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/receipt_small.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 0.06,
+     "enter": "none",
+     "at": 0.5,
+     "until": 1.2,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.5,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.315,
+       "x": 0.4,
+       "y": 0.38,
+       "rot": 100.0,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7,
+       "x": 0.3,
+       "y": 0.62,
+       "rot": 200,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/receipt_small.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.0,
+     "until": 1.7,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.5,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.315,
+       "x": 0.375,
+       "y": 0.38,
+       "rot": 100.0,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7,
+       "x": 0.25,
+       "y": 0.6,
+       "rot": 200,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "PAPER *>* GOLD",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 100,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "boom"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "For a long time, many countries promised their paper could be swapped for gold.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3475,
+     "y": 0.797,
+     "h": 0.3147,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.6919,
+     "y": 0.8327,
+     "h": 0.376,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.0256,
+       "y": 0.847,
+       "scale": 1.0588
+      },
+      {
+       "t": 1.2,
+       "x": 0.6919,
+       "y": 0.8327,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill.png",
+     "x": 0.38,
+     "y": 0.45,
+     "w": 0.12,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "=",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.45,
+     "size": 110,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.3
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/goldbar.png",
+     "x": 0.62,
+     "y": 0.45,
+     "w": 0.14,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "slide_left"
+  },
+  {
+   "say": "Then on August 15th, 1971, US President Richard Nixon stopped letting other countries trade their dollars for gold.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.3475,
+     "y": 0.797,
+     "h": 0.3147,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       2.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.6919,
+     "y": 0.8327,
+     "h": 0.376,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "serious",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill.png",
+     "x": 0.38,
+     "y": 0.45,
+     "w": 0.12,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "=",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.45,
+     "size": 110,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "until": 3.6,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/goldbar.png",
+     "x": 0.62,
+     "y": 0.45,
+     "w": 0.14,
+     "enter": "none",
+     "until": 3.6,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 3.0,
+       "y": 0.45
+      },
+      {
+       "t": 3.6,
+       "y": 1.2,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "AUG 15, *1971*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.26,
+     "size": 100,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "focus": [
+     0.5,
+     0.45
+    ],
+    "punch": [
+     3.4
+    ]
+   }
+  },
+  {
+   "dur": 1.9,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.3,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.5,
+    "zoom": 1.08,
+    "focus": [
+     0.3,
+     0.3
+    ],
+    "text": "He called it *temporary.*\nThat was 55 years ago.",
+    "text_x": 0.66,
+    "text_y": 0.3,
+    "text_w": 0.4,
+    "text_size": 54
+   }
+  },
+  {
+   "say": "Today, most money isn't backed by anything you can hold. Economists call it fiat money. It's worth whatever people believe it can buy.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.27,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "shrug",
+       2.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "*FIAT* MONEY",
+     "font": "display",
+     "x": 0.68,
+     "y": 0.3,
+     "size": 120,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 2.6,
+     "sfx": "boom"
+    },
+    {
+     "type": "text",
+     "text": "backed by nothing you can hold",
+     "font": "body",
+     "x": 0.68,
+     "y": 0.45,
+     "size": 50,
+     "max_w": 0.45,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.2
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "So why does paper still work? First, the government accepts it for taxes, so everyone needs some.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5129,
+     "y": 0.6312,
+     "h": 0.3485,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.3298,
+     "y": 0.7352,
+     "h": 0.5361,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.0637,
+       "y": 0.7891,
+       "scale": 1.1727
+      },
+      {
+       "t": 1.0,
+       "x": 0.3298,
+       "y": 0.7352,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 860 420'><rect width='860' height='420' rx='30' fill='#f6efe2'/><rect x='3' y='3' width='854' height='414' rx='28' fill='none' stroke='#1a1410' stroke-width='6'/>\n<text x='60' y='78' font-size='36' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='600'>WHY PAPER STILL WORKS</text>\n<circle cx='95' cy='160' r='34' fill='#f2b04a'/><text x='95' y='176' font-size='46' text-anchor='middle' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1</text>\n<text x='160' y='176' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TAXES are paid in it</text>\n<circle cx='95' cy='262' r='34' fill='#6fc3c0'/><text x='95' y='278' font-size='46' text-anchor='middle' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>2</text>\n<text x='160' y='278' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>The LAW says take it</text>\n<circle cx='95' cy='364' r='34' fill='#d9534f'/><text x='95' y='380' font-size='46' text-anchor='middle' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>3</text>\n<text x='160' y='380' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>We TRUST tomorrow</text></svg>",
+     "x": 0.72,
+     "y": 0.3,
+     "w": 0.42,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop"
+    }
+   ],
+   "transition": "slide_left"
+  },
+  {
+   "say": "Second, the law says it must be accepted for debts. And most of all, we trust it will buy about as much tomorrow as it does today.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.5603,
+     "y": 0.5693,
+     "h": 0.683,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ],
+      [
+       "give",
+       2.0
+      ],
+      [
+       "happy",
+       4.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill.png",
+     "x": 0.1,
+     "y": 0.72,
+     "w": 0.12,
+     "enter": "none",
+     "at": 0.6,
+     "until": 1.2999999999999998,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.1,
+       "y": 0.72,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.315,
+       "x": 0.26,
+       "y": 0.4,
+       "rot": 100.0,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7,
+       "x": 0.42,
+       "y": 0.52,
+       "rot": 200,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/apple.png",
+     "x": 0.47,
+     "y": 0.56,
+     "w": 0.06,
+     "enter": "none",
+     "at": 2.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.47,
+       "y": 0.56
+      },
+      {
+       "t": 0.7,
+       "x": 0.1,
+       "y": 0.72,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*TRUST*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 130,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 4.4,
+     "sfx": "boom"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Break that trust, and money melts. In the 2000s, Zimbabwe printed money to pay the government's bills.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_vault.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.18505251104320608,
+     "y": 0.0,
+     "w": 0.07069300772652702,
+     "enter": "none",
+     "at": 2.857499731821243,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 172.47616994068244
+      },
+      {
+       "t": 2.737615782683293,
+       "y": 1.12,
+       "rot": 596.3166791001231,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.789383043836222,
+     "y": 0.0,
+     "w": 0.0653736871891278,
+     "enter": "none",
+     "at": 2.2728786906150527,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 84.98029085863578
+      },
+      {
+       "t": 2.503498693671327,
+       "y": 1.12,
+       "rot": 385.5233458160539,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.5802407473511967,
+     "y": 0.0,
+     "w": 0.05207794289549934,
+     "enter": "none",
+     "at": 3.571879598356343,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 83.61097791595907
+      },
+      {
+       "t": 2.755964446539509,
+       "y": 1.12,
+       "rot": 221.16770832559433,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.9677075363371568,
+     "y": 0.0,
+     "w": 0.07216063255906882,
+     "enter": "none",
+     "at": 3.937677844095683,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 221.72043203609059
+      },
+      {
+       "t": 2.5374770652684746,
+       "y": 1.12,
+       "rot": 364.4646731769642,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.49769917899579164,
+     "y": 0.0,
+     "w": 0.05347429431575899,
+     "enter": "none",
+     "at": 4.283838527058052,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 132.64079070359983
+      },
+      {
+       "t": 2.670294362419277,
+       "y": 1.12,
+       "rot": 608.7547216134662,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.1473844751722821,
+     "y": 0.0,
+     "w": 0.07783831589360897,
+     "enter": "none",
+     "at": 2.0390741730104662,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 198.72103499058562
+      },
+      {
+       "t": 2.877213566314262,
+       "y": 1.12,
+       "rot": 442.3518193926572,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.20569423828424224,
+     "y": 0.0,
+     "w": 0.05111418660058275,
+     "enter": "none",
+     "at": 3.8964851289290916,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 84.55180337179004
+      },
+      {
+       "t": 3.3582852849149343,
+       "y": 1.12,
+       "rot": 304.2811076111881,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.940642857661387,
+     "y": 0.0,
+     "w": 0.07681897491022846,
+     "enter": "none",
+     "at": 3.3965660316637067,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 274.6053526033563
+      },
+      {
+       "t": 3.13884228011743,
+       "y": 1.12,
+       "rot": 564.8786882718161,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.14512919862952534,
+     "y": 0.0,
+     "w": 0.06428976168310849,
+     "enter": "none",
+     "at": 3.7215813826474706,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 72.3885923835874
+      },
+      {
+       "t": 3.515484190439926,
+       "y": 1.12,
+       "rot": 643.7798579626644,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.4150255891268555,
+     "y": 0.0,
+     "w": 0.06095661639150419,
+     "enter": "none",
+     "at": 2.030947325799435,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 138.87996639656023
+      },
+      {
+       "t": 3.594326999283565,
+       "y": 1.12,
+       "rot": 393.2966383759105,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.05522552403862322,
+     "y": 0.0,
+     "w": 0.052797875961425246,
+     "enter": "none",
+     "at": 3.2314165474622754,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 357.41642649219216
+      },
+      {
+       "t": 3.0456118419998526,
+       "y": 1.12,
+       "rot": 445.7698027421408,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.5474050444619012,
+     "y": 0.0,
+     "w": 0.07244528059411932,
+     "enter": "none",
+     "at": 0.9991485928880639,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 219.20450087421247
+      },
+      {
+       "t": 3.1121357014625866,
+       "y": 1.12,
+       "rot": 511.31136086847494,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/printer.png",
+     "x": 0.5,
+     "y": 0.52,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 0.4,
+     "loop": "shake",
+     "loop_amp": 0.5
+    },
+    {
+     "type": "text",
+     "text": "ZIMBABWE",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 100,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "ding"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.783,
+     "y": 0.7199,
+     "h": 0.3896,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "point",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.1056,
+       "y": 0.7364,
+       "scale": 1.0701
+      },
+      {
+       "t": 1.2,
+       "x": 0.783,
+       "y": 0.7199,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    }
+   ],
+   "transition": "fade"
+  },
+  {
+   "say": "By November 2008, prices were doubling roughly every day. Imagine your savings losing half their value overnight, every night. It printed a one hundred trillion dollar note.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_vault.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.18505251104320608,
+     "y": 0.0,
+     "w": 0.07069300772652702,
+     "enter": "none",
+     "at": 2.857499731821243,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 172.47616994068244
+      },
+      {
+       "t": 2.737615782683293,
+       "y": 1.12,
+       "rot": 596.3166791001231,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.789383043836222,
+     "y": 0.0,
+     "w": 0.0653736871891278,
+     "enter": "none",
+     "at": 2.2728786906150527,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 84.98029085863578
+      },
+      {
+       "t": 2.503498693671327,
+       "y": 1.12,
+       "rot": 385.5233458160539,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.5802407473511967,
+     "y": 0.0,
+     "w": 0.05207794289549934,
+     "enter": "none",
+     "at": 3.571879598356343,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 83.61097791595907
+      },
+      {
+       "t": 2.755964446539509,
+       "y": 1.12,
+       "rot": 221.16770832559433,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.9677075363371568,
+     "y": 0.0,
+     "w": 0.07216063255906882,
+     "enter": "none",
+     "at": 3.937677844095683,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 221.72043203609059
+      },
+      {
+       "t": 2.5374770652684746,
+       "y": 1.12,
+       "rot": 364.4646731769642,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.49769917899579164,
+     "y": 0.0,
+     "w": 0.05347429431575899,
+     "enter": "none",
+     "at": 4.283838527058052,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 132.64079070359983
+      },
+      {
+       "t": 2.670294362419277,
+       "y": 1.12,
+       "rot": 608.7547216134662,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.1473844751722821,
+     "y": 0.0,
+     "w": 0.07783831589360897,
+     "enter": "none",
+     "at": 2.0390741730104662,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 198.72103499058562
+      },
+      {
+       "t": 2.877213566314262,
+       "y": 1.12,
+       "rot": 442.3518193926572,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.20569423828424224,
+     "y": 0.0,
+     "w": 0.05111418660058275,
+     "enter": "none",
+     "at": 3.8964851289290916,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 84.55180337179004
+      },
+      {
+       "t": 3.3582852849149343,
+       "y": 1.12,
+       "rot": 304.2811076111881,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.940642857661387,
+     "y": 0.0,
+     "w": 0.07681897491022846,
+     "enter": "none",
+     "at": 3.3965660316637067,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 274.6053526033563
+      },
+      {
+       "t": 3.13884228011743,
+       "y": 1.12,
+       "rot": 564.8786882718161,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.14512919862952534,
+     "y": 0.0,
+     "w": 0.06428976168310849,
+     "enter": "none",
+     "at": 3.7215813826474706,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 72.3885923835874
+      },
+      {
+       "t": 3.515484190439926,
+       "y": 1.12,
+       "rot": 643.7798579626644,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.4150255891268555,
+     "y": 0.0,
+     "w": 0.06095661639150419,
+     "enter": "none",
+     "at": 2.030947325799435,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 138.87996639656023
+      },
+      {
+       "t": 3.594326999283565,
+       "y": 1.12,
+       "rot": 393.2966383759105,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.05522552403862322,
+     "y": 0.0,
+     "w": 0.052797875961425246,
+     "enter": "none",
+     "at": 3.2314165474622754,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 357.41642649219216
+      },
+      {
+       "t": 3.0456118419998526,
+       "y": 1.12,
+       "rot": 445.7698027421408,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.5474050444619012,
+     "y": 0.0,
+     "w": 0.07244528059411932,
+     "enter": "none",
+     "at": 0.9991485928880639,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 219.20450087421247
+      },
+      {
+       "t": 3.1121357014625866,
+       "y": 1.12,
+       "rot": 511.31136086847494,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.19983671776574602,
+     "y": 0.0,
+     "w": 0.055102755492887734,
+     "enter": "none",
+     "at": 1.5669327210743997,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 333.746498820604
+      },
+      {
+       "t": 2.881274762288014,
+       "y": 1.12,
+       "rot": 498.6182865861939,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.3182171165274045,
+     "y": 0.0,
+     "w": 0.05309819687203148,
+     "enter": "none",
+     "at": 0.29539774473074043,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 292.9305030602702
+      },
+      {
+       "t": 3.354720446255705,
+       "y": 1.12,
+       "rot": 387.4377770717631,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.6723506851084197,
+     "y": 0.0,
+     "w": 0.07027705345742317,
+     "enter": "none",
+     "at": 4.044139355129831,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 344.9808425229719
+      },
+      {
+       "t": 2.947716125917153,
+       "y": 1.12,
+       "rot": 694.5548145587973,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.9337439794640922,
+     "y": 0.0,
+     "w": 0.06771556385180268,
+     "enter": "none",
+     "at": 3.974263441262711,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 176.72826962328108
+      },
+      {
+       "t": 2.913116161775811,
+       "y": 1.12,
+       "rot": 323.60389506923946,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.8535759284430718,
+     "y": 0.0,
+     "w": 0.05486877699832993,
+     "enter": "none",
+     "at": 0.31200817954950033,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 289.90143944834904
+      },
+      {
+       "t": 3.351308284815805,
+       "y": 1.12,
+       "rot": 441.5864618771931,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.8167788790963734,
+     "y": 0.0,
+     "w": 0.05156520884930503,
+     "enter": "none",
+     "at": 1.1608947512724852,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 104.35487696911488
+      },
+      {
+       "t": 2.9615064708400816,
+       "y": 1.12,
+       "rot": 285.31483782278474,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.09528418822707603,
+     "y": 0.0,
+     "w": 0.06014247156205076,
+     "enter": "none",
+     "at": 4.046153408717482,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 354.040942001578
+      },
+      {
+       "t": 3.3204325027862085,
+       "y": 1.12,
+       "rot": 439.4865976624269,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.2670819100082916,
+     "y": 0.0,
+     "w": 0.07876632615556947,
+     "enter": "none",
+     "at": 2.365325127553219,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 262.29906002032743
+      },
+      {
+       "t": 2.53112937098825,
+       "y": 1.12,
+       "rot": 306.0457486638386,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.817967969654361,
+     "y": 0.0,
+     "w": 0.07385654914837515,
+     "enter": "none",
+     "at": 3.9665376071588168,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 216.48808150138552
+      },
+      {
+       "t": 2.968690745032611,
+       "y": 1.12,
+       "rot": 490.56975581716284,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill_100t.png",
+     "x": 0.8283815286177261,
+     "y": 0.0,
+     "w": 0.0592393182528306,
+     "enter": "none",
+     "at": 2.404506591318966,
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1,
+       "rot": 99.35345061236531
+      },
+      {
+       "t": 3.345081361329885,
+       "y": 1.12,
+       "rot": 205.11677705632857,
+       "ease": "linear"
+      }
+     ],
+     "opacity": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/note_100t.png",
+     "x": 0.5,
+     "y": 0.4,
+     "w": 0.5,
+     "enter": "zoom",
+     "at": 6.4,
+     "loop": "float",
+     "loop_amp": 0.8,
+     "sfx": "boom"
+    },
+    {
+     "type": "counter",
+     "from": 1,
+     "to": 100000000000000,
+     "count_dur": 1.8,
+     "at": 6.8,
+     "x": 0.5,
+     "y": 0.12,
+     "size": 92,
+     "stroke": "#0b0f12",
+     "stroke_width": 6,
+     "enter": "pop",
+     "prefix": "Z$"
+    },
+    {
+     "type": "text",
+     "text": "PRICES *x2* EVERY DAY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 92,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.4,
+     "until": 6.6,
+     "exit": "fade"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.783,
+     "y": 0.7199,
+     "h": 0.3896,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "surprised",
+       6.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       6.8,
+       0.05,
+       0.45
+      ]
+     ]
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "People simply stopped using it. In 2009, the country switched to foreign currencies.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.5233,
+     "y": 0.5827,
+     "h": 0.2267,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.6752,
+     "y": 0.5773,
+     "h": 0.2156,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.3557,
+     "y": 0.5792,
+     "h": 0.2195,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "hat": [
+        "fez",
+        "#b03a2e"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#5a4636",
+        "trousers"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.4454,
+     "y": 0.6071,
+     "h": 0.2772,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.657,
+     "y": 0.6164,
+     "h": 0.2964,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#9b59b6",
+        "dress"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.657,
+       "y": 0.6164,
+       "scale": 1.0
+      },
+      {
+       "t": 3.4,
+       "x": 0.9455,
+       "y": 0.61,
+       "scale": 0.9551,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.3798,
+     "y": 0.6217,
+     "h": 0.3074,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3798,
+       "y": 0.6217,
+       "scale": 1.0
+      },
+      {
+       "t": 3.4,
+       "x": -0.003,
+       "y": 0.6418,
+       "scale": 1.1347,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/note_100t.png",
+     "x": 0.5,
+     "y": 0.75,
+     "w": 0.16,
+     "enter": "none",
+     "rot": -12,
+     "opacity": 0.9
+    },
+    {
+     "type": "text",
+     "text": "NOBODY *WANTED* IT",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 92,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "That's why central banks try to keep prices rising slowly and steadily. Many big ones aim for about two percent a year: enough to keep money moving, small enough that you barely notice.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.73,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "crossed",
+       3.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "SLOW AND *STEADY*",
+     "font": "display",
+     "x": 0.32,
+     "y": 0.3,
+     "size": 100,
+     "max_w": 0.5,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "ding"
+    },
+    {
+     "type": "text",
+     "text": "~2% A YEAR",
+     "font": "display",
+     "x": 0.32,
+     "y": 0.45,
+     "size": 72,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 4.6,
+     "color": "accent2"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Now, the plot twist. Most money today isn't paper at all.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3475,
+     "y": 0.797,
+     "h": 0.3147,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5332,
+     "y": 0.8282,
+     "h": 0.3691,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "smirk",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9453,
+       "y": 0.842,
+       "scale": 1.0577
+      },
+      {
+       "t": 1.2,
+       "x": 0.5332,
+       "y": 0.8282,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       1.6,
+       0.04,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*PLOT TWIST*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.26,
+     "size": 110,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 0.3,
+     "sfx": "boom"
+    }
+   ],
+   "transition": "slide_left"
+  },
+  {
+   "say": "In the UK, about 97 percent of the money people hold is bank deposits. Just numbers in accounts.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.25,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 420'><rect width='760' height='420' rx='30' fill='#f6efe2'/><rect x='3' y='3' width='754' height='414' rx='28' fill='none' stroke='#1a1410' stroke-width='6'/>\n<circle cx='200' cy='215' r='130' fill='none' stroke='#6fc3c0' stroke-width='70'/>\n<circle cx='200' cy='215' r='130' fill='none' stroke='#f2b04a' stroke-width='72' stroke-dasharray='24.5 792' transform='rotate(-90 200 215)'/>\n<text x='200' y='235' font-size='62' text-anchor='middle' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>UK</text>\n<text x='400' y='170' font-size='96' fill='#2c8f8a' font-family='Anton, DejaVu Sans, sans-serif'>97%</text><text x='400' y='215' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>bank deposits</text>\n<text x='400' y='320' font-size='96' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>3%</text><text x='400' y='365' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>notes and coins</text></svg>",
+     "x": 0.68,
+     "y": 0.42,
+     "w": 0.42,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "And where do those numbers come from? Mostly, from banks making loans.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank_desk.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.507,
+     "y": 0.5791,
+     "h": 0.4976,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_bank_desk.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3259,
+     "y": 0.7123,
+     "h": 0.7713,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "LOANS *CREATE* MONEY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 92,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "When a bank lends you a thousand, it doesn't hand over someone else's savings. It types a brand new thousand into your account, and writes down that you owe it a thousand. Two numbers, created together.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank_desk.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.507,
+     "y": 0.5791,
+     "h": 0.4976,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "give",
+       3.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_bank_desk.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3259,
+     "y": 0.7123,
+     "h": 0.7713,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       4.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       4.4,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 360'><rect width='760' height='360' rx='30' fill='#f6efe2'/><rect x='3' y='3' width='754' height='354' rx='28' fill='none' stroke='#1a1410' stroke-width='6'/>\n<text x='60' y='80' font-size='36' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='600'>AMINA'S ACCOUNT</text>\n<line x1='60' y1='105' x2='700' y2='105' stroke='#1a1410' stroke-width='3' opacity='0.3'/>\n<text x='60' y='190' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Balance</text>\n<text x='60' y='290' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Owes the bank</text></svg>",
+     "x": 0.27,
+     "y": 0.32,
+     "w": 0.4,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 1000,
+     "count_dur": 1.2,
+     "at": 3.8,
+     "x": 0.4,
+     "y": 0.325,
+     "size": 60,
+     "prefix": "$",
+     "stroke": "#0b0f12",
+     "stroke_width": 5,
+     "enter": "pop",
+     "sfx": "ding"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 1000,
+     "count_dur": 1.2,
+     "at": 3.8,
+     "x": 0.4,
+     "y": 0.425,
+     "size": 60,
+     "prefix": "$",
+     "color": "danger",
+     "stroke": "#0b0f12",
+     "stroke_width": 5,
+     "enter": "pop"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "dur": 1.9,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank_desk.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.3,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.5,
+    "zoom": 1.08,
+    "focus": [
+     0.3,
+     0.3
+    ],
+    "text": "Wait, money is just numbers? *Always has been.*",
+    "text_x": 0.66,
+    "text_y": 0.3,
+    "text_w": 0.4,
+    "text_size": 54
+   }
+  },
+  {
+   "say": "Pay the loan back, and that money disappears again. The Bank of England explained exactly this in 2014.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.73,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       3.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "REPAY = MONEY *DISAPPEARS*",
+     "font": "display",
+     "x": 0.32,
+     "y": 0.3,
+     "size": 84,
+     "max_w": 0.5,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "Bank of England, 2014",
+     "font": "body",
+     "x": 0.32,
+     "y": 0.45,
+     "size": 46,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.6
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "So what stops banks from creating endless money? Interest rates, banking rules, and how much people actually want to borrow. Some economists say banks hold too much of this power. Others say the rules keep it safe. Either way, now you know where the numbers come from.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_bank.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.3475,
+     "y": 0.797,
+     "h": 0.3147,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ],
+      [
+       "explain",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hat": [
+        "bowler",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#c0392b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.6919,
+     "y": 0.8327,
+     "h": 0.376,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 330'><rect width='1000' height='330' rx='30' fill='#f6efe2'/><rect x='3' y='3' width='994' height='324' rx='28' fill='none' stroke='#1a1410' stroke-width='6'/>\n<text x='60' y='78' font-size='36' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='600'>WHAT KEEPS IT IN CHECK</text>\n<text x='60' y='160' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Interest rates</text>\n<text x='60' y='230' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Banking rules</text>\n<text x='60' y='300' font-size='50' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>How much people want to borrow</text></svg>",
+     "x": 0.36,
+     "y": 0.3,
+     "w": 0.46,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "So, back to our island. Money isn't the apples. It's a promise between people, that everyone agrees to keep.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "give",
+     "x": 0.5233,
+     "y": 0.5827,
+     "h": 0.2267,
+     "enter": "none",
+     "acting": [
+      [
+       "give",
+       0
+      ],
+      [
+       "happy",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.6752,
+     "y": 0.5773,
+     "h": 0.2156,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.3557,
+     "y": 0.5792,
+     "h": 0.2195,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a0694a",
+       "hat": [
+        "fez",
+        "#b03a2e"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#5a4636",
+        "trousers"
+       ],
+       "build": "round"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.4454,
+     "y": 0.6071,
+     "h": 0.2772,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ],
+      [
+       "happy",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.6753,
+     "y": 0.6166,
+     "h": 0.2967,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#9b59b6",
+        "dress"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.933,
+       "y": 0.6116,
+       "scale": 0.9656
+      },
+      {
+       "t": 2.6,
+       "x": 0.6753,
+       "y": 0.6166,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.3058,
+     "y": 0.621,
+     "h": 0.3058,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "hat": [
+        "straw",
+        "#e6c27a"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.0263,
+       "y": 0.6361,
+       "scale": 1.1024
+      },
+      {
+       "t": 2.6,
+       "x": 0.3058,
+       "y": 0.621,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5875,
+     "y": 0.6516,
+     "h": 0.3795,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       2.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "MONEY = A *PROMISE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 100,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.4,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "slide_left",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   }
+  },
+  {
+   "say": "That piece of paper works because we all believe that tomorrow, someone else will take it too.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.5603,
+     "y": 0.5693,
+     "h": 0.683,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ],
+      [
+       "give",
+       1.6
+      ],
+      [
+       "happy",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/bill.png",
+     "x": 0.1,
+     "y": 0.72,
+     "w": 0.12,
+     "enter": "none",
+     "at": 0.4,
+     "until": 1.1,
+     "exit": "fade",
+     "exit_dur": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.1,
+       "y": 0.72,
+       "rot": 0,
+       "scale": 0.5
+      },
+      {
+       "t": 0.315,
+       "x": 0.26,
+       "y": 0.4,
+       "rot": 100.0,
+       "scale": 1.0,
+       "ease": "out"
+      },
+      {
+       "t": 0.7,
+       "x": 0.42,
+       "y": 0.52,
+       "rot": 200,
+       "scale": 1.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/apple.png",
+     "x": 0.47,
+     "y": 0.56,
+     "w": 0.06,
+     "enter": "none",
+     "at": 1.6,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.47,
+       "y": 0.56
+      },
+      {
+       "t": 0.7,
+       "x": 0.1,
+       "y": 0.72,
+       "ease": "out"
+      }
+     ]
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Money is trust you can carry. Next time you tap your card, remember: you're moving a promise. And now you know how money actually works.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.27,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "crossed",
+       2.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "MONEY IS *TRUST* YOU CAN CARRY",
+     "font": "display",
+     "x": 0.68,
+     "y": 0.3,
+     "size": 92,
+     "max_w": 0.5,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "ding"
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "If money finally clicked, subscribe. Every week, one big idea, made simple.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.5129,
+     "y": 0.6312,
+     "h": 0.3485,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-longpilot/assets/fg_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.3788,
+     "y": 0.7027,
+     "h": 0.4683,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.6072,
+     "y": 0.7123,
+     "h": 0.4967,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "warm",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.3,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*SUBSCRIBE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 110,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 0.5,
+     "sfx": "ding"
+    },
+    {
+     "type": "text",
+     "text": "ONE BIG IDEA, EVERY WEEK",
+     "font": "body",
+     "x": 0.5,
+     "y": 0.22,
+     "size": 60,
+     "max_w": 0.62,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.0
+    }
+   ],
+   "transition": "cut"
+  }
+ ]
+}

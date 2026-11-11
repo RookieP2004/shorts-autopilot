@@ -1,6 +1,6 @@
 ---
 name: "shorts-autopilot"
-description: "Run Sujal's automated YouTube Shorts channel The Explainer: channel setup, making and posting a code-drawn Short (research, script, render, post via Zapier), or the weekly review. Use for any scheduled Shorts run."
+description: "Run Sujal's automated YouTube Shorts channel The Explainer: channel setup, making and posting a code-drawn Short (research, script, render, post via Zapier), the weekly long video, or the weekly review. Use for any scheduled channel run."
 ---
 
 # Shorts Autopilot: The Explainer
@@ -230,7 +230,7 @@ length must be ≤ 58 s. Then pull 3–4 frames from `out/final.mp4` with ffmpeg
    `python -m autopilot budget --sync <tasks>` and commit the ledger, so the bonus maths stays honest.
 
 ## 3d. Deep Dive mode (weekly long video, 16:9)
-Follows the Bible's "Deep Dive" format; `jobs/2026-11-11-longpilot` (the owner-approved pilot) is the reference build.
+Follows the Bible's "Deep Dive" format; `jobs/2026-11-11-longpilot` (the pilot) is the reference build.
 Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
 1. Section 0, then `python -m autopilot budget --need upload` (exit 3: tell the owner the long video was skipped, and stop).
 2. **Topic.** Prefer the idea behind the best recent Short (log + last review), taken much deeper; otherwise research as in 3a

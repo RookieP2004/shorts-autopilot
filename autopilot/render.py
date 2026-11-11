@@ -361,7 +361,7 @@ def thumbnail(job_path, out_path=None, root=ROOT, log=print):
     from PIL import Image, ImageEnhance
     from . import sprites
     job = load_json(job_path)
-    style = job_style(job, root)
+    style = deep_merge(job_style(job, root), {"watermark": {"text": ""}})     # no watermark on a thumbnail
     th = job.get("thumbnail") or {}
     ctx = Ctx(job, style, load_characters(root), root)
     ctx.shots_dir = os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "shots")
