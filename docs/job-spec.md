@@ -185,6 +185,22 @@ One short, unexpected funny beat per video, tied to a trend that is current this
   `zoom`, `focus` [x, y], `who` (character id) and `dur` override the defaults.
 - `"beats": [...]` takes a list, but one beat per video is the rule (two only in a video over 40 s).
 
+## Long videos (Deep Dives, 16:9)
+Set `"kind": "long"`. The channel style then merges `longform` from style.json: 1920x1080 canvas, `max_duration` 720 s,
+`target_mb` 90 (the final encode is sized to fit, for Zapier and GitHub), captions low (y 0.885, 4 words), no progress bar,
+watermark top-right, no `#shorts`. Everything else (layers, stage, beats, motion) works the same; x/y/w are still fractions
+of the frame, so a layer `w` of 0.4 is 768 px wide here.
+- `chapters`: `[{"scene": 0, "title": "A piece of paper"}, ...]`, at least 3, first at scene 0, each >= 10 s long.
+  `python -m autopilot zapier` adds them to the description as `0:00 Title` lines (from out/render.json).
+- `thumbnail`: `{"at": <seconds or null>, "text": "WHY IS PAPER *MONEY?*", "x": 0.7, "y": 0.3, "size": 150, "max_w": 0.5,
+  "zoom": 1.0, "focus": [x, y]}` then `python -m autopilot thumbnail jobs/<id>/job.json` writes out/thumbnail.jpg (1280x720, < 2 MB).
+- Sets: render plates at 1920x1080 (`still(name, 1920, 1080, ...)`); landscape shows more of the world, so dress the sides.
+- Talking to camera: Ved big on one side (x 0.27 or 0.73, y 0.86, h 1.2, `ground: false`) over the blurred set, with a
+  headline or panel on the other side. Beat cards: pass `text_w` 0.4 so they stay on one side.
+- Publish: `BRANCH=media-long KEEP=6 scripts/push_media.sh <file> <name>` for both the video and the thumbnail
+  (its own branch, so the daily Shorts' pushes never remove it).
+- Reference: `jobs/2026-11-11-longpilot/assets.py` + `build_job.py`.
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

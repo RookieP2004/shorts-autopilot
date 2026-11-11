@@ -52,7 +52,39 @@ def price_tag(path, text, bg=(250, 246, 236), ink=(26, 20, 16), W=600, H=360):
     dr.text((W / 2, H / 2 + 10), text, font=font("Anton-Regular.ttf", 220), fill=ink, anchor="mm")
     im.save(path)
 
+def receipt(path, W=1200, H=820):
+    """A fictional 1600s goldsmith's receipt: aged paper, serif script, a wax seal."""
+    import random
+    random.seed(4)
+    im = Image.new("RGB", (W, H), (236, 220, 184))
+    dr = ImageDraw.Draw(im)
+    for _ in range(2600):                                     # paper fibres and foxing
+        x, y = random.randrange(W), random.randrange(H)
+        c = random.randint(200, 228)
+        dr.point((x, y), fill=(c, c - 18, c - 52))
+    for _ in range(14):
+        x, y, r = random.randrange(W), random.randrange(H), random.randint(14, 46)
+        dr.ellipse([x - r, y - r, x + r, y + r], fill=(222, 200, 158))
+    im = im.filter(ImageFilter.GaussianBlur(1.2))
+    dr = ImageDraw.Draw(im)
+    ink = (58, 38, 24)
+    dr.rectangle([26, 26, W - 26, H - 26], outline=ink, width=4)
+    serif = lambda n: font("DMSerifDisplay-Regular.ttf", n)
+    dr.text((W / 2, 120), "Received of the Bearer", font=serif(78), fill=ink, anchor="mm")
+    dr.text((W / 2, 300), "TEN GOLD COINS", font=font("Anton-Regular.ttf", 170), fill=(120, 70, 20), anchor="mm")
+    dr.text((W / 2, 460), "to be returned upon demand", font=serif(64), fill=ink, anchor="mm")
+    dr.text((W / 2, 560), "at the Sign of the Golden Key, London", font=serif(48), fill=ink, anchor="mm")
+    dr.line([(140, 690), (600, 690)], fill=ink, width=3)
+    dr.text((370, 735), "J. Hart, Goldsmith", font=serif(44), fill=ink, anchor="mm")
+    cx, cy = W - 230, 680
+    dr.ellipse([cx - 92, cy - 92, cx + 92, cy + 92], fill=(150, 30, 30))
+    dr.ellipse([cx - 66, cy - 66, cx + 66, cy + 66], outline=(110, 18, 18), width=6)
+    dr.text((cx, cy + 4), "JH", font=serif(64), fill=(110, 18, 18), anchor="mm")
+    im.save(path)
+
+
 if __name__ == "__main__":
+    receipt(os.path.join(D, "receipt.png"))
     banknote(os.path.join(D, "note_1.png"), "$1", "ONE DOLLAR", "ISLAND RESERVE BANK")
     banknote(os.path.join(D, "note_100t.png"), "", "ONE HUNDRED TRILLION DOLLARS", "RESERVE BANK",
              tint=(228, 212, 236), ink=(88, 40, 96), big="100 000 000 000 000")

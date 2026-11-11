@@ -84,6 +84,19 @@ def load_style(root=ROOT):
     return deep_merge(DEFAULT_STYLE, user)
 
 
+def is_long(job):
+    return job.get("kind") == "long"
+
+
+def job_style(job, root=ROOT):
+    """The style this job renders with: channel style, then the long-form profile for `"kind": "long"`
+    (16:9 Deep Dives), then the job's own one-off `style_override`."""
+    st = load_style(root)
+    if is_long(job):
+        st = deep_merge(st, st.get("longform", {}))
+    return deep_merge(st, job.get("style_override", {}))
+
+
 def load_characters(root=ROOT):
     chars = {}
     base = os.path.join(root, "characters")
@@ -204,4 +217,15 @@ def validate_job(job, style, chars, root=ROOT):
                     errs.append(f"{w}: blender layer needs 'script' (a blendkit shot file, path from the repo root): {sp!r} not found")
             elif t == "counter" and "to" not in L:
                 errs.append(f"{w}: counter needs 'to'")
+    if is_long(job):
+        ch = job.get("chapters", [])
+        n = len(job.get("scenes", []))
+        if len(ch) < 3:
+            errs.append("long video: needs at least 3 chapters ([{\"scene\": 0, \"title\": ...}, ...]); YouTube shows chapters from 3 up")
+        elif ch[0].get("scene") != 0:
+            errs.append("long video: the first chapter must start at scene 0 (YouTube needs a 0:00 chapter)")
+        if any(not (0 <= c.get("scene", -1) < n) or not c.get("title") for c in ch):
+            errs.append("long video: every chapter needs a valid scene index and a title")
+        if [c.get("scene") for c in ch] != sorted({c.get("scene") for c in ch}):
+            errs.append("long video: chapter scenes must be strictly increasing")
     return errs

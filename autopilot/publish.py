@@ -3,7 +3,7 @@ import datetime as dt
 import json
 import os
 
-from .spec import load_json
+from .spec import is_long, load_json
 
 CATEGORY_NAMES = {"1": "Film & Animation", "10": "Music", "15": "Pets & Animals", "17": "Sports",
                   "19": "Travel & Events", "20": "Gaming", "22": "People & Blogs", "23": "Comedy",
@@ -11,9 +11,34 @@ CATEGORY_NAMES = {"1": "Film & Animation", "10": "Music", "15": "Pets & Animals"
                   "27": "Education", "28": "Science & Technology"}
 
 
-def zapier_fields(job, style):
+def stamp(sec):
+    sec = int(sec)
+    return f"{sec // 3600}:{sec % 3600 // 60:02d}:{sec % 60:02d}" if sec >= 3600 else f"{sec // 60}:{sec % 60:02d}"
+
+
+def chapters(job, job_path):
+    """'0:00 Title' lines from job["chapters"] and the rendered scene start times (YouTube: first at 0:00, >= 3, >= 10 s each)."""
+    ch = job.get("chapters") or []
+    if not ch or not job_path:
+        return []
+    rp = os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "render.json")
+    if not os.path.exists(rp):
+        raise SystemExit("render the video first: chapter times come from out/render.json")
+    info = load_json(rp)
+    starts, total = info["scene_starts"], info["duration"]
+    ts = [0.0 if k == 0 else starts[c["scene"]] for k, c in enumerate(ch)]
+    for a, b, c in zip(ts, ts[1:] + [total], ch):
+        if b - a < 10:
+            raise SystemExit(f"chapter '{c['title']}' is {b - a:.1f}s; YouTube needs >= 10 s per chapter (merge it)")
+    return [f"{stamp(t)} {c['title']}" for t, c in zip(ts, ch)]
+
+
+def zapier_fields(job, style, job_path=None):
     yt = {**style.get("youtube", {}), **job.get("youtube", {})}
     desc = job.get("description", "").strip()
+    ch = chapters(job, job_path)
+    if ch:
+        desc = (desc + "\n\nChapters\n" + "\n".join(ch)).strip()
     tags = [t.lstrip("#") for t in job.get("tags", [])][:30]
     hashtags = list(yt.get("hashtags", []))
     hashtags += [h for h in job.get("hashtags", []) if h not in hashtags]
@@ -39,10 +64,13 @@ def log_line(job_path, youtube_id=""):
     m = job.get("meta", {})
     rp = os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "render.json")
     dur = load_json(rp).get("duration") if os.path.exists(rp) else ""
-    url = f"https://youtube.com/shorts/{youtube_id}" if youtube_id else ""
+    url = ((f"https://youtu.be/{youtube_id}" if is_long(job) else f"https://youtube.com/shorts/{youtube_id}")
+           if youtube_id else "")
     now = dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).strftime("%Y-%m-%d %H:%M IST")
     cells = [job["id"], now, job["title"], m.get("format", ""), m.get("hook", ""), m.get("topic", ""),
              f"{dur}s" if dur else "", url, youtube_id]
+    if is_long(job):
+        cells.append("LONG")
     if m.get("overrides"):
         cells.append("one-off: " + m["overrides"])
     return " | ".join(str(c).replace("|", "/") for c in cells)

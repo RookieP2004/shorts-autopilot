@@ -453,7 +453,7 @@ def draw_sticker(ctx, canvas, b, bt):
     st = ctx.style
     W, H = ctx.W, ctx.H
     txt = sprites.text_image(st, b["text"], size=b.get("text_size", 58), font_name="body", fill="ink",
-                             highlight="accent", shadow=False, max_w=0.66, uppercase=False)
+                             highlight="accent", shadow=False, max_w=b.get("text_w", 0.66), uppercase=False)
     pad = 28
     card = Image.new("RGBA", (txt.width + pad * 2, txt.height + pad * 2), (0, 0, 0, 0))
     from PIL import ImageDraw
@@ -493,7 +493,7 @@ def draw_overlays(ctx, canvas, scene_idx, t):
     if wm.get("text"):
         img = sprites.text_image(st, wm["text"], size=wm.get("size", 34), font_name="light",
                                  fill="primary", shadow=False)
-        paste(canvas, img, W / 2, wm.get("y", 0.955) * H, 1.0, 0, wm.get("opacity", 0.5))
+        paste(canvas, img, wm.get("x", 0.5) * W, wm.get("y", 0.955) * H, 1.0, 0, wm.get("opacity", 0.5))
     pb = st.get("progress_bar", {})
     if pb.get("enabled"):
         g = (ctx.start[scene_idx] + t) / ctx.total

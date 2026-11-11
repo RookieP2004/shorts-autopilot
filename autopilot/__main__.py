@@ -5,8 +5,9 @@
   python -m autopilot render   jobs/<id>/job.json [--out jobs/<id>/out]
   python -m autopilot zapier   jobs/<id>/job.json   (fields for Zapier's YouTube "Upload Video")
   python -m autopilot logline  jobs/<id>/job.json --youtube-id ID   (row for the Google Docs log)
+  python -m autopilot thumbnail jobs/<id>/job.json   (long videos: 1280x720 thumbnail -> out/thumbnail.jpg)
   python -m autopilot characters
-  python -m autopilot budget [--need upload|stats] [--add upload|stats|other --ref ID] [--bonus] [--sync TASKS]
+  python -m autopilot budget [--need upload|stats|docs|thumb [--ref ID]] [--add upload|stats|other --ref ID] [--bonus] [--sync TASKS]
       (Zapier task budget; --need exits 3 if the call would go over the free-plan cap;
        --bonus prints how many extra Shorts to post today from tasks that would expire at the reset;
        --spare prints calls free for optional extras (e.g. rewriting the Bible doc) before the reset;
@@ -17,7 +18,7 @@ import json
 import os
 import sys
 
-from .spec import ROOT, load_characters, load_json, load_style, validate_job
+from .spec import ROOT, job_style, load_characters, load_json, load_style, validate_job
 
 
 def main(argv=None):
@@ -28,6 +29,7 @@ def main(argv=None):
     r = sub.add_parser("render"); r.add_argument("job"); r.add_argument("--out"); r.add_argument("--workers", type=int)
     z = sub.add_parser("zapier"); z.add_argument("job")
     lg = sub.add_parser("logline"); lg.add_argument("job"); lg.add_argument("--youtube-id", default="")
+    th = sub.add_parser("thumbnail"); th.add_argument("job"); th.add_argument("--out")
     sub.add_parser("characters")
     b = sub.add_parser("budget"); b.add_argument("--need"); b.add_argument("--add"); b.add_argument("--ref", default="")
     b.add_argument("--n", type=int, default=1)
@@ -36,7 +38,7 @@ def main(argv=None):
 
     if args.cmd == "validate":
         job = load_json(args.job)
-        errs = validate_job(job, load_style(), load_characters())
+        errs = validate_job(job, job_style(job), load_characters())
         if errs:
             print("INVALID"); [print("  -", e) for e in errs]; sys.exit(1)
         print("OK")
@@ -52,10 +54,14 @@ def main(argv=None):
         render(args.job, out, workers=args.workers)
     elif args.cmd == "zapier":
         from .publish import zapier_fields
-        print(json.dumps(zapier_fields(load_json(args.job), load_style()), indent=2, ensure_ascii=False))
+        job = load_json(args.job)
+        print(json.dumps(zapier_fields(job, job_style(job), args.job), indent=2, ensure_ascii=False))
     elif args.cmd == "logline":
         from .publish import log_line
         print(log_line(args.job, args.youtube_id))
+    elif args.cmd == "thumbnail":
+        from .render import thumbnail
+        print(thumbnail(args.job, args.out))
     elif args.cmd == "characters":
         for cid, c in load_characters().items():
             print(f"{cid}: poses={c['poses']} voice={c['meta'].get('voice')} - {c['meta'].get('description','')}")
@@ -76,6 +82,9 @@ def main(argv=None):
             print(f"BONUS {budget.bonus_today(st)}")
         if args.spare:
             print(f"SPARE {budget.spare(st)}")
+        if args.need == "upload" and budget.replaced_by_long(args.ref, st):
+            print("SKIP: today's long video replaces the regular Short on the free plan")
+            sys.exit(4)
         if args.need:
             ok = budget.allowed(args.need, st)
             print(("OK: " if ok else "NO BUDGET: ") + args.need)

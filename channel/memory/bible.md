@@ -77,6 +77,20 @@ Rule: characters are made only by `characters/<id>/make.py`. Colours, proportion
 
 Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in a row.
 
+**Deep Dive (long video, weekly)** 🔒 owner-approved 2026-11-11. One a week, Saturday. 16:9 (1920x1080), 5-8 min
+(hard cap 12 min and 90 MB), `"kind": "long"` in job.json (the long-form style profile in style.json does the rest).
+- Topic: a big idea from the niche that needs more than 60 s; prefer the idea behind this week's best Short (from the log /
+  the review's stats), going much deeper. Same Ved, same town and outfits, same look as the Shorts, framed for landscape.
+- Shape: cold open (a concrete object or question in the first 5 s, plus a promise of the payoff) -> 5-8 chapters, each a little
+  story in the 3D world with the townspeople acting it out -> recap -> "money is trust you can carry"-style one-line payoff ->
+  short subscribe outro. A new shot or cut every 3-6 s; Ved talking to camera from one side with a panel or headline on the other.
+- Chapters in job.json (`chapters`, >= 3, first at scene 0, each >= 10 s); they go into the description automatically.
+- 2-3 comic beats (one per ~2 minutes), same rules as the Shorts.
+- Even-handed: where experts disagree, give both views in one or two lines each.
+- Thumbnail: `python -m autopilot thumbnail` (a caption-free frame + a 2-5 word title, *accent* word), set via Zapier when the
+  budget allows; otherwise the owner sets it in YouTube Studio.
+- Reference: `jobs/2026-11-11-longpilot` ("How Money Actually Works").
+
 ## 7. Hooks 🔄
 question · myth-bust · number-shock · "you've been told X" · countdown. The hook is on screen at frame 0 and spoken in the first 1.5 s.
 
@@ -90,6 +104,8 @@ Every factual claim is checked with a search in the same run, with sources in `m
 ## 10. Schedule 🔄
 - Zapier Pro trial until 2026-11-20: 3 Shorts a day, slot b 12:50, slot c 15:50, slot a 18:50 IST.
 - After the trial (free plan, 100 tasks/month): slot a 18:50 IST daily; bonus slots b/c only near the end of the billing cycle.
+- Deep Dive (long video): Saturday 16:20 IST, weekly (1 upload + 1 thumbnail call). On the free plan it replaces that
+  Saturday's regular Short (`budget --need upload --ref <id>-a` exits 4).
 - Weekly review: Sunday 10:20 IST (stats + sync with the Google Docs: 3 Zapier calls).
 
 ## 11. Humour 🔄
@@ -103,6 +119,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-11 | 6, 10 | weekly long video (Deep Dive, 16:9) added | owner: "make it a video a week" |
 | 2026-11-08 | 3 | v3 (2026-11-08-m3) approved as the final house style and reference video; removed the old "Ved small in a corner" rule | owner: "final this" |
 | 2026-11-08 | 3 | living town: faceless townspeople with outfits, body-language emotions, depth staging (perspective + foreground layers), smoother stall/apples | owner request |
 | 2026-11-08 | 3 | 3D world from stills + cut-outs animated in 2D (smooth, fast); Ved walks/jumps/talks to camera; multi-angle cuts | owner request |

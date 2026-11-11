@@ -90,11 +90,20 @@
       "#shorts"
     ]
   },
-  "zapier": {"plan_tasks": 100, "tasks_per_call": 2, "reserve_tasks": 4, "window_days": 31, "keep_for_review": 3,
-             "cycle_day": null, "bonus_days": 7, "max_per_day": 3,
-             "trial_until": "2026-11-20", "trial_tasks": 1000,
-             "youtube_connection_id": "029bdbdf-efad-8d4d-99cf-ca39964f214b",
-             "youtube_channel_id": "UC1EZXIfUVW6FJisvvWYIewA"},
+  "zapier": {
+    "plan_tasks": 100,
+    "tasks_per_call": 2,
+    "reserve_tasks": 4,
+    "window_days": 31,
+    "keep_for_review": 3,
+    "cycle_day": null,
+    "bonus_days": 7,
+    "max_per_day": 3,
+    "trial_until": "2026-11-20",
+    "trial_tasks": 1000,
+    "youtube_connection_id": "029bdbdf-efad-8d4d-99cf-ca39964f214b",
+    "youtube_channel_id": "UC1EZXIfUVW6FJisvvWYIewA"
+  },
   "safe_zone": {
     "top": 0.08,
     "bottom": 0.78,
@@ -108,5 +117,39 @@
     "strength": 0.12,
     "contrast": 1.06
   },
-  "default_speaker": "ved"
+  "default_speaker": "ved",
+  "longform": {
+    "canvas": {
+      "w": 1920,
+      "h": 1080,
+      "fps": 30
+    },
+    "max_duration": 720,
+    "target_mb": 90,
+    "safe_zone": {
+      "top": 0.04,
+      "bottom": 0.93,
+      "left": 0.03,
+      "right": 0.97
+    },
+    "captions": {
+      "size": 50,
+      "y": 0.885,
+      "words_per_chunk": 4,
+      "stroke_width": 7
+    },
+    "watermark": {
+      "x": 0.9,
+      "y": 0.06,
+      "size": 26,
+      "opacity": 0.45
+    },
+    "progress_bar": {
+      "enabled": false
+    },
+    "youtube": {
+      "hashtags": []
+    },
+    "media_branch": "media-long"
+  }
 }

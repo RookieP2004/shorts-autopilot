@@ -27,7 +27,7 @@ IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 DEFAULTS = {"plan_tasks": 100, "tasks_per_call": 2, "reserve_tasks": 4, "window_days": 31,
             "keep_for_review": 3, "cycle_day": None, "bonus_days": 7, "max_per_day": 3,
             "trial_until": None, "trial_tasks": 1000}
-NEED = {"upload": 1, "stats": 1, "docs": 1, "other": 1}
+NEED = {"upload": 1, "stats": 1, "docs": 1, "thumb": 1, "other": 1}
 
 
 def settings(style=None):
@@ -111,15 +111,23 @@ def status(now=None, path=LEDGER, style=None):
         reviews_left = sum(1 for k in range(days_left) if (today + dt.timedelta(days=k)).weekday() == 6
                            and not (k == 0 and reviewed_today))
     tests = _private_tests()   # private pilots/style tests aren't real posts, so they don't fill the daily cap
-    todays = [e for e in used if e["kind"] == "upload" and e.get("ref") not in tests
-              and dt.datetime.fromisoformat(e["ts"]).astimezone(IST).date() == today]
+    uploads_today = [e for e in used if e["kind"] == "upload" and e.get("ref") not in tests
+                     and dt.datetime.fromisoformat(e["ts"]).astimezone(IST).date() == today]
+    long_today = any(e.get("ref", "").endswith("-L") for e in uploads_today)
+    todays = [e for e in uploads_today if not e.get("ref", "").endswith("-L")]   # the 3-a-day cap is for Shorts
     today_uploads = len(todays)
-    regular_done = any(e.get("ref", "").endswith("-a") for e in todays)   # slot a = the daily regular Short
+    regular_done = any(e.get("ref", "").endswith("-a") for e in todays) or (
+        long_today and s["cycle_day"] not in (None, "trial"))   # slot a = the daily regular Short
     return {"calls_used": len(used), "tasks_used": len(used) * s["tasks_per_call"], "cap_calls": cap,
             "calls_left": cap - len(used), "plan_calls": s["plan_tasks"] // s["tasks_per_call"], "plan_tasks": s["plan_tasks"], "keep_for_review": s["keep_for_review"],
             "window_days": s["window_days"], "cycle_day": s["cycle_day"], "reset": reset, "days_left": days_left,
-            "today": today, "today_uploads": today_uploads, "regular_done": regular_done, "reviews_left": reviews_left, "bonus_days": s["bonus_days"],
+            "today": today, "today_uploads": today_uploads, "regular_done": regular_done, "long_today": long_today, "reviews_left": reviews_left, "bonus_days": s["bonus_days"],
             "max_per_day": s["max_per_day"]}
+
+
+def replaced_by_long(ref, st):
+    """On the free plan the weekly long video takes the place of that day's regular Short (slot a)."""
+    return (ref.endswith("-a") and st.get("long_today") and st["cycle_day"] not in (None, "trial"))
 
 
 def allowed(kind, st):

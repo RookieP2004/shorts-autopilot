@@ -35,10 +35,11 @@ How it fits together:
     Inspect/discover/enable calls are free and are not recorded.
 - The workspace can reach GitHub and PyPI only. Everything that touches YouTube or Google goes through Zapier.
 
-There are four modes. Work out which one applies:
+There are five modes. Work out which one applies:
 - **Setup**: the owner asks to set up or change the channel. Interactive.
 - **Produce**: a scheduled run, or "make/post a Short". Unattended.
 - **Review**: every 7 days (scheduled), or "analyse the channel". Unattended.
+- **Deep Dive**: the weekly long video (scheduled, Saturday), or "make a long video". Unattended. Section 3d.
 - **Manual**: the owner triggers a new video themselves, often with their own changes ("make one on X, slower voice, more 3D").
   Run Produce mode for an extra slot, and follow section 3b.
 
@@ -154,6 +155,7 @@ end of the Zapier billing cycle, section 3c). The slot id is `YYYY-MM-DD-<slot>`
 days in a row, nor the same format twice on one day. If `log.md` already has that id, or `jobs/<id>/` exists in the repo, the slot is done. Stop.
 **Budget first:** run `python -m autopilot budget --need upload` before researching. If it exits 3, don't make the video;
 send the owner one SendUserMessage saying today's Short was skipped because the Zapier budget is used up, and stop.
+For slot `a`, pass `--ref <slot id>`: exit code 4 means today's long video already took this slot (free plan). Stop quietly.
 
 **a. Research (4–8 searches, send them in parallel).** Look at what is trending in the niche this week, news hooks, evergreen
 questions people ask, and what's working for similar Shorts. If the vidIQ connector is available, use its trending and
@@ -227,6 +229,31 @@ length must be ≤ 58 s. Then pull 3–4 frames from `out/final.mp4` with ffmpeg
 3. If the owner uses Zapier for anything else and tells you the "tasks used" figure from Zapier's billing page, run
    `python -m autopilot budget --sync <tasks>` and commit the ledger, so the bonus maths stays honest.
 
+## 3d. Deep Dive mode (weekly long video, 16:9)
+Follows the Bible's "Deep Dive" format; `jobs/2026-11-11-longpilot` (the owner-approved pilot) is the reference build.
+Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
+1. Section 0, then `python -m autopilot budget --need upload` (exit 3: tell the owner the long video was skipped, and stop).
+2. **Topic.** Prefer the idea behind the best recent Short (log + last review), taken much deeper; otherwise research as in 3a
+   (6-10 searches). Verify every claim (3c), put the URLs in `meta.sources` and name the main sources in the description.
+   Where experts disagree, give both views briefly.
+3. **Script.** 5-8 min (about 750-1100 words), 5-8 chapters. Cold open with a concrete object or question and a promise of the
+   payoff; each chapter is a small story acted out by Ved and the townspeople; 2-3 comic beats (one per ~2 min); a one-line payoff;
+   a short subscribe outro. Plan a new shot, cut or panel every 3-6 s.
+4. **Build** `jobs/<id>/assets.py` (sets at 1920x1080, reuse and extend the props) and `build_job.py` from the pilot's helpers;
+   `"kind": "long"`, `chapters`, `thumbnail`. See docs/job-spec.md "Long videos".
+5. **QA.** Preview sets (`BK_PREVIEW=1`, look at every plate), then `frames` for every scene (look at all of them: framing, panels
+   and text inside the frame, people placed in depth, nothing cut off). Fix and repeat. Then render the full sets with `nohup`
+   and poll, then `nohup python -m autopilot render ...` and poll (20-40 min). Check out/render.json: `duration` <= 720 and
+   `size_mb` <= 90; pull 5-6 frames from final.mp4 and look at them.
+6. **Thumbnail.** `python -m autopilot thumbnail jobs/<id>/job.json`, then Read out/thumbnail.jpg; it must read at a glance.
+7. **Publish.** `BRANCH=media-long KEEP=6 scripts/push_media.sh jobs/<id>/out/final.mp4 <id>` and the same for
+   `out/thumbnail.jpg` as `<id>-thumb`. `python -m autopilot zapier jobs/<id>/job.json` (description includes the chapters),
+   then upload exactly as 3h step 3 (pinned connection, check `channelId`) and `budget --add upload --ref <id>`.
+   Thumbnail: during the trial, or if `python -m autopilot budget --spare` shows SPARE >= 1, call Zapier *YouTube: Update Video
+   Thumbnail* (video_id, thumbnail = the thumb URL) and `budget --add thumb --ref <id>`. If YouTube refuses because the channel
+   isn't phone-verified, or there's no budget, send the owner the thumbnail file to set in YouTube Studio.
+8. Log (`logline` marks it LONG), commit, push, and report as 3i with the link and the chapter list.
+
 ## 4. Review mode (every 7 days): 3 Zapier calls, plus an optional 4th
 1. **Collect stats (1 call).** Take every video id from `log.md` for the last 28 days (skip PILOT lines). Get views, likes,
    comments and publish time in **one** call: vidIQ channel stats if that connector is available (no Zapier tasks), otherwise
@@ -242,6 +269,8 @@ length must be ≤ 58 s. Then pull 3–4 frames from `out/final.mp4` with ffmpeg
    1k views and comments per 1k views. Manual videos with `one-off` notes are experiments: report them separately, and if one clearly
    wins, suggest it to the owner; don't adopt it yourself. Compare the top 5 with the bottom 5: what do the winners share
    (topic type, hook, first line, length, joke)? Treat any difference under ~1.5× the channel median as noise.
+   Long videos (LONG in the log) are judged separately: views, likes and comments per 1k views, and, when the stats call can
+   get it, average view duration; compare them only with each other, and note which Short topics they grew from.
 5. Decide changes **only in 🔄 Bible sections** of `bible.md`: shift format weights (minimum 0.1), prefer the winning hook types,
    retarget lengths, adjust title patterns, record what landed and flopped in Humour, and trial at most one new format per week
    (≤ 2 of the week's slots, built from the existing cast and style). Never change 🔒 sections; suggest it to the owner instead.
@@ -263,6 +292,7 @@ Created in setup with `create_trigger` (time zone Asia/Calcutta, `requires_local
 - Bonus slots b and c, daily 12:50 and 15:50: "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
   `budget --bonus` first and stop quietly if it is 0."
 - Review, Sunday 10:20: "Use the shorts-autopilot skill in Review mode."
+- Deep Dive, Saturday 16:20: "Use the shorts-autopilot skill in Deep Dive mode (slot `L`, IST date). Post one long video."
 Each run starts fresh, so the repo (and the Google Docs) carry all the state.
 
 ## 6. Platform rules

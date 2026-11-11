@@ -12,7 +12,7 @@ import numpy as np
 
 from . import audio
 from .scene import render_frame
-from .spec import ROOT, deep_merge, load_characters, load_style, validate_job, load_json, BEATS, scene_beats
+from .spec import ROOT, deep_merge, job_style, load_characters, load_style, validate_job, load_json, BEATS, scene_beats
 
 
 class Ctx:
@@ -240,7 +240,7 @@ def mix(ctx):
 def render(job_path, out_dir, root=ROOT, workers=None, log=print):
     global _CTX
     job = load_json(job_path)
-    style = deep_merge(load_style(root), job.get("style_override", {}))  # one-off, this video only
+    style = job_style(job, root)   # channel style (+ long-form profile) + this job's one-off overrides
     chars = load_characters(root)
     errs = validate_job(job, style, chars, root)
     if errs:
@@ -274,11 +274,28 @@ def render(job_path, out_dir, root=ROOT, workers=None, log=print):
     final = os.path.join(out_dir, "final.mp4")
     tmp = os.path.join(out_dir, "final.part.mp4")
     lufs = style["loudness_lufs"]
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", silent, "-i", wav, "-map", "0:v", "-map", "1:a",
-                    "-c:v", "copy", "-af", f"loudnorm=I={lufs}:TP=-1.5:LRA=11", "-ar", "48000",
-                    "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", tmp], check=True)
+    cap_mb = style.get("target_mb")       # long videos: keep the file small enough for Zapier and GitHub
+    vargs = ["-c:v", "copy"]
+    abr = "192k"
+    if cap_mb:
+        abr = "160k"
+        kbps = min(4500, int(cap_mb * 8000 * 0.94 / total) - 160)
+        log(f"encoding for <= {cap_mb} MB: {kbps} kb/s video")
+    for attempt in range(3):
+        if cap_mb:
+            vargs = ["-c:v", "libx264", "-preset", "veryfast", "-tune", "animation", "-b:v", f"{kbps}k",
+                     "-maxrate", f"{int(kbps * 1.4)}k", "-bufsize", f"{kbps * 2}k", "-pix_fmt", "yuv420p", "-g", "60"]
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", silent, "-i", wav, "-map", "0:v", "-map", "1:a",
+                        *vargs, "-af", f"loudnorm=I={lufs}:TP=-1.5:LRA=11", "-ar", "48000",
+                        "-c:a", "aac", "-b:a", abr, "-shortest", "-movflags", "+faststart", tmp], check=True)
+        mb = os.path.getsize(tmp) / 1e6
+        if not cap_mb or mb <= cap_mb:
+            break
+        kbps = int(kbps * cap_mb / mb * 0.92)
+        log(f"{mb:.1f} MB is over {cap_mb} MB, re-encoding at {kbps} kb/s")
     os.replace(tmp, final)
     info = {"duration": round(total, 2), "frames": sum(ctx.frames), "scenes": n,
+            "size_mb": round(os.path.getsize(final) / 1e6, 1), "w": ctx.W, "h": ctx.H,
             "scene_starts": [round(s, 2) for s in ctx.start]}
     with open(os.path.join(out_dir, "render.json"), "w") as f:
         json.dump(info, f, indent=2)
@@ -305,7 +322,7 @@ def draw_guides(img, style):
 def frames(job_path, out_dir, times=None, root=ROOT, log=print, guides=True):
     """Draw stills for review. times=None -> the busiest moment of every scene."""
     job = load_json(job_path)
-    style = deep_merge(load_style(root), job.get("style_override", {}))  # one-off, this video only
+    style = job_style(job, root)   # channel style (+ long-form profile) + this job's one-off overrides
     chars = load_characters(root)
     errs = validate_job(job, style, chars, root)
     if errs:
@@ -334,3 +351,50 @@ def frames(job_path, out_dir, times=None, root=ROOT, log=print, guides=True):
         outs.append(p)
     log(f"total {ctx.total:.2f}s")
     return outs
+
+
+def thumbnail(job_path, out_path=None, root=ROOT, log=print):
+    """YouTube thumbnail (1280x720 JPEG, under 2 MB) for a long video: one caption-free frame of the video at
+    job["thumbnail"]["at"] seconds, with a big punchy title. *word* = accent colour.
+      "thumbnail": {"at": 12.5, "text": "WHY IS PAPER *WORTH* ANYTHING?", "x": 0.30, "y": 0.30, "size": 150,
+                    "max_w": 0.55, "zoom": 1.0, "focus": [0.5, 0.5]}"""
+    from PIL import Image, ImageEnhance
+    from . import sprites
+    job = load_json(job_path)
+    style = job_style(job, root)
+    th = job.get("thumbnail") or {}
+    ctx = Ctx(job, style, load_characters(root), root)
+    ctx.shots_dir = os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "shots")
+    prepare(ctx, log=lambda *a: None)
+    ctx.captions = [[] for _ in ctx.captions]          # no captions on a thumbnail
+    T = th.get("at") or ctx.total * 0.3
+    i = max(k for k in range(len(ctx.start)) if ctx.start[k] <= T)
+    img = render_frame(ctx, i, T - ctx.start[i]).convert("RGBA")
+    W, H = img.size
+    z = th.get("zoom", 1.0)
+    if z > 1:
+        fx, fy = th.get("focus", [0.5, 0.5])
+        cw, ch = W / z, H / z
+        x0 = min(max(0, fx * W - cw / 2), W - cw)
+        y0 = min(max(0, fy * H - ch / 2), H - ch)
+        img = img.crop((int(x0), int(y0), int(x0 + cw), int(y0 + ch))).resize((W, H), Image.LANCZOS)
+    img = ImageEnhance.Color(img).enhance(th.get("saturation", 1.18))
+    img = ImageEnhance.Contrast(img).enhance(th.get("contrast", 1.08))
+    if th.get("text"):
+        t = sprites.text_image(style, th["text"], size=th.get("size", 150), font_name=th.get("font", "display"),
+                               fill="primary", highlight="accent", stroke=th.get("stroke", "#1a1410"),
+                               stroke_width=th.get("stroke_width", 14), max_w=th.get("max_w", 0.55),
+                               align=th.get("align", "center"), uppercase=th.get("uppercase", True))
+        from .scene import paste
+        paste(img, t, th.get("x", 0.3) * W, th.get("y", 0.3) * H, 1.0, th.get("rot", 0), 1.0)
+    out_path = out_path or os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "thumbnail.jpg")
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    img = img.convert("RGB").resize((1280, 720), Image.LANCZOS)
+    q = 92
+    while True:
+        img.save(out_path, quality=q, optimize=True)
+        if os.path.getsize(out_path) < 1.9e6 or q < 60:
+            break
+        q -= 8
+    log(f"thumbnail -> {out_path} ({os.path.getsize(out_path) / 1e3:.0f} KB)")
+    return out_path
