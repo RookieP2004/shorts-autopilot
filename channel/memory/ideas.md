@@ -3,7 +3,6 @@
 `- [format] idea · why it should work · source link`. Production runs add runners-up and delete what they use.
 
 - [big-question] Why do we have leap years? · everyone knows Feb 29, few know the 11-minutes-a-year reason · https://en.wikipedia.org/wiki/Leap_year
-- [big-question] What is opportunity cost? · one apple vs one hour, everyday economics made concrete · https://en.wikipedia.org/wiki/Opportunity_cost
 - [scale-shock] How many atoms are in one grain of sand? · physics niche, counter-up hook · https://en.wikipedia.org/wiki/Avogadro_constant
 - [big-question] Why does your brain eat 20% of your energy? · follow-up angle on the brain myth: the costliest organ, shown as a city power grid · https://www.livescience.com/health/neuroscience/do-we-really-use-only-10-of-our-brains
 - [big-question] What is a Nash equilibrium? · natural follow-up to the prisoner's dilemma, two rival stalls choosing prices · https://www.econlib.org/library/Enc/PrisonersDilemma.html
@@ -25,3 +24,5 @@
 - [scale-shock] How big is a trillion? · seconds: a million = 11.6 days, a billion = 31.7 years, a trillion = ~31,700 years · https://en.wikipedia.org/wiki/Orders_of_magnitude_(time)
 - [scale-shock] How long would it take to walk the whole Great Wall? · 21,000+ km of wall, reuses the wall set · https://www.travelchinaguide.com/how-wide-is-great-wall-of-china.htm
 - [big-question] Why does the sky look black from space? · no air to scatter sunlight, reuses the station window set · https://www.space.com/human-made-structures-seen-from-space
+- [scale-shock] How big is a trillion? (money version) · $1 a second: millionaire in 11.6 days, billionaire in 31.7 years, trillionaire after ~31,700 years (back when people painted mammoths in caves); don't reuse the 'count one per second' framing too soon after the cells video · https://archeologie.culture.gouv.fr/chauvet/en/aurignacian-cave-art
+- [big-question] What is a sunk cost? · the half-eaten bad movie you keep watching because you paid; natural pair with opportunity cost, same plaza + cinema set · https://en.wikipedia.org/wiki/Sunk_cost

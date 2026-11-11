@@ -1,0 +1,1459 @@
+{
+ "id": "2026-11-11-c",
+ "title": "Why is nothing ever really free? 🎟️",
+ "description": "Every choice has a hidden price tag: opportunity cost, the value of the best option you gave up. Even economists trip on it: in a 2005 survey of almost 200 economists, only 21.6% got a simple opportunity-cost question right, fewer than random guessing would.\n\nSources: https://www.econlib.org/library/Enc/OpportunityCost.html ; https://www.viet-studies.com/kinhte/Econ_OpCost_NYT.pdf",
+ "tags": [
+  "opportunity cost",
+  "economics",
+  "economics explained",
+  "decision making",
+  "money",
+  "behavioral economics",
+  "explained",
+  "learn economics"
+ ],
+ "hashtags": [
+  "#economics",
+  "#money"
+ ],
+ "meta": {
+  "format": "big-question",
+  "topic": "opportunity cost (and the 2005 economists' survey)",
+  "hook": "question",
+  "idea_source": "backlog (ideas.md: What is opportunity cost?)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.econlib.org/library/Enc/OpportunityCost.html",
+   "https://www.viet-studies.com/kinhte/Econ_OpCost_NYT.pdf"
+  ],
+  "humour": {
+   "trend": "timeless (no current trend fit naturally this week): dry scoreboard card 'Experts: 0. Random guessing: 1.'",
+   "beat": "side_eye",
+   "scene": 9
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-11-c/assets.py",
+ "scenes": [
+  {
+   "say": "Why is nothing ever *really* free?",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.6,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.41,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.244,
+     "y": 0.5518,
+     "h": 0.1153,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "wave",
+       0.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#7c2533",
+        "dress"
+       ],
+       "apron": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/fg_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6881,
+     "y": 0.5749,
+     "h": 0.1425,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9936,
+       "y": 0.5754,
+       "scale": 1.0042
+      },
+      {
+       "t": 2.4,
+       "x": 0.6881,
+       "y": 0.5749,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.4437,
+     "y": 0.5922,
+     "h": 0.1628,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "shrug",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "cap",
+        "#34425c"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.7982,
+     "y": 0.6714,
+     "h": 0.2608,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "think",
+       1.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/ticket.png",
+     "x": 0.3,
+     "y": 0.27,
+     "w": 0.22,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -12
+      },
+      {
+       "t": 2.0,
+       "rot": 6
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/pizza.png",
+     "x": 0.72,
+     "y": 0.29,
+     "w": 0.2,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 8
+      },
+      {
+       "t": 2.0,
+       "rot": -6
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "WHY IS NOTHING",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "*REALLY* FREE?",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.17,
+     "size": 118,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Because every choice has a hidden price tag. Economists call it *opportunity cost*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 5.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "HIDDEN *PRICE TAG*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "OPPORTUNITY *COST*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 88,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.8,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Meet Kofi. He has ten dollars and one free evening. Pizza...",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.41,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_pizza_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.47,
+     "y": 0.5495,
+     "h": 0.2645,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "give",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#7c2533",
+        "dress"
+       ],
+       "apron": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/fg_pizza_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6232,
+     "y": 0.6252,
+     "h": 0.454,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       2.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "cap",
+        "#34425c"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.3308,
+       "y": 0.6565,
+       "scale": 1.1727
+      },
+      {
+       "t": 1.4,
+       "x": 0.6232,
+       "y": 0.6252,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 300'><rect width='900' height='300' rx='32' fill='#f6efe2'/><rect width='900' height='300' rx='32' fill='none' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>KOFI HAS</text><rect x='90' y='105' width='300' height='140' rx='18' fill='#46965a'/><text x='240' y='200' text-anchor='middle' font-size='76' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>$10</text><text x='450' y='200' text-anchor='middle' font-size='64' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>+</text><rect x='510' y='105' width='300' height='140' rx='18' fill='#34425c'/><text x='660' y='170' text-anchor='middle' font-size='44' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>1 FREE</text><text x='660' y='225' text-anchor='middle' font-size='44' fill='#f2b04a' font-family='Anton, DejaVu Sans, sans-serif'>EVENING</text></svg>",
+     "w": 0.82,
+     "x": 0.5,
+     "y": 0.2,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/pizza.png",
+     "x": 0.42,
+     "y": 0.33,
+     "w": 0.24,
+     "enter": "drop",
+     "at": 2.6,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -8
+      },
+      {
+       "t": 0.6,
+       "rot": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "...or a *movie*. Not both.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.6,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_cinema_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4554,
+     "y": 0.6212,
+     "h": 0.3957,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       0.6
+      ],
+      [
+       "shrug",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "cap",
+        "#34425c"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.092,
+       "y": 0.6431,
+       "scale": 1.1385
+      },
+      {
+       "t": 0.7,
+       "x": 0.4554,
+       "y": 0.6212,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/ticket.png",
+     "x": 0.26,
+     "y": 0.56,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -18,
+       "y": 0.6
+      },
+      {
+       "t": 0.5,
+       "rot": -6,
+       "y": 0.56,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/popcorn.png",
+     "x": 0.78,
+     "y": 0.6,
+     "w": 0.15,
+     "enter": "drop",
+     "at": 0.5,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "NOT *BOTH*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.37,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "He picks the movie. The ticket cost ten dollars. But the *real* cost?",
+   "transition": "cut",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.41,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.244,
+     "y": 0.5518,
+     "h": 0.1153,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "sad",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hair": [
+        "#d8d4cc",
+        "bun"
+       ],
+       "top": [
+        "#7c2533",
+        "dress"
+       ],
+       "apron": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/fg_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.7586,
+     "y": 0.5689,
+     "h": 0.1354,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "hold",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "cap",
+        "#34425c"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4437,
+       "y": 0.5922,
+       "scale": 1.2024
+      },
+      {
+       "t": 1.6,
+       "x": 0.7586,
+       "y": 0.5689,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       1.7,
+       0.04,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2374,
+     "y": 0.6784,
+     "h": 0.2691,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "think",
+       3.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/pizza.png",
+     "x": 0.22756928589122005,
+     "y": 0.5081170929609257,
+     "w": 0.14,
+     "enter": "pop",
+     "at": 0.2,
+     "until": 2.4,
+     "exit": "fade"
+    },
+    {
+     "type": "text",
+     "text": "$10",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop",
+     "color": "#9fe07a"
+    },
+    {
+     "type": "text",
+     "text": "REAL COST: *?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.21,
+     "size": 90,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.0,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "The pizza night he gave up. Opportunity cost is the best thing you said *no* to.",
+   "transition": "slide_up",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_cinema_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 8,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 5,
+       "scale": 1.21
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 520'><rect width='900' height='520' rx='34' fill='#f6efe2'/><rect width='900' height='520' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><text x='225' y='80' text-anchor='middle' font-size='38' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>PRICE</text><text x='675' y='80' text-anchor='middle' font-size='38' fill='#d9534f' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>OPPORTUNITY COST</text><line x1='450' y1='40' x2='450' y2='420' stroke='#1a1410' stroke-width='4' stroke-dasharray='14 12'/><rect x='95' y='150' width='260' height='150' rx='18' fill='#46965a'/><text x='225' y='255' text-anchor='middle' font-size='84' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>$10</text><circle cx='675' cy='225' r='92' fill='#d9a35a'/><circle cx='675' cy='225' r='76' fill='#f4cf6a'/><circle cx='640' cy='195' r='14' fill='#9e1f1a'/><circle cx='705' cy='205' r='14' fill='#9e1f1a'/><circle cx='660' cy='255' r='14' fill='#9e1f1a'/><circle cx='712' cy='258' r='14' fill='#9e1f1a'/><line x1='590' y1='140' x2='760' y2='310' stroke='#d9534f' stroke-width='14' stroke-linecap='round'/><text x='675' y='370' text-anchor='middle' font-size='36' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>THE PIZZA NIGHT</text><text x='225' y='370' text-anchor='middle' font-size='36' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WHAT YOU PAY</text><text x='450' y='480' text-anchor='middle' font-size='44' fill='#d98a1a' font-family='Anton, DejaVu Sans, sans-serif'>THE BEST THING YOU SAID NO TO</text></svg>",
+     "w": 0.9,
+     "x": 0.5,
+     "y": 0.29,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/pizza.png",
+     "x": 0.78,
+     "y": 0.53,
+     "w": 0.18,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 0,
+       "opacity": 1
+      },
+      {
+       "t": 1.6,
+       "rot": 40,
+       "y": 0.5,
+       "opacity": 0.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/ticket.png",
+     "x": 0.24,
+     "y": 0.52,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 0.4,
+     "keys": [
+      {
+       "t": 0,
+       "rot": -10
+      },
+      {
+       "t": 4,
+       "rot": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Time works the same way. An hour of scrolling costs the hour you could have *slept*.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.41,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.5442,
+     "y": 0.5486,
+     "h": 0.1114,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "shrug",
+       3.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/fg_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8794,
+     "y": 0.5657,
+     "h": 0.1317,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "hat": [
+        "cap",
+        "#34425c"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.1892,
+     "y": 0.6345,
+     "h": 0.2168,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.3867,
+       "y": 0.633,
+       "scale": 0.9922
+      },
+      {
+       "t": 1.2,
+       "x": 0.1892,
+       "y": 0.6345,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/clock.png",
+     "x": 0.44,
+     "y": 0.5,
+     "w": 0.13,
+     "enter": "drop",
+     "at": 0.5,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -8
+      },
+      {
+       "t": 0.3,
+       "rot": 8
+      },
+      {
+       "t": 0.6,
+       "rot": -6
+      },
+      {
+       "t": 0.9,
+       "rot": 0
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/phone.png",
+     "x": 0.8,
+     "y": 0.52,
+     "w": 0.1,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 12
+      },
+      {
+       "t": 3,
+       "rot": -4
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 260'><rect width='900' height='260' rx='30' fill='#f6efe2'/><rect width='900' height='260' rx='30' fill='none' stroke='#1a1410' stroke-width='6'/><text x='220' y='110' text-anchor='middle' font-size='54' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1 HOUR</text><text x='220' y='170' text-anchor='middle' font-size='34' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SCROLLING</text><path d='M390 125 L520 125' stroke='#d9534f' stroke-width='14' stroke-linecap='round'/><path d='M500 95 L540 125 L500 155' fill='none' stroke='#d9534f' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/><text x='690' y='110' text-anchor='middle' font-size='38' fill='#2f8f8a' font-family='Anton, DejaVu Sans, sans-serif'>COSTS 1 HOUR</text><text x='690' y='170' text-anchor='middle' font-size='34' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>OF SLEEP</text><text x='450' y='232' text-anchor='middle' font-size='28' fill='#d98a1a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>(or study, or a walk, or...)</text></svg>",
+     "w": 0.86,
+     "x": 0.5,
+     "y": 0.18,
+     "enter": "pop",
+     "at": 1.4,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Sounds easy? In 2005, almost *two hundred* economists were given a simple puzzle about it.",
+   "transition": "zoom",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.6,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_hall.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "think",
+     "x": 0.2701,
+     "y": 0.6696,
+     "h": 0.2824,
+     "enter": "none",
+     "acting": [
+      [
+       "think",
+       0
+      ],
+      [
+       "point",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.4735,
+       "y": 0.6696,
+       "scale": 1.0
+      },
+      {
+       "t": 1.4,
+       "x": 0.2701,
+       "y": 0.6696,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "~200 *ECONOMISTS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "ONE SIMPLE PUZZLE",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.19,
+     "size": 70,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.0
+    }
+   ]
+  },
+  {
+   "say": "Only about *one in five* got it right. That's worse than random guessing.",
+   "transition": "slide_up",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_hall.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.12
+      },
+      {
+       "t": 4,
+       "scale": 1.18
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 470'><rect width='900' height='470' rx='34' fill='#f6efe2'/><rect width='900' height='470' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><rect x='170' y='160' width='220' height='190' rx='12' fill='#d9534f'/><rect x='510' y='122' width='220' height='228' rx='12' fill='#6fc3c0'/><text x='280' y='145' text-anchor='middle' font-size='58' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>21.6%</text><text x='620' y='107' text-anchor='middle' font-size='58' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>25%</text><line x1='120' y1='350' x2='780' y2='350' stroke='#1a1410' stroke-width='5'/><text x='280' y='405' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>ECONOMISTS</text><text x='620' y='405' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RANDOM GUESS</text><text x='450' y='450' text-anchor='middle' font-size='26' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>who got it right (4 options: $0, $10, $40, $50)</text></svg>",
+     "w": 0.88,
+     "x": 0.5,
+     "y": 0.27,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 21.6,
+     "decimals": 1,
+     "suffix": "%",
+     "count_dur": 1.0,
+     "at": 0.4,
+     "x": 0.5,
+     "y": 0.52,
+     "size": 120,
+     "color": "#ff5a5a",
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.7,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_hall.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.5,
+    "text": "Experts: 0. *Random guessing:* 1.",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "So next time something's free, ask one question. Free... compared to *what*?",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/plate_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 5.0,
+       "scale": 1.43
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.8
+      ],
+      [
+       "smirk",
+       3.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-11-c/assets/ticket.png",
+     "x": 0.8,
+     "y": 0.12,
+     "w": 0.18,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 10
+      },
+      {
+       "t": 4,
+       "rot": -4
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "FREE?",
+     "font": "display",
+     "x": 0.4,
+     "y": 0.1,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.4
+    },
+    {
+     "type": "text",
+     "text": "COMPARED TO *WHAT?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 80,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.0,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
