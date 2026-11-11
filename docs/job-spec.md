@@ -192,8 +192,12 @@ watermark top-right, no `#shorts`. Everything else (layers, stage, beats, motion
 of the frame, so a layer `w` of 0.4 is 768 px wide here.
 - `chapters`: `[{"scene": 0, "title": "A piece of paper"}, ...]`, at least 3, first at scene 0, each >= 10 s long.
   `python -m autopilot zapier` adds them to the description as `0:00 Title` lines (from out/render.json).
-- `thumbnail`: `{"at": <seconds or null>, "text": "WHY IS PAPER *MONEY?*", "x": 0.7, "y": 0.3, "size": 150, "max_w": 0.5,
-  "zoom": 1.0, "focus": [x, y]}` then `python -m autopilot thumbnail jobs/<id>/job.json` writes out/thumbnail.jpg (1280x720, < 2 MB).
+- `thumbnail` (the bold explainer look; see the Bible): `{"title": "JUST *PAPER?*", "title_y": 0.14, "title_size": 220,
+  "bg": [layers: a plate + townspeople + props, all blurred], "fg": [layers: Ved big (h ~1.7, y ~1.2, x ~0.43, a strong pose
+  such as "surprised", `acting: "none"`, `talk: false`) + 1-2 key props], "blur": 16, "tint": ["#2a5bd7", "#f08a24"],
+  "tint_amount": 0.45, "glow": "#f2b04a", "glow_x": 0.45, "glow_y": 0.58, "glow_strength": 1.6, "bg_saturation": 1.8}`.
+  `python -m autopilot thumbnail jobs/<id>/job.json` writes out/thumbnail.jpg (1280x720, < 2 MB); Read it and iterate.
+  (Old form, still supported: `{"at": seconds, "text": ...}` = one caption-free video frame with the title on top.)
 - Sets: render plates at 1920x1080 (`still(name, 1920, 1080, ...)`); landscape shows more of the world, so dress the sides.
 - Talking to camera: Ved big on one side (x 0.27 or 0.73, y 0.86, h 1.2, `ground: false`) over the blurred set, with a
   headline or panel on the other side. Beat cards: pass `text_w` 0.4 so they stay on one side.

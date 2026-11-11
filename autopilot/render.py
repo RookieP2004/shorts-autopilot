@@ -353,43 +353,114 @@ def frames(job_path, out_dir, times=None, root=ROOT, log=print, guides=True):
     return outs
 
 
+def _still(job, style, root, layers, size=None):
+    """Render a list of layers as one still (scene of 1 s, no captions), at time 0.9 s so every entrance has landed."""
+    mini = {"id": job.get("id", "thumb"), "kind": job.get("kind"), "scenes": [{"dur": 1.0, "captions": False, "layers": layers}]}
+    ctx = Ctx(mini, style, load_characters(root), root)
+    prepare(ctx, log=lambda *a: None)
+    return render_frame(ctx, 0, 0.9).convert("RGB")
+
+
+def _cutout(job, style, root, layers):
+    """Sharp foreground layers as RGBA: render over black and over white, alpha from the difference."""
+    import numpy as np
+    from PIL import Image
+    W, H = style["canvas"]["w"], style["canvas"]["h"]
+    tmp = os.path.join("/tmp", "thumb_solid")
+    os.makedirs(tmp, exist_ok=True)
+    out = []
+    for name, col in (("k", (0, 0, 0)), ("w", (255, 255, 255))):
+        path = os.path.join(tmp, f"{name}_{W}x{H}.png")
+        if not os.path.exists(path):
+            Image.new("RGB", (W, H), col).save(path)
+        bg = {"type": "image", "path": path, "x": 0.5, "y": 0.5, "w": 1.0, "enter": "none"}
+        out.append(np.asarray(_still(job, style, root, [bg] + layers)).astype(np.float32))
+    k, w = out
+    a = np.clip(1.0 - (w - k).mean(axis=2, keepdims=True) / 255.0, 0, 1)
+    rgb = np.where(a > 0.004, k / np.maximum(a, 0.004), 0)
+    return Image.fromarray(np.dstack([np.clip(rgb, 0, 255), a * 255]).astype("uint8"), "RGBA")
+
+
 def thumbnail(job_path, out_path=None, root=ROOT, log=print):
-    """YouTube thumbnail (1280x720 JPEG, under 2 MB) for a long video: one caption-free frame of the video at
-    job["thumbnail"]["at"] seconds, with a big punchy title. *word* = accent colour.
-      "thumbnail": {"at": 12.5, "text": "WHY IS PAPER *WORTH* ANYTHING?", "x": 0.30, "y": 0.30, "size": 150,
-                    "max_w": 0.55, "zoom": 1.0, "focus": [0.5, 0.5]}"""
-    from PIL import Image, ImageEnhance
+    """YouTube thumbnail (1280x720 JPEG, < 2 MB) for a long video, in the bold explainer-channel style: the world blurred and
+    colour-pushed behind, Ved (and the one key prop) sharp and big, a glow behind him, a short huge title.
+      "thumbnail": {"title": "JUST *PAPER?*",                 # 1-3 words; *word* = accent colour
+                    "bg": [layers...],                       # the world: a plate, townspeople, props (all blurred)
+                    "fg": [layers...],                       # sharp: Ved with a strong face, the key prop
+                    "blur": 14, "glow": "#f2b04a", "glow_x": 0.5, "glow_y": 0.55, "title_y": 0.14, "title_size": 190}
+    Old form (no "fg"): a caption-free frame at "at" seconds with "text" on top."""
+    from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
     from . import sprites
     job = load_json(job_path)
     style = deep_merge(job_style(job, root), {"watermark": {"text": ""}})     # no watermark on a thumbnail
     th = job.get("thumbnail") or {}
-    ctx = Ctx(job, style, load_characters(root), root)
-    ctx.shots_dir = os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "shots")
-    prepare(ctx, log=lambda *a: None)
-    ctx.captions = [[] for _ in ctx.captions]          # no captions on a thumbnail
-    T = th.get("at") or ctx.total * 0.3
-    i = max(k for k in range(len(ctx.start)) if ctx.start[k] <= T)
-    img = render_frame(ctx, i, T - ctx.start[i]).convert("RGBA")
-    W, H = img.size
-    z = th.get("zoom", 1.0)
-    if z > 1:
-        fx, fy = th.get("focus", [0.5, 0.5])
-        cw, ch = W / z, H / z
-        x0 = min(max(0, fx * W - cw / 2), W - cw)
-        y0 = min(max(0, fy * H - ch / 2), H - ch)
-        img = img.crop((int(x0), int(y0), int(x0 + cw), int(y0 + ch))).resize((W, H), Image.LANCZOS)
-    img = ImageEnhance.Color(img).enhance(th.get("saturation", 1.18))
-    img = ImageEnhance.Contrast(img).enhance(th.get("contrast", 1.08))
-    if th.get("text"):
-        t = sprites.text_image(style, th["text"], size=th.get("size", 150), font_name=th.get("font", "display"),
-                               fill="primary", highlight="accent", stroke=th.get("stroke", "#1a1410"),
-                               stroke_width=th.get("stroke_width", 14), max_w=th.get("max_w", 0.55),
-                               align=th.get("align", "center"), uppercase=th.get("uppercase", True))
+    W, H = style["canvas"]["w"], style["canvas"]["h"]
+    if th.get("fg"):
+        bg = _still(job, style, root, th.get("bg", []))
+        bg = bg.filter(ImageFilter.GaussianBlur(th.get("blur", 14) * W / 1920))
+        bg = ImageEnhance.Color(bg).enhance(th.get("bg_saturation", 1.35))
+        bg = ImageEnhance.Brightness(bg).enhance(th.get("bg_brightness", 0.92))
+        img = bg.convert("RGBA")
+        # a soft colour glow behind the hero, and a dark vignette at the edges
+        import numpy as np
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        gx, gy = th.get("glow_x", 0.5) * W, th.get("glow_y", 0.55) * H
+        d = np.sqrt(((xx - gx) / (0.42 * W)) ** 2 + ((yy - gy) / (0.62 * H)) ** 2)
+        glow = np.clip(1 - d, 0, 1) ** 1.6 * th.get("glow_strength", 0.75)
+        gc = style["palette"].get(th.get("glow", "accent"), th.get("glow", "#f2b04a")).lstrip("#")
+        col = np.array([int(gc[k:k + 2], 16) for k in (0, 2, 4)], np.float32)
+        base = np.asarray(img.convert("RGB")).astype(np.float32)
+        if th.get("tint"):                                  # colour-grade the world toward a two-colour gradient
+            def rgb(c):
+                c = style["palette"].get(c, c).lstrip("#")
+                return np.array([int(c[k:k + 2], 16) for k in (0, 2, 4)], np.float32)
+            c0, c1 = rgb(th["tint"][0]), rgb(th["tint"][-1])
+            g = (yy / H)[..., None]
+            grad = c0 * (1 - g) + c1 * g
+            am = th.get("tint_amount", 0.4)
+            base = base * (1 - am) + (base / 255.0) * grad * am * 1.6
+        base = base * (1 - glow[..., None] * 0.6) + col * glow[..., None] * 0.6 + glow[..., None] * 40
+        vig = np.clip((np.sqrt(((xx - W / 2) / (0.62 * W)) ** 2 + ((yy - H / 2) / (0.62 * H)) ** 2) - 0.55) * 1.4, 0, 1)
+        base = base * (1 - 0.55 * vig[..., None])
+        img = Image.fromarray(np.clip(base, 0, 255).astype("uint8")).convert("RGBA")
+        fg = _cutout(job, style, root, th["fg"])
+        a = fg.split()[3]                                   # a thin dark rim + soft shadow around the cut-out
+        sh = Image.new("RGBA", fg.size, (10, 8, 6, 0))
+        sh.putalpha(a.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(10)).point(lambda v: int(v * 0.7)))
+        img.alpha_composite(sh, (8, 10))
+        img.alpha_composite(fg)
+    else:
+        ctx = Ctx(job, style, load_characters(root), root)
+        ctx.shots_dir = os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "shots")
+        prepare(ctx, log=lambda *a: None)
+        ctx.captions = [[] for _ in ctx.captions]          # no captions on a thumbnail
+        T = th.get("at") or ctx.total * 0.3
+        i = max(k for k in range(len(ctx.start)) if ctx.start[k] <= T)
+        img = render_frame(ctx, i, T - ctx.start[i]).convert("RGBA")
+        z = th.get("zoom", 1.0)
+        if z > 1:
+            fx, fy = th.get("focus", [0.5, 0.5])
+            cw, ch = W / z, H / z
+            x0 = min(max(0, fx * W - cw / 2), W - cw)
+            y0 = min(max(0, fy * H - ch / 2), H - ch)
+            img = img.crop((int(x0), int(y0), int(x0 + cw), int(y0 + ch))).resize((W, H), Image.LANCZOS)
+        img = ImageEnhance.Color(img).enhance(th.get("saturation", 1.18))
+    title = th.get("title") or th.get("text")
+    if title:
+        t = sprites.text_image(style, title, size=th.get("title_size", th.get("size", 190)), font_name=th.get("font", "body"),
+                               fill="#ffffff", highlight=th.get("accent", "accent"), stroke="#0b0806",
+                               stroke_width=th.get("stroke_width", 16), max_w=th.get("max_w", 0.92),
+                               align="center", uppercase=True, shadow=False)
+        sh = Image.new("RGBA", t.size, (0, 0, 0, 0))
+        sh.putalpha(t.split()[3].filter(ImageFilter.GaussianBlur(9)).point(lambda v: int(v * 0.8)))
         from .scene import paste
-        paste(img, t, th.get("x", 0.3) * W, th.get("y", 0.3) * H, 1.0, th.get("rot", 0), 1.0)
+        tx, ty = th.get("title_x", th.get("x", 0.5)) * W, th.get("title_y", th.get("y", 0.14)) * H
+        paste(img, sh, tx + 10, ty + 14, 1.0, 0, 1.0)
+        paste(img, t, tx, ty, 1.0, th.get("rot", 0), 1.0)
     out_path = out_path or os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "thumbnail.jpg")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     img = img.convert("RGB").resize((1280, 720), Image.LANCZOS)
+    img = img.filter(ImageFilter.UnsharpMask(2, 60, 2))
     q = 92
     while True:
         img.save(out_path, quality=q, optimize=True)

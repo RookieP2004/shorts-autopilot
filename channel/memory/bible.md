@@ -87,8 +87,11 @@ Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in 
 - Chapters in job.json (`chapters`, >= 3, first at scene 0, each >= 10 s); they go into the description automatically.
 - 2-3 comic beats (one per ~2 minutes), same rules as the Shorts.
 - Even-handed: where experts disagree, give both views in one or two lines each.
-- Thumbnail: `python -m autopilot thumbnail` (a caption-free frame + a 2-5 word title, *accent* word), set via Zapier when the
-  budget allows; otherwise the owner sets it in YouTube Studio.
+- Thumbnail (owner-approved look, 2026-11-11, The Infographics Show as reference): the world blurred and colour-graded
+  behind (a two-colour gradient tint + a warm glow behind Ved), Ved big and sharp with a strong face (surprised, shocked,
+  side-eye) right under the title, one or two key props sharp beside him, and a huge 1-3 word title in heavy white sans with
+  one *accent* word ("JUST *PAPER?*"). No watermark, no small text. `python -m autopilot thumbnail` (spec in docs/job-spec.md);
+  set via Zapier when the budget allows, otherwise the owner sets it in YouTube Studio.
 - Reference: `jobs/2026-11-11-longpilot` ("How Money Actually Works").
 
 ## 7. Hooks 🔄
