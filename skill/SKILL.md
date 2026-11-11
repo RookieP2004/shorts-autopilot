@@ -245,7 +245,11 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
    and text inside the frame, people placed in depth, nothing cut off). Fix and repeat. Then render the full sets with `nohup`
    and poll, then `nohup python -m autopilot render ...` and poll (20-40 min). Check out/render.json: `duration` <= 720 and
    `size_mb` <= 90; pull 5-6 frames from final.mp4 and look at them.
-6. **Thumbnail.** `python -m autopilot thumbnail jobs/<id>/job.json`, then Read out/thumbnail.jpg; it must read at a glance.
+6. **Thumbnail** (owner-approved look, always): the world blurred and colour-graded behind (two-colour gradient tint + a warm glow
+   behind Ved), Ved big and sharp right under the title with a strong face (surprised, shocked, side-eye), one or two key props
+   sharp beside him, and a huge 1-3 word title in heavy white sans with one *accent* word ("JUST *PAPER?*"); no watermark, no small
+   text. Build it as `thumbnail` with `bg`/`fg` layers (docs/job-spec.md, the pilot's job.json is the reference), run
+   `python -m autopilot thumbnail jobs/<id>/job.json`, Read out/thumbnail.jpg and iterate until it reads at a glance on a phone.
 7. **Publish.** `BRANCH=media-long KEEP=6 scripts/push_media.sh jobs/<id>/out/final.mp4 <id>` and the same for
    `out/thumbnail.jpg` as `<id>-thumb`. `python -m autopilot zapier jobs/<id>/job.json` (description includes the chapters),
    then upload exactly as 3h step 3 (pinned connection, check `channelId`) and `budget --add upload --ref <id>`.
