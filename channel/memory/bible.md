@@ -90,6 +90,9 @@ They keep the channel promise (complex ideas made simple) and the same look, cas
 - **Philosophy and politics:** the even-handed rule applies in full: each side's strongest case, the main criticism, historical
   facts, no verdict on contested questions, no current parties or candidates. "Propaganda" videos teach how to check a claim
   (sources, incentives, evidence), never who to distrust.
+- **Topic rule (owner, 2026-11-13), all formats:** a new topic every video, and each must be unique (fresh topic or angle),
+  trending (people are talking about or searching it this week) or viral-shaped (a famous "impossible" subject made shockingly
+  easy, like rocket science in 40 seconds), ideally two or three at once.
 - Mix: about 1 in 3 Shorts uses the new formats; deep-question at most about once a week. The review tunes the weights.
 Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in a row. Deep Dives can use any format too
 (a what-if or frontier topic makes a great long video).
@@ -146,6 +149,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-13 | 6 | topic rule: unique / trending / viral-shaped, ideally a mix | owner |
 | 2026-11-13 | 6 | new formats added: what-if, frontier, wild-story, deep-question; honesty tags | owner idea (additions only) |
 | 2026-11-11 | 6, 10 | weekly long video (Deep Dive, 16:9) added | owner: "make it a video a week" |
 | 2026-11-08 | 3 | v3 (2026-11-08-m3) approved as the final house style and reference video; removed the old "Ved small in a corner" rule | owner: "final this" |

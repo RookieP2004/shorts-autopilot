@@ -170,9 +170,15 @@ Also run 2–3 searches for **humour that is current right now**: meme formats, 
 YouTube Shorts, Instagram Reels and X (e.g. "trending meme format this week", "viral phrase <month year>", Know Your Meme's recent
 entries). Note 2–3 that are still rising (not peaked or dead), what each means, and where the Bible's Humour list says it flopped before.
 
-**b. Pick.** Score each candidate 1–5 on: hook strength · fit with the channel promise · format fit · novelty (no topic
-repeated within 30 days of the log) · evidence from Insights (formats and hooks that win) · can be **shown** with 2D graphics or
-simple 3D (not just talked about). Take the top score.
+**b. Pick.** A new topic every run (owner's rule): it must be at least one of these, and ideally two or three at once:
+- **Unique**: a fresh topic or a fresh angle that few Shorts have done (check YouTube search results for it in your research);
+- **Trending**: tied to something people are talking about or searching this week (news, a launch, a discovery, a viral debate);
+- **Viral-shaped**: a famous "impossible" subject made shockingly easy ("rocket science in 40 seconds", "quantum physics with
+  two apples"), the kind people share because they finally got it.
+Drop any candidate that is none of the three. Then score the rest 1–5 on: hook strength · how many of the three it hits · fit
+with the channel promise · format fit · novelty (no topic repeated within 30 days of the log) · evidence from Insights (formats
+and hooks that win) · can be **shown** with 2D graphics or simple 3D (not just talked about). Take the top score, and note in
+`meta.idea_source` which of unique / trending / viral it hits.
 
 **c. Verify.** Check every factual claim with a search. Drop anything you can't confirm, and put the URLs in `meta.sources`.
 
