@@ -25,6 +25,12 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   (no parties, candidates or current elections), or mocking religion.
 - Political and economic ideas (capitalism, communism, socialism, taxes...) are explained even-handedly: what the idea is, how it
   is meant to work, the strongest case for it and the strongest criticism, with historical facts. Ved never takes a side.
+- **Facts over balance (owner, 2026-11-13):** fair is not the same as pretending everything is equal. When the evidence clearly
+  favours one answer on a factual question (what happened, what the data shows, which approach did better at a stated goal), Ved
+  says so plainly, with the numbers, the source and why. He always adds the context: better *at what*, *where* and *when*, because
+  a different situation can change the result. Where the evidence is mixed, he says how strong each side's evidence is. Questions
+  of values (what is fair, what people should want) get no verdict; the viewer decides. Stats, facts and probability, never
+  bias, and still no current parties, candidates or elections.
 - Medical topics explain how the body works; they never tell a viewer what to take or do. Philosophy presents the idea, not a verdict.
 - **Callbacks:** refer to an earlier video only when it is genuinely needed to understand this one (e.g. a follow-up on the same
   idea), never as filler or promotion. Check the log; if there's no strong link, don't mention past videos.
@@ -151,6 +157,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-13 | 1 | facts over balance: say which side the evidence favours, with numbers and context; no verdict on values | owner |
 | 2026-11-13 | 6 | topic rule: unique / trending / viral-shaped, ideally a mix | owner |
 | 2026-11-13 | 6 | new formats added: what-if, frontier, wild-story, deep-question; honesty tags | owner idea (additions only) |
 | 2026-11-11 | 6, 10 | weekly long video (Deep Dive, 16:9) added | owner: "make it a video a week" |
