@@ -1,0 +1,1374 @@
+{
+ "id": "2026-11-12-b",
+ "title": "Why do we get goosebumps? 🥶",
+ "description": "Goosebumps are a tiny muscle at work: the arrector pili. Cold (or a strong feeling) fires a nerve, the muscle squeezes, the hair stands up and the skin bunches into a bump. On furry animals that traps warm air and makes them look bigger; we lost the fur but kept the reflex.\n\nSources: https://www.health.harvard.edu/blog/wondering-about-goosebumps-of-course-you-are-2020080320688 ; https://livescience.com/32349-what-causes-goose-bumps.html ; https://neurosciencenews.com/goosebumps-reason-16669/",
+ "tags": [
+  "goosebumps",
+  "human body",
+  "biology",
+  "arrector pili",
+  "evolution",
+  "science explained",
+  "why do we get goosebumps",
+  "chills",
+  "explained"
+ ],
+ "hashtags": [
+  "#science",
+  "#humanbody"
+ ],
+ "meta": {
+  "format": "big-question",
+  "topic": "why we get goosebumps (arrector pili, fur, vestigial reflex, emotional chills)",
+  "hook": "question",
+  "idea_source": "backlog (ideas.md: Why do we get goosebumps?)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.health.harvard.edu/blog/wondering-about-goosebumps-of-course-you-are-2020080320688",
+   "https://livescience.com/32349-what-causes-goose-bumps.html",
+   "https://neurosciencenews.com/goosebumps-reason-16669/"
+  ],
+  "humour": {
+   "trend": "'Me when / me trying to' caption hook (still a top recurring Reels/TikTok title hook, Nov 2026); deadpan card 'Me trying to look scary with 3 arm hairs'",
+   "beat": "deadpan",
+   "scene": 9
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-12-b/assets.py",
+ "scenes": [
+  {
+   "say": "Why does cold make your skin look like a plucked *goose*?",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.41,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.244,
+     "y": 0.5518,
+     "h": 0.1153,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ],
+      [
+       "hold",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hat": [
+        "cap",
+        "#7c2533"
+       ],
+       "top": [
+        "#46965a",
+        "jacket"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/fg_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.6605,
+     "y": 0.5749,
+     "h": 0.1424,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9755,
+       "y": 0.5781,
+       "scale": 1.0267
+      },
+      {
+       "t": 2.6,
+       "x": 0.6605,
+       "y": 0.5749,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.4302,
+     "y": 0.5889,
+     "h": 0.1589,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ],
+      [
+       "shrug",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "build": "slim",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "top": [
+        "#f2b04a",
+        "jacket"
+       ],
+       "bottom": [
+        "#4a3b30",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.773,
+     "y": 0.6713,
+     "h": 0.2607,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "think",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/thermo.png",
+     "x": 0.14,
+     "y": 0.27,
+     "w": 0.075,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -8
+      },
+      {
+       "t": 2.0,
+       "rot": 6
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "WHY DO WE GET",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "*GOOSEBUMPS?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.17,
+     "size": 132,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Blame a tiny muscle. Almost every hair on your body has its *own*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.6,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "1 HAIR",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "= 1 *MUSCLE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.19,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Here's your skin, cut open. That red one is the *arrector pili*.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.08,
+      "focus": [
+       0.55,
+       0.5
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.3,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_skin_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.7286,
+     "y": 0.5532,
+     "h": 0.2933,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.3498,
+       "y": 0.5569,
+       "scale": 1.029
+      },
+      {
+       "t": 1.3,
+       "x": 0.7286,
+       "y": 0.5532,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "flip": true
+    },
+    {
+     "type": "text",
+     "text": "YOUR SKIN,",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 90,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "*CUT OPEN*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.17,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.9,
+     "sfx": "pop"
+    },
+    {
+     "type": "shape",
+     "shape": "ring",
+     "w": 0.07,
+     "h": 0.07,
+     "color": "#f2b04a",
+     "x": 0.3842387088522814,
+     "y": 0.4884392306844301,
+     "enter": "pop",
+     "at": 2.4,
+     "stroke_width": 8,
+     "loop": "pulse"
+    }
+   ]
+  },
+  {
+   "say": "Relaxed, your hair lies flat. Get cold, a nerve fires, and the muscle *squeezes*.",
+   "transition": "cut",
+   "caption_y": 0.3,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_skin_cold.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_skin_relaxed.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 1
+      },
+      {
+       "t": 3.6,
+       "opacity": 1
+      },
+      {
+       "t": 4.2,
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 96'><rect x='3' y='3' width='254' height='90' rx='45' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='130' y='64' text-anchor='middle' font-size='44' fill='#5a3a20' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>HAIR</text></svg>",
+     "w": 0.26,
+     "x": 0.8098187559375005,
+     "y": 0.21986623879486306,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop",
+     "until": 3.6,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 96'><rect x='3' y='3' width='294' height='90' rx='45' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='150' y='64' text-anchor='middle' font-size='44' fill='#b88a00' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>NERVE</text></svg>",
+     "w": 0.3,
+     "x": 0.32050505447874317,
+     "y": 0.6719504122593181,
+     "enter": "pop",
+     "at": 1.9,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 96'><rect x='3' y='3' width='334' height='90' rx='45' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='170' y='64' text-anchor='middle' font-size='44' fill='#c8303a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MUSCLE</text></svg>",
+     "w": 0.34,
+     "x": 0.6691380877836421,
+     "y": 0.6150958023627748,
+     "enter": "pop",
+     "at": 0.9,
+     "sfx": "pop"
+    },
+    {
+     "type": "shape",
+     "shape": "ring",
+     "w": 0.06,
+     "h": 0.06,
+     "color": "#ffd84a",
+     "x": 0.32050505447874317,
+     "y": 0.5719504122593181,
+     "enter": "pop",
+     "at": 2.6,
+     "stroke_width": 8,
+     "loop": "pulse"
+    },
+    {
+     "type": "text",
+     "text": "*SQUEEZE!*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.7,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "The hair stands up, and the skin bunches into a bump. A *goosebump*.",
+   "transition": "cut",
+   "caption_y": 0.3,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.2,
+      "zoom": 1.18,
+      "focus": [
+       0.4451708798708594,
+       0.399244189049517
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_skin_cold.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 96'><rect x='3' y='3' width='314' height='90' rx='45' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='160' y='64' text-anchor='middle' font-size='44' fill='#5a3a20' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>HAIR UP</text></svg>",
+     "w": 0.32,
+     "x": 0.6884493801988723,
+     "y": 0.21019548470897043,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "shape",
+     "shape": "ring",
+     "w": 0.16,
+     "h": 0.16,
+     "color": "#f2b04a",
+     "x": 0.4451708798708594,
+     "y": 0.399244189049517,
+     "enter": "pop",
+     "at": 1.8,
+     "stroke_width": 8
+    },
+    {
+     "type": "text",
+     "text": "GOOSE*BUMP*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "Now times that by *thousands* of hairs.",
+   "transition": "zoom",
+   "caption_y": 0.41,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.1,
+      "focus": [
+       0.5,
+       0.6
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_macro_cold.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_macro_relaxed.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 1
+      },
+      {
+       "t": 0.9,
+       "opacity": 1
+      },
+      {
+       "t": 1.5,
+       "opacity": 0
+      }
+     ]
+    },
+    {
+     "type": "counter",
+     "from": 1,
+     "to": 5000,
+     "count_dur": 1.4,
+     "at": 0.6,
+     "prefix": "x",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 150,
+     "color": "#f2b04a",
+     "stroke": "#0b0f12",
+     "stroke_width": 8,
+     "enter": "pop",
+     "sfx": "riser"
+    }
+   ]
+  },
+  {
+   "say": "Why bother? On a furry animal, fluffed-up fur traps a blanket of *warm air*.",
+   "transition": "slide_up",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_macro_cold.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 8,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 5,
+       "scale": 1.21
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 560'><rect width='900' height='560' rx='34' fill='#f6efe2'/><rect width='900' height='560' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><text x='225' y='70' text-anchor='middle' font-size='40' fill='#5a4636' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FLAT FUR</text><text x='675' y='70' text-anchor='middle' font-size='40' fill='#d98a1a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FLUFFED UP</text><line x1='450' y1='40' x2='450' y2='470' stroke='#1a1410' stroke-width='4' stroke-dasharray='14 12'/><rect x='60' y='330' width='330' height='70' rx='10' fill='#dba07e'/><line x1='80' y1='330' x2='112' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='110' y1='330' x2='142' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='140' y1='330' x2='172' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='170' y1='330' x2='202' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='200' y1='330' x2='232' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='230' y1='330' x2='262' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='260' y1='330' x2='292' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='290' y1='330' x2='322' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='320' y1='330' x2='352' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='350' y1='330' x2='382' y2='310' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><rect x='60' y='290' width='330' height='22' rx='8' fill='#f2b04a' opacity='0.5'/><text x='225' y='250' text-anchor='middle' font-size='34' fill='#4a8fe0' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>COLD GETS IN</text><rect x='510' y='160' width='330' height='170' rx='16' fill='#f2b04a' opacity='0.55'/><rect x='510' y='330' width='330' height='70' rx='10' fill='#dba07e'/><line x1='530' y1='330' x2='534' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='560' y1='330' x2='564' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='590' y1='330' x2='594' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='620' y1='330' x2='624' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='650' y1='330' x2='654' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='680' y1='330' x2='684' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='710' y1='330' x2='714' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='740' y1='330' x2='744' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='770' y1='330' x2='774' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><line x1='800' y1='330' x2='804' y2='175' stroke='#3b2716' stroke-width='7' stroke-linecap='round'/><text x='675' y='135' text-anchor='middle' font-size='34' fill='#d9534f' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WARM AIR TRAPPED</text><text x='450' y='520' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>FUR + AIR = A BLANKET</text></svg>",
+     "w": 0.9,
+     "x": 0.5,
+     "y": 0.27,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "It also makes them look *bigger*. That's the puffed-up cat, and the porcupine's quills.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.41,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.244,
+     "y": 0.5518,
+     "h": 0.1153,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hat": [
+        "cap",
+        "#7c2533"
+       ],
+       "top": [
+        "#46965a",
+        "jacket"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.568,
+     "y": 0.5536,
+     "h": 0.1173,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#6b4430",
+       "build": "slim",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "top": [
+        "#f2b04a",
+        "jacket"
+       ],
+       "bottom": [
+        "#4a3b30",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/fg_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.1994,
+     "y": 0.6406,
+     "h": 0.2241,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.4168,
+       "y": 0.639,
+       "scale": 0.9915
+      },
+      {
+       "t": 1.1,
+       "x": 0.1994,
+       "y": 0.6406,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       2.7,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 520'><rect width='900' height='520' rx='34' fill='#f6efe2'/><rect width='900' height='520' rx='34' fill='none' stroke='#1a1410' stroke-width='6'/><text x='240' y='70' text-anchor='middle' font-size='40' fill='#d9534f' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SCARED CAT</text><text x='680' y='70' text-anchor='middle' font-size='40' fill='#d9534f' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>PORCUPINE</text><polygon points='388,300 417,321 380,334 397,361 356,364 359,394 319,386 308,415 274,398 250,422 226,398 192,415 181,386 141,394 144,364 103,361 120,334 83,321 112,300 83,279 120,266 103,239 144,236 141,206 181,214 192,185 226,202 250,178 274,202 308,185 319,214 359,206 356,236 397,239 380,266 417,279' fill='#5a4636'/><path d='M388.0 288.5 q 69.0 -57.49999999999999 46.0 -172.5' stroke='#5a4636' stroke-width='50.599999999999994' fill='none' stroke-linecap='round'/><circle cx='117.75' cy='219.5' r='55.199999999999996' fill='#5a4636'/><polygon points='71.75,194.2 83.25,127.5 113.15,173.5' fill='#5a4636'/><polygon points='163.75,194.2 152.25,127.5 122.35,173.5' fill='#5a4636'/><circle cx='99.35' cy='214.9' r='10.35' fill='#f2b04a'/><circle cx='136.15' cy='214.9' r='10.35' fill='#f2b04a'/><rect x='192.5' y='346.0' width='18.4' height='80.5' rx='6.8999999999999995' fill='#5a4636'/><rect x='232.75' y='346.0' width='18.4' height='80.5' rx='6.8999999999999995' fill='#5a4636'/><rect x='284.5' y='346.0' width='18.4' height='80.5' rx='6.8999999999999995' fill='#5a4636'/><rect x='319.0' y='346.0' width='18.4' height='80.5' rx='6.8999999999999995' fill='#5a4636'/><line x1='620' y1='313' x2='514' y2='279' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='620' y1='313' x2='551' y2='291' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='624' y1='306' x2='525' y2='258' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='624' y1='306' x2='560' y2='275' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='630' y1='300' x2='540' y2='240' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='630' y1='300' x2='572' y2='261' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='637' y1='294' x2='559' y2='223' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='637' y1='294' x2='587' y2='248' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='646' y1='290' x2='580' y2='209' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='646' y1='290' x2='603' y2='237' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='655' y1='286' x2='603' y2='197' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='655' y1='286' x2='622' y2='228' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='666' y1='283' x2='629' y2='188' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='666' y1='283' x2='642' y2='221' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='676' y1='281' x2='656' y2='183' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='676' y1='281' x2='663' y2='217' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='687' y1='280' x2='683' y2='180' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='687' y1='280' x2='685' y2='215' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='698' y1='280' x2='711' y2='181' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='698' y1='280' x2='707' y2='216' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='709' y1='282' x2='739' y2='185' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='709' y1='282' x2='728' y2='219' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='720' y1='284' x2='765' y2='192' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='720' y1='284' x2='749' y2='225' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='730' y1='288' x2='789' y2='203' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='730' y1='288' x2='768' y2='232' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='739' y1='292' x2='812' y2='216' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='739' y1='292' x2='786' y2='243' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='747' y1='297' x2='832' y2='232' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='747' y1='297' x2='801' y2='255' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='753' y1='303' x2='848' y2='249' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='753' y1='303' x2='814' y2='268' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><line x1='759' y1='310' x2='861' y2='269' stroke='#f6efe2' stroke-width='11' stroke-linecap='round'/><line x1='759' y1='310' x2='825' y2='283' stroke='#3b2716' stroke-width='11' stroke-linecap='round'/><ellipse cx='690' cy='330' rx='118.75' ry='65.0' fill='#6b4a30'/><ellipse cx='575.0' cy='347.5' rx='42.5' ry='30.0' fill='#8a6142'/><circle cx='565.0' cy='337.5' r='7.5' fill='#1a1410'/><text x='450' y='485' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>LOOK BIGGER = LOOK SCARIER</text></svg>",
+     "w": 0.88,
+     "x": 0.5,
+     "y": 0.2,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Our ancestors had the fur. We lost it, but kept the *reflex*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "shrug",
+       2.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "FUR: *GONE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.7,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "REFLEX: *STILL HERE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.19,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.7,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.5,
+    "text": "Me trying to look scary with *3 arm hairs*",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "The same alarm fires for fear, awe, or a great song. That's music *chills*.",
+   "transition": "slide_left",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_cocoa_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.47,
+     "y": 0.5495,
+     "h": 0.2645,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "give",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f4c",
+       "build": "round",
+       "hat": [
+        "cap",
+        "#7c2533"
+       ],
+       "top": [
+        "#46965a",
+        "jacket"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/fg_cocoa_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7113,
+     "y": 0.6268,
+     "h": 0.4579,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.6
+      ],
+      [
+       "cheer",
+       3.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "hair": [
+        "#1d1712",
+        "long"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.5544,
+       "y": 0.6609,
+       "scale": 1.1865
+      },
+      {
+       "t": 1.4,
+       "x": 0.7113,
+       "y": 0.6268,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       3.3,
+       0.06,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 96'><rect x='3' y='3' width='254' height='90' rx='45' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='130' y='64' text-anchor='middle' font-size='44' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>FEAR</text></svg>",
+     "w": 0.26,
+     "x": 0.2,
+     "y": 0.12,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 96'><rect x='3' y='3' width='214' height='90' rx='45' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='110' y='64' text-anchor='middle' font-size='44' fill='#2f8f8a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>AWE</text></svg>",
+     "w": 0.22,
+     "x": 0.5,
+     "y": 0.12,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 96'><rect x='3' y='3' width='274' height='90' rx='45' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='140' y='64' text-anchor='middle' font-size='44' fill='#d9534f' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MUSIC</text></svg>",
+     "w": 0.28,
+     "x": 0.8,
+     "y": 0.12,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/headphones.png",
+     "x": 0.72,
+     "y": 0.27,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 8
+      },
+      {
+       "t": 2.5,
+       "rot": -6
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*CHILLS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.37,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.4,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "So a goosebump is your body putting on a fur coat... you *don't have*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 5.0,
+       "scale": 1.43
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ],
+      [
+       "smirk",
+       3.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-b/assets/mug.png",
+     "x": 0.82,
+     "y": 0.13,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 10
+      },
+      {
+       "t": 4,
+       "rot": -4
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "A FUR COAT",
+     "font": "display",
+     "x": 0.42,
+     "y": 0.1,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6
+    },
+    {
+     "type": "text",
+     "text": "YOU *DON'T HAVE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.19,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.0,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}

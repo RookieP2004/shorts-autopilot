@@ -14,7 +14,6 @@
 - [big-question] How do planes stay up if clouds can't fall either? · lift vs updrafts, follow-up angle on the cloud weight video · https://www.earthdate.org/episodes/puffy-clouds-weigh-in
 - [scale-shock] How much water is in one thunderstorm? · up to ~25 million tonnes, same see-saw set scaled up · https://www.zmescience.com/science/how-much-do-clouds-weigh
 - [myth-bust] "Hair and nails keep growing after death" · body niche, skin shrinking is the real reason, easy before/after · https://en.wikipedia.org/wiki/List_of_common_misconceptions
-- [big-question] Why do we get goosebumps? · leftover fur-fluffing reflex, a cold town scene with a fluffy cat for contrast · https://en.wikipedia.org/wiki/Goose_bumps
 - [big-question] Why is a flamingo pink? · it's the food (carotenoids), not the bird; shrimp-to-pink visual · https://en.wikipedia.org/wiki/Flamingo
 - [big-question] Why can't the sea just refill the cod? · the Grand Banks collapse and why stocks still haven't fully recovered, a fishing-harbour set · https://www.heritage.nf.ca/articles/economy/moratorium.php
 - [big-question] What is a free rider? · one villager never pays for the shared well; public goods made concrete · https://en.wikipedia.org/wiki/Free-rider_problem
@@ -29,3 +28,7 @@
 - [scale-shock] A teaspoon of neutron star weighs as much as a mountain · follow-up to the sugar-cube video (same nuclear density, flipped around), reuses the cafe teaspoon + a 3D mountain · https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei
 - [big-question] Why don't you fall through the floor? · electrons repel + Pauli exclusion, shown as two crowds that refuse to share seats in the stadium set · https://bigthink.com/starts-with-a-bang/quantum-reason-solidity-matter/
 - [myth-bust] "Atoms touch each other" · you never 'touch' anything in the everyday sense; the push is electromagnetic · https://www.fnal.gov/pub/today/archive/archive_2013/today13-12-06_NutshellReadMore.html
+
+- [big-question] Why does music give you chills? · frisson: the same goosebump alarm fired by a song; follow-up to the goosebumps video · https://www.health.harvard.edu/blog/wondering-about-goosebumps-of-course-you-are-2020080320688
+- [big-question] Can cold make you grow more hair? · 2020 Harvard mouse study: the goosebump nerve also wakes hair stem cells · https://neurosciencenews.com/goosebumps-reason-16669/
+- [myth-bust] "Your appendix is useless" · vestigial-organ myth; it likely stores gut bacteria, pairs with the goosebump reflex · https://en.wikipedia.org/wiki/Appendix_(anatomy)
