@@ -78,7 +78,8 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   evidence is. Questions of values get no verdict. Stats, facts and probability, never bias.
   Give real answers, often conditional, not just "both sides": where and when it works, where it fails, and why (e.g. state
   communism failed at country scale, while shared ownership works in small, close-knit or voluntary groups such as kibbutzim,
-  Hutterite colonies and co-operatives, because trust, size and choice change the result).
+  Hutterite colonies and co-operatives, because trust, size and choice change the result). Be equally blunt with every side:
+  facts over political correctness, said with respect for people.
 - **Callbacks:** mention an earlier video only when it is genuinely needed to understand this one (a real follow-up on the same
   idea). Check `log.md`; if the link isn't strong, don't mention past videos at all.
 - **The look: 2D characters in a 3D world, plus 2D infographics.** Never all-3D and never all-2D. Inspiration: Rick's Clips
@@ -185,7 +186,8 @@ entries). Note 2–3 that are still rising (not peaked or dead), what each means
 Drop any candidate that is none of the three. Then score the rest 1–5 on: hook strength · how many of the three it hits · fit
 with the channel promise · format fit · novelty (no topic repeated within 30 days of the log) · evidence from Insights (formats
 and hooks that win) · can be **shown** with 2D graphics or simple 3D (not just talked about). Take the top score, and note in
-`meta.idea_source` which of unique / trending / viral it hits.
+`meta.idea_source` which of unique / trending / viral it hits. The owner's example topics in `ideas.md` are inspiration for the
+kind of video, not a to-do list.
 
 **c. Verify.** Check every factual claim with a search. Drop anything you can't confirm, and put the URLs in `meta.sources`.
 
