@@ -49,3 +49,7 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [big-question] What is a spectrum, really? · light, sound and the idea of a spectrum (colours you can't see) · https://en.wikipedia.org/wiki/Spectrum
 - [wild-story] The crazy true stories behind discoveries · e.g. Fleming's mouldy dish (penicillin), Diogenes in his barrel, Archimedes' "Eureka" (and what's legend) · https://en.wikipedia.org/wiki/History_of_penicillin
 
+
+- [frontier] Could we ever really talk to Voyager after it dies? · its power runs out around the 2030s; what the Deep Space Network can still hear, and the Golden Record as the last message · https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/
+- [what-if] What if you rode a light sail at 20% of light speed? · time dilation is tiny (~2%), but a dust grain hits like a bomb; grounded, tagged speculation · https://www.scientificamerican.com/article/the-quiet-demise-of-breakthrough-starshot-a-billionaires-interstellar/
+- [scale-shock] Mars and Jupiter "touching" on Nov 15-16 are ~600 million km apart · conjunctions are a line-of-sight trick · https://www.sciencedaily.com/releases/2026/11/261105224547.htm

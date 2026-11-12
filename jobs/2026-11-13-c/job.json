@@ -1,0 +1,1014 @@
+{
+ "id": "2026-11-13-c",
+ "title": "How could we REALLY reach another star? 🚀",
+ "description": "Voyager 1 reaches one light-day from Earth on 18 November 2026, after 49 years. At that speed the nearest star would take ~74,000 years. Light sails could cut it to ~20 years, if we can build the lasers.\n\nSources: EarthSky / NASA on Voyager 1's light-day milestone; Big Think on Voyager's speed and travel times; JAXA on the IKAROS solar sail; Scientific American on Breakthrough Starshot; Caltech on lightsail tests.",
+ "tags": [
+  "voyager 1",
+  "light day",
+  "interstellar travel",
+  "breakthrough starshot",
+  "light sail",
+  "proxima centauri",
+  "space",
+  "science explained"
+ ],
+ "hashtags": [
+  "#space",
+  "#science"
+ ],
+ "meta": {
+  "format": "frontier",
+  "topic": "how we could really reach another star: Voyager 1 at one light-day vs laser light sails (Starshot)",
+  "hook": "question",
+  "idea_source": "trending + viral: Voyager 1 hits one light-day on 2026-11-18 (EarthSky, NASA); owner's frontier examples",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/",
+   "https://www.sciencedaily.com/releases/2026/11/261105224547.htm",
+   "https://bigthink.com/strange-maps/voyager-1/",
+   "https://en.wikipedia.org/wiki/IKAROS",
+   "https://global.jaxa.jp/projects/sas/ikaros/",
+   "https://www.scientificamerican.com/article/the-quiet-demise-of-breakthrough-starshot-a-billionaires-interstellar/",
+   "https://aerospace.caltech.edu/news/the-pressure-to-explore-caltech-researchers-take-first-experimental-steps-toward-lightsails-that-could-reach-distant-star-systems"
+  ],
+  "humour": {
+   "trend": "'Tony Stark head turn' knowing side-glance (rising early Nov 2026), as a side-eye + 'seen... tomorrow' card",
+   "beat": "side_eye",
+   "scene": 3
+  },
+  "claims": [
+   {
+    "claim": "Voyager 1 launched 5 Sep 1977, reaches one light-day (~25.9 billion km) on 18 Nov 2026",
+    "tag": "PROVEN",
+    "source": "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/"
+   },
+   {
+    "claim": "a signal takes ~24 h each way",
+    "tag": "PROVEN",
+    "source": "https://www.sciencedaily.com/releases/2026/11/261105224547.htm"
+   },
+   {
+    "claim": "Proxima is ~4.2 ly away; ~74,000 years at Voyager's speed",
+    "tag": "PROVEN",
+    "source": "https://bigthink.com/strange-maps/voyager-1/"
+   },
+   {
+    "claim": "IKAROS (JAXA, 2010) was propelled by sunlight on a sail",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/IKAROS"
+   },
+   {
+    "claim": "Starshot plan: ~100 GW laser array, gram-scale sails, ~20% c, ~20 years to Alpha Centauri; program on hold",
+    "tag": "R&D",
+    "source": "https://www.scientificamerican.com/article/the-quiet-demise-of-breakthrough-starshot-a-billionaires-interstellar/"
+   },
+   {
+    "claim": "decades away at least",
+    "tag": "SPECULATION",
+    "source": "our what-if"
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-13-c/assets.py",
+ "scenes": [
+  {
+   "say": "How could we *really* reach another star? Start with our best try.",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_dish_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.7627,
+     "y": 0.6697,
+     "h": 0.3282,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ],
+      [
+       "explain",
+       2.2
+      ],
+      [
+       "point",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "HOW COULD WE *REALLY* REACH A STAR?",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.21,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Voyager 1, launched in 1977. On November 18th, it hits one *light-day* from Earth.",
+   "transition": "slide_left",
+   "caption_y": 0.52,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.5,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_deep.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 110'><rect x='5' y='5' width='380' height='100' rx='50' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='225.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.2106818181818182,
+     "y": 0.115,
+     "w": 0.3013636363636364,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/probe.png",
+     "x": 0.5,
+     "y": 0.68,
+     "w": 0.62,
+     "enter": "none",
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.3,
+       "rot": -8
+      },
+      {
+       "t": 2.0,
+       "x": 0.45,
+       "rot": -4,
+       "ease": "out"
+      },
+      {
+       "t": 6.0,
+       "x": 0.56,
+       "rot": -2,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "VOYAGER 1 *1977*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 25.9,
+     "decimals": 1,
+     "suffix": " BILLION KM",
+     "x": 0.5,
+     "y": 0.37,
+     "size": 92,
+     "color": "accent",
+     "at": 2.6,
+     "count_dur": 1.6,
+     "enter": "pop",
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Its signal now takes a full *day* to reach us. Replies? Another day.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.56
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_dish_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6639,
+     "y": 0.5946,
+     "h": 0.1156,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       0.8
+      ],
+      [
+       "shrug",
+       3.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "top": [
+        "#6fc3c0",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "long"
+       ],
+       "hat": [
+        "cap",
+        "#f2b04a"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.4029,
+     "y": 0.6214,
+     "h": 0.1669,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "think",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.0424,
+       "y": 0.6233,
+       "scale": 1.021
+      },
+      {
+       "t": 1.2,
+       "x": 0.4029,
+       "y": 0.6214,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 110'><rect x='5' y='5' width='380' height='100' rx='50' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='225.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.2106818181818182,
+     "y": 0.115,
+     "w": 0.3013636363636364,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 330'><rect x='5' y='5' width='890' height='320' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='72' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>ONE MESSAGE</text><circle cx='110' cy='190' r='52' fill='#2f6fd6' stroke='#1a1410' stroke-width='6'/><path d='M80,170 q20,-20 40,0 t30,20' fill='none' stroke='#46965a' stroke-width='14'/><text x='110' y='290' text-anchor='middle' font-size='34' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>EARTH</text><line x1='180' y1='190' x2='720' y2='190' stroke='#34425c' stroke-width='6' stroke-dasharray='18 14'/><rect x='760' y='176' width='70' height='28' rx='6' fill='#d9a441' stroke='#1a1410' stroke-width='5'/><ellipse cx='795' cy='160' rx='46' ry='14' fill='#eef1f4' stroke='#1a1410' stroke-width='5'/><text x='795' y='290' text-anchor='middle' font-size='34' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>VOYAGER 1</text><text x='450' y='160' text-anchor='middle' font-size='64' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>24 HOURS</text><text x='450' y='280' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>EACH WAY</text></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.78,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_dish_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.6,
+    "who": "ved",
+    "text": "texting Voyager:\n*seen... tomorrow*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "The nearest star is *4.2 light-years* away. At Voyager's speed: *74,000 years*.",
+   "transition": "zoom",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 6.0,
+      "zoom": 1.12,
+      "focus": [
+       0.62,
+       0.42
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_deep.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 110'><rect x='5' y='5' width='380' height='100' rx='50' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='225.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.2106818181818182,
+     "y": 0.115,
+     "w": 0.3013636363636364,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 300'><rect x='5' y='5' width='890' height='290' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='42' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TO SCALE</text><line x1='80' y1='170' x2='820' y2='170' stroke='#34425c' stroke-width='10'/><circle cx='80' cy='170' r='22' fill='#2f6fd6' stroke='#1a1410' stroke-width='5'/><line x1='81' y1='120' x2='81' y2='220' stroke='#d9a441' stroke-width='4'/><circle cx='820' cy='170' r='30' fill='#ff6a3a' stroke='#1a1410' stroke-width='5'/><text x='110' y='265' font-size='30' fill='#c97a1a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>VOYAGER: 49 YEARS</text><text x='820' y='265' text-anchor='end' font-size='34' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>PROXIMA</text><text x='820' y='112' text-anchor='end' font-size='40' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>4.2 LIGHT-YEARS</text></svg>",
+     "x": 0.5,
+     "y": 0.24,
+     "w": 0.8,
+     "enter": "slide_up",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 74000,
+     "decimals": 0,
+     "suffix": " YEARS",
+     "x": 0.5,
+     "y": 0.42,
+     "size": 120,
+     "color": "danger",
+     "at": 3.4,
+     "count_dur": 1.4,
+     "enter": "zoom",
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "So forget fuel: ride *light*. Sunlight pushed Japan's IKAROS sail in 2010.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.05,
+      "focus": [
+       0.48,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_dish_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.4895,
+     "y": 0.7531,
+     "h": 0.5691,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ],
+      [
+       "explain",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 110'><rect x='5' y='5' width='380' height='100' rx='50' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='225.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.2106818181818182,
+     "y": 0.115,
+     "w": 0.3013636363636364,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "text",
+     "text": "RIDE *LIGHT*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 130,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 300'><rect x='5' y='5' width='890' height='290' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='120' cy='170' r='70' fill='#f2b04a' stroke='#1a1410' stroke-width='6'/><line x1='210' y1='110' x2='520' y2='110' stroke='#f2b04a' stroke-width='8' stroke-dasharray='26 16'/><line x1='210' y1='140' x2='520' y2='140' stroke='#f2b04a' stroke-width='8' stroke-dasharray='26 16'/><line x1='210' y1='170' x2='520' y2='170' stroke='#f2b04a' stroke-width='8' stroke-dasharray='26 16'/><line x1='210' y1='200' x2='520' y2='200' stroke='#f2b04a' stroke-width='8' stroke-dasharray='26 16'/><line x1='210' y1='230' x2='520' y2='230' stroke='#f2b04a' stroke-width='8' stroke-dasharray='26 16'/><polygon points='540,80 560,90 560,260 540,270' fill='#9aa3ad' stroke='#1a1410' stroke-width='5'/><line x1='600' y1='175' x2='760' y2='175' stroke='#d9534f' stroke-width='12'/><polygon points='800,175 755,150 755,200' fill='#d9534f'/><text x='680' y='255' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>A GENTLE PUSH</text><text x='450' y='60' text-anchor='middle' font-size='40' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>IKAROS, 2010: IT WORKED</text></svg>",
+     "x": 0.5,
+     "y": 0.3,
+     "w": 0.74,
+     "enter": "slide_up",
+     "at": 2.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/sail.png",
+     "x": 0.76,
+     "y": 0.56,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop",
+     "loop": "float",
+     "loop_amp": 0.012,
+     "rotate": 10
+    }
+   ]
+  },
+  {
+   "say": "Breakthrough Starshot's plan: giant lasers firing gram-sized sails to *a fifth* of light speed.",
+   "transition": "flash",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 6.5,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_lasers.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 270 110'><rect x='5' y='5' width='260' height='100' rx='50' fill='#2f6fd6' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='165.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>R&amp;D</text></svg>",
+     "x": 0.1643181818181818,
+     "y": 0.115,
+     "w": 0.20863636363636365,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "text",
+     "text": "BREAKTHROUGH *STARSHOT*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.19,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/sail.png",
+     "x": 0.5,
+     "y": 0.62,
+     "w": 0.3,
+     "enter": "none",
+     "at": 2.6,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.72,
+       "scale": 1.0
+      },
+      {
+       "t": 3.0,
+       "y": 0.34,
+       "scale": 0.22,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 140'><rect x='5' y='5' width='890' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450.0' y='92' text-anchor='middle' font-size='60' fill='#2f6fd6' font-family='Anton, DejaVu Sans, sans-serif'>1 GRAM  -  20% LIGHT SPEED</text></svg>",
+     "x": 0.5,
+     "y": 0.33,
+     "w": 0.74,
+     "enter": "pop",
+     "at": 3.6,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "That's Proxima in about *twenty years*.",
+   "transition": "cut",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.6,
+      "zoom": 1.1,
+      "focus": [
+       0.62,
+       0.42
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_deep.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 270 110'><rect x='5' y='5' width='260' height='100' rx='50' fill='#2f6fd6' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='165.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>R&amp;D</text></svg>",
+     "x": 0.1643181818181818,
+     "y": 0.115,
+     "w": 0.20863636363636365,
+     "enter": "pop",
+     "at": 0.0,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/sail.png",
+     "x": 0.3,
+     "y": 0.7,
+     "w": 0.16,
+     "enter": "none",
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.18,
+       "y": 0.78,
+       "scale": 1.0
+      },
+      {
+       "t": 1.8,
+       "x": 0.71,
+       "y": 0.27,
+       "scale": 0.15,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "counter",
+     "from": 74000,
+     "to": 20,
+     "decimals": 0,
+     "suffix": " YEARS",
+     "x": 0.5,
+     "y": 0.42,
+     "size": 130,
+     "color": "accent2",
+     "at": 0.4,
+     "count_dur": 1.2,
+     "enter": "pop",
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "The catch? *100 gigawatts* of lasers, and a sail that won't melt. Starshot is on hold.",
+   "transition": "slide_left",
+   "caption_y": 0.46,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 6.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_dish_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6639,
+     "y": 0.5946,
+     "h": 0.1156,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ],
+      [
+       "sad",
+       4.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "top": [
+        "#6fc3c0",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "long"
+       ],
+       "hat": [
+        "cap",
+        "#f2b04a"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.3712,
+     "y": 0.6213,
+     "h": 0.1668,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ],
+      [
+       "crossed",
+       4.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 270 110'><rect x='5' y='5' width='260' height='100' rx='50' fill='#2f6fd6' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='165.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>R&amp;D</text></svg>",
+     "x": 0.1643181818181818,
+     "y": 0.115,
+     "w": 0.20863636363636365,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 140'><rect x='5' y='5' width='690' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='350.0' y='92' text-anchor='middle' font-size='70' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>100 GIGAWATTS</text></svg>",
+     "x": 0.32,
+     "y": 0.17,
+     "w": 0.48,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "pop",
+     "rotate": -3
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 140'><rect x='5' y='5' width='690' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='350.0' y='92' text-anchor='middle' font-size='66' fill='#c97a1a' font-family='Anton, DejaVu Sans, sans-serif'>SAIL CAN'T MELT</text></svg>",
+     "x": 0.64,
+     "y": 0.25,
+     "w": 0.46,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop",
+     "rotate": 3
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 170'><rect x='10' y='10' width='540' height='150' rx='18' fill='none' stroke='#d9534f' stroke-width='14'/><text x='280.0' y='128' text-anchor='middle' font-size='118' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>ON HOLD</text></svg>",
+     "x": 0.5,
+     "y": 0.34,
+     "w": 0.5,
+     "rotate": -6,
+     "enter": "zoom",
+     "at": 4.4,
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "From here, we're guessing: decades away. But the physics? It *works*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-c/assets/plate_lasers.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.5,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "think",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "think",
+       0
+      ],
+      [
+       "explain",
+       1.8
+      ],
+      [
+       "smirk",
+       3.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 590 110'><rect x='5' y='5' width='580' height='100' rx='50' fill='#d9534f' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='325.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>SPECULATION</text></svg>",
+     "x": 0.28795454545454546,
+     "y": 0.115,
+     "w": 0.45590909090909093,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "text",
+     "text": "PHYSICS: *YES*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.21,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.2,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
