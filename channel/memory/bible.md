@@ -82,6 +82,8 @@ Rule: characters are made only by `characters/<id>/make.py`. Colours, proportion
 **Added 2026-11-13 by the owner (additions only; nothing above changes):** what-if thought experiments, frontier
 "how could it really work" explainers, wild true stories from science and philosophy, and occasional philosophy questions.
 They keep the channel promise (complex ideas made simple) and the same look, cast and town.
+The owner's topics (IQ 500, the perfect athlete, teleportation, CERN, "are humans AI?", communism, propaganda, spectrum) are
+examples of the kind of video, not a to-do list: find new topics of these kinds every day.
 - **Honesty tags:** these formats mix fact and imagination, so every claim gets a small on-screen tag: PROVEN (established,
   sourced), THEORY (serious science, not settled), R&D (being worked on now; name the lab or project), SPECULATION (our own
   what-if step). Ved says out loud where known science ends ("From here on, we're guessing."). Never present speculation as fact.

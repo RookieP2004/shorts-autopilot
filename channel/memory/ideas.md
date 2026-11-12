@@ -34,7 +34,9 @@
 - [myth-bust] "Hair and nails keep growing after death" · runner-up 2026-11-12: skin dries and pulls back, so they only look longer · https://uamshealth.com/medical-myths/do-a-persons-hair-and-fingernails-continue-to-grow-after-death
 - [big-question] Why do cows (and bulls) see the world in two colours? · follow-up angle on the bull video: dichromat vision vs ours, reuses the ranch arena set · https://www.mentalfloss.com/article/28488/what-really-happens-if-you-wear-red-front-bull
 
-## Owner's ideas (2026-11-13): new formats
+## Examples of the new kinds (owner, 2026-11-13)
+These are only **examples of the type** of video the owner means, not a list that must be made. Use them as inspiration for
+fresh topics of the same kind; pick one only if it wins on the topic rule (unique / trending / viral-shaped) like any other idea.
 - [what-if] What if your IQ was 300? 400? 500? · IQ is a ranking with mean 100 / SD 15, so a 300 isn't a real score; then what a far smarter brain would actually need (energy, size, wiring), and how far training really moves it · https://en.wikipedia.org/wiki/Intelligence_quotient
 - [what-if] How would you build the perfect athlete? · genetics, training, recovery and the real limits of the human body, built up as one townsperson · https://en.wikipedia.org/wiki/Sports_science
 - [what-if] How would you build the perfect UFC fighter? · reach, striking vs grappling, cardio and fight IQ; why no single body type wins everything · https://en.wikipedia.org/wiki/Mixed_martial_arts
