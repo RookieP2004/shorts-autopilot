@@ -71,11 +71,28 @@ Rule: characters are made only by `characters/<id>/make.py`. Colours, proportion
 ## 6. Formats 🔄
 | format | weight | length | structure | hooks |
 |---|---|---|---|---|
-| big-question | 0.45 | 25-45 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
-| myth-bust | 0.30 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
-| scale-shock | 0.25 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
+| big-question | 0.30 | 25-45 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
+| myth-bust | 0.20 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
+| scale-shock | 0.15 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
+| what-if | 0.15 | 35-55 s | "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today | what-if |
+| frontier | 0.10 | 35-55 s | "HOW COULD WE REALLY...?" (teleportation, interstellar travel, fusion, CERN) → what already works today (PROVEN) → what the best current research is trying (R&D, with the lab or experiment named) → what is still missing → how far away it really is | question |
+| wild-story | 0.07 | 35-55 s | a true, crazy story behind a discovery, experiment or thinker, told as a mini-drama with the townspeople as the cast → the twist → what it taught us | story |
+| deep-question | 0.03 | 40-58 s | occasional philosophy ("Are humans a kind of AI?", "Can communism actually work?", "Are your facts real or propaganda?") → the strongest answers on each side, fairly → a thinking tool the viewer can use → Ved leaves the final call to the viewer | question |
 
-Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in a row.
+**Added 2026-11-13 by the owner (additions only; nothing above changes):** what-if thought experiments, frontier
+"how could it really work" explainers, wild true stories from science and philosophy, and occasional philosophy questions.
+They keep the channel promise (complex ideas made simple) and the same look, cast and town.
+- **Honesty tags:** these formats mix fact and imagination, so every claim gets a small on-screen tag: PROVEN (established,
+  sourced), THEORY (serious science, not settled), R&D (being worked on now; name the lab or project), SPECULATION (our own
+  what-if step). Ved says out loud where known science ends ("From here on, we're guessing."). Never present speculation as fact.
+- **Grounded what-ifs:** start from the real thing (e.g. IQ is a ranking scale with mean 100 and SD 15, so "IQ 500" isn't a
+  real score, then explore what a far smarter brain would need: energy, size, wiring). No medical or training advice.
+- **Philosophy and politics:** the even-handed rule applies in full: each side's strongest case, the main criticism, historical
+  facts, no verdict on contested questions, no current parties or candidates. "Propaganda" videos teach how to check a claim
+  (sources, incentives, evidence), never who to distrust.
+- Mix: about 1 in 3 Shorts uses the new formats; deep-question at most about once a week. The review tunes the weights.
+Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in a row. Deep Dives can use any format too
+(a what-if or frontier topic makes a great long video).
 
 **Deep Dive (long video, weekly)** 🔒 owner-approved 2026-11-11. One a week, Saturday. 16:9 (1920x1080), 5-8 min
 (hard cap 12 min and 90 MB), `"kind": "long"` in job.json (the long-form style profile in style.json does the rest).
@@ -129,6 +146,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-13 | 6 | new formats added: what-if, frontier, wild-story, deep-question; honesty tags | owner idea (additions only) |
 | 2026-11-11 | 6, 10 | weekly long video (Deep Dive, 16:9) added | owner: "make it a video a week" |
 | 2026-11-08 | 3 | v3 (2026-11-08-m3) approved as the final house style and reference video; removed the old "Ved small in a corner" rule | owner: "final this" |
 | 2026-11-08 | 3 | living town: faceless townspeople with outfits, body-language emotions, depth staging (perspective + foreground layers), smoother stall/apples | owner request |

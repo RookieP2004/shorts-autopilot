@@ -1,0 +1,283 @@
+{
+ "id": "<YYYY-MM-DD-slot>",
+ "title": "<title, max 60 chars, one emoji max>",
+ "description": "<one-line summary>\n\nSources: <links>",
+ "tags": [
+  "<5-10 tags>"
+ ],
+ "hashtags": [
+  "#<niche1>",
+  "#<niche2>"
+ ],
+ "meta": {
+  "format": "deep-question",
+  "topic": "<topic>",
+  "hook": "question",
+  "idea_source": "<search|backlog|owner>",
+  "characters": [
+   "ved"
+  ],
+  "sources": [
+   "<url>"
+  ],
+  "humour": {
+   "trend": "<trend or 'timeless'>",
+   "beat": "<kind>",
+   "scene": 0
+  },
+  "claims": [
+   {
+    "claim": "<each claim>",
+    "tag": "PROVEN|THEORY|R&D|SPECULATION",
+    "source": "<url or 'our what-if'>"
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "scenes": [
+  {
+   "say": "<the question, framed as something the viewer has felt> <why it's hard>",
+   "bg": {
+    "type": "image",
+    "path": "assets/bg/world.svg"
+   },
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ]
+   },
+   "layers": [
+    {
+     "type": "text",
+     "text": "<BIG QUESTION?>",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 130,
+     "max_w": 0.84,
+     "enter": "none",
+     "stroke": "#1a1410",
+     "stroke_width": 6
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.5,
+     "y": 0.68,
+     "h": 0.4,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "<the mechanism, one idea>",
+   "transition": "fade",
+   "layers": [
+    {
+     "type": "scene3d",
+     "enter": "none",
+     "sky": [
+      "#3e6f8e",
+      "#9fc0c4",
+      "#f3cf96"
+     ],
+     "fog": {
+      "color": "#e9dcc4",
+      "near": 14,
+      "far": 80,
+      "max": 0.8
+     },
+     "camera": {
+      "pos": [
+       0,
+       2.2,
+       12
+      ],
+      "target": [
+       0,
+       3.0,
+       0
+      ],
+      "fov": 50,
+      "orbit": 4
+     },
+     "objects": [
+      {
+       "shape": "terrain",
+       "w": 160,
+       "d": 160,
+       "n": 30,
+       "height": 10,
+       "seed": 7,
+       "flat_center": 16,
+       "color": "#6f8a45"
+      },
+      {
+       "shape": "plane",
+       "w": 5,
+       "d": 50,
+       "color": "#b9a88f",
+       "pos": [
+        0,
+        0.02,
+        -10
+       ]
+      },
+      {
+       "shape": "sphere",
+       "r": 2.2,
+       "pos": [
+        -7,
+        12,
+        -40
+       ],
+       "color": "#ffd98f"
+      },
+      {
+       "shape": "tree",
+       "pos": [
+        5,
+        0,
+        -4
+       ],
+       "seed": 1
+      },
+      {
+       "shape": "tree",
+       "pos": [
+        -6,
+        0,
+        -6
+       ],
+       "seed": 2
+      },
+      {
+       "shape": "tree",
+       "pos": [
+        9,
+        0,
+        -12
+       ],
+       "seed": 3
+      },
+      {
+       "shape": "person",
+       "pos": [
+        -2.6,
+        0,
+        1
+       ],
+       "rot": [
+        0,
+        160,
+        0
+       ],
+       "action": "point",
+       "color": "#7c2533",
+       "legs": "#3a3e48"
+      },
+      {
+       "shape": "person",
+       "pos": [
+        2.8,
+        0,
+        0
+       ],
+       "rot": [
+        0,
+        200,
+        0
+       ],
+       "color": "#3c6e70",
+       "legs": "#3a3e48",
+       "phase": 1
+      },
+      {
+       "shape": "person",
+       "pos": [
+        1.0,
+        0,
+        -6
+       ],
+       "walk": 1.5,
+       "travel": 1.0,
+       "color": "#d9a441",
+       "legs": "#34425c"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 160'><path d='M0,80 C40,20 80,140 120,80 C160,20 200,140 240,80' stroke='#f06a5a' stroke-width='10' fill='none'/><path d='M0,80 C20,40 40,120 60,80 C80,40 100,120 120,80 C140,40 160,120 180,80 C200,40 220,120 240,80 C260,40 280,120 300,80 C320,40 340,120 360,80 C380,40 400,120 400,80' stroke='#6fc3f0' stroke-width='8' fill='none'/></svg>"
+    }
+   ],
+   "note": "VISUAL-FIRST: no Ved here. Full-frame 2D motion graphics (diagram, map, labelled props, counter) or a 3D shot; Ved is voice-over. Something new moves every 2-3 s."
+  },
+  {
+   "dur": 1.5,
+   "note": "reaction cut-away: Ved reacts to what we just saw (comic beat), no speech",
+   "transition": "cut",
+   "bg": {
+    "type": "image",
+    "path": "assets/bg/study.svg"
+   },
+   "layers": [
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.5,
+     "y": 0.68,
+     "h": 0.4,
+     "enter": "none",
+     "acting": "none"
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "text": "<trend caption, max 60 chars>"
+   }
+  },
+  {
+   "say": "<payoff that answers the question / loops back>",
+   "transition": "slide_left",
+   "bg": {
+    "type": "image",
+    "path": "assets/bg/cosmos.svg"
+   },
+   "layers": [
+    {
+     "type": "text",
+     "text": "SCATTERED *LIGHT*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 120,
+     "enter": "slide_up",
+     "stroke": "#1a1410",
+     "stroke_width": 6
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.52,
+     "y": 0.68,
+     "h": 0.4,
+     "enter": "slide_left"
+    }
+   ]
+  }
+ ],
+ "_structure": "occasional philosophy: the question -> the strongest answer on one side -> the strongest on the other (equal time, fair) -> a thinking tool the viewer can use -> Ved leaves the final call to the viewer. Even-handed rule in full; no current parties."
+}

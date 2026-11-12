@@ -33,3 +33,17 @@
 - [myth-bust] "Your appendix is useless" · vestigial-organ myth; it likely stores gut bacteria, pairs with the goosebump reflex · https://en.wikipedia.org/wiki/Appendix_(anatomy)
 - [myth-bust] "Hair and nails keep growing after death" · runner-up 2026-11-12: skin dries and pulls back, so they only look longer · https://uamshealth.com/medical-myths/do-a-persons-hair-and-fingernails-continue-to-grow-after-death
 - [big-question] Why do cows (and bulls) see the world in two colours? · follow-up angle on the bull video: dichromat vision vs ours, reuses the ranch arena set · https://www.mentalfloss.com/article/28488/what-really-happens-if-you-wear-red-front-bull
+
+## Owner's ideas (2026-11-13): new formats
+- [what-if] What if your IQ was 300? 400? 500? · IQ is a ranking with mean 100 / SD 15, so a 300 isn't a real score; then what a far smarter brain would actually need (energy, size, wiring), and how far training really moves it · https://en.wikipedia.org/wiki/Intelligence_quotient
+- [what-if] How would you build the perfect athlete? · genetics, training, recovery and the real limits of the human body, built up as one townsperson · https://en.wikipedia.org/wiki/Sports_science
+- [what-if] How would you build the perfect UFC fighter? · reach, striking vs grappling, cardio and fight IQ; why no single body type wins everything · https://en.wikipedia.org/wiki/Mixed_martial_arts
+- [frontier] Could teleportation really work? · quantum teleportation moves information, not matter (PROVEN, 1997 onward); why moving a person is a different problem · https://en.wikipedia.org/wiki/Quantum_teleportation
+- [frontier] How could humans really travel to the stars? · chemical rockets vs ion drives vs light sails (Breakthrough Starshot R&D); distances made visible · https://en.wikipedia.org/wiki/Breakthrough_Starshot
+- [frontier] What really happens inside CERN's accelerator? · a 27 km ring smashing protons near light speed; what the Higgs discovery (2012) actually found · https://home.cern/science/accelerators/large-hadron-collider
+- [deep-question] Are humans a kind of AI? · brains vs neural networks: what's similar, what's very different; even-handed · https://en.wikipedia.org/wiki/Artificial_neural_network
+- [deep-question] Can communism actually work? · the idea, how it was tried, the strongest case and the main criticisms, historical facts; even-handed, no current parties · https://en.wikipedia.org/wiki/Communism
+- [deep-question] Are the facts you believe real, or just propaganda? · how to check a claim: sources, incentives, evidence; no side named · https://en.wikipedia.org/wiki/Propaganda
+- [big-question] What is a spectrum, really? · light, sound and the idea of a spectrum (colours you can't see) · https://en.wikipedia.org/wiki/Spectrum
+- [wild-story] The crazy true stories behind discoveries · e.g. Fleming's mouldy dish (penicillin), Diogenes in his barrel, Archimedes' "Eureka" (and what's legend) · https://en.wikipedia.org/wiki/History_of_penicillin
+

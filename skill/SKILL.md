@@ -124,8 +124,13 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   a moment that truly needs a moving 3D camera; the low-poly `scene3d` layer only for quick crowds or maps.
 - **Look references**: `docs/sheets/professor_ved_character_sheet.png`, `vast_world_style_guide.png` and `vast_world_3d_guide.png`.
   Check new props and sets against them, and rebuild them with `scripts/build_sheets.py` whenever the cast changes.
-- **Formats**: each video uses exactly one format from the Bible (big-question, myth-bust, scale-shock), starting from its skeleton
-  in `jobs/_templates/`.
+- **Formats**: each video uses exactly one format from the Bible, starting from its skeleton in `jobs/_templates/`:
+  big-question, myth-bust, scale-shock, and (added by the owner 2026-11-13, in addition, nothing removed) what-if thought
+  experiments, frontier "how could it really work" explainers (teleportation, star travel, CERN), wild true stories behind
+  discoveries and thinkers, and occasional deep-question philosophy. Follow the Bible's weights (about 1 in 3 Shorts uses the new
+  ones; deep-question at most about weekly). In these formats every claim carries an on-screen honesty tag (PROVEN / THEORY /
+  R&D / SPECULATION), Ved says out loud where known science ends, and speculation is never presented as fact. Fill
+  `meta.claims` with each claim, its tag and its source.
 - **Humour**: every video gets **one** comic beat (two only past 40 s), built with a scene `beat` (see `docs/job-spec.md` "Beats"):
   `deadpan`, `side_eye`, `smirk`, `freeze`, `zoom_punch` or `silence`, with an optional meme-caption card (`text`, ≤ 60 chars).
   For a reaction face, cut to a short silent "reaction cut-away" scene with Ved (`dur` ≈ 1.6, `beat.at` 0.1, `captions: false`).
