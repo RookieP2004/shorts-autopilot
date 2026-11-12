@@ -150,8 +150,8 @@ Leave it null until they have read it off the billing page; never guess it. If t
 (Zapier may pro-rate it), lower `zapier.plan_tasks` for that cycle or run `budget --sync`, and tell the owner.
 
 ## 3. Produce mode (unattended, one video)
-Slots (posting times; each run starts ~55 min earlier, at 17:56 / 11:56 / 14:56, because making a Short takes 40-50 min):
-`a` 18:50 IST (the regular daily Short), `b` 12:50 and `c` 15:50 IST (bonus: every day during the trial, otherwise only near the
+Slots (live times, chosen for the US-majority audience and >= 5 h apart; each run starts ~55 min earlier, at 22:36 / 16:36 /
+04:06, because making a Short takes 40-50 min): `a` ~23:30 IST (the regular daily Short), `b` ~17:30 and `c` ~05:00 IST (bonus: every day during the trial, otherwise only near the
 end of the Zapier billing cycle, section 3c). The slot id is `YYYY-MM-DD-<slot>`, using the IST date. Never post the same format three
 days in a row, nor the same format twice on one day. If `log.md` already has that id, or `jobs/<id>/` exists in the repo, the slot is done. Stop.
 **Budget first:** run `python -m autopilot budget --need upload` before researching. If it exits 3, don't make the video;
@@ -293,11 +293,11 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
 
 ## 5. Scheduled tasks
 Created in setup with `create_trigger` (time zone Asia/Calcutta, `requires_local_device` false):
-- Production slot a, daily 17:56 (posts ~18:45): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
-- Bonus slots b and c, daily 11:56 and 14:56 (post ~12:45 and ~15:45): "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
+- Production slot a, daily 22:36 (live ~23:30): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
+- Bonus slots b and c, daily 16:36 and 04:06 (live ~17:30 and ~05:00): "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
   `budget --bonus` first and stop quietly if it is 0."
 - Review, Sunday 10:20: "Use the shorts-autopilot skill in Review mode."
-- Deep Dive, Saturday 16:20: "Use the shorts-autopilot skill in Deep Dive mode (slot `L`, IST date). Post one long video."
+- Deep Dive, Saturday 19:56 (live ~21:30): "Use the shorts-autopilot skill in Deep Dive mode (slot `L`, IST date). Post one long video."
 Each run starts fresh, so the repo (and the Google Docs) carry all the state.
 
 ## 6. Platform rules

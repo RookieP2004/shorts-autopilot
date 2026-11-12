@@ -105,10 +105,16 @@ Title ≤ 60 characters, at most one emoji, true curiosity. Description: one-lin
 Every factual claim is checked with a search in the same run, with sources in `meta.sources`. Anything unverified is dropped.
 
 ## 10. Schedule 🔄
-- Zapier Pro trial until 2026-11-20: 3 Shorts a day, live around 12:50 (b), 15:50 (c) and 18:50 (a) IST; the runs start at
-  11:56, 14:56 and 17:56 because each Short takes 40-50 minutes to make (owner, 2026-11-12: videos should be up by those times).
-- After the trial (free plan, 100 tasks/month): slot a 18:50 IST daily; bonus slots b/c only near the end of the billing cycle.
-- Deep Dive (long video): Saturday 16:20 IST, weekly (1 upload + 1 thumbnail call). On the free plan it replaces that
+- Audience (YouTube Analytics, 2026-11-08 to 11-12): ~78% United States, then India, Indonesia, Philippines; ~97% of views
+  come from the Shorts feed. So posting times target US Eastern hours (IST = ET + 10:30 until US daylight saving starts on
+  2027-03-14, then ET + 9:30: re-check the times then).
+- Spacing rule (owner, 2026-11-12): at least ~5 hours between Shorts. Our first week showed it: the first Short after an
+  18-hour gap always got 800-1,400 views, while Shorts posted 1-3 hours after the previous one got 4, 86, 164 and 565.
+- Shorts go live at about 05:00 IST (6:30 PM ET, slot c), 17:30 IST (7 AM ET; India evening, slot b) and 23:30 IST
+  (1 PM ET, slot a = the regular daily Short). Runs start ~55 min earlier (04:06, 16:36, 22:36) because each takes 40-50 min.
+  Zapier Pro trial until 2026-11-20: all three every day.
+- After the trial (free plan, 100 tasks/month): slot a (~23:30 IST) daily; bonus slots b/c only near the end of the billing cycle.
+- Deep Dive (long video): Saturday, live ~21:30 IST (11 AM ET Saturday; run starts 19:56), weekly (1 upload + 1 thumbnail call). On the free plan it replaces that
   Saturday's regular Short (`budget --need upload --ref <id>-a` exits 4).
 - Weekly review: Sunday 10:20 IST (stats + sync with the Google Docs: 3 Zapier calls).
 
