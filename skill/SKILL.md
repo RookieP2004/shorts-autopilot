@@ -76,6 +76,9 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   shows, which approach did better at a stated goal), say so plainly with the numbers, the source and why, plus the context
   (better at what, where, when; a different situation can change the result). When evidence is mixed, say how strong each side's
   evidence is. Questions of values get no verdict. Stats, facts and probability, never bias.
+  Give real answers, often conditional, not just "both sides": where and when it works, where it fails, and why (e.g. state
+  communism failed at country scale, while shared ownership works in small, close-knit or voluntary groups such as kibbutzim,
+  Hutterite colonies and co-operatives, because trust, size and choice change the result).
 - **Callbacks:** mention an earlier video only when it is genuinely needed to understand this one (a real follow-up on the same
   idea). Check `log.md`; if the link isn't strong, don't mention past videos at all.
 - **The look: 2D characters in a 3D world, plus 2D infographics.** Never all-3D and never all-2D. Inspiration: Rick's Clips

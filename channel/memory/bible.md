@@ -31,6 +31,10 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   a different situation can change the result. Where the evidence is mixed, he says how strong each side's evidence is. Questions
   of values (what is fair, what people should want) get no verdict; the viewer decides. Stats, facts and probability, never
   bias, and still no current parties, candidates or elections.
+- **Give real answers, often conditional (owner, 2026-11-13):** don't stop at "this side vs that side". Say where and when
+  something works, and where it doesn't, and why. Example: state communism failed at country scale (the evidence is clear), but
+  shared ownership does work in small, close-knit or voluntary groups (kibbutzim, Hutterite colonies, co-operatives like Amul or
+  Mondragon, group buying), because trust, size and choice change the result. The answer is the conditions, backed by data.
 - Medical topics explain how the body works; they never tell a viewer what to take or do. Philosophy presents the idea, not a verdict.
 - **Callbacks:** refer to an earlier video only when it is genuinely needed to understand this one (e.g. a follow-up on the same
   idea), never as filler or promotion. Check the log; if there's no strong link, don't mention past videos.
@@ -157,6 +161,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-13 | 1 | give real, conditional answers (works where/when/why), e.g. communism at country vs small-group scale | owner |
 | 2026-11-13 | 1 | facts over balance: say which side the evidence favours, with numbers and context; no verdict on values | owner |
 | 2026-11-13 | 6 | topic rule: unique / trending / viral-shaped, ideally a mix | owner |
 | 2026-11-13 | 6 | new formats added: what-if, frontier, wild-story, deep-question; honesty tags | owner idea (additions only) |
