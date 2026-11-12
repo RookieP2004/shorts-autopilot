@@ -105,7 +105,8 @@ Title ≤ 60 characters, at most one emoji, true curiosity. Description: one-lin
 Every factual claim is checked with a search in the same run, with sources in `meta.sources`. Anything unverified is dropped.
 
 ## 10. Schedule 🔄
-- Zapier Pro trial until 2026-11-20: 3 Shorts a day, slot b 12:50, slot c 15:50, slot a 18:50 IST.
+- Zapier Pro trial until 2026-11-20: 3 Shorts a day, live around 12:50 (b), 15:50 (c) and 18:50 (a) IST; the runs start at
+  11:56, 14:56 and 17:56 because each Short takes 40-50 minutes to make (owner, 2026-11-12: videos should be up by those times).
 - After the trial (free plan, 100 tasks/month): slot a 18:50 IST daily; bonus slots b/c only near the end of the billing cycle.
 - Deep Dive (long video): Saturday 16:20 IST, weekly (1 upload + 1 thumbnail call). On the free plan it replaces that
   Saturday's regular Short (`budget --need upload --ref <id>-a` exits 4).
