@@ -1,0 +1,1568 @@
+{
+ "id": "2026-11-12-a",
+ "title": "Do bulls really hate red? Total myth 🐂",
+ "description": "Bulls are red-green colour blind, and in a 2007 TV test a bull charged red, blue and white flags alike, then chased moving cowboys and ignored a man in red standing still. It's the movement, not the colour.\n\nSources: Live Science, 'Why Do Bulls Charge When They See Red?'; Mental Floss, 'What Really Happens If You Wear Red in Front of a Bull?'; Ripley's, 'Seeing Red: Bulls Don't Care About Red'.",
+ "tags": [
+  "bulls",
+  "colour blind",
+  "myth busting",
+  "animal facts",
+  "mythbusters",
+  "science explained",
+  "bull red cape",
+  "vision"
+ ],
+ "hashtags": [
+  "#animals",
+  "#mythbusting"
+ ],
+ "meta": {
+  "format": "myth-bust",
+  "topic": "the bulls-hate-red myth (dichromat vision, movement triggers the charge)",
+  "hook": "myth-bust",
+  "idea_source": "backlog",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.livescience.com/33700-bulls-charge-red.html",
+   "https://www.mentalfloss.com/article/28488/what-really-happens-if-you-wear-red-front-bull",
+   "https://www.ripleys.com/stories/bulls-seeing-red",
+   "https://scienceblog.com/m-bulls-arent-enraged-by-red-theyre-red-green-colour-blind-and-its-the-movement-of-the-cape-that-triggers-the-charge/"
+  ],
+  "humour": {
+   "trend": "timeless dry reaction ('the bull: who?' card); nothing current fit naturally",
+   "beat": "deadpan",
+   "scene": 7
+  }
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-12-a/assets.py",
+ "scenes": [
+  {
+   "say": "Bulls go wild when they see *red*? Total myth.",
+   "caption_y": 0.32,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/bull_stand.png",
+     "x": 0.7055,
+     "y": 0.5113,
+     "w": 0.3601,
+     "enter": "none",
+     "flip": true,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.0903,
+     "y": 0.532,
+     "h": 0.2441,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e6a",
+       "top": [
+        "#c41e1a",
+        "shirt"
+       ],
+       "bottom": [
+        "#a51815",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#c41e1a"
+       ],
+       "shoes": "#7c1512"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.2774,
+     "y": 0.6296,
+     "h": 0.5279,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ],
+      [
+       "deadpan",
+       2.3
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "BULLS HATE *RED*?",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.205,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 170'><rect x='10' y='10' width='500' height='150' rx='18' fill='none' stroke='#d9534f' stroke-width='14'/><text x='260.0' y='128' text-anchor='middle' font-size='118' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>MYTH</text></svg>",
+     "x": 0.5,
+     "y": 0.1,
+     "w": 0.42,
+     "rotate": -6,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.0
+      },
+      {
+       "t": 2.3,
+       "scale": 1.0
+      },
+      {
+       "t": 2.55,
+       "scale": 1.15,
+       "ease": "back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Bulls are red-green colour blind. Two kinds of colour cones. You have *three*.",
+   "transition": "zoom",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 5,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ],
+      [
+       "smirk",
+       4.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 520'><rect x='5' y='5' width='890' height='510' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='72' text-anchor='middle' font-size='42' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>COLOUR CONES</text><ellipse cx='150' cy='170' rx='70' ry='44' fill='#ffffff' stroke='#1a1410' stroke-width='6'/><circle cx='150' cy='170' r='26' fill='#34425c'/><circle cx='150' cy='170' r='12' fill='#0b0f12'/><text x='150' y='265' text-anchor='middle' font-size='48' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>YOU</text><circle cx='468.0' cy='170' r='36' fill='#d23a35' stroke='#1a1410' stroke-width='6'/><circle cx='560.0' cy='170' r='36' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='652.0' cy='170' r='36' fill='#2f6fd6' stroke='#1a1410' stroke-width='6'/><line x1='60' y1='300' x2='840' y2='300' stroke='#d8cdb4' stroke-width='5'/><ellipse cx='150' cy='380' rx='70' ry='44' fill='#ffffff' stroke='#1a1410' stroke-width='6'/><circle cx='150' cy='380' r='26' fill='#34425c'/><circle cx='150' cy='380' r='12' fill='#0b0f12'/><text x='150' y='475' text-anchor='middle' font-size='48' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>BULL</text><circle cx='468.0' cy='380' r='36' fill='#9aa35a' stroke='#1a1410' stroke-width='6'/><circle cx='560.0' cy='380' r='36' fill='#2f6fd6' stroke='#1a1410' stroke-width='6'/><circle cx='746' cy='380' r='36' fill='none' stroke='#9aa3ad' stroke-width='6' stroke-dasharray='12 10'/><line x1='716' y1='350' x2='776' y2='410' stroke='#d9534f' stroke-width='10'/><line x1='776' y1='350' x2='716' y2='410' stroke='#d9534f' stroke-width='10'/><text x='560' y='265' text-anchor='middle' font-size='56' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>3</text><text x='560' y='475' text-anchor='middle' font-size='56' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>2</text></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.74,
+     "enter": "slide_up",
+     "at": 0.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "That bright red cape? To a bull, it's a dull, muddy blob.",
+   "transition": "slide_left",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_low.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/bull_stand.png",
+     "x": 0.4546,
+     "y": 0.5229,
+     "w": 0.5139,
+     "enter": "none",
+     "flip": false,
+     "_depth": 6.2,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 450'><rect x='5' y='5' width='890' height='440' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><path d='M70,110 L300,110 Q290,212.0 314,280 Q185.0,254 64,280 Q84,195.0 70,110 Z' fill='#d23a35' stroke='#1a1410' stroke-width='6'/><rect x='58' y='96' width='254' height='18' rx='9' fill='#8a6142' stroke='#1a1410' stroke-width='5'/><path d='M500,110 L730,110 Q720,212.0 744,280 Q615.0,254 494,280 Q514,195.0 500,110 Z' fill='#7b7454' stroke='#1a1410' stroke-width='6'/><rect x='488' y='96' width='254' height='18' rx='9' fill='#8a6142' stroke='#1a1410' stroke-width='5'/><text x='185' y='370' text-anchor='middle' font-size='54' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>YOU SEE</text><text x='615' y='370' text-anchor='middle' font-size='54' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>A BULL SEES*</text><path d='M340,190 L450,190' stroke='#1a1410' stroke-width='10'/><polygon points='470,190 440,172 440,208' fill='#1a1410'/><text x='450' y='425' text-anchor='middle' font-size='28' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>*roughly: red looks dull, not bright</text></svg>",
+     "x": 0.5,
+     "y": 0.24,
+     "w": 0.82,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "In 2007, MythBusters put it to the test.",
+   "transition": "slide_left",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 2.8,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.56
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/bull_stand.png",
+     "x": 0.6428,
+     "y": 0.4866,
+     "w": 0.1428,
+     "enter": "none",
+     "flip": true,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.2724,
+     "y": 0.516,
+     "h": 0.0934,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ],
+      [
+       "idle",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "top": [
+        "#6fa3d6",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "straw",
+        "#e8c77a"
+       ],
+       "belt": "#5e3f2a",
+       "shoes": "#5e3f2a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.447,
+     "y": 0.5764,
+     "h": 0.1356,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.0007,
+       "y": 0.5863,
+       "scale": 1.0479
+      },
+      {
+       "t": 1.2,
+       "x": 0.447,
+       "y": 0.5764,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 220'><rect x='5' y='5' width='790' height='210' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><rect x='40' y='40' width='200' height='150' rx='24' fill='#34425c' stroke='#1a1410' stroke-width='6'/><rect x='62' y='60' width='156' height='108' rx='14' fill='#6fc3c0'/><line x1='100' y1='40' x2='70' y2='5' stroke='#1a1410' stroke-width='6'/><line x1='180' y1='40' x2='210' y2='5' stroke='#1a1410' stroke-width='6'/><text x='520' y='118' text-anchor='middle' font-size='96' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>2007</text><text x='520' y='172' text-anchor='middle' font-size='38' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>THE TV TEST</text></svg>",
+     "x": 0.5,
+     "y": 0.17,
+     "w": 0.66,
+     "enter": "drop",
+     "at": 0.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Red, blue and white flags, standing still. The bull charged them *all the same*.",
+   "transition": "cut",
+   "caption_y": 0.66,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/flag_blue.png",
+     "x": 0.5195,
+     "y": 0.492,
+     "w": 0.1558,
+     "enter": "pop",
+     "flip": false,
+     "allow_outside_safe": true,
+     "at": 0.6,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 0
+      },
+      {
+       "t": 2.6999999999999997,
+       "rot": 0
+      },
+      {
+       "t": 2.85,
+       "rot": -12,
+       "ease": "out"
+      },
+      {
+       "t": 3.4,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/bull_charge.png",
+     "x": 1.2009,
+     "y": 0.5055,
+     "w": 0.4014,
+     "enter": "none",
+     "flip": true,
+     "allow_outside_safe": true,
+     "at": 2.0,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2009,
+       "y": 0.5055,
+       "scale": 1.0
+      },
+      {
+       "t": 0.7,
+       "x": 0.708,
+       "y": 0.5055,
+       "scale": 0.968,
+       "ease": "linear"
+      },
+      {
+       "t": 1.4,
+       "x": 0.4454,
+       "y": 0.5002,
+       "scale": 0.872,
+       "ease": "linear"
+      },
+      {
+       "t": 2.1,
+       "x": 0.1669,
+       "y": 0.5031,
+       "scale": 0.897,
+       "ease": "linear"
+      },
+      {
+       "t": 2.9,
+       "x": -0.2445,
+       "y": 0.502,
+       "scale": 0.8548,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/flag_red.png",
+     "x": 0.233,
+     "y": 0.4946,
+     "w": 0.1605,
+     "enter": "pop",
+     "flip": false,
+     "allow_outside_safe": true,
+     "at": 0.15,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 0
+      },
+      {
+       "t": 2.45,
+       "rot": 0
+      },
+      {
+       "t": 2.6,
+       "rot": -12,
+       "ease": "out"
+      },
+      {
+       "t": 3.15,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/flag_white.png",
+     "x": 0.8007,
+     "y": 0.4968,
+     "w": 0.1737,
+     "enter": "pop",
+     "flip": false,
+     "allow_outside_safe": true,
+     "at": 1.05,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 0
+      },
+      {
+       "t": 2.95,
+       "rot": 0
+      },
+      {
+       "t": 3.1,
+       "rot": -12,
+       "ease": "out"
+      },
+      {
+       "t": 3.649999999999999,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "ALL *STILL*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 820 140'><rect x='5' y='5' width='810' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='410.0' y='92' text-anchor='middle' font-size='60' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>RED = BLUE = WHITE</text></svg>",
+     "x": 0.5,
+     "y": 0.24,
+     "w": 0.7,
+     "enter": "zoom",
+     "at": 3.9,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "Then a man in all red stood *perfectly still*, while two cowboys moved around.",
+   "transition": "slide_left",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.56
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/bull_stand.png",
+     "x": 0.7138,
+     "y": 0.4742,
+     "w": 0.1258,
+     "enter": "none",
+     "flip": true,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.2735,
+     "y": 0.493,
+     "h": 0.0778,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "top": [
+        "#6fa3d6",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "straw",
+        "#e8c77a"
+       ],
+       "belt": "#5e3f2a",
+       "shoes": "#5e3f2a"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.2735,
+       "y": 0.493,
+       "scale": 1.0
+      },
+      {
+       "t": 2.0,
+       "x": 0.3904,
+       "y": 0.4827,
+       "scale": 0.91,
+       "walk": true
+      },
+      {
+       "t": 4.0,
+       "x": 0.255,
+       "y": 0.4879,
+       "scale": 0.9563,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5,
+     "y": 0.5097,
+     "h": 0.0891,
+     "enter": "none",
+     "acting": "none",
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e6a",
+       "top": [
+        "#c41e1a",
+        "shirt"
+       ],
+       "bottom": [
+        "#a51815",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#c41e1a"
+       ],
+       "shoes": "#7c1512"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.8012,
+     "y": 0.5206,
+     "h": 0.0964,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ],
+      [
+       "cheer",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "top": [
+        "#f2b04a",
+        "vest"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#7a4a2a",
+        "long"
+       ],
+       "hat": [
+        "straw",
+        "#d9b56a"
+       ],
+       "shoes": "#5e3f2a",
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.8012,
+       "y": 0.5206,
+       "scale": 1.0
+      },
+      {
+       "t": 2.2,
+       "x": 0.6824,
+       "y": 0.4938,
+       "scale": 0.8122,
+       "walk": true
+      },
+      {
+       "t": 4.2,
+       "x": 0.8028,
+       "y": 0.5058,
+       "scale": 0.8973,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "RED = *FROZEN*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "COWBOYS = *MOVING*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.24,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.0,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "The bull chased the cowboys. And *ignored* the man in red.",
+   "transition": "cut",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 0.5,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ],
+    "shake": [
+     0.6,
+     0.6
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_low.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.5563,
+     "y": 0.5404,
+     "h": 0.1442,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "top": [
+        "#f2b04a",
+        "vest"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#7a4a2a",
+        "long"
+       ],
+       "hat": [
+        "straw",
+        "#d9b56a"
+       ],
+       "shoes": "#5e3f2a",
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5563,
+       "y": 0.5404,
+       "scale": 1.0
+      },
+      {
+       "t": 1.4,
+       "x": 0.7741,
+       "y": 0.5429,
+       "scale": 0.871,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       0.4,
+       0.15,
+       0.5
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.725,
+     "y": 0.5385,
+     "h": 0.159,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "top": [
+        "#6fa3d6",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "straw",
+        "#e8c77a"
+       ],
+       "belt": "#5e3f2a",
+       "shoes": "#5e3f2a"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.725,
+       "y": 0.5385,
+       "scale": 1.0
+      },
+      {
+       "t": 1.2,
+       "x": 0.9269,
+       "y": 0.5414,
+       "scale": 0.8623,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3189,
+     "y": 0.5286,
+     "h": 0.2358,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e6a",
+       "top": [
+        "#c41e1a",
+        "shirt"
+       ],
+       "bottom": [
+        "#a51815",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#c41e1a"
+       ],
+       "shoes": "#7c1512"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/bull_charge.png",
+     "x": -0.9505,
+     "y": 0.5,
+     "w": 1.3582,
+     "enter": "none",
+     "flip": false,
+     "allow_outside_safe": true,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.9505,
+       "y": 0.5,
+       "scale": 1.0
+      },
+      {
+       "t": 1.6,
+       "x": 0.9778,
+       "y": 0.5334,
+       "scale": 0.2742,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 170'><rect x='10' y='10' width='620' height='150' rx='18' fill='none' stroke='#d9534f' stroke-width='14'/><text x='320.0' y='128' text-anchor='middle' font-size='118' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>IGNORED</text></svg>",
+     "x": 0.4,
+     "y": 0.27,
+     "w": 0.46,
+     "rotate": -6,
+     "enter": "zoom",
+     "at": 2.4,
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_low.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.6,
+    "text": "full red fit, zero movement.\nthe bull: *who?*",
+    "text_y": 0.18
+   }
+  },
+  {
+   "say": "What sets it off? *Movement*. A cape flicking in its face.",
+   "transition": "slide_left",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.08,
+      "focus": [
+       0.46,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/bull_charge.png",
+     "x": 1.1523,
+     "y": 0.5099,
+     "w": 0.4278,
+     "enter": "none",
+     "flip": true,
+     "allow_outside_safe": true,
+     "at": 1.6,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.1887,
+       "y": 0.5101,
+       "scale": 1.0049
+      },
+      {
+       "t": 1.6,
+       "x": 0.7146,
+       "y": 0.5113,
+       "scale": 0.9902,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.3833,
+     "y": 0.5098,
+     "h": 0.1846,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "wave",
+       1.2
+      ],
+      [
+       "surprised",
+       3.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "top": [
+        "#f2b04a",
+        "vest"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#7a4a2a",
+        "long"
+       ],
+       "hat": [
+        "straw",
+        "#d9b56a"
+       ],
+       "shoes": "#5e3f2a",
+       "build": "slim"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       3.3,
+       0.12,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/flag_red.png",
+     "x": 0.5455,
+     "y": 0.5009,
+     "w": 0.1833,
+     "enter": "pop",
+     "flip": false,
+     "allow_outside_safe": true,
+     "at": 0.2,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 0
+      },
+      {
+       "t": 1.0,
+       "rot": -14
+      },
+      {
+       "t": 1.25,
+       "rot": 12
+      },
+      {
+       "t": 1.5,
+       "rot": -14
+      },
+      {
+       "t": 1.75,
+       "rot": 12
+      },
+      {
+       "t": 2.0,
+       "rot": -14
+      },
+      {
+       "t": 2.25,
+       "rot": 12
+      },
+      {
+       "t": 2.5,
+       "rot": -14
+      },
+      {
+       "t": 2.75,
+       "rot": 12
+      },
+      {
+       "t": 3.2,
+       "rot": 0
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.1913,
+     "y": 0.5593,
+     "h": 0.3294,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       2.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "IT'S THE *MOVE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 116,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Even the matador's first cape is pink and gold. Bulls charge it *just as hard*.",
+   "transition": "zoom",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 5,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.8
+      ],
+      [
+       "think",
+       3.8
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 460'><rect x='5' y='5' width='890' height='450' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='40' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>THE TWO CAPES</text><path d='M80,130 L380,130 Q370,262.0 394,350 Q230.0,324 74,350 Q94,240.0 80,130 Z' fill='#d9539a' stroke='#1a1410' stroke-width='6'/><rect x='68' y='116' width='324' height='18' rx='9' fill='#8a6142' stroke='#1a1410' stroke-width='5'/><path d='M94,144 L366,144 L360,330 L100,330 Z' fill='none'/><rect x='230' y='130' width='150' height='18' fill='#f2b04a'/><path d='M540,150 L760,150 Q750,258.0 774,330 Q650.0,304 534,330 Q554,240.0 540,150 Z' fill='#c41e1a' stroke='#1a1410' stroke-width='6'/><rect x='528' y='136' width='244' height='18' rx='9' fill='#8a6142' stroke='#1a1410' stroke-width='5'/><text x='230' y='420' text-anchor='middle' font-size='46' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>1ST: PINK + GOLD</text><text x='650' y='420' text-anchor='middle' font-size='46' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>LAST: RED</text></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.8,
+     "enter": "slide_up",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><circle cx='60' cy='60' r='54' fill='#46965a' stroke='#1a1410' stroke-width='6'/><path d='M32,62 L52,82 L90,40' fill='none' stroke='#f6efe2' stroke-width='14' stroke-linecap='round'/></svg>",
+     "x": 0.25,
+     "y": 0.1,
+     "w": 0.1,
+     "enter": "pop",
+     "at": 3.4,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "Red is for the crowd. The bull only cares what *moves*.",
+   "transition": "cut",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.56
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/plate_arena_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-12-a/assets/bull_stand.png",
+     "x": 0.3318,
+     "y": 0.4846,
+     "w": 0.1401,
+     "enter": "none",
+     "flip": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6532,
+     "y": 0.523,
+     "h": 0.0981,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e6a",
+       "top": [
+        "#c41e1a",
+        "shirt"
+       ],
+       "bottom": [
+        "#a51815",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#c41e1a"
+       ],
+       "shoes": "#7c1512"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.4741,
+     "y": 0.5718,
+     "h": 0.1325,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "smirk",
+       1.6
+      ],
+      [
+       "crossed",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "IT'S NOT RED.\nIT'S *MOTION.*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}

@@ -9,7 +9,6 @@
 - [big-question] What does a bank do when everyone wants their money back at once? · bank-run follow-up, reuses the town bank + vault set · https://www.rba.gov.au/education/resources/explainers/
 - [myth-bust] "Saving money in a bank makes you rich" · interest vs inflation, before/after shopping basket · https://www.capitalone.com/bank/money-management/banking-basics/how-does-savings-interest-work/
 - [big-question] Why does compound interest snowball? · one coin that grows a coin each year, shown as a growing pile · https://www.fool.com/money/banks/articles/explain-it-to-me-like-im-five-heres-how-interest-rates-work
-- [myth-bust] "Bulls hate the colour red" · they're red-green colourblind; it's the cape's movement · https://en.wikipedia.org/wiki/Bullfighting#Red_cape
 - [big-question] How do fish learn without a cortex? · follow-up to the goldfish myth: fish brains, landmarks and routines · https://www.discoverwildlife.com/animal-facts/fish/goldfish-memory
 - [big-question] How do planes stay up if clouds can't fall either? · lift vs updrafts, follow-up angle on the cloud weight video · https://www.earthdate.org/episodes/puffy-clouds-weigh-in
 - [scale-shock] How much water is in one thunderstorm? · up to ~25 million tonnes, same see-saw set scaled up · https://www.zmescience.com/science/how-much-do-clouds-weigh
@@ -32,3 +31,5 @@
 - [big-question] Why does music give you chills? · frisson: the same goosebump alarm fired by a song; follow-up to the goosebumps video · https://www.health.harvard.edu/blog/wondering-about-goosebumps-of-course-you-are-2020080320688
 - [big-question] Can cold make you grow more hair? · 2020 Harvard mouse study: the goosebump nerve also wakes hair stem cells · https://neurosciencenews.com/goosebumps-reason-16669/
 - [myth-bust] "Your appendix is useless" · vestigial-organ myth; it likely stores gut bacteria, pairs with the goosebump reflex · https://en.wikipedia.org/wiki/Appendix_(anatomy)
+- [myth-bust] "Hair and nails keep growing after death" · runner-up 2026-11-12: skin dries and pulls back, so they only look longer · https://uamshealth.com/medical-myths/do-a-persons-hair-and-fingernails-continue-to-grow-after-death
+- [big-question] Why do cows (and bulls) see the world in two colours? · follow-up angle on the bull video: dichromat vision vs ours, reuses the ranch arena set · https://www.mentalfloss.com/article/28488/what-really-happens-if-you-wear-red-front-bull
