@@ -1,0 +1,938 @@
+{
+ "id": "2026-11-13-b",
+ "title": "What if you could SEE Wi-Fi? 📶",
+ "description": "Wi-Fi is light too, with waves about 12 cm long instead of 400-700 nanometres. To see it as sharply as you see now, your eyes would need to be about a kilometre wide, which is why radio telescopes like FAST are huge.\n\nSources: Wikipedia (2.4 GHz radio use, visible spectrum, FAST); NCBI/PMC on bees, flowers and UV; OpenStax Astronomy on why radio telescopes must be so large.",
+ "tags": [
+  "wifi",
+  "electromagnetic spectrum",
+  "visible light",
+  "what if",
+  "radio telescope",
+  "FAST telescope",
+  "bee vision",
+  "physics explained",
+  "science"
+ ],
+ "hashtags": [
+  "#physics",
+  "#science"
+ ],
+ "meta": {
+  "format": "what-if",
+  "topic": "what if you could see Wi-Fi: visible light vs 12 cm Wi-Fi waves, why your eyes would need to be ~1 km wide (diffraction), FAST dish",
+  "hook": "what-if",
+  "idea_source": "unique + viral-shaped: everyday object (Wi-Fi) made into a physics what-if; owner's 'what is a spectrum' example",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/2.4_GHz_radio_use",
+   "https://en.wikipedia.org/wiki/Visible_spectrum",
+   "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12477309/",
+   "https://openstax.org/books/astronomy/pages/6-4-radio-telescopes",
+   "https://en.wikipedia.org/wiki/Five-hundred-meter_Aperture_Spherical_Telescope",
+   "https://en.wikipedia.org/wiki/Angular_resolution"
+  ],
+  "humour": {
+   "trend": "timeless (no current trend fit cleanly): the hunt for the one full-bars Wi-Fi spot, smirk + caption card",
+   "beat": "smirk",
+   "scene": 5
+  },
+  "claims": [
+   {
+    "claim": "Wi-Fi/radio waves are electromagnetic radiation, the same family as visible light",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Visible_spectrum"
+   },
+   {
+    "claim": "human eyes detect roughly 400-700 nm (often quoted 380-750 nm)",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Visible_spectrum"
+   },
+   {
+    "claim": "bees see ultraviolet; many flowers have UV nectar guides",
+    "tag": "PROVEN",
+    "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12477309/"
+   },
+   {
+    "claim": "2.4 GHz Wi-Fi has a wavelength of ~12.5 cm",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/2.4_GHz_radio_use"
+   },
+   {
+    "claim": "router glowing / walls see-through if eyes caught 12 cm waves",
+    "tag": "SPECULATION",
+    "source": "our what-if"
+   },
+   {
+    "claim": "diffraction limit: same sharpness at 12.5 cm as a 5 mm pupil at 550 nm needs an aperture of ~1.1 km (theta ~ 1.22 lambda/D)",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Angular_resolution"
+   },
+   {
+    "claim": "FAST, China's radio telescope, has a 500 m dish; radio telescopes are large because of long wavelengths",
+    "tag": "PROVEN",
+    "source": "https://openstax.org/books/astronomy/pages/6-4-radio-telescopes"
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-13-b/assets.py",
+ "thumbnail": {
+  "title": "SEE *WI-FI?*",
+  "title_y": 0.15,
+  "title_size": 170,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#6fe0ff",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.4,
+  "bg_saturation": 1.5,
+  "tint": [
+   "#1f4fb8",
+   "#f08a24"
+  ],
+  "tint_amount": 0.38,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-13-b/assets/plate_room_wifi.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-13-b/assets/router.png",
+    "x": 0.2,
+    "y": 0.55,
+    "w": 0.32,
+    "enter": "none",
+    "rot": -10
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-13-b/assets/eye.png",
+    "x": 0.82,
+    "y": 0.55,
+    "w": 0.3,
+    "enter": "none",
+    "rot": 8
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "say": "What if you could *see* Wi-Fi? It's light too.",
+   "caption_y": 0.31,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.06,
+      "focus": [
+       0.45,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/plate_room_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.5544,
+     "y": 0.545,
+     "h": 0.3621,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ],
+      [
+       "explain",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "WHAT IF YOU COULD *SEE* WI-FI?",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 112,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Your eyes catch just *400 to 700 nanometres*.",
+   "transition": "slide_left",
+   "caption_y": 0.4,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/plate_room_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.688,
+     "y": 0.5416,
+     "h": 0.1702,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "wave",
+       1.0
+      ],
+      [
+       "idle",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a8693f",
+       "top": [
+        "#d9534f",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.54,
+     "y": 0.594,
+     "h": 0.3111,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ],
+      [
+       "think",
+       3.2
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.1231,
+       "y": 0.6017,
+       "scale": 1.0643
+      },
+      {
+       "t": 1.1,
+       "x": 0.54,
+       "y": 0.594,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 110'><rect x='5' y='5' width='380' height='100' rx='50' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='225.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.2106818181818182,
+     "y": 0.115,
+     "w": 0.3013636363636364,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 310'><rect x='5' y='5' width='890' height='300' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='66' text-anchor='middle' font-size='42' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>THE LIGHT SPECTRUM</text><rect x='40' y='110' width='820' height='70' rx='14' fill='#34425c'/><rect x='430' y='104' width='7' height='82' fill='#d9534f'/><rect x='437' y='104' width='7' height='82' fill='#f2b04a'/><rect x='444' y='104' width='7' height='82' fill='#f2d03a'/><rect x='451' y='104' width='7' height='82' fill='#46965a'/><rect x='458' y='104' width='7' height='82' fill='#3fb0d9'/><rect x='465' y='104' width='7' height='82' fill='#2f6fd6'/><rect x='472' y='104' width='7' height='82' fill='#7a3fb8'/><text x='60' y='158' font-size='30' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>RADIO</text><text x='215' y='158' font-size='30' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MICRO</text><text x='345' y='158' font-size='30' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>IR</text><text x='520' y='158' font-size='30' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>UV</text><text x='640' y='158' font-size='30' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>X-RAY</text><polygon points='455,200 435,232 475,232' fill='#d9534f'/><text x='640' y='270' text-anchor='middle' font-size='44' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>YOU SEE ONLY THIS</text><text x='200' y='270' text-anchor='middle' font-size='34' fill='#2f6fd6' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WI-FI IS HERE</text><polygon points='240,200 220,226 260,226' fill='#2f6fd6'/></svg>",
+     "x": 0.5,
+     "y": 0.24,
+     "w": 0.84,
+     "enter": "slide_up",
+     "at": 0.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Bees see ultraviolet: flowers hide *landing strips* there.",
+   "transition": "zoom",
+   "caption_y": 0.58,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/plate_room_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.25
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 110'><rect x='5' y='5' width='380' height='100' rx='50' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='225.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.2106818181818182,
+     "y": 0.115,
+     "w": 0.3013636363636364,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 450'><rect x='5' y='5' width='890' height='440' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='225' y='70' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>YOU SEE</text><text x='675' y='70' text-anchor='middle' font-size='44' fill='#7a3fb8' font-family='Anton, DejaVu Sans, sans-serif'>A BEE SEES</text><ellipse cx='225' cy='168' rx='32' ry='60' fill='#f2d03a' stroke='#1a1410' stroke-width='4' transform='rotate(0 225 230)'/><ellipse cx='225' cy='168' rx='32' ry='60' fill='#f2d03a' stroke='#1a1410' stroke-width='4' transform='rotate(45 225 230)'/><ellipse cx='225' cy='168' rx='32' ry='60' fill='#f2d03a' stroke='#1a1410' stroke-width='4' transform='rotate(90 225 230)'/><ellipse cx='225' cy='168' rx='32' ry='60' fill='#f2d03a' stroke='#1a1410' stroke-width='4' transform='rotate(135 225 230)'/><ellipse cx='225' cy='168' rx='32' ry='60' fill='#f2d03a' stroke='#1a1410' stroke-width='4' transform='rotate(180 225 230)'/><ellipse cx='225' cy='168' rx='32' ry='60' fill='#f2d03a' stroke='#1a1410' stroke-width='4' transform='rotate(225 225 230)'/><ellipse cx='225' cy='168' rx='32' ry='60' fill='#f2d03a' stroke='#1a1410' stroke-width='4' transform='rotate(270 225 230)'/><ellipse cx='225' cy='168' rx='32' ry='60' fill='#f2d03a' stroke='#1a1410' stroke-width='4' transform='rotate(315 225 230)'/><circle cx='225' cy='230' r='30' fill='#c97a1a' stroke='#1a1410' stroke-width='4'/><ellipse cx='675' cy='168' rx='32' ry='60' fill='#b9a6e6' stroke='#1a1410' stroke-width='4' transform='rotate(0 675 230)'/><ellipse cx='675' cy='168' rx='32' ry='60' fill='#b9a6e6' stroke='#1a1410' stroke-width='4' transform='rotate(45 675 230)'/><ellipse cx='675' cy='168' rx='32' ry='60' fill='#b9a6e6' stroke='#1a1410' stroke-width='4' transform='rotate(90 675 230)'/><ellipse cx='675' cy='168' rx='32' ry='60' fill='#b9a6e6' stroke='#1a1410' stroke-width='4' transform='rotate(135 675 230)'/><ellipse cx='675' cy='168' rx='32' ry='60' fill='#b9a6e6' stroke='#1a1410' stroke-width='4' transform='rotate(180 675 230)'/><ellipse cx='675' cy='168' rx='32' ry='60' fill='#b9a6e6' stroke='#1a1410' stroke-width='4' transform='rotate(225 675 230)'/><ellipse cx='675' cy='168' rx='32' ry='60' fill='#b9a6e6' stroke='#1a1410' stroke-width='4' transform='rotate(270 675 230)'/><ellipse cx='675' cy='168' rx='32' ry='60' fill='#b9a6e6' stroke='#1a1410' stroke-width='4' transform='rotate(315 675 230)'/><circle cx='675' cy='230' r='70' fill='#4a2a7a' opacity='0.85'/><circle cx='675' cy='230' r='30' fill='#2b1a4a' stroke='#1a1410' stroke-width='4'/><line x1='450' y1='100' x2='450' y2='380' stroke='#1a1410' stroke-width='4' stroke-dasharray='12 10'/><text x='675' y='420' text-anchor='middle' font-size='32' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>UV LANDING STRIP</text></svg>",
+     "x": 0.5,
+     "y": 0.33,
+     "w": 0.86,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "*ULTRAVIOLET*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.7,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Wi-Fi waves? About *12 centimetres* long.",
+   "transition": "slide_left",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/plate_room_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 8,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 110'><rect x='5' y='5' width='380' height='100' rx='50' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='225.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.2106818181818182,
+     "y": 0.115,
+     "w": 0.3013636363636364,
+     "enter": "pop",
+     "at": 0.0,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/router.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 0.52,
+     "enter": "zoom",
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -6
+      },
+      {
+       "t": 2.5,
+       "rot": 3
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 330'><rect x='5' y='5' width='890' height='320' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><path d='M60,110 C110,40 170,40 220,110 S330,180 380,110 S490,40 540,110 S650,180 700,110 S810,40 840,110' fill='none' stroke='#2f6fd6' stroke-width='12'/><line x1='220' y1='215' x2='540' y2='215' stroke='#d9534f' stroke-width='8'/><line x1='220' y1='195' x2='220' y2='235' stroke='#d9534f' stroke-width='8'/><line x1='540' y1='195' x2='540' y2='235' stroke='#d9534f' stroke-width='8'/><text x='380' y='300' text-anchor='middle' font-size='54' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>ONE WAVE: 12 CM</text><text x='790' y='300' text-anchor='middle' font-size='28' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>2.4 GHZ</text></svg>",
+     "x": 0.5,
+     "y": 0.27,
+     "w": 0.84,
+     "enter": "slide_down",
+     "at": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 12,
+     "decimals": 0,
+     "suffix": " CM",
+     "x": 0.5,
+     "y": 0.72,
+     "size": 140,
+     "color": "accent",
+     "at": 0.9,
+     "count_dur": 0.9,
+     "enter": "pop",
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "From here, we're guessing: routers glow like lamps, walls go see-through.",
+   "transition": "flash",
+   "caption_y": 0.71,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.08,
+      "focus": [
+       0.44,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/plate_room_wifi.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.688,
+     "y": 0.5416,
+     "h": 0.1702,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ],
+      [
+       "cheer",
+       3.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a8693f",
+       "top": [
+        "#d9534f",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.2,
+       0.05,
+       0.4
+      ],
+      [
+       3.7,
+       0.04,
+       0.35
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.5095,
+     "y": 0.5972,
+     "h": 0.3195,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ],
+      [
+       "explain",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 590 110'><rect x='5' y='5' width='580' height='100' rx='50' fill='#d9534f' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='325.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>SPECULATION</text></svg>",
+     "x": 0.28795454545454546,
+     "y": 0.115,
+     "w": 0.45590909090909093,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "text",
+     "text": "ROUTER = *LAMP*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 140'><rect x='5' y='5' width='750' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='380.0' y='92' text-anchor='middle' font-size='64' fill='#2f6fd6' font-family='Anton, DejaVu Sans, sans-serif'>WALLS: SEE-THROUGH</text></svg>",
+     "x": 0.5,
+     "y": 0.29,
+     "w": 0.66,
+     "enter": "pop",
+     "at": 3.4,
+     "sfx": "pop",
+     "rotate": -2
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/plate_room_wifi.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "smirk",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "smirk",
+    "at": 0.1,
+    "dur": 1.4,
+    "who": "ved",
+    "text": "me, finally seeing\nthe *full-bars spot*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "The catch: sharp eyes must be way wider than the wave. For Wi-Fi: *a kilometre*.",
+   "transition": "zoom",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 6.0,
+      "zoom": 1.1,
+      "focus": [
+       0.52,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/plate_valley_eye.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 110'><rect x='5' y='5' width='380' height='100' rx='50' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='225.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.2106818181818182,
+     "y": 0.115,
+     "w": 0.3013636363636364,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 320'><rect x='5' y='5' width='890' height='310' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='66' text-anchor='middle' font-size='42' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>SHARP VISION NEEDS</text><text x='450' y='130' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>EYES WAY WIDER THAN THE WAVE</text><circle cx='170' cy='225' r='22' fill='#2f6fd6' stroke='#1a1410' stroke-width='4'/><circle cx='170' cy='225' r='9' fill='#0b0d10'/><text x='170' y='290' text-anchor='middle' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>LIGHT: 5 MM</text><line x1='230' y1='225' x2='470' y2='225' stroke='#d9534f' stroke-width='10'/><polygon points='510,225 465,200 465,250' fill='#d9534f'/><text x='680' y='245' text-anchor='middle' font-size='58' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>WI-FI: 1 KM</text></svg>",
+     "x": 0.5,
+     "y": 0.26,
+     "w": 0.86,
+     "enter": "slide_down",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 1,
+     "decimals": 0,
+     "suffix": " KM EYE",
+     "x": 0.5,
+     "y": 0.74,
+     "size": 130,
+     "color": "accent",
+     "at": 3.0,
+     "count_dur": 0.6,
+     "enter": "zoom",
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "That's why China's FAST radio dish is *500 metres* wide.",
+   "transition": "slide_left",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/plate_valley_dish.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 110'><rect x='5' y='5' width='380' height='100' rx='50' fill='#46965a' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='55' r='16' fill='#f6efe2'/><text x='225.0' y='77' text-anchor='middle' font-size='60' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.2106818181818182,
+     "y": 0.115,
+     "w": 0.3013636363636364,
+     "enter": "pop",
+     "at": 0.0,
+     "sfx": "click"
+    },
+    {
+     "type": "text",
+     "text": "FAST *500 M*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.21,
+     "size": 140,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 140'><rect x='5' y='5' width='750' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='380.0' y='92' text-anchor='middle' font-size='60' fill='#2f6fd6' font-family='Anton, DejaVu Sans, sans-serif'>A GIANT EAR FOR RADIO</text></svg>",
+     "x": 0.5,
+     "y": 0.75,
+     "w": 0.7,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop",
+     "rotate": 2
+    }
+   ]
+  },
+  {
+   "say": "So yes, you *could* see Wi-Fi. With eyes the size of a town.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/plate_room_wifi.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "think",
+       1.6
+      ],
+      [
+       "smirk",
+       3.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-13-b/assets/eye.png",
+     "x": 0.8,
+     "y": 0.2,
+     "w": 0.22,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "pop",
+     "loop": "float",
+     "loop_amp": 0.01
+    },
+    {
+     "type": "text",
+     "text": "EYES *1 KM* WIDE",
+     "font": "display",
+     "x": 0.4,
+     "y": 0.16,
+     "size": 110,
+     "max_w": 0.6,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
