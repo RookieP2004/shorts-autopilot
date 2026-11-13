@@ -197,6 +197,8 @@ of the frame, so a layer `w` of 0.4 is 768 px wide here.
   such as "surprised", `acting: "none"`, `talk: false`) + 1-2 key props], "blur": 16, "tint": ["#2a5bd7", "#f08a24"],
   "tint_amount": 0.45, "glow": "#f2b04a", "glow_x": 0.45, "glow_y": 0.58, "glow_strength": 1.6, "bg_saturation": 1.8}`.
   `python -m autopilot thumbnail jobs/<id>/job.json` writes out/thumbnail.jpg (1280x720, < 2 MB); Read it and iterate.
+  Shorts use the same spec: the output is 1080x1920 (the canvas is vertical); put Ved at about `h` 0.95, `y` 0.93, `x` 0.5 and
+  use a clean plate (no text, no Ved) as `bg`. YouTube accepts it through *Update Video Thumbnail* (tested 2026-11-13).
   (Old form, still supported: `{"at": seconds, "text": ...}` = one caption-free video frame with the title on top.)
 - Sets: render plates at 1920x1080 (`still(name, 1920, 1080, ...)`); landscape shows more of the world, so dress the sides.
 - Talking to camera: Ved big on one side (x 0.27 or 0.73, y 0.86, h 1.2, `ground: false`) over the blurred set, with a

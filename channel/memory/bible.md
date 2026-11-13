@@ -124,7 +124,7 @@ Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in 
 - Chapters in job.json (`chapters`, >= 3, first at scene 0, each >= 10 s); they go into the description automatically.
 - 2-3 comic beats (one per ~2 minutes), same rules as the Shorts.
 - Even-handed: where experts disagree, give both views in one or two lines each.
-- Thumbnail (owner-approved look, 2026-11-11, The Infographics Show as reference): the world blurred and colour-graded
+- Thumbnail, for long videos and (since 2026-11-13) Shorts too, in 9:16 (owner-approved look, 2026-11-11, The Infographics Show as reference): the world blurred and colour-graded
   behind (a two-colour gradient tint + a warm glow behind Ved), Ved big and sharp with a strong face (surprised, shocked,
   side-eye) right under the title, one or two key props sharp beside him, and a huge 1-3 word title in heavy white sans with
   one *accent* word ("JUST *PAPER?*"). No watermark, no small text. `python -m autopilot thumbnail` (spec in docs/job-spec.md);
@@ -167,6 +167,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-07 | all | channel set up | owner decisions in setup |
+| 2026-11-13 | 6 | custom thumbnails on Shorts too (9:16, same look), when the budget allows | owner: "thumbnail impressions are low" |
 | 2026-11-13 | 6 | Shorts 25-35 s (cap 45 s); hook + best fact in 2 s; econ topics framed around the viewer | owner's Studio data |
 | 2026-11-13 | 1 | give real, conditional answers (works where/when/why), e.g. communism at country vs small-group scale | owner |
 | 2026-11-13 | 1 | facts over balance: say which side the evidence favours, with numbers and context; no verdict on values | owner |

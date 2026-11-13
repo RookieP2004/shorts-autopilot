@@ -225,9 +225,17 @@ length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). The
    Read the video id, then run `python -m autopilot budget --add upload --ref <slot id>`.
    If the call fails (an error costs 0 tasks), retry once. If it fails again, stop and notify the owner.
    Never upload twice: before a retry, check `log.md`. Use *YouTube: Find Video* (2 tasks) only if the first call timed out with no clear result.
-4. Append `python -m autopilot logline jobs/<id>/job.json --youtube-id <video id>` to `channel/memory/log.md`. In `ideas.md`,
+4. **Thumbnail** (Shorts too: it shows in search, on the channel page and in suggestions, not in the swipe feed). During the trial,
+   or if `python -m autopilot budget --spare` shows SPARE >= 1: add a `thumbnail` to job.json in the house look (the long-video
+   rules in 3d step 6, vertical): `bg` = a clean plate of the set (no text, no Ved) with the key townspeople and props, `fg` = Ved
+   big (about `h` 0.95, `y` 0.93, `x` 0.5, a strong face such as "surprised", `acting: "none"`, `talk: false`, `ground: false`)
+   plus one key prop, and a 1-3 word title with one *accent* word. `python -m autopilot thumbnail jobs/<id>/job.json` writes a
+   1080x1920 out/thumbnail.jpg; Read it, then `KEEP=8 scripts/push_media.sh jobs/<id>/out/thumbnail.jpg <id>-thumb` and Zapier
+   *YouTube: Update Video Thumbnail* (video_id, thumbnail = that URL), then `budget --add thumb --ref <slot id>`. Skip it quietly
+   when there's no spare budget.
+5. Append `python -m autopilot logline jobs/<id>/job.json --youtube-id <video id>` to `channel/memory/log.md`. In `ideas.md`,
    remove the idea you used and add the 2–3 runners-up.
-5. `git add jobs/<id>/job.json channel/ && git commit -m "short <id>: <title>" && git push`.
+6. `git add jobs/<id>/job.json channel/ && git commit -m "short <id>: <title>" && git push`.
 
 **i. Report.** Send the owner one SendUserMessage: title, link, format and hook, the joke used (one line), and why you picked it (one line).
 

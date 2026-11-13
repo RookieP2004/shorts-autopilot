@@ -382,7 +382,7 @@ def _cutout(job, style, root, layers):
 
 
 def thumbnail(job_path, out_path=None, root=ROOT, log=print):
-    """YouTube thumbnail (1280x720 JPEG, < 2 MB) for a long video, in the bold explainer-channel style: the world blurred and
+    """YouTube thumbnail (JPEG, < 2 MB): 1280x720 for a long video, 1080x1920 for a Short. Bold explainer-channel style: the world blurred and
     colour-pushed behind, Ved (and the one key prop) sharp and big, a glow behind him, a short huge title.
       "thumbnail": {"title": "JUST *PAPER?*",                 # 1-3 words; *word* = accent colour
                     "bg": [layers...],                       # the world: a plate, townspeople, props (all blurred)
@@ -392,7 +392,7 @@ def thumbnail(job_path, out_path=None, root=ROOT, log=print):
     from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
     from . import sprites
     job = load_json(job_path)
-    style = deep_merge(job_style(job, root), {"watermark": {"text": ""}})     # no watermark on a thumbnail
+    style = deep_merge(job_style(job, root), {"watermark": {"text": ""}, "progress_bar": {"enabled": False}})  # clean thumbnail
     th = job.get("thumbnail") or {}
     W, H = style["canvas"]["w"], style["canvas"]["h"]
     if th.get("fg"):
@@ -459,7 +459,8 @@ def thumbnail(job_path, out_path=None, root=ROOT, log=print):
         paste(img, t, tx, ty, 1.0, th.get("rot", 0), 1.0)
     out_path = out_path or os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "thumbnail.jpg")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    img = img.convert("RGB").resize((1280, 720), Image.LANCZOS)
+    size = (1280, 720) if W >= H else (1080, 1920)      # long videos 16:9, Shorts 9:16
+    img = img.convert("RGB").resize(size, Image.LANCZOS)
     img = img.filter(ImageFilter.UnsharpMask(2, 60, 2))
     q = 92
     while True:
