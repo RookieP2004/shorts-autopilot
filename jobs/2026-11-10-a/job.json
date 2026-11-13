@@ -1542,5 +1542,65 @@
     }
    ]
   }
- ]
+ ],
+ "thumbnail": {
+  "title": "30 TRILLION *YOU?*",
+  "title_y": 0.17,
+  "title_size": 145,
+  "max_w": 0.95,
+  "blur": 16,
+  "glow": "#f2b04a",
+  "glow_x": 0.5,
+  "glow_y": 0.52,
+  "glow_strength": 1.4,
+  "bg_saturation": 1.6,
+  "tint": [
+   "#a02a6a",
+   "#f08a24"
+  ],
+  "tint_amount": 0.42,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-10-a/assets/plate_tissue_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none"
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-10-a/assets/cell.png",
+    "x": 0.2,
+    "y": 0.6,
+    "w": 0.3,
+    "rot": -8,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-10-a/assets/rbc.png",
+    "x": 0.82,
+    "y": 0.64,
+    "w": 0.22,
+    "rot": 12,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ }
 }

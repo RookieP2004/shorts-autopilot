@@ -2340,5 +2340,65 @@
     }
    ]
   }
- ]
+ ],
+ "thumbnail": {
+  "title": "WHY WRECK *IT?*",
+  "title_y": 0.17,
+  "title_size": 145,
+  "max_w": 0.95,
+  "blur": 16,
+  "glow": "#f2b04a",
+  "glow_x": 0.5,
+  "glow_y": 0.52,
+  "glow_strength": 1.4,
+  "bg_saturation": 1.6,
+  "tint": [
+   "#8a6a2a",
+   "#f08a24"
+  ],
+  "tint_amount": 0.42,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-10-c/assets/plate_bare_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none"
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-10-c/assets/cow_brown.png",
+    "x": 0.2,
+    "y": 0.66,
+    "w": 0.32,
+    "rot": -4,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-10-c/assets/cow_bw.png",
+    "x": 0.82,
+    "y": 0.68,
+    "w": 0.3,
+    "rot": 4,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "shrug",
+    "x": 0.5,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ }
 }

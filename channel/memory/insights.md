@@ -13,6 +13,8 @@ The weekly review writes a new entry at the top: date · data window · findings
   subs even when views are lower.
 - Decisions: Shorts 25-35 s (hard cap 45 s in style.json), hook + best fact in the first 2 s, loop endings; frame economics around
   the viewer ("you"); keep myth-busts frequent. Spacing >= 5 h already in place (2026-11-12).
+- 2026-11-13: custom 9:16 thumbnails (house look, a surprising 1-3 word question as the title) set on all 16 public Shorts;
+  compare thumbnail impressions CTR before (2.4%) and after in the next review.
 - Next experiment: compare % viewed and views for the new 25-35 s Shorts vs this week's 40-55 s ones; ask the owner for
   "Viewed vs swiped away" per Short from Studio (not in the API).
 

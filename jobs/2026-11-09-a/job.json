@@ -1442,5 +1442,65 @@
     }
    ]
   }
- ]
+ ],
+ "thumbnail": {
+  "title": "100 *ELEPHANTS?*",
+  "title_y": 0.17,
+  "title_size": 145,
+  "max_w": 0.95,
+  "blur": 16,
+  "glow": "#f2b04a",
+  "glow_x": 0.5,
+  "glow_y": 0.52,
+  "glow_strength": 1.4,
+  "bg_saturation": 1.6,
+  "tint": [
+   "#2a7fd7",
+   "#7cc4e8"
+  ],
+  "tint_amount": 0.42,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-09-a/assets/plate_meadow_sky.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none"
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-09-a/assets/cloud.png",
+    "x": 0.22,
+    "y": 0.56,
+    "w": 0.38,
+    "rot": 0,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-09-a/assets/elephant.png",
+    "x": 0.8,
+    "y": 0.68,
+    "w": 0.3,
+    "rot": 6,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ }
 }
