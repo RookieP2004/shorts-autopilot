@@ -56,3 +56,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [myth-bust] "Mantis shrimp see the most colours" · 12-16 photoreceptors, yet tests show they tell colours apart worse than us; pairs with the Wi-Fi/spectrum video · https://www.nature.com/articles/nature.2014.14578
 - [what-if] What if your eyes saw ultraviolet? · the lens blocks UV; people without a lens (aphakia) report seeing some UV as whitish-blue; bee-vision set reuse · https://en.wikipedia.org/wiki/Aphakia
 - [scale-shock] Your microwave and your Wi-Fi use the same wave · both ~2.4 GHz, ~12 cm; why one cooks and one doesn't (power: ~1000 W vs ~0.1 W) · https://en.wikipedia.org/wiki/2.4_GHz_radio_use
+- [scale-shock] Earth sweeps up ~44 tonnes of space dust every day · NASA's figure, shown as trucks of dust; follow-up angle on the shooting-star video · https://solarsystem.nasa.gov/asteroids-comets-and-meteors/meteors-and-meteorites/in-depth.amp
+- [wild-story] The 1833 Leonid meteor storm · tens of thousands an hour, people thought the world was ending; it gave birth to meteor science · https://www.space.com/leonid-meteor-shower
+- [myth-bust] "Meteorites land red-hot" · most are cold to the touch: the outside melts but the inside stays deep-space cold · https://www.britannica.com/science/meteor/Introduction
