@@ -19,10 +19,8 @@
 - [big-question] What is an externality? · a bakery's smoke costs the neighbours, not the baker; pollution as a hidden price tag · https://en.wikipedia.org/wiki/Externality
 - [scale-shock] How long is all the DNA in your body? · ~2 m per cell, billions of km in total, unspooled across the solar system · https://en.wikipedia.org/wiki/Human_genome
 - [myth-bust] "Your body replaces every cell every 7 years" · some cells (most neurons, eye lens) stay for life; follow-up to the cells video · https://wis-wander.weizmann.ac.il/node/11205
-- [scale-shock] How big is a trillion? · seconds: a million = 11.6 days, a billion = 31.7 years, a trillion = ~31,700 years · https://en.wikipedia.org/wiki/Orders_of_magnitude_(time)
 - [scale-shock] How long would it take to walk the whole Great Wall? · 21,000+ km of wall, reuses the wall set · https://www.travelchinaguide.com/how-wide-is-great-wall-of-china.htm
 - [big-question] Why does the sky look black from space? · no air to scatter sunlight, reuses the station window set · https://www.space.com/human-made-structures-seen-from-space
-- [scale-shock] How big is a trillion? (money version) · $1 a second: millionaire in 11.6 days, billionaire in 31.7 years, trillionaire after ~31,700 years (back when people painted mammoths in caves); don't reuse the 'count one per second' framing too soon after the cells video · https://archeologie.culture.gouv.fr/chauvet/en/aurignacian-cave-art
 - [big-question] What is a sunk cost? · the half-eaten bad movie you keep watching because you paid; natural pair with opportunity cost, same plaza + cinema set · https://en.wikipedia.org/wiki/Sunk_cost
 - [scale-shock] A teaspoon of neutron star weighs as much as a mountain · follow-up to the sugar-cube video (same nuclear density, flipped around), reuses the cafe teaspoon + a 3D mountain · https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei
 - [big-question] Why don't you fall through the floor? · electrons repel + Pauli exclusion, shown as two crowds that refuse to share seats in the stadium set · https://bigthink.com/starts-with-a-bang/quantum-reason-solidity-matter/
@@ -59,3 +57,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [scale-shock] Earth sweeps up ~44 tonnes of space dust every day · NASA's figure, shown as trucks of dust; follow-up angle on the shooting-star video · https://solarsystem.nasa.gov/asteroids-comets-and-meteors/meteors-and-meteorites/in-depth.amp
 - [wild-story] The 1833 Leonid meteor storm · tens of thousands an hour, people thought the world was ending; it gave birth to meteor science · https://www.space.com/leonid-meteor-shower
 - [myth-bust] "Meteorites land red-hot" · most are cold to the touch: the outside melts but the inside stays deep-space cold · https://www.britannica.com/science/meteor/Introduction
+- [wild-story] Archimedes tried to count every grain of sand in the universe · The Sand Reckoner: he invented a way to name huge numbers ~2,200 years ago; runner-up 2026-11-14 · https://en.wikipedia.org/wiki/The_Sand_Reckoner
+- [big-question] Why is a million '10 lakh' in India? · how different countries group big numbers (lakh/crore vs million/billion); strong India share of the audience · https://en.wikipedia.org/wiki/Indian_numbering_system
+- [big-question] What does 'a company is worth a trillion' actually mean? · market cap = share price x shares, not cash in a vault; even-handed, no stock tips · https://en.wikipedia.org/wiki/Market_capitalization

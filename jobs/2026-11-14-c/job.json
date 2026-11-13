@@ -1,0 +1,1432 @@
+{
+ "id": "2026-11-14-c",
+ "title": "$1 a second: when are you a trillionaire? 💸",
+ "description": "Earn one dollar every second, nonstop: a million takes 11.6 days, a billion 31.7 years, and a trillion about 31,700 years, so you'd have had to start back when people painted mammoths on cave walls. A billion is a thousand millions; a trillion is a thousand billions.\n\nSources: unit arithmetic (1 year = 31,557,600 s); Chauvet Cave art dating (French Ministry of Culture); trillion-dollar companies count (Jon Erlichman via OfficeChai, 2026).",
+ "tags": [
+  "how big is a trillion",
+  "trillion",
+  "billion vs trillion",
+  "million billion trillion",
+  "money",
+  "economics",
+  "big numbers",
+  "personal finance",
+  "explained"
+ ],
+ "hashtags": [
+  "#money",
+  "#economics"
+ ],
+ "meta": {
+  "format": "scale-shock",
+  "topic": "how big is a trillion: $1 a second = millionaire in 11.6 days, billionaire in 31.7 years, trillionaire in ~31,700 years (cave-art era)",
+  "hook": "question",
+  "idea_source": "backlog (ideas.md 'How big is a trillion? money version') + viral-shaped (huge numbers made feelable, wallet framing) + trending (trillion-dollar companies)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://simple.wikipedia.org/wiki/Orders_of_magnitude_(time)",
+   "https://archeologie.culture.gouv.fr/chauvet/en/aurignacian-cave-art",
+   "https://www.britannica.com/place/Chauvet-Pont-dArc/Artists-of-the-cave",
+   "https://officechai.com/stories/from-having-no-trillion-dollar-companies-in-2017-there-are-now-17-in-2026/"
+  ],
+  "humour": {
+   "trend": "'___ arc' slang (my villain/era arc) bent into 'my trillionaire arc: ETA year 33,700'; dry deadpan close-up",
+   "beat": "deadpan",
+   "scene": 5
+  },
+  "claims": [
+   {
+    "claim": "1,000,000 s = 11.57 days",
+    "tag": "PROVEN",
+    "source": "arithmetic"
+   },
+   {
+    "claim": "1,000,000,000 s = 31.7 years",
+    "tag": "PROVEN",
+    "source": "arithmetic (365.25-day year)"
+   },
+   {
+    "claim": "1,000,000,000,000 s = ~31,700 years (start ~29,700 BC to finish 2026)",
+    "tag": "PROVEN",
+    "source": "arithmetic"
+   },
+   {
+    "claim": "people painted mammoths on cave walls 30,000+ years ago (Chauvet: ~36,000 and ~31,000 years ago)",
+    "tag": "PROVEN",
+    "source": "https://archeologie.culture.gouv.fr/chauvet/en/aurignacian-cave-art"
+   },
+   {
+    "claim": "more than a dozen companies worth over $1 trillion in 2026 (17 per Erlichman)",
+    "tag": "PROVEN",
+    "source": "https://officechai.com/stories/from-having-no-trillion-dollar-companies-in-2017-there-are-now-17-in-2026/"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "31,700 *YEARS?*",
+  "title_y": 0.15,
+  "title_size": 170,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffcf5a",
+  "glow_x": 0.5,
+  "glow_y": 0.55,
+  "glow_strength": 1.4,
+  "bg_saturation": 1.5,
+  "tint": [
+   "#1f4fb8",
+   "#f08a24"
+  ],
+  "tint_amount": 0.35,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-14-c/assets/plate_square_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-14-c/assets/jar_full.png",
+    "x": 0.78,
+    "y": 0.55,
+    "w": 0.32,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.42,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-14-c/assets.py",
+ "scenes": [
+  {
+   "say": "One dollar every second, nonstop. When are you a *trillionaire*?",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.2,
+      "zoom": 1.07,
+      "focus": [
+       0.52,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/plate_square_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5456,
+     "y": 0.6327,
+     "h": 0.3242,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.3115,
+     "y": 0.6754,
+     "h": 0.4299,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ],
+      [
+       "think",
+       2.9
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/coin.png",
+     "x": 0.72,
+     "y": 0.3,
+     "w": 0.06,
+     "enter": "fade",
+     "at": 0.0,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.72,
+       "y": 0.3,
+       "rot": 0
+      },
+      {
+       "t": 0.45,
+       "x": 0.72,
+       "y": 0.48,
+       "rot": 200,
+       "ease": "in"
+      }
+     ],
+     "until": 0.5,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/coin.png",
+     "x": 0.72,
+     "y": 0.3,
+     "w": 0.06,
+     "enter": "fade",
+     "at": 1.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.72,
+       "y": 0.3,
+       "rot": 0
+      },
+      {
+       "t": 0.45,
+       "x": 0.72,
+       "y": 0.48,
+       "rot": 200,
+       "ease": "in"
+      }
+     ],
+     "until": 1.5,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/coin.png",
+     "x": 0.72,
+     "y": 0.3,
+     "w": 0.06,
+     "enter": "fade",
+     "at": 2.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.72,
+       "y": 0.3,
+       "rot": 0
+      },
+      {
+       "t": 0.45,
+       "x": 0.72,
+       "y": 0.48,
+       "rot": 200,
+       "ease": "in"
+      }
+     ],
+     "until": 2.5,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/coin.png",
+     "x": 0.72,
+     "y": 0.3,
+     "w": 0.06,
+     "enter": "fade",
+     "at": 3.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.72,
+       "y": 0.3,
+       "rot": 0
+      },
+      {
+       "t": 0.45,
+       "x": 0.72,
+       "y": 0.48,
+       "rot": 200,
+       "ease": "in"
+      }
+     ],
+     "until": 3.5,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/coin.png",
+     "x": 0.72,
+     "y": 0.3,
+     "w": 0.06,
+     "enter": "fade",
+     "at": 4.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.72,
+       "y": 0.3,
+       "rot": 0
+      },
+      {
+       "t": 0.45,
+       "x": 0.72,
+       "y": 0.48,
+       "rot": 200,
+       "ease": "in"
+      }
+     ],
+     "until": 4.5,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='5' y='5' width='890' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='108' text-anchor='middle' font-size='92' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>$1 EVERY SECOND</text></svg>",
+     "x": 0.5,
+     "y": 0.13,
+     "w": 0.78,
+     "rotate": -2,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "TRILLIONAIRE *WHEN?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.24,
+     "size": 118,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "A million dollars? Just under *twelve days*.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8311,
+     "y": 0.6694,
+     "h": 0.1275,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2522,
+     "y": 0.6769,
+     "h": 0.1367,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "cheer",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "apron": "#f6efe2",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.7,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.4787,
+     "y": 0.6936,
+     "h": 0.16,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.0032,
+       "y": 0.6953,
+       "scale": 1.0125
+      },
+      {
+       "t": 1.0,
+       "x": 0.4787,
+       "y": 0.6936,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 1000000,
+     "decimals": 0,
+     "prefix": "$",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 120,
+     "color": "accent",
+     "at": 0.0,
+     "count_dur": 1.2,
+     "enter": "none",
+     "stroke": "#0b0f12",
+     "stroke_width": 7
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 140'><rect x='5' y='5' width='690' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='350' y='96' text-anchor='middle' font-size='76' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>11.6 DAYS</text></svg>",
+     "x": 0.5,
+     "y": 0.25,
+     "w": 0.5,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 1.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "A billion? *Thirty-two years*.",
+   "transition": "slide_up",
+   "caption_y": 0.66,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.6,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.47
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/plate_clock_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "counter",
+     "from": 1000000,
+     "to": 1000000000,
+     "decimals": 0,
+     "prefix": "$",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 100,
+     "color": "accent",
+     "at": 0.0,
+     "count_dur": 1.1,
+     "enter": "none",
+     "stroke": "#0b0f12",
+     "stroke_width": 7
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 220'><rect x='6' y='16' width='188' height='198' rx='16' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><rect x='6' y='16' width='188' height='54' rx='16' fill='#d9534f' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='16' r='9' fill='#1a1410'/><circle cx='145' cy='16' r='9' fill='#1a1410'/><text x='100' y='170' text-anchor='middle' font-size='92' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1995</text></svg>",
+     "x": 0.22,
+     "y": 0.27,
+     "w": 0.2,
+     "at": 0.3,
+     "enter": "pop",
+     "until": 1.4000000000000001,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.22,
+       "y": 0.27,
+       "rot": 0
+      },
+      {
+       "t": 0.35,
+       "x": 0.22,
+       "y": 0.27,
+       "rot": 0
+      },
+      {
+       "t": 1.1,
+       "x": -0.03,
+       "y": 0.52,
+       "rot": -40,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 220'><rect x='6' y='16' width='188' height='198' rx='16' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><rect x='6' y='16' width='188' height='54' rx='16' fill='#d9534f' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='16' r='9' fill='#1a1410'/><circle cx='145' cy='16' r='9' fill='#1a1410'/><text x='100' y='170' text-anchor='middle' font-size='92' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>2010</text></svg>",
+     "x": 0.78,
+     "y": 0.25,
+     "w": 0.2,
+     "at": 0.6,
+     "enter": "pop",
+     "until": 1.7000000000000002,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.78,
+       "y": 0.25,
+       "rot": 0
+      },
+      {
+       "t": 0.35,
+       "x": 0.78,
+       "y": 0.25,
+       "rot": 0
+      },
+      {
+       "t": 1.1,
+       "x": 1.03,
+       "y": 0.5,
+       "rot": 40,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 220'><rect x='6' y='16' width='188' height='198' rx='16' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><rect x='6' y='16' width='188' height='54' rx='16' fill='#d9534f' stroke='#1a1410' stroke-width='6'/><circle cx='55' cy='16' r='9' fill='#1a1410'/><circle cx='145' cy='16' r='9' fill='#1a1410'/><text x='100' y='170' text-anchor='middle' font-size='92' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>2026</text></svg>",
+     "x": 0.25,
+     "y": 0.3,
+     "w": 0.2,
+     "at": 0.9,
+     "enter": "pop",
+     "until": 2.0,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25,
+       "y": 0.3,
+       "rot": 0
+      },
+      {
+       "t": 0.35,
+       "x": 0.25,
+       "y": 0.3,
+       "rot": 0
+      },
+      {
+       "t": 1.1,
+       "x": -0.04999999999999999,
+       "y": 0.5,
+       "rot": -30,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 140'><rect x='5' y='5' width='690' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='350' y='96' text-anchor='middle' font-size='76' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>31.7 YEARS</text></svg>",
+     "x": 0.5,
+     "y": 0.235,
+     "w": 0.52,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "A trillion? About *thirty-one thousand, seven hundred years*.",
+   "caption": "A trillion? About *31,700 years*.",
+   "transition": "zoom",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8311,
+     "y": 0.6694,
+     "h": 0.1275,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.4
+      ],
+      [
+       "sad",
+       2.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.2522,
+     "y": 0.6769,
+     "h": 0.1367,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "surprised",
+       1.2
+      ],
+      [
+       "sad",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "apron": "#f6efe2",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.4787,
+     "y": 0.6936,
+     "h": 0.16,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "surprised",
+       1.2
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.2,
+       0.06,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 31700,
+     "decimals": 0,
+     "suffix": " YEARS",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 130,
+     "color": "danger",
+     "at": 0.3,
+     "count_dur": 1.6,
+     "enter": "zoom",
+     "sfx": "riser",
+     "stroke": "#0b0f12",
+     "stroke_width": 8
+    },
+    {
+     "type": "text",
+     "text": "FOR *$1,000,000,000,000*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.25,
+     "size": 78,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "To finish today, you'd have started when people painted *mammoths* in caves.",
+   "transition": "slide_left",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/plate_clock_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 560'><rect x='5' y='5' width='890' height='550' rx='34' fill='#8a6142' stroke='#1a1410' stroke-width='6'/><path d='M40,80 C200,40 380,90 520,60 C680,30 800,70 860,60 L860,520 C700,540 500,500 300,530 C180,545 90,520 40,520 Z' fill='#b98a5e'/><path d='M40,300 C160,280 260,330 420,300 M500,420 C620,400 760,440 860,410' stroke='#9c7148' stroke-width='6' fill='none'/><path d='M235,420 C228,360 236,300 262,262 C300,206 370,182 430,196 C470,160 548,150 600,182 C650,212 668,262 660,312 C690,340 700,390 690,450 C686,470 668,472 666,452 C670,410 660,380 640,360 C632,380 626,420 628,460 L596,462 C594,420 590,392 584,380 C560,392 520,396 500,392 L498,462 L466,462 L462,396 C420,398 360,396 330,388 L326,462 L294,462 C292,430 286,410 276,398 L270,462 L240,462 Z' fill='#3a2414'/><path d='M640,300 C700,330 720,380 690,420' stroke='#efe3c8' stroke-width='10' fill='none' stroke-linecap='round'/><circle cx='600' cy='240' r='7' fill='#b98a5e'/><path d='M260,240 C300,200 380,190 460,200' stroke='#a2402a' stroke-width='9' fill='none' stroke-dasharray='4 14' stroke-linecap='round'/><g fill='#a2402a' opacity='0.85'><ellipse cx='130' cy='190' rx='34' ry='40'/><rect x='104' y='120' width='12' height='45' rx='6'/><rect x='121' y='110' width='12' height='50' rx='6'/><rect x='138' y='115' width='12' height='48' rx='6'/><rect x='154' y='130' width='11' height='40' rx='6'/><rect x='86' y='185' width='30' height='12' rx='6' transform='rotate(-30 100 190)'/></g><text x='450' y='520' text-anchor='middle' font-size='52' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>CAVE ART, 30,000+ YEARS AGO</text></svg>",
+     "x": 0.5,
+     "y": 0.27,
+     "w": 0.86,
+     "enter": "slide_up",
+     "at": 0.15,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 130'><rect x='5' y='5' width='590' height='120' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='300' y='88' text-anchor='middle' font-size='58' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>START: ~29,700 BC</text></svg>",
+     "x": 0.5,
+     "y": 0.73,
+     "w": 0.6,
+     "rotate": -2,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/plate_square_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "my trillionaire *arc*\nETA: year 33,700",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "A billion is a thousand millions. A trillion? A thousand *billions*.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/plate_square_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.5456,
+     "y": 0.6327,
+     "h": 0.3242,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.5
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.3115,
+     "y": 0.6754,
+     "h": 0.4299,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 380'><rect x='5' y='5' width='890' height='370' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='52' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>DRAWN TO SCALE</text><text x='60' y='150' font-size='40' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>MILLION</text><rect x='290' y='118' width='1.5' height='40' fill='#6fc3c0'/><text x='310' y='150' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>(invisible)</text><text x='60' y='240' font-size='40' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>BILLION</text><rect x='290' y='208' width='4' height='40' fill='#f2b04a' stroke='#1a1410' stroke-width='1'/><text x='310' y='240' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>(a sliver)</text><text x='60' y='330' font-size='40' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>TRILLION</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.86,
+     "enter": "slide_down",
+     "at": 0.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 44'><rect x='2' y='2' width='556' height='40' rx='6' fill='#d9534f' stroke='#1a1410' stroke-width='4'/></svg>",
+     "x": 0.614,
+     "y": 0.269,
+     "w": 0.535,
+     "enter": "none",
+     "at": 2.6,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.347,
+       "sx": 0.0
+      },
+      {
+       "t": 1.0,
+       "x": 0.614,
+       "sx": 1.0,
+       "ease": "linear"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Yet more than a dozen companies are now worth over a *trillion*.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.06,
+      "focus": [
+       0.55,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/plate_square_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8311,
+     "y": 0.6694,
+     "h": 0.1275,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.5
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.6,
+       0.04,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.2522,
+     "y": 0.6769,
+     "h": 0.1367,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ],
+      [
+       "surprised",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "apron": "#f6efe2",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.4787,
+     "y": 0.6936,
+     "h": 0.16,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/coin_pile.png",
+     "x": 0.5,
+     "y": 0.235,
+     "w": 0.3,
+     "enter": "drop",
+     "at": 0.4,
+     "sfx": "boom"
+    },
+    {
+     "type": "text",
+     "text": "12+ COMPANIES",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 140'><rect x='5' y='5' width='690' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='350' y='94' text-anchor='middle' font-size='68' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>WORTH $1T+</text></svg>",
+     "x": 0.5,
+     "y": 0.335,
+     "w": 0.5,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 1.7,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "So keep collecting. See you in the year *thirty-three thousand, seven hundred*.",
+   "caption": "So keep collecting. See you in the year *33,700*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/plate_square_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ],
+      [
+       "smirk",
+       3.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-c/assets/coin.png",
+     "x": 0.76,
+     "y": 0.3,
+     "w": 0.14,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "ding",
+     "loop": "pulse",
+     "loop_amp": 0.05
+    },
+    {
+     "type": "text",
+     "text": "YEAR *33,700*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.17,
+     "size": 130,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.6
+    }
+   ]
+  }
+ ]
+}
