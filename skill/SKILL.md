@@ -192,7 +192,8 @@ kind of video, not a to-do list.
 **c. Verify.** Check every factual claim with a search. Drop anything you can't confirm, and put the URLs in `meta.sources`.
 
 **d. Script.** The hook lands in the first 1.5 s and frame 0 must already show it (`enter: none`, or `at: 0` with a fast pop).
-One idea per scene, each with its own visual, about 2.6 spoken words per second (30 s ≈ 75 words). End on a payoff, or a line that
+One idea per scene, each with its own visual, about 2.6 spoken words per second (30 s ≈ 75 words); Shorts are 25-35 s
+(65-90 words), with the most surprising fact in the first 2 s and no warm-up lines. End on a payoff, or a line that
 loops back to the start. Write it in the channel's voice. Clickbait must still be true.
 Plan the visuals scene by scene (which 3D shot and which infographic text is on screen while each line is spoken; the analogy
 object for every abstract idea), and the comic beat: which line sets it up, which
@@ -211,7 +212,7 @@ card is readable and Ved's reaction face reads clearly. Fix and repeat.
 
 **g. Render.** Run `python -m autopilot render jobs/<id>/job.json` (assets are cached, so this is 2–3 min; if the job has animated
 `blender` shots, run it with `nohup ... > /tmp/render.log 2>&1 &` and poll until it prints `done`). Check `out/render.json`: the
-length must be ≤ 58 s. Then pull 3–4 frames from `out/final.mp4` with ffmpeg and look at them.
+length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). Then pull 3–4 frames from `out/final.mp4` with ffmpeg and look at them.
 
 **h. Publish.**
 1. Run `scripts/push_media.sh jobs/<id>/out/final.mp4 <id>`. It prints the public URL and waits until the URL serves the file.
