@@ -89,7 +89,7 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   - the middle: Ved **lives inside the 3D world**, he is never just pasted over it. He walks in from the side (`keys` with
     `"walk": true`), talks to camera in close-ups ("Hey, ever wondered why..."), jumps when something surprising happens
     (`hops`), points at and reacts to props (`acting`), stands on the set's floor line with his moving shadow. Cut between
-    wide / medium / close-up angles every 3–5 s (8–14 cuts in a 40–50 s video), with gentle camera pushes (`camera.keys`);
+    wide / medium / close-up angles every 2–4 s (8–12 cuts in a 25–35 s video), with gentle camera pushes (`camera.keys`);
   - 2D on top: at least one flat infographic panel per video (cream card, icons, before/after numbers, arrows, built as inline
     SVG with plain-ASCII text), bold Anton headlines with `*accent*` words, counters, pop/slide entrances with a sfx each, and the
     comic beat card.
@@ -193,7 +193,8 @@ kind of video, not a to-do list.
 
 **d. Script.** The hook lands in the first 1.5 s and frame 0 must already show it (`enter: none`, or `at: 0` with a fast pop).
 One idea per scene, each with its own visual, about 2.6 spoken words per second (30 s ≈ 75 words); Shorts are 25-35 s
-(65-90 words), with the most surprising fact in the first 2 s and no warm-up lines. End on a payoff, or a line that
+(65-90 words), with the most surprising fact in the first 2 s and no warm-up lines. Frame money topics around the viewer's own
+wallet ("Why does the bank pay YOU..."), never as an abstract term. End on a payoff, or a line that
 loops back to the start. Write it in the channel's voice. Clickbait must still be true.
 Plan the visuals scene by scene (which 3D shot and which infographic text is on screen while each line is spoken; the analogy
 object for every abstract idea), and the comic beat: which line sets it up, which
