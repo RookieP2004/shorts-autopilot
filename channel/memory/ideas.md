@@ -28,7 +28,6 @@
 - [myth-bust] "Your appendix is useless" · vestigial-organ myth; it likely stores gut bacteria, pairs with the goosebump reflex · https://en.wikipedia.org/wiki/Appendix_(anatomy)
 - [myth-bust] "Hair and nails keep growing after death" · runner-up 2026-11-12: skin dries and pulls back, so they only look longer · https://uamshealth.com/medical-myths/do-a-persons-hair-and-fingernails-continue-to-grow-after-death
 - [big-question] Why do cows (and bulls) see the world in two colours? · follow-up angle on the bull video: dichromat vision vs ours, reuses the ranch arena set · https://www.mentalfloss.com/article/28488/what-really-happens-if-you-wear-red-front-bull
-- [big-question] Why is gold yellow? · relativity: gold's fast inner electrons shift its colour; pairs with the gold-foil chapter of the 2026-11-14-L Deep Dive · https://en.wikipedia.org/wiki/Relativistic_quantum_chemistry
 - [what-if] What if the Pauli exclusion principle switched off? · Dyson & Lenard 1967: matter would collapse; grounded what-if from the Deep Dive · https://web.math.ku.dk/~solovej/science-news.html
 
 ## Examples of the new kinds (owner, 2026-11-13)
@@ -62,3 +61,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [wild-story] Semmelweis begged doctors to wash their hands (1847) · childbed-fever deaths fell from ~10% to ~1-2% after handwashing, yet he was mocked · https://en.wikipedia.org/wiki/Ignaz_Semmelweis
 - [wild-story] Galvani's twitching frog legs (1780s) · how a dead frog's leg revealed that nerves run on electricity · https://en.wikipedia.org/wiki/Luigi_Galvani
 - [wild-story] Fleming's mouldy dish: what's true and what's legend · penicillin took ~12 more years and Florey & Chain to become a medicine · https://en.wikipedia.org/wiki/History_of_penicillin
+- [big-question] Why is mercury a liquid? · relativity again: its 6s electrons hug the nucleus so atoms barely bond (melting point -39 C); pairs with the gold video · https://www.scientificamerican.com/blog/the-curious-wavefunction/what-does-mercury-being-liquid-at-room-temperature-have-to-do-with-einsteins-theory-of-relativity/
+- [big-question] Why is copper orange? · the other coloured metal: its d-electrons absorb blue-green without needing relativity; contrast with gold · https://en.wikipedia.org/wiki/Copper
+- [what-if] What if light were slow? · grounded what-if on how relativity would show up in daily life (Mr Tompkins style), tagged SPECULATION · https://en.wikipedia.org/wiki/Mr_Tompkins
