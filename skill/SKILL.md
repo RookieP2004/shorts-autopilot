@@ -225,7 +225,9 @@ length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). The
    Read the video id, then run `python -m autopilot budget --add upload --ref <slot id>`.
    If the call fails (an error costs 0 tasks), retry once. If it fails again, stop and notify the owner.
    Never upload twice: before a retry, check `log.md`. Use *YouTube: Find Video* (2 tasks) only if the first call timed out with no clear result.
-4. **Thumbnail** (Shorts too: it shows in search, on the channel page and in suggestions, not in the swipe feed). During the trial,
+4. **Thumbnail** (Shorts too: it shows in search, on the channel page and in suggestions, not in the swipe feed). Do this step
+   **last**, after steps 5-6 and at least 10 minutes after the upload (`sleep 600` if needed): a thumbnail set while YouTube is
+   still processing the video gets replaced by its auto frame (seen 2026-11-13). During the trial,
    or if `python -m autopilot budget --spare` shows SPARE >= 1: add a `thumbnail` to job.json in the house look (the long-video
    rules in 3d step 6, vertical): `bg` = a clean plate of the set (no text, no Ved) with the key townspeople and props, `fg` = Ved
    big (about `h` 0.95, `y` 0.93, `x` 0.5, a strong face such as "surprised", `acting: "none"`, `talk: false`, `ground: false`)
