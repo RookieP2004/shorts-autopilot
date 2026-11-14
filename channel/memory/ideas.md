@@ -22,15 +22,14 @@
 - [scale-shock] How long would it take to walk the whole Great Wall? · 21,000+ km of wall, reuses the wall set · https://www.travelchinaguide.com/how-wide-is-great-wall-of-china.htm
 - [big-question] Why does the sky look black from space? · no air to scatter sunlight, reuses the station window set · https://www.space.com/human-made-structures-seen-from-space
 - [big-question] What is a sunk cost? · the half-eaten bad movie you keep watching because you paid; natural pair with opportunity cost, same plaza + cinema set · https://en.wikipedia.org/wiki/Sunk_cost
-- [scale-shock] A teaspoon of neutron star weighs as much as a mountain · follow-up to the sugar-cube video (same nuclear density, flipped around), reuses the cafe teaspoon + a 3D mountain · https://openstax.org/books/university-physics-volume-3/pages/10-1-properties-of-nuclei
-- [big-question] Why don't you fall through the floor? · electrons repel + Pauli exclusion, shown as two crowds that refuse to share seats in the stadium set · https://bigthink.com/starts-with-a-bang/quantum-reason-solidity-matter/
-- [myth-bust] "Atoms touch each other" · you never 'touch' anything in the everyday sense; the push is electromagnetic · https://www.fnal.gov/pub/today/archive/archive_2013/today13-12-06_NutshellReadMore.html
 
 - [big-question] Why does music give you chills? · frisson: the same goosebump alarm fired by a song; follow-up to the goosebumps video · https://www.health.harvard.edu/blog/wondering-about-goosebumps-of-course-you-are-2020080320688
 - [big-question] Can cold make you grow more hair? · 2020 Harvard mouse study: the goosebump nerve also wakes hair stem cells · https://neurosciencenews.com/goosebumps-reason-16669/
 - [myth-bust] "Your appendix is useless" · vestigial-organ myth; it likely stores gut bacteria, pairs with the goosebump reflex · https://en.wikipedia.org/wiki/Appendix_(anatomy)
 - [myth-bust] "Hair and nails keep growing after death" · runner-up 2026-11-12: skin dries and pulls back, so they only look longer · https://uamshealth.com/medical-myths/do-a-persons-hair-and-fingernails-continue-to-grow-after-death
 - [big-question] Why do cows (and bulls) see the world in two colours? · follow-up angle on the bull video: dichromat vision vs ours, reuses the ranch arena set · https://www.mentalfloss.com/article/28488/what-really-happens-if-you-wear-red-front-bull
+- [big-question] Why is gold yellow? · relativity: gold's fast inner electrons shift its colour; pairs with the gold-foil chapter of the 2026-11-14-L Deep Dive · https://en.wikipedia.org/wiki/Relativistic_quantum_chemistry
+- [what-if] What if the Pauli exclusion principle switched off? · Dyson & Lenard 1967: matter would collapse; grounded what-if from the Deep Dive · https://web.math.ku.dk/~solovej/science-news.html
 
 ## Examples of the new kinds (owner, 2026-11-13)
 These are only **examples of the type** of video the owner means, not a list that must be made. Use them as inspiration for
