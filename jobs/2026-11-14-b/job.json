@@ -1,0 +1,1513 @@
+{
+ "id": "2026-11-14-b",
+ "title": "He drank bacteria to win an argument 🦠",
+ "description": "In 1984, Australian doctor Barry Marshall drank a broth of Helicobacter pylori to prove that a bacterium, not stress, causes stomach ulcers. Within days he had nausea and, by day eight, an inflamed stomach. He and Robin Warren won the 2005 Nobel Prize; ulcers became curable with antibiotics. (A story, not medical advice.)\n\nSources: Nobel Assembly 2005 announcement (via Al Jazeera); Britannica 'Barry J. Marshall'; Wikipedia 'Barry Marshall'.",
+ "tags": [
+  "barry marshall",
+  "helicobacter pylori",
+  "h pylori",
+  "stomach ulcer",
+  "nobel prize",
+  "self experiment",
+  "history of medicine",
+  "science story",
+  "explained"
+ ],
+ "hashtags": [
+  "#science",
+  "#history"
+ ],
+ "meta": {
+  "format": "wild-story",
+  "topic": "Barry Marshall drank H. pylori (1984) to prove bacteria, not stress, cause ulcers; ammonia shield; 90% of duodenal ulcers; Nobel 2005",
+  "hook": "story",
+  "idea_source": "viral-shaped (crazy true self-experiment, one sentence hook) + unique (first wild-story on the channel; few Shorts tell it with the acid-survival mechanism)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Barry_Marshall",
+   "https://www.britannica.com/EBchecked/topic/366546/Barry-J-Marshall",
+   "https://www.aljazeera.com/amp/news/2005/10/4/australians-win-nobel-for-medicine",
+   "https://www.jove.com/science-education/v/40832/peptic-ulcer"
+  ],
+  "humour": {
+   "trend": "'What's up brah?' (calm face-off vs odds you can't beat; Nov 2026) bent into 'the whole medical world vs one guy'; side-eye cut-away",
+   "beat": "side_eye",
+   "scene": 4
+  },
+  "claims": [
+   {
+    "claim": "Marshall drank a culture of H. pylori in 1984",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Barry_Marshall"
+   },
+   {
+    "claim": "ulcers were blamed mainly on stress, spicy food and excess acid",
+    "tag": "PROVEN",
+    "source": "https://www.britannica.com/EBchecked/topic/366546/Barry-J-Marshall"
+   },
+   {
+    "claim": "Marshall and Warren found the bacterium in almost all ulcer/gastritis patients (100-patient study)",
+    "tag": "PROVEN",
+    "source": "https://www.britannica.com/EBchecked/topic/366546/Barry-J-Marshall"
+   },
+   {
+    "claim": "day 3 nausea, day 8 endoscopy showed massive inflammation (gastritis)",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Barry_Marshall"
+   },
+   {
+    "claim": "H. pylori survives acid by making ammonia (urease) that neutralises acid around it",
+    "tag": "PROVEN",
+    "source": "https://www.jove.com/science-education/v/40832/peptic-ulcer"
+   },
+   {
+    "claim": "causes more than 90% of duodenal ulcers; curable with antibiotics + acid inhibitors",
+    "tag": "PROVEN",
+    "source": "https://www.aljazeera.com/amp/news/2005/10/4/australians-win-nobel-for-medicine"
+   },
+   {
+    "claim": "Nobel Prize 2005, with Robin Warren",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Barry_Marshall"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "HE DRANK *IT?*",
+  "title_y": 0.15,
+  "title_size": 190,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffcf5a",
+  "glow_x": 0.5,
+  "glow_y": 0.55,
+  "glow_strength": 1.4,
+  "bg_saturation": 1.5,
+  "tint": [
+   "#1f8f6a",
+   "#f08a24"
+  ],
+  "tint_amount": 0.35,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-14-b/assets/plate_lab_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-14-b/assets/beaker.png",
+    "x": 0.8,
+    "y": 0.55,
+    "w": 0.2,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-14-b/assets/bug.png",
+    "x": 0.2,
+    "y": 0.36,
+    "w": 0.3,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.45,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-14-b/assets.py",
+ "scenes": [
+  {
+   "say": "This doctor drank a glass of *bacteria*. On purpose.",
+   "caption_y": 0.34,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.3383,
+     "y": 0.6429,
+     "h": 0.3883,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "cheer",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48c",
+       "build": "regular",
+       "hair": [
+        "#6b4a2a",
+        "curly"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.6697,
+     "y": 0.6844,
+     "h": 0.5346,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "surprised",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "HE DRANK *BACTERIA*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 118,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 140'><rect x='5' y='5' width='690' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='350.0' y='96' text-anchor='middle' font-size='76' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PERTH, 1984</text></svg>",
+     "x": 0.5,
+     "y": 0.235,
+     "w": 0.46,
+     "rotate": -3,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/beaker.png",
+     "x": 0.345,
+     "y": 0.575,
+     "w": 0.1,
+     "enter": "none"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "In 1984, ulcers were blamed on *stress and acid*.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3787,
+     "y": 0.6163,
+     "h": 0.2097,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "skirt"
+       ],
+       "shoes": "#25262b",
+       "necklace": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.5231,
+     "y": 0.63,
+     "h": 0.2399,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "shrug",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#2a2320",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#34425c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.188,
+     "y": 0.6341,
+     "h": 0.2488,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a27a",
+       "build": "round",
+       "hair": [
+        "#9aa0a8",
+        "bald"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7214,
+     "y": 0.6602,
+     "h": 0.306,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48c",
+       "build": "regular",
+       "hair": [
+        "#6b4a2a",
+        "curly"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 340'><rect x='5' y='5' width='890' height='330' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='48' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>1984: WHAT CAUSES AN ULCER?</text><g transform='translate(150,175)'><ellipse cx='0' cy='0' rx='70' ry='42' fill='#9aa0a8' stroke='#1a1410' stroke-width='5'/><ellipse cx='-40' cy='10' rx='40' ry='30' fill='#9aa0a8' stroke='#1a1410' stroke-width='5'/><path d='M-6,30 l-18,40 l20,-6 l-12,36' stroke='#f2b04a' stroke-width='9' fill='none' stroke-linejoin='round'/></g><text x='150' y='300' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>STRESS</text><text x='300' y='200' text-anchor='middle' font-size='90' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>+</text><path d='M450,115 C490,175 510,200 510,225 C510,262 482,282 450,282 C418,282 390,262 390,225 C390,200 410,175 450,115 Z' fill='#c9e04a' stroke='#1a1410' stroke-width='5'/><text x='450' y='300' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>ACID</text><text x='590' y='200' text-anchor='middle' font-size='90' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>=</text><path d='M700,120 C780,110 820,160 800,210 C780,265 720,290 690,250 C670,222 700,200 690,175 C680,150 660,125 700,120 Z' fill='#e8848c' stroke='#1a1410' stroke-width='5'/><circle cx='745' cy='200' r='16' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><text x='745' y='300' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>ULCER</text></svg>",
+     "x": 0.5,
+     "y": 0.205,
+     "w": 0.86,
+     "enter": "slide_down",
+     "at": 0.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 170'><rect x='10' y='10' width='740' height='150' rx='18' fill='none' stroke='#d9534f' stroke-width='14'/><text x='380.0' y='124' text-anchor='middle' font-size='78' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>EVERYONE KNEW</text></svg>",
+     "x": 0.6,
+     "y": 0.335,
+     "w": 0.5,
+     "rotate": -8,
+     "enter": "zoom",
+     "at": 1.9,
+     "sfx": "boom"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "But Marshall and Warren kept finding one *spiral bug* in ulcer patients.",
+   "transition": "zoom",
+   "caption_y": 0.46,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.8,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_stomach_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.5651,
+     "y": 0.6389,
+     "h": 0.2272,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ],
+      [
+       "surprised",
+       3.8
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2027,
+       "y": 0.6488,
+       "scale": 1.0792
+      },
+      {
+       "t": 1.2,
+       "x": 0.5651,
+       "y": 0.6389,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "H. *PYLORI*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 130,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/bug.png",
+     "x": 0.5,
+     "y": 0.235,
+     "w": 0.52,
+     "enter": "zoom",
+     "at": 0.9,
+     "sfx": "whoosh",
+     "loop": "wiggle",
+     "loop_amp": 0.02
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.33,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "click"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "*Nobody* believed them.",
+   "transition": "cut",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     },
+     {
+      "t": 1.6,
+      "zoom": 1.12,
+      "focus": [
+       0.55,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "wave",
+     "x": 0.3787,
+     "y": 0.6163,
+     "h": 0.2097,
+     "enter": "none",
+     "acting": [
+      [
+       "wave",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "skirt"
+       ],
+       "shoes": "#25262b",
+       "necklace": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.5231,
+     "y": 0.63,
+     "h": 0.2399,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#2a2320",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#34425c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.188,
+     "y": 0.6341,
+     "h": 0.2488,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a27a",
+       "build": "round",
+       "hair": [
+        "#9aa0a8",
+        "bald"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.7214,
+     "y": 0.6602,
+     "h": 0.306,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48c",
+       "build": "regular",
+       "hair": [
+        "#6b4a2a",
+        "curly"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "*NOPE.*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 170,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.15,
+     "sfx": "pop"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "dur": 1.5,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.35,
+    "who": "ved",
+    "text": "the whole medical world vs one guy:\n*what's up brah?*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "So he drank it. Day three: *nausea*.",
+   "transition": "slide_left",
+   "caption_y": 0.355,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.1,
+      "focus": [
+       0.4,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.3383,
+     "y": 0.6429,
+     "h": 0.3883,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "sad",
+       1.9
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48c",
+       "build": "regular",
+       "hair": [
+        "#6b4a2a",
+        "curly"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.6697,
+     "y": 0.6844,
+     "h": 0.5346,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "serious",
+       1.8
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/beaker.png",
+     "x": 0.345,
+     "y": 0.575,
+     "w": 0.1,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.345,
+       "y": 0.575,
+       "rot": 0
+      },
+      {
+       "t": 0.5,
+       "x": 0.35,
+       "y": 0.49,
+       "rot": -70
+      },
+      {
+       "t": 1.2,
+       "x": 0.35,
+       "y": 0.49,
+       "rot": -70
+      },
+      {
+       "t": 1.5,
+       "x": 0.345,
+       "y": 0.575,
+       "rot": 0
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*GULP.*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 150,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 140'><rect x='5' y='5' width='690' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='350.0' y='96' text-anchor='middle' font-size='76' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>DAY 3: NAUSEA</text></svg>",
+     "x": 0.5,
+     "y": 0.255,
+     "w": 0.6,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 1.5,
+     "sfx": "pop"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Day eight: an *inflamed* stomach.",
+   "transition": "zoom",
+   "caption_y": 0.46,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.6,
+      "zoom": 1.1,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_stomach_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "shape",
+     "shape": "rect",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.78,
+     "color": "#d9534f",
+     "opacity": 0.0,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "opacity": 0.0
+      },
+      {
+       "t": 0.8,
+       "opacity": 0.34
+      },
+      {
+       "t": 1.4,
+       "opacity": 0.22
+      },
+      {
+       "t": 2.0,
+       "opacity": 0.34
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 140'><rect x='5' y='5' width='890' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450.0' y='96' text-anchor='middle' font-size='84' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>DAY 8: INFLAMED</text></svg>",
+     "x": 0.5,
+     "y": 0.16,
+     "w": 0.86,
+     "rotate": 2,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "boom"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.26,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "click"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "It survives by brewing *ammonia*, a chemical umbrella.",
+   "transition": "slide_up",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_stomach_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 450'><rect x='5' y='5' width='890' height='440' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='66' text-anchor='middle' font-size='46' fill='#34425c' font-family='Anton, DejaVu Sans, sans-serif'>HOW IT SURVIVES THE ACID</text><g fill='#c9e04a' stroke='#1a1410' stroke-width='4'><path d='M220,95 c12,18 18,26 18,34 a18,18 0 0 1 -36,0 c0,-8 6,-16 18,-34z'/><path d='M350,85 c12,18 18,26 18,34 a18,18 0 0 1 -36,0 c0,-8 6,-16 18,-34z'/><path d='M560,90 c12,18 18,26 18,34 a18,18 0 0 1 -36,0 c0,-8 6,-16 18,-34z'/><path d='M690,95 c12,18 18,26 18,34 a18,18 0 0 1 -36,0 c0,-8 6,-16 18,-34z'/></g><path d='M210,250 C220,160 330,135 450,135 C570,135 680,160 690,250 C650,232 610,232 570,250 C530,232 490,232 450,250 C410,232 370,232 330,250 C290,232 250,232 210,250 Z' fill='#6fc3c0' stroke='#1a1410' stroke-width='6'/><text x='450' y='215' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>AMMONIA (NH3)</text><line x1='450' y1='250' x2='450' y2='330' stroke='#1a1410' stroke-width='6'/><path d='M330,350 c20,-30 40,30 60,0 c20,-30 40,30 60,0 c20,-30 40,30 60,0 c20,-30 40,30 60,0' stroke='#7cc35a' stroke-width='22' fill='none' stroke-linecap='round'/><path d='M570,350 c25,-10 45,10 70,-5 M570,350 c25,5 45,25 70,15' stroke='#4f8f3a' stroke-width='6' fill='none'/><text x='450' y='420' text-anchor='middle' font-size='40' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>it neutralises the acid around itself</text></svg>",
+     "x": 0.5,
+     "y": 0.25,
+     "w": 0.88,
+     "enter": "slide_down",
+     "at": 0.1,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.74,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/bug.png",
+     "x": 0.5,
+     "y": 0.49,
+     "w": 0.34,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop",
+     "loop": "wiggle",
+     "loop_amp": 0.03
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "It causes over ninety percent of duodenal ulcers, cured with *antibiotics*.",
+   "caption": "It causes over *90%* of duodenal ulcers, cured with *antibiotics*.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.06,
+      "focus": [
+       0.55,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3787,
+     "y": 0.6163,
+     "h": 0.2097,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "cheer",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "skirt"
+       ],
+       "shoes": "#25262b",
+       "necklace": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.3,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5231,
+     "y": 0.63,
+     "h": 0.2399,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#2a2320",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#34425c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.188,
+     "y": 0.6341,
+     "h": 0.2488,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.2
+      ],
+      [
+       "happy",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a27a",
+       "build": "round",
+       "hair": [
+        "#9aa0a8",
+        "bald"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7214,
+     "y": 0.6602,
+     "h": 0.306,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "cheer",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48c",
+       "build": "regular",
+       "hair": [
+        "#6b4a2a",
+        "curly"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.5,
+       0.07,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 90,
+     "decimals": 0,
+     "prefix": "OVER ",
+     "suffix": "%",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 140,
+     "color": "accent",
+     "at": 0.2,
+     "count_dur": 1.3,
+     "enter": "none",
+     "stroke": "#0b0f12",
+     "stroke_width": 8
+    },
+    {
+     "type": "text",
+     "text": "OF DUODENAL ULCERS",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.215,
+     "size": 74,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.29,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "click"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Then, a Nobel Prize. Sometimes you win by *drinking the evidence*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.5,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ],
+      [
+       "smirk",
+       3.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/medal.png",
+     "x": 0.74,
+     "y": 0.3,
+     "w": 0.2,
+     "enter": "drop",
+     "at": 0.1,
+     "sfx": "ding"
+    },
+    {
+     "type": "text",
+     "text": "NOBEL, *2005*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 130,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.1
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  }
+ ]
+}

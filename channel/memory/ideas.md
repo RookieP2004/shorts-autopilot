@@ -60,3 +60,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [wild-story] Archimedes tried to count every grain of sand in the universe · The Sand Reckoner: he invented a way to name huge numbers ~2,200 years ago; runner-up 2026-11-14 · https://en.wikipedia.org/wiki/The_Sand_Reckoner
 - [big-question] Why is a million '10 lakh' in India? · how different countries group big numbers (lakh/crore vs million/billion); strong India share of the audience · https://en.wikipedia.org/wiki/Indian_numbering_system
 - [big-question] What does 'a company is worth a trillion' actually mean? · market cap = share price x shares, not cash in a vault; even-handed, no stock tips · https://en.wikipedia.org/wiki/Market_capitalization
+- [wild-story] Semmelweis begged doctors to wash their hands (1847) · childbed-fever deaths fell from ~10% to ~1-2% after handwashing, yet he was mocked · https://en.wikipedia.org/wiki/Ignaz_Semmelweis
+- [wild-story] Galvani's twitching frog legs (1780s) · how a dead frog's leg revealed that nerves run on electricity · https://en.wikipedia.org/wiki/Luigi_Galvani
+- [wild-story] Fleming's mouldy dish: what's true and what's legend · penicillin took ~12 more years and Florey & Chain to become a medicine · https://en.wikipedia.org/wiki/History_of_penicillin
