@@ -48,7 +48,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 
 - [frontier] Could we ever really talk to Voyager after it dies? · its power runs out around the 2030s; what the Deep Space Network can still hear, and the Golden Record as the last message · https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/
 - [what-if] What if you rode a light sail at 20% of light speed? · time dilation is tiny (~2%), but a dust grain hits like a bomb; grounded, tagged speculation · https://www.scientificamerican.com/article/the-quiet-demise-of-breakthrough-starshot-a-billionaires-interstellar/
-- [scale-shock] Mars and Jupiter "touching" on Nov 15-16 are ~600 million km apart · conjunctions are a line-of-sight trick · https://www.sciencedaily.com/releases/2026/11/261105224547.htm
 - [myth-bust] "Mantis shrimp see the most colours" · 12-16 photoreceptors, yet tests show they tell colours apart worse than us; pairs with the Wi-Fi/spectrum video · https://www.nature.com/articles/nature.2014.14578
 - [what-if] What if your eyes saw ultraviolet? · the lens blocks UV; people without a lens (aphakia) report seeing some UV as whitish-blue; bee-vision set reuse · https://en.wikipedia.org/wiki/Aphakia
 - [scale-shock] Your microwave and your Wi-Fi use the same wave · both ~2.4 GHz, ~12 cm; why one cooks and one doesn't (power: ~1000 W vs ~0.1 W) · https://en.wikipedia.org/wiki/2.4_GHz_radio_use
@@ -64,3 +63,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [big-question] Why is mercury a liquid? · relativity again: its 6s electrons hug the nucleus so atoms barely bond (melting point -39 C); pairs with the gold video · https://www.scientificamerican.com/blog/the-curious-wavefunction/what-does-mercury-being-liquid-at-room-temperature-have-to-do-with-einsteins-theory-of-relativity/
 - [big-question] Why is copper orange? · the other coloured metal: its d-electrons absorb blue-green without needing relativity; contrast with gold · https://en.wikipedia.org/wiki/Copper
 - [what-if] What if light were slow? · grounded what-if on how relativity would show up in daily life (Mr Tompkins style), tagged SPECULATION · https://en.wikipedia.org/wiki/Mr_Tompkins
+- [myth-bust] "Planets twinkle like stars" · they mostly don't: a planet is a tiny disc, a star a point, so air wobble averages out; pairs with the Mars-Jupiter video, runner-up 2026-11-15 · https://earthsky.org/astronomy-essentials/why-dont-planets-twinkle-as-stars-do/
+- [what-if] What if Jupiter were a star? · it would need ~80x its mass to fuse hydrogen; what our sky would look like; tagged SPECULATION · https://en.wikipedia.org/wiki/Jupiter
+- [scale-shock] The sunlight on your face is 8 minutes old · light-time made visible, from the Moon (1.3 s) to Neptune (~4 h) · https://en.wikipedia.org/wiki/Light-second

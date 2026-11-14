@@ -1,0 +1,952 @@
+{
+ "id": "2026-11-15-c",
+ "title": "Mars and Jupiter 'touching'? 600 million km apart 🪐",
+ "description": "This weekend Mars and Jupiter look about one finger-width apart before sunrise (closest on 16 Nov 2026, ~1.2 degrees). But Mars is ~196 million km from us and Jupiter ~790 million km: about 600 million km apart, just on the same line of sight. Their light left ~11 and ~44 minutes ago.\n\nSources: Telescope Advisor and Sky at Night on the Nov 2026 conjunction; EarthSky on measuring the sky with your hand.",
+ "tags": [
+  "mars and jupiter",
+  "conjunction",
+  "planetary conjunction",
+  "mars jupiter conjunction 2026",
+  "night sky",
+  "astronomy",
+  "space",
+  "science explained"
+ ],
+ "hashtags": [
+  "#space",
+  "#astronomy"
+ ],
+ "meta": {
+  "format": "myth-bust",
+  "topic": "Mars-Jupiter conjunction (Nov 2026): 1.2 deg apart in the sky, ~600 million km apart in space; line of sight, light-time 11 vs 44 min",
+  "hook": "myth-bust",
+  "idea_source": "trending + viral: the Mars-Jupiter conjunction peaks 15-16 Nov 2026 (in the news this week); 'planets touching' is a common misreading; idea from ideas.md",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.telescopeadvisor.com/mars-jupiter-conjunction-november-2026/",
+   "https://www.skyatnightmagazine.com/news/mars-jupiter-november-2026",
+   "https://whenthecurveslineup.com/2026/11/06/2026-november-15-jupiter-mars-conjunction-and-bright-planets/",
+   "https://earthsky.org/astronomy-essentials/sky-measurements-degrees-arc-minutes-arc-seconds/"
+  ],
+  "humour": {
+   "trend": "timeless (no rising trend fit; 'What's up brah' and 'Remember November 2026' already used this week): 'situationship' slang as a smirk + 'mars + jupiter: long-distance situationship' card",
+   "beat": "smirk",
+   "scene": 5
+  },
+  "claims": [
+   {
+    "claim": "Mars and Jupiter closest ~1.2 deg apart, 16 Nov 2026 02:04 UTC, best seen before sunrise 15-16 Nov",
+    "source": "https://www.telescopeadvisor.com/mars-jupiter-conjunction-november-2026/"
+   },
+   {
+    "claim": "Mars ~196 million km, Jupiter ~790 million km from Earth",
+    "source": "https://www.telescopeadvisor.com/mars-jupiter-conjunction-november-2026/"
+   },
+   {
+    "claim": "the two are nearly 370 million miles (~595 million km) apart",
+    "source": "https://whenthecurveslineup.com/2026/11/06/2026-november-15-jupiter-mars-conjunction-and-bright-planets/"
+   },
+   {
+    "claim": "a finger (pinky) at arm's length covers about 1 degree",
+    "source": "https://earthsky.org/astronomy-essentials/sky-measurements-degrees-arc-minutes-arc-seconds/"
+   },
+   {
+    "claim": "light time: 196e6 km / 299,792 km/s = 10.9 min; 790e6 km = 43.9 min (computed)",
+    "source": "https://www.telescopeadvisor.com/mars-jupiter-conjunction-november-2026/"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "NOT *TOUCHING*",
+  "title_y": 0.14,
+  "title_size": 180,
+  "max_w": 0.95,
+  "blur": 12,
+  "glow": "#ffb35a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.5,
+  "tint": [
+   "#1f4fb8",
+   "#f08a24"
+  ],
+  "tint_amount": 0.3,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-15-c/assets/plate_ridge_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-15-c/assets/jupiter.png",
+    "x": 0.74,
+    "y": 0.42,
+    "w": 0.34,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-15-c/assets/mars.png",
+    "x": 0.6,
+    "y": 0.36,
+    "w": 0.17,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.42,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-15-c/assets.py",
+ "scenes": [
+  {
+   "say": "Mars and Jupiter are touching this weekend. They're *600 million* kilometres apart.",
+   "caption_y": 0.47,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.06,
+      "focus": [
+       0.52,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/plate_ridge_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.2927,
+     "y": 0.6831,
+     "h": 0.4567,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ],
+      [
+       "smirk",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/fg_ridge_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='84' fill='none' stroke='#f2b04a' stroke-width='9' stroke-dasharray='18 12'/></svg>",
+     "x": 0.6759999999999999,
+     "y": 0.235,
+     "w": 0.2,
+     "enter": "none",
+     "loop": "pulse",
+     "loop_amp": 0.05
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 170'><rect x='10' y='10' width='400' height='150' rx='18' fill='none' stroke='#d9534f' stroke-width='14'/><text x='210.0' y='128' text-anchor='middle' font-size='118' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>MYTH</text></svg>",
+     "x": 0.28,
+     "y": 0.12,
+     "w": 0.32,
+     "rotate": -5,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "THEY'RE *TOUCHING*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.305,
+     "size": 104,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 600,
+     "decimals": 0,
+     "suffix": " MILLION KM APART",
+     "x": 0.5,
+     "y": 0.365,
+     "size": 62,
+     "color": "accent",
+     "at": 2.2,
+     "count_dur": 1.0,
+     "enter": "pop",
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "Before sunrise, look up: Jupiter and Mars, one *finger* apart.",
+   "transition": "slide_up",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.12,
+      "focus": [
+       0.532,
+       0.452
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/plate_ridge_sky.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 96'><rect x='4' y='4' width='412' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#f6efe2' stroke-width='5'/><text x='210.0' y='68' text-anchor='middle' font-size='56' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>JUPITER</text></svg>",
+     "x": 0.732,
+     "y": 0.487,
+     "w": 0.3,
+     "enter": "pop",
+     "at": 0.9,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 96'><rect x='4' y='4' width='412' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#e07a4a' stroke-width='5'/><text x='210.0' y='68' text-anchor='middle' font-size='56' fill='#e07a4a' font-family='Anton, DejaVu Sans, sans-serif'>MARS</text></svg>",
+     "x": 0.29800000000000004,
+     "y": 0.381,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 250'><rect x='5' y='5' width='890' height='240' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><rect x='60' y='40' width='54' height='150' rx='27' fill='#e0b08a' stroke='#1a1410' stroke-width='5'/><rect x='30' y='150' width='120' height='80' rx='30' fill='#e0b08a' stroke='#1a1410' stroke-width='5'/><text x='190' y='112' font-size='84' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1.2 DEGREES</text><text x='190' y='190' font-size='44' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>= ONE FINGER AT ARM'S LENGTH</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.82,
+     "enter": "slide_down",
+     "at": 2.4,
+     "sfx": "whoosh"
+    }
+   ]
+  },
+  {
+   "say": "But that's only from *here*.",
+   "transition": "slide_left",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.05,
+      "focus": [
+       0.55,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/plate_ridge_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.2495,
+     "y": 0.6727,
+     "h": 0.1762,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "happy",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a52",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#d9534f",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.3,
+       0.04,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "cheer",
+     "x": 0.4299,
+     "y": 0.6827,
+     "h": 0.2007,
+     "enter": "none",
+     "acting": [
+      [
+       "cheer",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "build": "round",
+       "hair": [
+        "#6b4529",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#34425c"
+       ],
+       "top": [
+        "#6fc3c0",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7089,
+     "y": 0.7016,
+     "h": 0.2534,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2372,
+       "y": 0.7046,
+       "scale": 1.03
+      },
+      {
+       "t": 1.0,
+       "x": 0.7089,
+       "y": 0.7016,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='84' fill='none' stroke='#f2b04a' stroke-width='9' stroke-dasharray='18 12'/></svg>",
+     "x": 0.7244999999999999,
+     "y": 0.3525,
+     "w": 0.14,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "FROM *HERE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Mars is *196 million* kilometres away.",
+   "transition": "zoom",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.6,
+      "zoom": 1.1,
+      "focus": [
+       0.446,
+       0.511
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/plate_space_eye.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 96'><rect x='4' y='4' width='412' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#e07a4a' stroke-width='5'/><text x='210.0' y='68' text-anchor='middle' font-size='56' fill='#e07a4a' font-family='Anton, DejaVu Sans, sans-serif'>MARS</text></svg>",
+     "x": 0.246,
+     "y": 0.5810000000000001,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 96'><rect x='4' y='4' width='412' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#f6efe2' stroke-width='5'/><text x='210.0' y='68' text-anchor='middle' font-size='56' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>JUPITER</text></svg>",
+     "x": 0.6799999999999999,
+     "y": 0.424,
+     "w": 0.3,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 196,
+     "decimals": 0,
+     "prefix": "MARS: ",
+     "suffix": " MILLION KM",
+     "x": 0.5,
+     "y": 0.18,
+     "size": 76,
+     "color": "accent",
+     "at": 0.6,
+     "count_dur": 1.0,
+     "enter": "zoom",
+     "sfx": "riser"
+    }
+   ]
+  },
+  {
+   "say": "Jupiter? *790 million*. Four times farther, hiding behind it.",
+   "transition": "slide_left",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/plate_space_side.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "fade",
+     "at": 0.1,
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 1920'><line x1='811' y1='1461' x2='271' y2='382' stroke='#f6efe2' stroke-width='7' stroke-dasharray='22 16' opacity='0.85'/></svg>"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 96'><rect x='4' y='4' width='412' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#6fc3c0' stroke-width='5'/><text x='210.0' y='68' text-anchor='middle' font-size='56' fill='#6fc3c0' font-family='Anton, DejaVu Sans, sans-serif'>EARTH</text></svg>",
+     "x": 0.631,
+     "y": 0.711,
+     "w": 0.22,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 96'><rect x='4' y='4' width='412' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#e07a4a' stroke-width='5'/><text x='210.0' y='68' text-anchor='middle' font-size='56' fill='#e07a4a' font-family='Anton, DejaVu Sans, sans-serif'>MARS</text></svg>",
+     "x": 0.748,
+     "y": 0.667,
+     "w": 0.22,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='84' fill='none' stroke='#e07a4a' stroke-width='9' stroke-dasharray='18 12'/></svg>",
+     "x": 0.628,
+     "y": 0.622,
+     "w": 0.09,
+     "enter": "pop",
+     "at": 0.3
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 96'><rect x='4' y='4' width='412' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#f6efe2' stroke-width='5'/><text x='210.0' y='68' text-anchor='middle' font-size='56' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>JUPITER</text></svg>",
+     "x": 0.501,
+     "y": 0.199,
+     "w": 0.28,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 196,
+     "to": 790,
+     "decimals": 0,
+     "prefix": "JUPITER: ",
+     "suffix": " MILLION KM",
+     "x": 0.5,
+     "y": 0.34,
+     "size": 66,
+     "color": "accent",
+     "at": 0.3,
+     "count_dur": 1.4,
+     "enter": "pop",
+     "sfx": "riser"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 140'><rect x='5' y='5' width='690' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='350' y='96' text-anchor='middle' font-size='72' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>4X FARTHER</text></svg>",
+     "x": 0.5,
+     "y": 0.41,
+     "w": 0.46,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 1.9,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/plate_ridge_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "smirk",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "smirk",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "mars + jupiter:\nlong-distance *situationship*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Even their light is late: Mars's left *11 minutes* ago, Jupiter's *44*.",
+   "transition": "slide_left",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.46
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/plate_ridge_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2495,
+     "y": 0.6727,
+     "h": 0.1762,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a52",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#d9534f",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.4299,
+     "y": 0.6827,
+     "h": 0.2007,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "shrug",
+       3.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "build": "round",
+       "hair": [
+        "#6b4529",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#34425c"
+       ],
+       "top": [
+        "#6fc3c0",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7089,
+     "y": 0.7016,
+     "h": 0.2534,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 410'><rect x='5' y='5' width='890' height='400' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='78' text-anchor='middle' font-size='54' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>THE LIGHT YOU SEE LEFT...</text><circle cx='200' cy='200' r='70' fill='#e07a4a' stroke='#1a1410' stroke-width='6'/><text x='200' y='318' text-anchor='middle' font-size='40' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MARS</text><text x='200' y='378' text-anchor='middle' font-size='62' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>11 MIN AGO</text><circle cx='680' cy='185' r='84' fill='#f4e6cc' stroke='#1a1410' stroke-width='6'/><rect x='600' y='164' width='160' height='16' fill='#b9825a'/><rect x='608' y='206' width='144' height='13' fill='#b9825a'/><text x='680' y='318' text-anchor='middle' font-size='40' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>JUPITER</text><text x='680' y='378' text-anchor='middle' font-size='62' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>44 MIN AGO</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.8,
+     "enter": "slide_down",
+     "at": 0.6,
+     "sfx": "whoosh"
+    }
+   ]
+  },
+  {
+   "say": "Not touching. Just sharing your line of *sight*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/plate_ridge_sky.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 8,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      },
+      {
+       "t": 3.5,
+       "scale": 1.38
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ],
+      [
+       "smirk",
+       2.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/jupiter.png",
+     "x": 0.74,
+     "y": 0.27,
+     "w": 0.16,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-c/assets/mars.png",
+     "x": 0.66,
+     "y": 0.22,
+     "w": 0.08,
+     "enter": "pop",
+     "at": 1.4
+    },
+    {
+     "type": "text",
+     "text": "LINE OF *SIGHT*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
