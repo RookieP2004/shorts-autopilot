@@ -286,7 +286,8 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
 7. **Publish.** `BRANCH=media-long KEEP=6 scripts/push_media.sh jobs/<id>/out/final.mp4 <id>` and the same for
    `out/thumbnail.jpg` as `<id>-thumb`. `python -m autopilot zapier jobs/<id>/job.json` (description includes the chapters),
    then upload exactly as 3h step 3 (pinned connection, check `channelId`) and `budget --add upload --ref <id>`.
-   Thumbnail: during the trial, or if `python -m autopilot budget --spare` shows SPARE >= 1, call Zapier *YouTube: Update Video
+   Thumbnail: during the trial, or if `python -m autopilot budget --spare` shows SPARE >= 1, wait until YouTube has finished
+   processing (at least 20 minutes after the upload for a long video), then call Zapier *YouTube: Update Video
    Thumbnail* (video_id, thumbnail = the thumb URL) and `budget --add thumb --ref <id>`. If YouTube refuses because the channel
    isn't phone-verified, or there's no budget, send the owner the thumbnail file to set in YouTube Studio.
 8. Log (`logline` marks it LONG), commit, push, and report as 3i with the link and the chapter list.

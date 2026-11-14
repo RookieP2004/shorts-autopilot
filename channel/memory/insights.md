@@ -24,3 +24,7 @@ The weekly review writes a new entry at the top: date · data window · findings
 - Decisions: no 🔄 Bible changes (no evidence). The Bible doc was re-synced because the owner's changes this week (new niche, 2D-in-3D look, the town, v3 reference video) were not in it yet.
 - Backlog steered to the new niche (complex ideas made simple: money, mind, body, physics, systems); dropped the ocean-salt idea (already used by the pilot).
 - Next week's experiment: none; first get 6+ public videos older than 48 h across all three formats, then compare formats and hooks.
+
+## 2026-11-14: thumbnails set too early get lost
+The 13-b, 13-a and 14-c Shorts had their thumbnails set ~1 min after upload; the API said OK but YouTube showed its auto frame.
+Re-set them on 11-14. Rule now: set the thumbnail last, 10+ min after upload (20+ for long videos).
