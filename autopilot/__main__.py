@@ -30,6 +30,8 @@ def main(argv=None):
     z = sub.add_parser("zapier"); z.add_argument("job")
     lg = sub.add_parser("logline"); lg.add_argument("job"); lg.add_argument("--youtube-id", default="")
     th = sub.add_parser("thumbnail"); th.add_argument("job"); th.add_argument("--out")
+    ig = sub.add_parser("instagram"); ig.add_argument("job"); ig.add_argument("--video-url"); ig.add_argument("--cover-url")
+    ig.add_argument("--caption-only", action="store_true")
     sub.add_parser("characters")
     b = sub.add_parser("budget"); b.add_argument("--need"); b.add_argument("--add"); b.add_argument("--ref", default="")
     b.add_argument("--n", type=int, default=1)
@@ -62,6 +64,12 @@ def main(argv=None):
     elif args.cmd == "thumbnail":
         from .render import thumbnail
         print(thumbnail(args.job, args.out))
+    elif args.cmd == "instagram":
+        from .instagram import caption, post_reel
+        if args.caption_only:
+            print(caption(load_json(args.job)))
+        else:
+            print(post_reel(args.job, args.video_url, args.cover_url))
     elif args.cmd == "characters":
         for cid, c in load_characters().items():
             print(f"{cid}: poses={c['poses']} voice={c['meta'].get('voice')} - {c['meta'].get('description','')}")

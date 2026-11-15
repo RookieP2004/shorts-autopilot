@@ -48,3 +48,7 @@ The weekly review writes a new entry at the top: date · data window · findings
 ## 2026-11-14: thumbnails set too early get lost
 The 13-b, 13-a and 14-c Shorts had their thumbnails set ~1 min after upload; the API said OK but YouTube showed its auto frame.
 Re-set them on 11-14. Rule now: set the thumbnail last, 10+ min after upload (20+ for long videos).
+
+## 2026-11-15: Instagram Reels added
+Every Short is also posted as a Reel on @explainerthe_ (Instagram Graph API via the "Explainer Poster" Meta app, system-user
+token that never expires, no Zapier tasks). First test Reel: 2026-11-14-b (bacteria). Long videos stay YouTube-only.

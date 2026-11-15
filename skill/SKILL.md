@@ -238,8 +238,16 @@ length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). The
 5. Append `python -m autopilot logline jobs/<id>/job.json --youtube-id <video id>` to `channel/memory/log.md`. In `ideas.md`,
    remove the idea you used and add the 2–3 runners-up.
 6. `git add jobs/<id>/job.json channel/ && git commit -m "short <id>: <title>" && git push`.
+7. **Instagram Reel** (free, no Zapier tasks; do it right after step 6, before step 4's wait). Only if the run's prompt gives
+   `IG_TOKEN` (a secret: never write it into the repo, a file or a message). Render the thumbnail if step 4 hasn't yet
+   (`python -m autopilot thumbnail jobs/<id>/job.json`, Read it), host it with
+   `KEEP=8 scripts/push_media.sh jobs/<id>/out/thumbnail.jpg <id>-thumb`, then run
+   `IG_TOKEN=<token> IG_USER_ID=17841428825494803 python -m autopilot instagram jobs/<id>/job.json --cover-url <thumb URL>`.
+   It posts the same video as a Reel on @explainerthe_ with an Instagram caption (no #shorts) and prints the Reel link (takes
+   1-3 minutes). Append ` | IG <link>` to the Short's log.md line, commit and push. If it fails, retry once; if it fails
+   again, skip Instagram for this Short and mention the error in the report. Long videos (16:9) are not posted to Instagram.
 
-**i. Report.** Send the owner one SendUserMessage: title, link, format and hook, the joke used (one line), and why you picked it (one line).
+**i. Report.** Send the owner one SendUserMessage: title, YouTube link (and the Instagram Reel link), format and hook, the joke used (one line), and why you picked it (one line).
 
 ## 3b. Manual run with the owner's one-off changes
 1. Do Produce mode (sections 3a–3i) for an extra slot, with id `YYYY-MM-DD-m1`, `-m2`, and so on, so it never takes a scheduled slot.
