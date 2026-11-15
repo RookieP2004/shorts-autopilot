@@ -28,11 +28,12 @@
   "format": "dark-files",
   "topic": "HSBC and the cartel cash boxes (money laundering explained)",
   "hook": "story",
-  "idea_source": "owner request: reference-reel style pilot; dark-files backlog",
+  "idea_source": "owner request: reference-reel style mixed into the house style; dark-files backlog",
   "characters": [
-   "ved"
+   "ved",
+   "extra"
   ],
-  "overrides": "pilot of the reference-reel style (moody 3D, headline system, deeper narrator)",
+  "overrides": "pilot v2: house style + reference touches (headline system, foley, push/iris camera, counters)",
   "sources": [
    "https://www.justice.gov/opa/speech/assistant-attorney-general-lanny-breuer-speaks-hsbc-press-conference",
    "https://www.hsgac.senate.gov/subcommittees/investigations/rep/hsbc-exposed-u-s-financial-system-to-money-laundering-drug-terrorist-financing-risks/",
@@ -66,148 +67,376 @@
    }
   ],
   "humour": {
-   "trend": "none (dark-files pilot)",
-   "beat": "none",
-   "scene": -1
+   "trend": "side-eye 'looks normal to me' cut-away",
+   "beat": "side_eye",
+   "scene": 5
   }
+ },
+ "thumbnail": {
+  "title": "WHY THESE *BOXES?*",
+  "title_y": 0.15,
+  "title_size": 180,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffcf5a",
+  "glow_x": 0.5,
+  "glow_y": 0.55,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.3,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-pilot/assets/plate_teller_close_lit.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-pilot/assets/box.png",
+    "x": 0.72,
+    "y": 0.55,
+    "w": 0.42,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-pilot/assets/bundle.png",
+    "x": 0.25,
+    "y": 0.4,
+    "w": 0.28,
+    "enter": "none",
+    "rotate": -12
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.4,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
  },
  "privacy": "private",
  "speaker": "ved",
- "voice": {
-  "pitch": -1.6,
-  "warmth": 0.5
- },
- "music": {
-  "cues": [
-   {
-    "scene": 0,
-    "style": "tension",
-    "key": "D",
-    "scale": "minor",
-    "bpm": 70
-   },
-   {
-    "scene": 6,
-    "style": "doc",
-    "key": "D",
-    "scale": "minor"
-   }
-  ],
-  "volume": 0.12
- },
- "captions": false,
- "style_override": {
-  "doc": {
-   "enabled": true,
-   "grain": 0,
-   "vignette": 0.3,
-   "drift": 1.0,
-   "auto_camera": true
-  },
-  "progress_bar": {
-   "enabled": false
-  }
- },
  "assets_script": "jobs/2026-11-16-pilot/assets.py",
  "scenes": [
   {
-   "say": "Drug cartels built boxes... made to fit a bank's teller window.",
+   "say": "Drug cartels built cardboard boxes to fit a bank's *teller window*.",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.2,
+      "zoom": 1.08,
+      "focus": [
+       0.48,
+       0.52
+      ]
+     }
+    ]
+   },
    "layers": [
     {
      "type": "image",
-     "path": "jobs/2026-11-16-pilot/assets/plate_teller_close.png",
+     "path": "jobs/2026-11-16-pilot/assets/plate_teller_wide_lit.png",
      "x": 0.5,
      "y": 0.5,
      "w": 1.0,
      "enter": "none",
+     "blur": 0,
      "blur_keys": [
       [
        0,
-       10
+       9
       ],
       [
-       1.2,
+       0.9,
        0
       ]
      ]
     },
     {
-     "type": "headline",
-     "label": "HSBC Mexico · 2006-2010",
-     "text": "BOXES MADE TO FIT\nTHE *TELLER WINDOW*",
-     "y": 0.15,
-     "at": 0.0
-    }
-   ],
-   "look": "moody",
-   "sfx": "slide",
-   "sfx_at": 0.4,
-   "camera": {
-    "zoom": [
-     1.0,
-     1.08
-    ],
-    "focus": [
-     0.48,
-     0.52
-    ]
-   }
-  },
-  {
-   "say": "Packed with cash. Hundreds of thousands of dollars... in a single day.",
-   "layers": [
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.2901,
+     "y": 0.6058,
+     "h": 0.2727,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "idle",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2b2f2a"
+       ],
+       "top": [
+        "#3a3e48",
+        "jacket"
+       ],
+       "bottom": [
+        "#2a2c33",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.2719,
+       "y": 0.6286,
+       "scale": 1.147
+      },
+      {
+       "t": 1.4,
+       "x": 0.2901,
+       "y": 0.6058,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
     {
-     "type": "image",
-     "path": "jobs/2026-11-16-pilot/assets/plate_cash_close.png",
-     "x": 0.5,
-     "y": 0.5,
-     "w": 1.0,
-     "enter": "none"
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.8317,
+     "y": 0.668,
+     "h": 0.3922,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ],
+      [
+       "surprised",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.9172,
+       "y": 0.7121,
+       "scale": 1.2024
+      },
+      {
+       "t": 1.3,
+       "x": 0.8317,
+       "y": 0.668,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
     },
     {
      "type": "headline",
-     "label": "US Justice Department",
-     "text": "*CASH.* EVERY DAY.",
-     "y": 0.15,
-     "at": 0.2
+     "label": "HSBC Mexico · 2006-2010",
+     "text": "BOXES BUILT TO FIT\nTHE *TELLER WINDOW*",
+     "y": 0.13,
+     "at": 0.0
+    }
+   ],
+   "sfx": "footsteps",
+   "sfx_at": 0.1,
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Stuffed with cash. Hundreds of thousands of dollars, in a *single day*.",
+   "transition": "push",
+   "transition_frames": 12,
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.06,
+      "focus": [
+       0.48,
+       0.56
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-pilot/assets/plate_teller_close_lit.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
     },
     {
      "type": "image",
      "path": "jobs/2026-11-16-pilot/assets/bundle.png",
-     "x": 0.5,
-     "y": 0.36,
-     "w": 0.36,
+     "x": 0.66,
+     "y": 0.56,
+     "w": 0.22,
      "enter": "drop",
-     "at": 2.2,
-     "sfx": "thud"
+     "at": 0.6,
+     "sfx": "thud",
+     "rotate": -6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-pilot/assets/bundle.png",
+     "x": 0.8,
+     "y": 0.575,
+     "w": 0.22,
+     "enter": "drop",
+     "at": 1.0,
+     "sfx": "thud",
+     "rotate": 8
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-pilot/assets/bundle.png",
+     "x": 0.73,
+     "y": 0.535,
+     "w": 0.22,
+     "enter": "drop",
+     "at": 1.4,
+     "sfx": "cash",
+     "rotate": 2
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 920 140'><rect x='5' y='5' width='910' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='460' y='98' text-anchor='middle' font-size='60' fill='#d63a2f' font-family='Anton, DejaVu Sans, sans-serif'>ONE ACCOUNT. ONE DAY.</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.78,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "pop"
     }
    ],
-   "look": "moody",
-   "transition": "push",
-   "transition_frames": 12,
-   "sfx": "cash",
-   "sfx_at": 0.3,
-   "camera": {
-    "zoom": [
-     1.04,
-     1.12
-    ],
-    "focus": [
-     0.55,
-     0.55
-    ]
-   }
+   "pad": 0.14,
+   "lead": 0.06
   },
   {
-   "say": "Dirty money has to be washed. In... around... and back out, clean.",
+   "say": "Dirty money needs a wash. In, spin it around, and out comes *clean* money.",
+   "transition": "push",
+   "transition_frames": 12,
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.0,
+      "zoom": 1.08,
+      "focus": [
+       0.52,
+       0.45
+      ]
+     }
+    ]
+   },
    "layers": [
     {
      "type": "image",
-     "path": "jobs/2026-11-16-pilot/assets/plate_laundry_wide.png",
+     "path": "jobs/2026-11-16-pilot/assets/plate_laundry_wide_lit.png",
      "x": 0.5,
      "y": 0.5,
      "w": 1.0,
-     "enter": "none"
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.926,
+     "y": 0.4187,
+     "h": 0.7211,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.3
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 2.2039,
+       "y": 0.4263,
+       "scale": 1.3246
+      },
+      {
+       "t": 1.1,
+       "x": 0.926,
+       "y": 0.4187,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
     },
     {
      "type": "image",
@@ -216,132 +445,223 @@
      "y": 0.5,
      "w": 1.0,
      "enter": "none",
+     "blur": 0,
      "iris": {
       "x": 0.5,
-      "y": 0.5,
+      "y": 0.47,
       "r0": 0.0,
-      "r1": 0.75,
-      "at": 1.4,
-      "dur": 1.0
+      "r1": 0.8,
+      "at": 2.0,
+      "dur": 0.9
      }
     },
     {
      "type": "headline",
      "label": "Money laundering",
-     "text": "DIRTY CASH IN.\n*CLEAN* MONEY OUT.",
-     "y": 0.15,
-     "at": 0.2
+     "text": "DIRTY IN.\n*CLEAN* OUT.",
+     "y": 0.13,
+     "at": 0.1
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 140'><rect x='5' y='5' width='330' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='170' y='96' text-anchor='middle' font-size='72' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>IN</text></svg>",
+     "x": 0.22,
+     "y": 0.75,
+     "w": 0.26,
+     "rotate": -4,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "splash"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 140'><rect x='5' y='5' width='330' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='170' y='96' text-anchor='middle' font-size='72' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>SPIN</text></svg>",
+     "x": 0.5,
+     "y": 0.78,
+     "w": 0.26,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 3.3,
+     "sfx": "bubbles"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 140'><rect x='5' y='5' width='330' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='170' y='96' text-anchor='middle' font-size='72' fill='#2f8f5a' font-family='Anton, DejaVu Sans, sans-serif'>OUT</text></svg>",
+     "x": 0.78,
+     "y": 0.75,
+     "w": 0.26,
+     "rotate": -2,
+     "enter": "pop",
+     "at": 4.0,
+     "sfx": "pop"
     }
    ],
-   "look": "moody",
-   "transition": "push",
-   "transition_frames": 12,
    "sfx": "drone",
-   "camera": {
-    "zoom": [
-     1.0,
-     1.1
-    ],
-    "focus": [
-     0.52,
-     0.42
-    ]
-   }
+   "sfx_at": 1.8,
+   "pad": 0.14,
+   "lead": 0.06
   },
   {
-   "say": "HSBC Mexico shipped seven billion dollars in cash to the US... in two years.",
-   "layers": [
-    {
-     "type": "image",
-     "path": "jobs/2026-11-16-pilot/assets/plate_cash_table.png",
-     "x": 0.5,
-     "y": 0.5,
-     "w": 1.0,
-     "enter": "none"
-    },
-    {
-     "type": "headline",
-     "label": "US Senate report · 2012",
-     "text": "*$7 BILLION*\nIN PHYSICAL DOLLARS",
-     "y": 0.15,
-     "at": 0.2
-    },
-    {
-     "type": "counter",
-     "from": 0,
-     "to": 7000000000,
-     "count_dur": 2.2,
-     "at": 1.0,
-     "x": 0.5,
-     "y": 0.66,
-     "size": 104,
-     "font": "fonts/Anton-Regular.ttf",
-     "prefix": "$",
-     "color": "primary",
-     "enter": "fade",
-     "sfx": "tick"
-    },
-    {
-     "type": "tag",
-     "text": "2007-2008",
-     "x": 0.5,
-     "y": 0.73,
-     "at": 2.4,
-     "font": "mono_b",
-     "size": 30
-    }
-   ],
-   "look": "moody",
+   "say": "HSBC Mexico shipped *seven billion* dollars in cash to the US in just two years.",
+   "caption": "HSBC Mexico shipped *$7 billion* in cash to the US in just two years.",
    "transition": "cut",
+   "caption_y": 0.46,
    "camera": {
-    "zoom": [
-     1.1,
-     1.0
-    ],
-    "focus": [
-     0.5,
-     0.55
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.58
+      ]
+     }
     ]
-   }
-  },
-  {
-   "say": "Prosecutors said at least eight hundred and eighty-one million came from two cartels.",
+   },
    "layers": [
     {
      "type": "image",
-     "path": "jobs/2026-11-16-pilot/assets/plate_cash_close.png",
+     "path": "jobs/2026-11-16-pilot/assets/plate_cash_table_lit.png",
      "x": 0.5,
      "y": 0.5,
      "w": 1.0,
      "enter": "none",
-     "blur": 6
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.9135,
+     "y": 0.6987,
+     "h": 0.6685,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ],
+      [
+       "surprised",
+       3.2
+      ]
+     ],
+     "allow_outside_safe": true
     },
     {
      "type": "headline",
-     "label": "Sinaloa · Norte del Valle",
+     "label": "US Senate report · 2012",
+     "text": "IN PHYSICAL DOLLARS",
+     "y": 0.19,
+     "at": 0.1
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 7,
+     "decimals": 0,
+     "prefix": "$",
+     "suffix": " BILLION",
+     "x": 0.5,
+     "y": 0.1,
+     "size": 130,
+     "font": "fonts/Anton-Regular.ttf",
+     "color": "accent",
+     "at": 0.2,
+     "count_dur": 1.6,
+     "enter": "none",
+     "stroke": "#0b0f12",
+     "stroke_width": 8,
+     "sfx": "tick"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.31,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "click"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "At least *881 million* came from two cartels, Sinaloa and Norte del Valle.",
+   "caption": "At least *$881 million* came from two cartels, Sinaloa and Norte del Valle.",
+   "transition": "push",
+   "transition_frames": 12,
+   "caption_y": 0.64,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.6
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-pilot/assets/plate_cash_close_lit.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "headline",
+     "label": "US Justice Department",
      "text": "*$881 MILLION*\nFROM TWO CARTELS",
-     "y": 0.15,
-     "at": 0.2
+     "y": 0.13,
+     "at": 0.1
     },
     {
      "type": "image",
      "path": "jobs/2026-11-16-pilot/assets/bundle.png",
-     "x": 0.3,
-     "y": 0.55,
+     "x": 0.28,
+     "y": 0.5,
      "w": 0.3,
      "enter": "drop",
-     "at": 1.6,
+     "at": 1.2,
      "sfx": "thud",
      "rotate": -8
     },
     {
      "type": "image",
      "path": "jobs/2026-11-16-pilot/assets/bundle.png",
-     "x": 0.68,
-     "y": 0.6,
+     "x": 0.7,
+     "y": 0.54,
      "w": 0.3,
      "enter": "drop",
-     "at": 2.0,
+     "at": 1.6,
      "sfx": "thud",
      "rotate": 6
     },
@@ -349,155 +669,336 @@
      "type": "image",
      "path": "jobs/2026-11-16-pilot/assets/bundle.png",
      "x": 0.5,
-     "y": 0.5,
+     "y": 0.46,
      "w": 0.32,
      "enter": "drop",
-     "at": 2.4,
-     "sfx": "thud",
+     "at": 2.0,
+     "sfx": "cash",
      "rotate": -3
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.36,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 2.8,
+     "sfx": "click"
     }
    ],
-   "look": "moody",
-   "transition": "cut",
-   "camera": {
-    "zoom": [
-     1.0,
-     1.06
-    ],
-    "focus": [
-     0.5,
-     0.55
-    ]
-   }
+   "pad": 0.14,
+   "lead": 0.06
   },
   {
-   "say": "The bank paid one point nine billion. Not one banker went to prison.",
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
    "layers": [
     {
      "type": "image",
-     "path": "jobs/2026-11-16-pilot/assets/plate_courthouse.png",
+     "path": "jobs/2026-11-16-pilot/assets/plate_teller_wide_lit.png",
      "x": 0.5,
      "y": 0.5,
      "w": 1.0,
-     "enter": "none"
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
     },
     {
      "type": "character",
      "id": "ved",
-     "pose": "crossed",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.4,
+    "who": "ved",
+    "text": "the bank, seeing boxes of cash daily:\n*looks normal*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "The bank paid *1.9 billion* dollars. Bankers sent to prison? *Zero.*",
+   "caption": "The bank paid *$1.9 billion*. Bankers sent to prison? *Zero.*",
+   "transition": "push",
+   "transition_frames": 12,
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-pilot/assets/plate_courthouse_lit.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3564,
+     "y": 0.7069,
+     "h": 0.1775,
+     "enter": "none",
      "acting": [
       [
-       "serious",
+       "idle",
        0
       ],
       [
-       "crossed",
-       2.4
+       "happy",
+       3.2
       ]
      ],
-     "x": 0.74,
-     "y": 0.83,
-     "h": 0.3,
-     "enter": "fade",
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48c",
+       "build": "regular",
+       "hair": [
+        "#9aa0a8",
+        "short"
+       ],
+       "top": [
+        "#23262d",
+        "jacket"
+       ],
+       "bottom": [
+        "#23262d",
+        "trousers"
+       ],
+       "shoes": "#111111",
+       "tie": "#d63a2f"
+      }
+     },
      "allow_outside_safe": true,
-     "ground": true
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4485,
+       "y": 0.692,
+       "scale": 0.7234
+      },
+      {
+       "t": 2.2,
+       "x": 0.3564,
+       "y": 0.7069,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.772,
+     "y": 0.7196,
+     "h": 0.2248,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "shrug",
+       2.6
+      ],
+      [
+       "crossed",
+       3.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2855,
+       "y": 0.7289,
+       "scale": 1.1352
+      },
+      {
+       "t": 1.0,
+       "x": 0.772,
+       "y": 0.7196,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
     },
     {
      "type": "headline",
      "label": "December 2012",
      "text": "$1.9 BILLION PAID.\n*0* JAILED.",
-     "y": 0.15,
-     "at": 0.2
+     "y": 0.13,
+     "at": 0.1
     }
    ],
-   "look": "moody",
-   "transition": "push",
-   "transition_frames": 12,
    "sfx": "stomp",
-   "sfx_at": 2.6,
-   "camera": {
-    "zoom": [
-     1.0,
-     1.07
-    ],
-    "focus": [
-     0.5,
-     0.45
-    ]
-   }
+   "sfx_at": 3.4,
+   "pad": 0.14,
+   "lead": 0.06
   },
   {
-   "say": "It's why your bank asks... where your money comes from.",
+   "say": "That's why your bank now asks... where your money *comes from*.",
+   "transition": "cut",
+   "caption_y": 0.36,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.06,
+      "focus": [
+       0.45,
+       0.6
+      ]
+     }
+    ]
+   },
    "layers": [
     {
      "type": "image",
-     "path": "jobs/2026-11-16-pilot/assets/plate_desk.png",
+     "path": "jobs/2026-11-16-pilot/assets/plate_desk_lit.png",
      "x": 0.5,
      "y": 0.5,
      "w": 1.0,
-     "enter": "none"
+     "enter": "none",
+     "blur": 0
     },
     {
      "type": "paper",
      "kind": "doc",
      "title": "SOURCE OF FUNDS",
      "text": "Where does this money come from? ____________",
-     "w": 0.5,
-     "x": 0.52,
-     "y": 0.58,
+     "w": 0.52,
+     "x": 0.42,
+     "y": 0.6,
      "rotate": -6,
-     "at": 0.6,
+     "at": 0.4,
      "enter": "slam",
      "sfx": "paper",
      "tape": []
     },
     {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.8,
+     "y": 0.88,
+     "h": 0.72,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
      "type": "headline",
      "label": "Know your customer",
      "text": "“SOURCE OF *FUNDS?*”",
-     "y": 0.15,
-     "at": 0.2
+     "y": 0.13,
+     "at": 0.1
     }
    ],
-   "look": "moody",
-   "transition": "cut",
-   "camera": {
-    "zoom": [
-     1.0,
-     1.08
-    ],
-    "focus": [
-     0.5,
-     0.58
-    ]
-   }
+   "pad": 0.14,
+   "lead": 0.06
   },
   {
-   "say": "Send this to someone who thinks banks are boring.",
+   "say": "Send this to someone who thinks banks are *boring*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "min_dur": 3.0,
    "layers": [
     {
      "type": "image",
-     "path": "jobs/2026-11-16-pilot/assets/plate_teller_wide.png",
+     "path": "jobs/2026-11-16-pilot/assets/plate_teller_wide_lit.png",
      "x": 0.5,
      "y": 0.5,
      "w": 1.0,
      "enter": "none",
-     "blur": 10
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 3.5,
+       "scale": 1.42
+      }
+     ]
     },
     {
      "type": "character",
      "id": "ved",
      "pose": "point",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
      "acting": [
       [
        "point",
        0
+      ],
+      [
+       "smirk",
+       2.0
       ]
      ],
-     "x": 0.5,
-     "y": 0.86,
-     "h": 0.62,
-     "enter": "fade",
      "ground": false,
      "allow_outside_safe": true
     },
@@ -505,25 +1006,12 @@
      "type": "headline",
      "label": "Send this",
      "text": "TO SOMEONE WHO THINKS\nBANKS ARE *BORING*",
-     "y": 0.15,
-     "at": 0.1,
-     "sub": "Follow for more"
+     "y": 0.13,
+     "at": 0.1
     }
    ],
-   "look": "moody",
-   "transition": "dip",
-   "transition_frames": 10,
-   "min_dur": 3.4,
-   "camera": {
-    "zoom": [
-     1.0,
-     1.05
-    ],
-    "focus": [
-     0.5,
-     0.45
-    ]
-   }
+   "pad": 0.14,
+   "lead": 0.06
   }
  ]
 }
