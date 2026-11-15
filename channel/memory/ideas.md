@@ -2,10 +2,13 @@
 
 `- [format] idea · why it should work · source link`. Production runs add runners-up and delete what they use.
 
+**Steer (review 2026-11-15):** myth-busts and picturable physics/body questions are the safest bets; economics only wallet-first
+("why does YOUR..."), never a textbook term as the hook. Try the "you've been told X" hook on 2 Shorts this week.
+
 - [big-question] Why do we have leap years? · everyone knows Feb 29, few know the 11-minutes-a-year reason · https://en.wikipedia.org/wiki/Leap_year
 - [scale-shock] How many atoms are in one grain of sand? · physics niche, counter-up hook · https://en.wikipedia.org/wiki/Avogadro_constant
 - [big-question] Why does your brain eat 20% of your energy? · follow-up angle on the brain myth: the costliest organ, shown as a city power grid · https://www.livescience.com/health/neuroscience/do-we-really-use-only-10-of-our-brains
-- [big-question] What is a Nash equilibrium? · natural follow-up to the prisoner's dilemma, two rival stalls choosing prices · https://www.econlib.org/library/Enc/PrisonersDilemma.html
+- [big-question] Why do two petrol pumps on one corner charge the same? · Nash equilibrium, wallet-first (avoid the term in the hook) · https://www.econlib.org/library/Enc/PrisonersDilemma.html
 - [big-question] What does a bank do when everyone wants their money back at once? · bank-run follow-up, reuses the town bank + vault set · https://www.rba.gov.au/education/resources/explainers/
 - [myth-bust] "Saving money in a bank makes you rich" · interest vs inflation, before/after shopping basket · https://www.capitalone.com/bank/money-management/banking-basics/how-does-savings-interest-work/
 - [big-question] Why does compound interest snowball? · one coin that grows a coin each year, shown as a growing pile · https://www.fool.com/money/banks/articles/explain-it-to-me-like-im-five-heres-how-interest-rates-work
@@ -15,13 +18,13 @@
 - [myth-bust] "Hair and nails keep growing after death" · body niche, skin shrinking is the real reason, easy before/after · https://en.wikipedia.org/wiki/List_of_common_misconceptions
 - [big-question] Why is a flamingo pink? · it's the food (carotenoids), not the bird; shrimp-to-pink visual · https://en.wikipedia.org/wiki/Flamingo
 - [big-question] Why can't the sea just refill the cod? · the Grand Banks collapse and why stocks still haven't fully recovered, a fishing-harbour set · https://www.heritage.nf.ca/articles/economy/moratorium.php
-- [big-question] What is a free rider? · one villager never pays for the shared well; public goods made concrete · https://en.wikipedia.org/wiki/Free-rider_problem
-- [big-question] What is an externality? · a bakery's smoke costs the neighbours, not the baker; pollution as a hidden price tag · https://en.wikipedia.org/wiki/Externality
+- [big-question] Why does nobody pay for the group-chat pizza? · free-rider problem, wallet-first (avoid the term in the hook) · https://en.wikipedia.org/wiki/Free-rider_problem
+- [big-question] Who pays for your neighbour's loud party? · externalities as a hidden price tag, wallet-first · https://en.wikipedia.org/wiki/Externality
 - [scale-shock] How long is all the DNA in your body? · ~2 m per cell, billions of km in total, unspooled across the solar system · https://en.wikipedia.org/wiki/Human_genome
 - [myth-bust] "Your body replaces every cell every 7 years" · some cells (most neurons, eye lens) stay for life; follow-up to the cells video · https://wis-wander.weizmann.ac.il/node/11205
 - [scale-shock] How long would it take to walk the whole Great Wall? · 21,000+ km of wall, reuses the wall set · https://www.travelchinaguide.com/how-wide-is-great-wall-of-china.htm
 - [big-question] Why does the sky look black from space? · no air to scatter sunlight, reuses the station window set · https://www.space.com/human-made-structures-seen-from-space
-- [big-question] What is a sunk cost? · the half-eaten bad movie you keep watching because you paid; natural pair with opportunity cost, same plaza + cinema set · https://en.wikipedia.org/wiki/Sunk_cost
+- [big-question] Why do you finish a bad movie you paid for? · sunk cost, wallet-first; the half-eaten bad movie you keep watching because you paid; natural pair with opportunity cost, same plaza + cinema set · https://en.wikipedia.org/wiki/Sunk_cost
 
 - [big-question] Why does music give you chills? · frisson: the same goosebump alarm fired by a song; follow-up to the goosebumps video · https://www.health.harvard.edu/blog/wondering-about-goosebumps-of-course-you-are-2020080320688
 - [big-question] Can cold make you grow more hair? · 2020 Harvard mouse study: the goosebump nerve also wakes hair stem cells · https://neurosciencenews.com/goosebumps-reason-16669/
@@ -66,3 +69,5 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [myth-bust] "Planets twinkle like stars" · they mostly don't: a planet is a tiny disc, a star a point, so air wobble averages out; pairs with the Mars-Jupiter video, runner-up 2026-11-15 · https://earthsky.org/astronomy-essentials/why-dont-planets-twinkle-as-stars-do/
 - [what-if] What if Jupiter were a star? · it would need ~80x its mass to fuse hydrogen; what our sky would look like; tagged SPECULATION · https://en.wikipedia.org/wiki/Jupiter
 - [scale-shock] The sunlight on your face is 8 minutes old · light-time made visible, from the Moon (1.3 s) to Neptune (~4 h) · https://en.wikipedia.org/wiki/Light-second
+- [myth-bust] "You've been told: we have 5 senses" · hook test ("you've been told X"): balance, temperature, body position and more; body niche, strong myth floor · https://en.wikipedia.org/wiki/Sense
+- [myth-bust] "You've been told the Sun is yellow" · hook test: from space it looks white (air scatters blue light away); picturable physics · https://en.wikipedia.org/wiki/Sunlight

@@ -16,6 +16,8 @@ Only the owner (Sujal) changes sections marked 🔒. The weekly review may tune 
 • One quick, current, on-topic joke per video (§11). Never a clown, never "boomer" humour.
 • Never: clickbait that isn't true, fear-mongering, punching down, personal medical or financial advice, partisan politics (no parties, candidates or current elections), or mocking religion.
 • Political and economic ideas (capitalism, communism, socialism, taxes...) are explained even-handedly: what the idea is, how it is meant to work, the strongest case for it and the strongest criticism, with historical facts. Ved never takes a side.
+• Facts over balance (owner, 2026-11-13): fair is not the same as pretending everything is equal. When the evidence clearly favours one answer on a factual question (what happened, what the data shows, which approach did better at a stated goal), Ved says so plainly, with the numbers, the source and why. He always adds the context: better *at what*, *where* and *when*, because a different situation can change the result. Where the evidence is mixed, he says how strong each side's evidence is. Questions of values (what is fair, what people should want) get no verdict; the viewer decides. Stats, facts and probability, never bias, and still no current parties, candidates or elections.
+• Give real answers, often conditional (owner, 2026-11-13): don't stop at "this side vs that side". Say where and when something works, and where it doesn't, and why. Example: state communism failed at country scale (the evidence is clear), but shared ownership does work in small, close-knit or voluntary groups (kibbutzim, Hutterite colonies, co-operatives like Amul or Mondragon, group buying), because trust, size and choice change the result. The answer is the conditions, backed by data.
 • Medical topics explain how the body works; they never tell a viewer what to take or do. Philosophy presents the idea, not a verdict.
 • Callbacks: refer to an earlier video only when it is genuinely needed to understand this one (e.g. a follow-up on the same idea), never as filler or promotion. Check the log; if there's no strong link, don't mention past videos.
 
@@ -44,14 +46,36 @@ Rule: characters are made only by characters/<id>/make.py. Colours, proportions 
 
 6. Formats 🔄
 • format · weight · length · structure · hooks
-• big-question · 0.45 · 25-45 s · Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it · question
-• myth-bust · 0.30 · 20-30 s · "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists · myth-bust
-• scale-shock · 0.25 · 20-30 s · huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels · number-shock
+• big-question · 0.27 · 25-35 s · Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it · question
+• myth-bust · 0.23 · 20-30 s · "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists · myth-bust
+• scale-shock · 0.15 · 20-30 s · huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels · number-shock
+• what-if · 0.15 · 30-40 s · "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today · what-if
+• frontier · 0.10 · 30-40 s · "HOW COULD WE REALLY...?" (teleportation, interstellar travel, fusion, CERN) → what already works today (PROVEN) → what the best current research is trying (R&D, with the lab or experiment named) → what is still missing → how far away it really is · question
+• wild-story · 0.07 · 30-45 s · a true, crazy story behind a discovery, experiment or thinker, told as a mini-drama with the townspeople as the cast → the twist → what it taught us · story
+• deep-question · 0.03 · 35-45 s · occasional philosophy ("Are humans a kind of AI?", "Can communism actually work?", "Are your facts real or propaganda?") → the strongest answers on each side, fairly → a thinking tool the viewer can use → Ved leaves the final call to the viewer · question
 
-Skeletons: jobs/_templates/<format>.json. Never the same format three days in a row.
+Added 2026-11-13 by the owner (additions only; nothing above changes): what-if thought experiments, frontier "how could it really work" explainers, wild true stories from science and philosophy, and occasional philosophy questions. They keep the channel promise (complex ideas made simple) and the same look, cast and town. The owner's topics (IQ 500, the perfect athlete, teleportation, CERN, "are humans AI?", communism, propaganda, spectrum) are examples of the kind of video, not a to-do list: find new topics of these kinds every day.
+• Honesty tags: these formats mix fact and imagination, so every claim gets a small on-screen tag: PROVEN (established, sourced), THEORY (serious science, not settled), R&D (being worked on now; name the lab or project), SPECULATION (our own what-if step). Ved says out loud where known science ends ("From here on, we're guessing."). Never present speculation as fact.
+• Grounded what-ifs: start from the real thing (e.g. IQ is a ranking scale with mean 100 and SD 15, so "IQ 500" isn't a real score, then explore what a far smarter brain would need: energy, size, wiring). No medical or training advice.
+• Philosophy and politics: the even-handed rule applies in full: each side's strongest case, the main criticism, historical facts, no verdict on contested questions, no current parties or candidates. "Propaganda" videos teach how to check a claim (sources, incentives, evidence), never who to distrust.
+• Topic rule (owner, 2026-11-13), all formats: a new topic every video, and each must be unique (fresh topic or angle), trending (people are talking about or searching it this week) or viral-shaped (a famous "impossible" subject made shockingly easy, like rocket science in 40 seconds), ideally two or three at once.
+• Mix: about 1 in 3 Shorts uses the new formats; deep-question at most about once a week. The review tunes the weights.
+Retention rule (owner's Studio data, 2026-11-13): viewers watched only 10-19 s of our 40-55 s Shorts (20-36% on average). Shorts are 25-35 s (hard cap 45 s, enforced by style.json); 65-90 spoken words; the hook and the most surprising fact land in the first 2 s; no warm-up lines; every 2-3 s something new on screen; end on a line that loops back to the opening. Abstract economics ("opportunity cost", "tragedy of the commons") got 94-164 views, while concrete, personal ones ("Why does the bank pay YOU interest?") got more and won the most subscribers: frame money topics around the viewer's own wallet, with a "you" hook.
+Review 2026-11-15 (28-day stats, 20 public Shorts): the 36-39 s Shorts reached 994-1,141 views within 6-30 h, as many as the 40-57 s ones got in a week, so keep 25-35 s. Myth-busts are the steadiest (7 of 7 at 994-1,462 views); every big-question below 850 views was abstract economics (commons 94, opportunity cost 380, bank interest 836), so big-questions should be concrete and physical (gold, goosebumps, prisoner's dilemma all 1,100+), and economics stays wallet-first. Skeletons: jobs/_templates/<format>.json. Never the same format three days in a row. Deep Dives can use any format too (a what-if or frontier topic makes a great long video).
+
+Deep Dive (long video, weekly) 🔒 owner-approved 2026-11-11. One a week, Saturday. 16:9 (1920x1080), 5-8 min (hard cap 12 min and 90 MB), "kind": "long" in job.json (the long-form style profile in style.json does the rest).
+• Topic: a big idea from the niche that needs more than 60 s; prefer the idea behind this week's best Short (from the log / the review's stats), going much deeper. Same Ved, same town and outfits, same look as the Shorts, framed for landscape.
+• Shape: cold open (a concrete object or question in the first 5 s, plus a promise of the payoff) -> 5-8 chapters, each a little story in the 3D world with the townspeople acting it out -> recap -> "money is trust you can carry"-style one-line payoff -> short subscribe outro. A new shot or cut every 3-6 s; Ved talking to camera from one side with a panel or headline on the other.
+• Chapters in job.json (chapters, >= 3, first at scene 0, each >= 10 s); they go into the description automatically.
+• 2-3 comic beats (one per ~2 minutes), same rules as the Shorts.
+• Even-handed: where experts disagree, give both views in one or two lines each.
+• Thumbnail, for long videos and (since 2026-11-13) Shorts too, in 9:16 (owner-approved look, 2026-11-11, The Infographics Show as reference): the world blurred and colour-graded behind (a two-colour gradient tint + a warm glow behind Ved), Ved big and sharp with a strong face (surprised, shocked, side-eye) right under the title, one or two key props sharp beside him, and a huge 1-3 word title in heavy white sans with one *accent* word ("JUST *PAPER?*"). No watermark, no small text. python -m autopilot thumbnail (spec in docs/job-spec.md); set via Zapier (*Update Video Thumbnail*; the channel is phone-verified and has advanced features since 2026-11-13) when the budget allows, otherwise the owner sets it in YouTube Studio.
+• Reference: jobs/2026-11-11-longpilot ("How Money Actually Works").
 
 7. Hooks 🔄
 question · myth-bust · number-shock · "you've been told X" · countdown. The hook is on screen at frame 0 and spoken in the first 1.5 s.
+• Preferred (2026-11-15): myth-bust (median 1,129 views, never below 994) and number-shock (median 1,142 when posted >= 5 h apart). "Question" hooks work when the question is about a physical thing the viewer can picture; avoid textbook-term questions.
+• Untested: "you've been told X" and countdown (next week's experiment, at most 2 slots).
 
 8. Titles & descriptions 🔄
 Title ≤ 60 characters, at most one emoji, true curiosity. Description: one-line summary, then "Sources:" with links. 5-10 tags, plus #shorts and 2 niche hashtags.
@@ -60,18 +84,32 @@ Title ≤ 60 characters, at most one emoji, true curiosity. Description: one-lin
 Every factual claim is checked with a search in the same run, with sources in meta.sources. Anything unverified is dropped.
 
 10. Schedule 🔄
-• Zapier Pro trial until 2026-11-20: 3 Shorts a day, slot b 12:50, slot c 15:50, slot a 18:50 IST.
-• After the trial (free plan, 100 tasks/month): slot a 18:50 IST daily; bonus slots b/c only near the end of the billing cycle.
+• Audience (YouTube Analytics, 2026-11-08 to 11-12): ~78% United States, then India, Indonesia, Philippines; ~97% of views come from the Shorts feed. So posting times target US Eastern hours (IST = ET + 10:30 until US daylight saving starts on 2027-03-14, then ET + 9:30: re-check the times then).
+• Spacing rule (owner, 2026-11-12): at least ~5 hours between Shorts. Our first week showed it: the first Short after an 18-hour gap always got 800-1,400 views, while Shorts posted 1-3 hours after the previous one got 4, 86, 164 and 565.
+• Shorts go live at about 05:00 IST (6:30 PM ET, slot c), 17:30 IST (7 AM ET; India evening, slot b) and 23:30 IST (1 PM ET, slot a = the regular daily Short). Runs start ~55 min earlier (04:06, 16:36, 22:36) because each takes 40-50 min. Zapier Pro trial until 2026-11-20: all three every day.
+• After the trial (free plan, 100 tasks/month): slot a (~23:30 IST) daily; bonus slots b/c only near the end of the billing cycle.
+• Deep Dive (long video): Saturday, live ~21:30 IST (11 AM ET Saturday; run starts 19:56), weekly (1 upload + 1 thumbnail call). On the free plan it replaces that Saturday's regular Short (budget --need upload --ref <id>-a exits 4).
 • Weekly review: Sunday 10:20 IST (stats + sync with the Google Docs: 3 Zapier calls).
 
 11. Humour 🔄
 One comic beat per video (job-spec "Beats"): deadpan, side_eye, smirk, freeze, zoom_punch or silence, with an optional meme-caption card. Current (last 2-3 weeks), sneaky, on-topic, dry and quick. Banned: dead memes, punching down, politics, tragedy, crude jokes, real people's photos, copied meme images or audio.
-• Landed: (filled in by the weekly review)
-• Flopped: (filled in by the weekly review)
+• Landed (provisional, likes per 1k views; views alone can't separate the joke from the topic): 'Is This a Pigeon?' card (Great Wall, 34/1k, the channel's best), 'Remember November 2026' card (cells, 29.5/1k), 'W chews / L nibbles' card (prisoner's dilemma, 26.4/1k), '___ arc' slang (trillion, fine views).
+• Flopped (provisional): 'Me when / me trying to' caption (goosebumps, 12.2/1k); 'Always Has Been' is mixed (sugar cube 25/1k, brain 10/1k), so rest it for a while; timeless cards do as well as trends when the topic is strong (gold 1,141 views).
+• Don't reuse one meme more than twice a week ('What's up brah?' ran 3 times).
 
 12. Change log
 • date · section · change · evidence
+• 2026-11-15 · 6 · weights: myth-bust 0.20 -> 0.23, big-question 0.30 -> 0.27; big-questions concrete/physical, not textbook terms · review: myth-bust 7/7 >= 994 views; big-question lows all abstract econ (94, 380, 836)
+• 2026-11-15 · 7 · preferred hooks myth-bust + number-shock; 'you've been told X' / countdown queued as next week's test · review 2026-11-15
+• 2026-11-15 · 11 · first Landed / Flopped notes (provisional); max 2 uses of one meme per week · review 2026-11-15, likes per 1k
 • 2026-11-07 · all · channel set up · owner decisions in setup
+• 2026-11-13 · 6 · custom thumbnails on Shorts too (9:16, same look), when the budget allows · owner: "thumbnail impressions are low"
+• 2026-11-13 · 6 · Shorts 25-35 s (cap 45 s); hook + best fact in 2 s; econ topics framed around the viewer · owner's Studio data
+• 2026-11-13 · 1 · give real, conditional answers (works where/when/why), e.g. communism at country vs small-group scale · owner
+• 2026-11-13 · 1 · facts over balance: say which side the evidence favours, with numbers and context; no verdict on values · owner
+• 2026-11-13 · 6 · topic rule: unique / trending / viral-shaped, ideally a mix · owner
+• 2026-11-13 · 6 · new formats added: what-if, frontier, wild-story, deep-question; honesty tags · owner idea (additions only)
+• 2026-11-11 · 6, 10 · weekly long video (Deep Dive, 16:9) added · owner: "make it a video a week"
 • 2026-11-08 · 3 · v3 (2026-11-08-m3) approved as the final house style and reference video; removed the old "Ved small in a corner" rule · owner: "final this"
 • 2026-11-08 · 3 · living town: faceless townspeople with outfits, body-language emotions, depth staging (perspective + foreground layers), smoother stall/apples · owner request
 • 2026-11-08 · 3 · 3D world from stills + cut-outs animated in 2D (smooth, fast); Ved walks/jumps/talks to camera; multi-angle cuts · owner request

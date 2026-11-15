@@ -81,8 +81,8 @@ Rule: characters are made only by `characters/<id>/make.py`. Colours, proportion
 ## 6. Formats 🔄
 | format | weight | length | structure | hooks |
 |---|---|---|---|---|
-| big-question | 0.30 | 25-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
-| myth-bust | 0.20 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
+| big-question | 0.27 | 25-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
+| myth-bust | 0.23 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
 | scale-shock | 0.15 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
 | what-if | 0.15 | 30-40 s | "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today | what-if |
 | frontier | 0.10 | 30-40 s | "HOW COULD WE REALLY...?" (teleportation, interstellar travel, fusion, CERN) → what already works today (PROVEN) → what the best current research is trying (R&D, with the lab or experiment named) → what is still missing → how far away it really is | question |
@@ -111,6 +111,10 @@ Shorts are 25-35 s (hard cap 45 s, enforced by style.json); 65-90 spoken words; 
 first 2 s; no warm-up lines; every 2-3 s something new on screen; end on a line that loops back to the opening.
 Abstract economics ("opportunity cost", "tragedy of the commons") got 94-164 views, while concrete, personal ones ("Why does the bank
 pay YOU interest?") got more and won the most subscribers: frame money topics around the viewer's own wallet, with a "you" hook.
+**Review 2026-11-15 (28-day stats, 20 public Shorts):** the 36-39 s Shorts reached 994-1,141 views within 6-30 h, as many as the
+40-57 s ones got in a week, so keep 25-35 s. Myth-busts are the steadiest (7 of 7 at 994-1,462 views); every big-question below
+850 views was abstract economics (commons 94, opportunity cost 380, bank interest 836), so big-questions should be concrete and
+physical (gold, goosebumps, prisoner's dilemma all 1,100+), and economics stays wallet-first.
 Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in a row. Deep Dives can use any format too
 (a what-if or frontier topic makes a great long video).
 
@@ -134,6 +138,9 @@ Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in 
 
 ## 7. Hooks 🔄
 question · myth-bust · number-shock · "you've been told X" · countdown. The hook is on screen at frame 0 and spoken in the first 1.5 s.
+- Preferred (2026-11-15): myth-bust (median 1,129 views, never below 994) and number-shock (median 1,142 when posted >= 5 h apart).
+  "Question" hooks work when the question is about a physical thing the viewer can picture; avoid textbook-term questions.
+- Untested: "you've been told X" and countdown (next week's experiment, at most 2 slots).
 
 ## 8. Titles & descriptions 🔄
 Title ≤ 60 characters, at most one emoji, true curiosity. Description: one-line summary, then "Sources:" with links.
@@ -160,12 +167,19 @@ Every factual claim is checked with a search in the same run, with sources in `m
 One comic beat per video (job-spec "Beats"): deadpan, side_eye, smirk, freeze, zoom_punch or silence, with an optional
 meme-caption card. Current (last 2-3 weeks), sneaky, on-topic, dry and quick. Banned: dead memes, punching down, politics,
 tragedy, crude jokes, real people's photos, copied meme images or audio.
-- Landed: (filled in by the weekly review)
-- Flopped: (filled in by the weekly review)
+- Landed (provisional, likes per 1k views; views alone can't separate the joke from the topic): 'Is This a Pigeon?' card (Great
+  Wall, 34/1k, the channel's best), 'Remember November 2026' card (cells, 29.5/1k), 'W chews / L nibbles' card (prisoner's
+  dilemma, 26.4/1k), '___ arc' slang (trillion, fine views).
+- Flopped (provisional): 'Me when / me trying to' caption (goosebumps, 12.2/1k); 'Always Has Been' is mixed (sugar cube 25/1k,
+  brain 10/1k), so rest it for a while; timeless cards do as well as trends when the topic is strong (gold 1,141 views).
+- Don't reuse one meme more than twice a week ('What's up brah?' ran 3 times).
 
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-15 | 6 | weights: myth-bust 0.20 -> 0.23, big-question 0.30 -> 0.27; big-questions concrete/physical, not textbook terms | review: myth-bust 7/7 >= 994 views; big-question lows all abstract econ (94, 380, 836) |
+| 2026-11-15 | 7 | preferred hooks myth-bust + number-shock; 'you've been told X' / countdown queued as next week's test | review 2026-11-15 |
+| 2026-11-15 | 11 | first Landed / Flopped notes (provisional); max 2 uses of one meme per week | review 2026-11-15, likes per 1k |
 | 2026-11-07 | all | channel set up | owner decisions in setup |
 | 2026-11-13 | 6 | custom thumbnails on Shorts too (9:16, same look), when the budget allows | owner: "thumbnail impressions are low" |
 | 2026-11-13 | 6 | Shorts 25-35 s (cap 45 s); hook + best fact in 2 s; econ topics framed around the viewer | owner's Studio data |
