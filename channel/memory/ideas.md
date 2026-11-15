@@ -73,3 +73,14 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [wild-story] The man who lost his sense of touch and body position (Ian Waterman, 1971) · learned to walk again by watching his limbs; proprioception follow-up, runner-up 2026-11-15 · https://en.wikipedia.org/wiki/Ian_Waterman
 - [big-question] Why does tomato juice taste better on planes? · engine noise dulls sweet/salty, boosts umami (crossmodal senses); runner-up 2026-11-15 · https://www.vice.com/en/article/humans-dont-have-5-senses-they-have-as-many-as-33/
 - [big-question] Why does your foot "fall asleep"? · pressure starves the nerve, signals go quiet then fizz back as pins and needles; body niche, picturable · https://en.wikipedia.org/wiki/Paresthesia
+
+
+## Dark files (owner, 2026-11-15): examples of the kind, not a to-do list
+- How hawala moves money across borders with no money moving (and why it is legal in some places and a crime in others)
+- Money laundering in three steps, told through a real bank case (HSBC and the Sinaloa cartel's cash, 2012 settlement)
+- Why cartels are run like businesses: franchising, logistics, and why killing a kingpin rarely shrinks the trade
+- How match-fixing works and how betting data catches it
+- Pablo Escobar's hippos: the strange legacy still living in Colombia
+- Prohibition 1920-1933: what banning alcohol actually did to crime (and what Portugal tried with drugs in 2001)
+- Where your phone's metals come from, and how armed groups profit from them (conflict minerals)
+- Movie mafia vs the real one: what court records show about how the Mafia actually earns

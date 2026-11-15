@@ -81,13 +81,14 @@ Rule: characters are made only by `characters/<id>/make.py`. Colours, proportion
 ## 6. Formats 🔄
 | format | weight | length | structure | hooks |
 |---|---|---|---|---|
-| big-question | 0.27 | 25-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
+| big-question | 0.23 | 25-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
 | myth-bust | 0.23 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
-| scale-shock | 0.15 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
-| what-if | 0.15 | 30-40 s | "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today | what-if |
+| scale-shock | 0.14 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
+| what-if | 0.12 | 30-40 s | "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today | what-if |
 | frontier | 0.10 | 30-40 s | "HOW COULD WE REALLY...?" (teleportation, interstellar travel, fusion, CERN) → what already works today (PROVEN) → what the best current research is trying (R&D, with the lab or experiment named) → what is still missing → how far away it really is | question |
 | wild-story | 0.07 | 30-45 s | a true, crazy story behind a discovery, experiment or thinker, told as a mini-drama with the townspeople as the cast → the twist → what it taught us | story |
 | deep-question | 0.03 | 35-45 s | occasional philosophy ("Are humans a kind of AI?", "Can communism actually work?", "Are your facts real or propaganda?") → the strongest answers on each side, fairly → a thinking tool the viewer can use → Ved leaves the final call to the viewer | question |
+| dark-files | 0.08 | 30-45 s (and Deep Dives) | a hidden economy or crime world (drug markets, cartels, mafias and the underworld, hawala, money laundering, gambling, smuggling, illegal trades) → one true case as a mini-drama → how the system really works, at the level of a news documentary → where it touches your everyday world (prices, banks, sport, phones, elections) → what it costs people and how it ends for those involved → what actually works against it (the evidence) | story / number-shock |
 
 **Added 2026-11-13 by the owner (additions only; nothing above changes):** what-if thought experiments, frontier
 "how could it really work" explainers, wild true stories from science and philosophy, and occasional philosophy questions.
@@ -106,6 +107,17 @@ examples of the kind of video, not a to-do list: find new topics of these kinds 
   trending (people are talking about or searching it this week) or viral-shaped (a famous "impossible" subject made shockingly
   easy, like rocket science in 40 seconds), ideally two or three at once.
 - Mix: about 1 in 3 Shorts uses the new formats; deep-question at most about once a week. The review tunes the weights.
+- **Dark files (owner, 2026-11-15): the hidden side of the real world**, from fiction to fact. Drug markets and cartels, mafias
+  and the underworld (D-Company, Yakuza, 'Ndrangheta...), hawala and money laundering, gambling and match-fixing, smuggling and
+  illegal trades, and how they link to the normal world (the banks that laundered cartel money, the dirty money in property and
+  sport, why your phone's minerals can fund wars). Mix the forms: true stories behind famous cases, myth vs reality (movies vs
+  court records), thought experiments on policy (Portugal's decriminalisation, prohibition then and now) and what the evidence says.
+  Guardrails, always: a documentary journalist's view, never a manual. Explain how a system works and why, never steps someone
+  could copy (no recipes, quantities, prices to buy at, contacts, routes, ways to dodge police or banks, or to hide money). Real
+  sources only (court records, UNODC, FATF, Interpol, government reports, major journalism) and every claim tagged. Show the cost:
+  victims, violence, prison and how most of them ended. Never glamorise crime or make a criminal a hero; no gore. Living people:
+  only what courts or major outlets have established, worded as such ("convicted of", "accused of"). Advertiser-friendly wording
+  (YouTube may limit ads on drug or crime topics): no graphic images, no drug use shown, calm titles.
 **Retention rule (owner's Studio data, 2026-11-13):** viewers watched only 10-19 s of our 40-55 s Shorts (20-36% on average).
 Shorts are 25-35 s (hard cap 45 s, enforced by style.json); 65-90 spoken words; the hook and the most surprising fact land in the
 first 2 s; no warm-up lines; every 2-3 s something new on screen; end on a line that loops back to the opening.
@@ -186,6 +198,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-15 | 6 | new format dark-files 0.08 (hidden economies, crime worlds, how they touch the normal world; documentary guardrails); big-question 0.27 -> 0.23, scale-shock 0.15 -> 0.14, what-if 0.15 -> 0.12 | owner request |
 | 2026-11-15 | 6 | Deep Dive documentary style (chapter cards, archival reconstructions, evidence board, supers, source tags, grain, scored cues, no burned captions) | owner request |
 | 2026-11-15 | 6 | weights: myth-bust 0.20 -> 0.23, big-question 0.30 -> 0.27; big-questions concrete/physical, not textbook terms | review: myth-bust 7/7 >= 994 views; big-question lows all abstract econ (94, 380, 836) |
 | 2026-11-15 | 7 | preferred hooks myth-bust + number-shock; 'you've been told X' / countdown queued as next week's test | review 2026-11-15 |
