@@ -85,8 +85,7 @@ def _grain(W, H, idx):
         rng = np.random.default_rng(7)
         tiles = []
         for _ in range(8):
-            n = rng.standard_normal((H // 2 + 1, W // 2 + 1)).astype(np.float32)
-            n = np.repeat(np.repeat(n, 2, 0), 2, 1)[:H, :W]
+            n = rng.standard_normal((H, W)).astype(np.float32)
             tiles.append(n)
         _CACHE[k] = tiles
     return _CACHE[k][idx % 8]
@@ -116,12 +115,14 @@ def finish(ctx, img, scene_idx, t):
         if sh:
             a = np.roll(a, sh, axis=0)
         a *= _vignette(W, H, 0.55)
-        a += _grain(W, H, fidx)[..., None] * 16
+        if d.get("archival_grain", 0):                    # fine and light: heavy grain turns into blocks after encoding
+            a += _grain(W, H, fidx)[..., None] * d["archival_grain"]
     else:
         if d.get("vignette", 0):
             a *= _vignette(W, H, d["vignette"])
-        if d.get("grain", 0):
-            a += _grain(W, H, fidx)[..., None] * (255 * d["grain"])
+        g = scene.get("grain", d.get("grain", 0))         # off by default: at YouTube bitrates grain becomes "mosaic"
+        if g:
+            a += _grain(W, H, fidx)[..., None] * (255 * g)
     lk = scene.get("leak")                                    # a warm light leak drifting across, [start, dur]
     if lk:
         p = (t - lk[0]) / lk[1]

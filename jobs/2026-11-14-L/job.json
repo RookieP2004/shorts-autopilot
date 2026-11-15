@@ -807,6 +807,12 @@
    "transition_frames": 16,
    "sfx": "hit",
    "sfx_at": 0.3,
+   "bg": {
+    "type": "solid",
+    "colors": [
+     "#0b0d10"
+    ]
+   },
    "layers": [
     {
      "type": "image",
@@ -4881,6 +4887,12 @@
      "stroke_width": 3
     }
    ],
+   "bg": {
+    "type": "solid",
+    "colors": [
+     "#0b0d10"
+    ]
+   },
    "transition": "dip",
    "transition_frames": 12,
    "camera": {
@@ -9654,6 +9666,12 @@
      "stroke_width": 3
     }
    ],
+   "bg": {
+    "type": "solid",
+    "colors": [
+     "#0b0d10"
+    ]
+   },
    "transition": "dip",
    "transition_frames": 12,
    "letterbox": 0.11,

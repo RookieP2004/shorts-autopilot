@@ -154,11 +154,12 @@
     "media_branch": "media-long",
     "doc": {
       "enabled": true,
-      "grain": 0.038,
+      "grain": 0,
       "vignette": 0.32,
       "drift": 1.0,
       "auto_camera": true,
-      "letterbox": 0
+      "letterbox": 0,
+      "archival_grain": 5
     },
     "transition": {
       "type": "cut",
@@ -185,6 +186,7 @@
       "hand": "fonts/Caveat.ttf",
       "marker": "fonts/PermanentMarker-Regular.ttf",
       "serif_i": "fonts/LibreBaskerville-Italic.ttf"
-    }
+    },
+    "encode_preset": "slow"
   }
 }

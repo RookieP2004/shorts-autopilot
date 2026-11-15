@@ -209,8 +209,8 @@ of the frame, so a layer `w` of 0.4 is 768 px wide here.
   `jobs/2026-11-11-longpilot/build_job.py`.
 
 ## Documentary toolkit (long videos; `doc` in the long-form profile, autopilot/doc.py)
-Owner's rule (2026-11-15): long videos look like a hand-made documentary, not a long Short. The profile turns on film grain,
-a vignette, a slow organic camera float on every shot (`doc.drift`) and an automatic slow push or pull on scenes without a
+Owner's rule (2026-11-15): long videos look like a hand-made documentary, not a long Short. The profile turns on a vignette (no film grain: at YouTube bitrates it
+compresses into blocky "mosaic"; set a scene's `grain` only if you must), a slow organic camera float on every shot (`doc.drift`) and an automatic slow push or pull on scenes without a
 `camera`; burned captions are off; the default transition is a cut; music is the `doc` underscore. Reference build:
 `jobs/2026-11-14-L/build_doc.py` (helpers `dtxt`, `hand`, `lower`, `source`, `card_paper`, `sticky`, `mark`, `chapter_card`).
 - Type: `"font": "serif"` / `"serif_i"` (Libre Baskerville), `"cond"` (Oswald caps), `"hand"` (Caveat), `"marker"`,

@@ -147,7 +147,7 @@ scene("Because almost everything around you, the table, the cup, the people... y
                     person("cafe_wide", "tomas", -3.2, -1.2, [["idle", 0]], walk=[(0, -5.4, -1.6), (2.6, -2.6, -1.0)]),
                     ved("cafe_wide", -0.6, -1.6, [["welcome", 0], ["point", 2.6], ["explain", 5.0]], walk=[(0, 2.6, -2.2), (1.4, -0.6, -1.6)])]),
       letterbox=0.11, transition="cut", camera={"zoom": [1.0, 1.05], "focus": [0.5, 0.52]})
-S.append({"dur": 3.6, "captions": False, "transition": "dip", "transition_frames": 16, "sfx": "hit", "sfx_at": 0.3,
+S.append({"dur": 3.6, "captions": False, "transition": "dip", "transition_frames": 16, "sfx": "hit", "sfx_at": 0.3, "bg": {"type": "solid", "colors": ["#0b0d10"]}, 
           "layers": [dict(plate("cafe_wide"), blur_keys=[[0, 18]], opacity=0.55),
                      {"type": "shape", "shape": "rect", "x": 0.5, "y": 0.5, "w": 1.0, "h": 0.6, "color": "#07090b", "opacity": 0.55, "enter": "none"},
                      dtxt("99.9999% EMPTY", 0.5, 0.45, 120, at=0.35, font="serif", enter_dur=1.2),
@@ -264,7 +264,7 @@ scene("Rutherford later said it was as incredible as firing a fifteen-inch shell
             "as if you fired a 15-inch shell at a piece of tissue paper and it came back and hit you.”",
             0.5, 0.42, 50, at=0.4, font="serif_i", max_w=0.72, enter_dur=1.6),
        dtxt("ERNEST RUTHERFORD, 1936 LECTURE", 0.5, 0.66, 28, at=2.4, font="cond", color="accent", max_w=0.8)],
-      transition="dip", transition_frames=12, camera={"zoom": [1.0, 1.04], "focus": [0.5, 0.45]}, pad=0.8)
+      bg={"type": "solid", "colors": ["#0b0d10"]}, transition="dip", transition_frames=12, camera={"zoom": [1.0, 1.04], "focus": [0.5, 0.45]}, pad=0.8)
 scene("The only explanation: nearly all the atom's mass is packed into one tiny, dense core.",
       [board_bg(),
        {"type": "paper", "kind": "photo", "path": A + "plate_lab_close.png", "tone": "sepia", "caption": "Manchester, 1909",
@@ -430,7 +430,7 @@ scene("Solid isn't stuff. It's a *push* you can feel.",
        {"type": "shape", "shape": "rect", "x": 0.5, "y": 0.5, "w": 1.0, "h": 1.0, "color": "#07090b", "opacity": 0.55, "enter": "none"},
        dtxt("Solid isn't stuff.", 0.5, 0.42, 84, at=0.2, font="serif"),
        dtxt("It's a *push* you can feel.", 0.5, 0.56, 84, at=1.5, font="serif_i")],
-      transition="dip", transition_frames=12, letterbox=0.11, min_dur=4.6, pad=1.2)
+      bg={"type": "solid", "colors": ["#0b0d10"]}, transition="dip", transition_frames=12, letterbox=0.11, min_dur=4.6, pad=1.2)
 scene("If that blew your mind a little, subscribe. Every week, one big idea, made simple.",
       staged("cafe_mid",
              behind=[person("cafe_mid", "seller", 1.6, 2.6, [["wave", 0]])],

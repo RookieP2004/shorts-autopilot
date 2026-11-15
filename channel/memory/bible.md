@@ -134,7 +134,7 @@ Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in 
   clippings, typed notes, red string, marker circles and arrows drawing themselves on); timelines for dates; lower-third supers
   for people and places; small source tags ("SOURCE: NASA") on facts; quotes as full-screen quote cards; serif / handwritten
   type instead of Shorts headlines; no burned captions; mostly straight cuts, with whip pans, paper wipes and dips to black for
-  scene changes; film grain and slow camera drift on every shot; a score that changes with the story (wonder, doc, tension,
+  scene changes; slow camera drift on every shot (no film grain: it turns into blocky mosaic after YouTube's compression; only archival shots get a fine, light grain); a score that changes with the story (wonder, doc, tension,
   one held silence). Ved is the host: to camera at the start of chapters and for the big lines, the world carries the rest.
   Humour stays dry: handwritten sticky notes, never meme caption cards. Tools: docs/job-spec.md "Documentary toolkit".
 - Thumbnail, for long videos and (since 2026-11-13) Shorts too, in 9:16 (owner-approved look, 2026-11-11, The Infographics Show as reference): the world blurred and colour-graded

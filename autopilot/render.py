@@ -292,8 +292,9 @@ def render(job_path, out_dir, root=ROOT, workers=None, log=print):
         log(f"encoding for <= {cap_mb} MB: {kbps} kb/s video")
     for attempt in range(3):
         if cap_mb:
-            vargs = ["-c:v", "libx264", "-preset", "veryfast", "-tune", "animation", "-b:v", f"{kbps}k",
-                     "-maxrate", f"{int(kbps * 1.4)}k", "-bufsize", f"{kbps * 2}k", "-pix_fmt", "yuv420p", "-g", "60"]
+            vargs = ["-c:v", "libx264", "-preset", style.get("encode_preset", "veryfast"), "-tune", "animation",
+                     "-b:v", f"{kbps}k", "-maxrate", f"{int(kbps * 1.6)}k", "-bufsize", f"{kbps * 3}k",
+                     "-x264-params", "aq-mode=3:aq-strength=0.9", "-pix_fmt", "yuv420p", "-g", "60"]
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", silent, "-i", wav, "-map", "0:v", "-map", "1:a",
                         *vargs, "-af", f"loudnorm=I={lufs}:TP=-1.5:LRA=11", "-ar", "48000",
                         "-c:a", "aac", "-b:a", abr, "-shortest", "-movflags", "+faststart", tmp], check=True)
