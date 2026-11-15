@@ -81,14 +81,14 @@ Rule: characters are made only by `characters/<id>/make.py`. Colours, proportion
 ## 6. Formats 🔄
 | format | weight | length | structure | hooks |
 |---|---|---|---|---|
-| big-question | 0.23 | 25-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
+| big-question | 0.18 | 25-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
 | myth-bust | 0.23 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
-| scale-shock | 0.14 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
-| what-if | 0.12 | 30-40 s | "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today | what-if |
-| frontier | 0.10 | 30-40 s | "HOW COULD WE REALLY...?" (teleportation, interstellar travel, fusion, CERN) → what already works today (PROVEN) → what the best current research is trying (R&D, with the lab or experiment named) → what is still missing → how far away it really is | question |
+| scale-shock | 0.12 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
+| what-if | 0.09 | 30-40 s | "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today | what-if |
+| frontier | 0.08 | 30-40 s | "HOW COULD WE REALLY...?" (teleportation, interstellar travel, fusion, CERN) → what already works today (PROVEN) → what the best current research is trying (R&D, with the lab or experiment named) → what is still missing → how far away it really is | question |
 | wild-story | 0.07 | 30-45 s | a true, crazy story behind a discovery, experiment or thinker, told as a mini-drama with the townspeople as the cast → the twist → what it taught us | story |
 | deep-question | 0.03 | 35-45 s | occasional philosophy ("Are humans a kind of AI?", "Can communism actually work?", "Are your facts real or propaganda?") → the strongest answers on each side, fairly → a thinking tool the viewer can use → Ved leaves the final call to the viewer | question |
-| dark-files | 0.08 | 30-45 s (and Deep Dives) | a hidden economy or crime world (drug markets, cartels, mafias and the underworld, hawala, money laundering, gambling, smuggling, illegal trades) → one true case as a mini-drama → how the system really works, at the level of a news documentary → where it touches your everyday world (prices, banks, sport, phones, elections) → what it costs people and how it ends for those involved → what actually works against it (the evidence) | story / number-shock |
+| dark-files | 0.20 | 30-45 s (and Deep Dives) | a hidden economy or crime world (drug markets, cartels, mafias and the underworld, hawala, money laundering, gambling, smuggling, illegal trades) → one true case as a mini-drama → how the system really works, at the level of a news documentary → where it touches your everyday world (prices, banks, sport, phones, elections) → what it costs people and how it ends for those involved → what actually works against it (the evidence) | story / number-shock |
 
 **Added 2026-11-13 by the owner (additions only; nothing above changes):** what-if thought experiments, frontier
 "how could it really work" explainers, wild true stories from science and philosophy, and occasional philosophy questions.
@@ -198,6 +198,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-15 | 6 | dark-files 0.08 -> 0.20 (about 1 Short in 5); big-question 0.23 -> 0.18, scale-shock 0.14 -> 0.12, what-if 0.12 -> 0.09, frontier 0.10 -> 0.08; myth-bust stays 0.23 | owner: dark content attracts viewers |
 | 2026-11-15 | 6 | new format dark-files 0.08 (hidden economies, crime worlds, how they touch the normal world; documentary guardrails); big-question 0.27 -> 0.23, scale-shock 0.15 -> 0.14, what-if 0.15 -> 0.12 | owner request |
 | 2026-11-15 | 6 | Deep Dive documentary style (chapter cards, archival reconstructions, evidence board, supers, source tags, grain, scored cues, no burned captions) | owner request |
 | 2026-11-15 | 6 | weights: myth-bust 0.20 -> 0.23, big-question 0.30 -> 0.27; big-questions concrete/physical, not textbook terms | review: myth-bust 7/7 >= 994 views; big-question lows all abstract econ (94, 380, 836) |
