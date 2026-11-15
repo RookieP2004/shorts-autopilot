@@ -136,13 +136,14 @@
       "size": 50,
       "y": 0.885,
       "words_per_chunk": 4,
-      "stroke_width": 7
+      "stroke_width": 7,
+      "enabled": false
     },
     "watermark": {
-      "x": 0.9,
-      "y": 0.06,
-      "size": 26,
-      "opacity": 0.45
+      "x": 0.925,
+      "y": 0.952,
+      "size": 24,
+      "opacity": 0.4
     },
     "progress_bar": {
       "enabled": false
@@ -150,6 +151,40 @@
     "youtube": {
       "hashtags": []
     },
-    "media_branch": "media-long"
+    "media_branch": "media-long",
+    "doc": {
+      "enabled": true,
+      "grain": 0.038,
+      "vignette": 0.32,
+      "drift": 1.0,
+      "auto_camera": true,
+      "letterbox": 0
+    },
+    "transition": {
+      "type": "cut",
+      "frames": 10
+    },
+    "music": {
+      "style": "doc",
+      "bpm": 66,
+      "bars_per_chord": 2,
+      "volume": 0.13,
+      "duck": 0.5
+    },
+    "grade": {
+      "enabled": true,
+      "shadows": "#173f4a",
+      "highlights": "#ffb06a",
+      "strength": 0.16,
+      "contrast": 1.09
+    },
+    "fonts": {
+      "serif": "fonts/LibreBaskerville.ttf",
+      "cond": "fonts/Oswald.ttf",
+      "type": "fonts/SpecialElite-Regular.ttf",
+      "hand": "fonts/Caveat.ttf",
+      "marker": "fonts/PermanentMarker-Regular.ttf",
+      "serif_i": "fonts/LibreBaskerville-Italic.ttf"
+    }
   }
 }

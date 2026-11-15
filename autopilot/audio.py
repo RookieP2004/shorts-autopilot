@@ -194,6 +194,8 @@ def music(duration, cfg):
         d0 = d - 1
         return root + sc[d0 % 7] + 12 * (d0 // 7 + octave)
 
+    if style in ("doc", "tension", "wonder"):
+        return _doc_music(duration, cfg, rng, root, sc, prog, bars_per_chord, bar, beat)
     arp_pat = rng.permutation([0, 1, 2, 3, 2, 1, 0, 2])
     swing = 0.08 if style == "lofi" else 0.0
     for ci, d in enumerate(prog):
@@ -249,6 +251,57 @@ def music(duration, cfg):
     fo = min(len(full), int(1.5 * SR))
     full[-fo:] *= np.linspace(1, 0, fo)
     fi = min(len(full), int(0.3 * SR))
+    full[:fi] *= np.linspace(0, 1, fi)
+    peak = np.abs(full).max()
+    return (full / peak * 0.9).astype(np.float32) if peak > 0 else full
+
+
+def _doc_music(duration, cfg, rng, root, sc, prog, bars_per_chord, bar, beat):
+    """Documentary underscore. doc: warm string pad + sparse felt piano. tension: low drone + ticking pulse +
+    high shimmer. wonder: open pad + slow rising arpeggio. No drums, lots of air."""
+    style = cfg.get("style")
+    n_total = int(duration * SR) + SR
+    buf = np.zeros(n_total, np.float32)
+
+    def deg(d, octave=0):
+        d0 = d - 1
+        return root + sc[d0 % 7] + 12 * (d0 // 7 + octave)
+
+    t0 = 0.0
+    ci = 0
+    while t0 < duration:
+        d = prog[ci % len(prog)]
+        cl = bars_per_chord * bar
+        chord = [deg(d), deg(d + 2), deg(d + 4), deg(d + 6)]
+        pad_h = (1, 0.3, 0.12, 0.05)
+        for m in chord[:3]:
+            for det in (-0.07, 0.07):
+                add(buf, tone(mtof(m + 12 + det), cl + 1.2, pad_h, attack=1.2, release=1.4, vib=0.003) *
+                    (0.05 if style != "tension" else 0.03), t0)
+        add(buf, tone(mtof(chord[0] - 12), cl + 0.8, (1, 0.4, 0.15), 0.8, None, 1.0) * 0.16, t0)   # low string root
+        if style == "doc":                     # felt piano: a few notes per chord, never on a grid
+            k = 0.0
+            while k < cl - 0.2:
+                m = chord[int(rng.integers(0, 4))] + 12 * int(rng.integers(1, 3))
+                add(buf, tone(mtof(m), 2.4, (1, 0.45, 0.12, 0.05), 0.004, 1.6, 0.9) * rng.uniform(0.05, 0.09), t0 + k)
+                k += beat * rng.choice([1.5, 2, 2.5, 3])
+        elif style == "tension":               # heartbeat-like low pulse + high glassy shimmer
+            for b in range(int(cl / (beat / 2))):
+                add(buf, tone(mtof(chord[0] - 12), 0.18, (1, 0.3), 0.003, 0.12, 0.05) * (0.11 if b % 2 == 0 else 0.06),
+                    t0 + b * beat / 2)
+            add(buf, tone(mtof(chord[2] + 36), cl, (1, 0.2), 1.5, None, 1.0) * 0.012, t0)
+        else:                                  # wonder: slow arpeggio climbing through the chord
+            steps = int(cl / beat)
+            for s_ in range(steps):
+                m = chord[s_ % 4] + 12 * (1 + s_ // 4)
+                add(buf, tone(mtof(m), beat * 2.2, (1, 0.35, 0.1), 0.01, 1.2, 0.6) * 0.06, t0 + s_ * beat)
+        t0 += cl
+        ci += 1
+    full = buf[: int(duration * SR)]
+    full += rng.standard_normal(len(full)).astype(np.float32) * 0.0015       # a little air
+    fo = min(len(full), int(2.5 * SR))
+    full[-fo:] *= np.linspace(1, 0, fo)
+    fi = min(len(full), int(1.0 * SR))
     full[:fi] *= np.linspace(0, 1, fi)
     peak = np.abs(full).max()
     return (full / peak * 0.9).astype(np.float32) if peak > 0 else full
@@ -327,7 +380,114 @@ def sfx(name, seed=1):
             out.append(v * np.minimum(1, t / 0.02) * np.minimum(1, (d - t) / 0.08))
         x = np.concatenate(out)
         return (x / np.abs(x).max() * 0.45).astype(np.float32)
+    doc = _doc_sfx(name, rng)
+    if doc is not None:
+        return doc
     return np.zeros(1, dtype=np.float32)
+
+
+def _bandnoise(n, lo, hi, rng):
+    x = rng.standard_normal(n)
+    sp = np.fft.rfft(x)
+    fr = np.fft.rfftfreq(n, 1 / SR)
+    sp[(fr < lo) | (fr > hi)] = 0
+    y = np.fft.irfft(sp, n)
+    return y / (np.abs(y).max() + 1e-9)
+
+
+def _doc_sfx(name, rng):
+    """Foley for the documentary look: paper, tape, marker, camera shutter, typewriter, soft thud, deep hit."""
+    if name == "paper":                     # a card or photo laid down: crinkly rustle
+        n = int(0.42 * SR)
+        x = _bandnoise(n, 1500, 9000, rng)
+        t = np.arange(n) / SR
+        env = np.zeros(n)
+        for c in rng.uniform(0, 0.3, 7):
+            env += np.exp(-np.maximum(0, t - c) * 28) * (t >= c) * rng.uniform(0.4, 1)
+        return (x * env / (env.max() + 1e-9) * 0.35).astype(np.float32)
+    if name == "tape":                      # a strip of tape pulled and pressed
+        n = int(0.3 * SR)
+        t = np.arange(n) / SR
+        x = _bandnoise(n, 800, 7000, rng) * (0.6 + 0.4 * np.sign(np.sin(2 * np.pi * 70 * t)))
+        env = np.minimum(1, t / 0.01) * np.exp(-t * 9)
+        return (x * env * 0.3).astype(np.float32)
+    if name == "marker":                    # felt-tip squeak and scratch while drawing (about 0.6 s)
+        n = int(0.6 * SR)
+        t = np.arange(n) / SR
+        x = _bandnoise(n, 2000, 6000, rng) * (0.55 + 0.45 * np.sin(2 * np.pi * 9 * t + rng.uniform(0, 6)))
+        sq = np.sin(2 * np.pi * (1900 + 300 * np.sin(2 * np.pi * 3 * t)) * t) * 0.15
+        env = np.minimum(1, t / 0.03) * np.minimum(1, (0.6 - t) / 0.08)
+        return ((x * 0.6 + sq) * env * 0.22).astype(np.float32)
+    if name == "shutter":                   # film camera: two mechanical clicks
+        out = np.zeros(int(0.18 * SR), np.float32)
+        for at, g in ((0.0, 1.0), (0.075, 0.7)):
+            h = noise_hit(0.04, 0.006, True, rng) * g
+            add(out, h, at)
+        return out / (np.abs(out).max() + 1e-9) * 0.6
+    if name == "type":                      # typewriter: a burst of keys and a carriage ding-less return
+        out = np.zeros(int(1.0 * SR), np.float32)
+        at = 0.0
+        while at < 0.85:
+            add(out, noise_hit(0.025, 0.004, True, rng) * rng.uniform(0.5, 1.0), at)
+            at += rng.uniform(0.06, 0.13)
+        return out / (np.abs(out).max() + 1e-9) * 0.42
+    if name == "thud":                      # a soft low thud (a book, a folder on a desk)
+        n = int(0.35 * SR)
+        t = np.arange(n) / SR
+        x = np.sin(2 * np.pi * (90 * np.exp(-t * 6) + 45) * t) * np.exp(-t * 14)
+        x = x + _bandnoise(n, 100, 1200, rng) * np.exp(-t * 40) * 0.3
+        return (x * 0.6).astype(np.float32)
+    if name == "hit":                       # cinematic low hit with a long tail (chapter cards, reveals)
+        n = int(2.4 * SR)
+        t = np.arange(n) / SR
+        x = np.sin(2 * np.pi * (55 * np.exp(-t * 1.5) + 30) * t) * np.exp(-t * 1.6)
+        x = x + _bandnoise(n, 40, 600, rng) * np.exp(-t * 2.5) * 0.35
+        x = x + _bandnoise(n, 3000, 9000, rng) * np.exp(-t * 18) * 0.15
+        return (x / np.abs(x).max() * 0.7).astype(np.float32)
+    if name == "swoosh_soft":               # gentle air movement for whip pans
+        n = int(0.5 * SR)
+        t = np.arange(n) / SR
+        x = _bandnoise(n, 300, 4000, rng) * np.sin(np.pi * t / 0.5) ** 2
+        return (x * 0.28).astype(np.float32)
+    if name == "projector":                 # old projector running (1.6 s of sprocket clatter)
+        n = int(1.6 * SR)
+        t = np.arange(n) / SR
+        clat = np.zeros(n)
+        for k in range(int(1.6 * 24)):
+            a = int(k / 24 * SR)
+            clat[a:a + 120] += np.exp(-np.arange(120) / 25.0) * rng.uniform(0.5, 1)
+        x = clat * _bandnoise(n, 1500, 5000, rng) + _bandnoise(n, 60, 300, rng) * 0.08
+        return (x * 0.25 * np.minimum(1, t / 0.1) * np.minimum(1, (1.6 - t) / 0.2)).astype(np.float32)
+    return None
+
+
+def score(duration, base, cues, fps_starts):
+    """A documentary score: the music changes with the story. cues = [{"at": seconds, "style": "doc"|"tension"|
+    "wonder"|"ambient"|"none", "key": ..., "bpm": ...}, ...]; each section is generated with its own settings and
+    the sections crossfade over 2 s."""
+    n = int(duration * SR)
+    out = np.zeros(n, np.float32)
+    cues = sorted(cues, key=lambda c: c["at"])
+    xf = int(2.0 * SR)
+    for i, c in enumerate(cues):
+        a = c["at"]
+        b = cues[i + 1]["at"] if i + 1 < len(cues) else duration
+        if c.get("style") == "none" or b <= a:
+            continue
+        cfg = {**base, **{k: v for k, v in c.items() if k != "at"}, "seed": base.get("seed", 7) + i}
+        seg = music(b - a + 2.5, cfg) * c.get("gain", 1.0)
+        i0 = int(a * SR)
+        seg = seg[: max(0, min(len(seg), n - i0))].copy()
+        if i > 0:
+            k = min(xf, len(seg))
+            seg[:k] *= np.linspace(0, 1, k)
+        end = int((b - a) * SR)
+        if end < len(seg):
+            k = min(xf, len(seg) - end)
+            seg[end:end + k] *= np.linspace(1, 0, k)
+            seg[end + k:] = 0
+        out[i0:i0 + len(seg)] += seg
+    return out
 
 
 def duck_curve(vo, amount, smooth=0.18):

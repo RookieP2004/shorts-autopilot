@@ -36,13 +36,15 @@ DEFAULT_STYLE = {
 }
 
 ENTER = {"none", "pop", "fade", "slide_up", "slide_down", "slide_left", "slide_right",
-         "zoom", "drop", "typewriter"}
+         "zoom", "drop", "typewriter", "rise", "slam"}
 LOOP = {"none", "bob", "pulse", "shake", "spin", "float", "wiggle"}
-LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d", "blender"}
+LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d", "blender",
+               "paper", "marker", "string", "timeline", "lower_third", "chapter", "tag"}  # last 7: documentary (doc.py)
 SHAPES3D = {"box", "sphere", "cylinder", "cone", "plane", "terrain", "person", "tree", "building"}
 SHAPES = {"circle", "ring", "rect", "arrow", "line", "burst"}
-TRANSITIONS = {"cut", "fade", "slide_left", "slide_up", "zoom", "flash"}
-SFX = {"pop", "whoosh", "ding", "click", "boom", "riser", "scratch", "crickets", "wah", "none"}
+TRANSITIONS = {"cut", "fade", "slide_left", "slide_up", "zoom", "flash", "whip", "dip", "burn", "paper"}
+SFX = {"pop", "whoosh", "ding", "click", "boom", "riser", "scratch", "crickets", "wah", "none",
+       "paper", "tape", "marker", "shutter", "type", "thud", "hit", "swoosh_soft", "projector"}  # last row: documentary
 # comedy beats: a short, unexpected moment (see docs/job-spec.md "Beats"). Defaults per kind.
 BEATS = {
     "deadpan":    {"dur": 1.3, "sfx": "none",     "music": "cut",  "zoom": 1.55},   # flat stare at camera, arms cross

@@ -234,7 +234,7 @@ length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). The
    **last**, after steps 5-6 and at least 10 minutes after the upload (`sleep 600` if needed): a thumbnail set while YouTube is
    still processing the video gets replaced by its auto frame (seen 2026-11-13). During the trial,
    or if `python -m autopilot budget --spare` shows SPARE >= 1: add a `thumbnail` to job.json in the house look (the long-video
-   rules in 3d step 6, vertical): `bg` = a clean plate of the set (no text, no Ved) with the key townspeople and props, `fg` = Ved
+   rules in 3d step 7, vertical): `bg` = a clean plate of the set (no text, no Ved) with the key townspeople and props, `fg` = Ved
    big (about `h` 0.95, `y` 0.93, `x` 0.5, a strong face such as "surprised", `acting: "none"`, `talk: false`, `ground: false`)
    plus one key prop, and a 1-3 word title with one *accent* word. `python -m autopilot thumbnail jobs/<id>/job.json` writes a
    1080x1920 out/thumbnail.jpg; Read it, then `KEEP=8 scripts/push_media.sh jobs/<id>/out/thumbnail.jpg <id>-thumb` and Zapier
@@ -285,34 +285,42 @@ length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). The
    `python -m autopilot budget --sync <tasks>` and commit the ledger, so the bonus maths stays honest.
 
 ## 3d. Deep Dive mode (weekly long video, 16:9)
-Follows the Bible's "Deep Dive" format; `jobs/2026-11-11-longpilot` (the pilot) is the reference build.
+Follows the Bible's "Deep Dive" format, **edited as a documentary** (owner's rule, 2026-11-15: it must feel hand-made, not
+like a long Short). `jobs/2026-11-14-L/build_doc.py` is the reference build; docs/job-spec.md "Documentary toolkit" lists the tools.
 Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
 1. Section 0, then `python -m autopilot budget --need upload` (exit 3: tell the owner the long video was skipped, and stop).
 2. **Topic.** Prefer the idea behind the best recent Short (log + last review), taken much deeper; otherwise research as in 3a
    (6-10 searches). Verify every claim (3c), put the URLs in `meta.sources` and name the main sources in the description.
    Where experts disagree, give both views briefly.
 3. **Script.** 5-8 min (about 750-1100 words), 5-8 chapters. Cold open with a concrete object or question and a promise of the
-   payoff; each chapter is a small story acted out by Ved and the townspeople; 2-3 comic beats (one per ~2 min); a one-line payoff;
-   a short subscribe outro. Plan a new shot, cut or panel every 3-6 s.
-4. **Build** `jobs/<id>/assets.py` (sets at 1920x1080, reuse and extend the props) and `build_job.py` from the pilot's helpers;
-   `"kind": "long"`, `chapters`, `thumbnail`. See docs/job-spec.md "Long videos".
-5. **QA.** Preview sets (`BK_PREVIEW=1`, look at every plate), then `frames` for every scene (look at all of them: framing, panels
+   payoff; each chapter is a small story acted out by Ved and the townspeople; 2 dry jokes as handwritten sticky notes; a one-line
+   payoff; a short outro. Plan a new shot, cut or graphic every 3-6 s.
+4. **Edit plan (documentary).** Map every scene to a device: letterboxed cold open with serif type and no headlines, then a
+   title card; a `chapter` card (2.8 s, `hit` sfx, a new `music.cues` section) at each chapter; history as `look: "archival"`
+   reconstructions with `lower_third` supers for people and places; evidence-board scenes on cork (`paper` photos, clippings and
+   typed notes, `string`, `marker` circles/arrows/underlines) for "how we know"; a `timeline` when dates matter; full-screen
+   quote cards for real quotes (exact wording, credited); `source` tags on numbers; Ved to camera for the big lines only.
+   Transitions mostly cuts, plus `whip`, `paper` (into boards), `dip` (chapters, quotes) and `burn` (a shock). One held
+   silence (`music` cue "none") on the biggest reveal. Type: serif / serif_i / hand / cond, never Anton headlines or pop-ins.
+5. **Build** `jobs/<id>/assets.py` (sets at 1920x1080, reuse and extend the props) and `build_doc.py` (copy the reference's
+   helpers); `"kind": "long"`, `chapters`, `music.cues`, `thumbnail`. See docs/job-spec.md "Long videos" and "Documentary toolkit".
+6. **QA.** Preview sets (`BK_PREVIEW=1`, look at every plate), then `frames` for every scene (look at all of them: framing, panels
    and text inside the frame, people placed in depth, nothing cut off). Fix and repeat. Then render the full sets with `nohup`
    and poll, then `nohup python -m autopilot render ...` and poll (20-40 min). Check out/render.json: `duration` <= 720 and
    `size_mb` <= 90; pull 5-6 frames from final.mp4 and look at them.
-6. **Thumbnail** (owner-approved look, always): the world blurred and colour-graded behind (two-colour gradient tint + a warm glow
+7. **Thumbnail** (owner-approved look, always): the world blurred and colour-graded behind (two-colour gradient tint + a warm glow
    behind Ved), Ved big and sharp right under the title with a strong face (surprised, shocked, side-eye), one or two key props
    sharp beside him, and a huge 1-3 word title in heavy white sans with one *accent* word ("JUST *PAPER?*"); no watermark, no small
    text. Build it as `thumbnail` with `bg`/`fg` layers (docs/job-spec.md, the pilot's job.json is the reference), run
    `python -m autopilot thumbnail jobs/<id>/job.json`, Read out/thumbnail.jpg and iterate until it reads at a glance on a phone.
-7. **Publish.** `BRANCH=media-long KEEP=6 scripts/push_media.sh jobs/<id>/out/final.mp4 <id>` and the same for
+8. **Publish.** `BRANCH=media-long KEEP=6 scripts/push_media.sh jobs/<id>/out/final.mp4 <id>` and the same for
    `out/thumbnail.jpg` as `<id>-thumb`. `python -m autopilot zapier jobs/<id>/job.json` (description includes the chapters),
    then upload exactly as 3h step 3 (pinned connection, check `channelId`) and `budget --add upload --ref <id>`.
    Thumbnail: during the trial, or if `python -m autopilot budget --spare` shows SPARE >= 1, wait until YouTube has finished
    processing (at least 20 minutes after the upload for a long video), then call Zapier *YouTube: Update Video
    Thumbnail* (video_id, thumbnail = the thumb URL) and `budget --add thumb --ref <id>`. If YouTube refuses because the channel
    isn't phone-verified, or there's no budget, send the owner the thumbnail file to set in YouTube Studio.
-8. Log (`logline` marks it LONG), commit, push, and report as 3i with the link and the chapter list.
+9. Log (`logline` marks it LONG), commit, push, and report as 3i with the link and the chapter list.
 
 ## 4. Review mode (every 7 days): 3 Zapier calls, plus an optional 4th
 1. **Collect stats (1 call).** Take every video id from `log.md` for the last 28 days (skip PILOT lines). Get views, likes,

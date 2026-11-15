@@ -187,8 +187,8 @@ One short, unexpected funny beat per video, tied to a trend that is current this
 
 ## Long videos (Deep Dives, 16:9)
 Set `"kind": "long"`. The channel style then merges `longform` from style.json: 1920x1080 canvas, `max_duration` 720 s,
-`target_mb` 90 (the final encode is sized to fit, for Zapier and GitHub), captions low (y 0.885, 4 words), no progress bar,
-watermark top-right, no `#shorts`. Everything else (layers, stage, beats, motion) works the same; x/y/w are still fractions
+`target_mb` 90 (the final encode is sized to fit, for Zapier and GitHub), no burned captions, no progress bar,
+small watermark bottom-right, no `#shorts`, and the documentary toolkit (next section). Everything else (layers, stage, beats, motion) works the same; x/y/w are still fractions
 of the frame, so a layer `w` of 0.4 is 768 px wide here.
 - `chapters`: `[{"scene": 0, "title": "A piece of paper"}, ...]`, at least 3, first at scene 0, each >= 10 s long.
   `python -m autopilot zapier` adds them to the description as `0:00 Title` lines (from out/render.json).
@@ -205,7 +205,31 @@ of the frame, so a layer `w` of 0.4 is 768 px wide here.
   headline or panel on the other side. Beat cards: pass `text_w` 0.4 so they stay on one side.
 - Publish: `BRANCH=media-long KEEP=6 scripts/push_media.sh <file> <name>` for both the video and the thumbnail
   (its own branch, so the daily Shorts' pushes never remove it).
-- Reference: `jobs/2026-11-11-longpilot/assets.py` + `build_job.py`.
+- Reference: `jobs/2026-11-14-L/assets.py` + `build_doc.py` (documentary cut); the 3D sets and people as in
+  `jobs/2026-11-11-longpilot/build_job.py`.
+
+## Documentary toolkit (long videos; `doc` in the long-form profile, autopilot/doc.py)
+Owner's rule (2026-11-15): long videos look like a hand-made documentary, not a long Short. The profile turns on film grain,
+a vignette, a slow organic camera float on every shot (`doc.drift`) and an automatic slow push or pull on scenes without a
+`camera`; burned captions are off; the default transition is a cut; music is the `doc` underscore. Reference build:
+`jobs/2026-11-14-L/build_doc.py` (helpers `dtxt`, `hand`, `lower`, `source`, `card_paper`, `sticky`, `mark`, `chapter_card`).
+- Type: `"font": "serif"` / `"serif_i"` (Libre Baskerville), `"cond"` (Oswald caps), `"hand"` (Caveat), `"marker"`,
+  `"type"` (typewriter). Use `enter: "rise"`, a thin dark `stroke` (3 px) over busy plates, no Anton headlines, no pop-ins.
+- Scene keys: `look: "archival"` (sepia film with scratches, flicker and gate weave, labelled RECONSTRUCTION; for history),
+  `letterbox: 0.11` (+ `letterbox_in` seconds), `leak: [start, dur, strength]` (warm light leak), `jcut: 0.3` (voice starts
+  before the cut), transitions `whip` | `paper` (torn-paper wipe, into boards) | `dip` (through black) | `burn` (film splice flash).
+- Layer keys (any layer): `pan: [dx, dy, dscale]` drift over the layer's life (move foreground more than background =
+  parallax); `blur_keys: [[t, px], ...]` rack focus on image layers; entrances `rise` and `slam` (a card dropped on a board).
+- `paper` layers: `kind` "photo" (`path`, `tone` sepia/bw, handwritten `caption`), "doc" (typed `title` + `text`), "clip"
+  (newspaper: `masthead`, `title`, grey column lines), "note" (`title` in marker + `text` in handwriting, `lined`,
+  `paper` colour, e.g. "#f6e27f" sticky); `tape` corners, `stamp` ("1911"), `w`, `rotate`.
+- Drawn overlays: `marker` (`shape` circle | underline | arrow | box | cross | check | scribble | highlight, `box`
+  [x0, y0, x1, y1] or `from`/`to`, `color`, draws itself on and boils at 12 fps), `string` (red string, `points`),
+  `timeline` (`x0`, `x1`, `y`, `events` [{pos, year, label}], `active`), `lower_third` (`title`, `sub`), `chapter`
+  (`num`, `title`; a chapter title card over a blurred, dimmed shot), `tag` (small typewriter label: sources, VISUALISATION).
+- Sound: foley `paper`, `tape`, `marker`, `shutter`, `type`, `thud`, `hit` (chapter cards), `swoosh_soft`, `projector`.
+  `music.cues: [{"scene": i, "style": "doc" | "tension" | "wonder" | "none", "key": ..., "scale": ...}]` scores the film in
+  sections that crossfade (use "none" for one held silence on the big reveal).
 
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);

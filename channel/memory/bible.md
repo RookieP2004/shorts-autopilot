@@ -128,6 +128,15 @@ Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in 
 - Chapters in job.json (`chapters`, >= 3, first at scene 0, each >= 10 s); they go into the description automatically.
 - 2-3 comic beats (one per ~2 minutes), same rules as the Shorts.
 - Even-handed: where experts disagree, give both views in one or two lines each.
+- **Documentary style** 🔒 owner-approved 2026-11-15 ("documentary type editing ... so it looks human-created"). Long videos are
+  edited like a documentary, not like a long Short: a letterboxed cold open with no headlines, then a title card; a chapter
+  title card for every chapter; history told as archival "reconstruction" shots of the 3D sets plus an evidence board (photos,
+  clippings, typed notes, red string, marker circles and arrows drawing themselves on); timelines for dates; lower-third supers
+  for people and places; small source tags ("SOURCE: NASA") on facts; quotes as full-screen quote cards; serif / handwritten
+  type instead of Shorts headlines; no burned captions; mostly straight cuts, with whip pans, paper wipes and dips to black for
+  scene changes; film grain and slow camera drift on every shot; a score that changes with the story (wonder, doc, tension,
+  one held silence). Ved is the host: to camera at the start of chapters and for the big lines, the world carries the rest.
+  Humour stays dry: handwritten sticky notes, never meme caption cards. Tools: docs/job-spec.md "Documentary toolkit".
 - Thumbnail, for long videos and (since 2026-11-13) Shorts too, in 9:16 (owner-approved look, 2026-11-11, The Infographics Show as reference): the world blurred and colour-graded
   behind (a two-colour gradient tint + a warm glow behind Ved), Ved big and sharp with a strong face (surprised, shocked,
   side-eye) right under the title, one or two key props sharp beside him, and a huge 1-3 word title in heavy white sans with
@@ -177,6 +186,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-15 | 6 | Deep Dive documentary style (chapter cards, archival reconstructions, evidence board, supers, source tags, grain, scored cues, no burned captions) | owner request |
 | 2026-11-15 | 6 | weights: myth-bust 0.20 -> 0.23, big-question 0.30 -> 0.27; big-questions concrete/physical, not textbook terms | review: myth-bust 7/7 >= 994 views; big-question lows all abstract econ (94, 380, 836) |
 | 2026-11-15 | 7 | preferred hooks myth-bust + number-shock; 'you've been told X' / countdown queued as next week's test | review 2026-11-15 |
 | 2026-11-15 | 11 | first Landed / Flopped notes (provisional); max 2 uses of one meme per week | review 2026-11-15, likes per 1k |

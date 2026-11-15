@@ -71,6 +71,13 @@ def anim_state(L, t, W, H):
             sc *= 1 + 0.06 * (1 - b)
     elif enter == "typewriter":
         reveal = p
+    elif enter == "rise":                                # documentary text: a short drift up while fading in
+        dy += (1 - ease_out_cubic(p)) * H * 0.025
+        alpha *= ease_out_cubic(p)
+    elif enter == "slam":                                # a print/card dropped onto the board
+        sc *= 1 + 0.18 * (1 - ease_out_cubic(p))
+        rot += (1 - ease_out_cubic(p)) * 4
+        alpha *= clamp(p * 4)
     if until is not None and t > until:
         q = clamp((t - until) / L.get("exit_dur", 0.25))
         ex = L.get("exit", "fade")
@@ -148,6 +155,9 @@ def _paste_clip(canvas, img, x, y):
 
 
 # ---------- layers ----------
+DOC_DIRECT = {"marker", "string", "timeline", "lower_third", "chapter", "tag"}
+DOC_SCREEN = {"lower_third", "chapter", "tag"}
+
 def character_image(ctx, L, scene_idx, t, scene):
     ch = ctx.chars[L["id"]]
     from . import acting
@@ -324,10 +334,13 @@ def layer_image(ctx, L, scene_idx, t, scene, reveal):
         from .three import render as render3d
         return render3d(ctx.style, L, t - L.get("at", 0.0), ctx.dur[scene_idx],
                         int(L.get("w", 1.0) * ctx.W), int(L.get("h", 1.0) * ctx.H), L.get("ss", 2))
+    if typ == "paper":
+        from . import doc
+        return doc.paper_image(ctx, L)
     if typ == "image":
         path = L.get("path", "")
         if path.lower().endswith((".png", ".jpg", ".jpeg", ".webp")):
-            return raster_image(os.path.join(ctx.root, path), int(L.get("w", 0.4) * W), L.get("blur", 0))
+            return raster_image(os.path.join(ctx.root, path), int(L.get("w", 0.4) * W), L.get("_blur", L.get("blur", 0)))
         svg = L.get("svg") or sprites.read_file(os.path.join(ctx.root, L["path"]))
         return sprites.svg_image(svg, L.get("w", 0.4) * W)
     return None
@@ -368,12 +381,35 @@ def draw_scene(ctx, scene_idx, t):
     fb, _ = active_beat(ctx, scene_idx, t, ("freeze",))
     t_real, t = t, (fb["at"] if fb else t)                # a freeze beat holds the picture still
     canvas = sprites.background(ctx.style, scene.get("bg"), W, H).copy()
+    screen = []
     for L in scene.get("layers", []):
         stt = anim_state(L, t, W, H)
         if stt is None:
             continue
         dx, dy, sc, rot, alpha, reveal, sx = stt
         lt = t - L.get("at", 0.0)
+        if L.get("type") in DOC_SCREEN:                   # titles, supers, tags: drawn after the camera move
+            screen.append((L, lt, alpha))
+            continue
+        if L.get("type") in DOC_DIRECT:                   # markers, string, timelines: part of the world
+            from . import doc
+            doc.draw_direct(ctx, canvas, L, lt, alpha)
+            continue
+        if L.get("pan"):                                  # slow drift over the scene (parallax: move fg more than bg)
+            pn = L["pan"]
+            span = max(0.1, L.get("until", ctx.dur[scene_idx]) - L.get("at", 0.0))
+            pp = ease_in_out(clamp(lt / span))
+            dx += pn[0] * W * pp
+            dy += pn[1] * H * pp
+            if len(pn) > 2:
+                sc *= 1 + pn[2] * pp
+        if L.get("blur_keys"):                            # rack focus: [[t, radius px], ...]
+            bk = L["blur_keys"]
+            r = bk[-1][1] if lt >= bk[-1][0] else bk[0][1]
+            for (t0, r0), (t1, r1) in zip(bk, bk[1:]):
+                if t0 <= lt < t1:
+                    r = r0 + (r1 - r0) * ease_in_out((lt - t0) / max(0.01, t1 - t0))
+            L = dict(L, _blur=round(r))
         if L.get("type") == "character" and L.get("ground", bool(L.get("keys") or L.get("hops"))):
             hh, _ = motion.hop(L, lt)
             _, bob, _ = motion.legs_and_bob(L, lt)
@@ -391,6 +427,10 @@ def draw_scene(ctx, scene_idx, t):
     t = t_real
     cam = scene.get("camera") or {}
     dur = ctx.dur[scene_idx]
+    docst = ctx.style.get("doc", {})
+    if docst.get("enabled") and not cam and docst.get("auto_camera", True):   # a slow push or pull on every shot
+        z_a, z_b = (1.02, 1.075) if scene_idx % 2 == 0 else (1.075, 1.02)
+        cam = {"zoom": [z_a, z_b], "focus": [0.5 + (0.02 if scene_idx % 3 == 0 else -0.015), 0.5]}
     z0, z1 = cam.get("zoom", [1.0, 1.0])
     z = z0 + (z1 - z0) * ease_in_out(clamp(t / max(dur, 0.01)))
     if cam.get("keys"):                                  # camera moves: [{"t", "zoom", "focus": [x, y]}, ...]
@@ -407,6 +447,12 @@ def draw_scene(ctx, scene_idx, t):
         ox = math.sin(t * 73) * 14
         oy = math.cos(t * 59) * 14
     fx, fy = cam.get("focus", [0.5, 0.5])
+    drift = cam.get("drift", docst.get("drift", 0) if docst.get("enabled") else 0)
+    if drift:
+        from . import doc
+        ddx, ddy = doc.camera_drift(scene_idx, t, drift)
+        fx, fy = fx + ddx, fy + ddy
+        z = max(z, 1.0 + 0.022 * drift)
     b, bt = active_beat(ctx, scene_idx, t)
     if b and b.get("zoom", 1.0) > 1.0:                  # beat camera: push in on the face, or snap zoom
         if b["kind"] == "zoom_punch":
@@ -421,8 +467,14 @@ def draw_scene(ctx, scene_idx, t):
             cw, chh = W / z, H / z
             x0 = clamp(fx * W - cw / 2 + ox, 0, W - cw)
             y0 = clamp(fy * H - chh / 2 + oy, 0, H - chh)
-            canvas = canvas.crop((int(x0), int(y0), int(x0 + cw), int(y0 + chh))).resize((W, H), Image.BILINEAR)
+            canvas = canvas.transform((W, H), Image.AFFINE, (cw / W, 0, x0, 0, chh / H, y0),
+                                      resample=Image.BILINEAR)   # sub-pixel: slow moves glide, never step
     out = apply_grade(ctx.style, canvas)
+    if screen:
+        from . import doc
+        out = out.convert("RGBA")
+        for L, lt, alpha in screen:
+            doc.draw_direct(ctx, out, L, lt, alpha)
     if fb:                                              # freeze-frame: colour drains out, slightly darker
         k = clamp((t_real - fb["at"]) / 0.12)
         grey = ImageEnhance.Brightness(ImageEnhance.Color(out).enhance(0.25)).enhance(0.9)
@@ -532,8 +584,15 @@ def render_frame(ctx, scene_idx, t):
             cw, ch = int(W / z), int(H / z)
             pz = prev.crop(((W - cw) // 2, (H - ch) // 2, (W + cw) // 2, (H + ch) // 2)).resize((W, H), Image.BILINEAR)
             cur = Image.blend(pz, cur, p)
+        elif tr in ("whip", "dip", "burn", "paper"):
+            from . import doc
+            cur = doc.transition(tr, prev, cur, clamp(t / T), W, H)
         elif tr == "flash":
             base = prev if p < 0.5 else cur
             k = 1 - abs(p - 0.5) * 2
             cur = Image.blend(base, Image.new("RGBA", (W, H), (255, 255, 255, 255)), k * 0.9)
-    return draw_overlays(ctx, cur, scene_idx, t)
+    out = draw_overlays(ctx, cur, scene_idx, t)
+    if ctx.style.get("doc", {}).get("enabled"):
+        from . import doc
+        out = doc.finish(ctx, out, scene_idx, t)
+    return out

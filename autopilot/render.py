@@ -39,7 +39,8 @@ class Ctx:
         return v[k] if 0 <= k < len(v) else None
 
     def lead_of(self, i):
-        return self.job["scenes"][i].get("lead", self.style["scene_lead"])
+        s = self.job["scenes"][i]                     # "jcut": the voice starts this many seconds before the picture
+        return s.get("lead", self.style["scene_lead"]) - s.get("jcut", 0.0)
 
 
 def render_assets(ctx, log=print):
@@ -220,7 +221,13 @@ def mix(ctx):
     m = {**m, **jm}
     out = vo + fx
     if m.get("enabled", True):
-        mus = audio.music(ctx.total, m)[:n]
+        cues = m.get("cues")
+        if cues:                                         # documentary score: sections that follow the story
+            cl = [dict(c, at=(ctx.start[c["scene"]] + c.get("offset", 0.0)) if "scene" in c else c.get("at", 0.0))
+                  for c in cues]
+            mus = audio.score(ctx.total, m, cl, ctx.start)[:n]
+        else:
+            mus = audio.music(ctx.total, m)[:n]
         mus = np.pad(mus, (0, n - len(mus)))
         gain = np.ones(n, dtype=np.float32)            # beats with music "cut": a sudden, comic silence
         r = int(0.05 * audio.SR)

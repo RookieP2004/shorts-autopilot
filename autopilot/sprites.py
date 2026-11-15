@@ -46,7 +46,13 @@ def read_file(path):
 @lru_cache(maxsize=64)
 def font(path, size):
     p = path if os.path.isabs(path) else os.path.join(ROOT, path)
-    return ImageFont.truetype(p, int(size))
+    f = ImageFont.truetype(p, int(size))
+    if "Oswald" in os.path.basename(p):                 # variable font: default instance is ExtraLight
+        try:
+            f.set_variation_by_name("Medium")
+        except Exception:
+            pass
+    return f
 
 
 def resolve_font(style, name):
