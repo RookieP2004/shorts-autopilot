@@ -1,0 +1,1226 @@
+{
+ "id": "2026-11-15-b",
+ "title": "You've been told you have 5 senses. Try 33 👃",
+ "description": "Close your eyes and touch your nose: you just used a sense that's not on the school list. Proprioception (muscle sensors that map your body), balance (fluid in three loops in your inner ear), heat, cold, pain, your heartbeat and hunger... Depending on how you split them, scientists count 22 to 33 senses, not Aristotle's five.\n\nSources: Charles Spence (Oxford Crossmodal Research Lab) via VICE; BBC Science Focus (Lisa Feldman Barrett); 'Human senses and sensors from Aristotle to the present', Frontiers in Neurology 2024.",
+ "tags": [
+  "how many senses do humans have",
+  "five senses",
+  "proprioception",
+  "sense of balance",
+  "inner ear",
+  "interoception",
+  "human body",
+  "neuroscience",
+  "science explained"
+ ],
+ "hashtags": [
+  "#science",
+  "#humanbody"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#science",
+   "#humanbody",
+   "#neuroscience",
+   "#proprioception",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "big-question",
+  "topic": "how many senses you really have: proprioception (nose test), balance (inner-ear fluid loops), heat/cold/pain, heartbeat/hunger; 22-33 by scientists' counts vs Aristotle's 5",
+  "hook": "you've been told X",
+  "idea_source": "backlog (ideas.md \"You've been told: we have 5 senses\", the review's hook test) + viral-shaped (a school 'fact' overturned with a test you do on yourself) + unique angle (do-it-now nose test)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.vice.com/en/article/humans-dont-have-5-senses-they-have-as-many-as-33/",
+   "https://www.sciencefocus.com/how-many-senses-do-we-have",
+   "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11252028/",
+   "https://www.newworldencyclopedia.org/entry/Proprioception"
+  ],
+  "experiment": "'you've been told X' hook test (review 2026-11-15), 1 of 2",
+  "humour": {
+   "trend": "Tony Stark head-turn format (the sideways 'I noticed that' glance, trending early Nov 2026) as a side-eye cut-away: 'my stomach when chips open two rooms away'",
+   "beat": "side_eye",
+   "scene": 6
+  },
+  "claims": [
+   {
+    "claim": "the five-sense list goes back to Aristotle",
+    "tag": "PROVEN",
+    "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11252028/"
+   },
+   {
+    "claim": "scientists count roughly 22 to 33 senses depending on how they are split (Charles Spence, Oxford)",
+    "tag": "PROVEN",
+    "source": "https://www.vice.com/en/article/humans-dont-have-5-senses-they-have-as-many-as-33/"
+   },
+   {
+    "claim": "proprioception: receptors in muscles, tendons and joints tell the brain where the limbs are",
+    "tag": "PROVEN",
+    "source": "https://www.newworldencyclopedia.org/entry/Proprioception"
+   },
+   {
+    "claim": "balance: fluid in the three semicircular canals of the inner ear senses rotation and keeps moving after you stop spinning",
+    "tag": "PROVEN",
+    "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11252028/"
+   },
+   {
+    "claim": "separate receptors for temperature and pain; interoception senses heartbeat and hunger",
+    "tag": "PROVEN",
+    "source": "https://www.sciencefocus.com/how-many-senses-do-we-have"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "33 *SENSES?*",
+  "title_y": 0.15,
+  "title_size": 190,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffcf5a",
+  "glow_x": 0.5,
+  "glow_y": 0.55,
+  "glow_strength": 1.4,
+  "bg_saturation": 1.5,
+  "tint": [
+   "#1f4fb8",
+   "#f08a24"
+  ],
+  "tint_amount": 0.35,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-15-b/assets/plate_park_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-15-b/assets/inner_ear.png",
+    "x": 0.76,
+    "y": 0.5,
+    "w": 0.36,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.42,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-15-b/assets.py",
+ "scenes": [
+  {
+   "say": "You've been told you have five senses. Scientists count up to *thirty-three*.",
+   "caption": "You've been told you have five senses. Scientists count up to *33*.",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.4,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1381,
+     "y": 0.4904,
+     "h": 0.2943,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.7
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "fez",
+        "#7c2533"
+       ],
+       "top": [
+        "#f2b04a",
+        "shirt"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/fg_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5458,
+     "y": 0.6017,
+     "h": 0.5418,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.5
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='5' y='5' width='890' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='106' text-anchor='middle' font-size='84' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>YOU'VE BEEN TOLD...</text></svg>",
+     "x": 0.5,
+     "y": 0.12,
+     "w": 0.78,
+     "rotate": -2,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "*5* SENSES",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.225,
+     "size": 150,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none",
+     "until": 2.45,
+     "exit": "pop"
+    },
+    {
+     "type": "text",
+     "text": "*33* SENSES",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.225,
+     "size": 150,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 2.5,
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "Close your eyes. Touch your nose.",
+   "transition": "cut",
+   "caption_y": 0.62,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.6,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "think",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "think",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 470'><rect x='5' y='5' width='890' height='460' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><g transform='translate(60,30)'><path d='M120,40 C200,30 250,90 250,160 C250,190 262,205 280,222 C266,232 258,236 252,240 C256,262 252,280 236,292 C228,320 210,340 170,345 L170,400 L60,400 L64,330 C30,300 20,250 22,200 C24,110 60,48 120,40 Z' fill='#c68a5e'/><path d='M100,30 C160,0 250,40 255,120 C220,90 170,80 120,95 C90,105 70,140 66,180 C40,130 50,60 100,30 Z' fill='#1a1410'/><path d='M180,175 C195,188 215,188 228,175' stroke='#1a1410' stroke-width='7' fill='none' stroke-linecap='round'/><path d='M190,186 l-4,12 M206,190 l0,12 M222,186 l4,12' stroke='#1a1410' stroke-width='4' stroke-linecap='round'/><path d='M470,400 C420,330 360,280 300,238' stroke='#c68a5e' stroke-width='34' fill='none' stroke-linecap='round'/><path d='M470,400 C420,330 360,280 300,238' stroke='#a8714b' stroke-width='6' fill='none' stroke-linecap='round' stroke-dasharray='2 40'/><circle cx='290' cy='228' r='26' fill='none' stroke='#f2b04a' stroke-width='6'/></g><text x='620' y='190' text-anchor='middle' font-size='64' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>EYES CLOSED</text><text x='620' y='275' text-anchor='middle' font-size='64' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>FINGER</text><text x='620' y='350' text-anchor='middle' font-size='64' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>TO NOSE</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.8,
+     "rotate": -2,
+     "enter": "pop",
+     "at": 0.05,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Found it? That's *proprioception*: your muscles mapping every limb.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/plate_park_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1487,
+     "y": 0.5303,
+     "h": 0.1445,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "fez",
+        "#7c2533"
+       ],
+       "top": [
+        "#f2b04a",
+        "shirt"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5402,
+     "y": 0.5406,
+     "h": 0.1557,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       0.6
+      ],
+      [
+       "cheer",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "long"
+       ],
+       "hat": [
+        "cap",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.7,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/fg_park_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.2427,
+     "y": 0.5963,
+     "h": 0.2205,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "explain",
+       1.4
+      ],
+      [
+       "point",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.3882,
+       "y": 0.5997,
+       "scale": 1.0172
+      },
+      {
+       "t": 1.0,
+       "x": 0.2427,
+       "y": 0.5963,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 540'><rect x='5' y='5' width='890' height='530' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='78' text-anchor='middle' font-size='56' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>YOUR BODY MAP</text><g transform='translate(330,110)' fill='#34425c'><circle cx='120' cy='40' r='34'/><rect x='92' y='80' width='56' height='130' rx='26'/><rect x='40' y='86' width='30' height='120' rx='15' transform='rotate(18 55 90)'/><rect x='170' y='86' width='30' height='120' rx='15' transform='rotate(-18 185 90)'/><rect x='96' y='200' width='26' height='150' rx='13'/><rect x='120' y='200' width='26' height='150' rx='13'/></g><g fill='#f2b04a' stroke='#1a1410' stroke-width='3'><circle cx='450' cy='150' r='12'/><circle cx='378' cy='230' r='12'/><circle cx='522' cy='230' r='12'/><circle cx='360' cy='305' r='12'/><circle cx='540' cy='305' r='12'/><circle cx='440' cy='350' r='12'/><circle cx='462' cy='350' r='12'/><circle cx='440' cy='420' r='12'/><circle cx='462' cy='420' r='12'/></g><path d='M378,230 C300,200 260,160 230,150 M522,230 C600,200 640,160 670,150' stroke='#6fc3c0' stroke-width='5' fill='none' stroke-dasharray='10 8'/><text x='150' y='145' text-anchor='middle' font-size='40' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>WHERE?</text><text x='750' y='145' text-anchor='middle' font-size='40' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>HOW BENT?</text><text x='450' y='505' text-anchor='middle' font-size='52' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>PROPRIOCEPTION</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.84,
+     "enter": "slide_down",
+     "at": 1.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Spin around, and the world keeps spinning after you stop.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 1.4,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.1,
+      "focus": [
+       0.48,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/plate_round_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.3,
+     "y": 0.66,
+     "h": 0.3,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "shrug",
+       1.6
+      ],
+      [
+       "sad",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "long"
+       ],
+       "hat": [
+        "cap",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4,
+       "y": 0.66
+      },
+      {
+       "t": 0.8,
+       "x": 0.33,
+       "y": 0.68,
+       "walk": true
+      },
+      {
+       "t": 1.6,
+       "x": 0.38,
+       "y": 0.7,
+       "walk": true
+      },
+      {
+       "t": 2.4,
+       "x": 0.27,
+       "y": 0.72,
+       "walk": true
+      },
+      {
+       "t": 3.2,
+       "x": 0.33,
+       "y": 0.74,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       0.9,
+       0.02,
+       0.3
+      ],
+      [
+       2.5,
+       0.02,
+       0.3
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><path d='M150,40 A110,110 0 0 1 260,150' stroke='#f6efe2' stroke-width='16' fill='none' stroke-linecap='round'/><path d='M150,260 A110,110 0 0 1 40,150' stroke='#f6efe2' stroke-width='16' fill='none' stroke-linecap='round'/><path d='M262,118 L262,170 L224,140 Z' fill='#f6efe2'/><path d='M38,182 L38,130 L76,160 Z' fill='#f6efe2'/></svg>",
+     "x": 0.5,
+     "y": 0.24,
+     "w": 0.42,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "whoosh",
+     "loop": "spin",
+     "loop_speed": 1.4
+    },
+    {
+     "type": "text",
+     "text": "STILL *SPINNING?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "That's fluid sloshing in three loops in your inner ear: *balance*.",
+   "transition": "zoom",
+   "caption_y": 0.71,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.1,
+      "focus": [
+       0.48,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/plate_ear_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 126'><rect x='5' y='5' width='590' height='116' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='300.0' y='87' text-anchor='middle' font-size='60' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>3 LOOPS OF FLUID</text></svg>",
+     "x": 0.36,
+     "y": 0.1,
+     "w": 0.56,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "shape",
+     "shape": "arrow",
+     "x": 0.36,
+     "y": 0.2,
+     "w": 0.12,
+     "h": 0.03,
+     "color": "accent",
+     "rotate": 80,
+     "enter": "pop",
+     "at": 0.8
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 147'><rect x='5' y='5' width='510' height='137' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='260.0' y='101' text-anchor='middle' font-size='70' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>= BALANCE</text></svg>",
+     "x": 0.72,
+     "y": 0.19,
+     "w": 0.44,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 3.0,
+     "sfx": "ding"
+    }
+   ]
+  },
+  {
+   "say": "Others feel heat, cold, pain, even your *heartbeat* and your *hunger*.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.4,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1381,
+     "y": 0.4904,
+     "h": 0.2943,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.8
+      ],
+      [
+       "sad",
+       3.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "fez",
+        "#7c2533"
+       ],
+       "top": [
+        "#f2b04a",
+        "shirt"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/fg_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5458,
+     "y": 0.6017,
+     "h": 0.5418,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ],
+      [
+       "explain",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 120'><rect x='5' y='5' width='370' height='110' rx='55' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='62' cy='60' r='38' fill='#d9534f'/><path d='M62,32 C80,52 76,64 70,74 C82,70 86,60 84,52 C96,66 92,92 62,94 C36,92 32,70 44,56 C46,66 52,70 56,70 C50,56 54,42 62,32 Z' fill='#f6efe2'/><text x='228' y='78' text-anchor='middle' font-size='56' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>HEAT</text></svg>",
+     "x": 0.27,
+     "y": 0.11,
+     "w": 0.36,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 120'><rect x='5' y='5' width='370' height='110' rx='55' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='62' cy='60' r='38' fill='#3d7fd1'/><g stroke='#f6efe2' stroke-width='7' stroke-linecap='round'><line x1='62' y1='30' x2='62' y2='90'/><line x1='36' y1='45' x2='88' y2='75'/><line x1='36' y1='75' x2='88' y2='45'/></g><text x='228' y='78' text-anchor='middle' font-size='56' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>COLD</text></svg>",
+     "x": 0.71,
+     "y": 0.11,
+     "w": 0.36,
+     "enter": "pop",
+     "at": 0.75,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 120'><rect x='5' y='5' width='370' height='110' rx='55' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='62' cy='60' r='38' fill='#f2b04a'/><path d='M66,26 L44,66 L60,66 L54,96 L82,52 L66,52 Z' fill='#f6efe2'/><text x='228' y='78' text-anchor='middle' font-size='56' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PAIN</text></svg>",
+     "x": 0.27,
+     "y": 0.2,
+     "w": 0.36,
+     "enter": "pop",
+     "at": 1.25,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 120'><rect x='5' y='5' width='370' height='110' rx='55' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='62' cy='60' r='38' fill='#c8323c'/><path d='M62,90 C30,66 34,36 50,36 C58,36 62,44 62,48 C62,44 66,36 74,36 C90,36 94,66 62,90 Z' fill='#f6efe2'/><text x='228' y='78' text-anchor='middle' font-size='40' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>HEARTBEAT</text></svg>",
+     "x": 0.71,
+     "y": 0.2,
+     "w": 0.36,
+     "enter": "pop",
+     "at": 1.9,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 120'><rect x='5' y='5' width='370' height='110' rx='55' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><circle cx='62' cy='60' r='38' fill='#46965a'/><path d='M42,48 C42,40 82,40 82,48 C82,82 72,92 62,92 C52,92 42,82 42,48 Z' fill='none' stroke='#f6efe2' stroke-width='7'/><path d='M52,60 C58,66 66,66 72,60' stroke='#f6efe2' stroke-width='5' fill='none'/><text x='228' y='78' text-anchor='middle' font-size='56' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>HUNGER</text></svg>",
+     "x": 0.5,
+     "y": 0.29,
+     "w": 0.36,
+     "enter": "pop",
+     "at": 2.7,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/heart.png",
+     "x": 0.78,
+     "y": 0.29,
+     "w": 0.13,
+     "enter": "pop",
+     "at": 1.95,
+     "loop": "pulse",
+     "loop_amp": 0.08,
+     "loop_speed": 1.6
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "my stomach when chips open\n*two rooms* away:",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Count them all, and you get *twenty-two* to *thirty-three*.",
+   "caption": "Count them all, and you get *22* to *33*.",
+   "transition": "slide_up",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/plate_park_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.1487,
+     "y": 0.5303,
+     "h": 0.1445,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "cheer",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "fez",
+        "#7c2533"
+       ],
+       "top": [
+        "#f2b04a",
+        "shirt"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.9,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5402,
+     "y": 0.5406,
+     "h": 0.1557,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "long"
+       ],
+       "hat": [
+        "cap",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/fg_park_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2427,
+     "y": 0.5963,
+     "h": 0.2205,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 580'><rect x='5' y='5' width='890' height='570' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='86' text-anchor='middle' font-size='64' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>SCHOOL SAID</text><circle cx='250' cy='150' r='30' fill='#c9b7a0' stroke='#1a1410' stroke-width='4'/><circle cx='350' cy='150' r='30' fill='#c9b7a0' stroke='#1a1410' stroke-width='4'/><circle cx='450' cy='150' r='30' fill='#c9b7a0' stroke='#1a1410' stroke-width='4'/><circle cx='550' cy='150' r='30' fill='#c9b7a0' stroke='#1a1410' stroke-width='4'/><circle cx='650' cy='150' r='30' fill='#c9b7a0' stroke='#1a1410' stroke-width='4'/><text x='450' y='265' text-anchor='middle' font-size='64' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>SCIENTISTS COUNT</text><circle cx='120' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='186' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='252' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='318' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='384' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='450' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='516' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='582' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='648' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='714' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='780' cy='318' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='120' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='186' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='252' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='318' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='384' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='450' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='516' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='582' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='648' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='714' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='780' cy='380' r='24' fill='#f2b04a' stroke='#1a1410' stroke-width='4'/><circle cx='120' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='186' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='252' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='318' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='384' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='450' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='516' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='582' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='648' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='714' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><circle cx='780' cy='442' r='24' fill='#d9534f' stroke='#1a1410' stroke-width='4'/><text x='450' y='540' text-anchor='middle' font-size='60' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>22 TO 33 SENSES</text></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.86,
+     "enter": "slide_down",
+     "at": 0.1,
+     "sfx": "whoosh"
+    }
+   ]
+  },
+  {
+   "say": "Aristotle wrote the list of five. Your body never read it.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-b/assets/plate_park_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "warm",
+       1.6
+      ],
+      [
+       "smirk",
+       2.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 720'><rect x='60' y='60' width='520' height='600' fill='#efdcb0' stroke='#1a1410' stroke-width='6'/><rect x='30' y='30' width='580' height='60' rx='30' fill='#c99a5b' stroke='#1a1410' stroke-width='6'/><rect x='30' y='630' width='580' height='60' rx='30' fill='#c99a5b' stroke='#1a1410' stroke-width='6'/><text x='320' y='170' text-anchor='middle' font-size='62' fill='#5e3f2a' font-family='Anton, DejaVu Sans, sans-serif'>THE 5 SENSES</text><text x='320' y='205' text-anchor='middle' font-size='30' fill='#5e3f2a' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Aristotle, ~350 BC</text><text x='140' y='290' font-size='54' fill='#3a2414' font-family='Anton, DejaVu Sans, sans-serif'>1. SIGHT</text><text x='140' y='362' font-size='54' fill='#3a2414' font-family='Anton, DejaVu Sans, sans-serif'>2. HEARING</text><text x='140' y='434' font-size='54' fill='#3a2414' font-family='Anton, DejaVu Sans, sans-serif'>3. SMELL</text><text x='140' y='506' font-size='54' fill='#3a2414' font-family='Anton, DejaVu Sans, sans-serif'>4. TASTE</text><text x='140' y='578' font-size='54' fill='#3a2414' font-family='Anton, DejaVu Sans, sans-serif'>5. TOUCH</text></svg>",
+     "x": 0.5,
+     "y": 0.17,
+     "w": 0.4,
+     "rotate": -3,
+     "enter": "slide_down",
+     "at": 0.05,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 170'><rect x='10' y='10' width='680' height='150' rx='18' fill='#f6efe2' fill-opacity='0.85' stroke='#d9534f' stroke-width='14'/><text x='350.0' y='126' text-anchor='middle' font-size='96' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>INCOMPLETE</text></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.6,
+     "rotate": -9,
+     "enter": "zoom",
+     "at": 2.0,
+     "sfx": "boom"
+    }
+   ]
+  }
+ ]
+}
