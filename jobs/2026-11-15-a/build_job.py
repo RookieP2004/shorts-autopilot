@@ -225,7 +225,7 @@ job = {"id": ID, "title": "You've been told DNA is tiny. It's 2 metres 🧬",
                      "glow": "#ffcf5a", "glow_x": 0.5, "glow_y": 0.55, "glow_strength": 1.4, "bg_saturation": 1.5,
                      "tint": ["#1f4fb8", "#f08a24"], "tint_amount": 0.35,
                      "bg": [plate("lab_close")],
-                     "fg": [sprite("spool", 0.72, 0.5, 0.5),
+                     "fg": [sprite("spool", 0.74, 0.36, 0.44),
                             {"type": "character", "id": "ved", "pose": "surprised", "x": 0.4, "y": 0.93, "h": 0.95, "enter": "none",
                              "acting": "none", "talk": False, "ground": False, "allow_outside_safe": True}]},
        "privacy": "public", "speaker": "ved", "assets_script": J + "assets.py", "scenes": S}
