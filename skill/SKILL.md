@@ -136,7 +136,9 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
 - **Formats**: each video uses exactly one format from the Bible, starting from its skeleton in `jobs/_templates/`:
   big-question, myth-bust, scale-shock, and (added by the owner 2026-11-13, in addition, nothing removed) what-if thought
   experiments, frontier "how could it really work" explainers (teleportation, star travel, CERN), wild true stories behind
-  discoveries and thinkers, and occasional deep-question philosophy. Follow the Bible's weights (about 1 in 3 Shorts uses the new
+  discoveries and thinkers, occasional deep-question philosophy, and (owner, 2026-11-15) dark-files: hidden economies
+  and crime worlds (drugs, cartels, mafias, hawala, laundering, gambling) told as a documentary journalist would, never as a
+  manual; follow the Bible's dark-files guardrails exactly. Follow the Bible's weights (about 1 in 3 Shorts uses the new
   ones; deep-question at most about weekly). In these formats every claim carries an on-screen honesty tag (PROVEN / THEORY /
   R&D / SPECULATION), Ved says out loud where known science ends, and speculation is never presented as fact. Fill
   `meta.claims` with each claim, its tag and its source.
