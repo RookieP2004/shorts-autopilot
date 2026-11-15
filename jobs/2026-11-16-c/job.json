@@ -1,0 +1,1146 @@
+{
+ "id": "2026-11-16-c",
+ "title": "Money laundering isn't named after Al Capone 🧺",
+ "description": "The story says Al Capone hid his cash in laundromats and gave us the term \"money laundering\". Probably a myth: in 1910 the US Treasury literally washed dirty banknotes (a machine cleaned and pressed about 25,000 a day), while the criminal sense of the word shows up in print around 1970 and went mainstream with Watergate in 1973. Capone himself was convicted of income tax evasion in 1931: 11 years, part of it on Alcatraz.\n\nSources: Mental Floss (the Capone myth); History Today (the Treasury's money-washing machine); Word Origins (earliest uses of the term); US National Archives (U.S. v. Alphonse Capone).",
+ "tags": [
+  "money laundering",
+  "al capone",
+  "history of money laundering",
+  "true crime history",
+  "watergate",
+  "us treasury",
+  "dark history",
+  "history explained"
+ ],
+ "hashtags": [
+  "#history",
+  "#truecrime"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#history",
+   "#alcapone",
+   "#moneylaundering",
+   "#truecrimehistory",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "dark-files",
+  "topic": "the Al Capone laundromat myth: the Treasury literally washed banknotes from 1910 (~25,000/day), the criminal term appears ~1970 and spreads with Watergate (1973); what laundering means; Capone convicted of tax evasion 1931 (11 years, Alcatraz)",
+  "hook": "myth-bust",
+  "idea_source": "unique + viral-shaped: a famous gangster myth most people repeat, busted with a literal money-washing machine; the channel's first dark-files Short (owner's new format)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.mentalfloss.com/crime/myth-how-al-capone-gave-us-term-money-laundering",
+   "https://www.historytoday.com/node/57030",
+   "https://www.wordorigins.org/big-list-entries/money-laundering",
+   "https://prologue.blogs.archives.gov/2011/07/26/the-taxman-cometh-u-s-v-alphonse-capone/"
+  ],
+  "humour": {
+   "trend": "'left on read' slang (still in daily use) as a side-eye card about Capone's tax return",
+   "beat": "side_eye",
+   "scene": 6
+  },
+  "claims": [
+   {
+    "claim": "the Capone-laundromat origin of the term is most likely a myth",
+    "tag": "PROVEN (expert view)",
+    "source": "https://www.mentalfloss.com/crime/myth-how-al-capone-gave-us-term-money-laundering"
+   },
+   {
+    "claim": "1910: a Treasury (Bureau of Engraving and Printing) machine cleaned and pressed ~25,000 notes a day",
+    "tag": "PROVEN",
+    "source": "https://www.historytoday.com/node/57030"
+   },
+   {
+    "claim": "criminal 'launder' in print by 1970 (Globe and Mail); popularised by Watergate reporting in 1973",
+    "tag": "PROVEN",
+    "source": "https://www.wordorigins.org/big-list-entries/money-laundering"
+   },
+   {
+    "claim": "Capone never paid income tax (1925-1929 indictment); guilty Oct 1931; 11 years, 4.5 of 7.5 served on Alcatraz",
+    "tag": "PROVEN",
+    "source": "https://prologue.blogs.archives.gov/2011/07/26/the-taxman-cometh-u-s-v-alphonse-capone/"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "MONEY *LAUNDRY?*",
+  "title_y": 0.14,
+  "title_size": 180,
+  "max_w": 0.95,
+  "blur": 12,
+  "glow": "#ffb35a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.4,
+  "tint": [
+   "#34425c",
+   "#f08a24"
+  ],
+  "tint_amount": 0.3,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-c/assets/plate_street_mid.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-c/assets/note.png",
+    "x": 0.76,
+    "y": 0.4,
+    "w": 0.34,
+    "enter": "none",
+    "rotate": -12
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-c/assets/ledger.png",
+    "x": 0.24,
+    "y": 0.44,
+    "w": 0.34,
+    "enter": "none",
+    "rotate": 8
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-16-c/assets.py",
+ "scenes": [
+  {
+   "say": "Money laundering, named after Capone's *laundromats*? Probably a myth.",
+   "caption_y": 0.47,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.4,
+      "zoom": 1.06,
+      "focus": [
+       0.48,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/plate_street_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.233,
+     "y": 0.6441,
+     "h": 0.2809,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#2b2f36"
+       ],
+       "top": [
+        "#3a3e48",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410",
+       "tie": "#d9534f"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.625,
+     "y": 0.678,
+     "h": 0.3974,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ],
+      [
+       "deadpan",
+       3.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 170'><rect x='10' y='10' width='460' height='150' rx='18' fill='#1a1410' fill-opacity='0.85' stroke='#f2b04a' stroke-width='12'/><text x='240.0' y='128' text-anchor='middle' font-size='118' fill='#f2b04a' font-family='Anton, DejaVu Sans, sans-serif'>MYTH?</text></svg>",
+     "x": 0.5,
+     "y": 0.13,
+     "w": 0.4,
+     "rotate": -4,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "CAPONE'S *LAUNDROMATS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.3,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 386 96'><rect x='4' y='4' width='378' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#f6efe2' stroke-width='5'/><text x='193.0' y='68' text-anchor='middle' font-size='56' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>AL CAPONE</text></svg>",
+     "x": 0.2,
+     "y": 0.75,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "In 1910, the US Treasury really *laundered* money.",
+   "transition": "slide_left",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/plate_treasury_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "take",
+     "x": 0.6911,
+     "y": 0.6479,
+     "h": 0.31,
+     "enter": "none",
+     "acting": [
+      [
+       "take",
+       0
+      ],
+      [
+       "happy",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#6fc3c0",
+        "dress"
+       ],
+       "shoes": "#25262b",
+       "apron": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "give",
+     "x": 0.1984,
+     "y": 0.6471,
+     "h": 0.3082,
+     "enter": "none",
+     "acting": [
+      [
+       "give",
+       0
+      ],
+      [
+       "hold",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "slim",
+       "hair": [
+        "#2a1d17",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#46965a"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#5a3a4a",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "apron": "#d9c99a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5588,
+     "y": 0.6834,
+     "h": 0.3986,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.0292,
+       "y": 0.6976,
+       "scale": 1.0803
+      },
+      {
+       "t": 0.9,
+       "x": 0.5588,
+       "y": 0.6834,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*1910*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.12,
+     "size": 130,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 96'><rect x='4' y='4' width='292' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#46965a' stroke-width='5'/><text x='150.0' y='68' text-anchor='middle' font-size='56' fill='#46965a' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.76,
+     "y": 0.36,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 1.2,
+     "rotate": -4
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 760 96'><rect x='4' y='4' width='752' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#6fc3c0' stroke-width='5'/><text x='380.0' y='68' text-anchor='middle' font-size='56' fill='#6fc3c0' font-family='Anton, DejaVu Sans, sans-serif'>TREASURY, WASHINGTON</text></svg>",
+     "x": 0.32,
+     "y": 0.36,
+     "w": 0.44,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "A machine washed *25,000* dirty notes a day.",
+   "transition": "zoom",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.1,
+      "focus": [
+       0.5054586184605129,
+       0.4762111078177261
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/plate_treasury_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/note.png",
+     "x": 0.18,
+     "y": 0.62,
+     "w": 0.3,
+     "enter": "none",
+     "at": 0.2,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.2,
+       "y": 0.66,
+       "rot": -20
+      },
+      {
+       "t": 0.8,
+       "x": 0.3,
+       "y": 0.6,
+       "rot": 6,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/note.png",
+     "x": 0.8,
+     "y": 0.63,
+     "w": 0.3,
+     "enter": "none",
+     "at": 1.2,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2,
+       "y": 0.68,
+       "rot": 25
+      },
+      {
+       "t": 0.8,
+       "x": 0.72,
+       "y": 0.6,
+       "rot": -8,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 25000,
+     "decimals": 0,
+     "suffix": " NOTES A DAY",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 82,
+     "color": "accent",
+     "at": 0.4,
+     "count_dur": 1.6,
+     "enter": "zoom",
+     "sfx": "riser"
+    },
+    {
+     "type": "text",
+     "text": "WASHED. DRIED. *SPENT AGAIN.*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.25,
+     "size": 64,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "The crime meaning? In print by *1970*, famous with Watergate.",
+   "transition": "slide_up",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/plate_street_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.3082,
+     "y": 0.6199,
+     "h": 0.1529,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.8
+      ],
+      [
+       "think",
+       3.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 270'><rect x='5' y='5' width='990' height='260' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><line x1='110' y1='120' x2='890' y2='120' stroke='#1a1410' stroke-width='8' stroke-linecap='round'/><circle cx='130' cy='120' r='26' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><text x='130' y='72' text-anchor='middle' font-size='54' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1910</text><text x='130' y='196' text-anchor='middle' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>TREASURY</text><text x='130' y='234' text-anchor='middle' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WASHES CASH</text><circle cx='370' cy='120' r='26' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/><text x='370' y='72' text-anchor='middle' font-size='54' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1931</text><text x='370' y='196' text-anchor='middle' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>CAPONE</text><text x='370' y='234' text-anchor='middle' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>JAILED</text><circle cx='620' cy='120' r='26' fill='#f2b04a' stroke='#1a1410' stroke-width='5'/><text x='620' y='72' text-anchor='middle' font-size='54' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1970</text><text x='620' y='196' text-anchor='middle' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WORD IN</text><text x='620' y='234' text-anchor='middle' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>PRINT</text><circle cx='860' cy='120' r='26' fill='#d9534f' stroke='#1a1410' stroke-width='5'/><text x='860' y='72' text-anchor='middle' font-size='54' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1973</text><text x='860' y='196' text-anchor='middle' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>WATERGATE</text><text x='860' y='234' text-anchor='middle' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>MAKES IT FAMOUS</text></svg>",
+     "x": 0.5,
+     "y": 0.19,
+     "w": 0.92,
+     "enter": "slide_down",
+     "at": 0.2,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 96'><rect x='4' y='4' width='292' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#46965a' stroke-width='5'/><text x='150.0' y='68' text-anchor='middle' font-size='56' fill='#46965a' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.8,
+     "y": 0.34,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 1.6,
+     "rotate": -4
+    }
+   ]
+  },
+  {
+   "say": "It means making dirty cash look *earned*.",
+   "transition": "slide_left",
+   "caption_y": 0.47,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.4,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/plate_street_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.3754,
+     "y": 0.6413,
+     "h": 0.2724,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "give",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#2b2f36"
+       ],
+       "top": [
+        "#3a3e48",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410",
+       "tie": "#d9534f"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.0676,
+       "y": 0.6483,
+       "scale": 1.0789
+      },
+      {
+       "t": 1.6,
+       "x": 0.3754,
+       "y": 0.6413,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7081,
+     "y": 0.6852,
+     "h": 0.42,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "side_eye",
+       1.8
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 260'><rect x='5' y='5' width='990' height='250' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><rect x='40' y='60' width='190' height='110' rx='14' fill='#7a6a52' stroke='#1a1410' stroke-width='5'/><text x='135' y='132' text-anchor='middle' font-size='58' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>$$$</text><text x='135' y='220' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>DIRTY CASH</text><path d='M250 115 L330 115' stroke='#1a1410' stroke-width='9'/><path d='M322 95 L352 115 L322 135 Z' fill='#1a1410'/><rect x='370' y='50' width='240' height='130' rx='16' fill='#b5533c' stroke='#1a1410' stroke-width='5'/><rect x='390' y='70' width='200' height='34' rx='8' fill='#34425c'/><text x='490' y='98' text-anchor='middle' font-size='28' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>NORMAL SHOP</text><circle cx='450' cy='145' r='22' fill='#e9e6df' stroke='#1a1410' stroke-width='4'/><circle cx='530' cy='145' r='22' fill='#e9e6df' stroke='#1a1410' stroke-width='4'/><text x='490' y='220' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>A FRONT</text><path d='M630 115 L710 115' stroke='#1a1410' stroke-width='9'/><path d='M702 95 L732 115 L702 135 Z' fill='#1a1410'/><rect x='750' y='60' width='210' height='110' rx='14' fill='#46965a' stroke='#1a1410' stroke-width='5'/><text x='855' y='132' text-anchor='middle' font-size='58' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>$$$</text><text x='855' y='220' text-anchor='middle' font-size='34' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>'EARNED'</text></svg>",
+     "x": 0.5,
+     "y": 0.18,
+     "w": 0.92,
+     "enter": "slide_down",
+     "at": 0.3,
+     "sfx": "whoosh"
+    }
+   ]
+  },
+  {
+   "say": "Capone's problem? He never paid *tax* on it.",
+   "transition": "zoom",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.12,
+      "focus": [
+       0.5,
+       0.5257440413045433
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/plate_desk.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 140'><rect x='5' y='5' width='790' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='330' y='92' text-anchor='middle' font-size='62' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>INCOME TAX PAID:</text><text x='690' y='96' text-anchor='middle' font-size='80' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>$0</text></svg>",
+     "x": 0.5,
+     "y": 0.16,
+     "w": 0.8,
+     "enter": "slide_down",
+     "at": 0.6,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 620 170'><rect x='10' y='10' width='600' height='150' rx='18' fill='none' stroke='#d9534f' stroke-width='14'/><text x='310.0' y='128' text-anchor='middle' font-size='118' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>1925-1929</text></svg>",
+     "x": 0.5,
+     "y": 0.27,
+     "w": 0.46,
+     "rotate": -6,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/plate_desk.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "IRS: 'hey... your taxes?'\ncapone: *left on read*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "In 1931 tax agents got him: *eleven years*.",
+   "transition": "slide_left",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.2,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/plate_street_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.4659,
+     "y": 0.6118,
+     "h": 0.1312,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#2b2f36"
+       ],
+       "top": [
+        "#3a3e48",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410",
+       "tie": "#d9534f"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 1.0,
+       "x": 0.4659,
+       "y": 0.6118,
+       "scale": 1.0
+      },
+      {
+       "t": 4.0,
+       "x": 0.8638,
+       "y": 0.6155,
+       "scale": 1.0625,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.5675,
+     "y": 0.6132,
+     "h": 0.1342,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "hold",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a27a",
+       "build": "slim",
+       "hair": [
+        "#6b4529",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#7d8597"
+       ],
+       "top": [
+        "#7d8597",
+        "jacket"
+       ],
+       "bottom": [
+        "#5a5f66",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#34425c",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 1.0,
+       "x": 0.5675,
+       "y": 0.6132,
+       "scale": 1.0
+      },
+      {
+       "t": 4.0,
+       "x": 0.9816,
+       "y": 0.6171,
+       "scale": 1.0633,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.1402,
+     "y": 0.6212,
+     "h": 0.1558,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 320'><rect x='5' y='5' width='890' height='310' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='90' text-anchor='middle' font-size='64' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1931: GUILTY</text><text x='450' y='150' text-anchor='middle' font-size='38' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>INCOME TAX EVASION</text><text x='450' y='236' text-anchor='middle' font-size='84' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>11 YEARS</text><text x='450' y='290' text-anchor='middle' font-size='36' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>(4.5 OF THEM ON ALCATRAZ)</text></svg>",
+     "x": 0.5,
+     "y": 0.19,
+     "w": 0.8,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "boom"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 96'><rect x='4' y='4' width='292' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#46965a' stroke-width='5'/><text x='150.0' y='68' text-anchor='middle' font-size='56' fill='#46965a' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.78,
+     "y": 0.3,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 1.4,
+     "rotate": -4
+    }
+   ]
+  },
+  {
+   "say": "Not caught by a gun. Caught by a *ledger*.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/plate_desk.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 8,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      },
+      {
+       "t": 3.2,
+       "scale": 1.38
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "point",
+       1.3
+      ],
+      [
+       "smirk",
+       2.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-c/assets/ledger.png",
+     "x": 0.76,
+     "y": 0.31,
+     "w": 0.4,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop",
+     "rotate": -6
+    },
+    {
+     "type": "text",
+     "text": "CAUGHT BY A *LEDGER*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 108,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}

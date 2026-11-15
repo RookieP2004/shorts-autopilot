@@ -85,3 +85,5 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - Prohibition 1920-1933: what banning alcohol actually did to crime (and what Portugal tried with drugs in 2001)
 - Where your phone's metals come from, and how armed groups profit from them (conflict minerals)
 - Movie mafia vs the real one: what court records show about how the Mafia actually earns
+- [wild-story] The accountant who took down Al Capone · IRS agent Frank Wilson found a gambling ledger that tied the cash to Capone; follow-up to the laundromat myth Short (runner-up 2026-11-16) · https://www.history.com/articles/frank-wilson
+- [dark-files] How hawala moves money without moving money · a trust-based ledger system older than banks; what FATF says about its legal and illegal uses; documentary view, no how-to (runner-up 2026-11-16) · https://www.fatf-gafi.org/en/publications/Methodsandtrends/Role-of-hawalas-in-ml-tf.html
