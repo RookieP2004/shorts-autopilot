@@ -20,7 +20,6 @@
 - [big-question] Why can't the sea just refill the cod? · the Grand Banks collapse and why stocks still haven't fully recovered, a fishing-harbour set · https://www.heritage.nf.ca/articles/economy/moratorium.php
 - [big-question] Why does nobody pay for the group-chat pizza? · free-rider problem, wallet-first (avoid the term in the hook) · https://en.wikipedia.org/wiki/Free-rider_problem
 - [big-question] Who pays for your neighbour's loud party? · externalities as a hidden price tag, wallet-first · https://en.wikipedia.org/wiki/Externality
-- [scale-shock] How long is all the DNA in your body? · ~2 m per cell, billions of km in total, unspooled across the solar system · https://en.wikipedia.org/wiki/Human_genome
 - [myth-bust] "Your body replaces every cell every 7 years" · some cells (most neurons, eye lens) stay for life; follow-up to the cells video · https://wis-wander.weizmann.ac.il/node/11205
 - [scale-shock] How long would it take to walk the whole Great Wall? · 21,000+ km of wall, reuses the wall set · https://www.travelchinaguide.com/how-wide-is-great-wall-of-china.htm
 - [big-question] Why does the sky look black from space? · no air to scatter sunlight, reuses the station window set · https://www.space.com/human-made-structures-seen-from-space
@@ -73,6 +72,8 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [wild-story] The man who lost his sense of touch and body position (Ian Waterman, 1971) · learned to walk again by watching his limbs; proprioception follow-up, runner-up 2026-11-15 · https://en.wikipedia.org/wiki/Ian_Waterman
 - [big-question] Why does tomato juice taste better on planes? · engine noise dulls sweet/salty, boosts umami (crossmodal senses); runner-up 2026-11-15 · https://www.vice.com/en/article/humans-dont-have-5-senses-they-have-as-many-as-33/
 - [big-question] Why does your foot "fall asleep"? · pressure starves the nerve, signals go quiet then fizz back as pins and needles; body niche, picturable · https://en.wikipedia.org/wiki/Paresthesia
+- [big-question] Why don't your cells' 2 m of DNA tangle? · topoisomerase enzymes cut and re-join the strands like untangling headphones; follow-up angle on the DNA video, runner-up 2026-11-15 · https://en.wikipedia.org/wiki/Topoisomerase
+- [scale-shock] Your body makes ~2-3 million red blood cells every second · bone-marrow factory made visible, why most of your cells have no DNA; runner-up 2026-11-15 · https://www.sciencenews.org/article/body's-bacteria-don't-outnumber-human-cells-so-much-after-all
 
 
 ## Dark files (owner, 2026-11-15): examples of the kind, not a to-do list

@@ -1,0 +1,994 @@
+{
+ "id": "2026-11-15-a",
+ "title": "You've been told DNA is tiny. It's 2 metres 🧬",
+ "description": "Each nucleus in your cells holds about 2 metres of DNA, packed into a space ~6 microns wide. Scale the nucleus up to a tennis ball and that's ~20 km of thread. It fits by winding around protein spools (histones) and coiling again and again. Add up the trillions of cells with a nucleus (red blood cells have none) and it's billions of km, farther than the Sun is from Neptune (~4.5 billion km).\n\nSources: BBC Science Focus; Sender, Fuchs & Milo 2016 (via Science News); OpenOregon Biology.",
+ "tags": [
+  "how long is your dna",
+  "dna length",
+  "dna packing",
+  "histones",
+  "cell nucleus",
+  "human body",
+  "biology",
+  "science explained",
+  "scale of the universe"
+ ],
+ "hashtags": [
+  "#science",
+  "#biology"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#science",
+   "#biology",
+   "#dna",
+   "#humanbody",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "scale-shock",
+  "topic": "how long your DNA is: ~2 m per nucleus in ~6 microns (tennis ball = ~20 km of thread), histone spools and coiling, billions of km in total (past Sun-Neptune)",
+  "hook": "you've been told X",
+  "idea_source": "backlog (ideas.md 'How long is all the DNA in your body?') + viral-shaped (an invisible molecule made measurable: 2 m, tennis ball = 20 km) + the review's hook test ('you've been told X' on a scale-shock)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.sciencefocus.com/the-human-body/how-long-is-your-dna",
+   "https://scienceinsights.org/how-long-is-your-dna-if-you-stretched-it-out/",
+   "https://www.sciencenews.org/article/body's-bacteria-don't-outnumber-human-cells-so-much-after-all",
+   "https://openoregon.pressbooks.pub/mhccbiology112/chapter/how-dna-is-arranged-in-a-cell/",
+   "https://en.wikipedia.org/wiki/Neptune"
+  ],
+  "experiment": "'you've been told X' hook test (review 2026-11-15), 2 of 2 (scale-shock)",
+  "humour": {
+   "trend": "timeless dry reaction (no current meme fit the topic naturally): smirk card 'my suitcase after one holiday: could never'",
+   "beat": "smirk",
+   "scene": 3
+  },
+  "claims": [
+   {
+    "claim": "a human cell nucleus holds ~2 m of DNA (46 chromosomes, ~6 billion base pairs)",
+    "tag": "PROVEN",
+    "source": "https://www.sciencefocus.com/the-human-body/how-long-is-your-dna"
+   },
+   {
+    "claim": "the nucleus is ~6 microns across",
+    "tag": "PROVEN",
+    "source": "https://www.sciencefocus.com/the-human-body/how-long-is-your-dna"
+   },
+   {
+    "claim": "scaled to a tennis ball (~6.5 cm), 2 m of DNA becomes ~20 km of thread ~0.02 mm thick (our arithmetic: x ~10,800)",
+    "tag": "PROVEN",
+    "source": "https://www.sciencefocus.com/the-human-body/how-long-is-your-dna"
+   },
+   {
+    "claim": "DNA wraps around histone proteins and is coiled further into chromatin",
+    "tag": "PROVEN",
+    "source": "https://openoregon.pressbooks.pub/mhccbiology112/chapter/how-dna-is-arranged-in-a-cell/"
+   },
+   {
+    "claim": "~30 trillion human cells, ~84% red blood cells (no nucleus), so trillions of nucleated cells",
+    "tag": "PROVEN",
+    "source": "https://www.sciencenews.org/article/body's-bacteria-don't-outnumber-human-cells-so-much-after-all"
+   },
+   {
+    "claim": "total DNA length estimates range ~14 to 74 billion km depending on counting; even the low end is far past Sun-Neptune (~4.5 billion km)",
+    "tag": "PROVEN",
+    "source": "https://scienceinsights.org/how-long-is-your-dna-if-you-stretched-it-out/"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "2 METRES *INSIDE?*",
+  "title_y": 0.15,
+  "title_size": 170,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffcf5a",
+  "glow_x": 0.5,
+  "glow_y": 0.55,
+  "glow_strength": 1.4,
+  "bg_saturation": 1.5,
+  "tint": [
+   "#1f4fb8",
+   "#f08a24"
+  ],
+  "tint_amount": 0.35,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-15-a/assets/plate_lab_close.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-15-a/assets/spool.png",
+    "x": 0.72,
+    "y": 0.5,
+    "w": 0.5,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.4,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-15-a/assets.py",
+ "scenes": [
+  {
+   "say": "You've been told DNA is tiny. Each cell nucleus in you holds *two metres* of it.",
+   "caption": "You've been told DNA is tiny. Each cell nucleus in you holds *2 metres* of it.",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.9385,
+     "y": 0.5472,
+     "h": 0.2581,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a8714b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "necklace": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.338,
+     "y": 0.6633,
+     "h": 0.4987,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='5' y='5' width='890' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='106' text-anchor='middle' font-size='84' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>YOU'VE BEEN TOLD...</text></svg>",
+     "x": 0.5,
+     "y": 0.12,
+     "w": 0.78,
+     "rotate": -2,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "DNA = *TINY*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.225,
+     "size": 150,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none",
+     "until": 2.3,
+     "exit": "pop"
+    },
+    {
+     "type": "text",
+     "text": "*2 METRES*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.225,
+     "size": 160,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 2.4,
+     "sfx": "boom"
+    },
+    {
+     "type": "text",
+     "text": "IN EVERY NUCLEUS",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.3,
+     "size": 64,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.8
+    }
+   ]
+  },
+  {
+   "say": "Taller than you, in a nucleus six microns wide.",
+   "transition": "slide_left",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 1000'><rect x='30' y='0' width='60' height='1000' rx='8' fill='#f2b04a' stroke='#1a1410' stroke-width='6'/><line x1='30' y1='50' x2='70' y2='50' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='100' x2='90' y2='100' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='150' x2='70' y2='150' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='200' x2='90' y2='200' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='250' x2='70' y2='250' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='300' x2='90' y2='300' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='350' x2='70' y2='350' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='400' x2='90' y2='400' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='450' x2='70' y2='450' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='500' x2='90' y2='500' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='550' x2='70' y2='550' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='600' x2='90' y2='600' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='650' x2='70' y2='650' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='700' x2='90' y2='700' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='750' x2='70' y2='750' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='800' x2='90' y2='800' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='850' x2='70' y2='850' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='900' x2='90' y2='900' stroke='#1a1410' stroke-width='5'/><line x1='30' y1='950' x2='70' y2='950' stroke='#1a1410' stroke-width='5'/></svg>",
+     "x": 0.3729,
+     "y": 0.6154516853932585,
+     "w": 0.056041947565543065,
+     "enter": "slide_up",
+     "at": 0.3,
+     "sfx": "pop",
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 126'><rect x='5' y='5' width='290' height='116' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='150.0' y='87' text-anchor='middle' font-size='60' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>2 M</text></svg>",
+     "x": 0.3729,
+     "y": 0.45410337078651686,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 0.6
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.2129,
+     "y": 0.6299,
+     "h": 0.2338,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ],
+      [
+       "explain",
+       2.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.3027,
+       "y": 0.6353,
+       "scale": 1.024
+      },
+      {
+       "t": 1.0,
+       "x": 0.2129,
+       "y": 0.6299,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.68,
+     "y": 0.17,
+     "w": 0.3,
+     "enter": "zoom",
+     "at": 1.9,
+     "sfx": "pop",
+     "loop": "float",
+     "loop_amp": 0.006
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 126'><rect x='5' y='5' width='590' height='116' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='300.0' y='87' text-anchor='middle' font-size='60' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>6 MICRONS WIDE</text></svg>",
+     "x": 0.68,
+     "y": 0.29,
+     "w": 0.48,
+     "rotate": 2,
+     "enter": "pop",
+     "at": 2.5,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Scale that nucleus up to a tennis ball, and the DNA becomes *twenty kilometres* of thread.",
+   "caption": "Scale that nucleus up to a tennis ball, and the DNA becomes *20 km* of thread.",
+   "transition": "zoom",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.5,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/plate_lab_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 470'><rect x='5' y='5' width='890' height='460' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='80' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>NUCLEUS BLOWN UP TO A TENNIS BALL</text><text x='450' y='420' text-anchor='middle' font-size='46' fill='#3a3e48' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>thread thinner than a hair</text></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.86,
+     "enter": "slide_down",
+     "at": 0.05,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.22,
+     "y": 0.22,
+     "w": 0.13,
+     "enter": "pop",
+     "at": 0.4
+    },
+    {
+     "type": "shape",
+     "shape": "arrow",
+     "x": 0.36,
+     "y": 0.22,
+     "w": 0.1,
+     "h": 0.03,
+     "color": "accent",
+     "enter": "pop",
+     "at": 0.9
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/tennis.png",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.18,
+     "enter": "drop",
+     "at": 1.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "shape",
+     "shape": "arrow",
+     "x": 0.64,
+     "y": 0.22,
+     "w": 0.1,
+     "h": 0.03,
+     "color": "accent",
+     "enter": "pop",
+     "at": 2.6
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/bobbin.png",
+     "x": 0.79,
+     "y": 0.22,
+     "w": 0.15,
+     "enter": "pop",
+     "at": 2.9,
+     "sfx": "pop"
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 20,
+     "suffix": " KM",
+     "x": 0.5,
+     "y": 0.385,
+     "size": 120,
+     "color": "accent",
+     "at": 3.0,
+     "count_dur": 1.6,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.5,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/plate_lab_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "smirk",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "smirk",
+    "at": 0.1,
+    "dur": 1.35,
+    "who": "ved",
+    "text": "my suitcase after one holiday:\n*could never*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "The trick? It winds around protein spools, then coils, and coils again.",
+   "transition": "cut",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.1,
+      "focus": [
+       0.52,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/plate_lab_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/spool.png",
+     "x": 0.5,
+     "y": 0.17,
+     "w": 0.62,
+     "enter": "slide_left",
+     "at": 0.5,
+     "sfx": "whoosh",
+     "loop": "float",
+     "loop_amp": 0.006
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 140'><rect x='5' y='5' width='890' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='130' y='94' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>WIND</text><text x='250' y='94' text-anchor='middle' font-size='50' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>&gt;</text><text x='380' y='94' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>COIL</text><text x='510' y='94' text-anchor='middle' font-size='50' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>&gt;</text><text x='690' y='94' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>COIL AGAIN</text></svg>",
+     "x": 0.5,
+     "y": 0.29,
+     "w": 0.86,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 109'><rect x='5' y='5' width='550' height='99' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='280.0' y='75' text-anchor='middle' font-size='52' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROTEIN SPOOL</text></svg>",
+     "x": 0.3,
+     "y": 0.07,
+     "w": 0.4,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 1.2
+    }
+   ]
+  },
+  {
+   "say": "Now count every cell with a nucleus. *Trillions*.",
+   "transition": "slide_up",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.889,
+     "y": 0.5568,
+     "h": 0.1547,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       1.4
+      ],
+      [
+       "cheer",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b48c",
+       "build": "round",
+       "hair": [
+        "#7a4e2a",
+        "curly"
+       ],
+       "hat": [
+        "beret",
+        "#d9534f"
+       ],
+       "top": [
+        "#6fc3c0",
+        "tshirt"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.2,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2129,
+     "y": 0.6299,
+     "h": 0.2338,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "surprised",
+       1.8
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.9,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.2,
+     "y": 0.12,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.42,
+     "y": 0.09,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 0.42000000000000004
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.66,
+     "y": 0.13,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 0.64
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.82,
+     "y": 0.08,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 0.8600000000000001,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.3,
+     "y": 0.2,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 1.08
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.55,
+     "y": 0.19,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 1.3
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.76,
+     "y": 0.22,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 1.52,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.14,
+     "y": 0.27,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 1.74
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.4,
+     "y": 0.29,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 1.96
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/nucleus.png",
+     "x": 0.64,
+     "y": 0.3,
+     "w": 0.09,
+     "enter": "drop",
+     "at": 2.18,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "*TRILLIONS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.33,
+     "size": 140,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "zoom",
+     "at": 2.0,
+     "sfx": "boom"
+    }
+   ]
+  },
+  {
+   "say": "End to end: *billions* of kilometres. Farther than the Sun is from Neptune.",
+   "caption": "End to end: *billions of km*. Farther than the Sun is from Neptune.",
+   "transition": "zoom",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.06,
+      "focus": [
+       0.52,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/plate_space.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1400'><path d='M70,140 C300,300 150,500 420,640 C700,780 520,980 900,1240' stroke='#ffcf5a' stroke-width='14' fill='none' stroke-linecap='round' stroke-dasharray='34 14'/></svg>",
+     "x": 0.5,
+     "y": 0.48,
+     "w": 0.92,
+     "enter": "fade",
+     "at": 0.3,
+     "enter_dur": 1.2,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 175'><rect x='5' y='5' width='890' height='165' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>SUN TO NEPTUNE: 4.5 BILLION KM</text><text x='450' y='138' text-anchor='middle' font-size='44' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>YOUR DNA: EVEN FARTHER</text></svg>",
+     "x": 0.5,
+     "y": 0.3,
+     "w": 0.86,
+     "enter": "slide_down",
+     "at": 2.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 105'><rect x='5' y='5' width='410' height='95' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='210.0' y='72' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>NEPTUNE</text></svg>",
+     "x": 0.66,
+     "y": 0.72,
+     "w": 0.3,
+     "enter": "pop",
+     "at": 1.6
+    }
+   ]
+  },
+  {
+   "say": "All of it, folded inside you. Tiny? Not even close.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-15-a/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "warm",
+       1.6
+      ],
+      [
+       "smirk",
+       2.8
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "DNA = TINY?",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 130,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 170'><rect x='10' y='10' width='940' height='150' rx='18' fill='#f6efe2' fill-opacity='0.85' stroke='#d9534f' stroke-width='14'/><text x='480.0' y='126' text-anchor='middle' font-size='92' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>NOT EVEN CLOSE</text></svg>",
+     "x": 0.5,
+     "y": 0.27,
+     "w": 0.8,
+     "rotate": -8,
+     "enter": "zoom",
+     "at": 2.2,
+     "sfx": "boom"
+    }
+   ]
+  }
+ ]
+}
