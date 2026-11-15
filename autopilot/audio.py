@@ -53,6 +53,26 @@ def tts(text, voice="am_michael", speed=1.0, lang="en-us"):
     return x
 
 
+def narrator(text, voice, speed=1.0, lang="en-us", pitch=0.0, warmth=0.0):
+    """TTS with a deeper, fuller 'documentary narrator' delivery, without artefacts: speak faster by the pitch factor,
+    then resample slower, so the length is unchanged and the pitch drops (pitch in semitones, e.g. -1.5).
+    warmth 0..1 adds low-mid body and gentle compression (a close, intimate mic)."""
+    if not pitch and not warmth:
+        return tts(text, voice, speed, lang)
+    f = 2 ** (pitch / 12.0)                      # < 1 for a lower voice
+    x = tts(text, voice, speed / f, lang)
+    if pitch:
+        n = int(len(x) / f)
+        x = np.interp(np.linspace(0, len(x) - 1, n), np.arange(len(x)), x).astype(np.float32)
+    if warmth:
+        k = int(SR / 900)                        # body: add a low-passed copy (~<900 Hz)
+        lp = np.convolve(x, np.ones(k) / k, mode="same")
+        x = x + warmth * 0.6 * lp
+        pk = np.abs(x).max() + 1e-9
+        x = np.tanh(x / pk * (1 + 1.5 * warmth)) / np.tanh(1 + 1.5 * warmth) * 0.95   # soft compression
+    return x.astype(np.float32)
+
+
 def envelope(x, fps):
     """Loudness per video frame, 0..1 (drives mouth animation)."""
     hop = SR / fps
@@ -449,6 +469,81 @@ def _doc_sfx(name, rng):
         t = np.arange(n) / SR
         x = _bandnoise(n, 300, 4000, rng) * np.sin(np.pi * t / 0.5) ** 2
         return (x * 0.28).astype(np.float32)
+    if name == "splash":                    # something hits water: thump + spray
+        n = int(0.9 * SR)
+        t = np.arange(n) / SR
+        thump = np.sin(2 * np.pi * (120 * np.exp(-t * 9) + 50) * t) * np.exp(-t * 12) * 0.7
+        spray = _bandnoise(n, 900, 9000, rng) * (np.minimum(1, t / 0.02) * np.exp(-t * 4.5)) * 0.55
+        drops = np.zeros(n)
+        for c in rng.uniform(0.15, 0.8, 14):
+            a = int(c * SR)
+            m = min(n - a, int(0.04 * SR))
+            tt = np.arange(m) / SR
+            drops[a:a + m] += np.sin(2 * np.pi * rng.uniform(900, 2400) * tt * (1 + 6 * tt)) * np.exp(-tt * 90) * 0.25
+        x = thump + spray + drops
+        return (x / np.abs(x).max() * 0.7).astype(np.float32)
+    if name == "bubbles":                   # underwater bubbles rising
+        n = int(1.2 * SR)
+        x = np.zeros(n)
+        for c in rng.uniform(0, 1.05, 22):
+            a = int(c * SR)
+            m = min(n - a, int(0.06 * SR))
+            tt = np.arange(m) / SR
+            f0 = rng.uniform(300, 900)
+            x[a:a + m] += np.sin(2 * np.pi * f0 * tt * (1 + 9 * tt)) * np.exp(-tt * 55) * rng.uniform(0.3, 1)
+        x = np.convolve(x, np.ones(6) / 6, mode="same") + _bandnoise(n, 80, 400, rng) * 0.05
+        return (x / np.abs(x).max() * 0.45).astype(np.float32)
+    if name in ("footsteps", "stomp"):      # footsteps on a hard floor; stomp = one heavy step
+        steps = [0.0] if name == "stomp" else [0.0, 0.42, 0.84, 1.26]
+        n = int((steps[-1] + 0.4) * SR)
+        x = np.zeros(n)
+        for k, c in enumerate(steps):
+            m = int(0.25 * SR)
+            tt = np.arange(m) / SR
+            g = 1.0 if name == "stomp" else rng.uniform(0.6, 0.9)
+            hit = np.sin(2 * np.pi * (85 if name == "stomp" else 140) * tt) * np.exp(-tt * (18 if name == "stomp" else 35))
+            hit = hit + _bandnoise(m, 300, 3000, rng) * np.exp(-tt * 60) * 0.5
+            a = int(c * SR)
+            x[a:a + m] += hit[: n - a] * g
+        return (x / np.abs(x).max() * (0.75 if name == "stomp" else 0.5)).astype(np.float32)
+    if name == "heartbeat":                 # two slow beats (lub-dub)
+        n = int(1.9 * SR)
+        x = np.zeros(n)
+        for c in (0.0, 0.95):
+            for d, g in ((0.0, 1.0), (0.24, 0.7)):
+                m = int(0.18 * SR)
+                tt = np.arange(m) / SR
+                a = int((c + d) * SR)
+                x[a:a + m] += np.sin(2 * np.pi * 55 * tt) * np.exp(-tt * 22) * g
+        return (x / np.abs(x).max() * 0.8).astype(np.float32)
+    if name == "tick":                      # clock ticking, 4 ticks
+        n = int(2.1 * SR)
+        x = np.zeros(n)
+        for k in range(4):
+            a = int(k * 0.5 * SR)
+            h = noise_hit(0.02, 0.003, True, rng) * (1.0 if k % 2 == 0 else 0.7)
+            x[a:a + len(h)] += h
+        return (x / np.abs(x).max() * 0.45).astype(np.float32)
+    if name == "slide":                     # a box or object pushed across a counter
+        n = int(0.7 * SR)
+        t = np.arange(n) / SR
+        x = _bandnoise(n, 200, 2500, rng) * np.sin(np.pi * t / 0.7) ** 0.6
+        x = x * (0.7 + 0.3 * np.sin(2 * np.pi * 23 * t))
+        return (x * 0.32).astype(np.float32)
+    if name == "cash":                      # banknotes riffled
+        n = int(0.6 * SR)
+        x = np.zeros(n)
+        for k in range(18):
+            a = int(k * 0.028 * SR)
+            m = int(0.03 * SR)
+            x[a:a + m] += _bandnoise(m, 2000, 9000, rng) * np.exp(-np.arange(m) / (0.008 * SR))
+        return (x / np.abs(x).max() * 0.4).astype(np.float32)
+    if name == "drone":                     # low tension drone swell (2.5 s)
+        n = int(2.5 * SR)
+        t = np.arange(n) / SR
+        x = sum(np.sin(2 * np.pi * f * t + rng.uniform(0, 6)) for f in (55, 55.4, 82.4, 110.3)) / 4
+        x = x * np.sin(np.pi * t / 2.5) ** 1.5 + _bandnoise(n, 40, 300, rng) * 0.08
+        return (x / np.abs(x).max() * 0.55).astype(np.float32)
     if name == "projector":                 # old projector running (1.6 s of sprocket clatter)
         n = int(1.6 * SR)
         t = np.arange(n) / SR

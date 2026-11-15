@@ -155,8 +155,8 @@ def _paste_clip(canvas, img, x, y):
 
 
 # ---------- layers ----------
-DOC_DIRECT = {"marker", "string", "timeline", "lower_third", "chapter", "tag"}
-DOC_SCREEN = {"lower_third", "chapter", "tag"}
+DOC_DIRECT = {"marker", "string", "timeline", "lower_third", "chapter", "tag", "headline", "figures"}
+DOC_SCREEN = {"lower_third", "chapter", "tag", "headline"}
 
 def character_image(ctx, L, scene_idx, t, scene):
     ch = ctx.chars[L["id"]]
@@ -423,6 +423,20 @@ def draw_scene(ctx, scene_idx, t):
             continue
         cx = L.get("x", 0.5) * W + dx
         cy = L.get("y", 0.5) * H + dy
+        if L.get("iris"):                                 # reveal through a growing soft circle (x-ray / look-inside shots)
+            from . import doc
+            ir = L["iris"]                                # {"x", "y", "r0", "r1", "at", "dur"} in frame fractions / scene s
+            q = ease_in_out(clamp((t - ir.get("at", 0.0)) / max(0.01, ir.get("dur", 0.8))))
+            r = ir.get("r0", 0.0) + (ir.get("r1", 0.4) - ir.get("r0", 0.0)) * q
+            if r <= 0.002:
+                continue
+            tmp = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            paste(tmp, img, cx, cy, sc * L.get("scale", 1.0), rot, alpha, L.get("flip", False), sx)
+            a_ = tmp.getchannel("A")
+            from PIL import ImageChops
+            tmp.putalpha(ImageChops.multiply(a_, doc.iris_mask(W, H, ir.get("x", 0.5), ir.get("y", 0.5), r, ir.get("feather", 0.05))))
+            canvas.alpha_composite(tmp)
+            continue
         paste(canvas, img, cx, cy, sc * L.get("scale", 1.0), rot, alpha, L.get("flip", False), sx)
     t = t_real
     cam = scene.get("camera") or {}
@@ -470,6 +484,9 @@ def draw_scene(ctx, scene_idx, t):
             canvas = canvas.transform((W, H), Image.AFFINE, (cw / W, 0, x0, 0, chh / H, y0),
                                       resample=Image.BILINEAR)   # sub-pixel: slow moves glide, never step
     out = apply_grade(ctx.style, canvas)
+    if scene.get("look") == "moody":
+        from . import doc
+        out = doc.moody(out, scene)
     if screen:
         from . import doc
         out = out.convert("RGBA")
@@ -584,7 +601,7 @@ def render_frame(ctx, scene_idx, t):
             cw, ch = int(W / z), int(H / z)
             pz = prev.crop(((W - cw) // 2, (H - ch) // 2, (W + cw) // 2, (H + ch) // 2)).resize((W, H), Image.BILINEAR)
             cur = Image.blend(pz, cur, p)
-        elif tr in ("whip", "dip", "burn", "paper"):
+        elif tr in ("whip", "dip", "burn", "paper", "push"):
             from . import doc
             cur = doc.transition(tr, prev, cur, clamp(t / T), W, H)
         elif tr == "flash":

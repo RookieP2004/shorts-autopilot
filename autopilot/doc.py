@@ -23,7 +23,7 @@ from PIL import Image, ImageDraw, ImageFilter
 from . import sprites
 from .spec import color, hex_rgba
 
-DIRECT = {"marker", "string", "timeline", "lower_third", "chapter", "tag"}
+DIRECT = {"marker", "string", "timeline", "lower_third", "chapter", "tag", "headline", "figures"}
 
 FONT = {  # documentary type: tracked condensed caps, a book serif, a typewriter, handwriting, a marker
     "cond": "fonts/Oswald.ttf",
@@ -33,6 +33,7 @@ FONT = {  # documentary type: tracked condensed caps, a book serif, a typewriter
     "hand": "fonts/Caveat.ttf",
     "marker": "fonts/PermanentMarker-Regular.ttf",
     "mono": "fonts/CourierPrime-Regular.ttf",
+    "mono_b": "fonts/CourierPrime-Bold.ttf",
 }
 
 
@@ -118,7 +119,9 @@ def finish(ctx, img, scene_idx, t):
         if d.get("archival_grain", 0):                    # fine and light: heavy grain turns into blocks after encoding
             a += _grain(W, H, fidx)[..., None] * d["archival_grain"]
     else:
-        if d.get("vignette", 0):
+        if look == "moody":                                  # (the grade itself is applied in draw_scene, under the text)
+            a *= _vignette(W, H, 0.42)
+        elif d.get("vignette", 0):
             a *= _vignette(W, H, d["vignette"])
         g = scene.get("grain", d.get("grain", 0))         # off by default: at YouTube bitrates grain becomes "mosaic"
         if g:
@@ -653,9 +656,136 @@ def draw_tag(ctx, canvas, L, lt, alpha):
     canvas.alpha_composite(box, (int(x), int(y)))
 
 
+def _label_box(style, text, size, bg, fg="#f6efe2", track=3):
+    t = _text_img(style, text.upper(), "mono_b", size, fg, track=track)
+    padx, pady = int(size * 0.55), int(size * 0.28)
+    box = Image.new("RGBA", (t.width + padx * 2, t.height + pady), hex_rgba(color(style, bg)))
+    box.alpha_composite(t, (padx, pady // 2))
+    return box
+
+
+def _head_line(style, text, size, accent):
+    """One line of condensed caps; *word* in the accent colour. Returns (image, accent_span_x0_x1 or None)."""
+    k = ("hl", text, size, accent)
+    if k in _CACHE:
+        return _CACHE[k]
+    f = sprites.font(style["fonts"].get("display_cond", "fonts/Anton-Regular.ttf"), size)
+    parts = []
+    for i, chunk in enumerate(text.upper().split("*")):
+        if chunk:
+            parts.append((chunk, i % 2 == 1))
+    w = int(sum(f.getlength(c) for c, _ in parts)) + 12
+    asc, desc = f.getmetrics()
+    img = Image.new("RGBA", (max(1, w), asc + desc + 10), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    x, span = 6, None
+    for c, acc in parts:
+        d.text((x + 3, 7), c, font=f, fill=(0, 0, 0, 120))
+        d.text((x, 4), c, font=f, fill=hex_rgba(color(style, accent)) if acc else (246, 242, 234, 255))
+        if acc:
+            span = (x, x + f.getlength(c))
+        x += f.getlength(c)
+    _CACHE[k] = (img, span)
+    return img, span
+
+
+def draw_headline(ctx, canvas, L, lt, alpha):
+    """Reference-reel text system: a small mono label in a red or black box over a 1-2 line headline in condensed caps,
+    one *accent* word in red with a red underline. Lines rise in one after another. Keep 3-6 words."""
+    st = ctx.style
+    W, H = ctx.W, ctx.H
+    s = W / 1080
+    cx, y = L.get("x", 0.5) * W, L.get("y", 0.16) * H
+    acc = L.get("accent", "#d63a2f")
+    if L.get("scrim", 0.55):
+        canvas.alpha_composite(_fade(scrim(W, H, L.get("y", 0.16) + 0.2, L.get("scrim", 0.55)), alpha))
+    if L.get("label"):
+        p = _eout(_clamp(lt / 0.3))
+        box = _label_box(st, L["label"], int(L.get("label_size", 26) * s), L.get("label_bg", "#141414"))
+        canvas.alpha_composite(_fade(box, alpha * p), (int(cx - box.width / 2), int(y - box.height - 14 * s + (1 - p) * 8)))
+    lines = [ln for ln in L.get("text", "").split("\n") if ln]
+    yy = y
+    for i, ln in enumerate(lines):
+        p = _eout(_clamp((lt - 0.12 - i * 0.18) / 0.35))
+        if p <= 0:
+            break
+        img, span = _head_line(st, ln, int(L.get("size", 96) * s), acc)
+        x0 = int(cx - img.width / 2)
+        canvas.alpha_composite(_fade(img, alpha * p), (x0, int(yy + (1 - p) * 26 * s)))
+        if span and L.get("underline", True):
+            q = _eout(_clamp((lt - 0.35 - i * 0.18) / 0.35))
+            ux0, ux1 = x0 + span[0], x0 + span[0] + (span[1] - span[0]) * q
+            uy = yy + img.height - 4 * s
+            c = hex_rgba(color(st, acc))
+            ImageDraw.Draw(canvas).rectangle([ux0, uy, ux1, uy + 6 * s], fill=(c[0], c[1], c[2], int(255 * alpha)))
+        yy += img.height * 0.92
+    if L.get("sub"):
+        p = _eout(_clamp((lt - 0.3 - len(lines) * 0.18) / 0.35))
+        box = _label_box(st, L["sub"], int(L.get("sub_size", 24) * s), L.get("sub_bg", acc))
+        canvas.alpha_composite(_fade(box, alpha * p), (int(cx - box.width / 2), int(yy + 30 * s)))
+
+
+_FIG = {}
+
+
+def _figure(h, col):
+    k = (h, col)
+    if k not in _FIG:
+        w = int(h * 0.42)
+        ss = 3
+        im = Image.new("RGBA", (w * ss, h * ss), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        W_, H_ = w * ss, h * ss
+        d.ellipse([W_ * 0.28, 0, W_ * 0.72, H_ * 0.24], fill=col)                      # head
+        d.rounded_rectangle([W_ * 0.12, H_ * 0.27, W_ * 0.88, H_ * 0.66], radius=W_ * 0.22, fill=col)   # body
+        d.rounded_rectangle([W_ * 0.2, H_ * 0.55, W_ * 0.47, H_], radius=W_ * 0.12, fill=col)          # legs
+        d.rounded_rectangle([W_ * 0.53, H_ * 0.55, W_ * 0.8, H_], radius=W_ * 0.12, fill=col)
+        _FIG[k] = im.resize((w, h), Image.LANCZOS)
+    return _FIG[k]
+
+
+def draw_figures(ctx, canvas, L, lt, alpha):
+    """A crowd of figures in perspective rows (a stat you can see): `n` figures, `red` of them turn red one by one
+    from `red_at` over `red_dur` s; `keep_white` indices stay pale (the survivors)."""
+    W, H = ctx.W, ctx.H
+    n, cols = L.get("n", 100), L.get("cols", 10)
+    rows = (n + cols - 1) // cols
+    x0, x1 = L.get("x0", 0.06), L.get("x1", 0.94)
+    y_back, y_front = L.get("y_back", 0.42), L.get("y_front", 0.92)
+    h_back, h_front = L.get("h_back", 0.035), L.get("h_front", 0.075)
+    pale = (231, 222, 205, int(255 * alpha))
+    red = (196, 52, 42, int(255 * alpha))
+    order = list(range(n))
+    rng = np.random.default_rng(L.get("seed", 4))
+    rng.shuffle(order)
+    keep = set(L.get("keep_white", []))
+    to_red = [i for i in order if i not in keep][:L.get("red", 0)]
+    rank = {i: k for k, i in enumerate(to_red)}
+    appear = _eout(_clamp(lt / L.get("in_dur", 0.6)))
+    for r in range(rows):                                      # back rows first
+        f = r / max(1, rows - 1)
+        y = y_back + (y_front - y_back) * f ** 1.2
+        h = int(H * (h_back + (h_front - h_back) * f))
+        span = (x1 - x0) * (0.7 + 0.3 * f)
+        for c in range(cols):
+            i = r * cols + c
+            if i >= n:
+                break
+            x = 0.5 + (c / max(1, cols - 1) - 0.5) * span
+            col = pale
+            if i in rank:
+                t_i = L.get("red_at", 0.8) + L.get("red_dur", 1.5) * rank[i] / max(1, len(rank))
+                if lt >= t_i:
+                    col = red
+            fig = _figure(max(6, h), col)
+            if appear < 1:
+                fig = _fade(fig, appear)
+            canvas.alpha_composite(fig, (int(x * W - fig.width / 2), int(y * H - fig.height)))
+
+
 def draw_direct(ctx, canvas, L, lt, alpha):
-    fn = {"marker": draw_marker, "string": draw_string, "timeline": draw_timeline,
-          "lower_third": draw_lower_third, "chapter": draw_chapter, "tag": draw_tag}[L["type"]]
+    fn = {"marker": draw_marker, "string": draw_string, "timeline": draw_timeline, "headline": draw_headline,
+          "figures": draw_figures, "lower_third": draw_lower_third, "chapter": draw_chapter, "tag": draw_tag}[L["type"]]
     fn(ctx, canvas, L, lt, alpha)
 
 
@@ -689,6 +819,14 @@ def transition(kind, prev, cur, p, W, H):
         out.paste(a, (-off, 0))
         out.paste(b, (W - off, 0))
         return out
+    if kind == "push":                                       # travel: the camera flies into the old shot as the new one lands
+        z = 1 + 0.9 * _ease(p) ** 1.6
+        cw, ch = W / z, H / z
+        a = prev.transform((W, H), Image.AFFINE, (cw / W, 0, (W - cw) / 2, 0, ch / H, (H - ch) / 2), resample=Image.BILINEAR)
+        z2 = 1.25 - 0.25 * _eout(p)
+        cw2, ch2 = W / z2, H / z2
+        b = cur.transform((W, H), Image.AFFINE, (cw2 / W, 0, (W - cw2) / 2, 0, ch2 / H, (H - ch2) / 2), resample=Image.BILINEAR)
+        return Image.blend(a, b, _ease(_clamp(p * 1.4 - 0.2)))
     if kind == "dip":
         if p < 0.5:
             return Image.blend(prev, Image.new("RGBA", (W, H), (0, 0, 0, 255)), _ease(p * 2))
@@ -711,3 +849,44 @@ def transition(kind, prev, cur, p, W, H):
         out.paste(Image.new("RGBA", (W, H), (240, 232, 214, 255)), (0, 0), rim)
         return out
     return None
+
+
+_IRIS = {}
+
+
+def iris_mask(W, H, cx, cy, r, feather=0.06):
+    """Soft circular reveal mask (L mode), radius r as a fraction of the frame height; cached per quantised radius."""
+    rq = round(r, 3)
+    k = (W, H, round(cx, 3), round(cy, 3), rq, feather)
+    if k not in _IRIS:
+        if len(_IRIS) > 80:
+            _IRIS.clear()
+        yy, xx = np.mgrid[0:H:2, 0:W:2].astype(np.float32)
+        d = np.sqrt((xx - cx * W) ** 2 + (yy - cy * H) ** 2) / H
+        m = np.clip((rq - d) / max(1e-3, feather) + 0.5, 0, 1)
+        m = np.repeat(np.repeat(m, 2, 0), 2, 1)[:H, :W]
+        _IRIS[k] = Image.fromarray((m * 255).astype(np.uint8), "L")
+    return _IRIS[k]
+
+
+def moody(img, scene):
+    """Reference-reel mood for the world (not the text): darker, desaturated, warm highlights, cool shadows."""
+    a = np.asarray(img.convert("RGB")).astype(np.float32)
+    lum = (a[..., 0] * 0.3 + a[..., 1] * 0.59 + a[..., 2] * 0.11)[..., None]
+    a = lum + (a - lum) * scene.get("saturation", 0.72)
+    a = a * scene.get("exposure", 0.8)
+    k = lum / 255.0
+    a = a + np.array([12, 5, -6], np.float32) * k + np.array([-4, 0, 6], np.float32) * (1 - k)
+    return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).convert("RGBA")
+
+
+def scrim(W, H, y1, strength=0.6):
+    """Dark gradient from the top of the frame down to y1 (fraction), so white headlines read on any shot."""
+    k = ("scrim", W, H, round(y1, 3), strength)
+    if k not in _CACHE:
+        g = np.clip(1 - np.arange(H, dtype=np.float32) / max(1, y1 * H), 0, 1) ** 1.3 * strength
+        a = (np.repeat(g[:, None], W, 1) * 255).astype(np.uint8)
+        im = Image.new("RGBA", (W, H), (6, 6, 8, 0))
+        im.putalpha(Image.fromarray(a, "L"))
+        _CACHE[k] = im
+    return _CACHE[k]

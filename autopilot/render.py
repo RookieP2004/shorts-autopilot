@@ -132,7 +132,8 @@ def prepare(ctx, log=print):
         lead = ctx.lead_of(i)
         if s.get("say"):
             v = voice_for(ctx, s)
-            x = audio.tts(s["say"], v.get("voice"), v.get("speed", 1.0), v.get("lang", "en-us"))
+            x = audio.narrator(s["say"], v.get("voice"), v.get("speed", 1.0), v.get("lang", "en-us"),
+                               v.get("pitch", 0.0), v.get("warmth", 0.0))
             log(f"  scene {i}: voice {v.get('voice')} {len(x)/audio.SR:.2f}s")
         else:
             x = np.zeros(0, dtype=np.float32)
