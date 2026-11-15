@@ -172,6 +172,8 @@ def _render_scene(args):
     W, H, fps = ctx.W, ctx.H, ctx.fps
     final = os.path.join(out_dir, f"scene_{i:03d}.mp4")
     tmp = os.path.join(out_dir, f"scene_{i:03d}.part.mp4")
+    if os.environ.get("RENDER_RESUME") and os.path.exists(final):   # pick up after an interrupted render
+        return final
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
            "-s", f"{W}x{H}", "-r", str(fps), "-i", "-", "-c:v", "libx264", "-preset", "veryfast",
            "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(fps), tmp]
@@ -399,7 +401,8 @@ def thumbnail(job_path, out_path=None, root=ROOT, log=print):
     from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
     from . import sprites
     job = load_json(job_path)
-    style = deep_merge(job_style(job, root), {"watermark": {"text": ""}, "progress_bar": {"enabled": False}})  # clean thumbnail
+    style = deep_merge(job_style(job, root), {"watermark": {"text": ""}, "progress_bar": {"enabled": False},
+                                              "doc": {"enabled": False}})  # clean thumbnail (no grain: it breaks the cut-out)
     th = job.get("thumbnail") or {}
     W, H = style["canvas"]["w"], style["canvas"]["h"]
     if th.get("fg"):
