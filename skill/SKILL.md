@@ -33,7 +33,8 @@ How it fits together:
     After every **successful** execute call: `python -m autopilot budget --add <upload|stats|docs|other> --ref <id>`, and commit the ledger.
     Always pass the slot id as `--ref` for uploads: the budget tells the regular slot (`-a`) from bonus slots (`-b`, `-c`).
     Inspect/discover/enable calls are free and are not recorded.
-- The workspace can reach GitHub and PyPI only. Everything that touches YouTube or Google goes through Zapier.
+- The workspace can reach GitHub, PyPI and Meta's API (graph.facebook.com, for Instagram). Everything that touches YouTube or
+  Google goes through Zapier.
 
 There are five modes. Work out which one applies:
 - **Setup**: the owner asks to set up or change the channel. Interactive.
@@ -366,6 +367,9 @@ Each run starts fresh, so the repo (and the Google Docs) carry all the state.
 - More regular videos a day only if the owner moves to a paid Zapier plan: then raise `zapier.plan_tasks` in style.json.
   The bonus logic scales with it automatically.
 
-## 7. Not built yet
-Instagram Reels posting. `final.mp4` is already Reels-ready (9:16), and the same media URL can feed a Zapier
-*Instagram for Business: Publish Video/Reel* action once the owner has an Instagram Business account. Tell the owner if they ask.
+## 7. Instagram (live since 2026-11-15)
+Every Short is also posted as a Reel on @explainerthe_ (3h step 7) through Meta's Instagram Graph API with the "Explainer
+Poster" app's system-user token, which never expires. The token is given only in the scheduled tasks' prompts, never stored in
+the public repo. No Zapier tasks are used. Meta allows 100 API posts a day. Meta AI voice translation can't be switched on
+through the API (and the API can't make app drafts), so the owner gets 30 minutes to post each Reel by hand with translation on
+before the run posts it itself (3h step 7).
