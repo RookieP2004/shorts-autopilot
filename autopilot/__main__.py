@@ -32,6 +32,8 @@ def main(argv=None):
     th = sub.add_parser("thumbnail"); th.add_argument("job"); th.add_argument("--out")
     ig = sub.add_parser("instagram"); ig.add_argument("job"); ig.add_argument("--video-url"); ig.add_argument("--cover-url")
     ig.add_argument("--caption-only", action="store_true")
+    ig.add_argument("--manual-window", type=float, default=0, help="minutes the owner gets to post it by hand first")
+    ig.add_argument("--since", type=float, help="epoch seconds when the owner was notified (default: now)")
     sub.add_parser("characters")
     b = sub.add_parser("budget"); b.add_argument("--need"); b.add_argument("--add"); b.add_argument("--ref", default="")
     b.add_argument("--n", type=int, default=1)
@@ -65,9 +67,11 @@ def main(argv=None):
         from .render import thumbnail
         print(thumbnail(args.job, args.out))
     elif args.cmd == "instagram":
-        from .instagram import caption, post_reel
+        from .instagram import caption, manual_window, post_reel
         if args.caption_only:
             print(caption(load_json(args.job)))
+        elif args.manual_window:
+            manual_window(args.job, args.video_url, args.cover_url, args.manual_window, args.since)
         else:
             print(post_reel(args.job, args.video_url, args.cover_url))
     elif args.cmd == "characters":

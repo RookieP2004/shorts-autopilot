@@ -242,14 +242,23 @@ length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). The
 5. Append `python -m autopilot logline jobs/<id>/job.json --youtube-id <video id>` to `channel/memory/log.md`. In `ideas.md`,
    remove the idea you used and add the 2–3 runners-up.
 6. `git add jobs/<id>/job.json channel/ && git commit -m "short <id>: <title>" && git push`.
-7. **Instagram Reel** (free, no Zapier tasks; do it right after step 6, before step 4's wait). Only if the run's prompt gives
-   `IG_TOKEN` (a secret: never write it into the repo, a file or a message). Render the thumbnail if step 4 hasn't yet
-   (`python -m autopilot thumbnail jobs/<id>/job.json`, Read it), host it with
-   `KEEP=8 scripts/push_media.sh jobs/<id>/out/thumbnail.jpg <id>-thumb`, then run
-   `IG_TOKEN=<token> IG_USER_ID=17841428825494803 python -m autopilot instagram jobs/<id>/job.json --cover-url <thumb URL>`.
-   It posts the same video as a Reel on @explainerthe_ with an Instagram caption (no #shorts) and prints the Reel link (takes
-   1-3 minutes). Append ` | IG <link>` to the Short's log.md line, commit and push. If it fails, retry once; if it fails
-   again, skip Instagram for this Short and mention the error in the report. Long videos (16:9) are not posted to Instagram.
+7. **Instagram Reel: the owner gets 30 minutes to post it by hand, then it posts itself** (owner's rule, 2026-11-15; free,
+   no Zapier tasks; do it right after step 6, and do step 4's thumbnail inside the 30-minute wait). Only if the run's prompt
+   gives `IG_TOKEN` (a secret: never write it into the repo, a file or a message).
+   1. Render the thumbnail if step 4 hasn't yet (`python -m autopilot thumbnail jobs/<id>/job.json`, Read it) and host it with
+      `KEEP=8 scripts/push_media.sh jobs/<id>/out/thumbnail.jpg <id>-thumb`.
+   2. **Notify the owner** (PushNotification if available, and one SendUserMessage): "Time to post today's Reel! 🎬" with the
+      video link (the media URL from step 1), the cover link, the caption in a code block ready to copy
+      (`python -m autopilot instagram jobs/<id>/job.json --caption-only`), and the reminder: upload in the Instagram app, paste
+      the caption, turn on "Translate your voice with Meta AI", post. "If it's not posted in 30 minutes, I'll post it for you."
+      Note the time: `date +%s`.
+   3. Start the window: `IG_TOKEN=<token> IG_USER_ID=17841428825494803 nohup python -m autopilot instagram jobs/<id>/job.json
+      --cover-url <thumb URL> --manual-window 30 --since <that time> > /tmp/ig_<id>.log 2>&1 &`, then poll the log every
+      5-8 minutes (do step 4 meanwhile). Its last line is `MANUAL <link>` (the owner posted a Reel: don't post) or
+      `AUTO <link>` (posted for them).
+   4. Append ` | IG <link> (manual|auto)` to the Short's log.md line, commit and push. If auto-posting fails, retry once
+      (`... instagram jobs/<id>/job.json --cover-url <thumb URL>`); if it fails again, mention the error in the report.
+   Long videos (16:9) are not posted to Instagram.
 
 **i. Report.** Send the owner one SendUserMessage: title, YouTube link (and the Instagram Reel link), format and hook, the joke used (one line), and why you picked it (one line).
 

@@ -65,6 +65,40 @@ def caption(job):
     return text[:2200]
 
 
+def recent_reels(since_epoch):
+    """Reels on the account published at or after since_epoch (the owner posting by hand counts)."""
+    import datetime as dt
+    ig = os.environ.get("IG_USER_ID", "17841428825494803")
+    got = _call("GET", f"{ig}/media", fields="id,caption,timestamp,media_product_type,permalink", limit="10")
+    out = []
+    for m in got.get("data", []):
+        ts = dt.datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z").timestamp()
+        if ts >= since_epoch - 60 and m.get("media_product_type") == "REELS":
+            out.append(m)
+    return out
+
+
+def manual_window(job_path, video_url=None, cover_url=None, minutes=30, since=None, poll_s=120):
+    """Give the owner `minutes` to post the Reel by hand (with Meta AI translation on). If a new Reel shows up on the
+    account in that time, stop: prints MANUAL <link>. Otherwise post it automatically: prints AUTO <link>."""
+    since = since or time.time()
+    end = since + minutes * 60
+    while time.time() < end:
+        found = recent_reels(since)
+        if found:
+            print("MANUAL", found[0].get("permalink", found[0]["id"]), flush=True)
+            return "MANUAL", found[0].get("permalink")
+        print(f"waiting: {int((end - time.time()) / 60)} min left", flush=True)
+        time.sleep(min(poll_s, max(1, end - time.time())))
+    found = recent_reels(since)
+    if found:
+        print("MANUAL", found[0].get("permalink", found[0]["id"]), flush=True)
+        return "MANUAL", found[0].get("permalink")
+    link = post_reel(job_path, video_url, cover_url)
+    print("AUTO", link, flush=True)
+    return "AUTO", link
+
+
 def post_reel(job_path, video_url=None, cover_url=None, wait_s=300):
     job = load_json(job_path)
     jid = job["id"]
