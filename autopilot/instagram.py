@@ -15,7 +15,8 @@ from .spec import load_json
 
 API = "https://graph.facebook.com/v27.0"
 RAW = "https://raw.githubusercontent.com/RookieP2004/shorts-autopilot"
-EXTRA_TAGS = ["#explained", "#didyouknow", "#sciencefacts", "#learnsomethingnew", "#reels"]
+GENERIC = {"explained", "education", "science story", "facts", "shorts", "learning", "science explained"}
+MAX_TAGS = 5  # Instagram's hard limit per Reel since Dec 2025; more than 5 can block the post
 
 
 def _call(method, path, **params):
@@ -34,16 +35,33 @@ def _call(method, path, **params):
         raise SystemExit(f"Instagram API error {e.code} on {path}: {body}")
 
 
+def _tag(t):
+    t = "".join(ch for ch in t.lower() if ch.isalnum())
+    return "#" + t if t else ""
+
+
+def hashtags(job):
+    """5 hashtags for this video: job["instagram"]["hashtags"] if the run researched them, else derived from the job.
+    Mix: 1 broad niche tag, 3 topic-specific tags, then #explained (the channel's own)."""
+    own = (job.get("instagram") or {}).get("hashtags")
+    if own:
+        tags = [_tag(t) for t in own]
+    else:
+        broad = [_tag(t) for t in (job.get("hashtags") or []) if _tag(t) not in ("#shorts", "")][:1]
+        topic = [_tag(t) for t in (job.get("tags") or []) if t.lower() not in GENERIC and len(_tag(t)) <= 25][:3]
+        tags = broad + topic + ["#explained"]
+    out = []
+    for t in tags:
+        if t and t not in out and t != "#shorts":
+            out.append(t)
+    return out[:MAX_TAGS]
+
+
 def caption(job):
     title = job.get("title", "").strip()
     desc = (job.get("description") or "").split("\n\nSources:")[0].strip()
-    tags = []
-    for t in list(job.get("hashtags") or []) + EXTRA_TAGS:
-        t = t if t.startswith("#") else "#" + t
-        if t.lower() not in [x.lower() for x in tags] and t.lower() != "#shorts":
-            tags.append(t)
     text = (f"{title}\n\n{desc}\n\nFollow for a new \"wait, what?\" explainer every day 🧠\n"
-            f"Longer videos on YouTube: The Explainer\n\n{' '.join(tags[:10])}")
+            f"Longer videos on YouTube: The Explainer\n\n{' '.join(hashtags(job))}")
     return text[:2200]
 
 

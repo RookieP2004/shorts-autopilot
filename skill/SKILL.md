@@ -204,6 +204,10 @@ cut it or swap it for a plain dry reaction.
 **e. Build `jobs/<id>/job.json`** from the format skeleton (see `docs/job-spec.md`). Fill in `meta` honestly
 (format, topic, hook, idea_source, characters, sources, and `humour`: the trend used, the beat kind, its scene), because the review
 depends on it. Write the title, description and tags per the Bible.
+   Add `"instagram": {"hashtags": [...]}`: exactly **5** hashtags for the Reel (Instagram's hard limit since Dec 2025;
+   more can block the post): 1 broad niche tag (#science, #history, #money...), 3 specific to this video's topic that people
+   actually search (check in your research which are active; skip dead or spammy ones such as #reels, #explore, #viral), and
+   #explained. Without it, `autopilot instagram` derives 5 from the job's tags.
 
 **f. QA loop (up to 3 rounds).** Run `python -m autopilot validate` and then `python -m autopilot frames jobs/<id>/job.json`.
 **Look at every frame** with Read. Check that text is readable (no empty boxes from missing glyphs), nothing sits in the red zone,
