@@ -517,6 +517,9 @@ def draw_crowd(ctx, canvas, L, lt, alpha_l):
     d = ImageDraw.Draw(layer)
     gl = Image.new("RGBA", (W, H), (0, 0, 0, 0)) if glow.any() else None
     gd = ImageDraw.Draw(gl) if gl is not None else None
+    shadow = L.get("shadow", 0.0 if ctx.job.get("look") == "night" else 0.28)   # daylight sets need them; night has one spot
+    sl = Image.new("RGBA", (W, H), (0, 0, 0, 0)) if shadow else None
+    sd = ImageDraw.Draw(sl) if sl is not None else None
     vmax = v.max() if len(v) else 1
     for i in order:
         if not keep[i]:
@@ -532,18 +535,28 @@ def draw_crowd(ctx, canvas, L, lt, alpha_l):
         hy = head[i][1] * H
         hp = fy - hy
         c = tuple(int(x) for x in col[i]) + (int(255 * a),)
+        if shadow and hp >= 3:                                      # contact shadow: figures stand ON the floor
+            sw = hp * 0.32
+            sd.ellipse([fx - sw, fy - sw * 0.28, fx + sw * 1.15, fy + sw * 0.28], fill=(0, 0, 0, int(shadow * 255 * a)))
         if hp < 4.5:
             r = max(1.0, hp * 0.35)
             d.ellipse([fx - r, fy - hp * 0.7 - r, fx + r, fy - hp * 0.7 + r], fill=c)
         else:
             bw = hp * 0.2
             hr = hp * 0.12
-            d.rounded_rectangle([fx - bw, fy - hp * 0.72, fx + bw, fy], radius=bw * 0.8, fill=c)
+            ol = tuple(int(x * 0.62) for x in col[i]) + (int(255 * a),) if hp >= 7 else None   # outline: each person reads
+            olw = max(1, int(hp / 26))
+            d.rounded_rectangle([fx - bw, fy - hp * 0.72, fx + bw, fy], radius=bw * 0.8, fill=c, outline=ol, width=olw)
+            if hp >= 7:                                             # form shading: the side away from the light
+                sh = tuple(int(x * 0.8) for x in col[i]) + (int(255 * a),)
+                d.rounded_rectangle([fx + bw * 0.25, fy - hp * 0.68, fx + bw - olw, fy - olw], radius=bw * 0.5, fill=sh)
             hc = tuple(min(255, int(x * 1.12)) for x in col[i]) + (int(255 * a),)
-            d.ellipse([fx - hr, hy, fx + hr, hy + hr * 2], fill=hc)
+            d.ellipse([fx - hr, hy, fx + hr, hy + hr * 2], fill=hc, outline=ol, width=olw)
         if gd is not None and glow[i]:
             r = max(2.0, hp * 0.45)
             gd.ellipse([fx - r, fy - hp * 0.6 - r, fx + r, fy - hp * 0.6 + r], fill=tuple(int(x) for x in col[i]) + (int(150 * a),))
+    if sl is not None:
+        canvas.alpha_composite(sl.filter(ImageFilter.GaussianBlur(max(1.5, W / 700))))
     if gl is not None:
         canvas.alpha_composite(gl.filter(ImageFilter.GaussianBlur(max(3, W / 180))))
     canvas.alpha_composite(layer)

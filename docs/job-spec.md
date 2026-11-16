@@ -234,6 +234,9 @@ compresses into blocky "mosaic"; set a scene's `grain` only if you must), a slow
 ## Night set (second mood, `"look": "night"`; autopilot/night.py, devices.py, blendkit night helpers)
 Opt-in per job for dark-files, scams, money traps and big reveals; the bright town stays the default. Owner-approved
 2026-11-16 (reference video: `jobs/2026-11-16-n`). Use it for at most the videos that fit; most Shorts stay in the town.
+**The layers below are for every Short, town look included** (owner, 2026-11-16); only the night lighting, character rim light
+and highlight captions come with `"look": "night"`. In daylight the `crowd` draws contact shadows and outlined figures
+(`"shadow": 0..0.4`); place it on an empty patch of the plate's floor (check corners with `Stage(plate).point(x, y)`).
 `"look": "night"` merges `style.looks.night`: highlight captions, push transitions, a night grade (deeper blacks, vignette) and a
 rim light on every `character` layer (`"rim": false` turns it off on one layer, `"rim": [left, right]` recolours it).
 

@@ -73,6 +73,20 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   green = survives/true, red = scam/danger, gold = money, blue = neutral data. Money is always fictional ("NOT REAL MONEY"),
   apps are always fictional (no real logo or layout). Scam topics may end on the viewer's lock screen + "Comment YES or NO".
   Learned from a reference Short (2026-11-16): techniques only, never that creator's layouts, wording or assets.
+- **Motion & graphics standard for EVERY Short (owner, 2026-11-16: "take notes from these for your normal shorts also").**
+  The night pilot's graphics are now house graphics in the bright town too (only the night lighting, rim light and highlight
+  captions stay night-only; town captions are unchanged). In every Short:
+  - numbers never just appear: a `hud` chip ticks to the value (eased count), a running `eqbar` builds the maths step by step
+    and ends on the answer in the accent colour; a number of people is shown as a `crowd` on the set floor that splits, tints,
+    fades or glows to do the maths (with contact shadows and outlines in daylight);
+  - steps and lists build one at a time with the narration (`tracker` circles tick green, `nodes` trees grow, `optcard` choices
+    get a green tick or red cross); verdicts land as a `stamp` with a thud;
+  - every entrance is eased with a little overshoot (pop / rise / slam) and has its own sfx; nothing important is static for
+    more than 1-2 s; the camera keeps moving (slow push or pull, `push` cuts between beats of the same idea);
+  - phones, apps and screens are live (`phone` layer: messages pop in, timers tick, it turns in 3D with a light sheen);
+    money moments get a `burst`; all money and apps fictional;
+  - fixed colour meaning inside a video: green = true / survives, red = wrong / danger, gold = money, blue = neutral data.
+  These sit with (never replace) Ved, the townspeople, the cream infographic cards and the comic beat.
 - **Reference video (owner-approved, 2026-11-08):** `jobs/2026-11-08-m3` ("Why can't countries just print more money?",
   youtu.be/QFhXI3hT9Ik). This is the quality bar and the house style: every new video should look at least this alive, in its own
   new world and story.
@@ -209,6 +223,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-16 | 3 | night-pilot graphics + motion rules become the standard for all Shorts (town too): ticking hud chips, eqbar, crowd-as-data, trackers, node trees, option cards, stamps, live phones, bursts, fixed colour meaning | owner request |
 | 2026-11-16 | 3 | night set APPROVED by the owner (pilot 2026-11-16-n); usable in public dark-files / scam / money-trap / big-reveal Shorts | owner: "I think this one is good" |
 | 2026-11-16 | 3 | night set added as an opt-in second mood (PILOT 2026-11-16-n, awaiting approval): hud, eqbar, tracker, stamp, optcard, phone, crowd, nodes, burst, highlight captions, rim light | owner request (reference Short study) |
 | 2026-11-15 | 6 | dark-files 0.08 -> 0.20 (about 1 Short in 5); big-question 0.23 -> 0.18, scale-shock 0.14 -> 0.12, what-if 0.12 -> 0.09, frontier 0.10 -> 0.08; myth-bust stays 0.23 | owner: dark content attracts viewers |

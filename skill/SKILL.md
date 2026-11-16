@@ -113,6 +113,13 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   apps always fictional (our own UI and names, never a real app's logo or layout); documentary, never a how-to (no tips, no real
   channel names, no steps that would let someone run the scam). Techniques learned from other creators are fine; their layouts,
   wording and assets never.
+- **Motion & graphics in EVERY Short (town look too; owner 2026-11-16)**: use the night-pilot graphics in normal Shorts as well
+  (they work on bright sets; see the Bible "Motion & graphics standard"). Numbers tick in a `hud` chip with an `eqbar` building
+  the maths; a number of people becomes a `crowd` on the town floor that splits / fades / glows; steps build one by one
+  (`tracker`, `nodes`, `optcard` with tick/cross); verdicts slam in as a `stamp`; screens are live `phone` layers; money moments
+  get a `burst`. Every entrance eased with an sfx, something moves every 1-2 s, fixed colour meaning (green true, red danger,
+  gold money, blue data). Only the night lighting, rim light and highlight captions are night-only. Never replaces Ved, the
+  townspeople, the cream cards or the comic beat.
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,
