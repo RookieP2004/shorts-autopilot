@@ -73,10 +73,14 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   green = survives/true, red = scam/danger, gold = money, blue = neutral data. Money is always fictional ("NOT REAL MONEY"),
   apps are always fictional (no real logo or layout). Scam topics may end on the viewer's lock screen + "Comment YES or NO".
   Learned from a reference Short (2026-11-16): techniques only, never that creator's layouts, wording or assets.
+- **🔒 Mix, never replace (owner, repeated 2026-11-15/16: "integrate, mix, match, modify, not replace").** Every new style
+  reference or toolkit is ADDED to what the channel already has, adapted to fit it. Ved, the townspeople, the bright town, the
+  cream infographic cards, the house captions, his voice and the comic beat always stay. Each video mixes old and new pieces
+  that suit its topic (e.g. a cream card in one beat, a ticking hud chip in the next); a new piece never wipes out an old one.
 - **Motion & graphics standard for EVERY Short (owner, 2026-11-16: "take notes from these for your normal shorts also").**
   The night pilot's graphics are now house graphics in the bright town too (only the night lighting, rim light and highlight
   captions stay night-only; town captions are unchanged). In every Short:
-  - numbers never just appear: a `hud` chip ticks to the value (eased count), a running `eqbar` builds the maths step by step
+  - numbers never just appear: a `hud` chip or a cream card ticks to the value (eased count; mix both across a video), a running `eqbar` builds the maths step by step
     and ends on the answer in the accent colour; a number of people is shown as a `crowd` on the set floor that splits, tints,
     fades or glows to do the maths (with contact shadows and outlines in daylight);
   - steps and lists build one at a time with the narration (`tracker` circles tick green, `nodes` trees grow, `optcard` choices

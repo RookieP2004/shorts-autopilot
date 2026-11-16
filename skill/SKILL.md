@@ -113,6 +113,9 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   apps always fictional (our own UI and names, never a real app's logo or layout); documentary, never a how-to (no tips, no real
   channel names, no steps that would let someone run the scam). Techniques learned from other creators are fine; their layouts,
   wording and assets never.
+- **Mix, never replace (owner rule)**: every new style reference or toolkit is added to the existing house style and adapted
+  to fit it, never swapped in for it. Ved, the townspeople, the bright town, cream cards, house captions, his voice and the comic
+  beat always stay; each video mixes old and new pieces to suit its topic.
 - **Motion & graphics in EVERY Short (town look too; owner 2026-11-16)**: use the night-pilot graphics in normal Shorts as well
   (they work on bright sets; see the Bible "Motion & graphics standard"). Numbers tick in a `hud` chip with an `eqbar` building
   the maths; a number of people becomes a `crowd` on the town floor that splits / fades / glows; steps build one by one
