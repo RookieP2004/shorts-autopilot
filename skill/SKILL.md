@@ -105,8 +105,8 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   (`fg_<set>`, rendered with `still(..., only=[counter])`) between the people behind it and the people in front. Reference:
   `jobs/2026-11-08-m3/assets.py` + `build_job.py` and `docs/job-spec.md` "The town".
 - **Night set (second mood)**: the bright town is the default for every video. For dark-files, scams, money traps and big
-  reveals a job may set `"look": "night"` **only once the Bible marks the night set as owner-approved** (until then it is a
-  PILOT: `jobs/2026-11-16-n`, private, never posted). It is a mix, never a replacement: Ved and the townspeople are in it (rim-lit),
+  reveals a job may set `"look": "night"` (owner-approved 2026-11-16; reference build `jobs/2026-11-16-n`). Use it only when the
+  topic fits; the town stays the default for everything else. It is a mix, never a replacement: Ved and the townspeople are in it (rim-lit),
   his voice and the comic beat stay. Night plates come from `blendkit.night_set` (+ `dutch`), the graphics from the night layers
   (`hud`, `eqbar`, `tracker`, `stamp`, `optcard`, `phone`, `crowd`, `nodes`, `burst`; see `docs/job-spec.md` "Night set"). Fixed
   colour meaning (green survives/true, red scam/danger, gold money, blue data); money always fictional ("NOT REAL MONEY"), phone

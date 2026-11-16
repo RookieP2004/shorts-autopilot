@@ -232,8 +232,8 @@ compresses into blocky "mosaic"; set a scene's `grain` only if you must), a slow
   sections that crossfade (use "none" for one held silence on the big reveal).
 
 ## Night set (second mood, `"look": "night"`; autopilot/night.py, devices.py, blendkit night helpers)
-Opt-in per job for dark-files, scams, money traps and big reveals; the bright town stays the default. **PILOT 2026-11-16-n:
-do not use in a public Short until the owner approves it** (the Bible says when it is approved).
+Opt-in per job for dark-files, scams, money traps and big reveals; the bright town stays the default. Owner-approved
+2026-11-16 (reference video: `jobs/2026-11-16-n`). Use it for at most the videos that fit; most Shorts stay in the town.
 `"look": "night"` merges `style.looks.night`: highlight captions, push transitions, a night grade (deeper blacks, vignette) and a
 rim light on every `character` layer (`"rim": false` turns it off on one layer, `"rim": [left, right]` recolours it).
 

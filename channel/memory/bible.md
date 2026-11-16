@@ -62,7 +62,7 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
 - References: `docs/sheets/professor_ved_character_sheet.png`, `vast_world_style_guide.png`, `vast_world_3d_guide.png`.
 - **Visual-first: the pictures explain, Ved and the town act it out.** Every explanation step gets its own shot, prop or
   panel; something new moves on screen at least every 2-3 seconds; never a talking head explaining something we could show.
-- **Night set: the second mood (2026-11-16, PILOT awaiting owner approval; not in public Shorts until approved).** The bright town
+- **Night set: the second mood 🔒 owner-approved 2026-11-16 ("I think this one is good"; reference: `jobs/2026-11-16-n`).** The bright town
   stays the default. Dark-files, scams, money traps and big reveals may use `"look": "night"`: near-black navy set, ONE hard
   spotlight from above, a coloured rim light, shallow focus, slight Dutch tilt on hero shots (`blendkit.night_set`, `dutch`).
   Ved and the townspeople are still there and get the same rim light. Graphics in this mood: hud number chips that tick, a
@@ -209,6 +209,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-16 | 3 | night set APPROVED by the owner (pilot 2026-11-16-n); usable in public dark-files / scam / money-trap / big-reveal Shorts | owner: "I think this one is good" |
 | 2026-11-16 | 3 | night set added as an opt-in second mood (PILOT 2026-11-16-n, awaiting approval): hud, eqbar, tracker, stamp, optcard, phone, crowd, nodes, burst, highlight captions, rim light | owner request (reference Short study) |
 | 2026-11-15 | 6 | dark-files 0.08 -> 0.20 (about 1 Short in 5); big-question 0.23 -> 0.18, scale-shock 0.14 -> 0.12, what-if 0.12 -> 0.09, frontier 0.10 -> 0.08; myth-bust stays 0.23 | owner: dark content attracts viewers |
 | 2026-11-15 | 6 | new format dark-files 0.08 (hidden economies, crime worlds, how they touch the normal world; documentary guardrails); big-question 0.27 -> 0.23, scale-shock 0.15 -> 0.14, what-if 0.15 -> 0.12 | owner request |
