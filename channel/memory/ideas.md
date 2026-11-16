@@ -50,7 +50,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 
 - [frontier] Could we ever really talk to Voyager after it dies? · its power runs out around the 2030s; what the Deep Space Network can still hear, and the Golden Record as the last message · https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/
 - [what-if] What if you rode a light sail at 20% of light speed? · time dilation is tiny (~2%), but a dust grain hits like a bomb; grounded, tagged speculation · https://www.scientificamerican.com/article/the-quiet-demise-of-breakthrough-starshot-a-billionaires-interstellar/
-- [myth-bust] "Mantis shrimp see the most colours" · 12-16 photoreceptors, yet tests show they tell colours apart worse than us; pairs with the Wi-Fi/spectrum video · https://www.nature.com/articles/nature.2014.14578
 - [what-if] What if your eyes saw ultraviolet? · the lens blocks UV; people without a lens (aphakia) report seeing some UV as whitish-blue; bee-vision set reuse · https://en.wikipedia.org/wiki/Aphakia
 - [scale-shock] Your microwave and your Wi-Fi use the same wave · both ~2.4 GHz, ~12 cm; why one cooks and one doesn't (power: ~1000 W vs ~0.1 W) · https://en.wikipedia.org/wiki/2.4_GHz_radio_use
 - [scale-shock] Earth sweeps up ~44 tonnes of space dust every day · NASA's figure, shown as trucks of dust; follow-up angle on the shooting-star video · https://solarsystem.nasa.gov/asteroids-comets-and-meteors/meteors-and-meteorites/in-depth.amp
@@ -90,3 +89,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [wild-story] Halley's comet 1910 panic: people bought 'comet pills' fearing toxic gas in the tail · true story, picturable, pairs with comets · https://en.wikipedia.org/wiki/Halley%27s_Comet
 - [scale-shock] The 1966 Leonid storm: ~40 meteors a SECOND, 60 years ago this week · runner-up 2026-11-16 · https://www.space.com/leonid-meteor-shower
 - [big-question] Why do meteor showers seem to come from one point? · perspective, like snow in headlights; runner-up 2026-11-16 · https://www.lindahall.org/about/news/scientist-of-the-day/denison-olmsted/
+- [myth-bust] "Bees can't see red" · true, but they see ultraviolet patterns on flowers we can't; reuses the reef-lab test idea, runner-up 2026-11-16 · https://en.wikipedia.org/wiki/Bee_learning_and_communication
+- [big-question] Why can't you see colours in the dark? · rods vs cones, why everything turns grey at night; picturable body question, runner-up 2026-11-16 · https://en.wikipedia.org/wiki/Scotopic_vision
+- [myth-bust] "Dogs only see in black and white" · they're dichromats (blue-yellow), like the bull video; runner-up 2026-11-16 · https://en.wikipedia.org/wiki/Dog_vision

@@ -1,0 +1,1355 @@
+{
+ "id": "2026-11-16-a",
+ "title": "12 colour sensors... and worse colour vision than you 🦐",
+ "description": "Mantis shrimp have 12 kinds of colour receptor; you have 3. So they must see colours we can't imagine? In a 2014 test (University of Queensland, published in Science), mantis shrimp were trained to pick a coloured light for food. When two colours were about 15-25 nm apart they could no longer tell them apart, while humans can split colours roughly 5 nm apart. Researchers think they recognise colours directly from the pattern of all 12 receptors (fast, like a barcode scanner) instead of comparing channels like we do.\n\nSources: Thoen et al., Science (2014); University of Queensland; National Geographic.",
+ "tags": [
+  "mantis shrimp",
+  "mantis shrimp eyes",
+  "mantis shrimp colour vision",
+  "color vision",
+  "animal facts",
+  "myth busted",
+  "biology",
+  "science facts",
+  "how eyes work"
+ ],
+ "hashtags": [
+  "#science",
+  "#animals"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#science",
+   "#mantisshrimp",
+   "#animalfacts",
+   "#marinebiology",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "myth-bust",
+  "topic": "the mantis shrimp super-colour-vision myth: 12 colour receptors vs our 3, yet in Thoen et al. 2014 (Science) they could not tell colours ~15-25 nm apart vs ~5 nm for humans; likely recognise colours directly (look-up/scanner) instead of comparing",
+  "hook": "number-shock",
+  "idea_source": "viral-shaped + unique: the famous '12/16 colour receptors' meme fact turned upside down; backlog idea (mantis shrimp myth); few Shorts show the actual test",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://news.uq.edu.au/2014-01-24-shrimp-gives-insight-colour-vision",
+   "https://www.nationalgeographic.com/science/article/the-mantis-shrimp-sees-like-a-satellite",
+   "https://mappingignorance.org/2014/03/24/mantis-shrimps-part-2-lords-colour-perhaps/",
+   "https://www.nature.com/articles/nature.2014.14578"
+  ],
+  "humour": {
+   "trend": "timeless dry aside on a freemium format ('premium / free trial'); no rising meme fit this topic",
+   "beat": "smirk",
+   "scene": 6
+  },
+  "claims": [
+   {
+    "claim": "mantis shrimp have 12 colour photoreceptor types; humans have 3",
+    "tag": "PROVEN",
+    "source": "https://news.uq.edu.au/2014-01-24-shrimp-gives-insight-colour-vision"
+   },
+   {
+    "claim": "2014 University of Queensland study (Thoen et al., Science) trained shrimp with food rewards to choose coloured lights",
+    "tag": "PROVEN",
+    "source": "https://mappingignorance.org/2014/03/24/mantis-shrimps-part-2-lords-colour-perhaps/"
+   },
+   {
+    "claim": "they could not tell apart colours ~15-25 nm apart; humans ~5 nm",
+    "tag": "PROVEN",
+    "source": "https://www.nationalgeographic.com/science/article/the-mantis-shrimp-sees-like-a-satellite"
+   },
+   {
+    "claim": "they likely recognise colours directly from the receptor pattern (look-up, scanner-like) instead of comparing channels",
+    "tag": "THEORY",
+    "source": "https://www.nationalgeographic.com/science/article/the-mantis-shrimp-sees-like-a-satellite"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "12 COLOURS *WORSE?*",
+  "title_y": 0.15,
+  "title_size": 170,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffb35a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.4,
+  "tint": [
+   "#1f6fb8",
+   "#f08a24"
+  ],
+  "tint_amount": 0.28,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-a/assets/plate_reef.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-a/assets/mantis.png",
+    "x": 0.5,
+    "y": 0.42,
+    "w": 0.85,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.95,
+    "h": 0.8,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-16-a/assets.py",
+ "scenes": [
+  {
+   "say": "This shrimp has *twelve* colour sensors. You have *three*.",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2157,
+     "y": 0.5349,
+     "h": 0.3132,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a0",
+       "build": "slim",
+       "hair": [
+        "#c99a3a",
+        "long"
+       ],
+       "hat": null,
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "necklace": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/fg_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.6924,
+     "y": 0.581,
+     "h": 0.4545,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ],
+      [
+       "explain",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.15,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "stamp",
+     "text": "MYTH?",
+     "tone": "red",
+     "angle": -6,
+     "size": 70,
+     "x": 0.5,
+     "y": 0.085,
+     "at": 0.0,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "IT SEES *SUPER COLOURS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.165,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "hud",
+     "label": "shrimp sensors",
+     "x": 0.3,
+     "y": 0.29,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "value": 12,
+     "tone": "gold",
+     "width_of": "12"
+    },
+    {
+     "type": "hud",
+     "label": "your sensors",
+     "x": 0.7,
+     "y": 0.29,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "steps": [
+      [
+       0,
+       12
+      ],
+      [
+       0.05,
+       3
+      ]
+     ],
+     "count_dur": 0.5,
+     "tone": "blue",
+     "at": 1.6,
+     "width_of": "12"
+    }
+   ]
+  },
+  {
+   "say": "So it sees colours we can't *imagine*... right?",
+   "transition": "slide_left",
+   "caption_y": 0.45,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.6
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_reef.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/mantis.png",
+     "x": 0.4776154909309957,
+     "y": 0.685034665415376,
+     "w": 0.62,
+     "enter": "slide_left",
+     "at": 0.0,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 0
+      },
+      {
+       "t": 1.2,
+       "rot": -3
+      },
+      {
+       "t": 2.4,
+       "rot": 1
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 330'><path d='M40,300 A260,260 0 0,1 560,300' fill='none' stroke='#d9534f' stroke-width='28'/><path d='M66,300 A234,234 0 0,1 534,300' fill='none' stroke='#f08a24' stroke-width='28'/><path d='M92,300 A208,208 0 0,1 508,300' fill='none' stroke='#f2d04a' stroke-width='28'/><path d='M118,300 A182,182 0 0,1 482,300' fill='none' stroke='#4f9e4a' stroke-width='28'/><path d='M144,300 A156,156 0 0,1 456,300' fill='none' stroke='#3f7fbf' stroke-width='28'/><path d='M170,300 A130,130 0 0,1 430,300' fill='none' stroke='#6a4fb8' stroke-width='28'/><path d='M196,300 A104,104 0 0,1 404,300' fill='none' stroke='#e86aa6' stroke-width='28'/><text x='300' y='300' text-anchor='middle' font-size='150' fill='#f6efe2' stroke='#1a1410' stroke-width='8' font-family='Anton, DejaVu Sans, sans-serif'>?</text></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.72,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "In 2014, scientists in Australia *tested* it.",
+   "transition": "slide_left",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.06,
+      "focus": [
+       0.45,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2056,
+     "y": 0.5451,
+     "h": 0.1268,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       1.3
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a0",
+       "build": "slim",
+       "hair": [
+        "#c99a3a",
+        "long"
+       ],
+       "hat": null,
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "necklace": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.0247,
+       "y": 0.5421,
+       "scale": 0.9724
+      },
+      {
+       "t": 1.2,
+       "x": 0.2056,
+       "y": 0.5451,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/fg_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7372,
+     "y": 0.5846,
+     "h": 0.1766,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 820 150'><rect x='5' y='5' width='810' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='40' y='80' font-size='54' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>SCIENCE JOURNAL, 2014</text><text x='40' y='124' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>UNIVERSITY OF QUEENSLAND</text></svg>",
+     "x": 0.45,
+     "y": 0.18,
+     "w": 0.74,
+     "rotate": -2,
+     "enter": "slide_right",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.76,
+     "y": 0.27,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Two lights. Pick the right *colour*, get a snack.",
+   "transition": "slide_up",
+   "caption_y": 0.45,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_reef.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.22' stop-color='#3f7fbf'/><stop offset='0.55' stop-color='#3f7fbf' stop-opacity='0.45'/><stop offset='1' stop-color='#3f7fbf' stop-opacity='0'/></radialGradient></defs><circle cx='150' cy='150' r='150' fill='url(#g)'/></svg>",
+     "x": 0.3444292024590657,
+     "y": 0.3757702220362949,
+     "w": 0.3,
+     "enter": "fade",
+     "at": 0.1,
+     "enter_dur": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.04,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.22' stop-color='#d9534f'/><stop offset='0.55' stop-color='#d9534f' stop-opacity='0.45'/><stop offset='1' stop-color='#d9534f' stop-opacity='0'/></radialGradient></defs><circle cx='150' cy='150' r='150' fill='url(#g)'/></svg>",
+     "x": 0.6555707975409343,
+     "y": 0.3757702220362949,
+     "w": 0.3,
+     "enter": "fade",
+     "at": 0.4,
+     "enter_dur": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.04,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/mantis.png",
+     "x": 0.4776154909309957,
+     "y": 0.685034665415376,
+     "w": 0.62,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4776154909309957,
+       "y": 0.685034665415376,
+       "rot": 0
+      },
+      {
+       "t": 1.4,
+       "x": 0.3944292024590657,
+       "y": 0.7057702220362949,
+       "rot": -12
+      },
+      {
+       "t": 1.7,
+       "x": 0.4044292024590657,
+       "y": 0.6857702220362949,
+       "rot": -16
+      },
+      {
+       "t": 2.0,
+       "x": 0.3944292024590657,
+       "y": 0.7057702220362949,
+       "rot": -10
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/pellet.png",
+     "x": 0.3444292024590657,
+     "y": 0.4357702220362949,
+     "w": 0.05,
+     "enter": "drop",
+     "at": 1.8,
+     "sfx": "ding",
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.4357702220362949
+      },
+      {
+       "t": 0.8,
+       "y": 0.6157702220362948,
+       "ease": "out"
+      }
+     ]
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      1.8
+     ],
+     "x": 0.5,
+     "y": 0.1,
+     "at": 0.2,
+     "enter": "fade"
+    },
+    {
+     "type": "text",
+     "text": "SNACK *UNLOCKED*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.17,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.9,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Then they moved the colours closer... and *closer*.",
+   "transition": "cut",
+   "caption_y": 0.45,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_reef.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.22' stop-color='#3f7fbf'/><stop offset='0.55' stop-color='#3f7fbf' stop-opacity='0.45'/><stop offset='1' stop-color='#3f7fbf' stop-opacity='0'/></radialGradient></defs><circle cx='150' cy='150' r='150' fill='url(#g)'/></svg>",
+     "x": 0.3444292024590657,
+     "y": 0.3757702220362949,
+     "w": 0.3,
+     "enter": "none",
+     "at": 0.0,
+     "enter_dur": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.04
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.22' stop-color='#d9534f'/><stop offset='0.55' stop-color='#d9534f' stop-opacity='0.45'/><stop offset='1' stop-color='#d9534f' stop-opacity='0'/></radialGradient></defs><circle cx='150' cy='150' r='150' fill='url(#g)'/></svg>",
+     "x": 0.6555707975409343,
+     "y": 0.3757702220362949,
+     "w": 0.3,
+     "enter": "none",
+     "at": 0.0,
+     "enter_dur": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.04,
+     "sfx": null,
+     "until": 0.8,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.22' stop-color='#f2b04a'/><stop offset='0.55' stop-color='#f2b04a' stop-opacity='0.45'/><stop offset='1' stop-color='#f2b04a' stop-opacity='0'/></radialGradient></defs><circle cx='150' cy='150' r='150' fill='url(#g)'/></svg>",
+     "x": 0.6555707975409343,
+     "y": 0.3757702220362949,
+     "w": 0.3,
+     "enter": "fade",
+     "at": 0.8,
+     "enter_dur": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.04,
+     "sfx": "click",
+     "until": 1.6,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.22' stop-color='#4fb08a'/><stop offset='0.55' stop-color='#4fb08a' stop-opacity='0.45'/><stop offset='1' stop-color='#4fb08a' stop-opacity='0'/></radialGradient></defs><circle cx='150' cy='150' r='150' fill='url(#g)'/></svg>",
+     "x": 0.6555707975409343,
+     "y": 0.3757702220362949,
+     "w": 0.3,
+     "enter": "fade",
+     "at": 1.6,
+     "enter_dur": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.04,
+     "sfx": "click",
+     "until": 2.4,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.22' stop-color='#3f9fb0'/><stop offset='0.55' stop-color='#3f9fb0' stop-opacity='0.45'/><stop offset='1' stop-color='#3f9fb0' stop-opacity='0'/></radialGradient></defs><circle cx='150' cy='150' r='150' fill='url(#g)'/></svg>",
+     "x": 0.6555707975409343,
+     "y": 0.3757702220362949,
+     "w": 0.3,
+     "enter": "fade",
+     "at": 2.4,
+     "enter_dur": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.04,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/mantis.png",
+     "x": 0.3944292024590657,
+     "y": 0.7057702220362949,
+     "w": 0.62,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -10
+      },
+      {
+       "t": 1.5,
+       "rot": -4
+      },
+      {
+       "t": 3.0,
+       "rot": -9
+      }
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "colour gap",
+     "x": 0.5,
+     "y": 0.1,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "steps": [
+      [
+       0,
+       100
+      ],
+      [
+       0.8,
+       60
+      ],
+      [
+       1.6,
+       35
+      ],
+      [
+       2.4,
+       20
+      ]
+     ],
+     "count_dur": 0.5,
+     "tone": "blue",
+     "suffix": " nm",
+     "width_of": "100 nm"
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.2,
+       "red vs blue: easy"
+      ],
+      [
+       1.6,
+       "closer..."
+      ],
+      [
+       2.4,
+       "almost *the same*"
+      ]
+     ],
+     "tone": "blue",
+     "x": 0.5,
+     "y": 0.19,
+     "enter": "fade"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.62,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Around twenty nanometres apart? It just *guessed*.",
+   "transition": "cut",
+   "caption_y": 0.45,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_reef.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.22' stop-color='#3f7fbf'/><stop offset='0.55' stop-color='#3f7fbf' stop-opacity='0.45'/><stop offset='1' stop-color='#3f7fbf' stop-opacity='0'/></radialGradient></defs><circle cx='150' cy='150' r='150' fill='url(#g)'/></svg>",
+     "x": 0.3444292024590657,
+     "y": 0.3757702220362949,
+     "w": 0.3,
+     "enter": "none",
+     "at": 0.0,
+     "enter_dur": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.04
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.22' stop-color='#3f9fb0'/><stop offset='0.55' stop-color='#3f9fb0' stop-opacity='0.45'/><stop offset='1' stop-color='#3f9fb0' stop-opacity='0'/></radialGradient></defs><circle cx='150' cy='150' r='150' fill='url(#g)'/></svg>",
+     "x": 0.6555707975409343,
+     "y": 0.3757702220362949,
+     "w": 0.3,
+     "enter": "none",
+     "at": 0.0,
+     "enter_dur": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.04
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/mantis.png",
+     "x": 0.3944292024590657,
+     "y": 0.7057702220362949,
+     "w": 0.62,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3944292024590657,
+       "rot": -9
+      },
+      {
+       "t": 0.9,
+       "x": 0.6055707975409342,
+       "rot": 9
+      },
+      {
+       "t": 1.8,
+       "x": 0.3944292024590657,
+       "rot": -9
+      },
+      {
+       "t": 2.7,
+       "x": 0.6055707975409342,
+       "rot": 9
+      },
+      {
+       "t": 3.6,
+       "x": 0.5,
+       "rot": 0
+      }
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "shrimp's limit",
+     "x": 0.5,
+     "y": 0.1,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "text": "15-25 nm",
+     "tone": "red",
+     "at": 0.2
+    },
+    {
+     "type": "stamp",
+     "text": "50/50 GUESS",
+     "tone": "red",
+     "angle": -7,
+     "size": 84,
+     "x": 0.5,
+     "y": 0.22,
+     "at": 2.4,
+     "sfx": "thud"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0,
+      0,
+      2.4
+     ],
+     "x": 0.5,
+     "y": 0.62,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.8,
+     "y": 0.3,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "smirk",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "smirk",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "eyes: *premium*\nbrain: *free trial*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Your eyes? About *five*.",
+   "transition": "slide_left",
+   "caption_y": 0.42,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.2157,
+     "y": 0.5349,
+     "h": 0.3132,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "happy",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a0",
+       "build": "slim",
+       "hair": [
+        "#c99a3a",
+        "long"
+       ],
+       "hat": null,
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "necklace": "#6fc3c0"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.9,
+       0.04,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/fg_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.6924,
+     "y": 0.581,
+     "h": 0.4545,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "warm",
+       1.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "mantis shrimp",
+     "text": "15-25 nm",
+     "tone": "red",
+     "x": 0.28,
+     "y": 0.2,
+     "w": 0.42,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.0,
+     "sfx": "pop",
+     "verdict": "cross",
+     "verdict_at": 1.0
+    },
+    {
+     "type": "optcard",
+     "label": "you",
+     "text": "~5 nm",
+     "tone": "green",
+     "x": 0.72,
+     "y": 0.2,
+     "w": 0.42,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop",
+     "verdict": "tick",
+     "verdict_at": 1.3
+    }
+   ]
+  },
+  {
+   "say": "You *compare* three sensors. The shrimp likely just *matches*, like a scanner.",
+   "transition": "slide_up",
+   "caption_y": 0.45,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_reef.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6
+    },
+    {
+     "type": "nodes",
+     "nodes": [
+      {
+       "id": "r",
+       "pos": [
+        -1.3,
+        0.8,
+        0.2
+       ],
+       "at": 0.2,
+       "tone": "red",
+       "label": "RED"
+      },
+      {
+       "id": "g",
+       "pos": [
+        0.0,
+        1.0,
+        -0.2
+       ],
+       "at": 0.35,
+       "tone": "green",
+       "label": "GREEN"
+      },
+      {
+       "id": "b",
+       "pos": [
+        1.3,
+        0.8,
+        0.2
+       ],
+       "at": 0.5,
+       "tone": "blue",
+       "label": "BLUE"
+      },
+      {
+       "id": "o",
+       "pos": [
+        0,
+        -0.5,
+        0
+       ],
+       "at": 0.9,
+       "tone": "gold",
+       "label": "COMPARE"
+      }
+     ],
+     "x": 0.5,
+     "y": 0.27,
+     "yaw": [
+      -12,
+      10
+     ],
+     "until": 2.4,
+     "exit": "fade",
+     "edges": [
+      [
+       "r",
+       "o",
+       0.7,
+       "red"
+      ],
+      [
+       "g",
+       "o",
+       0.8,
+       "green"
+      ],
+      [
+       "b",
+       "o",
+       0.9,
+       "blue"
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/mantis.png",
+     "x": 0.5,
+     "y": 0.68,
+     "w": 0.7,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 60'><defs><linearGradient id='b' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='#ff5a5a' stop-opacity='0'/><stop offset='0.5' stop-color='#ff5a5a'/><stop offset='1' stop-color='#ff5a5a' stop-opacity='0'/></linearGradient></defs><rect x='0' y='0' width='800' height='60' fill='url(#b)'/><rect x='0' y='28' width='800' height='4' fill='#ffffff'/></svg>",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.8,
+     "enter": "fade",
+     "at": 2.6,
+     "sfx": "click",
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.6
+      },
+      {
+       "t": 0.9,
+       "y": 0.76
+      },
+      {
+       "t": 1.8,
+       "y": 0.6
+      },
+      {
+       "t": 2.7,
+       "y": 0.76
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*BEEP.* THAT ONE.",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.0,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#f2b04a' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#f2b04a' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>THEORY</text></svg>",
+     "x": 0.78,
+     "y": 0.3,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 3.2,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Fast, not fine. Twelve sensors... and your *three* still win.",
+   "transition": "cut",
+   "caption_y": 0.62,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-a/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ],
+      [
+       "smirk",
+       3.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "hud",
+     "label": "shrimp sensors",
+     "x": 0.3,
+     "y": 0.12,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "value": 12,
+     "tone": "gold",
+     "at": 0.3,
+     "width_of": "12"
+    },
+    {
+     "type": "hud",
+     "label": "your sensors",
+     "x": 0.7,
+     "y": 0.12,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "value": 3,
+     "tone": "green",
+     "at": 0.6,
+     "width_of": "12"
+    },
+    {
+     "type": "stamp",
+     "text": "YOU WIN",
+     "tone": "green",
+     "angle": -6,
+     "size": 96,
+     "x": 0.5,
+     "y": 0.26,
+     "at": 2.6,
+     "sfx": "thud"
+    }
+   ]
+  }
+ ]
+}
