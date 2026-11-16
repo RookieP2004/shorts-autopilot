@@ -71,7 +71,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [big-question] Why does tomato juice taste better on planes? · engine noise dulls sweet/salty, boosts umami (crossmodal senses); runner-up 2026-11-15 · https://www.vice.com/en/article/humans-dont-have-5-senses-they-have-as-many-as-33/
 - [big-question] Why does your foot "fall asleep"? · pressure starves the nerve, signals go quiet then fizz back as pins and needles; body niche, picturable · https://en.wikipedia.org/wiki/Paresthesia
 - [big-question] Why don't your cells' 2 m of DNA tangle? · topoisomerase enzymes cut and re-join the strands like untangling headphones; follow-up angle on the DNA video, runner-up 2026-11-15 · https://en.wikipedia.org/wiki/Topoisomerase
-- [scale-shock] Your body makes ~2-3 million red blood cells every second · bone-marrow factory made visible, why most of your cells have no DNA; runner-up 2026-11-15 · https://www.sciencenews.org/article/body's-bacteria-don't-outnumber-human-cells-so-much-after-all
 
 
 ## Dark files (owner, 2026-11-15): examples of the kind, not a to-do list
@@ -92,3 +91,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [myth-bust] "Bees can't see red" · true, but they see ultraviolet patterns on flowers we can't; reuses the reef-lab test idea, runner-up 2026-11-16 · https://en.wikipedia.org/wiki/Bee_learning_and_communication
 - [big-question] Why can't you see colours in the dark? · rods vs cones, why everything turns grey at night; picturable body question, runner-up 2026-11-16 · https://en.wikipedia.org/wiki/Scotopic_vision
 - [myth-bust] "Dogs only see in black and white" · they're dichromats (blue-yellow), like the bull video; runner-up 2026-11-16 · https://en.wikipedia.org/wiki/Dog_vision
+- [scale-shock] Voyager 1 is now ONE light-day away (crosses 18 Nov 2026) · a 'hello' takes ~24 h each way, 49 years at ~17 km/s; trending this week, frame it as the distance (not star travel, done 11-13) · https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/
+- [big-question] Where does your old blood go? · spleen and liver macrophages eat ~2 million old red cells a second and recycle the iron (MGH 2016: the liver does more than thought); runner-up 2026-11-17 · https://csb.mgh.harvard.edu/highlights/iron
+- [myth-bust] "Every cell in your body has your DNA" · red blood cells (84% of your cells by count) throw their nucleus out; runner-up 2026-11-17 · https://stanfordbloodcenter.org/red_blood_cells-2/

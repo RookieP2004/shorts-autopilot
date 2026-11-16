@@ -1,0 +1,1464 @@
+{
+ "id": "2026-11-17-c",
+ "title": "Your body makes 2 million blood cells a SECOND 🩸",
+ "description": "In the last second your bone marrow built over two million new red blood cells. Each one is packed with about 270 million hemoglobin molecules, then throws out its own nucleus (no DNA, more room for oxygen), races around your body for about 120 days and is recycled by your spleen and liver, which keep the iron. You carry about 25 trillion of them, so 25 trillion / 120 days = about 2.4 million new ones every second.\n\nSources: Stanford Blood Center; Sender, Fuchs & Milo 2016 (via Science News); Massachusetts General Hospital (2016).",
+ "tags": [
+  "red blood cells",
+  "bone marrow",
+  "human body",
+  "how blood works",
+  "hemoglobin",
+  "biology",
+  "science facts",
+  "body facts",
+  "scale"
+ ],
+ "hashtags": [
+  "#science",
+  "#humanbody"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#science",
+   "#humanbody",
+   "#redbloodcells",
+   "#bonemarrow",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "scale-shock",
+  "topic": "how many red blood cells you make: ~2 million a second in the bone marrow, ~270 million hemoglobin each, nucleus thrown out (no DNA), ~120-day life, spleen + liver recycle them, ~25 trillion in you -> 25T / 120 days = ~2.4 million/s",
+  "hook": "number-shock",
+  "idea_source": "viral-shaped + unique: a body number people share ('your body is a factory') made visible as a bone-marrow factory with the maths done on screen; backlog runner-up 2026-11-15",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://stanfordbloodcenter.org/red_blood_cells-2/",
+   "https://www.sciencenews.org/article/body's-bacteria-don't-outnumber-human-cells-so-much-after-all",
+   "https://www.newworldencyclopedia.org/entry/Red_blood_cell",
+   "https://csb.mgh.harvard.edu/highlights/iron"
+  ],
+  "humour": {
+   "trend": "timeless dry aside on the 'storage full? delete X' phone format; no rising meme fit this topic",
+   "beat": "deadpan",
+   "scene": 4
+  },
+  "claims": [
+   {
+    "claim": "the bone marrow makes about 2 million red blood cells every second",
+    "tag": "PROVEN",
+    "source": "https://stanfordbloodcenter.org/red_blood_cells-2/"
+   },
+   {
+    "claim": "each red blood cell holds about 270 million hemoglobin molecules (Stanford: over 250 million)",
+    "tag": "PROVEN",
+    "source": "https://www.newworldencyclopedia.org/entry/Red_blood_cell"
+   },
+   {
+    "claim": "maturing red blood cells expel their nucleus (and DNA), making room for hemoglobin",
+    "tag": "PROVEN",
+    "source": "https://stanfordbloodcenter.org/red_blood_cells-2/"
+   },
+   {
+    "claim": "they live about 120 days",
+    "tag": "PROVEN",
+    "source": "https://stanfordbloodcenter.org/red_blood_cells-2/"
+   },
+   {
+    "claim": "old red blood cells are removed in the spleen and liver and their iron is recycled",
+    "tag": "PROVEN",
+    "source": "https://csb.mgh.harvard.edu/highlights/iron"
+   },
+   {
+    "claim": "~84% of ~30 trillion human cells are red blood cells (~25 trillion); 25T/(120*86,400 s) = ~2.4 million/s",
+    "tag": "PROVEN",
+    "source": "https://www.sciencenews.org/article/body's-bacteria-don't-outnumber-human-cells-so-much-after-all"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "2 MILLION *A SECOND?*",
+  "title_y": 0.15,
+  "title_size": 170,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffb35a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.4,
+  "tint": [
+   "#c4323f",
+   "#f08a24"
+  ],
+  "tint_amount": 0.28,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-17-c/assets/plate_marrow_mid.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-17-c/assets/rbc.png",
+    "x": 0.5,
+    "y": 0.42,
+    "w": 0.6,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.95,
+    "h": 0.8,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-17-c/assets.py",
+ "scenes": [
+  {
+   "say": "In the last second, your body built over *two million* red blood cells.",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/plate_marrow_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.727,
+     "y": 0.5796,
+     "h": 0.1175,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "cheer",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b9784e",
+       "build": "regular",
+       "hair": [
+        "#2a1d17",
+        "bun"
+       ],
+       "hat": [
+        "cap",
+        "#f2b04a"
+       ],
+       "top": [
+        "#3f7fbf",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "apron": "#f08a24"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.0,
+       0.05,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/fg_marrow_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.2765,
+     "y": 0.7118,
+     "h": 0.2916,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ],
+      [
+       "explain",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.1,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "text": "2 MILLION *A SECOND*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 84,
+     "max_w": 0.95,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "hud",
+     "label": "made in the last second",
+     "x": 0.5,
+     "y": 0.27,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "to": 2000000,
+     "count_dur": 3.2,
+     "tone": "red",
+     "width_of": "2,000,000"
+    },
+    {
+     "type": "burst",
+     "sprites": [
+      "jobs/2026-11-17-c/assets/rbc.png"
+     ],
+     "n": 18,
+     "origin": [
+      0.62,
+      0.56
+     ],
+     "at": 0.6,
+     "dur": 2.0,
+     "spread": 1.0,
+     "sizes": [
+      0.7
+     ],
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "The factory? Inside your *bones*.",
+   "transition": "slide_left",
+   "caption_y": 0.52,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.6,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/plate_marrow_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/fg_marrow_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.6624,
+     "y": 0.6793,
+     "h": 0.5698,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       0.9
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 820 150'><rect x='5' y='5' width='810' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><g transform='translate(40,28)'><path d='M30,22 a20,20 0 1,1 26,-6 L124,-6 a20,20 0 1,1 26,6 a20,20 0 1,1 -26,6 L56,28 a20,20 0 1,1 -26,-6 z' fill='#f3e6cf' stroke='#1a1410' stroke-width='5' transform='translate(0,40)'/></g><text x='250' y='98' font-size='68' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>BONE</text><text x='440' y='98' font-size='68' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>MARROW</text></svg>",
+     "x": 0.5,
+     "y": 0.15,
+     "w": 0.76,
+     "rotate": -2,
+     "enter": "slide_right",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.76,
+     "y": 0.25,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 0.9,
+     "sfx": "click"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0.8
+     ],
+     "x": 0.5,
+     "y": 0.31,
+     "at": 0.2,
+     "enter": "fade"
+    }
+   ]
+  },
+  {
+   "say": "Each one gets packed with *270 million* hemoglobin molecules.",
+   "transition": "zoom",
+   "caption_y": 0.45,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/plate_marrow_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.64,
+     "w": 0.62,
+     "enter": "pop",
+     "at": 0.0,
+     "keys": [
+      {
+       "t": 0,
+       "rot": -6
+      },
+      {
+       "t": 3.5,
+       "rot": 6
+      }
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "hemoglobin per cell",
+     "x": 0.5,
+     "y": 0.15,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "to": 270000000,
+     "count_dur": 2.6,
+     "tone": "red",
+     "width_of": "270,000,000"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='92' fill='#8fd3ff' stroke='#1a1410' stroke-width='8'/><circle cx='70' cy='68' r='22' fill='#ffffff' opacity='0.7'/><text x='100' y='128' text-anchor='middle' font-size='84' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>O2</text></svg>",
+     "x": 0.12,
+     "y": 0.42,
+     "w": 0.1,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.12,
+       "y": 0.42,
+       "scale": 1.0,
+       "opacity": 1
+      },
+      {
+       "t": 0.7,
+       "x": 0.45,
+       "y": 0.62,
+       "scale": 0.35,
+       "opacity": 0.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='92' fill='#8fd3ff' stroke='#1a1410' stroke-width='8'/><circle cx='70' cy='68' r='22' fill='#ffffff' opacity='0.7'/><text x='100' y='128' text-anchor='middle' font-size='84' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>O2</text></svg>",
+     "x": 0.88,
+     "y": 0.38,
+     "w": 0.1,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.88,
+       "y": 0.38,
+       "scale": 1.0,
+       "opacity": 1
+      },
+      {
+       "t": 0.7,
+       "x": 0.56,
+       "y": 0.6,
+       "scale": 0.35,
+       "opacity": 0.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='92' fill='#8fd3ff' stroke='#1a1410' stroke-width='8'/><circle cx='70' cy='68' r='22' fill='#ffffff' opacity='0.7'/><text x='100' y='128' text-anchor='middle' font-size='84' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>O2</text></svg>",
+     "x": 0.14,
+     "y": 0.76,
+     "w": 0.1,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.14,
+       "y": 0.76,
+       "scale": 1.0,
+       "opacity": 1
+      },
+      {
+       "t": 0.7,
+       "x": 0.45,
+       "y": 0.68,
+       "scale": 0.35,
+       "opacity": 0.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='92' fill='#8fd3ff' stroke='#1a1410' stroke-width='8'/><circle cx='70' cy='68' r='22' fill='#ffffff' opacity='0.7'/><text x='100' y='128' text-anchor='middle' font-size='84' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>O2</text></svg>",
+     "x": 0.86,
+     "y": 0.76,
+     "w": 0.1,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.86,
+       "y": 0.76,
+       "scale": 1.0,
+       "opacity": 1
+      },
+      {
+       "t": 0.7,
+       "x": 0.58,
+       "y": 0.68,
+       "scale": 0.35,
+       "opacity": 0.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><circle cx='100' cy='100' r='92' fill='#8fd3ff' stroke='#1a1410' stroke-width='8'/><circle cx='70' cy='68' r='22' fill='#ffffff' opacity='0.7'/><text x='100' y='128' text-anchor='middle' font-size='84' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>O2</text></svg>",
+     "x": 0.5,
+     "y": 0.3,
+     "w": 0.1,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.3,
+       "scale": 1.0,
+       "opacity": 1
+      },
+      {
+       "t": 0.7,
+       "x": 0.5,
+       "y": 0.6,
+       "scale": 0.35,
+       "opacity": 0.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.6,
+       "each one grabs *oxygen*"
+      ]
+     ],
+     "tone": "blue",
+     "x": 0.5,
+     "y": 0.24,
+     "enter": "fade"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0,
+      1.0
+     ],
+     "x": 0.5,
+     "y": 0.31,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Then it does something wild. It throws out its own *nucleus*. No DNA. More room for oxygen.",
+   "transition": "slide_up",
+   "caption_y": 0.52,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.0,
+      "zoom": 1.08,
+      "focus": [
+       0.6155505314534194,
+       0.5
+      ]
+     },
+     {
+      "t": 5.5,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/plate_marrow_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/fg_marrow_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.6624,
+     "y": 0.6793,
+     "h": 0.5698,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "surprised",
+       1.9
+      ],
+      [
+       "point",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.9,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/nucleus.png",
+     "x": 0.6155505314534194,
+     "y": 0.5175897452781961,
+     "w": 0.11,
+     "enter": "pop",
+     "at": 1.5,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6155505314534194,
+       "y": 0.5175897452781961,
+       "rot": 0
+      },
+      {
+       "t": 0.35,
+       "x": 0.664442660241899,
+       "y": 0.3975897452781961,
+       "rot": 120,
+       "ease": "out"
+      },
+      {
+       "t": 0.8,
+       "x": 0.7133347890303786,
+       "y": 0.6185960328039246,
+       "rot": 260,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "NUCLEUS: *OUT*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.7,
+     "sfx": "pop"
+    },
+    {
+     "type": "stamp",
+     "text": "NO DNA",
+     "tone": "red",
+     "angle": -7,
+     "size": 110,
+     "x": 0.4,
+     "y": 0.6,
+     "at": 3.0,
+     "sfx": "thud"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0,
+      0,
+      1.8
+     ],
+     "x": 0.5,
+     "y": 0.31,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.8,
+     "y": 0.31,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/plate_marrow_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "storage full?\ndelete the *DNA*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Then it races around your body for about *120 days*.",
+   "transition": "zoom",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.12,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/plate_vessel.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.43,
+     "w": 0.3,
+     "enter": "fade",
+     "enter_dur": 0.15,
+     "at": 0.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.456,
+       "y": 0.402,
+       "scale": 0.12,
+       "rot": 0
+      },
+      {
+       "t": 1.5,
+       "x": -0.050000000000000044,
+       "y": 0.08000000000000002,
+       "scale": 1.7,
+       "rot": 50,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.43,
+     "w": 0.34,
+     "enter": "fade",
+     "enter_dur": 0.15,
+     "at": 0.3,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.548,
+       "y": 0.45,
+       "scale": 0.12,
+       "rot": 0
+      },
+      {
+       "t": 1.6,
+       "x": 1.1,
+       "y": 0.6799999999999999,
+       "scale": 1.7,
+       "rot": -40,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.43,
+     "w": 0.3,
+     "enter": "fade",
+     "enter_dur": 0.15,
+     "at": 0.7,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.46399999999999997,
+       "y": 0.46599999999999997,
+       "scale": 0.12,
+       "rot": 0
+      },
+      {
+       "t": 1.5,
+       "x": 0.04999999999999999,
+       "y": 0.88,
+       "scale": 1.7,
+       "rot": 70,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.43,
+     "w": 0.32,
+     "enter": "fade",
+     "enter_dur": 0.15,
+     "at": 1.0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.54,
+       "y": 0.394,
+       "scale": 0.12,
+       "rot": 0
+      },
+      {
+       "t": 1.6,
+       "x": 1.0,
+       "y": -0.020000000000000018,
+       "scale": 1.7,
+       "rot": -60,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.43,
+     "w": 0.34,
+     "enter": "fade",
+     "enter_dur": 0.15,
+     "at": 1.4,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.452,
+       "y": 0.434,
+       "scale": 0.12,
+       "rot": 0
+      },
+      {
+       "t": 1.5,
+       "x": -0.09999999999999998,
+       "y": 0.48,
+       "scale": 1.7,
+       "rot": 30,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.43,
+     "w": 0.3,
+     "enter": "fade",
+     "enter_dur": 0.15,
+     "at": 1.8,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.544,
+       "y": 0.47,
+       "scale": 0.12,
+       "rot": 0
+      },
+      {
+       "t": 1.6,
+       "x": 1.05,
+       "y": 0.9299999999999999,
+       "scale": 1.7,
+       "rot": -30,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.43,
+     "w": 0.3,
+     "enter": "fade",
+     "enter_dur": 0.15,
+     "at": 2.2,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.508,
+       "y": 0.382,
+       "scale": 0.12,
+       "rot": 0
+      },
+      {
+       "t": 1.5,
+       "x": 0.6,
+       "y": -0.16999999999999998,
+       "scale": 1.7,
+       "rot": 45,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.43,
+     "w": 0.32,
+     "enter": "fade",
+     "enter_dur": 0.15,
+     "at": 2.6,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.476,
+       "y": 0.474,
+       "scale": 0.12,
+       "rot": 0
+      },
+      {
+       "t": 1.5,
+       "x": 0.2,
+       "y": 0.98,
+       "scale": 1.7,
+       "rot": -50,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "days on the road",
+     "x": 0.5,
+     "y": 0.12,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "to": 120,
+     "count_dur": 2.8,
+     "tone": "blue",
+     "at": 0.2,
+     "width_of": "120"
+    }
+   ]
+  },
+  {
+   "say": "Then your spleen and liver *recycle* it.",
+   "transition": "cut",
+   "caption_y": 0.62,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/plate_vessel.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 8,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 2.6,
+       "scale": 1.22
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/rbc.png",
+     "x": 0.5,
+     "y": 0.36,
+     "w": 0.42,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 0,
+       "scale": 1.0,
+       "opacity": 1
+      },
+      {
+       "t": 1.6,
+       "rot": 160,
+       "scale": 0.3,
+       "opacity": 0.0,
+       "ease": "in"
+      }
+     ]
+    },
+    {
+     "type": "optcard",
+     "label": "after 120 days",
+     "text": "SPLEEN\n+ LIVER",
+     "tone": "gold",
+     "x": 0.5,
+     "y": 0.15,
+     "w": 0.52,
+     "rotate": -2,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop",
+     "verdict": "tick",
+     "verdict_at": 1.3
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 820 150'><rect x='5' y='5' width='810' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='250' y='98' text-anchor='middle' font-size='64' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>IRON</text><text x='520' y='98' text-anchor='middle' font-size='64' fill='#4f9e4a' font-family='Anton, DejaVu Sans, sans-serif'>KEPT</text></svg>",
+     "x": 0.5,
+     "y": 0.36,
+     "w": 0.7,
+     "rotate": 2,
+     "enter": "slide_left",
+     "at": 1.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.8,
+     "y": 0.45,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "You carry about *25 trillion* of them. Divide by 120 days...",
+   "transition": "slide_left",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/plate_marrow_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.727,
+     "y": 0.5796,
+     "h": 0.1175,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b9784e",
+       "build": "regular",
+       "hair": [
+        "#2a1d17",
+        "bun"
+       ],
+       "hat": [
+        "cap",
+        "#f2b04a"
+       ],
+       "top": [
+        "#3f7fbf",
+        "shirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "apron": "#f08a24"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/fg_marrow_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2765,
+     "y": 0.7118,
+     "h": 0.2916,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "think",
+       2.2
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.4382,
+       "y": 0.7229,
+       "scale": 1.0494
+      },
+      {
+       "t": 1.3,
+       "x": 0.2765,
+       "y": 0.7118,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "your red blood cells",
+     "x": 0.5,
+     "y": 0.13,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "to": 25000000000000,
+     "count_dur": 2.0,
+     "tone": "red",
+     "at": 0.1,
+     "width_of": "25,000,000,000,000"
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.4,
+       "25 trillion"
+      ],
+      [
+       2.0,
+       "25 trillion ÷ 120 days"
+      ]
+     ],
+     "tone": "blue",
+     "x": 0.5,
+     "y": 0.22,
+     "enter": "fade",
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "say": "...that's over *two million*. Every. Single. *Second*.",
+   "transition": "cut",
+   "caption_y": 0.62,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-c/assets/plate_marrow_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 3.6,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ],
+      [
+       "smirk",
+       2.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.0,
+       "25 trillion ÷ (120 x 86,400 s)"
+      ],
+      [
+       0.8,
+       "= *2.4 million / s*"
+      ]
+     ],
+     "tone": "blue",
+     "x": 0.5,
+     "y": 0.175,
+     "enter": "none"
+    },
+    {
+     "type": "hud",
+     "label": "made in the last second",
+     "x": 0.5,
+     "y": 0.085,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "steps": [
+      [
+       0,
+       0
+      ],
+      [
+       0.4,
+       2000000
+      ],
+      [
+       1.6,
+       0
+      ],
+      [
+       1.65,
+       2000000
+      ],
+      [
+       2.6,
+       0
+      ],
+      [
+       2.65,
+       2000000
+      ]
+     ],
+     "count_dur": 0.8,
+     "tone": "red",
+     "width_of": "2,000,000"
+    },
+    {
+     "type": "stamp",
+     "text": "EVERY SECOND",
+     "tone": "green",
+     "angle": -6,
+     "size": 72,
+     "x": 0.5,
+     "y": 0.255,
+     "at": 2.2,
+     "sfx": "thud"
+    }
+   ]
+  }
+ ]
+}
