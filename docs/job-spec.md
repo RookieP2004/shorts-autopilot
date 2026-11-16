@@ -231,6 +231,35 @@ compresses into blocky "mosaic"; set a scene's `grain` only if you must), a slow
   `music.cues: [{"scene": i, "style": "doc" | "tension" | "wonder" | "none", "key": ..., "scale": ...}]` scores the film in
   sections that crossfade (use "none" for one held silence on the big reveal).
 
+## Night set (second mood, `"look": "night"`; autopilot/night.py, devices.py, blendkit night helpers)
+Opt-in per job for dark-files, scams, money traps and big reveals; the bright town stays the default. **PILOT 2026-11-16-n:
+do not use in a public Short until the owner approves it** (the Bible says when it is approved).
+`"look": "night"` merges `style.looks.night`: highlight captions, push transitions, a night grade (deeper blacks, vignette) and a
+rim light on every `character` layer (`"rim": false` turns it off on one layer, `"rim": [left, right]` recolours it).
+
+**Sets** (in the job's `assets_script`): `night_set(target, rim, spot_power, grid, back_wall=png)` = navy dark, one hard spot from
+above, coloured rim lights, glossy floor + faint grid; `camera(..., fstop=2.0)` then `dutch(cam, 4..6)` for hero shots. Props:
+`phone(...)` + `phone_sprite(name, screen)` (saves the screen quad), `coin(...)`, `banknote(devices.note_texture(...))` (fictional,
+"NOT REAL MONEY"), `crowd(area, n, color_of=, glow_of=)` for a hero still of thousands of figures. Reference: `jobs/2026-11-16-n/assets.py`.
+
+**Layers** (frame fractions; times inside a layer are seconds after its `at`):
+| type | what | keys |
+|---|---|---|
+| hud | number chip: dark card, glowing border, small-caps label, big number that ticks | `label`, `value` / `to`+`count_dur` / `steps: [[t, v]]` / `text`, `prefix`, `suffix`, `indian` (default true: 9,99,800), `tone`, `sub`, `size`, `width_of` |
+| eqbar | running equation under a hud | `keys: [[t, "8,000 \u00f7 2^3 = *1,000*"]]` (`^x` superscript, `*x*` answer colour), `tone` |
+| tracker | step circles that tick green one by one | `n`, `done: [t1, t2, ...]`, `size` |
+| stamp | slanted rubber-stamp verdict that slams in | `text`, `tone`, `angle`, `size` (add `"sfx": "thud"`) |
+| optcard | option card that gets a red cross or green tick | `label`, `text` (\n for 2 lines), `sub`, `tone`, `w`, `verdict: cross/tick`, `verdict_at` |
+| phone | glossy 3D phone with a LIVE fictional screen; turns in 3D | `sprite` (phone_sprite png), `screen` (devices spec: lock / chat / tips / pay; elements pop in at `at`), `w`, `tilt: [[t, yaw, pitch]]`, `ui_w` |
+| crowd | thousands of tiny figures on a plate's floor doing the maths | `plate` (.json), `area: [x0, x1, y0, y1]` m, `n` (<= 9000), `steps: [{at, split: x/y, colors}, {at, keep: i, lost}, {at, glow}]`, `aisle: [x, half_w]` (a lane for Ved), `in_dur` |
+| nodes | decision tree / flow as glowing nodes floating in 3D, built step by step, slowly orbiting | `nodes: [{id, pos: [x, y, z], at, tone, label}]`, `edges: [[a, b, at, tone]]`, `yaw: [d0, d1]`, `x`, `y` |
+| burst | cash / coin burst with motion blur | `sprites: [png]`, `sizes`, `n`, `origin`, `dur`, `spread` |
+Colours by meaning (`tone`): green = survives/true, red = scam/danger, gold = money, blue = neutral data (+ violet, white, grey).
+Crowd maths: each `split` divides the still-standing figures into equal groups by position; `keep` keeps one group (the rest
+turn red, then fade grey), so 8,000 -> split/keep x3 -> 1,000 exactly. Ved walks through the crowd along the `aisle`.
+Scam payoff: a `phone` with `{"kind": "lock", "notes": [...], "cta": "Comment YES or NO", "cta_at": 1.2}`.
+Pilot / reference build: `jobs/2026-11-16-n/build_job.py`. Tests: `python -m pytest -q tests`.
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

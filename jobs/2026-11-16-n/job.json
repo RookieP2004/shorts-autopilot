@@ -1,0 +1,1412 @@
+{
+ "id": "2026-11-16-n",
+ "title": "How a stock tip channel gets a perfect record 📉",
+ "description": "Three calls in a row, all correct. Genius, or maths? The split-list trick (the old 'Baltimore stockbroker' parable) and survivorship bias, explained.\n\nSources: Jordan Ellenberg, How Not to Be Wrong (2014); John Allen Paulos, Innumeracy (1988); SEBI (Investment Advisers) Regulations and SEBI investor cautions; SEBI final order in the matter of stock recommendation tips in Unison Metals Ltd (5 Feb 2026).",
+ "tags": [
+  "survivorship bias",
+  "stock tips",
+  "telegram",
+  "sebi",
+  "scam",
+  "stock market",
+  "explained"
+ ],
+ "hashtags": [
+  "#stockmarket",
+  "#scamalert"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#stockmarket",
+   "#scamalert",
+   "#survivorshipbias",
+   "#sebi",
+   "#explained"
+  ]
+ },
+ "look": "night",
+ "meta": {
+  "format": "dark-files",
+  "topic": "Why a perfect tip streak proves nothing (split-list trick, survivorship bias)",
+  "hook": "question",
+  "idea_source": "owner request: night-set style pilot",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "overrides": "PILOT of the night-set look (2026-11-16)",
+  "sources": [
+   "https://www.sebi.gov.in/enforcement/orders/feb-2026/final-order-in-the-matter-of-stock-recommendation-tips-in-the-scrip-of-unison-metals-ltd-_99518.html",
+   "https://www.business-standard.com/article/pti-stories/sebi-cautions-public-against-unregistered-investment-advisors-116060900804_1.html",
+   "https://ofdollarsanddata.com/scams-damn-scams-and-investors/"
+  ],
+  "claims": [
+   {
+    "claim": "split-list maths: 8,000 halved 3 times = 1,000 with a perfect 3/3 record",
+    "tag": "PROVEN",
+    "source": "arithmetic"
+   },
+   {
+    "claim": "the 'Baltimore stockbroker' is a classic parable (Paulos, Ellenberg); no confirmed real case of the exact trick",
+    "tag": "PROVEN",
+    "source": "Ellenberg 2014"
+   },
+   {
+    "claim": "no person can act as an investment adviser / research analyst without SEBI registration",
+    "tag": "PROVEN",
+    "source": "SEBI IA & RA Regulations"
+   },
+   {
+    "claim": "SEBI final order 5 Feb 2026: Telegram stock tips in Unison Metals, Rs 4.29 crore unlawful gains",
+    "tag": "PROVEN",
+    "source": "SEBI order"
+   },
+   {
+    "claim": "200 x Rs 4,999 = Rs 9,99,800 (about Rs 10 lakh)",
+    "tag": "PROVEN",
+    "source": "arithmetic (illustrative fee)"
+   }
+  ],
+  "humour": {
+   "trend": "side-eye 'basically a fund manager'",
+   "beat": "side_eye",
+   "scene": 7
+  }
+ },
+ "thumbnail": {
+  "title": "3/3 CORRECT. *HOW?*",
+  "title_y": 0.14,
+  "title_size": 170,
+  "max_w": 0.95,
+  "blur": 10,
+  "glow": "#35e08a",
+  "glow_x": 0.5,
+  "glow_y": 0.55,
+  "glow_strength": 1.2,
+  "bg_saturation": 1.2,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-n/assets/plate_crowd_survivors.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "phone",
+    "sprite": "jobs/2026-11-16-n/assets/phone.png",
+    "screen": {
+     "kind": "tips",
+     "name": "Multibagger Club",
+     "sub": "8,000 members · FREE calls",
+     "rows": [
+      {
+       "label": "CALL 1",
+       "text": "Stock A will go UP",
+       "badge": "HIT",
+       "at": 0.5
+      },
+      {
+       "label": "CALL 2",
+       "text": "Stock B will go UP",
+       "badge": "HIT",
+       "at": 1.3
+      },
+      {
+       "label": "CALL 3",
+       "text": "Stock C will go UP",
+       "badge": "HIT",
+       "at": 2.1
+      }
+     ]
+    },
+    "x": 0.32,
+    "y": 0.6,
+    "w": 0.48,
+    "tilt": [
+     [
+      0,
+      -14,
+      4
+     ]
+    ],
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.74,
+    "y": 0.92,
+    "h": 0.8,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "music": {
+  "cues": [
+   {
+    "scene": 0,
+    "style": "tension",
+    "key": "E",
+    "scale": "minor",
+    "bpm": 92
+   },
+   {
+    "scene": 8,
+    "style": "doc",
+    "key": "E",
+    "scale": "minor"
+   }
+  ],
+  "volume": 0.12
+ },
+ "privacy": "private",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-16-n/assets.py",
+ "scenes": [
+  {
+   "say": "This Telegram tip channel called three stocks in a row. All three went up.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.7166,
+     "y": 0.5558,
+     "h": 0.3625,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.2665,
+       "y": 0.5935,
+       "scale": 1.1429
+      },
+      {
+       "t": 1.1,
+       "x": 0.7166,
+       "y": 0.5558,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "phone",
+     "sprite": "jobs/2026-11-16-n/assets/phone.png",
+     "screen": {
+      "kind": "tips",
+      "name": "Multibagger Club",
+      "sub": "8,000 members · FREE calls",
+      "rows": [
+       {
+        "label": "CALL 1",
+        "text": "Stock A will go UP",
+        "badge": "HIT",
+        "at": 0.5
+       },
+       {
+        "label": "CALL 2",
+        "text": "Stock B will go UP",
+        "badge": "HIT",
+        "at": 1.3
+       },
+       {
+        "label": "CALL 3",
+        "text": "Stock C will go UP",
+        "badge": "HIT",
+        "at": 2.1
+       }
+      ]
+     },
+     "x": 0.34,
+     "y": 0.43,
+     "w": 0.42,
+     "tilt": [
+      [
+       0,
+       -22,
+       6
+      ],
+      [
+       3.5,
+       12,
+       2
+      ]
+     ],
+     "enter": "rise",
+     "at": 0.1,
+     "sfx": "swoosh_soft",
+     "loop": "float"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0.6,
+      1.4,
+      2.2
+     ],
+     "x": 0.36,
+     "y": 0.75,
+     "at": 0.0,
+     "enter": "fade"
+    }
+   ],
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.06,
+      "focus": [
+       0.45,
+       0.48
+      ]
+     }
+    ]
+   },
+   "sfx": "footsteps",
+   "sfx_at": 0.0,
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Genius? Nope. It starts with eight thousand people.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "crowd",
+     "plate": "jobs/2026-11-16-n/assets/plate_arena_wide.json",
+     "area": [
+      -3.6,
+      3.6,
+      -2.4,
+      3.2
+     ],
+     "n": 2600,
+     "fig_h": 0.3,
+     "seed": 4,
+     "color": "#b9c2d3",
+     "steps": [],
+     "in_dur": 1.4
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.906,
+     "y": 0.6358,
+     "h": 0.1091,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "hud",
+     "label": "people in the channel",
+     "x": 0.5,
+     "y": 0.74,
+     "enter": "pop",
+     "sfx": "click",
+     "to": 8000,
+     "count_dur": 1.4,
+     "tone": "blue",
+     "at": 0.3
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Half are told a stock will rise. Half are told it'll fall.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "crowd",
+     "plate": "jobs/2026-11-16-n/assets/plate_arena_wide.json",
+     "area": [
+      -3.6,
+      3.6,
+      -2.4,
+      3.2
+     ],
+     "n": 2600,
+     "fig_h": 0.3,
+     "seed": 4,
+     "color": "#b9c2d3",
+     "steps": [
+      {
+       "at": 0.4,
+       "split": "x",
+       "colors": [
+        "blue",
+        "violet"
+       ]
+      }
+     ],
+     "in_dur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.906,
+     "y": 0.6358,
+     "h": 0.1091,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "shrug",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "group A",
+     "text": "STOCK\nWILL RISE",
+     "tone": "blue",
+     "x": 0.27,
+     "y": 0.27,
+     "w": 0.4,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop",
+     "rotate": -3
+    },
+    {
+     "type": "optcard",
+     "label": "group B",
+     "text": "STOCK\nWILL FALL",
+     "tone": "violet",
+     "x": 0.73,
+     "y": 0.27,
+     "w": 0.4,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop",
+     "rotate": 3
+    },
+    {
+     "type": "hud",
+     "label": "each group",
+     "x": 0.5,
+     "y": 0.74,
+     "enter": "pop",
+     "sfx": "click",
+     "value": 4000,
+     "tone": "blue",
+     "at": 0.6
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Either way, four thousand people just saw a correct call.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "crowd",
+     "plate": "jobs/2026-11-16-n/assets/plate_arena_wide.json",
+     "area": [
+      -3.6,
+      3.6,
+      -2.4,
+      3.2
+     ],
+     "n": 2600,
+     "fig_h": 0.3,
+     "seed": 4,
+     "color": "#b9c2d3",
+     "steps": [
+      {
+       "at": 0,
+       "dur": 0,
+       "split": "x",
+       "colors": [
+        "blue",
+        "violet"
+       ]
+      },
+      {
+       "at": 0.5,
+       "keep": 0,
+       "lost": "red"
+      }
+     ],
+     "in_dur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.906,
+     "y": 0.6358,
+     "h": 0.1091,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "surprised",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "group A",
+     "text": "STOCK\nWILL RISE",
+     "tone": "blue",
+     "x": 0.27,
+     "y": 0.27,
+     "w": 0.4,
+     "enter": "none",
+     "rotate": -3,
+     "verdict": "tick",
+     "verdict_at": 0.5,
+     "sfx": "ding",
+     "sfx_at": 0.5
+    },
+    {
+     "type": "optcard",
+     "label": "group B",
+     "text": "STOCK\nWILL FALL",
+     "tone": "violet",
+     "x": 0.73,
+     "y": 0.27,
+     "w": 0.4,
+     "enter": "none",
+     "rotate": 3,
+     "verdict": "cross",
+     "verdict_at": 0.5
+    },
+    {
+     "type": "hud",
+     "label": "saw a correct call",
+     "x": 0.5,
+     "y": 0.74,
+     "enter": "pop",
+     "sfx": "click",
+     "steps": [
+      [
+       0,
+       8000
+      ],
+      [
+       0.7,
+       4000
+      ]
+     ],
+     "tone": "green"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0.9
+     ],
+     "x": 0.5,
+     "y": 0.84,
+     "enter": "none",
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Repeat. Two thousand. Then one thousand... with a perfect record.",
+   "caption": "Repeat. 2,000. Then 1,000... with a perfect record.",
+   "transition": "push",
+   "transition_frames": 12,
+   "min_dur": 4.8,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "crowd",
+     "plate": "jobs/2026-11-16-n/assets/plate_arena_mid.json",
+     "area": [
+      0.0,
+      7.2,
+      -2.4,
+      3.2
+     ],
+     "n": 3200,
+     "fig_h": 0.3,
+     "seed": 4,
+     "color": "#b9c2d3",
+     "steps": [
+      {
+       "at": 0,
+       "dur": 0,
+       "split": "x",
+       "colors": [
+        "blue",
+        "violet"
+       ]
+      },
+      {
+       "at": 0,
+       "keep": 0,
+       "lost_alpha": 0.0,
+       "dur": 0
+      },
+      {
+       "at": 0.4,
+       "split": "y",
+       "colors": [
+        "blue",
+        "violet"
+       ]
+      },
+      {
+       "at": 1.1,
+       "keep": 0
+      },
+      {
+       "at": 1.9,
+       "split": "x",
+       "colors": [
+        "blue",
+        "violet"
+       ]
+      },
+      {
+       "at": 2.6,
+       "keep": 0
+      },
+      {
+       "at": 3.3,
+       "glow": "green"
+      }
+     ],
+     "in_dur": 0,
+     "aisle": [
+      1.8,
+      0.5
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.8259,
+     "y": 0.4244,
+     "h": 0.149,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ],
+      [
+       "surprised",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.8259,
+       "y": 0.4244,
+       "scale": 1.0
+      },
+      {
+       "t": 3.6,
+       "x": 0.7636,
+       "y": 0.5267,
+       "scale": 1.4195,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "still “winning”",
+     "x": 0.5,
+     "y": 0.2,
+     "enter": "pop",
+     "sfx": "click",
+     "steps": [
+      [
+       0,
+       4000
+      ],
+      [
+       1.1,
+       2000
+      ],
+      [
+       2.6,
+       1000
+      ]
+     ],
+     "tone": "green",
+     "width_of": "8,000"
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.2,
+       "8,000 ÷ 2"
+      ],
+      [
+       1.1,
+       "8,000 ÷ 2 ÷ 2"
+      ],
+      [
+       2.6,
+       "8,000 ÷ 2 ÷ 2 ÷ 2"
+      ],
+      [
+       3.4,
+       "8,000 ÷ 2^3 = *1,000*"
+      ]
+     ],
+     "x": 0.5,
+     "y": 0.29,
+     "enter": "fade"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0,
+      1.2,
+      2.7
+     ],
+     "x": 0.5,
+     "y": 0.75,
+     "enter": "none"
+    }
+   ],
+   "sfx": "footsteps",
+   "sfx_at": 0.0,
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Now comes the VIP fee.",
+   "transition": "cut",
+   "min_dur": 2.6,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_crowd_survivors.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "hud",
+     "label": "saw 3 out of 3",
+     "x": 0.5,
+     "y": 0.24,
+     "enter": "pop",
+     "sfx": "click",
+     "value": 1000,
+     "tone": "green"
+    },
+    {
+     "type": "phone",
+     "sprite": "jobs/2026-11-16-n/assets/phone.png",
+     "screen": {
+      "kind": "pay",
+      "name": "Multibagger Club",
+      "sub": "VIP",
+      "title": "VIP ACCESS",
+      "note": "Only 12 seats left",
+      "price": "₹4,999",
+      "countdown": 588,
+      "button": "PAY NOW"
+     },
+     "x": 0.5,
+     "y": 0.62,
+     "w": 0.5,
+     "tilt": [
+      [
+       0,
+       18,
+       4
+      ],
+      [
+       2.5,
+       -6,
+       0
+      ]
+     ],
+     "enter": "rise",
+     "at": 0.2,
+     "sfx": "swoosh_soft"
+    },
+    {
+     "type": "stamp",
+     "text": "THE TRAP",
+     "tone": "red",
+     "angle": -9,
+     "size": 130,
+     "x": 0.5,
+     "y": 0.42,
+     "at": 1.1,
+     "sfx": "thud"
+    }
+   ],
+   "camera": {
+    "shake": [
+     1.1,
+     0.25
+    ]
+   },
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Two hundred pay? That's ten lakh rupees. From coin tosses.",
+   "caption": "200 pay? That's ₹10 lakh. From coin tosses.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.2215,
+     "y": 0.5196,
+     "h": 0.2902,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "sad",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "top": [
+        "#2f3a52",
+        "jacket"
+       ],
+       "bottom": [
+        "#23262d",
+        "trousers"
+       ],
+       "shoes": "#151515"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.4512,
+     "y": 0.5217,
+     "h": 0.2466,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "sad",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "top": [
+        "#5b2f3a",
+        "jacket"
+       ],
+       "bottom": [
+        "#23262d",
+        "trousers"
+       ],
+       "shoes": "#151515"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7166,
+     "y": 0.5558,
+     "h": 0.3625,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "surprised",
+       1.4
+      ],
+      [
+       "shrug",
+       2.8
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "burst",
+     "sprites": [
+      "jobs/2026-11-16-n/assets/note1.png",
+      "jobs/2026-11-16-n/assets/note2.png",
+      "jobs/2026-11-16-n/assets/coin.png"
+     ],
+     "n": 26,
+     "origin": [
+      0.45,
+      0.62
+     ],
+     "at": 1.0,
+     "dur": 2.2,
+     "spread": 1.1,
+     "sfx": "cash",
+     "sizes": [
+      1.0,
+      1.0,
+      0.45
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "if 200 people pay",
+     "x": 0.5,
+     "y": 0.27,
+     "enter": "pop",
+     "sfx": "click",
+     "steps": [
+      [
+       0,
+       0
+      ],
+      [
+       0.9,
+       999800
+      ]
+     ],
+     "prefix": "₹",
+     "tone": "gold",
+     "count_dur": 1.0,
+     "width_of": "₹9,99,800"
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.4,
+       "200 × ₹4,999"
+      ],
+      [
+       1.8,
+       "200 × ₹4,999 ≈ *₹10 lakh*"
+      ]
+     ],
+     "tone": "gold",
+     "x": 0.5,
+     "y": 0.37,
+     "enter": "fade"
+    },
+    {
+     "type": "stamp",
+     "text": "NOT REAL MONEY",
+     "tone": "gold",
+     "angle": -4,
+     "size": 46,
+     "x": 0.5,
+     "y": 0.45,
+     "at": 1.3
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.4,
+    "who": "ved",
+    "text": "me after ONE lucky trade:\n*i'm basically a fund manager*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "That's survivorship bias. You only ever see the lucky branch.",
+   "transition": "dip",
+   "transition_frames": 10,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 14
+    },
+    {
+     "type": "nodes",
+     "nodes": [
+      {
+       "id": "r",
+       "pos": [
+        0,
+        1.7,
+        0
+       ],
+       "at": 0.2,
+       "tone": "blue",
+       "label": "8,000"
+      },
+      {
+       "id": "a",
+       "pos": [
+        -1.4,
+        0.6,
+        0.3
+       ],
+       "at": 0.6,
+       "tone": "green",
+       "label": "4,000"
+      },
+      {
+       "id": "b",
+       "pos": [
+        1.4,
+        0.6,
+        -0.3
+       ],
+       "at": 0.6,
+       "tone": "red"
+      },
+      {
+       "id": "c",
+       "pos": [
+        -2.1,
+        -0.5,
+        0.6
+       ],
+       "at": 1.0,
+       "tone": "red"
+      },
+      {
+       "id": "d",
+       "pos": [
+        -0.6,
+        -0.5,
+        0.0
+       ],
+       "at": 1.0,
+       "tone": "green",
+       "label": "2,000"
+      },
+      {
+       "id": "e",
+       "pos": [
+        -1.1,
+        -1.6,
+        0.4
+       ],
+       "at": 1.4,
+       "tone": "red"
+      },
+      {
+       "id": "f",
+       "pos": [
+        0.2,
+        -1.6,
+        -0.2
+       ],
+       "at": 1.4,
+       "tone": "green",
+       "label": "1,000"
+      }
+     ],
+     "x": 0.5,
+     "y": 0.44,
+     "yaw": [
+      -18,
+      12
+     ],
+     "edges": [
+      [
+       "r",
+       "a",
+       0.6,
+       "green"
+      ],
+      [
+       "r",
+       "b",
+       0.6,
+       "red"
+      ],
+      [
+       "a",
+       "c",
+       1.0,
+       "red"
+      ],
+      [
+       "a",
+       "d",
+       1.0,
+       "green"
+      ],
+      [
+       "d",
+       "e",
+       1.4,
+       "red"
+      ],
+      [
+       "d",
+       "f",
+       1.4,
+       "green"
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.84,
+     "y": 0.9,
+     "h": 0.62,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "stamp",
+     "text": "SURVIVORSHIP BIAS",
+     "tone": "gold",
+     "angle": -6,
+     "size": 70,
+     "x": 0.42,
+     "y": 0.73,
+     "at": 2.2,
+     "sfx": "thud"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Paid stock tips need SEBI registration. Check it before you pay.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7166,
+     "y": 0.5558,
+     "h": 0.3625,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "before you pay",
+     "text": "CHECK THE SEBI\nREG. NUMBER",
+     "tone": "green",
+     "x": 0.35,
+     "y": 0.3,
+     "w": 0.6,
+     "enter": "pop",
+     "at": 0.3,
+     "verdict": "tick",
+     "verdict_at": 1.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "hud",
+     "label": "SEBI order · Feb 2026",
+     "x": 0.5,
+     "y": 0.73,
+     "enter": "pop",
+     "sfx": "click",
+     "text": "₹4.29 crore",
+     "tone": "red",
+     "at": 1.6,
+     "sub": "unlawful gains via Telegram stock tips"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Got a message like this? Comment YES or NO.",
+   "transition": "push",
+   "transition_frames": 12,
+   "min_dur": 3.2,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 16
+    },
+    {
+     "type": "phone",
+     "sprite": "jobs/2026-11-16-n/assets/phone.png",
+     "screen": {
+      "kind": "lock",
+      "time": "9:41",
+      "date": "Monday, market day",
+      "notes": [
+       {
+        "app": "Multibagger Club",
+        "title": "3/3 calls HIT",
+        "body": "You're selected for VIP. Seats close tonight.",
+        "at": 0.4
+       }
+      ],
+      "cta": "Comment YES or NO",
+      "cta_at": 1.2
+     },
+     "x": 0.5,
+     "y": 0.5,
+     "w": 0.6,
+     "tilt": [
+      [
+       0,
+       8,
+       6
+      ],
+      [
+       3.0,
+       -3,
+       2
+      ]
+     ],
+     "enter": "rise",
+     "at": 0.0,
+     "sfx": "ding",
+     "sfx_at": 0.4,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.85,
+     "y": 0.92,
+     "h": 0.5,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "smirk",
+       2.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  }
+ ]
+}

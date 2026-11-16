@@ -78,7 +78,9 @@ def world_color(rgb, strength=1.0):
     bpy.context.scene.world = w
     w.use_nodes = True
     bg = w.node_tree.nodes.get("Background")
-    bg.inputs[0].default_value = (*rgb, 1)
+    if isinstance(rgb, str):
+        rgb = hexrgb(rgb)
+    bg.inputs[0].default_value = (*rgb[:3], 1)
     bg.inputs[1].default_value = strength
     return w
 
@@ -734,3 +736,232 @@ def apple2(loc=(0, 0, 0), r=0.08, name="apple", red="#b3121b"):
     leaf.rotation_euler = (0, math.radians(-28), math.radians(25))
     leaf.parent = body
     return body
+
+
+# ------------------------------------------------------------------ night set (v4: dark-files, scams, money traps, reveals)
+NIGHT = {"bg": "#04070e", "floor": "#0a1322", "spot": "#fff4e2", "rim": "#3fa9ff", "rim_red": "#ff3b4a",
+         "green": "#35e08a", "red": "#ff3b4a", "gold": "#f4c04e", "blue": "#4aa3ff"}
+
+
+def spot_light(loc, target=(0, 0, 0), power=2500, angle=38, blend=0.25, radius=0.08, color="#fff4e2", name="spot"):
+    """A hard theatre spot: small radius = crisp shadows, `angle` = cone width in degrees."""
+    d = bpy.data.lights.new(name, "SPOT")
+    d.energy = power
+    d.spot_size = math.radians(angle)
+    d.spot_blend = blend
+    d.shadow_soft_size = radius
+    d.color = _col(color)
+    o = bpy.data.objects.new(name, d)
+    bpy.context.scene.collection.objects.link(o)
+    o.location = loc
+    look_at(o, target)
+    return o
+
+
+def night_set(target=(0, 0, 0), rim="#3fa9ff", spot_power=16000, spot_height=9.0, spot_angle=36, floor_color=None,
+              floor_rough=0.42, grid=True, grid_color="#1d3b66", grid_step=1.0, grid_extent=14, fill=0.04, back_wall=None, wall_glow=0.35):
+    """The second house mood: near-black navy surroundings, ONE hard spotlight from above on `target`, a coloured rim light
+    from behind, a slightly glossy floor that catches both, optional faint floor grid. Pair with camera(..., fstop=2.0, roll=4)
+    for the shallow-focus, Dutch-tilted hero shots. back_wall = an image (e.g. a glowing chart) on a huge plane far behind."""
+    tx, ty, tz = target
+    world_color(NIGHT["bg"], fill)
+    floor(color=floor_color or NIGHT["floor"], rough=floor_rough, size=80, curve=False)
+    spot_light((tx, ty - 1.0, tz + spot_height), (tx, ty, tz), spot_power, spot_angle, color=NIGHT["spot"], name="night_spot")
+    area_light((tx + 3.0, ty + 5.0, tz + 5.5), (tx, ty, tz + 0.8), 700, 1.5, rim, "night_rim")
+    area_light((tx - 5.0, ty + 4.0, tz + 5.0), (tx, ty, tz + 0.8), 260, 1.5, "#7a5cff", "night_rim2")
+    if grid:
+        gm = glow(grid_color, 1.6, "night_grid")
+        n = int(grid_extent / grid_step)
+        for i in range(-n, n + 1):
+            plane(grid_extent * 2, 0.012, (tx, ty + i * grid_step, 0.002), material=gm, name=f"gx{i}")
+            plane(0.012, grid_extent * 2, (tx + i * grid_step, ty, 0.002), material=gm, name=f"gy{i}")
+    if back_wall:
+        from PIL import Image as _I
+        iw, ih = _I.open(back_wall).size
+        wall = plane(30, 30 * ih / iw, (tx, ty + 16, 8), rot=(90, 0, 0), name="night_wall")
+        m = mat("night_wall_mat", "#000000", rough=1.0)
+        nt = m.node_tree
+        tex = nt.nodes.new("ShaderNodeTexImage")
+        tex.image = bpy.data.images.load(back_wall)
+        em = nt.nodes.new("ShaderNodeEmission")
+        em.inputs["Strength"].default_value = wall_glow
+        nt.links.new(tex.outputs["Color"], em.inputs["Color"])
+        out = [n_ for n_ in nt.nodes if n_.type == "OUTPUT_MATERIAL"][0]
+        nt.links.new(em.outputs["Emission"], out.inputs["Surface"])
+        assign(wall, m)
+
+
+def dutch(cam, deg):
+    """Tilt a camera made by camera() around its viewing axis (a Dutch angle) while it keeps tracking its target."""
+    tr = [c for c in cam.constraints if c.type == "TRACK_TO"]
+    if tr:
+        bpy.context.view_layer.update()
+        mw = cam.matrix_world.copy()
+        cam.constraints.remove(tr[0])
+        cam.matrix_world = mw
+    cam.rotation_mode = "XYZ"
+    q = cam.rotation_euler.to_quaternion() @ mathutils.Quaternion((0, 0, 1), math.radians(deg))
+    cam.rotation_euler = q.to_euler()
+    bpy.context.view_layer.update()
+    return cam
+
+
+def _person_mesh(h=0.34, name="crowd_person"):
+    """One low-poly faceless figure (capsule body + head), feet at z=0, `h` metres tall."""
+    import bmesh
+    bm = bmesh.new()
+    r = h * 0.17
+    bmesh.ops.create_uvsphere(bm, u_segments=10, v_segments=6, radius=h * 0.12,
+                              matrix=mathutils.Matrix.Translation((0, 0, h * 0.87)))
+    ret = bmesh.ops.create_cone(bm, cap_ends=True, segments=10, radius1=r, radius2=r * 0.82, depth=h * 0.68,
+                                matrix=mathutils.Matrix.Translation((0, 0, h * 0.36)))
+    me = bpy.data.meshes.new(name)
+    bm.to_mesh(me)
+    bm.free()
+    for p in me.polygons:
+        p.use_smooth = True
+    return me
+
+
+def crowd(area=(-4, 4, -3, 3), n=4000, h=0.3, colors=("#c9d2e3",), color_of=None, glow_of=None, seed=7, jitter=0.35,
+          rough=0.35, name="crowd"):
+    """A carpet of `n` tiny figures standing on the floor inside area=(x0, x1, y0, y1): a big number made visible.
+    color_of(i, x, y, u, v) -> hex picks each figure's colour (u, v = 0..1 across the area), e.g. halves blue/yellow,
+    survivors green; glow_of(i, x, y, u, v) -> True makes that figure emissive (survivors that light up).
+    Figures are linked duplicates of one mesh (fast; 5-10k is fine). Returns the list of objects."""
+    import random
+    rnd = random.Random(seed)
+    x0, x1, y0, y1 = area
+    aspect = (x1 - x0) / max(0.01, y1 - y0)
+    cols = max(1, int(round(math.sqrt(n * aspect))))
+    rows = max(1, int(math.ceil(n / cols)))
+    me = _person_mesh(h, name + "_mesh")
+    me.materials.append(mat(name + "_base", colors[0], rough=rough))
+    mats = {}
+
+    def m_for(c, g):
+        k = (c, g)
+        if k not in mats:
+            mats[k] = (glow(c, 3.0, f"{name}_g_{c}") if g else mat(f"{name}_{c}", c, rough=rough))
+        return mats[k]
+    coll = bpy.data.collections.new(name)
+    bpy.context.scene.collection.children.link(coll)
+    objs = []
+    dx, dy = (x1 - x0) / cols, (y1 - y0) / rows
+    i = 0
+    for r in range(rows):
+        for c in range(cols):
+            if i >= n:
+                break
+            u, v = (c + 0.5) / cols, (r + 0.5) / rows
+            x = x0 + u * (x1 - x0) + (rnd.random() - 0.5) * dx * jitter
+            y = y0 + v * (y1 - y0) + (rnd.random() - 0.5) * dy * jitter
+            col = color_of(i, x, y, u, v) if color_of else colors[i % len(colors)]
+            g = bool(glow_of and glow_of(i, x, y, u, v))
+            o = bpy.data.objects.new(f"{name}_{i}", me)
+            o.data = me
+            o.location = (x, y, 0)
+            o.rotation_euler = (0, 0, rnd.uniform(-0.6, 0.6))
+            sc = 0.9 + rnd.random() * 0.2
+            o.scale = (sc, sc, sc)
+            coll.objects.link(o)
+            objs.append((o, m_for(col, g)))
+            i += 1
+    # per-object materials: link the material to the OBJECT slot so one shared mesh can carry many colours
+    for o, m in objs:
+        o.material_slots[0].link = "OBJECT"
+        o.material_slots[0].material = m
+    return [o for o, _ in objs]
+
+
+def glossy_black(name="gloss_black"):
+    return mat(name, "#05070b", rough=0.08, metal=0.0)
+
+
+def phone(loc=(0, 0, 0), rot=(0, 0, 0), w=0.8, frame="#2a2f3a", screen_image=None, name="phone"):
+    """A glossy hero phone (generic, no brand): bevelled metal frame, black glass front, camera bump on the back.
+    screen_image = a PNG from autopilot.devices (shown emissive); None = black glass, for a live screen composited later
+    (phone_sprite() saves where the screen sits). Height = 2.1 x w. Returns (body, screen)."""
+    h, t = w * 2.1, w * 0.1
+    body = box((w, t, h), loc, rot, material=mat(name + "_frame", frame, rough=0.22, metal=1.0), bevel=w * 0.11, name=name)
+    sw, sh = w * 0.9, h * 0.955
+    scr = plane(sw, sh, (0, -t / 2 - 0.002, 0), rot=(90, 0, 0), name=name + "_screen")
+    if screen_image:
+        m = mat(name + "_scr", "#000000", rough=0.05)
+        nt = m.node_tree
+        tex = nt.nodes.new("ShaderNodeTexImage")
+        tex.image = bpy.data.images.load(screen_image)
+        em = nt.nodes.new("ShaderNodeEmission")
+        em.inputs["Strength"].default_value = 1.4
+        mix = nt.nodes.new("ShaderNodeAddShader")
+        bsdf = [n_ for n_ in nt.nodes if n_.type == "BSDF_PRINCIPLED"][0]
+        nt.links.new(tex.outputs["Color"], em.inputs["Color"])
+        nt.links.new(em.outputs["Emission"], mix.inputs[0])
+        nt.links.new(bsdf.outputs["BSDF"], mix.inputs[1])
+        out = [n_ for n_ in nt.nodes if n_.type == "OUTPUT_MATERIAL"][0]
+        nt.links.new(mix.outputs["Shader"], out.inputs["Surface"])
+        assign(scr, m)
+    else:
+        assign(scr, glossy_black(name + "_glass"))
+    scr.parent = body
+    cam_bump = box((w * 0.34, t * 0.4, w * 0.34), (-w * 0.24, t * 0.6, h * 0.36), material=glossy_black(name + "_bump"),
+                   bevel=w * 0.06, name=name + "_bump")
+    cam_bump.parent = body
+    for i, (cx, cz) in enumerate(((-w * 0.31, h * 0.42), (-w * 0.17, h * 0.3))):
+        lens = cylinder(w * 0.055, t * 0.3, (cx, t * 0.8, cz), (90, 0, 0), material=glass("#0a0c12"), name=f"{name}_lens{i}")
+        lens.parent = body
+    return body, scr
+
+
+def screen_corners(scr):
+    """Screen-pixel corners (TL, TR, BR, BL) of a phone screen plane in the current camera view."""
+    from bpy_extras.object_utils import world_to_camera_view
+    sc = bpy.context.scene
+    bpy.context.view_layer.update()
+    W, H = sc.render.resolution_x, sc.render.resolution_y
+    vs = [scr.matrix_world @ v.co for v in scr.data.vertices]
+    pts = []
+    for v in vs:
+        p = world_to_camera_view(sc, sc.camera, v)
+        pts.append((p.x * W, (1 - p.y) * H))
+    cx = sum(p[0] for p in pts) / 4
+    cy = sum(p[1] for p in pts) / 4
+    tl = min((p for p in pts if p[1] < cy), key=lambda p: p[0])
+    tr = max((p for p in pts if p[1] < cy), key=lambda p: p[0])
+    br = max((p for p in pts if p[1] >= cy), key=lambda p: p[0])
+    bl = min((p for p in pts if p[1] >= cy), key=lambda p: p[0])
+    return [tl, tr, br, bl]
+
+
+def phone_sprite(name, scr, w=1080, h=1920, samples=48, pad=12):
+    """Render a phone cut-out and save <name>.json with the screen quad (in the cropped sprite's pixels), so the
+    compositor can draw any live screen UI (autopilot.devices) into it: the `phone` layer."""
+    import json
+    sc = bpy.context.scene
+    if os.environ.get("BK_PREVIEW"):
+        w, h = w // 2, h // 2
+    sc.render.resolution_x, sc.render.resolution_y = w, h
+    corners = screen_corners(scr)
+    out = still(name, w, h, samples=samples, transparent=True, crop=False)
+    from PIL import Image as _I
+    im = _I.open(out)
+    box_ = im.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox()
+    x0, y0, x1, y1 = box_
+    x0, y0 = max(0, x0 - pad), max(0, y0 - pad)
+    im.crop((x0, y0, min(im.width, x1 + pad), min(im.height, y1 + pad))).save(out)
+    json.dump({"screen": [[round(px - x0, 2), round(py - y0, 2)] for px, py in corners]}, open(out[:-4] + ".json", "w"))
+    return out
+
+
+def coin(loc=(0, 0, 0), rot=(90, 0, 0), r=0.5, symbol="₹", name="coin"):
+    """A thick gold coin with a raised rim and an embossed symbol on both faces (fictional, no real design)."""
+    t = r * 0.16
+    gold = metal(NIGHT["gold"], 0.22, name + "_gold")
+    c = cylinder(r, t, loc, rot, material=gold, verts=96, bevel=r * 0.05, name=name)
+    for side in (1, -1):
+        rim = torus(r * 0.9, r * 0.05, (0, 0, side * t / 2), material=gold, name=f"{name}_rim{side}")
+        rim.parent = c
+        s = text3d(symbol, size=r * 1.0, loc=(0, -r * 0.05, side * t / 2), rot=(0, 0 if side > 0 else 180, 0),
+                   material=gold, font="body", extrude=r * 0.03, name=f"{name}_sym{side}")
+        s.parent = c
+    return c

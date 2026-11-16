@@ -13,7 +13,11 @@
     "danger": "#d9534f",
     "ink": "#1a1410",
     "parchment": "#efe3c8",
-    "navy": "#34425c"
+    "navy": "#34425c",
+    "green": "#35e08a",
+    "red": "#ff3b4a",
+    "gold": "#f4c04e",
+    "blue": "#4aa3ff"
   },
   "background": {
     "type": "image",
@@ -188,5 +192,45 @@
       "serif_i": "fonts/LibreBaskerville-Italic.ttf"
     },
     "encode_preset": "slow"
+  },
+  "looks": {
+    "night": {
+      "_doc": "Second house mood (opt-in per job with \"look\": \"night\"): dark-files, scams, money traps, big reveals. Bright town stays the default. Colour meaning is fixed: green = survives/true, red = scam/danger, gold = money, blue = neutral data.",
+      "background": {
+        "type": "gradient",
+        "colors": [
+          "#04070e",
+          "#0a1322"
+        ],
+        "angle": 170,
+        "pattern": "none"
+      },
+      "captions": {
+        "mode": "highlight",
+        "size": 46,
+        "y": 0.105,
+        "words_per_chunk": 6,
+        "uppercase": false,
+        "hl_box": "#5aa9ff"
+      },
+      "grade": {
+        "shadows": "#0b1a33",
+        "highlights": "#ffd9a8",
+        "strength": 0.08,
+        "contrast": 1.04
+      },
+      "transition": {
+        "type": "push",
+        "frames": 10
+      },
+      "progress_bar": {
+        "color": "#4aa3ff"
+      },
+      "rim": [
+        "#3fa9ff",
+        "#9b6bff"
+      ],
+      "night_vignette": 0.38
+    }
   }
 }

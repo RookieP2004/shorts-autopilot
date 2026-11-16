@@ -157,6 +157,8 @@ def _paste_clip(canvas, img, x, y):
 # ---------- layers ----------
 DOC_DIRECT = {"marker", "string", "timeline", "lower_third", "chapter", "tag", "headline", "figures"}
 DOC_SCREEN = {"lower_third", "chapter", "tag", "headline"}
+NIGHT_DIRECT = {"crowd", "nodes", "burst"}
+NIGHT_IMAGE = {"hud", "eqbar", "tracker", "stamp", "optcard", "phone"}
 
 def character_image(ctx, L, scene_idx, t, scene):
     ch = ctx.chars[L["id"]]
@@ -337,6 +339,9 @@ def layer_image(ctx, L, scene_idx, t, scene, reveal):
     if typ == "paper":
         from . import doc
         return doc.paper_image(ctx, L)
+    if typ in NIGHT_IMAGE:
+        from . import night
+        return night.layer_image(st, L, t - L.get("at", 0.0), W)
     if typ == "image":
         path = L.get("path", "")
         if path.lower().endswith((".png", ".jpg", ".jpeg", ".webp")):
@@ -381,6 +386,7 @@ def draw_scene(ctx, scene_idx, t):
     fb, _ = active_beat(ctx, scene_idx, t, ("freeze",))
     t_real, t = t, (fb["at"] if fb else t)                # a freeze beat holds the picture still
     canvas = sprites.background(ctx.style, scene.get("bg"), W, H).copy()
+    look = scene.get("look", ctx.job.get("look", "town"))
     screen = []
     for L in scene.get("layers", []):
         stt = anim_state(L, t, W, H)
@@ -394,6 +400,10 @@ def draw_scene(ctx, scene_idx, t):
         if L.get("type") in DOC_DIRECT:                   # markers, string, timelines: part of the world
             from . import doc
             doc.draw_direct(ctx, canvas, L, lt, alpha)
+            continue
+        if L.get("type") in NIGHT_DIRECT:                 # crowd, nodes, burst: part of the (night) world
+            from . import night
+            night.draw_direct(ctx, canvas, dict(L, span=L.get("span", ctx.dur[scene_idx] - L.get("at", 0.0))), lt, alpha)
             continue
         if L.get("pan"):                                  # slow drift over the scene (parallax: move fg more than bg)
             pn = L["pan"]
@@ -421,6 +431,10 @@ def draw_scene(ctx, scene_idx, t):
         img = layer_image(ctx, L, scene_idx, t, scene, reveal)
         if img is None:
             continue
+        if L.get("type") == "character" and L.get("rim", look == "night"):   # Ved / townspeople lit like the night set
+            from . import night
+            rc = L.get("rim") if isinstance(L.get("rim"), list) else ctx.style.get("rim", ["#3fa9ff", "#9b6bff"])
+            img = night.rim(img, rc, L.get("rim_strength", 1.0), L.get("rim_dim", 0.8))
         cx = L.get("x", 0.5) * W + dx
         cy = L.get("y", 0.5) * H + dy
         if L.get("iris"):                                 # reveal through a growing soft circle (x-ray / look-inside shots)
@@ -484,6 +498,9 @@ def draw_scene(ctx, scene_idx, t):
             canvas = canvas.transform((W, H), Image.AFFINE, (cw / W, 0, x0, 0, chh / H, y0),
                                       resample=Image.BILINEAR)   # sub-pixel: slow moves glide, never step
     out = apply_grade(ctx.style, canvas)
+    if look == "night":
+        from . import night
+        out = night.grade(out, ctx.style.get("night_vignette", 0.38))
     if scene.get("look") == "moody":
         from . import doc
         out = doc.moody(out, scene)
@@ -542,6 +559,10 @@ def draw_overlays(ctx, canvas, scene_idx, t):
     cap = st["captions"]
     if cap.get("enabled") and scene.get("captions", ctx.job.get("captions", True)):
         for c0, c1, words, wt in ctx.captions[scene_idx]:
+            if c0 <= t < c1 and cap.get("mode") == "highlight":
+                from . import night
+                night.draw_highlight_caption(ctx, canvas, words, wt, t, scene.get("caption_y", cap["y"]), cap)
+                break
             if c0 <= t < c1:
                 cur = 0
                 for i, wtime in enumerate(wt):

@@ -40,7 +40,10 @@ ENTER = {"none", "pop", "fade", "slide_up", "slide_down", "slide_left", "slide_r
 LOOP = {"none", "bob", "pulse", "shake", "spin", "float", "wiggle"}
 LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d", "blender",
                "paper", "marker", "string", "timeline", "lower_third", "chapter", "tag",  # documentary (doc.py)
-               "headline", "figures"}                                                   # reference-reel style
+               "headline", "figures",                                                   # reference-reel style
+               "hud", "eqbar", "tracker", "stamp", "optcard", "phone", "crowd", "nodes", "burst"}   # night set (night.py)
+LOOKS = {"town", "night", "moody"}
+MONEY_WORDS = ("\u20b9", "$", "rs", "crore", "lakh")
 SHAPES3D = {"box", "sphere", "cylinder", "cone", "plane", "terrain", "person", "tree", "building"}
 SHAPES = {"circle", "ring", "rect", "arrow", "line", "burst"}
 TRANSITIONS = {"cut", "fade", "slide_left", "slide_up", "zoom", "flash", "whip", "dip", "burn", "paper", "push"}
@@ -98,6 +101,8 @@ def job_style(job, root=ROOT):
     st = load_style(root)
     if is_long(job):
         st = deep_merge(st, st.get("longform", {}))
+    if job.get("look") and job["look"] in st.get("looks", {}):     # a second house mood (e.g. "night"), opt-in per job
+        st = deep_merge(st, st["looks"][job["look"]])
     return deep_merge(st, job.get("style_override", {}))
 
 
@@ -143,6 +148,8 @@ def validate_job(job, style, chars, root=ROOT):
     for k in ("id", "title", "scenes"):
         if k not in job:
             errs.append(f"job missing '{k}'")
+    if job.get("look", "town") not in LOOKS:
+        errs.append(f"job look '{job.get('look')}' not in {sorted(LOOKS)}")
     if errs:
         return errs
     if len(job["title"]) > 100:
@@ -221,6 +228,29 @@ def validate_job(job, style, chars, root=ROOT):
                     errs.append(f"{w}: blender layer needs 'script' (a blendkit shot file, path from the repo root): {sp!r} not found")
             elif t == "counter" and "to" not in L:
                 errs.append(f"{w}: counter needs 'to'")
+            elif t == "hud" and not any(k in L for k in ("value", "to", "steps", "text")):
+                errs.append(f"{w}: hud needs 'value', 'to', 'steps' or 'text'")
+            elif t == "eqbar" and not L.get("keys"):
+                errs.append(f"{w}: eqbar needs 'keys': [[t, text], ...]")
+            elif t == "tracker" and len(L.get("done", [])) > L.get("n", 3):
+                errs.append(f"{w}: tracker has more 'done' times than steps 'n'")
+            elif t in ("stamp", "optcard") and not L.get("text"):
+                errs.append(f"{w}: {t} needs 'text'")
+            elif t == "phone":
+                if not L.get("sprite"):
+                    errs.append(f"{w}: phone needs 'sprite' (a blendkit.phone_sprite cut-out)")
+                sc = L.get("screen") or {}
+                if sc.get("kind") not in (None, "lock", "chat", "tips", "pay"):
+                    errs.append(f"{w}: phone screen kind '{sc.get('kind')}' not in lock/chat/tips/pay")
+            elif t == "crowd":
+                if not L.get("plate") or len(L.get("area", [])) != 4:
+                    errs.append(f"{w}: crowd needs 'plate' (a plate .json) and 'area': [x0, x1, y0, y1] in metres")
+                if L.get("n", 2400) > 9000:
+                    errs.append(f"{w}: crowd n over 9000 (slow): show the number in a hud, draw a few thousand")
+            elif t == "nodes" and not L.get("nodes"):
+                errs.append(f"{w}: nodes needs 'nodes': [{{id, pos}}, ...]")
+            elif t == "burst" and not L.get("sprites"):
+                errs.append(f"{w}: burst needs 'sprites': [png, ...]")
     if is_long(job):
         ch = job.get("chapters", [])
         n = len(job.get("scenes", []))

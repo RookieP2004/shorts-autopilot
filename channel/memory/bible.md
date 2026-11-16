@@ -62,6 +62,17 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
 - References: `docs/sheets/professor_ved_character_sheet.png`, `vast_world_style_guide.png`, `vast_world_3d_guide.png`.
 - **Visual-first: the pictures explain, Ved and the town act it out.** Every explanation step gets its own shot, prop or
   panel; something new moves on screen at least every 2-3 seconds; never a talking head explaining something we could show.
+- **Night set: the second mood (2026-11-16, PILOT awaiting owner approval; not in public Shorts until approved).** The bright town
+  stays the default. Dark-files, scams, money traps and big reveals may use `"look": "night"`: near-black navy set, ONE hard
+  spotlight from above, a coloured rim light, shallow focus, slight Dutch tilt on hero shots (`blendkit.night_set`, `dutch`).
+  Ved and the townspeople are still there and get the same rim light. Graphics in this mood: hud number chips that tick, a
+  running equation bar ending in the reveal, step trackers, rubber-stamp verdicts, option cards that get a red cross or green
+  tick, a glossy phone with a fictional live screen (chat, tips list, pay-now countdown, lock screen), crowds as data (a big number
+  as thousands of tiny figures on the floor, split/tinted/faded to do the maths), 3D node trees, cash bursts. Captions switch to
+  the highlight mode (sentence case, the spoken words in a thin selection box). Colour meaning is fixed inside a video:
+  green = survives/true, red = scam/danger, gold = money, blue = neutral data. Money is always fictional ("NOT REAL MONEY"),
+  apps are always fictional (no real logo or layout). Scam topics may end on the viewer's lock screen + "Comment YES or NO".
+  Learned from a reference Short (2026-11-16): techniques only, never that creator's layouts, wording or assets.
 - **Reference video (owner-approved, 2026-11-08):** `jobs/2026-11-08-m3` ("Why can't countries just print more money?",
   youtu.be/QFhXI3hT9Ik). This is the quality bar and the house style: every new video should look at least this alive, in its own
   new world and story.
@@ -198,6 +209,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-16 | 3 | night set added as an opt-in second mood (PILOT 2026-11-16-n, awaiting approval): hud, eqbar, tracker, stamp, optcard, phone, crowd, nodes, burst, highlight captions, rim light | owner request (reference Short study) |
 | 2026-11-15 | 6 | dark-files 0.08 -> 0.20 (about 1 Short in 5); big-question 0.23 -> 0.18, scale-shock 0.14 -> 0.12, what-if 0.12 -> 0.09, frontier 0.10 -> 0.08; myth-bust stays 0.23 | owner: dark content attracts viewers |
 | 2026-11-15 | 6 | new format dark-files 0.08 (hidden economies, crime worlds, how they touch the normal world; documentary guardrails); big-question 0.27 -> 0.23, scale-shock 0.15 -> 0.14, what-if 0.15 -> 0.12 | owner request |
 | 2026-11-15 | 6 | Deep Dive documentary style (chapter cards, archival reconstructions, evidence board, supers, source tags, grain, scored cues, no burned captions) | owner request |

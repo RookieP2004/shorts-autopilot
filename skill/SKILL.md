@@ -104,6 +104,15 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   position in metres from the plate's saved camera; `walk()` paths shrink/grow with distance) and draw each set's foreground layer
   (`fg_<set>`, rendered with `still(..., only=[counter])`) between the people behind it and the people in front. Reference:
   `jobs/2026-11-08-m3/assets.py` + `build_job.py` and `docs/job-spec.md` "The town".
+- **Night set (second mood)**: the bright town is the default for every video. For dark-files, scams, money traps and big
+  reveals a job may set `"look": "night"` **only once the Bible marks the night set as owner-approved** (until then it is a
+  PILOT: `jobs/2026-11-16-n`, private, never posted). It is a mix, never a replacement: Ved and the townspeople are in it (rim-lit),
+  his voice and the comic beat stay. Night plates come from `blendkit.night_set` (+ `dutch`), the graphics from the night layers
+  (`hud`, `eqbar`, `tracker`, `stamp`, `optcard`, `phone`, `crowd`, `nodes`, `burst`; see `docs/job-spec.md` "Night set"). Fixed
+  colour meaning (green survives/true, red scam/danger, gold money, blue data); money always fictional ("NOT REAL MONEY"), phone
+  apps always fictional (our own UI and names, never a real app's logo or layout); documentary, never a how-to (no tips, no real
+  channel names, no steps that would let someone run the scam). Techniques learned from other creators are fine; their layouts,
+  wording and assets never.
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,
