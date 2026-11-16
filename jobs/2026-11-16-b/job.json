@@ -1,0 +1,3059 @@
+{
+ "id": "2026-11-16-b",
+ "title": "The night the sky fell (1833) 🌠",
+ "description": "On 13 November 1833 up to ~100,000 shooting stars an hour fell over America, and many thought the world was ending. Yale's Denison Olmsted collected reports through newspapers, saw every streak came from one point in Leo that moved with the stars, and showed meteors come from space. They're dust from comet Tempel-Tuttle; the Leonids peak again on 17-18 November 2026 (~15 an hour).\n\nSources: Smithsonian Magazine; Linda Hall Library; The Irish Times; Space.com.",
+ "tags": [
+  "leonids",
+  "1833 meteor storm",
+  "leonid meteor shower",
+  "meteor shower 2026",
+  "denison olmsted",
+  "night the stars fell",
+  "astronomy history",
+  "science history",
+  "space"
+ ],
+ "hashtags": [
+  "#space",
+  "#history"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#science",
+   "#leonids",
+   "#meteorshower",
+   "#astronomy",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "wild-story",
+  "topic": "the 1833 Leonid meteor storm: up to ~100,000 an hour, panic, Denison Olmsted crowdsourced reports via newspapers, radiant in Leo moving with the stars = from space (birth of meteor science), comet Tempel-Tuttle, ~33-year cycle, 2026 peak ~15/h",
+  "hook": "number-shock",
+  "idea_source": "trending + unique: Leonids peak 17-18 Nov 2026 (Space.com) and the 1833 storm anniversary week; backlog idea (1833 Leonid storm); few Shorts tell the Olmsted crowdsourcing story",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.smithsonianmag.com/smart-news/americans-fell-in-love-with-science-when-the-breathtaking-leonid-meteor-shower-lit-up-the-skies-across-nation-180985435/",
+   "https://www.lindahall.org/about/news/scientist-of-the-day/denison-olmsted/",
+   "https://www.irishtimes.com/culture/they-thought-it-was-judgment-day-the-night-the-stars-fell-on-the-us-south-1.4075652",
+   "https://www.space.com/leonid-meteor-shower"
+  ],
+  "humour": {
+   "trend": "timeless dry aside (no current meme fit: 'Remember November' already used twice this week): side-eye + 'the 1833 group chat: u guys seeing this??' card",
+   "beat": "side_eye",
+   "scene": 2
+  },
+  "claims": [
+   {
+    "claim": "the 1833 Leonid storm (night of 12-13 Nov) reached ~50,000-150,000 meteors an hour (~100,000)",
+    "tag": "PROVEN",
+    "source": "https://www.smithsonianmag.com/smart-news/americans-fell-in-love-with-science-when-the-breathtaking-leonid-meteor-shower-lit-up-the-skies-across-nation-180985435/"
+   },
+   {
+    "claim": "many who saw it thought it was Judgment Day / the end of the world",
+    "tag": "PROVEN",
+    "source": "https://www.irishtimes.com/culture/they-thought-it-was-judgment-day-the-night-the-stars-fell-on-the-us-south-1.4075652"
+   },
+   {
+    "claim": "Olmsted (Yale) crowdsourced observations through newspapers",
+    "tag": "PROVEN",
+    "source": "https://www.smithsonianmag.com/smart-news/americans-fell-in-love-with-science-when-the-breathtaking-leonid-meteor-shower-lit-up-the-skies-across-nation-180985435/"
+   },
+   {
+    "claim": "meteors radiated from a point in Leo that moved with the stars -> cosmic, not atmospheric; birth of meteor-shower science",
+    "tag": "PROVEN",
+    "source": "https://www.lindahall.org/about/news/scientist-of-the-day/denison-olmsted/"
+   },
+   {
+    "claim": "the Leonids come from comet Tempel-Tuttle; big displays roughly every 33 years",
+    "tag": "PROVEN",
+    "source": "https://www.irishtimes.com/culture/they-thought-it-was-judgment-day-the-night-the-stars-fell-on-the-us-south-1.4075652"
+   },
+   {
+    "claim": "2026 Leonids peak 17-18 Nov, ZHR ~15",
+    "tag": "PROVEN",
+    "source": "https://www.space.com/leonid-meteor-shower"
+   },
+   {
+    "claim": "the sky 'can fall again' on a future return (storms are forecast, not guaranteed)",
+    "tag": "THEORY",
+    "source": "https://www.irishtimes.com/culture/they-thought-it-was-judgment-day-the-night-the-stars-fell-on-the-us-south-1.4075652"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "THE SKY *FELL*",
+  "title_y": 0.15,
+  "title_size": 190,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffb35a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.4,
+  "bg_saturation": 1.5,
+  "tint": [
+   "#1f4fb8",
+   "#f08a24"
+  ],
+  "tint_amount": 0.3,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-16-b/assets/plate_town_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+    "x": 0.4,
+    "y": 0.32,
+    "w": 0.6,
+    "rotate": 130,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+    "x": 0.72,
+    "y": 0.42,
+    "w": 0.5,
+    "rotate": 120,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+    "x": 0.25,
+    "y": 0.5,
+    "w": 0.45,
+    "rotate": 140,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.93,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-16-b/assets.py",
+ "scenes": [
+  {
+   "say": "November 1833. The sky *fell*. Up to 100,000 shooting stars an hour.",
+   "caption_y": 0.47,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_town_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.5771,
+     "y": 0.6517,
+     "h": 0.2324,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ],
+      [
+       "explain",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.2,
+       0.06,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/fg_town_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7348903385260096,
+     "y": 0.14870058160968397,
+     "w": 0.31527064173986696,
+     "rotate": 84.35914597681071,
+     "at": 0.47117349667089603,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.130288859489493,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7348903385260096,
+       "y": 0.14870058160968397
+      },
+      {
+       "t": 0.6591153628185972,
+       "x": 0.7588059519828776,
+       "y": 0.28490007133058654,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.8094374143152299,
+     "y": 0.03542186859517438,
+     "w": 0.368250371240298,
+     "rotate": 54.22191264846862,
+     "at": 0.7567639569115591,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.3375592595073844,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.8094374143152299,
+       "y": 0.03542186859517438
+      },
+      {
+       "t": 0.5807953025958253,
+       "x": 0.9431381988232114,
+       "y": 0.13978262050781448,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7701377306447468,
+     "y": 0.10829400611415545,
+     "w": 0.23269211542904586,
+     "rotate": 76.0049941232154,
+     "at": 3.4880483686840864,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 4.009287734180638,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7701377306447468,
+       "y": 0.10829400611415545
+      },
+      {
+       "t": 0.5212393654965513,
+       "x": 0.8294507879036985,
+       "y": 0.24215778188918446,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5720602846669121,
+     "y": 0.07906689241222627,
+     "w": 0.4197017890751553,
+     "rotate": 119.14349256684271,
+     "at": 4.478986904887709,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 5.05534199829972,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5720602846669121,
+       "y": 0.07906689241222627
+      },
+      {
+       "t": 0.576355093412011,
+       "x": 0.44641405454502087,
+       "y": 0.20582009350325575,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "THE NIGHT THE SKY *FELL*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.165,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "hud",
+     "label": "shooting stars per hour",
+     "x": 0.5,
+     "y": 0.3,
+     "enter": "none",
+     "sfx": "click",
+     "steps": [
+      [
+       0,
+       0
+      ],
+      [
+       0.1,
+       100000
+      ]
+     ],
+     "count_dur": 1.0,
+     "tone": "gold",
+     "indian": false,
+     "width_of": "100,000"
+    }
+   ]
+  },
+  {
+   "say": "Many thought the world was *ending*.",
+   "transition": "slide_left",
+   "caption_y": 0.47,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.47
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_town_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.2509,
+     "y": 0.6802,
+     "h": 0.127,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ],
+      [
+       "surprised",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "long"
+       ],
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bottom": [
+        "#7c2533",
+        "skirt"
+       ],
+       "shoes": "#3a2a22"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.0706,
+       "y": 0.6763,
+       "scale": 0.9244
+      },
+      {
+       "t": 1.0,
+       "x": 0.2509,
+       "y": 0.6802,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "hops": [
+      [
+       1.4,
+       0.06,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.6477,
+     "y": 0.6849,
+     "h": 0.1386,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "shrug",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "straw",
+        "#e0c27a"
+       ],
+       "top": [
+        "#f6efe2",
+        "shirt"
+       ],
+       "bottom": [
+        "#5a4632",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "apron": "#8a6142"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.5,
+       0.07,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "think",
+     "x": 0.9397,
+     "y": 0.6879,
+     "h": 0.1498,
+     "enter": "none",
+     "acting": [
+      [
+       "think",
+       0
+      ],
+      [
+       "crossed",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6246055876172177,
+     "y": 0.12028881816906292,
+     "w": 0.2633459600927696,
+     "rotate": 88.76621974313893,
+     "at": 0.5969069047782164,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.050185452175442,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6246055876172177,
+       "y": 0.12028881816906292
+      },
+      {
+       "t": 0.45327854739722556,
+       "x": 0.6302086408914094,
+       "y": 0.26662946186264086,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7310600489999364,
+     "y": 0.07433507690772898,
+     "w": 0.39428094894485644,
+     "rotate": 49.95627062360515,
+     "at": 1.0297146991431205,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.4801584146937543,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7310600489999364,
+       "y": 0.07433507690772898
+      },
+      {
+       "t": 0.45044371555063367,
+       "x": 0.8234934851085075,
+       "y": 0.13620292807336484,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6927081050234907,
+     "y": 0.18560251200225192,
+     "w": 0.4122955977900167,
+     "rotate": 77.57322092090361,
+     "at": 1.1709456382495118,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.6932719301862433,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6927081050234907,
+       "y": 0.18560251200225192
+      },
+      {
+       "t": 0.5223262919367316,
+       "x": 0.7546984549729293,
+       "y": 0.3438457321604067,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6550749619118363,
+     "y": 0.03382312254866361,
+     "w": 0.3406219994815309,
+     "rotate": 59.744180566708394,
+     "at": 1.7861189934722383,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.311458768664604,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6550749619118363,
+       "y": 0.03382312254866361
+      },
+      {
+       "t": 0.5253397751923656,
+       "x": 0.7316509058459982,
+       "y": 0.10766604053885304,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.8137699495099102,
+     "y": 0.040795880294746595,
+     "w": 0.38897617787762595,
+     "rotate": 20.52033463288437,
+     "at": 2.420466913414091,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.057915668986909,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.8137699495099102,
+       "y": 0.040795880294746595
+      },
+      {
+       "t": 0.6374487555728183,
+       "x": 0.9146099222219668,
+       "y": 0.06202649663175592,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5254143910257123,
+     "y": 0.06877504011827618,
+     "w": 0.3696796112969326,
+     "rotate": 127.72555382084839,
+     "at": 3.184438181305301,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.661451398571509,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5254143910257123,
+       "y": 0.06877504011827618
+      },
+      {
+       "t": 0.4770132172662082,
+       "x": 0.39412371452104955,
+       "y": 0.16423905035918301,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "THE END OF THE *WORLD?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.165,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_town_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "the 1833 group chat:\n*\"u guys seeing this??\"*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "But Yale's *Denison Olmsted* got curious.",
+   "transition": "slide_left",
+   "caption_y": 0.47,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.52
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_town_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4135,
+     "y": 0.6471,
+     "h": 0.2056,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ],
+      [
+       "point",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e8b98f",
+       "build": "slim",
+       "hair": [
+        "#5a4632",
+        "short"
+       ],
+       "hat": [
+        "tophat",
+        "#25262b"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5503,
+       "y": 0.6423,
+       "scale": 0.9061
+      },
+      {
+       "t": 1.0,
+       "x": 0.4135,
+       "y": 0.6471,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.7564,
+     "y": 0.655,
+     "h": 0.2457,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       0.6
+      ],
+      [
+       "explain",
+       2.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/fg_town_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 620 150'><rect x='5' y='5' width='610' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='40' y='78' font-size='56' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>DENISON OLMSTED</text><text x='40' y='122' font-size='30' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>PROFESSOR, YALE COLLEGE</text></svg>",
+     "x": 0.36,
+     "y": 0.27,
+     "w": 0.56,
+     "rotate": -2,
+     "enter": "slide_right",
+     "at": 0.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [],
+     "x": 0.5,
+     "y": 0.14,
+     "at": 1.6,
+     "enter": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.76,
+     "y": 0.36,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "He had newspapers collect what *everyone* saw.",
+   "transition": "slide_up",
+   "caption_y": 0.71,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_town_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 8
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 380'><rect x='5' y='5' width='890' height='370' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='78' text-anchor='middle' font-size='54' fill='#1a1410' font-family='Libre Baskerville, DejaVu Serif, serif' font-weight='700'>THE TOWN GAZETTE</text><line x1='60' y1='100' x2='840' y2='100' stroke='#1a1410' stroke-width='4'/><text x='450' y='160' text-anchor='middle' font-size='40' fill='#7c2533' font-family='Anton, DejaVu Sans, sans-serif'>WANTED: WHAT DID YOU SEE IN THE SKY?</text><text x='450' y='205' text-anchor='middle' font-size='28' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>Write to Prof. Olmsted, Yale College</text><rect x='60' y='235' width='230' height='10' rx='5' fill='#b9ab98'/><rect x='60' y='261' width='200' height='10' rx='5' fill='#b9ab98'/><rect x='60' y='287' width='170' height='10' rx='5' fill='#b9ab98'/><rect x='60' y='313' width='230' height='10' rx='5' fill='#b9ab98'/><rect x='60' y='339' width='200' height='10' rx='5' fill='#b9ab98'/><rect x='330' y='235' width='230' height='10' rx='5' fill='#b9ab98'/><rect x='330' y='261' width='200' height='10' rx='5' fill='#b9ab98'/><rect x='330' y='287' width='170' height='10' rx='5' fill='#b9ab98'/><rect x='330' y='313' width='230' height='10' rx='5' fill='#b9ab98'/><rect x='330' y='339' width='200' height='10' rx='5' fill='#b9ab98'/><rect x='600' y='235' width='230' height='10' rx='5' fill='#b9ab98'/><rect x='600' y='261' width='200' height='10' rx='5' fill='#b9ab98'/><rect x='600' y='287' width='170' height='10' rx='5' fill='#b9ab98'/><rect x='600' y='313' width='230' height='10' rx='5' fill='#b9ab98'/><rect x='600' y='339' width='200' height='10' rx='5' fill='#b9ab98'/></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.84,
+     "rotate": -2,
+     "enter": "drop",
+     "at": 0.1,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.22,
+       "scale": 1.0
+      },
+      {
+       "t": 1.3,
+       "y": 0.2,
+       "scale": 0.92
+      }
+     ]
+    },
+    {
+     "type": "nodes",
+     "nodes": [
+      {
+       "id": "o",
+       "pos": [
+        0,
+        0,
+        0
+       ],
+       "at": 1.5,
+       "tone": "gold",
+       "label": "OLMSTED"
+      },
+      {
+       "id": "a",
+       "pos": [
+        -1.8,
+        1.3,
+        0.3
+       ],
+       "at": 1.7,
+       "tone": "blue",
+       "label": "BOSTON"
+      },
+      {
+       "id": "b",
+       "pos": [
+        1.7,
+        1.2,
+        -0.3
+       ],
+       "at": 1.85,
+       "tone": "blue",
+       "label": "NEW YORK"
+      },
+      {
+       "id": "c",
+       "pos": [
+        -1.9,
+        -1.2,
+        0.4
+       ],
+       "at": 2.0,
+       "tone": "blue",
+       "label": "OHIO"
+      },
+      {
+       "id": "d",
+       "pos": [
+        1.8,
+        -1.3,
+        -0.2
+       ],
+       "at": 2.15,
+       "tone": "blue",
+       "label": "ALABAMA"
+      }
+     ],
+     "x": 0.5,
+     "y": 0.5,
+     "yaw": [
+      -14,
+      10
+     ],
+     "edges": [
+      [
+       "a",
+       "o",
+       1.9,
+       "blue"
+      ],
+      [
+       "b",
+       "o",
+       2.05,
+       "blue"
+      ],
+      [
+       "c",
+       "o",
+       2.2,
+       "blue"
+      ],
+      [
+       "d",
+       "o",
+       2.35,
+       "blue"
+      ]
+     ]
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0.6
+     ],
+     "x": 0.5,
+     "y": 0.66,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Every streak pointed back to *one spot*, in Leo.",
+   "transition": "zoom",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.08,
+      "focus": [
+       0.58,
+       0.4
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_town_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.45084817808053546,
+     "y": 0.1624855983244701,
+     "w": 0.3374769657699794,
+     "rotate": -158.48194101102146,
+     "at": 0.0,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 0.5769603182655678,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.45084817808053546,
+       "y": 0.1624855983244701
+      },
+      {
+       "t": 0.5769603182655678,
+       "x": 0.31619990186503383,
+       "y": 0.1326233747814627,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.4948615851296294,
+     "y": 0.19472324748680453,
+     "w": 0.2806802525249051,
+     "rotate": -175.71288994495004,
+     "at": 0.11246603438548768,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 0.5859968984427922,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4948615851296294,
+       "y": 0.19472324748680453
+      },
+      {
+       "t": 0.4735308640573046,
+       "x": 0.33130999603204325,
+       "y": 0.18782671407856377,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.697717843861196,
+     "y": 0.08886067847896068,
+     "w": 0.41295155622511337,
+     "rotate": -68.52796762781611,
+     "at": 0.24706705374918397,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 0.9426154089488785,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.697717843861196,
+       "y": 0.08886067847896068
+      },
+      {
+       "t": 0.6955483551996945,
+       "x": 0.7576309959729449,
+       "y": 0.003182708722374805,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5768870823042206,
+     "y": 0.17846699221257664,
+     "w": 0.23191022103377099,
+     "rotate": -138.39742635171453,
+     "at": 0.44739225335338406,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.0294875698960038,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5768870823042206,
+       "y": 0.17846699221257664
+      },
+      {
+       "t": 0.5820953165426197,
+       "x": 0.48524980560719366,
+       "y": 0.1326981995119953,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6224587338335071,
+     "y": 0.2272967116302724,
+     "w": 0.38848542570370637,
+     "rotate": 87.09948491947732,
+     "at": 0.545020826279793,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.1051536054439572,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6224587338335071,
+       "y": 0.2272967116302724
+      },
+      {
+       "t": 0.5601327791641642,
+       "x": 0.6348195721707267,
+       "y": 0.3645259777677185,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5340781180753831,
+     "y": 0.14135928111860502,
+     "w": 0.2756325799327772,
+     "rotate": -129.49498514909627,
+     "at": 0.7219124114764076,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.286244881876297,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5340781180753831,
+       "y": 0.14135928111860502
+      },
+      {
+       "t": 0.5643324703998894,
+       "x": 0.4073596180951221,
+       "y": 0.05487532885910995,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7795416577696425,
+     "y": 0.1975700663510982,
+     "w": 0.2659331803215811,
+     "rotate": -1.551009003768342,
+     "at": 0.9137656200463086,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.442584924300196,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7795416577696425,
+       "y": 0.1975700663510982
+      },
+      {
+       "t": 0.5288193042538875,
+       "x": 0.9365134597747062,
+       "y": 0.1951792734450122,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.762556081127751,
+     "y": 0.2378711449240724,
+     "w": 0.2973027063411869,
+     "rotate": 25.28045984157334,
+     "at": 0.9869039947314202,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.6485499002017148,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.762556081127751,
+       "y": 0.2378711449240724
+      },
+      {
+       "t": 0.6616459054702946,
+       "x": 0.8908863644700314,
+       "y": 0.2719630947038051,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6376183730936702,
+     "y": 0.1858631329480028,
+     "w": 0.31399745520273326,
+     "rotate": -54.96848161099042,
+     "at": 1.1978042383319816,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.875372220358027,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6376183730936702,
+       "y": 0.1858631329480028
+      },
+      {
+       "t": 0.6775679820260453,
+       "x": 0.7294702430297488,
+       "y": 0.11216179475632841,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5883018223503166,
+     "y": 0.21340056242530286,
+     "w": 0.27395511737002853,
+     "rotate": 143.07277970854122,
+     "at": 1.3440358941174293,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.988663608786592,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5883018223503166,
+       "y": 0.21340056242530286
+      },
+      {
+       "t": 0.6446277146691627,
+       "x": 0.4493858900292537,
+       "y": 0.27212796447064225,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.49192599433724427,
+     "y": 0.32614467943412734,
+     "w": 0.269277589778626,
+     "rotate": 119.73082516680525,
+     "at": 1.398714419835217,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.8782123396901047,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.49192599433724427,
+       "y": 0.32614467943412734
+      },
+      {
+       "t": 0.4794979198548877,
+       "x": 0.3772598078953856,
+       "y": 0.4390835170678164,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7688806973750051,
+     "y": 0.23309228090307,
+     "w": 0.3094849755002043,
+     "rotate": 21.561625058787566,
+     "at": 1.5441046308956705,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.1339284162982692,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7688806973750051,
+       "y": 0.23309228090307
+      },
+      {
+       "t": 0.5898237854025987,
+       "x": 0.8813773662541274,
+       "y": 0.25809734490965863,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6112686178164399,
+     "y": 0.15701379353313194,
+     "w": 0.3041511234492842,
+     "rotate": -96.51808234283389,
+     "at": 1.697068441529037,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.1761954384389632,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6112686178164399,
+       "y": 0.15701379353313194
+      },
+      {
+       "t": 0.4791269969099264,
+       "x": 0.5810235775479833,
+       "y": 0.00811187648882375,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5807547781178675,
+     "y": 0.3765740658357226,
+     "w": 0.39697302254979416,
+     "rotate": 97.1261917886154,
+     "at": 1.8432865673009091,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.3693228547686562,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5807547781178675,
+       "y": 0.3765740658357226
+      },
+      {
+       "t": 0.5260362874677473,
+       "x": 0.5450600018796897,
+       "y": 0.5371737889918521,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.4718618060041282,
+     "y": 0.2652460536470691,
+     "w": 0.4178603395020345,
+     "rotate": 141.93886934593957,
+     "at": 1.987071022143444,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.4621542101894147,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4718618060041282,
+       "y": 0.2652460536470691
+      },
+      {
+       "t": 0.4750831880459707,
+       "x": 0.3329445302101884,
+       "y": 0.32643084188074145,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6063114447657292,
+     "y": 0.3479129546639891,
+     "w": 0.23467971067768484,
+     "rotate": 92.97992083018335,
+     "at": 2.1313243368577526,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.6554055275074893,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6063114447657292,
+       "y": 0.3479129546639891
+      },
+      {
+       "t": 0.5240811906497366,
+       "x": 0.594593975603712,
+       "y": 0.4745271557448288,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5608484412215182,
+     "y": 0.18095644588098805,
+     "w": 0.31064162094476977,
+     "rotate": -150.21547265968127,
+     "at": 2.263011717296193,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.8059377289445004,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5608484412215182,
+       "y": 0.18095644588098805
+      },
+      {
+       "t": 0.542926011648307,
+       "x": 0.4193972480340506,
+       "y": 0.13541692827077279,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5039662179347258,
+     "y": 0.20669788788735852,
+     "w": 0.25082706378521213,
+     "rotate": 174.1408319745162,
+     "at": 2.4939134672487313,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.9896203961934025,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5039662179347258,
+       "y": 0.20669788788735852
+      },
+      {
+       "t": 0.4957069289446713,
+       "x": 0.3347589876138341,
+       "y": 0.21646513875385387,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6596828426181084,
+     "y": 0.150812166715237,
+     "w": 0.40808097921897646,
+     "rotate": -65.59129819452666,
+     "at": 2.6328423730942485,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.267698470548411,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6596828426181084,
+       "y": 0.150812166715237
+      },
+      {
+       "t": 0.6348560974541628,
+       "x": 0.7326426414442553,
+       "y": 0.06037674968408088,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7837109698569991,
+     "y": 0.17016586217118795,
+     "w": 0.2407679362729896,
+     "rotate": -17.9510931688877,
+     "at": 2.705658979540299,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.2610232855271386,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7837109698569991,
+       "y": 0.17016586217118795
+      },
+      {
+       "t": 0.5553643059868394,
+       "x": 0.930078689694827,
+       "y": 0.1434923000321019,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6808433901864634,
+     "y": 0.19182471718722732,
+     "w": 0.3847435693514705,
+     "rotate": -13.434655875978548,
+     "at": 2.833869647169378,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.348114996749456,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6808433901864634,
+       "y": 0.19182471718722732
+      },
+      {
+       "t": 0.514245349580078,
+       "x": 0.8361830273308886,
+       "y": 0.17095235189336005,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.597227693042958,
+     "y": 0.24576492422878737,
+     "w": 0.265679267465025,
+     "rotate": 105.63672473450535,
+     "at": 3.033646630652994,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.5008406616948546,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.597227693042958,
+       "y": 0.24576492422878737
+      },
+      {
+       "t": 0.4671940310418609,
+       "x": 0.5268503391803079,
+       "y": 0.38720049652379124,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7181589064378001,
+     "y": 0.1263649106169914,
+     "w": 0.2607957758739369,
+     "rotate": -53.13604487692268,
+     "at": 3.173936634282401,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.853276678905545,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7181589064378001,
+       "y": 0.1263649106169914
+      },
+      {
+       "t": 0.6793400446231437,
+       "x": 0.8168050531464316,
+       "y": 0.0523643120591592,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5999486009986973,
+     "y": 0.2930702378628862,
+     "w": 0.2937570740744525,
+     "rotate": 96.9098140903828,
+     "at": 3.2636574793079154,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.7577209231511195,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5999486009986973,
+       "y": 0.2930702378628862
+      },
+      {
+       "t": 0.4940634438432043,
+       "x": 0.57762151242934,
+       "y": 0.3967032783206017,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6896087743842089,
+     "y": 0.24253336947565574,
+     "w": 0.3513864093019144,
+     "rotate": 47.36826742581398,
+     "at": 3.4632169422902654,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 4.158340297624825,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6896087743842089,
+       "y": 0.24253336947565574
+      },
+      {
+       "t": 0.6951233553345593,
+       "x": 0.8358761094994058,
+       "y": 0.3319077717936133,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5768923898602868,
+     "y": 0.1857746201581133,
+     "w": 0.40204249047856333,
+     "rotate": -149.60150345513563,
+     "at": 3.6191221591248652,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 4.073595708391757,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5768923898602868,
+       "y": 0.1857746201581133
+      },
+      {
+       "t": 0.4544735492668913,
+       "x": 0.47811896271339105,
+       "y": 0.15317969051818262,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><circle cx='150' cy='150' r='120' fill='none' stroke='#f2b04a' stroke-width='12' stroke-dasharray='26 14'/><circle cx='150' cy='150' r='14' fill='#fff3c4'/></svg>",
+     "x": 0.62,
+     "y": 0.2,
+     "w": 0.2,
+     "enter": "zoom",
+     "at": 1.4,
+     "sfx": "pop",
+     "loop": "pulse",
+     "loop_amp": 0.05
+    },
+    {
+     "type": "text",
+     "text": "ONE *SPOT*: LEO",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.33,
+     "size": 100,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0,
+      1.6
+     ],
+     "x": 0.5,
+     "y": 0.42,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "And it moved *with the stars*. Not weather. *Space*.",
+   "transition": "cut",
+   "caption_y": 0.7,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_town_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "scale": 1.06
+      },
+      {
+       "t": 3.6,
+       "x": 0.44,
+       "scale": 1.06,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5454859006502816,
+     "y": 0.10270965397233203,
+     "w": 0.2661117217930936,
+     "rotate": -113.30712253276674,
+     "at": 0.0,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 0.49643104346843386,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5454859006502816,
+       "y": 0.10270965397233203
+      },
+      {
+       "t": 0.49643104346843386,
+       "x": 0.44325209091433404,
+       "y": -0.030773308470193855,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6522324556214607,
+     "y": 0.32505130404188176,
+     "w": 0.26278150609834816,
+     "rotate": 81.05865680236057,
+     "at": 0.16471599181684177,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 0.7475446797785963,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6522324556214607,
+       "y": 0.32505130404188176
+      },
+      {
+       "t": 0.5828286879617546,
+       "x": 0.6822681659021879,
+       "y": 0.4324340753422736,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.47326279980707653,
+     "y": 0.23621270754795767,
+     "w": 0.2751673707878313,
+     "rotate": 155.36891822119654,
+     "at": 0.37946567537633624,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 0.8330737736168592,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.47326279980707653,
+       "y": 0.23621270754795767
+      },
+      {
+       "t": 0.45360809824052295,
+       "x": 0.328827253560274,
+       "y": 0.2734628957694964,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7319948504847074,
+     "y": 0.1284439628663126,
+     "w": 0.3689500305604415,
+     "rotate": -46.33749748856171,
+     "at": 0.5646710321940114,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.221262367228132,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7319948504847074,
+       "y": 0.1284439628663126
+      },
+      {
+       "t": 0.6565913350341206,
+       "x": 0.8739060505702148,
+       "y": 0.04480229581914785,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6328401737638586,
+     "y": 0.14633052667966645,
+     "w": 0.3710007702554802,
+     "rotate": -74.24260172452551,
+     "at": 0.8449323416795634,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.416628714937798,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6328401737638586,
+       "y": 0.14633052667966645
+      },
+      {
+       "t": 0.5716963732582345,
+       "x": 0.7082500892486534,
+       "y": -0.003998327180957162,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5300172892825952,
+     "y": 0.21951155148090984,
+     "w": 0.24347201011475805,
+     "rotate": 154.647952627109,
+     "at": 1.0064138598601682,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.5348542013164996,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5300172892825952,
+       "y": 0.21951155148090984
+      },
+      {
+       "t": 0.5284403414563315,
+       "x": 0.39947556249837424,
+       "y": 0.25430326465174236,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6804748447173145,
+     "y": 0.054356766545749974,
+     "w": 0.36968229828350907,
+     "rotate": -72.62689062831916,
+     "at": 1.2319643643458746,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.8205209539254361,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6804748447173145,
+       "y": 0.054356766545749974
+      },
+      {
+       "t": 0.5885565895795615,
+       "x": 0.7561376650516878,
+       "y": -0.08167713602099236,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5395586196880654,
+     "y": 0.13443833255472887,
+     "w": 0.32453866028226686,
+     "rotate": -116.34423656447487,
+     "at": 1.3634853761198966,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.8641420341200452,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5395586196880654,
+       "y": 0.13443833255472887
+      },
+      {
+       "t": 0.5006566580001487,
+       "x": 0.4634641622707014,
+       "y": 0.04800085298410389,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.48386262683300857,
+     "y": 0.2160938735179384,
+     "w": 0.3181714271754421,
+     "rotate": 165.4052485096039,
+     "at": 1.5753311756038013,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.058026416088729,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.48386262683300857,
+       "y": 0.2160938735179384
+      },
+      {
+       "t": 0.4826952404849278,
+       "x": 0.3528445813040729,
+       "y": 0.23528346474464562,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5985091277844858,
+     "y": 0.25029809231236366,
+     "w": 0.35024635408682514,
+     "rotate": 84.84419851886945,
+     "at": 1.7735446993748518,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.2418636438558313,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5985091277844858,
+       "y": 0.25029809231236366
+      },
+      {
+       "t": 0.4683189444809795,
+       "x": 0.6191158986315851,
+       "y": 0.37876298878748904,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.470272002031918,
+     "y": 0.254025906285654,
+     "w": 0.24834911271635776,
+     "rotate": 140.28795362103855,
+     "at": 2.0453666042265692,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.50616873951697,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.470272002031918,
+       "y": 0.254025906285654
+      },
+      {
+       "t": 0.46080213529040065,
+       "x": 0.3119740128075085,
+       "y": 0.3279821431416723,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6686055659186778,
+     "y": 0.12197092594500929,
+     "w": 0.3936483041216101,
+     "rotate": -58.26766371546553,
+     "at": 2.2306095277504103,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.7839822538485888,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6686055659186778,
+       "y": 0.12197092594500929
+      },
+      {
+       "t": 0.5533727260981786,
+       "x": 0.7528115370939095,
+       "y": 0.04537578963658345,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6067670628820246,
+     "y": 0.1555791923961698,
+     "w": 0.3633022181046899,
+     "rotate": -70.85803623338863,
+     "at": 2.438619242429703,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.982308303237589,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6067670628820246,
+       "y": 0.1555791923961698
+      },
+      {
+       "t": 0.5436890608078858,
+       "x": 0.6952396488025799,
+       "y": 0.012203748094617939,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6874558247144178,
+     "y": 0.18870214149408673,
+     "w": 0.34344809925938136,
+     "rotate": -10.330815811423799,
+     "at": 2.5637007503967277,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.0666296728367852,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6874558247144178,
+       "y": 0.18870214149408673
+      },
+      {
+       "t": 0.5029289224400575,
+       "x": 0.844794636486362,
+       "y": 0.17256922853622306,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5026495696421028,
+     "y": 0.1743853340010942,
+     "w": 0.2790650144113221,
+     "rotate": -147.15900589590376,
+     "at": 2.808087455259111,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.343420927716175,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5026495696421028,
+       "y": 0.1743853340010942
+      },
+      {
+       "t": 0.5353334724570643,
+       "x": 0.35361302096355063,
+       "y": 0.12027368267396317,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.546581556314164,
+     "y": 0.1693456762852029,
+     "w": 0.34870536088215154,
+     "rotate": -113.74874115060715,
+     "at": 2.9664483433868,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.4337343244703593,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.546581556314164,
+       "y": 0.1693456762852029
+      },
+      {
+       "t": 0.4672859810835591,
+       "x": 0.4732571714675642,
+       "y": 0.07560377256764375,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5387354895546671,
+     "y": 0.19562990936196956,
+     "w": 0.23853238571671495,
+     "rotate": -164.4063859413809,
+     "at": 3.2056152990512614,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.7413800622669893,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5387354895546671,
+       "y": 0.19562990936196956
+      },
+      {
+       "t": 0.535764763215728,
+       "x": 0.404511594728317,
+       "y": 0.1745587386326657,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6044323576099608,
+     "y": 0.1997030539726096,
+     "w": 0.33945178165884005,
+     "rotate": -0.7510418309927667,
+     "at": 3.3502974540937576,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.867533534049309,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6044323576099608,
+       "y": 0.1997030539726096
+      },
+      {
+       "t": 0.5172360799555515,
+       "x": 0.7294223298637879,
+       "y": 0.19878140813137635,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><circle cx='150' cy='150' r='120' fill='none' stroke='#f2b04a' stroke-width='12' stroke-dasharray='26 14'/><circle cx='150' cy='150' r='14' fill='#fff3c4'/></svg>",
+     "x": 0.62,
+     "y": 0.2,
+     "w": 0.2,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.62
+      },
+      {
+       "t": 3.6,
+       "x": 0.56,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "optcard",
+     "label": "the cause",
+     "text": "WEATHER",
+     "tone": "blue",
+     "x": 0.28,
+     "y": 0.42,
+     "w": 0.4,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop",
+     "verdict": "cross",
+     "verdict_at": 1.4
+    },
+    {
+     "type": "optcard",
+     "label": "the cause",
+     "text": "SPACE",
+     "tone": "green",
+     "x": 0.72,
+     "y": 0.42,
+     "w": 0.4,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop",
+     "verdict": "tick",
+     "verdict_at": 2.2
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0,
+      0,
+      2.4
+     ],
+     "x": 0.5,
+     "y": 0.53,
+     "enter": "none"
+    },
+    {
+     "type": "stamp",
+     "text": "METEOR SCIENCE IS BORN",
+     "tone": "gold",
+     "angle": -6,
+     "size": 58,
+     "x": 0.5,
+     "y": 0.6,
+     "at": 2.8,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "It's dust from Comet *Tempel-Tuttle*. We hit it every November.",
+   "transition": "slide_up",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_trail.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/comet.png",
+     "x": 0.78,
+     "y": 0.2,
+     "w": 0.22,
+     "enter": "fade",
+     "at": 0.0,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.86,
+       "y": 0.16,
+       "rot": -8
+      },
+      {
+       "t": 4.0,
+       "x": 0.72,
+       "y": 0.22,
+       "rot": 6,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "COMET *TEMPEL-TUTTLE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "stamp",
+     "text": "FROM SPACE",
+     "tone": "green",
+     "angle": -7,
+     "size": 96,
+     "x": 0.42,
+     "y": 0.27,
+     "at": 1.3,
+     "sfx": "thud"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.76,
+     "y": 0.34,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "click"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 140'><rect x='5' y='5' width='590' height='130' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='300' y='92' text-anchor='middle' font-size='58' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>EVERY NOVEMBER</text></svg>",
+     "x": 0.5,
+     "y": 0.44,
+     "w": 0.46,
+     "rotate": 2,
+     "enter": "pop",
+     "at": 2.8,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "This week? About *fifteen* an hour.",
+   "transition": "slide_left",
+   "caption_y": 0.47,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.47
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_town_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.2509,
+     "y": 0.6802,
+     "h": 0.127,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "happy",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "long"
+       ],
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bottom": [
+        "#7c2533",
+        "skirt"
+       ],
+       "shoes": "#3a2a22"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6477,
+     "y": 0.6849,
+     "h": 0.1386,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "straw",
+        "#e0c27a"
+       ],
+       "top": [
+        "#f6efe2",
+        "shirt"
+       ],
+       "bottom": [
+        "#5a4632",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "apron": "#8a6142"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.9397,
+     "y": 0.6879,
+     "h": 0.1498,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.8,
+     "y": 0.06,
+     "w": 0.35,
+     "rotate": 149.34933204294714,
+     "at": 0.6,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 1.2,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.8,
+       "y": 0.06
+      },
+      {
+       "t": 0.6,
+       "x": 0.5,
+       "y": 0.16,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.3,
+     "y": 0.1,
+     "w": 0.3,
+     "rotate": 130.15599962491933,
+     "at": 2.2,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.8000000000000003,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3,
+       "y": 0.1
+      },
+      {
+       "t": 0.6,
+       "x": 0.12,
+       "y": 0.22,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "Leonids, Nov 17-18, 2026",
+     "x": 0.5,
+     "y": 0.14,
+     "enter": "pop",
+     "sfx": "click",
+     "steps": [
+      [
+       0,
+       100000
+      ],
+      [
+       0.6,
+       15
+      ]
+     ],
+     "count_dur": 0.9,
+     "tone": "blue",
+     "indian": false,
+     "suffix": " / hour",
+     "width_of": "100,000 / hour"
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.8,
+       "1833: 100,000 / hour"
+      ],
+      [
+       1.8,
+       "100,000 ÷ 15 ≈ *6,700x* more"
+      ]
+     ],
+     "tone": "gold",
+     "x": 0.5,
+     "y": 0.24,
+     "enter": "fade"
+    }
+   ]
+  },
+  {
+   "say": "But every 33 years the comet returns, and the sky can *fall* again.",
+   "transition": "cut",
+   "caption_y": 0.64,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-b/assets/plate_town_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 4.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.5822932243328174,
+     "y": 0.11898770112361876,
+     "w": 0.28348701810914995,
+     "rotate": 138.3015976359471,
+     "at": 1.9834629086482833,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.5588635762902916,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5822932243328174,
+       "y": 0.11898770112361876
+      },
+      {
+       "t": 0.5754006676420085,
+       "x": 0.4740050040068063,
+       "y": 0.17325537721611955,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7796284559045551,
+     "y": 0.04393586540002538,
+     "w": 0.3825218000883231,
+     "rotate": -19.73019077823985,
+     "at": 2.2807866270666888,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 2.7463348248798005,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7796284559045551,
+       "y": 0.04393586540002538
+      },
+      {
+       "t": 0.4655481978131117,
+       "x": 0.9559538535129961,
+       "y": 0.008364223473787694,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7989307884817985,
+     "y": 0.13752758789063563,
+     "w": 0.26200200189804446,
+     "rotate": 54.32957289971282,
+     "at": 2.4990701117512897,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.1878670773165068,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7989307884817985,
+       "y": 0.13752758789063563
+      },
+      {
+       "t": 0.6887969655652171,
+       "x": 0.9132678425958944,
+       "y": 0.22712836989206273,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7896232797419478,
+     "y": 0.039957939553940974,
+     "w": 0.3824408504496128,
+     "rotate": -21.68062307578263,
+     "at": 2.850494077721167,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.335895862876201,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7896232797419478,
+       "y": 0.039957939553940974
+      },
+      {
+       "t": 0.48540178515503385,
+       "x": 0.9650022496191721,
+       "y": 0.0007387107400936843,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7239867389523291,
+     "y": 0.05257965529665689,
+     "w": 0.37040696671439277,
+     "rotate": -28.808991900849538,
+     "at": 3.139030119867217,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.6019473682073158,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7239867389523291,
+       "y": 0.05257965529665689
+      },
+      {
+       "t": 0.4629172483400989,
+       "x": 0.8487150957037144,
+       "y": 0.013994693696990954,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7765044397552228,
+     "y": 0.048808094377040666,
+     "w": 0.2677893130735898,
+     "rotate": -14.578121216554452,
+     "at": 3.308541096669771,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 3.975488265536796,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7765044397552228,
+       "y": 0.048808094377040666
+      },
+      {
+       "t": 0.6669471688670253,
+       "x": 0.9370278741720126,
+       "y": 0.025324971907101042,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.7983973838602925,
+     "y": 0.044818046457136815,
+     "w": 0.37729393851084214,
+     "rotate": -15.338815081975515,
+     "at": 3.5441432008823504,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 4.060943290555001,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7983973838602925,
+       "y": 0.044818046457136815
+      },
+      {
+       "t": 0.5168000896726511,
+       "x": 0.9264590162929621,
+       "y": 0.02505912931990397,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.8006968380404699,
+     "y": 0.023573191631581808,
+     "w": 0.3706538897611699,
+     "rotate": -32.745326109463264,
+     "at": 4.167822703617323,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 4.62026354185485,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.8006968380404699,
+       "y": 0.023573191631581808
+      },
+      {
+       "t": 0.4524408382375272,
+       "x": 0.9160939048819381,
+       "y": -0.018171384681949634,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 60'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='0'/><stop offset='0.7' stop-color='#bfeaff' stop-opacity='0.55'/><stop offset='1' stop-color='#ffffff' stop-opacity='1'/></linearGradient><radialGradient id='h'><stop offset='0' stop-color='#ffffff'/><stop offset='0.4' stop-color='#fff3c4' stop-opacity='0.9'/><stop offset='1' stop-color='#ffd27a' stop-opacity='0'/></radialGradient></defs><polygon points='0,30 660,22 660,38' fill='url(#g)'/><circle cx='662' cy='30' r='28' fill='url(#h)'/></svg>",
+     "x": 0.6380742335760381,
+     "y": 0.0672915077513941,
+     "w": 0.2819576174886172,
+     "rotate": 168.1772055333319,
+     "at": 4.3848003998541945,
+     "enter": "fade",
+     "enter_dur": 0.08,
+     "until": 5.017046520870134,
+     "exit": "fade",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.6380742335760381,
+       "y": 0.0672915077513941
+      },
+      {
+       "t": 0.6322461210159399,
+       "x": 0.4880041644954759,
+       "y": 0.08496164952181162,
+       "ease": "linear"
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       1.0
+      ],
+      [
+       "point",
+       2.6
+      ],
+      [
+       "smirk",
+       3.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "hud",
+     "label": "next big return",
+     "x": 0.5,
+     "y": 0.16,
+     "enter": "pop",
+     "sfx": "click",
+     "text": "~33 YEARS",
+     "tone": "gold",
+     "at": 0.6
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#f2b04a' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#f2b04a' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>THEORY</text></svg>",
+     "x": 0.78,
+     "y": 0.26,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "click"
+    }
+   ]
+  }
+ ]
+}

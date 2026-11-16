@@ -54,7 +54,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [what-if] What if your eyes saw ultraviolet? · the lens blocks UV; people without a lens (aphakia) report seeing some UV as whitish-blue; bee-vision set reuse · https://en.wikipedia.org/wiki/Aphakia
 - [scale-shock] Your microwave and your Wi-Fi use the same wave · both ~2.4 GHz, ~12 cm; why one cooks and one doesn't (power: ~1000 W vs ~0.1 W) · https://en.wikipedia.org/wiki/2.4_GHz_radio_use
 - [scale-shock] Earth sweeps up ~44 tonnes of space dust every day · NASA's figure, shown as trucks of dust; follow-up angle on the shooting-star video · https://solarsystem.nasa.gov/asteroids-comets-and-meteors/meteors-and-meteorites/in-depth.amp
-- [wild-story] The 1833 Leonid meteor storm · tens of thousands an hour, people thought the world was ending; it gave birth to meteor science · https://www.space.com/leonid-meteor-shower
 - [myth-bust] "Meteorites land red-hot" · most are cold to the touch: the outside melts but the inside stays deep-space cold · https://www.britannica.com/science/meteor/Introduction
 - [wild-story] Archimedes tried to count every grain of sand in the universe · The Sand Reckoner: he invented a way to name huge numbers ~2,200 years ago; runner-up 2026-11-14 · https://en.wikipedia.org/wiki/The_Sand_Reckoner
 - [big-question] Why is a million '10 lakh' in India? · how different countries group big numbers (lakh/crore vs million/billion); strong India share of the audience · https://en.wikipedia.org/wiki/Indian_numbering_system
@@ -87,3 +86,7 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - Movie mafia vs the real one: what court records show about how the Mafia actually earns
 - [wild-story] The accountant who took down Al Capone · IRS agent Frank Wilson found a gambling ledger that tied the cash to Capone; follow-up to the laundromat myth Short (runner-up 2026-11-16) · https://www.history.com/articles/frank-wilson
 - [dark-files] How hawala moves money without moving money · a trust-based ledger system older than banks; what FATF says about its legal and illegal uses; documentary view, no how-to (runner-up 2026-11-16) · https://www.fatf-gafi.org/en/publications/Methodsandtrends/Role-of-hawalas-in-ml-tf.html
+
+- [wild-story] Halley's comet 1910 panic: people bought 'comet pills' fearing toxic gas in the tail · true story, picturable, pairs with comets · https://en.wikipedia.org/wiki/Halley%27s_Comet
+- [scale-shock] The 1966 Leonid storm: ~40 meteors a SECOND, 60 years ago this week · runner-up 2026-11-16 · https://www.space.com/leonid-meteor-shower
+- [big-question] Why do meteor showers seem to come from one point? · perspective, like snow in headlights; runner-up 2026-11-16 · https://www.lindahall.org/about/news/scientist-of-the-day/denison-olmsted/
