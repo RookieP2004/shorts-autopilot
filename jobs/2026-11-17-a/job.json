@@ -1,0 +1,1535 @@
+{
+ "id": "2026-11-17-a",
+ "title": "$1,000 crossed a border. No money moved 🤝",
+ "description": "Hawala, explained: a sender in New York gives a broker cash and a code word, a second broker in Lahore pays the cousin from her own cash, and only a debt is left between the brokers, settled later with goods or transfers the other way. Cheap, fast and built on trust: licensed in some countries, illegal in others (including India), and, as a UN study found, also used by criminals. A documentary explainer, not advice.\n\nSources: Corporate Finance Institute (Hawala); ClearTax (Hawala in India, FEMA); UNODC (2023) on hawala and organised crime; FATF report on underground banking and hawala (Sept 2026).",
+ "tags": [
+  "hawala",
+  "hawala explained",
+  "how hawala works",
+  "underground banking",
+  "money laundering",
+  "fatf",
+  "remittance",
+  "dark files",
+  "explained"
+ ],
+ "hashtags": [
+  "#hawala",
+  "#money"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#money",
+   "#hawala",
+   "#moneylaundering",
+   "#truecrime",
+   "#explained"
+  ]
+ },
+ "look": "night",
+ "meta": {
+  "format": "dark-files",
+  "topic": "how hawala moves money across borders without moving money: code word, broker pays from own cash, debt between brokers settled later (goods / reverse transfers), cheap/fast/trust, licensed vs illegal (India, FEMA), criminal use (UNODC 'we don't ask questions'), FATF 2026: ~9 in 10 jurisdictions report it",
+  "hook": "number-shock",
+  "idea_source": "unique + trending: backlog runner-up twice (owner's dark-files examples); FATF's Sept 2026 report on underground banking and 'digital hawala' is in the news; strong India-audience topic; rarely explained visually in Shorts",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://corporatefinanceinstitute.com/resources/wealth-management/hawala/",
+   "https://cleartax.in/s/hawala-money",
+   "https://unodc.org/unodc/frontpage/2023/September/we-dont-ask-questions_-hawala-payment-system-vulnerable-to-use-by-organized-crime-groups--including-opiate-traffickers-and-migrant-smugglers.html",
+   "https://www.zigram.tech/?p=41971",
+   "https://www.drishtiias.com/daily-updates/daily-news-analysis/fatf-report-on-underground-banking-and-digital-hawala"
+  ],
+  "claims": [
+   {
+    "claim": "sender gives a broker cash + a password; a broker in the other city pays the recipient from own funds once the password matches",
+    "tag": "PROVEN",
+    "source": "CFI; ClearTax"
+   },
+   {
+    "claim": "no physical money moves; the brokers owe each other and settle later via cash, goods, services or offsetting transfers",
+    "tag": "PROVEN",
+    "source": "CFI; ClearTax"
+   },
+   {
+    "claim": "typical commissions 0.5-5%",
+    "tag": "PROVEN",
+    "source": "FATF Sept 2026 report via Zigram"
+   },
+   {
+    "claim": "licensing frameworks exist in many countries; hawala is illegal in India under FEMA",
+    "tag": "PROVEN",
+    "source": "UNODC 2023; ClearTax"
+   },
+   {
+    "claim": "a Somali hawaladar told UNODC researchers 'we don't ask questions'",
+    "tag": "PROVEN",
+    "source": "UNODC 2023"
+   },
+   {
+    "claim": "nearly 90% of jurisdictions in the FATF survey reported underground banking / hawala-type providers",
+    "tag": "PROVEN",
+    "source": "FATF Sept 2026 via Drishti IAS / Zigram"
+   }
+  ],
+  "humour": {
+   "trend": "'My Type Quiz' (mytype.fyi, viral on X early-mid Nov 2026, Know Your Meme 13 Nov): 'my type quiz result: doesn't ask questions'",
+   "beat": "side_eye",
+   "scene": 8
+  }
+ },
+ "thumbnail": {
+  "title": "NO MONEY *MOVED?*",
+  "title_y": 0.14,
+  "title_size": 170,
+  "max_w": 0.95,
+  "blur": 10,
+  "glow": "#f4c04e",
+  "glow_x": 0.5,
+  "glow_y": 0.55,
+  "glow_strength": 1.2,
+  "bg_saturation": 1.2,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-17-a/assets/plate_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-17-a/assets/note1.png",
+    "x": 0.26,
+    "y": 0.5,
+    "w": 0.38,
+    "rotate": -12,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.66,
+    "y": 0.93,
+    "h": 0.85,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "music": {
+  "cues": [
+   {
+    "scene": 0,
+    "style": "tension",
+    "key": "E",
+    "scale": "minor",
+    "bpm": 92
+   }
+  ],
+  "volume": 0.12
+ },
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-17-a/assets.py",
+ "scenes": [
+  {
+   "say": "A thousand dollars just crossed a border. Not one note moved.",
+   "caption": "$1,000 just crossed a border. Not one note moved.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.4773,
+     "y": 0.5491,
+     "h": 0.3294,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.8
+      ],
+      [
+       "crossed",
+       3.2
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9754,
+       "y": 0.5801,
+       "scale": 1.1278
+      },
+      {
+       "t": 1.0,
+       "x": 0.4773,
+       "y": 0.5491,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "$1,000 SENT.\n*ZERO* NOTES MOVED.",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.17,
+     "size": 116,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "hud",
+     "label": "new york  >  lahore",
+     "x": 0.5,
+     "y": 0.31,
+     "enter": "none",
+     "sfx": "click",
+     "prefix": "$",
+     "value": 1000,
+     "tone": "gold",
+     "at": 0.0
+    },
+    {
+     "type": "stamp",
+     "text": "NO CASH TRAVELLED",
+     "tone": "red",
+     "angle": -7,
+     "size": 62,
+     "x": 0.5,
+     "y": 0.52,
+     "at": 2.4,
+     "sfx": "thud"
+    }
+   ],
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.2,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "caption_y": 0.72,
+   "sfx": "footsteps",
+   "sfx_at": 0.0,
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "In New York, Amir hands a broker cash and a password.",
+   "transition": "push",
+   "transition_frames": 10,
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_ny.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4964,
+     "y": 0.5287,
+     "h": 0.2379,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "take",
+       1.0
+      ],
+      [
+       "hold",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b07850",
+       "build": "round",
+       "hair": [
+        "#2a2320",
+        "short"
+       ],
+       "hat": [
+        "fez",
+        "#7c2533"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/fg_ny.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "give",
+     "x": 0.6829,
+     "y": 0.5633,
+     "h": 0.2972,
+     "enter": "none",
+     "acting": [
+      [
+       "give",
+       0
+      ],
+      [
+       "idle",
+       1.6
+      ],
+      [
+       "hold",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#d9534f"
+       ],
+       "top": [
+        "#3f7fbf",
+        "jacket"
+       ],
+       "bottom": [
+        "#34383f",
+        "trousers"
+       ],
+       "shoes": "#151515",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/note1.png",
+     "x": 0.52,
+     "y": 0.66,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "cash",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.56,
+       "y": 0.66,
+       "rot": -8
+      },
+      {
+       "t": 0.9,
+       "x": 0.36,
+       "y": 0.6,
+       "rot": 6
+      }
+     ],
+     "until": 1.4,
+     "exit": "fade"
+    },
+    {
+     "type": "phone",
+     "sprite": "jobs/2026-11-17-a/assets/phone.png",
+     "screen": {
+      "kind": "chat",
+      "name": "Amir",
+      "sub": "to: cousin Iqbal",
+      "msgs": [
+       {
+        "text": "Sent $1,000 for you",
+        "side": "out",
+        "time": "9:40",
+        "at": 0.3
+       },
+       {
+        "text": "Code word: MANGO-7",
+        "side": "out",
+        "time": "9:41",
+        "at": 1.0
+       }
+      ]
+     },
+     "x": 0.72,
+     "y": 0.27,
+     "w": 0.27,
+     "tilt": [
+      [
+       0,
+       -18,
+       4
+      ],
+      [
+       3.0,
+       8,
+       2
+      ]
+     ],
+     "enter": "rise",
+     "at": 1.2,
+     "sfx": "swoosh_soft"
+    },
+    {
+     "type": "hud",
+     "label": "new york",
+     "text": "BROKER 1",
+     "tone": "blue",
+     "x": 0.26,
+     "y": 0.13,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "click"
+    }
+   ],
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.5,
+      "zoom": 1.06,
+      "focus": [
+       0.46,
+       0.52
+      ]
+     }
+    ]
+   },
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "In Lahore, another broker pays his cousin from her own drawer.",
+   "transition": "push",
+   "transition_frames": 10,
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_lh.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5036,
+     "y": 0.5287,
+     "h": 0.2379,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "give",
+       1.2
+      ],
+      [
+       "happy",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "headscarf",
+        "#46965a"
+       ],
+       "top": [
+        "#f2b04a",
+        "kurta"
+       ],
+       "bottom": [
+        "#2f3a52",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/fg_lh.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3171,
+     "y": 0.5633,
+     "h": 0.2972,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "take",
+       1.4
+      ],
+      [
+       "cheer",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f48",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "curly"
+       ],
+       "top": [
+        "#6fc3c0",
+        "kurta"
+       ],
+       "bottom": [
+        "#e9e6df",
+        "trousers"
+       ],
+       "shoes": "#2b2b30"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.7,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/note2.png",
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "cash",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.6,
+       "rot": 6
+      },
+      {
+       "t": 0.9,
+       "x": 0.66,
+       "y": 0.68,
+       "rot": -10
+      }
+     ],
+     "until": 2.4,
+     "exit": "fade"
+    },
+    {
+     "type": "phone",
+     "sprite": "jobs/2026-11-17-a/assets/phone.png",
+     "screen": {
+      "kind": "chat",
+      "name": "Broker, Lahore",
+      "sub": "counter 2",
+      "msgs": [
+       {
+        "text": "Code word?",
+        "side": "in",
+        "time": "9:52",
+        "at": 0.2
+       },
+       {
+        "text": "MANGO-7",
+        "side": "out",
+        "time": "9:52",
+        "at": 0.8,
+        "badge": "MATCH"
+       }
+      ]
+     },
+     "x": 0.28,
+     "y": 0.27,
+     "w": 0.27,
+     "tilt": [
+      [
+       0,
+       18,
+       4
+      ],
+      [
+       3.0,
+       -8,
+       2
+      ]
+     ],
+     "enter": "rise",
+     "at": 0.1,
+     "sfx": "swoosh_soft"
+    },
+    {
+     "type": "hud",
+     "label": "paid from her own cash",
+     "prefix": "$",
+     "to": 1000,
+     "count_dur": 0.8,
+     "tone": "green",
+     "x": 0.7,
+     "y": 0.13,
+     "enter": "pop",
+     "at": 1.4,
+     "sfx": "ding"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 96'><rect x='4' y='4' width='292' height='88' rx='20' fill='#0b1424' fill-opacity='0.85' stroke='#35e08a' stroke-width='5'/><text x='150.0' y='68' text-anchor='middle' font-size='56' fill='#35e08a' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.8,
+     "y": 0.64,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 2.2,
+     "rotate": -4
+    }
+   ],
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.5,
+      "zoom": 1.06,
+      "focus": [
+       0.54,
+       0.52
+      ]
+     }
+    ]
+   },
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "No money flew. Just a debt: New York owes Lahore.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2341,
+     "y": 0.5044,
+     "h": 0.1139,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b07850",
+       "build": "round",
+       "hair": [
+        "#2a2320",
+        "short"
+       ],
+       "hat": [
+        "fez",
+        "#7c2533"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7659,
+     "y": 0.5044,
+     "h": 0.1139,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "headscarf",
+        "#46965a"
+       ],
+       "top": [
+        "#f2b04a",
+        "kurta"
+       ],
+       "bottom": [
+        "#2f3a52",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/fg_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3226,
+     "y": 0.5225,
+     "h": 0.1248,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#d9534f"
+       ],
+       "top": [
+        "#3f7fbf",
+        "jacket"
+       ],
+       "bottom": [
+        "#34383f",
+        "trousers"
+       ],
+       "shoes": "#151515",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.6774,
+     "y": 0.5225,
+     "h": 0.1248,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a86f48",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "curly"
+       ],
+       "top": [
+        "#6fc3c0",
+        "kurta"
+       ],
+       "bottom": [
+        "#e9e6df",
+        "trousers"
+       ],
+       "shoes": "#2b2b30"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.5741,
+     "h": 0.158,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "cash in the air",
+     "text": "$0",
+     "tone": "red",
+     "x": 0.5,
+     "y": 0.25,
+     "w": 0.36,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop",
+     "verdict": "cross",
+     "verdict_at": 0.8
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 290'><rect x='5' y='5' width='890' height='280' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='44' fill='#7c2533' font-family='Anton, DejaVu Sans, sans-serif'>THE LEDGER</text><line x1='60' y1='92' x2='840' y2='92' stroke='#1a1410' stroke-width='4'/><text x='70' y='170' font-size='58' fill='#2a6fbf' font-family='Anton, DejaVu Sans, sans-serif'>NEW YORK</text><text x='450' y='170' text-anchor='middle' font-size='40' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>owes</text><text x='830' y='170' text-anchor='end' font-size='58' fill='#2a8a5a' font-family='Anton, DejaVu Sans, sans-serif'>LAHORE</text><text x='450' y='256' text-anchor='middle' font-size='76' fill='#b8860b' font-family='Anton, DejaVu Sans, sans-serif'>$1,000</text></svg>",
+     "x": 0.5,
+     "y": 0.7,
+     "w": 0.66,
+     "enter": "pop",
+     "at": 1.4,
+     "sfx": "paper",
+     "rotate": -2
+    }
+   ],
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.5,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "They settle later, with goods or payments going the other way.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 290'><rect x='5' y='5' width='890' height='280' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='450' y='70' text-anchor='middle' font-size='44' fill='#7c2533' font-family='Anton, DejaVu Sans, sans-serif'>THE LEDGER</text><line x1='60' y1='92' x2='840' y2='92' stroke='#1a1410' stroke-width='4'/><text x='70' y='170' font-size='58' fill='#2a6fbf' font-family='Anton, DejaVu Sans, sans-serif'>NEW YORK</text><text x='450' y='170' text-anchor='middle' font-size='40' fill='#34425c' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>owes</text><text x='830' y='170' text-anchor='end' font-size='58' fill='#2a8a5a' font-family='Anton, DejaVu Sans, sans-serif'>LAHORE</text><text x='450' y='256' text-anchor='middle' font-size='76' fill='#b8860b' font-family='Anton, DejaVu Sans, sans-serif'>$1,000</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.6,
+     "enter": "none",
+     "rotate": -2
+    },
+    {
+     "type": "optcard",
+     "label": "settle by",
+     "text": "GOODS\n(TRADE)",
+     "tone": "gold",
+     "x": 0.28,
+     "y": 0.6,
+     "w": 0.38,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": "pop",
+     "rotate": -3,
+     "verdict": "tick",
+     "verdict_at": 1.5
+    },
+    {
+     "type": "optcard",
+     "label": "settle by",
+     "text": "A TRANSFER\nTHE OTHER WAY",
+     "tone": "blue",
+     "x": 0.68,
+     "y": 0.6,
+     "w": 0.38,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "pop",
+     "rotate": 3,
+     "verdict": "tick",
+     "verdict_at": 2.5
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.4,
+       "NY owes LHR $1,000"
+      ],
+      [
+       2.6,
+       "$1,000 - $1,000 = *$0*"
+      ]
+     ],
+     "tone": "gold",
+     "x": 0.5,
+     "y": 0.34,
+     "enter": "fade"
+    }
+   ],
+   "caption_y": 0.45,
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Cheap, fast, built on trust.",
+   "transition": "push",
+   "transition_frames": 10,
+   "min_dur": 2.4,
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.4773,
+     "y": 0.5491,
+     "h": 0.3294,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0.2,
+      0.7,
+      1.3
+     ],
+     "x": 0.5,
+     "y": 0.13,
+     "enter": "fade"
+    },
+    {
+     "type": "hud",
+     "label": "typical fee",
+     "x": 0.5,
+     "y": 0.25,
+     "enter": "pop",
+     "sfx": "click",
+     "text": "0.5-5%",
+     "tone": "green",
+     "at": 0.4,
+     "sub": "FATF report, Sept 2026"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "Licensed in some countries. Illegal in others, like India.",
+   "transition": "cut",
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 4
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.4773,
+     "y": 0.5491,
+     "h": 0.3294,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "crossed",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "some countries",
+     "text": "LICENSED\nBROKERS",
+     "tone": "green",
+     "x": 0.29,
+     "y": 0.2,
+     "w": 0.38,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "pop",
+     "rotate": -3,
+     "verdict": "tick",
+     "verdict_at": 0.7
+    },
+    {
+     "type": "optcard",
+     "label": "india (FEMA)",
+     "text": "HAWALA\nIS ILLEGAL",
+     "tone": "red",
+     "x": 0.68,
+     "y": 0.2,
+     "w": 0.38,
+     "enter": "pop",
+     "at": 1.5,
+     "sfx": "pop",
+     "rotate": 3,
+     "verdict": "cross",
+     "verdict_at": 2.1
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 96'><rect x='4' y='4' width='292' height='88' rx='20' fill='#0b1424' fill-opacity='0.85' stroke='#35e08a' stroke-width='5'/><text x='150.0' y='68' text-anchor='middle' font-size='56' fill='#35e08a' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.33,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 2.4,
+     "rotate": -4
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "say": "And criminals love it. One broker told the UN: we don't ask questions.",
+   "caption": "And criminals love it. One broker told the UN: \"we don't ask questions.\"",
+   "transition": "dip",
+   "transition_frames": 8,
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_ny.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4964,
+     "y": 0.5287,
+     "h": 0.2379,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b07850",
+       "build": "round",
+       "hair": [
+        "#2a2320",
+        "short"
+       ],
+       "hat": [
+        "fez",
+        "#7c2533"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/fg_ny.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "hud",
+     "label": "countries that reported it",
+     "x": 0.5,
+     "y": 0.17,
+     "enter": "pop",
+     "sfx": "click",
+     "text": "9 in 10",
+     "tone": "red",
+     "at": 0.3,
+     "sub": "FATF survey, 2026"
+    },
+    {
+     "type": "stamp",
+     "text": "\"WE DON'T ASK QUESTIONS\"",
+     "tone": "red",
+     "angle": -6,
+     "size": 58,
+     "x": 0.5,
+     "y": 0.27,
+     "at": 2.6,
+     "sfx": "thud"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 96'><rect x='4' y='4' width='412' height='88' rx='20' fill='#0b1424' fill-opacity='0.85' stroke='#f6efe2' stroke-width='5'/><text x='210.0' y='68' text-anchor='middle' font-size='56' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>UNODC, 2023</text></svg>",
+     "x": 0.5,
+     "y": 0.35,
+     "w": 0.3,
+     "enter": "pop",
+     "at": 3.0
+    }
+   ],
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "pad": 0.14,
+   "lead": 0.06
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.4,
+    "who": "ved",
+    "text": "my type quiz result:\n*doesn't ask questions*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "The money never moved. The trust did.",
+   "transition": "push",
+   "transition_frames": 10,
+   "min_dur": 3.0,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/plate_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2341,
+     "y": 0.5044,
+     "h": 0.1139,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "wave",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b07850",
+       "build": "round",
+       "hair": [
+        "#2a2320",
+        "short"
+       ],
+       "hat": [
+        "fez",
+        "#7c2533"
+       ],
+       "top": [
+        "#f6efe2",
+        "vest"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7659,
+     "y": 0.5044,
+     "h": 0.1139,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "wave",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "headscarf",
+        "#46965a"
+       ],
+       "top": [
+        "#f2b04a",
+        "kurta"
+       ],
+       "bottom": [
+        "#2f3a52",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-a/assets/fg_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5,
+     "y": 0.5741,
+     "h": 0.158,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "smirk",
+       1.8
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "burst",
+     "sprites": [
+      "jobs/2026-11-17-a/assets/note1.png",
+      "jobs/2026-11-17-a/assets/note2.png",
+      "jobs/2026-11-17-a/assets/coin.png"
+     ],
+     "n": 18,
+     "origin": [
+      0.5,
+      0.56
+     ],
+     "at": 0.2,
+     "dur": 1.8,
+     "spread": 0.9,
+     "sfx": "cash",
+     "sizes": [
+      1.0,
+      1.0,
+      0.45
+     ]
+    },
+    {
+     "type": "text",
+     "text": "MONEY *STAYED*\nTRUST *MOVED*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.25,
+     "size": 110,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "ding"
+    }
+   ],
+   "pad": 0.14,
+   "lead": 0.06
+  }
+ ]
+}

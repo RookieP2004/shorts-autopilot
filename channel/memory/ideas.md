@@ -83,7 +83,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - Where your phone's metals come from, and how armed groups profit from them (conflict minerals)
 - Movie mafia vs the real one: what court records show about how the Mafia actually earns
 - [wild-story] The accountant who took down Al Capone · IRS agent Frank Wilson found a gambling ledger that tied the cash to Capone; follow-up to the laundromat myth Short (runner-up 2026-11-16) · https://www.history.com/articles/frank-wilson
-- [dark-files] How hawala moves money without moving money · a trust-based ledger system older than banks; what FATF says about its legal and illegal uses; documentary view, no how-to (runner-up 2026-11-16) · https://www.fatf-gafi.org/en/publications/Methodsandtrends/Role-of-hawalas-in-ml-tf.html
 
 - [wild-story] Halley's comet 1910 panic: people bought 'comet pills' fearing toxic gas in the tail · true story, picturable, pairs with comets · https://en.wikipedia.org/wiki/Halley%27s_Comet
 - [scale-shock] The 1966 Leonid storm: ~40 meteors a SECOND, 60 years ago this week · runner-up 2026-11-16 · https://www.space.com/leonid-meteor-shower
@@ -96,3 +95,5 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [what-if] What if Voyager's Golden Record is found? · what's on it, how aliens would decode the record's pictograms, ~40,000 years to its next star; tagged SPECULATION; runner-up 2026-11-17 · https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/
 - [big-question] How does a 22-watt radio talk across 26 billion km? · deep dive on the DSN: big dishes, liquid-helium amplifiers, error-correcting codes, 160 bits/s; runner-up 2026-11-17 · https://maketecheasier.com/how-deep-space-network-hears-voyager/
 - [big-question] Why can't Voyager use solar panels? · sunlight out there is ~1/26,000 of ours, so plutonium heat it is; runner-up 2026-11-17 · https://maketecheasier.com/how-deep-space-network-hears-voyager/
+- [dark-files] "Digital hawala": how encrypted apps and stablecoins speed up underground banking · FATF Sept 2026 report; documentary view, no how-to; runner-up 2026-11-17 · https://www.drishtiias.com/daily-updates/daily-news-analysis/fatf-report-on-underground-banking-and-digital-hawala
+- [big-question] Why does sending money home cost YOU a fee? · remittance corridors, exchange-rate margins vs the bank fee; wallet-first, India/US audience; runner-up 2026-11-17 · https://www.worldbank.org/en/topic/migrationremittancesdiasporaissues
