@@ -1,0 +1,1360 @@
+{
+ "id": "2026-11-17-b",
+ "title": "Voyager 1 is one light-DAY away. We still hear it 📡",
+ "description": "On 18 November 2026 Voyager 1 becomes the first human-made object one light-day from Earth: 25.9 billion km, so a 'hello' takes a day to arrive and the reply another day. Its radio runs on about 22 watts (a fridge bulb), and the signal reaches us weaker than a billionth of a billionth of a watt, yet NASA's 70 m dishes with super-cold amplifiers still catch it. The catch: its plutonium power drops ~4 W a year, so instruments are being switched off (two left); the team hopes to keep one running into the 2030s.\n\nSources: EarthSky; NASA/JPL; WAMC (April 2026); MakeTechEasier on how the Deep Space Network hears Voyager.",
+ "tags": [
+  "voyager 1",
+  "one light day",
+  "voyager 1 2026",
+  "nasa",
+  "deep space network",
+  "space",
+  "interstellar space",
+  "space explained",
+  "astronomy"
+ ],
+ "hashtags": [
+  "#space",
+  "#nasa"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#space",
+   "#voyager1",
+   "#nasa",
+   "#astronomy",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "frontier",
+  "topic": "Voyager 1 reaches one light-day (25.9 billion km) on 18 Nov 2026: 2-day round trip, 22 W radio, signal under 1e-18 W, 70 m DSN dishes + cryo amplifiers, RTG losing ~4 W/yr, instruments switched off (2 left), hope of one instrument into the 2030s",
+  "hook": "number-shock",
+  "idea_source": "trending + unique: the one-light-day milestone is this week's space news (18 Nov 2026); the 'how do we still hear it' angle (fridge-bulb radio, attowatt signal) is rarely done in Shorts; backlog idea 2026-11-16",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/",
+   "https://www.jpl.nasa.gov/news/two-voyagers-taught-us-how-to-listen-to-space/",
+   "https://maketecheasier.com/how-deep-space-network-hears-voyager/",
+   "https://www.wamc.org/2026-04-19/the-little-probe-that-could-why-voyager-1-matters-and-why-nasa-just-switched-part-of-it-off",
+   "https://www.jpl.nasa.gov/news/nasa-turns-off-two-voyager-science-instruments-to-extend-mission/",
+   "https://www.space.com/17688-voyager-1.html"
+  ],
+  "humour": {
+   "trend": "'I Got So Mad' TikTok trend (absurd retaliation captions, rising late Oct-Nov 2026, Know Your Meme 13 Nov): 'voyager: i got so mad i moved one light-day away'",
+   "beat": "side_eye",
+   "scene": 2
+  },
+  "claims": [
+   {
+    "claim": "Voyager 1 crosses one light-day (~25.9 billion km) at 10:16 UTC on 18 Nov 2026, launched 5 Sep 1977",
+    "tag": "PROVEN",
+    "source": "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/"
+   },
+   {
+    "claim": "a one-way message takes about a day, so a reply takes about two days",
+    "tag": "PROVEN",
+    "source": "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/"
+   },
+   {
+    "claim": "its transmitter is about 22 W, like a refrigerator bulb",
+    "tag": "PROVEN",
+    "source": "https://www.jpl.nasa.gov/news/two-voyagers-taught-us-how-to-listen-to-space/"
+   },
+   {
+    "claim": "the signal arrives weaker than a billionth of a billionth of a watt (JPL: one-tenth of a billionth-trillionth; ~1 attowatt quoted)",
+    "tag": "PROVEN",
+    "source": "https://www.jpl.nasa.gov/news/two-voyagers-taught-us-how-to-listen-to-space/"
+   },
+   {
+    "claim": "caught by 70 m DSN dishes with liquid-helium-cooled (~-269 C) amplifiers",
+    "tag": "PROVEN",
+    "source": "https://maketecheasier.com/how-deep-space-network-hears-voyager/"
+   },
+   {
+    "claim": "RTGs gave ~470 W at launch and lose ~4 W a year; now under 250 W",
+    "tag": "PROVEN",
+    "source": "https://maketecheasier.com/how-deep-space-network-hears-voyager/"
+   },
+   {
+    "claim": "Cosmic Ray Subsystem switched off Feb 2025, LECP 17 Apr 2026; two science instruments left",
+    "tag": "PROVEN",
+    "source": "https://www.wamc.org/2026-04-19/the-little-probe-that-could-why-voyager-1-matters-and-why-nasa-just-switched-part-of-it-off"
+   },
+   {
+    "claim": "engineers hope to keep at least one instrument running into the 2030s (power-saving plan being tested)",
+    "tag": "R&D",
+    "source": "https://www.wamc.org/2026-04-19/the-little-probe-that-could-why-voyager-1-matters-and-why-nasa-just-switched-part-of-it-off"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "ONE LIGHT-*DAY*",
+  "title_y": 0.14,
+  "title_size": 170,
+  "max_w": 0.95,
+  "blur": 12,
+  "glow": "#ffb35a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.4,
+  "tint": [
+   "#1f4fb8",
+   "#f08a24"
+  ],
+  "tint_amount": 0.3,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-17-b/assets/plate_dsn_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-17-b/assets/probe.png",
+    "x": 0.66,
+    "y": 0.4,
+    "w": 0.62,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.42,
+    "y": 0.95,
+    "h": 0.85,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-17-b/assets.py",
+ "scenes": [
+  {
+   "say": "November 18th: Voyager 1 hits one light-*day* from Earth.",
+   "caption_y": 0.44,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_space_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 5,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.12
+      },
+      {
+       "t": 4.0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "ONE *LIGHT-DAY* AWAY",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 116,
+     "max_w": 0.95,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "hud",
+     "label": "km from earth",
+     "x": 0.5,
+     "y": 0.25,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "to": 25900000000,
+     "from": 25000000000,
+     "count_dur": 2.6,
+     "tone": "blue",
+     "width_of": "25,900,000,000"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/probe.png",
+     "x": 0.78,
+     "y": 0.36,
+     "w": 0.3,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.1,
+       "y": 0.4,
+       "rot": -8
+      },
+      {
+       "t": 1.0,
+       "x": 0.76,
+       "y": 0.35,
+       "rot": 4,
+       "ease": "out"
+      },
+      {
+       "t": 4.0,
+       "x": 0.72,
+       "y": 0.34,
+       "rot": 8
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.5,
+     "y": 0.86,
+     "h": 0.9,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ],
+      [
+       "explain",
+       2.8
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "Say hi: the reply takes *two days*.",
+   "transition": "slide_left",
+   "caption_y": 0.66,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.05,
+      "focus": [
+       0.46,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_dsn_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7769,
+     "y": 0.6656,
+     "h": 0.2755,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "build": "slim",
+       "hair": [
+        "#6b4529",
+        "bun"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "bag": "#d9534f"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2179,
+     "y": 0.7397,
+     "h": 0.514,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ],
+      [
+       "think",
+       2.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.6423,
+       "y": 0.7732,
+       "scale": 1.1992
+      },
+      {
+       "t": 0.9,
+       "x": 0.2179,
+       "y": 0.7397,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "phone",
+     "sprite": "jobs/2026-11-17-b/assets/phone.png",
+     "screen": {
+      "kind": "chat",
+      "name": "VOYAGER 1",
+      "sub": "25.9 billion km away",
+      "msgs": [
+       {
+        "text": "hi Voyager!",
+        "side": "out",
+        "time": "Mon 10:16",
+        "ticks": 1,
+        "at": 0.2
+       },
+       {
+        "text": "...still travelling (1 day)",
+        "side": "out",
+        "time": "Tue 10:16",
+        "ticks": 1,
+        "at": 0.9
+       },
+       {
+        "text": "hi Earth!",
+        "side": "in",
+        "time": "Wed 10:16",
+        "at": 1.7
+       }
+      ],
+      "input": "Message"
+     },
+     "x": 0.7,
+     "y": 0.3,
+     "w": 0.3,
+     "tilt": [
+      [
+       0,
+       -18,
+       4
+      ],
+      [
+       3.5,
+       8,
+       2
+      ]
+     ],
+     "enter": "rise",
+     "at": 0.1,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.3,
+       "1 day there"
+      ],
+      [
+       1.1,
+       "1 day there + 1 day back = *2 days*"
+      ]
+     ],
+     "tone": "blue",
+     "x": 0.5,
+     "y": 0.09,
+     "enter": "fade",
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "dur": 1.7,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_dsn_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.5,
+    "who": "ved",
+    "text": "voyager: i got so mad i moved\n*one light-day* away",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Its radio? *22 watts*. A fridge bulb.",
+   "transition": "zoom",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.4,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.1,
+      "focus": [
+       0.36,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_space_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "hud",
+     "label": "radio power",
+     "x": 0.5,
+     "y": 0.12,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "to": 22,
+     "count_dur": 1.0,
+     "suffix": " W",
+     "tone": "gold",
+     "width_of": "22 W",
+     "at": 0.2
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/bulb.png",
+     "x": 0.7,
+     "y": 0.33,
+     "w": 0.18,
+     "enter": "pop",
+     "at": 1.1,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -10
+      },
+      {
+       "t": 2.0,
+       "rot": 6
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 610 96'><rect x='4' y='4' width='602' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#f2b04a' stroke-width='5'/><text x='305.0' y='68' text-anchor='middle' font-size='56' fill='#f2b04a' font-family='Anton, DejaVu Sans, sans-serif'>= FRIDGE BULB</text></svg>",
+     "x": 0.64,
+     "y": 0.47,
+     "w": 0.4,
+     "enter": "pop",
+     "at": 1.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.74,
+     "y": 0.2,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.5,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Here, that's under a *billionth of a billionth* of a watt.",
+   "transition": "slide_up",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.4,
+      "zoom": 1.07,
+      "focus": [
+       0.5000000180184098,
+       0.5543394882720585
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_dsn_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "fade",
+     "at": 0.2,
+     "loop": "pulse",
+     "loop_amp": 0.02,
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 1920'><line x1='994' y1='0' x2='540' y2='1064' stroke='#6fe3ff' stroke-width='9' stroke-dasharray='26 18' opacity='0.9'/><circle cx='540' cy='1064' r='22' fill='#6fe3ff' opacity='0.6'/></svg>"
+    },
+    {
+     "type": "hud",
+     "label": "signal reaching earth",
+     "x": 0.5,
+     "y": 0.15,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "text": "0.000...001 W",
+     "sub": "17 zeros after the point",
+     "tone": "blue",
+     "at": 0.4
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.5,
+       "22 W"
+      ],
+      [
+       1.4,
+       "22 W ÷ a billion billion"
+      ]
+     ],
+     "tone": "blue",
+     "x": 0.5,
+     "y": 0.26,
+     "enter": "fade",
+     "at": 0.6
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.78,
+     "y": 0.32,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 2.0,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "We still catch it, with *70-metre* dishes and super-cold amplifiers.",
+   "transition": "slide_left",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.05,
+      "focus": [
+       0.48,
+       0.48
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_dsn_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8562,
+     "y": 0.666,
+     "h": 0.1184,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       2.5
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "build": "slim",
+       "hair": [
+        "#6b4529",
+        "bun"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "bag": "#d9534f"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.6,
+       0.04,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.7294,
+     "y": 0.6701,
+     "h": 0.1272,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "cheer",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#7a4a2e",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#f2b04a"
+       ],
+       "top": [
+        "#f08a24",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       2.4,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.3983,
+     "y": 0.7382,
+     "h": 0.2825,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ],
+      [
+       "warm",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "fade",
+     "at": 0.0,
+     "loop": "pulse",
+     "loop_amp": 0.02,
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 1920'><line x1='1058' y1='38' x2='487' y2='892' stroke='#6fe3ff' stroke-width='9' stroke-dasharray='26 18' opacity='0.9'/><circle cx='487' cy='892' r='22' fill='#6fe3ff' opacity='0.6'/></svg>"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 840 150'><rect x='5' y='5' width='830' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='420' y='98' text-anchor='middle' font-size='72' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>70 M <tspan fill='#d9534f'>DISH</tspan></text></svg>",
+     "x": 0.5,
+     "y": 0.12,
+     "w": 0.64,
+     "rotate": -2,
+     "enter": "slide_right",
+     "at": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 840 150'><rect x='5' y='5' width='830' height='140' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='6'/><text x='310' y='98' text-anchor='middle' font-size='64' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>AMPLIFIERS AT</text><text x='650' y='98' text-anchor='middle' font-size='64' fill='#3f7fbf' font-family='Anton, DejaVu Sans, sans-serif'>-269 C</text></svg>",
+     "x": 0.5,
+     "y": 0.205,
+     "w": 0.7,
+     "rotate": 2,
+     "enter": "slide_left",
+     "at": 1.8,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.8,
+     "y": 0.28,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "The enemy is *power*: its plutonium loses 4 watts a year.",
+   "transition": "zoom",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.6,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_space_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.25
+      },
+      {
+       "t": 5,
+       "scale": 1.32
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/rtg.png",
+     "x": 0.5,
+     "y": 0.4,
+     "w": 0.42,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -4
+      },
+      {
+       "t": 5,
+       "rot": 4
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 690 96'><rect x='4' y='4' width='682' height='88' rx='20' fill='#1a1410' fill-opacity='0.82' stroke='#f08a24' stroke-width='5'/><text x='345.0' y='68' text-anchor='middle' font-size='56' fill='#f08a24' font-family='Anton, DejaVu Sans, sans-serif'>PLUTONIUM POWER</text></svg>",
+     "x": 0.5,
+     "y": 0.585,
+     "w": 0.5,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "pop"
+    },
+    {
+     "type": "hud",
+     "label": "power",
+     "x": 0.5,
+     "y": 0.12,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "steps": [
+      [
+       0,
+       470
+      ],
+      [
+       1.2,
+       400
+      ],
+      [
+       1.9,
+       300
+      ],
+      [
+       2.6,
+       230
+      ]
+     ],
+     "count_dur": 0.5,
+     "suffix": " W",
+     "tone": "red",
+     "width_of": "470 W",
+     "at": 0.3
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.4,
+       "1977: ~470 W"
+      ],
+      [
+       2.2,
+       "now: under *250 W*"
+      ]
+     ],
+     "tone": "red",
+     "x": 0.5,
+     "y": 0.205,
+     "enter": "fade",
+     "at": 0.4
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.8,
+     "y": 0.27,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "So instruments get switched *off*. Two left.",
+   "transition": "slide_left",
+   "caption_y": 0.5,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_dsn_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.7769,
+     "y": 0.6656,
+     "h": 0.2755,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e0b08a",
+       "build": "slim",
+       "hair": [
+        "#6b4529",
+        "bun"
+       ],
+       "top": [
+        "#f6efe2",
+        "jacket"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "bag": "#d9534f"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.2179,
+     "y": 0.7397,
+     "h": 0.514,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "explain",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "off: feb 2025",
+     "text": "COSMIC RAYS",
+     "tone": "red",
+     "x": 0.3,
+     "y": 0.12,
+     "w": 0.4,
+     "rotate": -2,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "pop",
+     "verdict": "cross",
+     "verdict_at": 0.7
+    },
+    {
+     "type": "optcard",
+     "label": "off: apr 2026",
+     "text": "PARTICLES",
+     "tone": "red",
+     "x": 0.72,
+     "y": 0.12,
+     "w": 0.4,
+     "rotate": 2,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop",
+     "verdict": "cross",
+     "verdict_at": 1.4
+    },
+    {
+     "type": "hud",
+     "label": "instruments still on",
+     "x": 0.5,
+     "y": 0.26,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "steps": [
+      [
+       0,
+       4
+      ],
+      [
+       0.7,
+       3
+      ],
+      [
+       1.4,
+       2
+      ]
+     ],
+     "count_dur": 0.3,
+     "tone": "green",
+     "width_of": "4",
+     "at": 0.0
+    },
+    {
+     "type": "stamp",
+     "text": "2 LEFT",
+     "tone": "red",
+     "angle": -7,
+     "size": 110,
+     "x": 0.5,
+     "y": 0.36,
+     "at": 1.8,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "The hope: one still listening into the *2030s*.",
+   "transition": "slide_up",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5000000180184098,
+       0.5543394882720585
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_dsn_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "fade",
+     "at": 0.0,
+     "loop": "pulse",
+     "loop_amp": 0.02,
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 1920'><line x1='994' y1='0' x2='540' y2='1064' stroke='#9fe8a0' stroke-width='9' stroke-dasharray='26 18' opacity='0.9'/><circle cx='540' cy='1064' r='22' fill='#9fe8a0' opacity='0.6'/></svg>"
+    },
+    {
+     "type": "optcard",
+     "label": "nasa's goal",
+     "text": "ONE INSTRUMENT\nINTO THE 2030s",
+     "tone": "green",
+     "x": 0.5,
+     "y": 0.15,
+     "w": 0.66,
+     "rotate": -2,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 84'><rect x='4' y='4' width='292' height='76' rx='38' fill='#f2b04a' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#f2b04a' stroke-width='5' fill='none'/><text x='172' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>R&amp;D</text></svg>",
+     "x": 0.78,
+     "y": 0.3,
+     "w": 0.24,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Then silence. One light-day... and *counting*.",
+   "transition": "cut",
+   "caption_y": 0.44,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/plate_space_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      },
+      {
+       "t": 4.0,
+       "scale": 1.3
+      }
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "km from earth",
+     "x": 0.5,
+     "y": 0.2,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "steps": [
+      [
+       0,
+       25900000000
+      ],
+      [
+       0.1,
+       25901500000
+      ]
+     ],
+     "count_dur": 4.0,
+     "tone": "blue",
+     "width_of": "25,901,500,000"
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-17-b/assets/probe.png",
+     "x": 0.7,
+     "y": 0.33,
+     "w": 0.22,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.66,
+       "y": 0.34,
+       "scale": 1.0
+      },
+      {
+       "t": 4.0,
+       "x": 0.8,
+       "y": 0.3,
+       "scale": 0.8
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.5,
+     "y": 0.86,
+     "h": 0.9,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ],
+      [
+       "smirk",
+       2.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "AND *COUNTING*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.11,
+     "size": 120,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
