@@ -92,9 +92,9 @@
   ]
  },
  "thumbnail": {
-  "title": "ONE LIGHT-*DAY*",
-  "title_y": 0.14,
-  "title_size": 170,
+  "title": "ONE *LIGHT-DAY*",
+  "title_y": 0.15,
+  "title_size": 150,
   "max_w": 0.95,
   "blur": 12,
   "glow": "#ffb35a",

@@ -290,7 +290,7 @@ job = {"id": ID, "title": "Voyager 1 is one light-DAY away. We still hear it ðŸ“
                      "source": "https://www.wamc.org/2026-04-19/the-little-probe-that-could-why-voyager-1-matters-and-why-nasa-just-switched-part-of-it-off"},
                     {"claim": "engineers hope to keep at least one instrument running into the 2030s (power-saving plan being tested)", "tag": "R&D",
                      "source": "https://www.wamc.org/2026-04-19/the-little-probe-that-could-why-voyager-1-matters-and-why-nasa-just-switched-part-of-it-off"}]},
-       "thumbnail": {"title": "ONE LIGHT-*DAY*", "title_y": 0.14, "title_size": 170, "max_w": 0.95, "blur": 12,
+       "thumbnail": {"title": "ONE *LIGHT-DAY*", "title_y": 0.15, "title_size": 150, "max_w": 0.95, "blur": 12,
                      "glow": "#ffb35a", "glow_x": 0.5, "glow_y": 0.5, "glow_strength": 1.3, "bg_saturation": 1.4,
                      "tint": ["#1f4fb8", "#f08a24"], "tint_amount": 0.3,
                      "bg": [plate("dsn_wide")],
