@@ -1,0 +1,2118 @@
+{
+ "id": "2026-11-18-b",
+ "title": "Your foot never falls asleep. Here's what does 🦶",
+ "description": "Why does your foot 'fall asleep'? It isn't the blood: neurologists say it's a squashed nerve. Cross your legs and the common fibular (peroneal) nerve, which wraps around the bone just below the outside of your knee, close to the skin, gets pressed. Like a kinked hose, its signals between brain and foot stop, so the foot goes numb and floppy. When you move, the nerve wakes up and the tingling, pins and needles (paresthesia), is it coming back online. That annoying buzz makes you shift before a long squeeze can injure the nerve. (How the body works, not medical advice.)\n\nSources: The Conversation (What happens when your foot falls asleep); ScienceAlert (neurologists Rebecca Traub and Steven Vernino); Colorado Orthopedics (peroneal nerve palsy); Penn Medicine (common peroneal nerve dysfunction).",
+ "tags": [
+  "foot fell asleep",
+  "pins and needles",
+  "why does your foot fall asleep",
+  "nerves",
+  "human body",
+  "paresthesia",
+  "body facts",
+  "science facts",
+  "biology"
+ ],
+ "hashtags": [
+  "#science",
+  "#humanbody"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#science",
+   "#humanbody",
+   "#pinsandneedles",
+   "#biologyfacts",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "big-question",
+  "topic": "why a foot 'falls asleep': not blood flow but a compressed nerve; crossed legs press the common fibular nerve where it wraps the fibular head just under the skin; signals blocked like a kinked hose (numb, floppy); on release the nerve wakes up noisy = pins and needles (paresthesia); the buzz makes you move before prolonged compression injures the nerve",
+  "hook": "question",
+  "idea_source": "viral-shaped + unique: a universal everyday feeling everyone has had, explained in one picture (kinked cable), with a myth flip (it's not the blood); backlog idea; body niche after a run of space Shorts",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://theconversation.com/what-happens-when-your-foot-falls-asleep-164655",
+   "https://www.sciencealert.com/here-s-what-happens-when-your-foot-falls-asleep",
+   "https://www.cortho.org/foot-and-ankle/conditions/peroneal-nerve-palsy/",
+   "https://www.pennmedicine.org/conditions/common-peroneal-nerve-dysfunction"
+  ],
+  "humour": {
+   "trend": "timeless dry aside (no rising meme fits a body topic this week; 'W chews' already used): side-eye + 'foot.exe has stopped responding'",
+   "beat": "side_eye",
+   "scene": 6
+  },
+  "claims": [
+   {
+    "claim": "a foot 'falls asleep' because a nerve is compressed; lack of blood flow is a common misconception",
+    "tag": "PROVEN",
+    "source": "https://www.sciencealert.com/here-s-what-happens-when-your-foot-falls-asleep"
+   },
+   {
+    "claim": "the common fibular (peroneal) nerve wraps around the fibular head below the outside of the knee, close to the skin; crossing the legs compresses it",
+    "tag": "PROVEN",
+    "source": "https://www.cortho.org/foot-and-ankle/conditions/peroneal-nerve-palsy/"
+   },
+   {
+    "claim": "compression blocks the nerve's signals like a kinked hose: numbness and trouble moving",
+    "tag": "PROVEN",
+    "source": "https://www.sciencealert.com/here-s-what-happens-when-your-foot-falls-asleep"
+   },
+   {
+    "claim": "pins and needles (paresthesia) happen as the nerve regains function",
+    "tag": "PROVEN",
+    "source": "https://theconversation.com/what-happens-when-your-foot-falls-asleep-164655"
+   },
+   {
+    "claim": "the discomfort makes you shift position; prolonged compression (e.g. someone who can't move) can injure a nerve",
+    "tag": "PROVEN",
+    "source": "https://www.sciencealert.com/here-s-what-happens-when-your-foot-falls-asleep"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "FOOT *ASLEEP?*",
+  "title_y": 0.15,
+  "title_size": 190,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffd23a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.4,
+  "tint": [
+   "#7a3fa0",
+   "#f08a24"
+  ],
+  "tint_amount": 0.28,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-18-b/assets/plate_nerve_squeeze.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+    "x": 0.22,
+    "y": 0.42,
+    "w": 0.14,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+    "x": 0.8,
+    "y": 0.36,
+    "w": 0.1,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.95,
+    "h": 0.8,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-18-b/assets.py",
+ "scenes": [
+  {
+   "say": "Your foot never falls *asleep*. You just *kinked its cable*.",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.07,
+      "focus": [
+       0.55,
+       0.58
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-b/assets/plate_movie_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.7719,
+     "y": 0.508,
+     "h": 0.3211,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "sad",
+       1.4
+      ],
+      [
+       "shrug",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ],
+       "top": [
+        "#7a5cc4",
+        "hoodie"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.5,
+       0.05,
+       0.35
+      ],
+      [
+       1.6,
+       0.04,
+       0.35
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5733,
+     "y": 0.5467,
+     "h": 0.5032,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       1.5
+      ],
+      [
+       "smirk",
+       2.7
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "stamp",
+     "text": "ASLEEP?",
+     "tone": "red",
+     "angle": -6,
+     "size": 72,
+     "x": 0.5,
+     "y": 0.085,
+     "at": 0.0,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "WHY DOES YOUR FOOT *FALL ASLEEP?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.19,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.73,
+     "y": 0.62,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 1.6,
+     "loop": "pulse",
+     "loop_amp": 0.25
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.79,
+     "y": 0.66,
+     "w": 0.045,
+     "enter": "pop",
+     "at": 1.8,
+     "loop": "pulse",
+     "loop_amp": 0.25
+    }
+   ]
+  },
+  {
+   "say": "Not the blood, like most people think. A *squashed nerve*.",
+   "transition": "slide_left",
+   "caption_y": 0.45,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-b/assets/plate_movie_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.8583,
+     "y": 0.526,
+     "h": 0.1861,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ],
+      [
+       "shrug",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ],
+       "top": [
+        "#7a5cc4",
+        "hoodie"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.267,
+     "y": 0.57,
+     "h": 0.316,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.8
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.1146,
+       "y": 0.6428,
+       "scale": 1.6541
+      },
+      {
+       "t": 1.2,
+       "x": 0.267,
+       "y": 0.57,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "optcard",
+     "label": "most people think",
+     "text": "BLOOD",
+     "tone": "red",
+     "x": 0.28,
+     "y": 0.14,
+     "w": 0.42,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "pop",
+     "verdict": "cross",
+     "verdict_at": 1.0
+    },
+    {
+     "type": "optcard",
+     "label": "neurologists say",
+     "text": "NERVE",
+     "tone": "green",
+     "x": 0.72,
+     "y": 0.14,
+     "w": 0.42,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 1.5,
+     "sfx": "pop",
+     "verdict": "tick",
+     "verdict_at": 0.6
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.27,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Cross your legs, and below the knee, a nerve sits on bone, just under the skin.",
+   "transition": "slide_up",
+   "caption_y": 0.56,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-b/assets/plate_movie_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      },
+      {
+       "t": 5,
+       "scale": 1.26
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "THE *FIBULAR NERVE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.105,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.0,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 620'><rect x='6' y='6' width='888' height='608' rx='36' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><text x='450' y='76' text-anchor='middle' font-size='52' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>CROSSED LEGS, SIDE VIEW</text><path d='M60,300 L470,300 Q540,300 560,350 L610,560 L500,560 L460,390 Q450,370 420,372 L60,372 Z' fill='#e3a27f' stroke='#1a1410' stroke-width='5'/><path d='M505,385 L560,545' stroke='#efe4cf' stroke-width='22' stroke-linecap='round'/><circle cx='502' cy='378' r='20' fill='#efe4cf' stroke='#b9ad96' stroke-width='3'/><path d='M80,360 L430,360 Q480,358 492,396 Q500,420 528,440 L585,548' stroke='#f2b04a' stroke-width='16' fill='none' stroke-linecap='round' opacity='0.45'/><path d='M80,360 L430,360 Q480,358 492,396 Q500,420 528,440 L585,548' stroke='#ffd23a' stroke-width='7' fill='none' stroke-linecap='round'/><path d='M120,228 L560,250 Q640,256 700,300 L860,330 L850,384 L690,362 Q610,350 540,330 Q505,322 470,322 L120,300 Z' fill='#d99872' stroke='#1a1410' stroke-width='5' opacity='0.92'/><circle cx='498' cy='384' r='46' fill='none' stroke='#d6483e' stroke-width='8' stroke-dasharray='14 10'/><path d='M640,470 L540,410' stroke='#1a1410' stroke-width='6'/><rect x='600' y='450' width='280' height='118' rx='20' fill='#1a1410'/><text x='740' y='502' text-anchor='middle' font-size='40' fill='#ffd23a' font-family='Anton, DejaVu Sans, sans-serif'>FIBULAR NERVE</text><text x='740' y='548' text-anchor='middle' font-size='28' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>just under the skin</text></svg>",
+     "x": 0.5,
+     "y": 0.31,
+     "w": 0.86,
+     "rotate": -1.5,
+     "enter": "slide_up",
+     "at": 0.15,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.0
+      },
+      {
+       "t": 4.5,
+       "scale": 1.04
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.3,
+     "y": 0.94,
+     "h": 0.55,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.78,
+     "y": 0.53,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "It's the cable between your *brain* and your *foot*.",
+   "transition": "zoom",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-b/assets/plate_nerve_open.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7fe8ff'/><stop offset='1' stop-color='#7fe8ff' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.1,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 1.5,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7fe8ff'/><stop offset='1' stop-color='#7fe8ff' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.4125,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 1.8125,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7fe8ff'/><stop offset='1' stop-color='#7fe8ff' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.725,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.125,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7fe8ff'/><stop offset='1' stop-color='#7fe8ff' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.0375,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.4375,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7fe8ff'/><stop offset='1' stop-color='#7fe8ff' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.35,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.75,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7fe8ff'/><stop offset='1' stop-color='#7fe8ff' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.6625,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.0625,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7fe8ff'/><stop offset='1' stop-color='#7fe8ff' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.975,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.375,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7fe8ff'/><stop offset='1' stop-color='#7fe8ff' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 2.2875,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.6875,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7dffb0'/><stop offset='1' stop-color='#7dffb0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.5,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 1.9,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7dffb0'/><stop offset='1' stop-color='#7dffb0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.8833333333333333,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.283333333333333,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7dffb0'/><stop offset='1' stop-color='#7dffb0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.2666666666666666,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.6666666666666665,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7dffb0'/><stop offset='1' stop-color='#7dffb0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.65,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.05,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7dffb0'/><stop offset='1' stop-color='#7dffb0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 2.033333333333333,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.433333333333333,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#7dffb0'/><stop offset='1' stop-color='#7dffb0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 2.416666666666667,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.816666666666667,
+     "exit": "fade"
+    },
+    {
+     "type": "hud",
+     "label": "signals",
+     "x": 0.5,
+     "y": 0.1,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "text": "FLOWING",
+     "tone": "green",
+     "at": 0.2,
+     "width_of": "BLOCKED!"
+    },
+    {
+     "type": "text",
+     "text": "BRAIN",
+     "font": "display",
+     "x": 0.16,
+     "y": 0.2,
+     "size": 64,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "text",
+     "text": "FOOT",
+     "font": "display",
+     "x": 0.84,
+     "y": 0.2,
+     "size": 64,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Press on it, like stepping on a *hose*, and the messages *stop*.",
+   "transition": "flash",
+   "sfx": "boom",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ],
+    "shake": [
+     0.0,
+     0.3
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-b/assets/plate_nerve_squeeze.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff5a4a'/><stop offset='1' stop-color='#ff5a4a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.2,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 0.7,
+       "x": 0.3966716168632638,
+       "y": 0.5125665398353809,
+       "ease": "out"
+      }
+     ],
+     "until": 1.8,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff5a4a'/><stop offset='1' stop-color='#ff5a4a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.5666666666666667,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 0.7,
+       "x": 0.3966716168632638,
+       "y": 0.5125665398353809,
+       "ease": "out"
+      }
+     ],
+     "until": 2.166666666666667,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff5a4a'/><stop offset='1' stop-color='#ff5a4a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.9333333333333333,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 0.7,
+       "x": 0.3966716168632638,
+       "y": 0.5125665398353809,
+       "ease": "out"
+      }
+     ],
+     "until": 2.533333333333333,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff5a4a'/><stop offset='1' stop-color='#ff5a4a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.2999999999999998,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 0.7,
+       "x": 0.3966716168632638,
+       "y": 0.5125665398353809,
+       "ease": "out"
+      }
+     ],
+     "until": 2.9,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff5a4a'/><stop offset='1' stop-color='#ff5a4a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.6666666666666665,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 0.7,
+       "x": 0.3966716168632638,
+       "y": 0.5125665398353809,
+       "ease": "out"
+      }
+     ],
+     "until": 3.2666666666666666,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff5a4a'/><stop offset='1' stop-color='#ff5a4a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 2.033333333333333,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 0.7,
+       "x": 0.3966716168632638,
+       "y": 0.5125665398353809,
+       "ease": "out"
+      }
+     ],
+     "until": 3.6333333333333333,
+     "exit": "fade"
+    },
+    {
+     "type": "hud",
+     "label": "signals",
+     "x": 0.5,
+     "y": 0.1,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "text": "BLOCKED!",
+     "tone": "red",
+     "at": 0.0,
+     "width_of": "BLOCKED!"
+    },
+    {
+     "type": "stamp",
+     "text": "BLOCKED",
+     "tone": "red",
+     "angle": -7,
+     "size": 92,
+     "x": 0.5,
+     "y": 0.74,
+     "at": 1.6,
+     "sfx": "thud"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.8,
+     "y": 0.2,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Brain says move. *No reply*. Numb, and floppy.",
+   "transition": "slide_left",
+   "caption_y": 0.45,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.1,
+      "focus": [
+       0.55,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-b/assets/plate_movie_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.7719,
+     "y": 0.508,
+     "h": 0.3211,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ],
+      [
+       "surprised",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ],
+       "top": [
+        "#7a5cc4",
+        "hoodie"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.7,
+       0.03,
+       0.3
+      ]
+     ]
+    },
+    {
+     "type": "phone",
+     "sprite": "jobs/2026-11-18-b/assets/phone.png",
+     "screen": {
+      "kind": "chat",
+      "name": "FOOT",
+      "sub": "last seen 2 min ago",
+      "msgs": [
+       {
+        "text": "move.",
+        "side": "out",
+        "time": "21:14",
+        "ticks": 1,
+        "at": 0.3
+       },
+       {
+        "text": "hello??",
+        "side": "out",
+        "time": "21:14",
+        "ticks": 1,
+        "at": 1.1
+       },
+       {
+        "text": "MOVE.",
+        "side": "out",
+        "time": "21:15",
+        "ticks": 1,
+        "at": 1.9
+       }
+      ],
+      "input": "Message"
+     },
+     "x": 0.3,
+     "y": 0.3,
+     "w": 0.3,
+     "enter": "slide_up",
+     "at": 0.0,
+     "sfx": "whoosh",
+     "tilt": [
+      [
+       0,
+       -14,
+       4
+      ],
+      [
+       3.0,
+       -6,
+       2
+      ]
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "delivered",
+     "x": 0.74,
+     "y": 0.12,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "text": "0 / 3",
+     "tone": "red",
+     "at": 0.6,
+     "width_of": "0 / 3"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-b/assets/plate_movie_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "foot.exe has stopped *responding*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Uncross, and it wakes up *noisy*. That fizz is *pins and needles*.",
+   "transition": "flash",
+   "caption_y": 0.62,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.1,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ],
+    "shake": [
+     0.6,
+     1.4
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-b/assets/plate_nerve_open.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.3,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 1.7,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.55,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 1.95,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.8,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.2,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.05,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.45,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.3,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.7,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.55,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.95,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.8,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.2,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 2.05,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.4499999999999997,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 2.3,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.6999999999999997,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ffd23a'/><stop offset='1' stop-color='#ffd23a' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.25900559776605847,
+     "y": 0.4639940191536711,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 2.55,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711
+      },
+      {
+       "t": 1.4,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.9499999999999997,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff8fd0'/><stop offset='1' stop-color='#ff8fd0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.4,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 1.7999999999999998,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff8fd0'/><stop offset='1' stop-color='#ff8fd0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 0.7125,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.1125,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff8fd0'/><stop offset='1' stop-color='#ff8fd0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.025,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.425,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff8fd0'/><stop offset='1' stop-color='#ff8fd0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.3375,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 2.7375,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff8fd0'/><stop offset='1' stop-color='#ff8fd0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.65,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.05,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff8fd0'/><stop offset='1' stop-color='#ff8fd0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 1.9625,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.3625,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff8fd0'/><stop offset='1' stop-color='#ff8fd0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 2.275,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.675,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><radialGradient id='g'><stop offset='0' stop-color='#ffffff'/><stop offset='0.35' stop-color='#ff8fd0'/><stop offset='1' stop-color='#ff8fd0' stop-opacity='0'/></radialGradient></defs><circle cx='50' cy='50' r='50' fill='url(#g)'/></svg>",
+     "x": 0.9548887436475643,
+     "y": 0.6349935599435359,
+     "w": 0.07,
+     "enter": "fade",
+     "enter_dur": 0.1,
+     "at": 2.5875,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9548887436475643,
+       "y": 0.6349935599435359
+      },
+      {
+       "t": 1.4,
+       "x": 0.25900559776605847,
+       "y": 0.4639940191536711,
+       "ease": "linear"
+      }
+     ],
+     "until": 3.9875,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.2366716168632638,
+     "y": 0.46256653983538093,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop",
+     "loop": "pulse",
+     "loop_amp": 0.3,
+     "until": 2.2,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.6366716168632638,
+     "y": 0.4325665398353809,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 0.8,
+     "sfx": null,
+     "loop": "pulse",
+     "loop_amp": 0.3,
+     "until": 2.4000000000000004,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.4066716168632638,
+     "y": 0.572566539835381,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 1.0,
+     "sfx": null,
+     "loop": "pulse",
+     "loop_amp": 0.3,
+     "until": 2.6,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.7566716168632638,
+     "y": 0.552566539835381,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": null,
+     "loop": "pulse",
+     "loop_amp": 0.3,
+     "until": 2.8,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.1366716168632638,
+     "y": 0.542566539835381,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 1.35,
+     "sfx": "pop",
+     "loop": "pulse",
+     "loop_amp": 0.3,
+     "until": 2.95,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.5366716168632638,
+     "y": 0.3925665398353809,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 1.5,
+     "sfx": null,
+     "loop": "pulse",
+     "loop_amp": 0.3,
+     "until": 3.1,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.6966716168632638,
+     "y": 0.6125665398353809,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 1.7,
+     "sfx": null,
+     "loop": "pulse",
+     "loop_amp": 0.3,
+     "until": 3.3,
+     "exit": "fade"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,0 L58,42 L100,50 L58,58 L50,100 L42,58 L0,50 L42,42 Z' fill='#fff6d8' stroke='#f2b04a' stroke-width='4'/></svg>",
+     "x": 0.30667161686326383,
+     "y": 0.6125665398353809,
+     "w": 0.06,
+     "enter": "pop",
+     "at": 1.9,
+     "sfx": null,
+     "loop": "pulse",
+     "loop_amp": 0.3,
+     "until": 3.5,
+     "exit": "fade"
+    },
+    {
+     "type": "hud",
+     "label": "signals",
+     "x": 0.5,
+     "y": 0.1,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "text": "NOISY!",
+     "tone": "gold",
+     "at": 0.0,
+     "width_of": "BLOCKED!"
+    },
+    {
+     "type": "tracker",
+     "n": 4,
+     "done": [
+      0.2,
+      0.5,
+      0.9,
+      2.2
+     ],
+     "x": 0.5,
+     "y": 0.2,
+     "at": 0.1,
+     "enter": "fade"
+    },
+    {
+     "type": "text",
+     "text": "PINS & *NEEDLES*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.74,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "That buzz makes you move, before the squeeze hurts the nerve. Not asleep. *Kinked*.",
+   "transition": "cut",
+   "caption_y": 0.62,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-b/assets/plate_movie_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 5.0,
+       "scale": 1.42
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ],
+      [
+       "smirk",
+       3.8
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "the buzz",
+     "text": "MOVE!",
+     "tone": "gold",
+     "x": 0.28,
+     "y": 0.12,
+     "w": 0.4,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "optcard",
+     "label": "the nerve",
+     "text": "SAFE",
+     "tone": "green",
+     "x": 0.72,
+     "y": 0.12,
+     "w": 0.4,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop",
+     "verdict": "tick",
+     "verdict_at": 0.5
+    },
+    {
+     "type": "stamp",
+     "text": "KINKED",
+     "tone": "red",
+     "angle": -6,
+     "size": 84,
+     "x": 0.5,
+     "y": 0.25,
+     "at": 3.6,
+     "sfx": "thud"
+    }
+   ]
+  }
+ ]
+}

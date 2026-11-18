@@ -68,7 +68,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [myth-bust] "You've been told the Sun is yellow" · hook test: from space it looks white (air scatters blue light away); picturable physics · https://en.wikipedia.org/wiki/Sunlight
 - [wild-story] The man who lost his sense of touch and body position (Ian Waterman, 1971) · learned to walk again by watching his limbs; proprioception follow-up, runner-up 2026-11-15 · https://en.wikipedia.org/wiki/Ian_Waterman
 - [big-question] Why does tomato juice taste better on planes? · engine noise dulls sweet/salty, boosts umami (crossmodal senses); runner-up 2026-11-15 · https://www.vice.com/en/article/humans-dont-have-5-senses-they-have-as-many-as-33/
-- [big-question] Why does your foot "fall asleep"? · pressure starves the nerve, signals go quiet then fizz back as pins and needles; body niche, picturable · https://en.wikipedia.org/wiki/Paresthesia
 - [big-question] Why don't your cells' 2 m of DNA tangle? · topoisomerase enzymes cut and re-join the strands like untangling headphones; follow-up angle on the DNA video, runner-up 2026-11-15 · https://en.wikipedia.org/wiki/Topoisomerase
 
 
@@ -99,3 +98,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [scale-shock] A meteoroid hits the air at up to 72 km/s: Mumbai to London in ~100 seconds · speed made visible, then air brakes it to ~200 m/s; runner-up 2026-11-18 · https://www.britannica.com/science/meteor/Introduction
 - [wild-story] The Sylacauga meteorite (1954): the only well-documented person hit by one, Ann Hodges, on her sofa · runner-up 2026-11-18 · https://en.wikipedia.org/wiki/Hodges_meteorite
 - [big-question] Why are meteorites black on the outside? · fusion crust <1 mm, ablation carries the heat away; inside grey with chondrules · runner-up 2026-11-18 · https://research.amnh.org/~debel/eduSource1/HallPix/fusionCrust1.htm
+- [big-question] Why does your funny bone hurt so weirdly? · it's the ulnar nerve on bone just under the skin at the elbow, not a bone; pairs with the foot-asleep video, runner-up 2026-11-18 · https://en.wikipedia.org/wiki/Ulnar_nerve
+- [myth-bust] "Cracking your knuckles gives you arthritis" · the pop is a gas bubble in the joint fluid; Unger's 60-year one-hand self-experiment (Ig Nobel 2009); runner-up 2026-11-18 · https://en.wikipedia.org/wiki/Cracking_joints
+- [big-question] Why do you jolt awake as you fall asleep? · the hypnic jerk: common, harmless, why the brain does it is still debated (tag THEORY); runner-up 2026-11-18 · https://en.wikipedia.org/wiki/Hypnic_jerk
