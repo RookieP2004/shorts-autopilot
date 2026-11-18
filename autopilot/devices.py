@@ -231,3 +231,65 @@ def note_texture(value="500", path=None, w=1200, h=560, tint=(102, 196, 168)):
     if path:
         img.save(path)
     return img
+
+
+def doc_texture(kind="slips", path=None, w=900, h=1200, title="", rows=None, red_rows=(), seed=3):
+    """FICTIONAL paper documents for the case-file look (blendkit.doc_sheet): masked numbers only, no real bank or logo.
+    kind = "slips" (a list of transactions, some rows marked red), "ledger" (a DAY page of redacted lines, some red),
+    "statement" (an account card: chip, masked number, a big balance), "form" (a request form with an APPROVED stamp)."""
+    import random as _r
+    rnd = _r.Random(seed)
+    paper_c, ink, red = (238, 230, 210), (46, 40, 34), (205, 58, 52)
+    img = Image.new("RGB", (w, h), paper_c)
+    d = ImageDraw.Draw(img)
+    for _ in range(1800):                                           # paper fibre
+        x, y = rnd.randrange(w), rnd.randrange(h)
+        d.point((x, y), fill=tuple(c - rnd.randrange(6, 16) for c in paper_c))
+    mono = font("mono", int(w * 0.034))
+    if kind == "slips":
+        rows = rows or [f"{i:>2}  IMPS DR  XXXX 4410 → {rnd.randrange(1000, 9999)}" for i in range(1, 17)]
+        y = h * 0.06
+        if title:
+            d.text((w * 0.08, y), title, font=font("b", int(w * 0.05)), fill=ink)
+            y += h * 0.08
+        for i, r in enumerate(rows):
+            if i + 1 in red_rows:
+                d.rectangle([w * 0.06, y - 4, w * 0.94, y + h * 0.04], fill=(244, 205, 196))
+            d.text((w * 0.08, y), r, font=mono, fill=red if i + 1 in red_rows else ink)
+            y += h * 0.052
+    elif kind == "ledger":
+        d.rectangle([0, 0, w, h * 0.09], fill=(220, 168, 70))
+        d.text((w / 2, h * 0.045), title or "DAY 1", font=font("b", int(w * 0.06)), fill=ink, anchor="mm")
+        y = h * 0.13
+        while y < h * 0.95:
+            ww = w * rnd.uniform(0.55, 0.86)
+            col = red if rnd.random() < 0.28 else ink
+            d.rectangle([w * 0.08, y, w * 0.08 + ww, y + h * 0.014], fill=col)
+            y += h * 0.032
+    elif kind == "statement":
+        img = Image.new("RGB", (w, int(w * 0.62)), (30, 40, 58))
+        d = ImageDraw.Draw(img)
+        H = img.height
+        d.rounded_rectangle([w * 0.07, H * 0.12, w * 0.24, H * 0.32], radius=10, fill=(214, 170, 80))
+        d.text((w * 0.3, H * 0.13), title or "COMPANY CURRENT A/C", font=font("mono", int(w * 0.035)), fill=(200, 206, 218))
+        d.text((w * 0.3, H * 0.22), "XXXX 4410", font=font("mono", int(w * 0.035)), fill=(150, 160, 178))
+        d.text((w * 0.07, H * 0.45), "AVAILABLE BALANCE", font=font("mono", int(w * 0.03)), fill=(150, 160, 178))
+        d.text((w * 0.07, H * 0.55), (rows or ["₹1,60,00,000"])[0], font=ImageFont.truetype(os.path.join(ROOT, "fonts/PlayfairDisplay.ttf"), int(w * 0.11)),
+               fill=(239, 230, 210))
+        img = img
+    elif kind == "form":
+        d.text((w * 0.08, h * 0.06), title or "SIM REPLACEMENT REQUEST", font=font("b", int(w * 0.05)), fill=ink)
+        for i in range(9):
+            y = h * (0.18 + i * 0.07)
+            d.text((w * 0.08, y), ["NAME", "MOBILE", "ID PROOF", "REASON", "DATE", "BRANCH", "AGENT", "REMARKS", "SIGN"][i],
+                   font=mono, fill=ink)
+            d.line([(w * 0.38, y + h * 0.03), (w * 0.92, y + h * 0.03)], fill=(150, 140, 120), width=2)
+        st = Image.new("RGBA", (int(w * 0.5), int(w * 0.18)), (0, 0, 0, 0))
+        sd = ImageDraw.Draw(st)
+        sd.rounded_rectangle([4, 4, st.width - 5, st.height - 5], radius=12, outline=(46, 140, 90, 230), width=7)
+        sd.text((st.width / 2, st.height / 2), "APPROVED", font=font("b", int(w * 0.06)), fill=(46, 140, 90, 230), anchor="mm")
+        st = st.rotate(-12, expand=True)
+        img.paste(st, (int(w * 0.42), int(h * 0.74)), st)
+    if path:
+        img.save(path)
+    return img

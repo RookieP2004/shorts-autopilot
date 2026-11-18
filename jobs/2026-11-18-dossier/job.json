@@ -1,0 +1,479 @@
+{
+ "id": "2026-11-18-dossier",
+ "title": "DEMO case-file style",
+ "description": "demo (not posted)",
+ "tags": [],
+ "privacy": "private",
+ "speaker": "ved",
+ "look": "night",
+ "assets_script": "jobs/2026-11-18-dossier/assets.py",
+ "meta": {
+  "format": "demo",
+  "humour": {
+   "beat": "side_eye",
+   "scene": 4
+  },
+  "sources": [
+   "https://www.sebi.gov.in/enforcement/orders/feb-2026/final-order-in-the-matter-of-stock-recommendation-tips-in-the-scrip-of-unison-metals-ltd-_99518.html",
+   "https://www.moneylife.in/article/telegram-stocktip-scam-in-unison-metals-busted-sebi-imposes-365-crore-penalty-on-17-including-2-promoters/79584.html"
+  ]
+ },
+ "music": {
+  "cues": [
+   {
+    "scene": 0,
+    "style": "doc",
+    "key": "D",
+    "scale": "minor",
+    "bpm": 72
+   }
+  ],
+  "volume": 0.12
+ },
+ "scenes": [
+  {
+   "say": "February 2026. India's market regulator closes a case built on Telegram stock tips.",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5,
+      "zoom": 1.08,
+      "focus": [
+       0.48,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-dossier/assets/plate_desk_docs.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "dateline",
+     "date": "5 FEB 2026",
+     "place": "Mumbai",
+     "x": 0.36,
+     "y": 0.27,
+     "at": 0.1
+    },
+    {
+     "type": "dottext",
+     "text": "SEBI FINAL ORDER",
+     "size": 54,
+     "x": 0.5,
+     "y": 0.72,
+     "at": 1.2
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Unlawful gains: four point two nine crore rupees.",
+   "caption": "Unlawful gains: ₹4.29 crore.",
+   "transition": "push",
+   "transition_frames": 12,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 4,
+      "zoom": 1.12,
+      "focus": [
+       0.52,
+       0.6
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-dossier/assets/plate_desk_phone.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "blinds",
+     "angle": -34,
+     "count": 8,
+     "strength": 0.16,
+     "shade": 0.12,
+     "drift": 0.015
+    },
+    {
+     "type": "bignum",
+     "text": "₹4.29 CRORE",
+     "size": 100,
+     "tone": "gold",
+     "label": "UNLAWFUL GAINS",
+     "x": 0.5,
+     "y": 0.27,
+     "at": 0.2
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.82,
+     "y": 0.93,
+     "h": 0.58,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "explain",
+       1.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Seventeen people and firms were named, across the whole country.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-dossier/assets/plate_desk_docs.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 16,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "flows",
+     "points": {
+      "MUMBAI": [
+       0.24,
+       0.62
+      ],
+      "DELHI": [
+       0.36,
+       0.3
+      ],
+      "KOLKATA": [
+       0.72,
+       0.44
+      ],
+      "AHMEDABAD": [
+       0.18,
+       0.44
+      ],
+      "CHENNAI": [
+       0.5,
+       0.78
+      ],
+      "JAIPUR": [
+       0.28,
+       0.36
+      ]
+     },
+     "routes": [
+      [
+       "MUMBAI",
+       "DELHI",
+       0.3
+      ],
+      [
+       "MUMBAI",
+       "KOLKATA",
+       0.6
+      ],
+      [
+       "MUMBAI",
+       "CHENNAI",
+       0.9
+      ],
+      [
+       "MUMBAI",
+       "AHMEDABAD",
+       1.1
+      ],
+      [
+       "DELHI",
+       "JAIPUR",
+       1.3
+      ]
+     ]
+    },
+    {
+     "type": "bignum",
+     "value": 17,
+     "size": 200,
+     "label": "NAMED IN THE ORDER",
+     "x": 0.5,
+     "y": 0.24,
+     "at": 0.1
+    },
+    {
+     "type": "tag",
+     "text": "CITY DOTS: ILLUSTRATIVE",
+     "x": 0.5,
+     "y": 0.76,
+     "at": 0.4,
+     "size": 22
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Back in the real world, the tips looked like free advice in a group chat.",
+   "transition": "dip",
+   "transition_frames": 10,
+   "look": "town",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.6682,
+     "y": 0.5847,
+     "h": 0.1981,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "shrug",
+       2.2
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "dottext",
+     "text": "FREE TIP: *BUY NOW*",
+     "size": 58,
+     "x": 0.5,
+     "y": 0.22,
+     "at": 0.3,
+     "accent": "red",
+     "plate": true
+    },
+    {
+     "type": "tiles",
+     "n": 5,
+     "unit": "DAY",
+     "progress": [
+      [
+       0.6,
+       1
+      ],
+      [
+       1.2,
+       2
+      ],
+      [
+       1.8,
+       3
+      ],
+      [
+       2.4,
+       4
+      ],
+      [
+       3.0,
+       5
+      ]
+     ],
+     "end": "SELL",
+     "x": 0.5,
+     "y": 0.34,
+     "w": 0.7,
+     "at": 0.4
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "dur": 1.6,
+   "captions": false,
+   "transition": "cut",
+   "look": "town",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.4,
+    "who": "ved",
+    "text": "'free' tips, every single day:\n*hmm, who pays for this?*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Lesson one: paid stock tips need a SEBI registration. Check it.",
+   "transition": "push",
+   "transition_frames": 12,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-dossier/assets/plate_envelope.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "blinds",
+     "angle": -34,
+     "count": 8,
+     "strength": 0.16,
+     "shade": 0.12,
+     "drift": 0.015,
+     "phase": 0.3
+    },
+    {
+     "type": "tipnum",
+     "n": 1,
+     "title": "CHECK THE\nSEBI REG. NO.",
+     "sub": "BEFORE YOU PAY ANYONE FOR A TIP",
+     "x": 0.42,
+     "y": 0.26,
+     "at": 0.1
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.8,
+     "y": 0.93,
+     "h": 0.55,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "The fine came later. The losses came first.",
+   "transition": "cut",
+   "min_dur": 3.0,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-dossier/assets/plate_cloche.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "blinds",
+     "angle": -34,
+     "count": 8,
+     "strength": 0.16,
+     "shade": 0.12,
+     "drift": 0.015,
+     "phase": 0.6
+    },
+    {
+     "type": "clock",
+     "time": "11:15",
+     "from": "09:15",
+     "dur": 2.0,
+     "label": "MARKET CLOSE",
+     "x": 0.5,
+     "y": 0.22,
+     "r": 0.16,
+     "at": 0.1
+    },
+    {
+     "type": "dottext",
+     "text": "PENALTY: *₹3.65 CR*",
+     "size": 46,
+     "x": 0.5,
+     "y": 0.72,
+     "at": 1.0,
+     "accent": "gold"
+    }
+   ],
+   "pad": 0.14
+  }
+ ]
+}

@@ -41,7 +41,8 @@ LOOP = {"none", "bob", "pulse", "shake", "spin", "float", "wiggle"}
 LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d", "blender",
                "paper", "marker", "string", "timeline", "lower_third", "chapter", "tag",  # documentary (doc.py)
                "headline", "figures",                                                   # reference-reel style
-               "hud", "eqbar", "tracker", "stamp", "optcard", "phone", "crowd", "nodes", "burst"}   # night set (night.py)
+               "hud", "eqbar", "tracker", "stamp", "optcard", "phone", "crowd", "nodes", "burst",   # night set (night.py)
+               "dottext", "bignum", "dateline", "tiles", "tipnum", "clock", "blinds", "flows"}       # case file (dossier.py)
 LOOKS = {"town", "night", "moody"}
 MONEY_WORDS = ("\u20b9", "$", "rs", "crore", "lakh")
 SHAPES3D = {"box", "sphere", "cylinder", "cone", "plane", "terrain", "person", "tree", "building"}
@@ -251,6 +252,19 @@ def validate_job(job, style, chars, root=ROOT):
                 errs.append(f"{w}: nodes needs 'nodes': [{{id, pos}}, ...]")
             elif t == "burst" and not L.get("sprites"):
                 errs.append(f"{w}: burst needs 'sprites': [png, ...]")
+            elif t == "dottext" and not L.get("text"):
+                errs.append(f"{w}: dottext needs 'text'")
+            elif t == "bignum" and not any(k in L for k in ("value", "to", "steps", "text")):
+                errs.append(f"{w}: bignum needs 'value', 'to', 'steps' or 'text'")
+            elif t == "dateline" and not (L.get("date") or L.get("place")):
+                errs.append(f"{w}: dateline needs 'date' and/or 'place'")
+            elif t == "clock" and ":" not in str(L.get("time", "")):
+                errs.append(f"{w}: clock needs 'time': 'HH:MM'")
+            elif t == "flows":
+                pts = L.get("points") or {}
+                bad = [r for r in L.get("routes", []) if r[0] not in pts or r[1] not in pts]
+                if not pts or bad:
+                    errs.append(f"{w}: flows needs 'points' {{name: [x, y]}} and routes between known points")
     if is_long(job):
         ch = job.get("chapters", [])
         n = len(job.get("scenes", []))

@@ -159,6 +159,8 @@ DOC_DIRECT = {"marker", "string", "timeline", "lower_third", "chapter", "tag", "
 DOC_SCREEN = {"lower_third", "chapter", "tag", "headline"}
 NIGHT_DIRECT = {"crowd", "nodes", "burst"}
 NIGHT_IMAGE = {"hud", "eqbar", "tracker", "stamp", "optcard", "phone"}
+CASE_DIRECT = {"blinds", "flows"}
+CASE_IMAGE = {"dottext", "bignum", "dateline", "tiles", "tipnum", "clock"}
 
 def character_image(ctx, L, scene_idx, t, scene):
     ch = ctx.chars[L["id"]]
@@ -342,6 +344,9 @@ def layer_image(ctx, L, scene_idx, t, scene, reveal):
     if typ in NIGHT_IMAGE:
         from . import night
         return night.layer_image(st, L, t - L.get("at", 0.0), W)
+    if typ in CASE_IMAGE:
+        from . import dossier
+        return dossier.layer_image(st, L, t - L.get("at", 0.0), W)
     if typ == "image":
         path = L.get("path", "")
         if path.lower().endswith((".png", ".jpg", ".jpeg", ".webp")):
@@ -400,6 +405,10 @@ def draw_scene(ctx, scene_idx, t):
         if L.get("type") in DOC_DIRECT:                   # markers, string, timelines: part of the world
             from . import doc
             doc.draw_direct(ctx, canvas, L, lt, alpha)
+            continue
+        if L.get("type") in CASE_DIRECT:                  # blind-stripe light, money-flow arcs (dossier.py)
+            from . import dossier
+            dossier.draw_direct(ctx, canvas, L, lt, alpha)
             continue
         if L.get("type") in NIGHT_DIRECT:                 # crowd, nodes, burst: part of the (night) world
             from . import night

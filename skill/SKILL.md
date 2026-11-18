@@ -123,6 +123,9 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   get a `burst`. Every entrance eased with an sfx, something moves every 1-2 s, fixed colour meaning (green true, red danger,
   gold money, blue data). Only the night lighting, rim light and highlight captions are night-only. Never replaces Ved, the
   townspeople, the cream cards or the comic beat.
+- **Case-file pieces (DEMO 2026-11-18; use in public videos only once the Bible marks them owner-approved)**: noir desk with
+  blind-stripe light, evidence props, `dottext` / `bignum` / `dateline` / `tipnum` / `tiles` / `clock` / `blinds` / `flows`
+  (see `docs/job-spec.md` "Case-file pieces"). Mixed in, never replacing: Ved stays in those shots, the town and house captions stay.
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,

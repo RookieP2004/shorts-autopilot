@@ -91,6 +91,14 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
     money moments get a `burst`; all money and apps fictional;
   - fixed colour meaning inside a video: green = true / survives, red = wrong / danger, gold = money, blue = neutral data.
   These sit with (never replace) Ved, the townspeople, the cream infographic cards and the comic beat.
+- **Case-file pieces (2026-11-18, DEMO `jobs/2026-11-18-dossier`, awaiting owner OK before public use).** Learned (not copied)
+  from a reference documentary: a noir desk cut by warm venetian-blind light (`blendkit.noir_desk`, `blinds`), real-looking
+  evidence props (SIM card, fictional papers with red rows, gold envelope, glass cloche), dot-matrix labels that decode or type
+  in (`dottext`), big serif numbers with lining figures (`bignum`), date + place stamps (`dateline`), numbered takeaways
+  (`tipnum`), day tiles (`tiles`), a sweeping clock (`clock`), gold route arcs between city dots (`flows`, never a country
+  outline: Indian map rules), and a `blinds` light overlay that gives any shot the look. Mixed in, never replacing: Ved is in
+  the case-file shots (close, under the same stripes), bright town beats stay, house captions and the comic beat stay. Best
+  homes: the weekly long documentary and Dark Files / scam Shorts; single beats (a dateline, a bignum) can appear in any video.
 - **Reference video (owner-approved, 2026-11-08):** `jobs/2026-11-08-m3` ("Why can't countries just print more money?",
   youtu.be/QFhXI3hT9Ik). This is the quality bar and the house style: every new video should look at least this alive, in its own
   new world and story.
@@ -227,6 +235,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-18 | 3 | case-file pieces added (noir desk + blinds light, dottext, bignum, dateline, tipnum, tiles, clock, flows, evidence props); DEMO awaiting owner OK | owner request (reference documentary study) |
 | 2026-11-16 | 3 | night-pilot graphics + motion rules become the standard for all Shorts (town too): ticking hud chips, eqbar, crowd-as-data, trackers, node trees, option cards, stamps, live phones, bursts, fixed colour meaning | owner request |
 | 2026-11-16 | 3 | night set APPROVED by the owner (pilot 2026-11-16-n); usable in public dark-files / scam / money-trap / big-reveal Shorts | owner: "I think this one is good" |
 | 2026-11-16 | 3 | night set added as an opt-in second mood (PILOT 2026-11-16-n, awaiting approval): hud, eqbar, tracker, stamp, optcard, phone, crowd, nodes, burst, highlight captions, rim light | owner request (reference Short study) |

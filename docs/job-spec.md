@@ -263,6 +263,22 @@ turn red, then fade grey), so 8,000 -> split/keep x3 -> 1,000 exactly. Ved walks
 Scam payoff: a `phone` with `{"kind": "lock", "notes": [...], "cta": "Comment YES or NO", "cta_at": 1.2}`.
 Pilot / reference build: `jobs/2026-11-16-n/build_job.py`. Tests: `python -m pytest -q tests`.
 
+## Case-file pieces (autopilot/dossier.py, devices.doc_texture, blendkit noir_desk; DEMO 2026-11-18, awaiting owner OK)
+Mix into any look (town or night); best in the weekly documentary and Dark Files. Reference build: `jobs/2026-11-18-dossier`.
+**Set**: `noir_desk(target)` = dark slate desk + wall, warm venetian-blind stripes (`blinds(...)`: a hard spot behind a row of
+slats), navy fill. Props: `sim_card()`, `doc_sheet(devices.doc_texture("slips"|"ledger"|"statement"|"form"))`, `envelope()`,
+`cloche()`, `phone(screen_image=...)` (lie it screen-up: rot (-90, 0, z)). Masked numbers only, no real bank, logo or person.
+| type | what | keys |
+|---|---|---|
+| dottext | dot-matrix label that decodes (scramble, then locks left to right) or types in | `text` (`*x*` accent, `\n`), `size`, `tone`, `accent`, `anim: decode/type/none`, `cps`, `align`, `plate: true` (dark pill: use on bright sets) |
+| bignum | big serif number (lining figures) that counts, with a dot caption | `value`/`to`/`steps`/`text`, `prefix`, `suffix`, `indian`, `label`, `tone: cream/gold`, `size`, `label_side: below/right` |
+| dateline | date (types) + place (serif caps rises) stamp | `date`, `place`, `size` |
+| tipnum | numbered takeaway: serif numeral + decoding title + small sub | `n`, `title`, `sub` |
+| tiles | day / step tiles lying in perspective, filling gold | `n`, `progress: [[t, k]]`, `labels`, `unit`, `end`, `pitch`, `yaw`, `w` |
+| clock | thin analog clock, hands sweep to a time, label | `time: "HH:MM"`, `from`, `dur`, `label`, `r` |
+| blinds | (world) warm stripe light over the frame, drifting; put it after the plate and characters | `angle`, `count`, `strength`, `shade`, `color`, `drift`, `phase` |
+| flows | (world) gold arcs between city dots, travelling pulses | `points: {name: [x, y]}`, `routes: [[a, b, t]]`, `tone`; never draw a country outline (map rules), label dots "illustrative" when positions are approximate |
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

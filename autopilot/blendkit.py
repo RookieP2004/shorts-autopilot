@@ -965,3 +965,135 @@ def coin(loc=(0, 0, 0), rot=(90, 0, 0), r=0.5, symbol="₹", name="coin"):
                    material=gold, font="body", extrude=r * 0.03, name=f"{name}_sym{side}")
         s.parent = c
     return c
+
+
+# ------------------------------------------------------------------ noir desk (v5: "case file" documentary look)
+NOIR = {"bg": "#0b1018", "desk": "#2a2f38", "wall": "#141a24", "sun": "#ffb46b", "cream": "#efe6d2", "gold": "#d9a441",
+        "red": "#e2484d", "green": "#3ecf8e"}
+
+
+def blinds(target=(0, 0, 0), from_dir=(-1.0, -0.6, 0.9), dist=7.0, power=9000, color="#ffb46b", slats=48, gap=0.13, angle=26,
+           size=6.0, name="blinds"):
+    """Warm light through venetian blinds: a hard spot with a row of slats in front of it, so crisp stripes of light fall
+    across the desk / floor / wall (the noir 'case file' look). from_dir = direction the light comes FROM (towards the window)."""
+    tx, ty, tz = target
+    v = mathutils.Vector(from_dir).normalized()
+    loc = mathutils.Vector((tx, ty, tz)) + v * dist
+    sp = spot_light(tuple(loc), target, power, angle, blend=0.05, radius=0.02, color=color, name=name + "_sun")
+    blk = mat(name + "_slat", "#000000", rough=1.0)
+    rig = bpy.data.objects.new(name + "_rig", None)
+    bpy.context.scene.collection.objects.link(rig)
+    rig.location = tuple(mathutils.Vector((tx, ty, tz)) + v * (dist * 0.8))
+    look_at(rig, target)
+    h = gap * slats
+    for i in range(slats):
+        s = box((size, 0.02, gap * 0.55), (0, (i - slats / 2) * gap, 0), (90, 0, 0), material=blk, bevel=0.0, name=f"{name}_s{i}")
+        s.parent = rig
+        s.visible_camera = False
+        s.visible_glossy = False
+    return sp
+
+
+def noir_desk(target=(0, 0, 0), desk="#3a4250", wall=True, sun=NOIR["sun"], sun_power=7000, fill=0.35, rough=0.42,
+              from_dir=(-1.0, -0.5, 0.85), slats=60, gap=0.12):
+    """The case-file set: a dark desk top (z = 0) that fills the frame, a dark wall behind, and warm blind-stripes of light
+    across both. Put props (phone_sprite props, sim_card, doc_sheet, envelope, cloche) on it; frame with a 35-50 mm lens
+    looking down 25-45 degrees; fstop 2-3 for the soft background."""
+    world_color("#1c2433", fill)
+    floor(color=desk, rough=rough, size=40, curve=False)
+    if wall:
+        w = plane(40, 12, (target[0], target[1] + 6.0, 6.0), rot=(90, 0, 0), name="noir_wall")
+        assign(w, mat("noir_wall_mat", NOIR["wall"], rough=0.8))
+    blinds(target, from_dir, 8.0, sun_power, sun, slats, gap, 30, 12.0)
+    area_light((target[0] + 4, target[1] - 5, 4), target, 260, 8.0, "#7f9cc8", "noir_fill")
+    area_light((target[0] - 1, target[1] - 3, 3), target, 120, 3.0, "#ffd9b0", "noir_bounce")
+
+
+def sim_card(loc=(0, 0, 0), rot=(0, 0, 0), w=0.85, color=NOIR["cream"], name="sim"):
+    """A big fictional SIM card: cream plastic with a clipped corner and a gold contact chip."""
+    import bmesh
+    h, t = w * 0.66, w * 0.02
+    bm = bmesh.new()
+    c = w * 0.16
+    pts = [(-w / 2, -h / 2), (w / 2, -h / 2), (w / 2, h / 2 - c), (w / 2 - c, h / 2), (-w / 2, h / 2)]
+    vs = [bm.verts.new((x, y, 0)) for x, y in pts]
+    bm.faces.new(vs)
+    me = bpy.data.meshes.new(name)
+    bm.to_mesh(me)
+    bm.free()
+    o = bpy.data.objects.new(name, me)
+    bpy.context.scene.collection.objects.link(o)
+    o.location, o.rotation_euler = loc, tuple(math.radians(a) for a in rot)
+    so = o.modifiers.new("solid", "SOLIDIFY")
+    so.thickness = t
+    so.offset = 1.0
+    bv = o.modifiers.new("bevel", "BEVEL")
+    bv.width = t * 0.4
+    bv.segments = 2
+    assign(o, mat(name + "_plastic", color, rough=0.5))
+    chip = box((w * 0.28, w * 0.22, t * 0.4), (-w * 0.18, 0, t + t * 0.1), material=metal(NOIR["gold"], 0.25, name + "_chip"),
+               bevel=w * 0.02, name=name + "_chip")
+    chip.parent = o
+    for i in (-1, 1):
+        ln = box((w * 0.28, 0.006, 0.003), (-w * 0.18, i * w * 0.05, t * 1.35), material=mat(name + "_cut", "#8a6a2a"), bevel=0,
+                 name=f"{name}_cut{i}")
+        ln.parent = o
+    return o
+
+
+def doc_sheet(image, loc=(0, 0, 0), rot=(0, 0, 0), w=1.0, curl=0.06, name="doc"):
+    """A sheet of paper lying on the desk (image = a texture from autopilot.devices.doc_texture), with a slight curl."""
+    from PIL import Image as _I
+    iw, ih = _I.open(image).size
+    h = w * ih / iw
+    bpy.ops.mesh.primitive_grid_add(x_subdivisions=24, y_subdivisions=24, size=1, location=loc)
+    o = bpy.context.active_object
+    o.name = name
+    o.scale = (w, h, 1)
+    for v in o.data.vertices:
+        u = v.co.x + 0.5
+        v.co.z = curl * (u - 0.5) ** 2 * 2 / max(w, 0.01)
+    bpy.ops.object.transform_apply(scale=True)
+    o.rotation_euler = tuple(math.radians(a) for a in rot)
+    assign(o, paper(image))
+    return o
+
+
+def envelope(loc=(0, 0, 0), rot=(0, 0, 0), w=0.9, color=NOIR["gold"], lock=True, name="env"):
+    """A gold envelope (metallic paper) with an embossed padlock: 'private / never share' moments."""
+    h = w * 0.62
+    body = box((w, h, 0.02), loc, rot, material=mat(name + "_m", color, rough=0.32, metal=0.65), bevel=0.01, name=name)
+    import bmesh
+    bm = bmesh.new()
+    a, b, c = bm.verts.new((-w / 2, h / 2, 0.012)), bm.verts.new((w / 2, h / 2, 0.012)), bm.verts.new((0, -h * 0.02, 0.012))
+    bm.faces.new((a, b, c))
+    me = bpy.data.meshes.new(name + "_flap")
+    bm.to_mesh(me)
+    bm.free()
+    flap = bpy.data.objects.new(name + "_flap", me)
+    bpy.context.scene.collection.objects.link(flap)
+    flap.parent = body
+    assign(flap, mat(name + "_flapm", color, rough=0.25, metal=0.75))
+    if lock:
+        lk = box((w * 0.12, w * 0.1, 0.02), (0, -h * 0.05, 0.03), material=metal("#f1d48a", 0.2, name + "_lock"), bevel=0.01, name=name + "_lock")
+        lk.parent = body
+        sh = torus(w * 0.04, w * 0.012, (0, -h * 0.05 + w * 0.06, 0.03), (0, 0, 0), material=metal("#f1d48a", 0.2, name + "_lock2"),
+                   name=name + "_shackle")
+        sh.parent = body
+    return body
+
+
+def cloche(loc=(0, 0, 0), r=0.7, base="#16181e", name="cloche"):
+    """A glass dome on a dark round plinth: put the 'evidence' under it (a SIM, a key, a coin)."""
+    x, y, z = loc
+    plinth = cylinder(r * 1.15, r * 0.5, (x, y, z + r * 0.25), material=mat(name + "_base", base, rough=0.3, metal=0.4),
+                      verts=96, bevel=0.02, name=name + "_plinth")
+    dome = sphere(r, (x, y, z + r * 0.5), material=glass("#ffffff", 0.0, name + "_glass"), seg=64, name=name + "_dome")
+    import bmesh
+    bm = bmesh.new()
+    bm.from_mesh(dome.data)
+    bmesh.ops.delete(bm, geom=[v for v in bm.verts if v.co.z < -0.001], context="VERTS")
+    bm.to_mesh(dome.data)
+    bm.free()
+    knob = sphere(r * 0.08, (x, y, z + r * 1.55), material=metal("#c9b27a", 0.2, name + "_knob"), name=name + "_knob")
+    return plinth, dome, knob
