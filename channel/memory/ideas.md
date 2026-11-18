@@ -62,7 +62,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [big-question] Why is copper orange? · the other coloured metal: its d-electrons absorb blue-green without needing relativity; contrast with gold · https://en.wikipedia.org/wiki/Copper
 - [what-if] What if light were slow? · grounded what-if on how relativity would show up in daily life (Mr Tompkins style), tagged SPECULATION · https://en.wikipedia.org/wiki/Mr_Tompkins
 - [myth-bust] "Planets twinkle like stars" · they mostly don't: a planet is a tiny disc, a star a point, so air wobble averages out; pairs with the Mars-Jupiter video, runner-up 2026-11-15 · https://earthsky.org/astronomy-essentials/why-dont-planets-twinkle-as-stars-do/
-- [what-if] What if Jupiter were a star? · it would need ~80x its mass to fuse hydrogen; what our sky would look like; tagged SPECULATION · https://en.wikipedia.org/wiki/Jupiter
 - [scale-shock] The sunlight on your face is 8 minutes old · light-time made visible, from the Moon (1.3 s) to Neptune (~4 h) · https://en.wikipedia.org/wiki/Light-second
 - [myth-bust] "You've been told the Sun is yellow" · hook test: from space it looks white (air scatters blue light away); picturable physics · https://en.wikipedia.org/wiki/Sunlight
 - [wild-story] The man who lost his sense of touch and body position (Ian Waterman, 1971) · learned to walk again by watching his limbs; proprioception follow-up, runner-up 2026-11-15 · https://en.wikipedia.org/wiki/Ian_Waterman
@@ -102,3 +101,7 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [big-question] Why do you jolt awake as you fall asleep? · the hypnic jerk: common, harmless, why the brain does it is still debated (tag THEORY); runner-up 2026-11-18 · https://en.wikipedia.org/wiki/Hypnic_jerk
 - [wild-story] Lister's carbolic spray (1867): the surgeon who sprayed acid in operating rooms and cut amputation deaths · follow-up to the Semmelweis Short, runner-up 2026-11-18 · https://www.sciencealert.com/ignaz-semmelweis
 - [scale-shock] Earth sweeps up thousands of tonnes of space dust a year · estimates range ~5,200 t/yr reaching the ground (2021 Antarctic study) to far more burning up; show the spread honestly; runner-up 2026-11-18 · https://www.sciencenews.org/article/earth-extraterrestrial-space-dust-weight-meteorite
+
+- [big-question] Why is there a minimum size for a star? · the hydrogen-burning limit (~75-80 Jupiter masses); brown dwarfs as the in-between; runner-up 2026-11-19 · https://www.sciencefocus.com/space/could-jupiter-become-a-star
+- [scale-shock] The smallest known star is barely bigger than Jupiter · OGLE-TR-122b: 96x Jupiter's mass, 16% wider; size vs mass shown with fruit; runner-up 2026-11-19 · https://eso.org/public/news/eso0507/
+- [myth-bust] "Jupiter protects Earth from asteroids" · the 'cosmic shield' idea is debated: it deflects some, flings others inward; runner-up 2026-11-19 · https://en.wikipedia.org/wiki/Jupiter
