@@ -1,0 +1,20 @@
+{
+  "name": "explainer-motion",
+  "private": true,
+  "description": "Remotion + GSAP + three.js motion-graphics engine for The Explainer (renders transparent PNG sequences the Python compositor layers in)",
+  "scripts": {
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.8.2",
+    "@remotion/bundler": "^4.0.545",
+    "@remotion/cli": "^4.0.545",
+    "@remotion/renderer": "^4.0.545",
+    "@remotion/three": "^4.0.545",
+    "gsap": "^3.15.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.545",
+    "three": "^0.187.0"
+  }
+}

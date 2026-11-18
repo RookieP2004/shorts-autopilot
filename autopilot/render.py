@@ -66,6 +66,18 @@ def render_shots(ctx, log=print):
         return
     for i, s in enumerate(ctx.job["scenes"]):
         for j, L in enumerate(s.get("layers", [])):
+            if L.get("type") == "motion":                 # Remotion / GSAP / three.js clip (autopilot/remotion.py)
+                from . import remotion
+                dur = L.get("dur", ctx.dur[i] - L.get("at", 0.0))
+                fps = L.get("fps", ctx.fps)
+                res = L.get("res", 1.0)
+                w = int(round(ctx.W * L.get("w", 1.0) * res / 2)) * 2
+                h = int(round(ctx.H * L.get("h", 1.0) * res / 2)) * 2
+                out = os.path.join(ctx.shots_dir, f"m{i:02d}_l{j:02d}")
+                log(f"  motion clip scene {i} layer {j}: {L['comp']} {w}x{h} {dur:.1f}s")
+                remotion.render_clip(L["comp"], L.get("props", {}), out, w, h, fps, dur, log)
+                L["_frames_dir"], L["_fps"] = out, fps
+                continue
             if L.get("type") != "blender":
                 continue
             dur = L.get("dur", ctx.dur[i] - L.get("at", 0.0))

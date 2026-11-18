@@ -332,7 +332,7 @@ def layer_image(ctx, L, scene_idx, t, scene, reveal):
     if typ == "shape":
         svg, w = sprites.shape_svg(st, L, ctx.W, ctx.H)
         return sprites.svg_image(svg, w)
-    if typ == "blender":
+    if typ in ("blender", "motion"):
         return blender_frame(ctx, L, t)
     if typ == "scene3d":
         from .three import render as render3d

@@ -235,6 +235,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-18 | 3 | motion clips added (Remotion + GSAP + three.js: kinetic titles, self-drawing cream-card flows, real-time 3D coin/bars/globe), mixed into the house style; DEMO 2026-11-18-motion | owner request (learn remotion, gsap, three.js skills) |
 | 2026-11-18 | 3 | case-file pieces added (noir desk + blinds light, dottext, bignum, dateline, tipnum, tiles, clock, flows, evidence props); DEMO awaiting owner OK | owner request (reference documentary study) |
 | 2026-11-16 | 3 | night-pilot graphics + motion rules become the standard for all Shorts (town too): ticking hud chips, eqbar, crowd-as-data, trackers, node trees, option cards, stamps, live phones, bursts, fixed colour meaning | owner request |
 | 2026-11-16 | 3 | night set APPROVED by the owner (pilot 2026-11-16-n); usable in public dark-files / scam / money-trap / big-reveal Shorts | owner: "I think this one is good" |

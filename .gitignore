@@ -4,3 +4,6 @@ jobs/*/preview/
 __pycache__/
 *.pyc
 stats/
+
+motion/node_modules/
+motion/.bundle/

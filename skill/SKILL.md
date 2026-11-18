@@ -126,6 +126,12 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
 - **Case-file pieces (DEMO 2026-11-18; use in public videos only once the Bible marks them owner-approved)**: noir desk with
   blind-stripe light, evidence props, `dottext` / `bignum` / `dateline` / `tipnum` / `tiles` / `clock` / `blinds` / `flows`
   (see `docs/job-spec.md` "Case-file pieces"). Mixed in, never replacing: Ved stays in those shots, the town and house captions stay.
+- **Motion clips (Remotion + GSAP + three.js, owner 2026-11-18)**: `motion` layers render small Remotion compositions
+  (`KineticTitle`, `FlowDiagram`, `Hero3D` coin/bars/globe) and play them inside the scene, mixed with the house pieces. Use one
+  or two per Short where motion design helps (hook title, cause-and-effect flow, a real-time 3D object); long videos may use
+  more. Rules: everything driven by the frame (no CSS animation, no three.js useFrame, GSAP timelines paused and seeked);
+  see `motion/README.md` and `docs/job-spec.md` "Motion clips". New compositions go in `motion/src` and `autopilot/remotion.py
+  COMPS`, with a test. The full skill docs: `remotion-dev/skills`, `greensock/gsap-skills`, `cloudAI-X/threejs-skills` on GitHub.
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,

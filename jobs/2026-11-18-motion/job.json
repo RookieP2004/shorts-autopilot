@@ -1,0 +1,525 @@
+{
+ "id": "2026-11-18-motion",
+ "title": "DEMO motion engine",
+ "description": "demo (not posted)",
+ "tags": [],
+ "privacy": "private",
+ "speaker": "ved",
+ "meta": {
+  "format": "demo",
+  "humour": {
+   "beat": "side_eye",
+   "scene": 4
+  }
+ },
+ "scenes": [
+  {
+   "say": "Why does your cup of chai cost more every single year?",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2606,
+     "y": 0.5815,
+     "h": 0.4291,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a8693f",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "top": [
+        "#e9e6df",
+        "apron"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b"
+      }
+     }
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.768,
+     "y": 0.5878,
+     "h": 0.4562,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       1.8
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "motion",
+     "comp": "KineticTitle",
+     "props": {
+      "lines": [
+       "WHY IS MY",
+       "*CHAI* COSTLIER?"
+      ],
+      "size": 150,
+      "y": 0.2,
+      "style": "rise"
+     },
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "at": 0.0,
+     "enter": "none"
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Same cup, same stall. But the price only goes one way.",
+   "transition": "push",
+   "transition_frames": 12,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6
+    },
+    {
+     "type": "motion",
+     "comp": "Hero3D",
+     "props": {
+      "object": "coin",
+      "spin": 720,
+      "zoom": 0.7
+     },
+     "x": 0.34,
+     "y": 0.6,
+     "w": 0.62,
+     "h": 0.34,
+     "at": 0.0,
+     "enter": "none"
+    },
+    {
+     "type": "hud",
+     "label": "price of one chai",
+     "steps": [
+      [
+       0,
+       10
+      ],
+      [
+       0.9,
+       15
+      ]
+     ],
+     "prefix": "₹",
+     "tone": "gold",
+     "x": 0.5,
+     "y": 0.24,
+     "enter": "pop",
+     "width_of": "₹15"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.8,
+     "y": 0.93,
+     "h": 0.62,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Prices rise a little, every year. It adds up fast.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "motion",
+     "comp": "Hero3D",
+     "props": {
+      "object": "bars",
+      "values": [
+       10,
+       10.5,
+       11,
+       11.6,
+       12.2,
+       12.8,
+       13.4,
+       14.1,
+       14.8
+      ],
+      "colors": [
+       "#4aa3ff",
+       "#4aa3ff",
+       "#4aa3ff",
+       "#4aa3ff",
+       "#4aa3ff",
+       "#4aa3ff",
+       "#4aa3ff",
+       "#4aa3ff",
+       "#f4c04e"
+      ],
+      "zoom": 1.05
+     },
+     "x": 0.5,
+     "y": 0.36,
+     "w": 1.0,
+     "h": 0.5,
+     "at": 0.0,
+     "enter": "none"
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.4,
+       "₹10 × 1.05^8 ≈ *₹15*"
+      ]
+     ],
+     "tone": "gold",
+     "x": 0.5,
+     "y": 0.66,
+     "enter": "fade"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.792,
+     "y": 0.5935,
+     "h": 0.2067,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "More money chasing the same goods means higher prices.",
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10
+    },
+    {
+     "type": "motion",
+     "comp": "FlowDiagram",
+     "props": {
+      "nodes": [
+       {
+        "id": "m",
+        "label": "MORE MONEY",
+        "x": 0.33,
+        "y": 0.2
+       },
+       {
+        "id": "g",
+        "label": "SAME GOODS",
+        "x": 0.64,
+        "y": 0.56
+       },
+       {
+        "id": "p",
+        "label": "HIGHER PRICES",
+        "x": 0.38,
+        "y": 0.72,
+        "color": "#ffd9d2"
+       }
+      ],
+      "edges": [
+       [
+        "m",
+        "g"
+       ],
+       [
+        "g",
+        "p"
+       ]
+      ],
+      "step": 0.55
+     },
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "at": 0.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.82,
+     "y": 0.93,
+     "h": 0.6,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "dur": 1.6,
+   "captions": false,
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.4,
+    "who": "ved",
+    "text": "chai wala every year:\n*just ₹1 more, beta*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "And when the rupee weakens, everything we import gets pricier too.",
+   "look": "night",
+   "transition": "push",
+   "transition_frames": 12,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10
+    },
+    {
+     "type": "motion",
+     "comp": "Hero3D",
+     "props": {
+      "object": "globe",
+      "arcs": [
+       [
+        19,
+        73,
+        25,
+        55
+       ],
+       [
+        19,
+        73,
+        51,
+        0
+       ],
+       [
+        19,
+        73,
+        1,
+        104
+       ],
+       [
+        19,
+        73,
+        40,
+        -74
+       ]
+      ],
+      "tone": "#e0b25a"
+     },
+     "x": 0.5,
+     "y": 0.4,
+     "w": 1.0,
+     "h": 0.56,
+     "at": 0.0,
+     "enter": "none"
+    },
+    {
+     "type": "dottext",
+     "text": "IMPORTS: *PRICIER*",
+     "size": 56,
+     "x": 0.5,
+     "y": 0.7,
+     "at": 0.8,
+     "accent": "red"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.84,
+     "y": 0.93,
+     "h": 0.5,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Follow for more everyday money, explained.",
+   "transition": "cut",
+   "min_dur": 2.8,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "smirk",
+       1.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "motion",
+     "comp": "KineticTitle",
+     "props": {
+      "lines": [
+       "FOLLOW FOR",
+       "*MORE*"
+      ],
+      "size": 140,
+      "y": 0.2,
+      "style": "pop"
+     },
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "at": 0.0,
+     "enter": "none"
+    }
+   ],
+   "pad": 0.14
+  }
+ ]
+}

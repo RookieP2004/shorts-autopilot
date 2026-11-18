@@ -279,6 +279,15 @@ slats), navy fill. Props: `sim_card()`, `doc_sheet(devices.doc_texture("slips"|"
 | blinds | (world) warm stripe light over the frame, drifting; put it after the plate and characters | `angle`, `count`, `strength`, `shade`, `color`, `drift`, `phase` |
 | flows | (world) gold arcs between city dots, travelling pulses | `points: {name: [x, y]}`, `routes: [[a, b, t]]`, `tone`; never draw a country outline (map rules), label dots "illustrative" when positions are approximate |
 
+## Motion clips (`motion` layer: Remotion + GSAP + three.js; autopilot/remotion.py, motion/)
+A `motion` layer plays a clip rendered with Remotion in headless Chrome (cached, transparent PNG frames), inside the scene
+like any layer: `{"type": "motion", "comp": "KineticTitle"|"FlowDiagram"|"Hero3D", "props": {...}, "x", "y", "w", "h", "at",
+"dur"}` (w/h = frame fractions; the clip is rendered at that size; `res` < 1 renders smaller). Props per composition and the
+rules (everything frame-driven, GSAP timelines seeked, no useFrame) are in `motion/README.md`. Use it where motion design
+beats a still: a kinetic hook title, a cause-and-effect flow of cream cards with self-drawing arrows, a real-time 3D object
+(coin, bars, dot globe with arcs). Mix with the house pieces; it never replaces Ved, captions, cards or plates.
+Reference demo: `jobs/2026-11-18-motion`.
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

@@ -78,3 +78,24 @@ def test_validation_of_case_layers():
     errs = " ".join(validate_job(job, job_style(job), load_characters()))
     for k in ("dottext needs", "bignum needs", "dateline needs", "clock needs", "flows needs"):
         assert k in errs, k
+
+
+def test_motion_layer_validation_and_cache_key(tmp_path):
+    from autopilot import remotion
+    job = {"id": "t", "title": "t", "scenes": [{"say": "hi", "layers": [{"type": "motion", "comp": "Nope"}]}]}
+    errs = " ".join(validate_job(job, job_style(job), load_characters()))
+    assert "motion comp 'Nope'" in errs
+    assert {"KineticTitle", "FlowDiagram", "Hero3D"} <= remotion.COMPS
+    assert len(remotion._src_stamp()) == 10
+
+
+@pytest.mark.skipif(not os.path.exists("/usr/bin/google-chrome") or not os.path.isdir(
+    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "motion", "node_modules")), reason="needs Chrome + npm ci")
+def test_motion_clip_renders_transparent_frames(tmp_path):
+    from autopilot import remotion
+    out = remotion.render_clip("KineticTitle", {"lines": ["HI *THERE*"]}, str(tmp_path / "c"), 270, 480, 10, 1.0, log=lambda *a: None)
+    fs = sorted(f for f in os.listdir(out) if f.endswith(".png"))
+    assert len(fs) == 10
+    im = Image.open(os.path.join(out, fs[-1]))
+    assert im.mode == "RGBA" and np.asarray(im)[..., 3].min() == 0 and np.asarray(im)[..., 3].max() == 255
+    remotion.render_clip("KineticTitle", {"lines": ["HI *THERE*"]}, out, 270, 480, 10, 1.0, log=lambda *a: None)  # cached: no error
