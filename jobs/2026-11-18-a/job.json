@@ -1,0 +1,1315 @@
+{
+ "id": "2026-11-18-a",
+ "title": "He told doctors to wash their hands. They pushed him out 🧼",
+ "description": "In 1847 Ignaz Semmelweis worked in Vienna's maternity clinics. In the doctors' clinic about 1 in 10 mothers died of childbed fever; in the midwives' clinic far fewer. The difference: doctors and students came straight from autopsies. When his colleague Jakob Kolletschka cut himself during a post-mortem and died of a similar illness, Semmelweis ordered hand washing in chlorine solution before touching patients. Deaths fell from about 18% in April 1847 to under 2% by July. Senior doctors resisted, his post wasn't renewed and he left Vienna in 1849. Germ theory (Pasteur) and antiseptic surgery (Lister, 1867) later proved him right.\n\nSources: ScienceAlert (Ignaz Semmelweis); PMC review of Semmelweis (2024).",
+ "tags": [
+  "Semmelweis",
+  "handwashing",
+  "history of medicine",
+  "germ theory",
+  "science history",
+  "true story",
+  "childbed fever",
+  "hand hygiene",
+  "science facts"
+ ],
+ "hashtags": [
+  "#science",
+  "#history"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#history",
+   "#semmelweis",
+   "#historyofmedicine",
+   "#handwashing",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "wild-story",
+  "topic": "Ignaz Semmelweis and handwashing (Vienna 1847): doctors' clinic ~1 in 10 mothers died of childbed fever vs far fewer with midwives; doctors came from autopsies; Kolletschka's autopsy cut and death; chlorine hand wash; ~18% (April 1847) to under 2% (July); rejected by senior doctors, out of Vienna 1849; germ theory later proved him right",
+  "hook": "number-shock",
+  "idea_source": "viral-shaped + unique: a famous 'impossible' turnaround (deaths cut ~10x) from the simplest everyday act, told as a mini-drama; backlog idea (wild-story); new topic area after a run of space and body Shorts",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.sciencealert.com/ignaz-semmelweis",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC11568873/"
+  ],
+  "humour": {
+   "trend": "timeless dry aside (no rising meme fits 1840s medicine this week; 'Remember November' and 'W chews' already used): deadpan + '\"wash hands? sir, we are DOCTORS\"'",
+   "beat": "deadpan",
+   "scene": 4
+  },
+  "claims": [
+   {
+    "claim": "in Vienna General Hospital's doctors' maternity clinic about 1 in 10 mothers died of childbed fever; far fewer in the midwives' clinic",
+    "tag": "PROVEN",
+    "source": "https://www.sciencealert.com/ignaz-semmelweis"
+   },
+   {
+    "claim": "doctors and medical students went from autopsies to the delivery ward",
+    "tag": "PROVEN",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11568873/"
+   },
+   {
+    "claim": "in 1847 his colleague Jakob Kolletschka cut himself during a post-mortem and died of a similar illness",
+    "tag": "PROVEN",
+    "source": "https://www.sciencealert.com/ignaz-semmelweis"
+   },
+   {
+    "claim": "Semmelweis ordered hand washing in chlorine solution; deaths fell from ~18% (April 1847) to under 2% by July",
+    "tag": "PROVEN",
+    "source": "https://www.sciencealert.com/ignaz-semmelweis"
+   },
+   {
+    "claim": "senior colleagues resisted; his post was not renewed and he left Vienna in 1849; Pasteur and Lister later vindicated him",
+    "tag": "PROVEN",
+    "source": "https://www.sciencealert.com/ignaz-semmelweis"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "JUST *WASH?*",
+  "title_y": 0.15,
+  "title_size": 190,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffd23a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.3,
+  "tint": [
+   "#2f6f8f",
+   "#f08a24"
+  ],
+  "tint_amount": 0.28,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-18-a/assets/plate_ward_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-18-a/assets/jar.png",
+    "x": 0.2,
+    "y": 0.5,
+    "w": 0.22,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-18-a/assets/soap.png",
+    "x": 0.82,
+    "y": 0.48,
+    "w": 0.22,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.95,
+    "h": 0.8,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-18-a/assets.py",
+ "scenes": [
+  {
+   "say": "Eighteen forty-seven. One doctor cut deaths on his ward from *18%* to under *2%*.",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.6
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5909,
+     "y": 0.5163,
+     "h": 0.0942,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "surprised",
+       3.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#f6efe2"
+       ],
+       "top": [
+        "#5b86b8",
+        "dress"
+       ],
+       "apron": "#f6efe2",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.4563,
+     "y": 0.5407,
+     "h": 0.1511,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc6a2",
+       "build": "round",
+       "hair": [
+        "#5a3e28",
+        "short"
+       ],
+       "top": [
+        "#2a2f3a",
+        "jacket"
+       ],
+       "tie": "#7c2533",
+       "bottom": [
+        "#2a2f3a",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4688,
+       "y": 0.5221,
+       "scale": 0.7128
+      },
+      {
+       "t": 2.4,
+       "x": 0.4511,
+       "y": 0.5484,
+       "scale": 1.1198,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.7846,
+     "y": 0.6411,
+     "h": 0.3979,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       1.8
+      ],
+      [
+       "surprised",
+       3.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "THE DOCTOR WHO SAID *WASH YOUR HANDS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.145,
+     "size": 70,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "hud",
+     "label": "deaths on the ward",
+     "x": 0.5,
+     "y": 0.29,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "steps": [
+      [
+       0.0,
+       18
+      ],
+      [
+       2.2,
+       2
+      ]
+     ],
+     "suffix": "%",
+     "tone": "red",
+     "at": 0.0,
+     "sub": "1847, Vienna",
+     "width_of": "18%"
+    },
+    {
+     "type": "stamp",
+     "text": "SOAP?!",
+     "tone": "green",
+     "angle": -6,
+     "size": 70,
+     "x": 0.76,
+     "y": 0.37,
+     "at": 2.8,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "Doctors' clinic: *1 in 10* mothers died of fever. Midwives' clinic: far *fewer*.",
+   "transition": "slide_left",
+   "caption_y": 0.45,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.06,
+      "focus": [
+       0.55,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7447,
+     "y": 0.5321,
+     "h": 0.4278,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "short"
+       ],
+       "top": [
+        "#5a4636",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.7952,
+     "y": 0.4765,
+     "h": 0.2292,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       3.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#f6efe2"
+       ],
+       "top": [
+        "#5b86b8",
+        "dress"
+       ],
+       "apron": "#f6efe2",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "doctors' clinic",
+     "text": "1 IN 10",
+     "sub": "mothers died",
+     "tone": "red",
+     "x": 0.28,
+     "y": 0.14,
+     "w": 0.42,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "optcard",
+     "label": "midwives' clinic",
+     "text": "FAR FEWER",
+     "tone": "green",
+     "x": 0.72,
+     "y": 0.14,
+     "w": 0.42,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 3.0,
+     "sfx": "pop",
+     "verdict": "tick",
+     "verdict_at": 0.6
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.29,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 3.8,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Doctors came *straight from autopsies*.",
+   "transition": "flash",
+   "sfx": "boom",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/plate_dissect.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.071,
+     "y": 0.5612,
+     "h": 0.3884,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "short"
+       ],
+       "top": [
+        "#5a4636",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 420'><rect x='6' y='6' width='888' height='408' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><text x='450' y='70' text-anchor='middle' font-size='46' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>A DOCTOR'S MORNING, 1847</text><rect x='40' y='120' width='250' height='170' rx='22' fill='#34425c'/><text x='165' y='195' text-anchor='middle' font-size='40' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>AUTOPSY</text><text x='165' y='245' text-anchor='middle' font-size='26' fill='#cfe6ff' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>dissecting room</text><rect x='610' y='120' width='250' height='170' rx='22' fill='#5b86b8'/><text x='735' y='195' text-anchor='middle' font-size='40' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>BIRTHS</text><text x='735' y='245' text-anchor='middle' font-size='26' fill='#f6efe2' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>delivery ward</text><path d='M300,205 L590,205' stroke='#d6483e' stroke-width='12' stroke-dasharray='26 14'/><path d='M580,180 L610,205 L580,230 Z' fill='#d6483e'/><rect x='345' y='255' width='210' height='62' rx='16' fill='#d6483e'/><text x='450' y='298' text-anchor='middle' font-size='34' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>NO WASH</text><text x='450' y='375' text-anchor='middle' font-size='30' fill='#1a1410' font-family='Poppins, DejaVu Sans, sans-serif' font-weight='800'>same hands, straight to the mothers</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.86,
+     "rotate": -1.5,
+     "enter": "slide_up",
+     "at": 0.5,
+     "sfx": "whoosh",
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.0
+      },
+      {
+       "t": 2.5,
+       "scale": 1.04
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Then his friend cut himself at one, and died of the *same fever*.",
+   "transition": "push",
+   "caption_y": 0.45,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.1,
+      "focus": [
+       0.45,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/plate_dissect.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 4,
+       "scale": 1.22
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.3,
+     "y": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "sad",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "ground": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc6a2",
+       "build": "round",
+       "hair": [
+        "#5a3e28",
+        "short"
+       ],
+       "top": [
+        "#2a2f3a",
+        "jacket"
+       ],
+       "tie": "#7c2533",
+       "bottom": [
+        "#2a2f3a",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "hud",
+     "label": "his friend, 1847",
+     "x": 0.5,
+     "y": 0.175,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "text": "KOLLETSCHKA",
+     "tone": "blue",
+     "at": 0.1,
+     "width_of": "KOLLETSCHKA"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0.6,
+      1.6,
+      2.6
+     ],
+     "x": 0.5,
+     "y": 0.255,
+     "at": 0.3,
+     "enter": "fade"
+    },
+    {
+     "type": "text",
+     "text": "CORPSES  >  HANDS  >  *MOTHERS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.315,
+     "size": 62,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.78,
+     "y": 0.7,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 3.0,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "\"wash hands? sir, we are *DOCTORS*\"",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "So Semmelweis ordered: *wash in chlorine*.",
+   "transition": "slide_up",
+   "caption_y": 0.36,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 3.8,
+      "zoom": 1.1,
+      "focus": [
+       0.45,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/plate_wash.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/jar.png",
+     "x": 0.8,
+     "y": 0.24,
+     "w": 0.13,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "y": 0.17,
+       "rot": -8
+      },
+      {
+       "t": 0.6,
+       "y": 0.24,
+       "rot": 0,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/soap.png",
+     "x": 0.2,
+     "y": 0.24,
+     "w": 0.17,
+     "enter": "pop",
+     "at": 1.4,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": 10
+      },
+      {
+       "t": 0.5,
+       "rot": -4,
+       "ease": "back"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "*CHLORINE* WASH",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.135,
+     "size": 88,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.26,
+     "y": 0.98,
+     "h": 0.55,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.8
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.72,
+     "y": 0.3,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "April: *18%*. July: under *2%*.",
+   "transition": "flash",
+   "caption_y": 0.45,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.5909,
+     "y": 0.5163,
+     "h": 0.0942,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "cheer",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#f6efe2"
+       ],
+       "top": [
+        "#5b86b8",
+        "dress"
+       ],
+       "apron": "#f6efe2",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.5,
+       0.04,
+       0.35
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.4511,
+     "y": 0.5484,
+     "h": 0.1692,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "cheer",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc6a2",
+       "build": "round",
+       "hair": [
+        "#5a3e28",
+        "short"
+       ],
+       "top": [
+        "#2a2f3a",
+        "jacket"
+       ],
+       "tie": "#7c2533",
+       "bottom": [
+        "#2a2f3a",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.3,
+       0.05,
+       0.35
+      ]
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "deaths on the ward",
+     "x": 0.5,
+     "y": 0.13,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "steps": [
+      [
+       0.0,
+       18
+      ],
+      [
+       1.2,
+       2
+      ]
+     ],
+     "suffix": "%",
+     "tone": "green",
+     "at": 0.0,
+     "count_dur": 1.0,
+     "width_of": "18%"
+    },
+    {
+     "type": "eqbar",
+     "x": 0.5,
+     "y": 0.22,
+     "tone": "green",
+     "at": 0.2,
+     "keys": [
+      [
+       0.0,
+       "APRIL 18%"
+      ],
+      [
+       1.3,
+       "APRIL 18%  >  JULY *UNDER 2%*"
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.3,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Senior doctors *rejected* it. By eighteen forty-nine, he was *out*.",
+   "transition": "slide_left",
+   "caption_y": 0.45,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.7447,
+     "y": 0.5321,
+     "h": 0.4278,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ],
+      [
+       "idle",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "short"
+       ],
+       "top": [
+        "#5a4636",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.7963,
+     "y": 0.493,
+     "h": 0.2876,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc6a2",
+       "build": "round",
+       "hair": [
+        "#5a3e28",
+        "short"
+       ],
+       "top": [
+        "#2a2f3a",
+        "jacket"
+       ],
+       "tie": "#7c2533",
+       "bottom": [
+        "#2a2f3a",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.7963,
+       "y": 0.493,
+       "scale": 1.0
+      },
+      {
+       "t": 3.2,
+       "x": 0.8945,
+       "y": 0.4603,
+       "scale": 0.5994,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "optcard",
+     "label": "their theory",
+     "text": "BAD AIR",
+     "tone": "red",
+     "x": 0.3,
+     "y": 0.13,
+     "w": 0.42,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop",
+     "verdict": "cross",
+     "verdict_at": 2.4
+    },
+    {
+     "type": "stamp",
+     "text": "REJECTED",
+     "tone": "red",
+     "angle": -7,
+     "size": 88,
+     "x": 0.62,
+     "y": 0.27,
+     "at": 0.9,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "Germ theory proved him right. So when you wash your hands, thank *Semmelweis*.",
+   "transition": "cut",
+   "caption_y": 0.6,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/plate_wash.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      },
+      {
+       "t": 5.0,
+       "scale": 1.38
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.2
+      ],
+      [
+       "smirk",
+       4.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "germ theory",
+     "text": "HE WAS RIGHT",
+     "tone": "green",
+     "x": 0.5,
+     "y": 0.13,
+     "w": 0.6,
+     "rotate": -2,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop",
+     "verdict": "tick",
+     "verdict_at": 0.8
+    },
+    {
+     "type": "text",
+     "text": "THANK *SEMMELWEIS*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.245,
+     "size": 84,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 3.4,
+     "sfx": "ding"
+    }
+   ]
+  }
+ ]
+}
