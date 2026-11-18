@@ -548,7 +548,7 @@
      "suffix": " BILLION",
      "indian": false,
      "tone": "gold",
-     "x": 0.24,
+     "x": 0.3,
      "y": 0.34,
      "enter": "pop",
      "width_of": "$7 BILLION"
@@ -557,15 +557,15 @@
      "type": "dottext",
      "text": "2007 - 2008",
      "size": 40,
-     "x": 0.24,
-     "y": 0.48,
+     "x": 0.3,
+     "y": 0.5,
      "at": 1.0
     },
     {
      "type": "tag",
      "text": "US SENATE REPORT, JULY 2012",
-     "x": 0.24,
-     "y": 0.58,
+     "x": 0.3,
+     "y": 0.6,
      "at": 1.4,
      "size": 22
     }
@@ -1136,6 +1136,7 @@
      "n": 1,
      "title": "KNOW YOUR\nCUSTOMER",
      "sub": "WHY BANKS ASK: SOURCE OF FUNDS",
+     "plate": true,
      "x": 0.66,
      "y": 0.42,
      "at": 0.2

@@ -104,9 +104,9 @@ S.append({"say": "In 2007 and 2008, it shipped seven billion dollars in physical
           "layers": [plate("cash_table", blur=12),
                      motion("Stack3D", {"n": 34, "move": "rise", "every": 0.05}, x=0.66, y=0.5, w=0.68, h=1.0),
                      {"type": "hud", "label": "physical US dollars", "steps": [[0.3, 0], [0.4, 7]], "count_dur": 1.6, "prefix": "$",
-                      "suffix": " BILLION", "indian": False, "tone": "gold", "x": 0.24, "y": 0.34, "enter": "pop", "width_of": "$7 BILLION"},
-                     {"type": "dottext", "text": "2007 - 2008", "size": 40, "x": 0.24, "y": 0.48, "at": 1.0},
-                     {"type": "tag", "text": "US SENATE REPORT, JULY 2012", "x": 0.24, "y": 0.58, "at": 1.4, "size": 22}]})
+                      "suffix": " BILLION", "indian": False, "tone": "gold", "x": 0.3, "y": 0.34, "enter": "pop", "width_of": "$7 BILLION"},
+                     {"type": "dottext", "text": "2007 - 2008", "size": 40, "x": 0.3, "y": 0.5, "at": 1.0},
+                     {"type": "tag", "text": "US SENATE REPORT, JULY 2012", "x": 0.3, "y": 0.6, "at": 1.4, "size": 22}]})
 S.append({"say": "The route ran from Mexico and Colombia straight into the US banking system.", "transition": "cut",
           "layers": [plate("desk_ledger", blur=16),
                      motion("Hero3D", {"object": "globe", "arcs": [[24.8, -107.4, 40.7, -74.0], [19.4, -99.1, 40.7, -74.0],
@@ -159,7 +159,7 @@ S.append({"dur": 1.6, "captions": False, "transition": "cut",
 S.append({"say": "Lesson one: it's why your bank now asks where your money comes from.", "transition": "cut",
           "layers": [plate("cafe_mid", blur=8, base=C, keys=[{"t": 0, "scale": 1.12}]),
                      ved_close([["explain", 0], ["point", 1.4]]),
-                     {"type": "tipnum", "n": 1, "title": "KNOW YOUR\nCUSTOMER", "sub": "WHY BANKS ASK: SOURCE OF FUNDS", "x": 0.66, "y": 0.42,
+                     {"type": "tipnum", "n": 1, "title": "KNOW YOUR\nCUSTOMER", "sub": "WHY BANKS ASK: SOURCE OF FUNDS", "plate": True, "x": 0.66, "y": 0.42,
                       "at": 0.2}]})
 S.append({"say": "Next: how it stayed hidden for so long.", "transition": "whip", "transition_frames": 8, "min_dur": 2.8,
           "layers": [plate("laundry_door", blur=8),

@@ -243,7 +243,7 @@ def tipnum_image(L, lt, W=1080):
     nw = f.getlength(num, features=LN)
     a = eout(lt / 0.35)
     title = dottext_image({"text": L.get("title", ""), "size": L.get("title_size", 60), "anim": "decode", "tone": "cream",
-                           "accent": L.get("accent", "red")}, lt - 0.25, W)
+                           "accent": L.get("accent", "red"), "plate": L.get("plate")}, lt - 0.25, W)
     sub = None
     if L.get("sub"):
         sub = dottext_image({"text": L["sub"], "size": 30, "anim": "type", "cps": 40, "tone": "cream", "glow": False},
