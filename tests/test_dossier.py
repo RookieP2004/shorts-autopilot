@@ -85,7 +85,7 @@ def test_motion_layer_validation_and_cache_key(tmp_path):
     job = {"id": "t", "title": "t", "scenes": [{"say": "hi", "layers": [{"type": "motion", "comp": "Nope"}]}]}
     errs = " ".join(validate_job(job, job_style(job), load_characters()))
     assert "motion comp 'Nope'" in errs
-    assert {"KineticTitle", "FlowDiagram", "Hero3D"} <= remotion.COMPS
+    assert {"KineticTitle", "FlowDiagram", "Hero3D", "NumberSlam", "Stack3D"} <= remotion.COMPS
     assert len(remotion._src_stamp()) == 10
 
 

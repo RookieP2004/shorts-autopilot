@@ -23,9 +23,13 @@ companies of up to 3 people (remotion.dev/license); the channel is a one-person 
 
 ## Compositions (props in brackets; size/fps/length come from the layer)
 - `KineticTitle` — house title text (white + dark stroke, yellow accent) that rises / pops / waves in letter by letter, the
-  accent word gets a hand-drawn underline. [lines, size, color, accent, stroke, font, style: rise|pop|wave, sub, y, out]
+  accent word gets a hand-drawn underline. [lines, size, color, accent, stroke, font, style: rise|pop|wave|slam, sub, y, out]
 - `FlowDiagram` — house cream cards pop in one by one, curved arrows draw themselves, a pulse travels along each.
   [nodes: [{id, label, x, y, color, w}], edges: [[a, b]], step, theme: cream|night]
+- `NumberSlam` — the big-number moment: digit reels spin and land one by one, the number punches in, a shockwave ring and
+  sparks fly, the frame shakes and settles. [text, label, color, accent, size, y, roll]
+- `Stack3D` — banded cash bricks (fictional) drop with spring bounces into a growing pile while the camera orbits / pushes /
+  rises (~1 s a frame with shadows). [n, color, band, every, move: orbit|push|rise]
 - `Hero3D` — real-time 3D: `coin` (gold, spins), `bars` (3D bar chart that springs up), `globe` (dot globe, no map outline,
   gold arcs that draw between lat/lon points). [object, values, colors, arcs, tone, spin, zoom]
 

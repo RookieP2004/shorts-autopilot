@@ -63,7 +63,7 @@ const Globe: React.FC<Hero3DProps> = ({arcs = [], tone = '#e0b25a'}) => {
         const p = interpolate(frame, [fps * (0.4 + i * 0.35), fps * (1.4 + i * 0.35)], [0.001, 1],
                               {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.bezier(0.65, 0, 0.35, 1)});
         const pts = cv.getPoints(80).slice(0, Math.max(2, Math.round(80 * p) + 1));
-        const g = new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 64, 0.02, 8, false);
+        const g = new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 64, 0.026, 8, false);
         return (
           <group key={i}>
             <mesh geometry={g}><meshBasicMaterial color={tone} toneMapped={false} /></mesh>

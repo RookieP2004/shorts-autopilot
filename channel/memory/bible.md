@@ -99,6 +99,13 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   outline: Indian map rules), and a `blinds` light overlay that gives any shot the look. Mixed in, never replacing: Ved is in
   the case-file shots (close, under the same stripes), bright town beats stay, house captions and the comic beat stay. Best
   homes: the weekly long documentary and Dark Files / scam Shorts; single beats (a dateline, a bignum) can appear in any video.
+- **Long documentary recipe (sample `jobs/2026-11-18-doc`, 2026-11-18, awaiting owner OK).** Fast pace: a new shot every
+  3-5 s, every shot moving (push-in, drift, a clip, a counter); a cold open that starts mid-story with a dateline, a kinetic
+  title slam, then Ved introduces the case on his town set; chapters with chapter cards; each chapter mixes: Blender sets
+  (town or night, Ved and townspeople walking in), case-file desk shots under blind light (dateline, dottext, tiles, quotes
+  with a source tag), motion clips (FlowDiagram of cream cards for mechanisms, NumberSlam for the big figures, Stack3D /
+  Hero3D globe for scale and routes), night verdicts (optcards with crosses, stamps), the comic beat, a numbered takeaway
+  (tipnum) and a "Next:" kinetic title to pull into the next chapter. Whip / push / dip transitions; music cues per chapter.
 - **Reference video (owner-approved, 2026-11-08):** `jobs/2026-11-08-m3` ("Why can't countries just print more money?",
   youtu.be/QFhXI3hT9Ik). This is the quality bar and the house style: every new video should look at least this alive, in its own
   new world and story.
@@ -235,6 +242,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-18 | 3 | motion clips made more dynamic (NumberSlam, Stack3D, slam titles); long documentary recipe + sample 2026-11-18-doc | owner request |
 | 2026-11-18 | 3 | motion clips added (Remotion + GSAP + three.js: kinetic titles, self-drawing cream-card flows, real-time 3D coin/bars/globe), mixed into the house style; DEMO 2026-11-18-motion | owner request (learn remotion, gsap, three.js skills) |
 | 2026-11-18 | 3 | case-file pieces added (noir desk + blinds light, dottext, bignum, dateline, tipnum, tiles, clock, flows, evidence props); DEMO awaiting owner OK | owner request (reference documentary study) |
 | 2026-11-16 | 3 | night-pilot graphics + motion rules become the standard for all Shorts (town too): ticking hud chips, eqbar, crowd-as-data, trackers, node trees, option cards, stamps, live phones, bursts, fixed colour meaning | owner request |

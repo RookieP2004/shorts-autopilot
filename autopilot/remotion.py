@@ -14,7 +14,7 @@ import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MOTION = os.path.join(ROOT, "motion")
-COMPS = {"KineticTitle", "FlowDiagram", "Hero3D"}
+COMPS = {"KineticTitle", "FlowDiagram", "Hero3D", "NumberSlam", "Stack3D"}
 
 
 def _src_stamp():

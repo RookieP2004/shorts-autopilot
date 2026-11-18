@@ -132,6 +132,9 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   more. Rules: everything driven by the frame (no CSS animation, no three.js useFrame, GSAP timelines paused and seeked);
   see `motion/README.md` and `docs/job-spec.md` "Motion clips". New compositions go in `motion/src` and `autopilot/remotion.py
   COMPS`, with a test. The full skill docs: `remotion-dev/skills`, `greensock/gsap-skills`, `cloudAI-X/threejs-skills` on GitHub.
+- **Long documentary pace (sample `jobs/2026-11-18-doc`)**: new shot every 3-5 s, every shot moving; cold open with dateline +
+  kinetic title slam; Ved on his town set; per chapter a mix of sets, case-file desk shots, motion clips (FlowDiagram,
+  NumberSlam, Stack3D, Hero3D), night verdicts, the comic beat, a tipnum takeaway and a "Next:" title. See the Bible recipe.
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,

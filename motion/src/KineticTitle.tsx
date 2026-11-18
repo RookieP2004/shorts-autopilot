@@ -14,7 +14,7 @@ export type KineticTitleProps = {
   accent?: string;
   stroke?: string;            // house text: white fill + dark stroke
   font?: 'Anton' | 'Playfair' | 'Poppins';
-  style?: 'rise' | 'pop' | 'wave';
+  style?: 'rise' | 'pop' | 'wave' | 'slam';
   stagger?: number;           // seconds between letters
   y?: number;                 // 0..1 vertical centre
   sub?: string;
@@ -43,8 +43,10 @@ export const KineticTitle: React.FC<KineticTitleProps> = ({
     const el = root.current!;
     const chars = el.querySelectorAll('.ch');
     const from = style === 'pop' ? {scale: 0, rotate: -12, opacity: 0}
-      : style === 'wave' ? {yPercent: 60, rotate: 8, opacity: 0} : {yPercent: 110};
-    tl.from(chars, {...from, duration: 0.55, ease: 'back.out(2.2)', stagger}, 0.05);
+      : style === 'wave' ? {yPercent: 60, rotate: 8, opacity: 0}
+        : style === 'slam' ? {scale: 2.6, opacity: 0, filter: 'blur(10px)'} : {yPercent: 110};
+    tl.from(chars, {...from, duration: style === 'slam' ? 0.38 : 0.55, ease: style === 'slam' ? 'power4.out' : 'back.out(2.2)',
+                    stagger}, 0.05);
     const uls = el.querySelectorAll('.ul');
     if (uls.length) tl.from(uls, {drawSVG: '0%', duration: 0.5, ease: 'power2.inOut'}, '-=0.15');
     if (sub) tl.from(el.querySelector('.sub'), {y: 30 * k, opacity: 0, duration: 0.45, ease: 'power3.out'}, '-=0.25');
