@@ -5,7 +5,6 @@
 **Steer (review 2026-11-15):** myth-busts and picturable physics/body questions are the safest bets; economics only wallet-first
 ("why does YOUR..."), never a textbook term as the hook. Try the "you've been told X" hook on 2 Shorts this week.
 
-- [big-question] Why do we have leap years? · everyone knows Feb 29, few know the 11-minutes-a-year reason · https://en.wikipedia.org/wiki/Leap_year
 - [scale-shock] How many atoms are in one grain of sand? · physics niche, counter-up hook · https://en.wikipedia.org/wiki/Avogadro_constant
 - [big-question] Why does your brain eat 20% of your energy? · follow-up angle on the brain myth: the costliest organ, shown as a city power grid · https://www.livescience.com/health/neuroscience/do-we-really-use-only-10-of-our-brains
 - [big-question] Why do two petrol pumps on one corner charge the same? · Nash equilibrium, wallet-first (avoid the term in the hook) · https://www.econlib.org/library/Enc/PrisonersDilemma.html
@@ -107,3 +106,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [wild-story] Barry Marshall-style self-experimenters: Werner Forssmann threaded a catheter into his own heart (1929) and later shared a Nobel · picturable true story, runner-up 2026-11-19-b · https://en.wikipedia.org/wiki/Werner_Forssmann
 - [big-question] Why can't you crack the same knuckle twice in a row? · the ~20-minute reset as the gas redissolves into joint fluid; follow-up only if the knuckle Short does well, runner-up 2026-11-19-b · https://www.sciencenews.org/article/researchers-pull-fingers-solve-why-knuckles-crack
 - [myth-bust] "Sugar makes kids hyper" · double-blind studies found no effect; parents' expectations did; runner-up 2026-11-19-b · https://en.wikipedia.org/wiki/Sugar_hyperactivity_myth
+- [wild-story] The year Britain lost 11 days (1752) · the calendar switch, 'give us our eleven days' riot myth vs records, follows the leap-year Short · https://www.britannica.com/science/calendar/The-Gregorian-calendar
+- [big-question] Why is February only 28 days? · Roman calendar history, winter months, picturable · https://www.britannica.com/story/why-does-february-have-28-days
+- [big-question] Why are flamingos pink? · born grey, carotenoids from brine shrimp and algae turn them pink · https://www.britannica.com/story/why-are-flamingos-pink

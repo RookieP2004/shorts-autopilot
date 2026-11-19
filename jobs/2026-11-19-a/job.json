@@ -1,0 +1,1083 @@
+{
+ "id": "2026-11-19-a",
+ "title": "A year isn't 365 days. That's why Feb 29 exists 📅",
+ "description": "Why do we have leap years? A year isn't 365 days: Earth takes about 365 days and 6 hours (365.2422 days) to go round the Sun. Ignore the extra hours and the calendar slips a day every 4 years, so Julius Caesar's calendar (45 BC) added February 29 every 4 years. But that's about 11 minutes a year too much, and by 1582 the seasons had drifted 10 days. Pope Gregory XIII's reform deleted them: Thursday 4 October 1582 was followed by Friday 15 October, and century years became leap years only if divisible by 400 (1900 wasn't, 2000 was). Without leap days, the seasons would flip in about 750 years.\n\nSources: OpenStax Astronomy 2e, 4.4 The Calendar; Britannica, The Gregorian calendar; Atlas Obscura, When the Pope made 10 days disappear.",
+ "tags": [
+  "leap year",
+  "why do we have leap years",
+  "february 29",
+  "gregorian calendar",
+  "julian calendar",
+  "calendar history",
+  "astronomy",
+  "science facts",
+  "explained"
+ ],
+ "hashtags": [
+  "#science",
+  "#space"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#science",
+   "#leapyear",
+   "#calendar",
+   "#astronomy",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "big-question",
+  "topic": "why leap years exist: a year is ~365.2422 days (365 d + ~6 h); without the extra day the calendar slips 1 day every 4 years; Julian calendar (Caesar, 45 BC) adds Feb 29 every 4 years but is ~11 min/yr too long; by 1582 seasons drifted 10 days; Gregory XIII: 4 Oct 1582 -> 15 Oct; century rule (1900 no, 2000 yes); no leap days = seasons flip in ~750 years",
+  "hook": "you've been told X",
+  "idea_source": "viral-shaped + unique: everyone knows Feb 29 but almost nobody knows the 6-hours / 11-minutes / deleted-10-days story; a physical, picturable big-question (Earth's lap); backlog idea; second test of the 'you've been told X' hook (this week's experiment)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://openstax.org/books/astronomy/pages/4-4-the-calendar",
+   "https://www.britannica.com/science/calendar/The-Gregorian-calendar",
+   "https://atlasobscura.com/articles/when-the-pope-made-10-days-disappear",
+   "https://time.com/4237292/leap-year-leap-day-history/",
+   "https://lighthouse.mq.edu.au/article/please-explain/may-2021/Please-explain-Why-do-we-have-leap-years"
+  ],
+  "humour": {
+   "trend": "timeless dry aside (no fresh rising meme fits; this week's cards already used): side-eye + 'Caesar: close enough' on the 11-minute error",
+   "beat": "side_eye",
+   "scene": 5
+  },
+  "claims": [
+   {
+    "claim": "a tropical year is about 365.2422 days, roughly 365 days and 6 hours",
+    "tag": "PROVEN",
+    "source": "https://openstax.org/books/astronomy/pages/4-4-the-calendar"
+   },
+   {
+    "claim": "the Julian calendar (Julius Caesar, 45 BC) added a leap day every 4 years (365.25 days), about 11 minutes a year too long",
+    "tag": "PROVEN",
+    "source": "https://openstax.org/books/astronomy/pages/4-4-the-calendar"
+   },
+   {
+    "claim": "by 1582 the equinox had drifted about 10 days",
+    "tag": "PROVEN",
+    "source": "https://www.britannica.com/science/calendar/The-Gregorian-calendar"
+   },
+   {
+    "claim": "Gregory XIII's reform: 4 October 1582 was followed by 15 October 1582",
+    "tag": "PROVEN",
+    "source": "https://atlasobscura.com/articles/when-the-pope-made-10-days-disappear"
+   },
+   {
+    "claim": "century years are leap years only if divisible by 400: 1900 was not, 2000 was",
+    "tag": "PROVEN",
+    "source": "https://openstax.org/books/astronomy/pages/4-4-the-calendar"
+   },
+   {
+    "claim": "without leap days a 365-day calendar slips ~0.24 day a year, half a year (~183 days) in ~750 years",
+    "tag": "PROVEN",
+    "source": "arithmetic from 365.2422 days"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "365 DAYS? *NOPE*",
+  "title_y": 0.2,
+  "title_size": 150,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffd23a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.3,
+  "tint": [
+   "#2f8fe0",
+   "#f08a24"
+  ],
+  "tint_amount": 0.25,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-19-a/assets/plate_plaza_mid.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 470'><rect x='6' y='14' width='388' height='450' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><path d='M6,44 Q6,14 36,14 L364,14 Q394,14 394,44 L394,120 L6,120 Z' fill='#d9534f' stroke='#1a1410' stroke-width='7'/><text x='200' y='98' text-anchor='middle' font-size='70' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>FEB</text><text x='200' y='380' text-anchor='middle' font-size='230' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>29</text><circle cx='120' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/><circle cx='280' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/><ellipse cx='200' cy='300' rx='150' ry='120' fill='none' stroke='#d9534f' stroke-width='14'/></svg>",
+    "x": 0.2,
+    "y": 0.45,
+    "w": 0.3,
+    "rotate": -8,
+    "enter": "none"
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-19-a/assets/earth.png",
+    "x": 0.82,
+    "y": 0.43,
+    "w": 0.26,
+    "enter": "none"
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.95,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-19-a/assets.py",
+ "scenes": [
+  {
+   "say": "You've been told a year is *365 days*. Wrong.",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.08,
+      "focus": [
+       0.55,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_plaza_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.293,
+     "y": 0.8479,
+     "h": 0.5281,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ],
+      [
+       "smirk",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "A YEAR = *365 DAYS?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "stamp",
+     "text": "WRONG",
+     "tone": "red",
+     "angle": -7,
+     "size": 84,
+     "x": 0.5,
+     "y": 0.25,
+     "at": 1.9,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "Earth needs *6 more hours* to lap the Sun.",
+   "transition": "zoom",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.1,
+      "focus": [
+       0.45,
+       0.6
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_orbit_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "hud",
+     "label": "one lap of the sun",
+     "x": 0.5,
+     "y": 0.13,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "text": "365 DAYS",
+     "at": 0.1,
+     "tone": "blue",
+     "width_of": "365 D + 6 H",
+     "until": 1.3
+    },
+    {
+     "type": "hud",
+     "label": "one lap of the sun",
+     "x": 0.5,
+     "y": 0.13,
+     "enter": "none",
+     "sfx": "click",
+     "indian": false,
+     "text": "365 D + 6 H",
+     "at": 1.3,
+     "tone": "gold",
+     "width_of": "365 D + 6 H"
+    },
+    {
+     "type": "text",
+     "text": "START",
+     "font": "display",
+     "x": 0.56,
+     "y": 0.72,
+     "size": 46,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop",
+     "color": "#ffd23a"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.24,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 2.2,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Skip them, and every *4 years* you lose a *day*.",
+   "transition": "cut",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.15,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_orbit_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "tracker",
+     "n": 4,
+     "done": [
+      0.4,
+      0.9,
+      1.4,
+      1.9
+     ],
+     "x": 0.5,
+     "y": 0.14,
+     "at": 0.1,
+     "enter": "fade"
+    },
+    {
+     "type": "eqbar",
+     "x": 0.5,
+     "y": 0.24,
+     "at": 0.3,
+     "tone": "gold",
+     "keys": [
+      [
+       0.0,
+       "6 h x 4 years"
+      ],
+      [
+       1.6,
+       "24 h = *1 day*"
+      ]
+     ]
+    },
+    {
+     "type": "text",
+     "text": "1 DAY BEHIND",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.7,
+     "size": 70,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop",
+     "color": "#ff6b5e"
+    }
+   ]
+  },
+  {
+   "say": "So we add one: *February 29*.",
+   "transition": "slide_left",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.2,
+      "zoom": 1.06,
+      "focus": [
+       0.55,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5647,
+     "y": 0.6515,
+     "h": 0.1183,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "cheer",
+       1.6
+      ],
+      [
+       "happy",
+       2.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "apron": "#f6efe2",
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.7,
+       0.03,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.857,
+     "y": 0.6578,
+     "h": 0.126,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.0
+      ],
+      [
+       "happy",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.1501,
+       "y": 0.6626,
+       "scale": 1.0468
+      },
+      {
+       "t": 1.2,
+       "x": 0.857,
+       "y": 0.6578,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2855,
+     "y": 0.6787,
+     "h": 0.1543,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.3
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 470'><rect x='6' y='14' width='388' height='450' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><path d='M6,44 Q6,14 36,14 L364,14 Q394,14 394,44 L394,120 L6,120 Z' fill='#d9534f' stroke='#1a1410' stroke-width='7'/><text x='200' y='98' text-anchor='middle' font-size='70' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>FEB</text><text x='200' y='380' text-anchor='middle' font-size='230' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>29</text><circle cx='120' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/><circle cx='280' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/><ellipse cx='200' cy='300' rx='150' ry='120' fill='none' stroke='#d9534f' stroke-width='14'/></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.3,
+     "rotate": -4,
+     "at": 1.2,
+     "sfx": "pop",
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.2
+      },
+      {
+       "t": 0.5,
+       "y": 0.2,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "LEAP *DAY*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.08,
+     "size": 70,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "But Caesar's rule overshoots: *11 minutes* a year.",
+   "transition": "slide_up",
+   "caption_y": 0.6,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.2,
+      "zoom": 1.12,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_clock_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "dateline",
+     "date": "45 BC",
+     "place": "ROME",
+     "x": 0.5,
+     "y": 0.1,
+     "at": 0.1,
+     "enter": "fade",
+     "sfx": "type"
+    },
+    {
+     "type": "hud",
+     "label": "too long, per year",
+     "x": 0.5,
+     "y": 0.76,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "to": 11,
+     "suffix": " MIN",
+     "count_dur": 1.2,
+     "at": 1.8,
+     "tone": "red",
+     "width_of": "11 MIN"
+    },
+    {
+     "type": "clock",
+     "time": "00:11",
+     "from": "00:00",
+     "dur": 1.4,
+     "label": "EXTRA",
+     "r": 0.08,
+     "x": 0.8,
+     "y": 0.62,
+     "at": 1.9,
+     "enter": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_plaza_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "Caesar: *close enough*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "By *1582*, the seasons were *10 days* off.",
+   "transition": "cut",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.08,
+      "focus": [
+       0.55,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_plaza_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4861,
+     "y": 0.7077,
+     "h": 0.2401,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "sad",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "hat": [
+        "bowler",
+        "#1a1410"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b",
+       "tie": "#7c2533",
+       "bag": "#8a5a3c"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "dateline",
+     "date": "1582",
+     "place": "EUROPE",
+     "x": 0.5,
+     "y": 0.1,
+     "at": 0.0,
+     "enter": "fade",
+     "sfx": "type"
+    },
+    {
+     "type": "hud",
+     "label": "calendar vs sky",
+     "x": 0.5,
+     "y": 0.22,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "to": 10,
+     "suffix": " DAYS OFF",
+     "count_dur": 1.4,
+     "at": 0.6,
+     "tone": "red",
+     "width_of": "10 DAYS OFF"
+    }
+   ]
+  },
+  {
+   "say": "So the Pope *deleted them*. October 4th, then *15th*.",
+   "transition": "slide_left",
+   "caption_y": 0.62,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_plaza_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      },
+      {
+       "t": 4,
+       "scale": 1.26
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 470'><rect x='6' y='14' width='388' height='450' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><path d='M6,44 Q6,14 36,14 L364,14 Q394,14 394,44 L394,120 L6,120 Z' fill='#3f7fbf' stroke='#1a1410' stroke-width='7'/><text x='200' y='98' text-anchor='middle' font-size='70' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>OCT</text><text x='200' y='380' text-anchor='middle' font-size='230' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>4</text><circle cx='120' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/><circle cx='280' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/></svg>",
+     "x": 0.28,
+     "y": 0.27,
+     "w": 0.36,
+     "rotate": -4,
+     "enter": "slide_up",
+     "at": 0.6,
+     "sfx": "whoosh"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 470'><rect x='6' y='14' width='388' height='450' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><path d='M6,44 Q6,14 36,14 L364,14 Q394,14 394,44 L394,120 L6,120 Z' fill='#3f7fbf' stroke='#1a1410' stroke-width='7'/><text x='200' y='98' text-anchor='middle' font-size='70' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>OCT</text><text x='200' y='380' text-anchor='middle' font-size='230' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>15</text><circle cx='120' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/><circle cx='280' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/></svg>",
+     "x": 0.72,
+     "y": 0.27,
+     "w": 0.36,
+     "rotate": 4,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "stamp",
+     "text": "10 DAYS DELETED",
+     "tone": "red",
+     "angle": -6,
+     "size": 62,
+     "x": 0.5,
+     "y": 0.47,
+     "at": 1.4,
+     "sfx": "thud"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.95,
+     "h": 0.42,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.4
+      ],
+      [
+       "smirk",
+       3.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "That's why *1900* had no leap day. *2000* did.",
+   "transition": "cut",
+   "caption_y": 0.62,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_clock_up.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      },
+      {
+       "t": 3.6,
+       "scale": 1.36
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ],
+      [
+       "warm",
+       2.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "leap year?",
+     "text": "1900",
+     "tone": "red",
+     "x": 0.27,
+     "y": 0.14,
+     "w": 0.37,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.3,
+     "sfx": "pop",
+     "verdict": "cross",
+     "verdict_at": 0.5
+    },
+    {
+     "type": "optcard",
+     "label": "leap year?",
+     "text": "2000",
+     "tone": "green",
+     "x": 0.71,
+     "y": 0.14,
+     "w": 0.37,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop",
+     "verdict": "tick",
+     "verdict_at": 0.4
+    },
+    {
+     "type": "text",
+     "text": "CENTURY: ONLY IF / 400",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.255,
+     "size": 44,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 2.4,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Without it, in *750 years*, summer lands in *December*.",
+   "transition": "zoom",
+   "caption_y": 0.62,
+   "sfx": "ding",
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.12,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-19-a/assets/plate_orbit_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300'><rect x='6' y='6' width='588' height='288' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><text x='150' y='68' text-anchor='middle' font-size='44' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>DECEMBER</text><circle cx='150' cy='175' r='62' fill='#ffd23a' stroke='#1a1410' stroke-width='6'/><path d='M230,175 L250,175' stroke='#f2b04a' stroke-width='10' stroke-linecap='round'/><path d='M70,175 L50,175' stroke='#f2b04a' stroke-width='10' stroke-linecap='round'/><path d='M150,255 L150,275' stroke='#f2b04a' stroke-width='10' stroke-linecap='round'/><path d='M150,95 L150,75' stroke='#f2b04a' stroke-width='10' stroke-linecap='round'/><path d='M206.0,231.0 L220.0,245.0' stroke='#f2b04a' stroke-width='10' stroke-linecap='round'/><path d='M94.0,231.0 L80.0,245.0' stroke='#f2b04a' stroke-width='10' stroke-linecap='round'/><path d='M206.0,119.0 L220.0,105.0' stroke='#f2b04a' stroke-width='10' stroke-linecap='round'/><path d='M94.0,119.0 L80.0,105.0' stroke='#f2b04a' stroke-width='10' stroke-linecap='round'/><text x='435' y='125' text-anchor='middle' font-size='70' fill='#d9534f' font-family='Anton, DejaVu Sans, sans-serif'>SUMMER?</text><text x='420' y='225' text-anchor='middle' font-size='46' fill='#3f7fbf' font-family='Anton, DejaVu Sans, sans-serif'>IN ~750 YEARS</text></svg>",
+     "x": 0.5,
+     "y": 0.17,
+     "w": 0.7,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 470'><rect x='6' y='14' width='388' height='450' rx='30' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><path d='M6,44 Q6,14 36,14 L364,14 Q394,14 394,44 L394,120 L6,120 Z' fill='#d9534f' stroke='#1a1410' stroke-width='7'/><text x='200' y='98' text-anchor='middle' font-size='70' fill='#f6efe2' font-family='Anton, DejaVu Sans, sans-serif'>FEB</text><text x='200' y='380' text-anchor='middle' font-size='230' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>29</text><circle cx='120' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/><circle cx='280' cy='14' r='14' fill='#c9a24a' stroke='#1a1410' stroke-width='5'/><ellipse cx='200' cy='300' rx='150' ry='120' fill='none' stroke='#d9534f' stroke-width='14'/></svg>",
+     "x": 0.2,
+     "y": 0.75,
+     "w": 0.2,
+     "rotate": -6,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#f2b04a' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#f2b04a' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>MATHS</text></svg>",
+     "x": 0.78,
+     "y": 0.75,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 2.8,
+     "sfx": "click"
+    }
+   ]
+  }
+ ]
+}
