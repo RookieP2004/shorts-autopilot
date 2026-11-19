@@ -82,9 +82,9 @@
   ]
  },
  "thumbnail": {
-  "title": "60 YEARS OF *CRACKING*",
-  "title_y": 0.15,
-  "title_size": 170,
+  "title": "60 YEARS *CRACKING*",
+  "title_y": 0.2,
+  "title_size": 150,
   "max_w": 0.95,
   "blur": 14,
   "glow": "#ffd23a",
@@ -133,7 +133,7 @@
     "pose": "surprised",
     "x": 0.5,
     "y": 0.95,
-    "h": 0.8,
+    "h": 0.95,
     "enter": "none",
     "acting": "none",
     "talk": false,

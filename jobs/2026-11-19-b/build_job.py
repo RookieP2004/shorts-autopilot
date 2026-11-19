@@ -273,13 +273,13 @@ job = {"id": ID, "title": "Knuckle cracking = arthritis? He tested it 60 years ð
                      "source": "https://www.sciencenews.org/article/researchers-pull-fingers-solve-why-knuckles-crack"},
                     {"claim": "about 20 minutes before the same knuckle can crack again", "tag": "PROVEN",
                      "source": "https://www.sciencenews.org/article/researchers-pull-fingers-solve-why-knuckles-crack"}]},
-       "thumbnail": {"title": "60 YEARS OF *CRACKING*", "title_y": 0.15, "title_size": 170, "max_w": 0.95, "blur": 14,
+       "thumbnail": {"title": "60 YEARS *CRACKING*", "title_y": 0.2, "title_size": 150, "max_w": 0.95, "blur": 14,
                      "glow": "#ffd23a", "glow_x": 0.5, "glow_y": 0.5, "glow_strength": 1.3, "bg_saturation": 1.4,
                      "tint": ["#1f6670", "#f08a24"], "tint_amount": 0.28,
                      "bg": [plate("joint_pulled")],
                      "fg": [{"type": "image", "svg": hand("LEFT", "CRACKED", "#f2b04a"), "x": 0.2, "y": 0.45, "w": 0.3, "rotate": -8, "enter": "none"},
                             {"type": "image", "svg": CRACK, "x": 0.8, "y": 0.42, "w": 0.32, "rotate": 8, "enter": "none"},
-                            {"type": "character", "id": "ved", "pose": "surprised", "x": 0.5, "y": 0.95, "h": 0.8, "enter": "none",
+                            {"type": "character", "id": "ved", "pose": "surprised", "x": 0.5, "y": 0.95, "h": 0.95, "enter": "none",
                              "acting": "none", "talk": False, "ground": False, "allow_outside_safe": True}]},
        "privacy": "public", "speaker": "ved", "assets_script": J + "assets.py", "scenes": S}
 json.dump(job, open(J + "job.json", "w"), indent=1, ensure_ascii=False)
