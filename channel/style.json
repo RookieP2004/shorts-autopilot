@@ -100,7 +100,7 @@
     "reserve_tasks": 4,
     "window_days": 31,
     "keep_for_review": 3,
-    "cycle_day": null,
+    "cycle_day": 6,
     "bonus_days": 7,
     "max_per_day": 3,
     "trial_until": "2026-11-20",
