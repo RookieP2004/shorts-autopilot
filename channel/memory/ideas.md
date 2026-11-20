@@ -73,7 +73,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - Money laundering in three steps, told through a real bank case (HSBC and the Sinaloa cartel's cash, 2012 settlement)
 - Why cartels are run like businesses: franchising, logistics, and why killing a kingpin rarely shrinks the trade
 - How match-fixing works and how betting data catches it
-- Pablo Escobar's hippos: the strange legacy still living in Colombia
 - Prohibition 1920-1933: what banning alcohol actually did to crime (and what Portugal tried with drugs in 2001)
 - Where your phone's metals come from, and how armed groups profit from them (conflict minerals)
 - Movie mafia vs the real one: what court records show about how the Mafia actually earns
@@ -109,3 +108,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [wild-story] The year Britain lost 11 days (1752) · the calendar switch, 'give us our eleven days' riot myth vs records, follows the leap-year Short · https://www.britannica.com/science/calendar/The-Gregorian-calendar
 - [big-question] Why is February only 28 days? · Roman calendar history, winter months, picturable · https://www.britannica.com/story/why-does-february-have-28-days
 - [big-question] Why are flamingos pink? · born grey, carotenoids from brine shrimp and algae turn them pink · https://www.britannica.com/story/why-are-flamingos-pink
+- [big-question] Why are hippos so dangerous? · fast, territorial, cut through boats; picturable body/nature question, runner-up 2026-11-20 · https://en.wikipedia.org/wiki/Hippopotamus
+- [dark-files] How match-fixing gets caught by betting data · Sportradar/IBIA alert systems (2025-26 reports), documentary view, runner-up 2026-11-20 · https://sportradar.com/content-hub/news/sports-integrity-strengthens-as-global-match-fixing-declines-in-2025/
+- [scale-shock] A hippo can weigh as much as 3 cars · scale-shock companion to the Escobar hippos Short, runner-up 2026-11-20 · https://en.wikipedia.org/wiki/Hippopotamus
