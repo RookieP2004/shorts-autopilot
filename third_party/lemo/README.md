@@ -1,13 +1,12 @@
 # Lemo-Opuscar audio engine (vendored)
 
 From [lemomo-ai/lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar), MIT licence (`LICENSE-MIT.txt`).
-Only the MIT code is copied here, unchanged: `core/audio/sampler.py`, `core/audio/sfx.py`,
+Only the MIT code is copied here, unchanged: `core/audio/sampler.py`, `core/audio/sfx.py`, `core/audio/pluck.py`
+(physically modelled strings, needs numba),
 `tools/fetch.sh`, `tools/assets.json`. Their guides (CC BY-NC) are not copied; our own rules are in
 `docs/job-spec.md` ("Score") and `skill/SKILL.md`.
 
-The sample packs are not in git. Fetch the two we use (both CC0, ~670 MB unpacked):
+The sample packs and HDRIs are not in git: `sh scripts/fetch_instruments.sh` fetches VSCO 2 CE, VCSL, FreePats,
+Karoryfer (CC0), the Salamander grand piano (CC BY 3.0, credited automatically) and two Poly Haven HDRIs (CC0).
 
-    cd third_party/lemo && sh tools/fetch.sh instruments vsco2ce && sh tools/fetch.sh instruments vcsl
-
-`autopilot/orchestra.py` uses only VSCO 2 CE and VCSL (CC0), so the channel's music needs no attribution;
-`CREDITS` still names them. When the packs are missing, the music falls back to the old synth.
+`autopilot/orchestra.py` records which libraries a render used; CC BY ones (the piano) go into the description. When the packs are missing, the music falls back to the old synth.

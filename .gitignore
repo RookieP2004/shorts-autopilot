@@ -11,3 +11,4 @@ motion/.bundle/
 # Lemo-Opuscar sample packs (downloaded by third_party/lemo/tools/fetch.sh)
 third_party/lemo/core/audio/instruments/
 third_party/lemo/.release/
+third_party/lemo/core/assets/

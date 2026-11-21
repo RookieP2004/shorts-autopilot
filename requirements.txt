@@ -5,3 +5,4 @@ kokoro-onnx>=0.4
 soundfile>=0.12
 scipy>=1.10
 soxr>=0.3
+numba>=0.59
