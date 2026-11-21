@@ -1,0 +1,4836 @@
+{
+ "id": "2026-11-21-L",
+ "kind": "long",
+ "title": "Why Doctors Refused to Wash Their Hands",
+ "description": "In 1846 Vienna, mothers begged not to be taken through one hospital door. Professor Ved follows Ignaz Semmelweis like a detective: two maternity clinics with very different death rates, the suspects he ruled out, the autopsy accident that cracked the case, the chlorine bowl that cut deaths about tenfold, why medicine still said no (and the fair reasons it had), how germ theory proved him right, and the 'Semmelweis reflex' that still trips us up today.\n\nSources: Semmelweis's clinic figures (via Wikipedia and Britannica); Carson & Toodayan, 'Ignaz Philipp Semmelweis: herald of hygienic medicine', Medical Journal of Australia (2018); Britannica, 'Verification of the germ theory'; WHO, first global report on infection prevention and control (6 May 2022). Reconstructions are illustrations, not archival footage.",
+ "tags": [
+  "semmelweis",
+  "hand washing",
+  "history of medicine",
+  "germ theory",
+  "childbed fever",
+  "semmelweis reflex",
+  "joseph lister",
+  "louis pasteur",
+  "science history",
+  "explained",
+  "documentary"
+ ],
+ "chapters": [
+  {
+   "scene": 0,
+   "title": "Vienna, 1846"
+  },
+  {
+   "scene": 4,
+   "title": "Two doors"
+  },
+  {
+   "scene": 11,
+   "title": "The detective"
+  },
+  {
+   "scene": 17,
+   "title": "A cut finger"
+  },
+  {
+   "scene": 23,
+   "title": "The chlorine bowl"
+  },
+  {
+   "scene": 30,
+   "title": "Why they said no"
+  },
+  {
+   "scene": 38,
+   "title": "The proof arrives"
+  },
+  {
+   "scene": 43,
+   "title": "The Semmelweis reflex"
+  }
+ ],
+ "thumbnail": {
+  "title": "DEADLY *HANDS?*",
+  "title_y": 0.15,
+  "title_size": 175,
+  "glow": "#f2b04a",
+  "glow_x": 0.45,
+  "glow_y": 0.58,
+  "blur": 16,
+  "glow_strength": 1.6,
+  "bg_saturation": 1.7,
+  "bg_brightness": 0.9,
+  "tint": [
+   "#1f6f6a",
+   "#d9534f"
+  ],
+  "tint_amount": 0.45,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   },
+   {
+    "type": "character",
+    "id": "extra",
+    "pose": "surprised",
+    "x": 0.6032,
+    "y": 0.5983,
+    "h": 0.3383,
+    "enter": "none",
+    "acting": [
+     [
+      "surprised",
+      0
+     ]
+    ],
+    "talk": false,
+    "rig_args": {
+     "outfit": {
+      "skin": "#e2b48d",
+      "build": "slim",
+      "hair": [
+       "#2b1d14",
+       "short"
+      ],
+      "top": [
+       "#5a4636",
+       "jacket"
+      ],
+      "tie": "#25262b",
+      "bottom": [
+       "#3a3e48",
+       "trousers"
+      ],
+      "shoes": "#1a1410"
+     }
+    },
+    "allow_outside_safe": true
+   },
+   {
+    "type": "character",
+    "id": "extra",
+    "pose": "sad",
+    "x": 0.3815,
+    "y": 0.6384,
+    "h": 0.4318,
+    "enter": "none",
+    "acting": [
+     [
+      "sad",
+      0
+     ]
+    ],
+    "talk": false,
+    "rig_args": {
+     "outfit": {
+      "skin": "#e8bfa0",
+      "hat": [
+       "headscarf",
+       "#7c2533"
+      ],
+      "top": [
+       "#efe3c8",
+       "dress"
+      ],
+      "hair": [
+       "#5a3e28",
+       "long"
+      ]
+     }
+    },
+    "allow_outside_safe": true
+   },
+   {
+    "type": "character",
+    "id": "extra",
+    "pose": "point",
+    "x": 0.5236,
+    "y": 0.564,
+    "h": 0.2583,
+    "enter": "none",
+    "acting": [
+     [
+      "point",
+      0
+     ]
+    ],
+    "talk": false,
+    "rig_args": {
+     "outfit": {
+      "skin": "#ecc6a2",
+      "build": "round",
+      "hair": [
+       "#5a3e28",
+       "short"
+      ],
+      "top": [
+       "#2a2f3a",
+       "jacket"
+      ],
+      "tie": "#7c2533",
+      "bottom": [
+       "#2a2f3a",
+       "trousers"
+      ],
+      "shoes": "#1a1410"
+     }
+    },
+    "allow_outside_safe": true
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-18-a/assets/jar.png",
+    "x": 0.17,
+    "y": 0.66,
+    "w": 0.13,
+    "enter": "none",
+    "rot": -8
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.45,
+    "y": 1.2,
+    "h": 1.7,
+    "enter": "none",
+    "acting": "none",
+    "ground": false,
+    "allow_outside_safe": true,
+    "talk": false
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-18-a/assets/soap.png",
+    "x": 0.8,
+    "y": 0.66,
+    "w": 0.16,
+    "enter": "none",
+    "rot": 10
+   }
+  ]
+ },
+ "privacy": "private",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-21-L/assets.py",
+ "scenes": [
+  {
+   "say": "Vienna, eighteen forty-six. A young mother arrives at one of the biggest hospitals in Europe... and begs, on her knees, not to be taken through one particular door.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5535,
+     "y": 0.5285,
+     "h": 0.1754,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#f6efe2"
+       ],
+       "top": [
+        "#5b86b8",
+        "dress"
+       ],
+       "apron": "#f6efe2",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5701,
+     "y": 0.5939,
+     "h": 0.3281,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       5.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "short"
+       ],
+       "top": [
+        "#5a4636",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4589,
+     "y": 0.646,
+     "h": 0.4496,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "sad",
+       5.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e8bfa0",
+       "hat": [
+        "headscarf",
+        "#7c2533"
+       ],
+       "top": [
+        "#efe3c8",
+        "dress"
+       ],
+       "hair": [
+        "#5a3e28",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.3927,
+       "y": 0.9559,
+       "scale": 2.6092
+      },
+      {
+       "t": 3.4,
+       "x": 0.4589,
+       "y": 0.646,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "blur_keys": [
+      [
+       0,
+       10
+      ],
+      [
+       1.6,
+       0
+      ]
+     ],
+     "until": 1.8,
+     "exit": "fade",
+     "exit_dur": 0.6
+    }
+   ],
+   "letterbox": 0.11,
+   "letterbox_in": 1.2,
+   "lead": 0.9,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.07
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   },
+   "transition": "cut"
+  },
+  {
+   "say": "Because everyone in the city knew: behind that door, mothers died. And the reason was hiding in plain sight... on the doctors' own hands.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.27,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "point",
+       4.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "behind that door,",
+     "font": "serif_i",
+     "x": 0.7,
+     "y": 0.3,
+     "size": 62,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 1.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "text",
+     "text": "mothers *died*.",
+     "font": "serif",
+     "x": 0.7,
+     "y": 0.42,
+     "size": 74,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 2.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "letterbox": 0.11,
+   "transition": "cut"
+  },
+  {
+   "say": "This is the story of the doctor who worked it out, why almost nobody believed him, and why the hardest thing to wash off... isn't germs.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.5,
+     "y": 0.7038,
+     "h": 0.603,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "explain",
+       2.4
+      ],
+      [
+       "shrug",
+       6.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5,
+       "y": 0.5763,
+       "scale": 0.4907
+      },
+      {
+       "t": 2.0,
+       "x": 0.5,
+       "y": 0.7038,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    }
+   ],
+   "letterbox": 0.11,
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "dur": 3.6,
+   "captions": false,
+   "transition": "dip",
+   "transition_frames": 16,
+   "sfx": "hit",
+   "sfx_at": 0.3,
+   "bg": {
+    "type": "solid",
+    "colors": [
+     "#0b0d10"
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_wash.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "blur_keys": [
+      [
+       0,
+       18
+      ]
+     ],
+     "opacity": 0.55
+    },
+    {
+     "type": "shape",
+     "shape": "rect",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 0.6,
+     "color": "#07090b",
+     "opacity": 0.55,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "WASH YOUR HANDS",
+     "font": "serif",
+     "x": 0.5,
+     "y": 0.45,
+     "size": 120,
+     "max_w": 0.9,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 1.2,
+     "at": 0.35,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "text",
+     "text": "THE IDEA THAT MEDICINE REFUSED",
+     "font": "cond",
+     "x": 0.5,
+     "y": 0.57,
+     "size": 30,
+     "max_w": 0.8,
+     "color": "accent",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 1.2,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "camera": {
+    "zoom": [
+     1.0,
+     1.03
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "letterbox": 0.11
+  },
+  {
+   "dur": 2.8,
+   "transition": "dip",
+   "transition_frames": 14,
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "blur_keys": [
+      [
+       0,
+       4
+      ],
+      [
+       1.2,
+       16
+      ]
+     ],
+     "pan": [
+      0,
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "chapter",
+     "num": 1,
+     "title": "Two doors",
+     "at": 0.15
+    }
+   ],
+   "sfx": "hit",
+   "camera": {
+    "zoom": [
+     1.02,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "The Vienna General Hospital had two maternity clinics, side by side. The First Clinic trained doctors and medical students. The Second trained midwives.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.4754,
+     "y": 0.5396,
+     "h": 0.2013,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc6a2",
+       "build": "round",
+       "hair": [
+        "#5a3e28",
+        "short"
+       ],
+       "top": [
+        "#2a2f3a",
+        "jacket"
+       ],
+       "tie": "#7c2533",
+       "bottom": [
+        "#2a2f3a",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5383,
+     "y": 0.5429,
+     "h": 0.209,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "short"
+       ],
+       "top": [
+        "#5a4636",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6185,
+     "y": 0.6384,
+     "h": 0.4318,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "short"
+       ],
+       "top": [
+        "#5a4636",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9488,
+       "y": 0.6959,
+       "scale": 1.3106
+      },
+      {
+       "t": 2.6,
+       "x": 0.6185,
+       "y": 0.6384,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "lower_third",
+     "title": "Vienna General Hospital",
+     "sub": "1846. The First Clinic: doctors and medical students",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 1.0,
+     "until": 6.0,
+     "exit_dur": 0.4
+    },
+    {
+     "type": "lower_third",
+     "title": "The Second Clinic",
+     "sub": "midwives in training",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 6.6
+    }
+   ],
+   "look": "archival",
+   "sfx": "projector",
+   "transition": "cut"
+  },
+  {
+   "say": "In eighteen forty-six, the First Clinic lost *eleven point four percent* of its mothers to childbed fever. The Second Clinic? About *two point eight*.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "pan": [
+      0.01,
+      0,
+      0.03
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "FIRST CLINIC",
+     "text": "Doctors and medical students.\n1846: 4,010 births, 459 mothers died.",
+     "w": 0.32,
+     "x": 0.3,
+     "y": 0.42,
+     "rotate": -3,
+     "at": 0.4,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "SECOND CLINIC",
+     "text": "Midwives.\n1846: 3,754 births, 105 mothers died.",
+     "w": 0.32,
+     "x": 0.72,
+     "y": 0.46,
+     "rotate": 3,
+     "at": 3.4,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "bignum",
+     "text": "11.4%",
+     "x": 0.3,
+     "y": 0.72,
+     "size": 120,
+     "tone": "gold",
+     "at": 2.6
+    },
+    {
+     "type": "bignum",
+     "text": "2.8%",
+     "x": 0.72,
+     "y": 0.74,
+     "size": 120,
+     "tone": "cream",
+     "at": 5.4
+    },
+    {
+     "type": "tag",
+     "text": "SOURCE: SEMMELWEIS'S CLINIC TABLES, VIA WIKIPEDIA",
+     "x": 0.965,
+     "y": 0.84,
+     "align": "right",
+     "at": 1.0
+    }
+   ],
+   "transition": "paper",
+   "transition_frames": 14,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 6.0,
+      "zoom": 1.07,
+      "focus": [
+       0.4,
+       0.55
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "say": "Same city. Same building. Mothers from the same streets. And about *four times* the deaths, just for going through the wrong door.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward2_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4937,
+     "y": 0.5326,
+     "h": 0.2088,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "give",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#f6efe2"
+       ],
+       "top": [
+        "#5b86b8",
+        "dress"
+       ],
+       "apron": "#f6efe2",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.5211,
+     "y": 0.6105,
+     "h": 0.4029,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#f6efe2"
+       ],
+       "top": [
+        "#5b86b8",
+        "dress"
+       ],
+       "apron": "#f6efe2",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ]
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5392,
+       "y": 0.5639,
+       "scale": 0.7116
+      },
+      {
+       "t": 2.6,
+       "x": 0.5211,
+       "y": 0.6105,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3458,
+     "y": 0.6552,
+     "h": 0.5145,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "happy",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a882",
+       "hat": [
+        "headscarf",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#c9b7e3",
+        "dress"
+       ],
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "about *4×* the deaths",
+     "font": "serif_i",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 76,
+     "max_w": 0.8,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 4.2,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.06,
+     1.0
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "So mothers begged to be sent to the Second Clinic. Some would rather give birth in the street on the way in. And strangely... those street births rarely caught the fever.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.5535,
+     "y": 0.5285,
+     "h": 0.1754,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#f6efe2"
+       ],
+       "top": [
+        "#5b86b8",
+        "dress"
+       ],
+       "apron": "#f6efe2",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.579,
+     "y": 0.6384,
+     "h": 0.4318,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "shrug",
+       3.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "short"
+       ],
+       "top": [
+        "#5a4636",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.4402,
+     "y": 0.6633,
+     "h": 0.4898,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ],
+      [
+       "give",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e8bfa0",
+       "hat": [
+        "headscarf",
+        "#7c2533"
+       ],
+       "top": [
+        "#efe3c8",
+        "dress"
+       ],
+       "hair": [
+        "#5a3e28",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "street births: fever was *rare*",
+     "font": "hand",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 80,
+     "max_w": 0.8,
+     "color": "#f2d06a",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 6.6,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "look": "archival",
+   "transition": "cut"
+  },
+  {
+   "say": "A street was safer than a hospital. That should have set off every alarm in medicine.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward2_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.73,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "shrug",
+       2.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "a street was *safer*",
+     "font": "serif_i",
+     "x": 0.33,
+     "y": 0.36,
+     "size": 76,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 1.0,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "dur": 2.8,
+   "captions": false,
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10
+    },
+    {
+     "type": "paper",
+     "kind": "note",
+     "text": "Hospital review: 1 star.\nThe street was cleaner.",
+     "paper": "#f6e27f",
+     "font": "hand",
+     "text_size": 0.11,
+     "w": 0.34,
+     "x": 0.5,
+     "y": 0.45,
+     "rotate": -5,
+     "at": 0.2,
+     "enter": "slam",
+     "enter_dur": 0.3,
+     "sfx": "paper",
+     "tape": [
+      "tc"
+     ]
+    }
+   ],
+   "camera": {
+    "zoom": [
+     1.04,
+     1.08
+    ],
+    "focus": [
+     0.5,
+     0.45
+    ]
+   }
+  },
+  {
+   "dur": 2.8,
+   "transition": "dip",
+   "transition_frames": 14,
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "blur_keys": [
+      [
+       0,
+       4
+      ],
+      [
+       1.2,
+       16
+      ]
+     ],
+     "pan": [
+      0,
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "chapter",
+     "num": 2,
+     "title": "The detective",
+     "at": 0.15
+    }
+   ],
+   "sfx": "hit",
+   "camera": {
+    "zoom": [
+     1.02,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "One young doctor couldn't let it go. Ignaz Semmelweis, a Hungarian assistant in the First Clinic. He treated the deaths like a crime... and went through the suspects one by one.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6735,
+     "y": 0.5374,
+     "h": 0.5996,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       3.6
+      ],
+      [
+       "point",
+       7.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc6a2",
+       "build": "round",
+       "hair": [
+        "#5a3e28",
+        "short"
+       ],
+       "top": [
+        "#2a2f3a",
+        "jacket"
+       ],
+       "tie": "#7c2533",
+       "bottom": [
+        "#2a2f3a",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.9189,
+       "y": 0.4818,
+       "scale": 0.703
+      },
+      {
+       "t": 3.0,
+       "x": 0.6735,
+       "y": 0.5374,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "lower_third",
+     "title": "Ignaz Semmelweis",
+     "sub": "assistant, First Clinic. Hungarian, born 1818",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 2.6,
+     "until": 8.2,
+     "exit_dur": 0.4
+    }
+   ],
+   "look": "archival",
+   "transition": "cut"
+  },
+  {
+   "say": "Overcrowding? No. The Second Clinic was *more* crowded.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "pan": [
+      0.01,
+      0,
+      0.03
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "SUSPECT 1: OVERCROWDING",
+     "text": "The Second Clinic was MORE crowded.",
+     "w": 0.32,
+     "x": 0.3,
+     "y": 0.45,
+     "rotate": -3,
+     "at": 0.3,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "marker",
+     "shape": "cross",
+     "at": 2.2,
+     "sfx": "marker",
+     "box": [
+      0.17,
+      0.33,
+      0.43,
+      0.57
+     ],
+     "color": "#c0392b"
+    },
+    {
+     "type": "paper",
+     "kind": "photo",
+     "path": "jobs/2026-11-21-L/assets/plate_ward2_wide.png",
+     "tone": "sepia",
+     "x": 0.72,
+     "y": 0.45,
+     "w": 0.32,
+     "rotate": 3,
+     "at": 0.9,
+     "enter": "slam",
+     "enter_dur": 0.35,
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ],
+     "caption": "Second Clinic: fuller"
+    }
+   ],
+   "transition": "paper",
+   "transition_frames": 12,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.35,
+     0.47
+    ]
+   }
+  },
+  {
+   "say": "The weather, or bad city air? Both clinics sat in the same hospital, breathing the same air.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "pan": [
+      0.01,
+      0,
+      0.03
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "SUSPECT 1: OVERCROWDING",
+     "text": "The Second Clinic was MORE crowded.",
+     "w": 0.26,
+     "x": 0.2,
+     "y": 0.3,
+     "rotate": -3,
+     "at": 0.0,
+     "enter": "none",
+     "sfx": "none",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "marker",
+     "shape": "cross",
+     "at": 0.0,
+     "sfx": "none",
+     "box": [
+      0.1,
+      0.2,
+      0.3,
+      0.4
+     ],
+     "color": "#c0392b"
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "SUSPECT 2: CLIMATE & AIR",
+     "text": "Same hospital, same city air.",
+     "w": 0.3,
+     "x": 0.5,
+     "y": 0.52,
+     "rotate": 2,
+     "at": 0.3,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "marker",
+     "shape": "cross",
+     "at": 3.4,
+     "sfx": "marker",
+     "box": [
+      0.38,
+      0.41,
+      0.62,
+      0.63
+     ],
+     "color": "#c0392b"
+    }
+   ],
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.47
+    ]
+   }
+  },
+  {
+   "say": "The way mothers lay to give birth? He changed it in the First Clinic. The deaths didn't change.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "pan": [
+      0.01,
+      0,
+      0.03
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "SUSPECT 1: OVERCROWDING",
+     "text": "The Second Clinic was MORE crowded.",
+     "w": 0.26,
+     "x": 0.2,
+     "y": 0.3,
+     "rotate": -3,
+     "at": 0.0,
+     "enter": "none",
+     "sfx": "none",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "marker",
+     "shape": "cross",
+     "at": 0.0,
+     "sfx": "none",
+     "box": [
+      0.1,
+      0.2,
+      0.3,
+      0.4
+     ],
+     "color": "#c0392b"
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "SUSPECT 2: CLIMATE & AIR",
+     "text": "Same hospital, same city air.",
+     "w": 0.3,
+     "x": 0.5,
+     "y": 0.52,
+     "rotate": 2,
+     "at": 0.0,
+     "enter": "none",
+     "sfx": "none",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "marker",
+     "shape": "cross",
+     "at": 0.0,
+     "sfx": "none",
+     "box": [
+      0.38,
+      0.41,
+      0.62,
+      0.63
+     ],
+     "color": "#c0392b"
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "SUSPECT 3: BIRTH POSITION",
+     "text": "Changed it in the First Clinic. No effect.",
+     "w": 0.28,
+     "x": 0.8,
+     "y": 0.34,
+     "rotate": 4,
+     "at": 0.3,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "marker",
+     "shape": "cross",
+     "at": 3.6,
+     "sfx": "marker",
+     "box": [
+      0.68,
+      0.23,
+      0.92,
+      0.45
+     ],
+     "color": "#c0392b"
+    }
+   ],
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.7,
+     0.47
+    ]
+   }
+  },
+  {
+   "say": "He even wondered whether the priest, ringing a bell on his way to the dying, was frightening mothers to death. Every suspect had an alibi.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "think",
+     "x": 0.27,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "think",
+       0
+      ],
+      [
+       "shrug",
+       4.8
+      ],
+      [
+       "side_eye",
+       7.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "every suspect",
+     "font": "serif_i",
+     "x": 0.7,
+     "y": 0.3,
+     "size": 66,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 5.6,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "text",
+     "text": "had an *alibi*.",
+     "font": "serif",
+     "x": 0.7,
+     "y": 0.42,
+     "size": 76,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 6.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "dur": 2.8,
+   "transition": "dip",
+   "transition_frames": 14,
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_dissect.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "blur_keys": [
+      [
+       0,
+       4
+      ],
+      [
+       1.2,
+       16
+      ]
+     ],
+     "pan": [
+      0,
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "chapter",
+     "num": 3,
+     "title": "A cut finger",
+     "at": 0.15
+    }
+   ],
+   "sfx": "hit",
+   "camera": {
+    "zoom": [
+     1.02,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "Then, in eighteen forty-seven, a tragedy cracked the case. His friend, Professor Jakob Kolletschka, was poked by a student's scalpel during an autopsy.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_dissect.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.4025,
+     "y": 0.4617,
+     "h": 0.4156,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "surprised",
+       6.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0cdb0",
+       "build": "regular",
+       "hair": [
+        "#9a9a9a",
+        "short"
+       ],
+       "top": [
+        "#3a3e48",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.6301,
+     "y": 0.509,
+     "h": 0.4393,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "surprised",
+       6.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "short"
+       ],
+       "top": [
+        "#5a4636",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "lower_third",
+     "title": "Jakob Kolletschka",
+     "sub": "professor of forensic medicine, Vienna",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 3.0,
+     "until": 7.6,
+     "exit_dur": 0.4
+    }
+   ],
+   "look": "archival",
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "focus": [
+     0.5,
+     0.48
+    ]
+   }
+  },
+  {
+   "say": "Soon after, Kolletschka was dead. And the illness that killed him looked just like the fever that was killing the mothers.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_dissect_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "pan": [
+      0,
+      0,
+      0.06
+     ]
+    },
+    {
+     "type": "text",
+     "text": "the *same* fever",
+     "font": "serif_i",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 84,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 4.6,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "And Semmelweis saw it.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_dissect.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.5,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "transition": "cut",
+   "lead": 1.0,
+   "pad": 0.8,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "focus": [
+     0.5,
+     0.35
+    ]
+   }
+  },
+  {
+   "say": "Doctors and students started their mornings in the autopsy room. Then they walked straight to the maternity ward, and examined mothers with the same hands. Midwives never did autopsies.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "pan": [
+      0.01,
+      0,
+      0.03
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "photo",
+     "path": "jobs/2026-11-21-L/assets/plate_dissect.png",
+     "tone": "sepia",
+     "x": 0.2,
+     "y": 0.36,
+     "w": 0.28,
+     "rotate": -4,
+     "at": 0.2,
+     "enter": "slam",
+     "enter_dur": 0.35,
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ],
+     "caption": "the autopsy room, morning"
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "THE ROUTE",
+     "text": "Autopsy -> no wash -> delivery ward.\nMidwives: no autopsies.",
+     "w": 0.3,
+     "x": 0.5,
+     "y": 0.66,
+     "rotate": 2,
+     "at": 3.0,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "photo",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+     "tone": "sepia",
+     "x": 0.8,
+     "y": 0.38,
+     "w": 0.28,
+     "rotate": 4,
+     "at": 5.0,
+     "enter": "slam",
+     "enter_dur": 0.35,
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ],
+     "caption": "First Clinic, afternoon"
+    },
+    {
+     "type": "string",
+     "points": [
+      [
+       0.2,
+       0.46
+      ],
+      [
+       0.5,
+       0.58
+      ],
+      [
+       0.8,
+       0.48
+      ]
+     ],
+     "at": 7.0,
+     "sfx": "tape"
+    },
+    {
+     "type": "stamp",
+     "text": "THE HANDS",
+     "x": 0.5,
+     "y": 0.24,
+     "tone": "red",
+     "angle": -8,
+     "size": 110,
+     "at": 9.4,
+     "sfx": "thud",
+     "sting": "turn"
+    }
+   ],
+   "transition": "paper",
+   "transition_frames": 14,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 9.2,
+      "zoom": 1.04,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     },
+     {
+      "t": 9.6,
+      "zoom": 1.12,
+      "focus": [
+       0.5,
+       0.32
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "say": "He called it *cadaverous particles*. Something invisible, carried from the dead to the living, on doctors' hands.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_bed.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "pan": [
+      0,
+      0,
+      0.06
+     ]
+    },
+    {
+     "type": "text",
+     "text": "“cadaverous particles”",
+     "font": "serif_i",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 80,
+     "max_w": 0.8,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 1.0,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "tag",
+     "text": "SEMMELWEIS'S TERM, 1847",
+     "x": 0.965,
+     "y": 0.84,
+     "align": "right",
+     "at": 1.6
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "dur": 2.8,
+   "transition": "dip",
+   "transition_frames": 14,
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_wash.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "blur_keys": [
+      [
+       0,
+       4
+      ],
+      [
+       1.2,
+       16
+      ]
+     ],
+     "pan": [
+      0,
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "chapter",
+     "num": 4,
+     "title": "The chlorine bowl",
+     "at": 0.15
+    }
+   ],
+   "sfx": "hit",
+   "camera": {
+    "zoom": [
+     1.02,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "So in mid-May, eighteen forty-seven, he put a bowl by the door. Chlorinated lime solution. Wash your hands in it before you touch a patient. Every time.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_wash.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "lower_third",
+     "title": "Mid-May 1847",
+     "sub": "the First Clinic's new rule",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 1.0,
+     "until": 5.0,
+     "exit_dur": 0.4
+    },
+    {
+     "type": "text",
+     "text": "wash. every. time.",
+     "font": "hand",
+     "x": 0.3,
+     "y": 0.16,
+     "size": 84,
+     "max_w": 0.6,
+     "color": "#f2d06a",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 7.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.12
+    ],
+    "focus": [
+     0.5,
+     0.55
+    ]
+   }
+  },
+  {
+   "say": "Why chlorine? Because it was the best thing he'd found for getting rid of the smell of the autopsy room. If the smell was gone, he reasoned, so was whatever caused it.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_wash_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "pan": [
+      0,
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/jar.png",
+     "x": 0.8,
+     "y": 0.52,
+     "w": 0.12,
+     "enter": "fade",
+     "at": 0.8,
+     "pan": [
+      0,
+      -0.01,
+      0.04
+     ]
+    },
+    {
+     "type": "text",
+     "text": "chlorine kills the smell...",
+     "font": "hand",
+     "x": 0.36,
+     "y": 0.16,
+     "size": 70,
+     "max_w": 0.6,
+     "color": "#f6efe2",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 3.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "text",
+     "text": "...and the cause?",
+     "font": "hand",
+     "x": 0.36,
+     "y": 0.28,
+     "size": 70,
+     "max_w": 0.6,
+     "color": "#f2d06a",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 6.8,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "In April, *eighteen point three percent* of mothers in the First Clinic had died. Then the bowl arrived. June: *two point two*. July: *one point two*.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "pan": [
+      0.01,
+      0,
+      0.03
+     ]
+    },
+    {
+     "type": "bignum",
+     "text": "18.3%",
+     "x": 0.22,
+     "y": 0.45,
+     "size": 110,
+     "tone": "gold",
+     "at": 0.6
+    },
+    {
+     "type": "text",
+     "text": "April 1847",
+     "font": "hand",
+     "x": 0.22,
+     "y": 0.28,
+     "size": 64,
+     "max_w": 0.6,
+     "color": "#f6efe2",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 0.8,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "bignum",
+     "text": "2.2%",
+     "x": 0.52,
+     "y": 0.45,
+     "size": 110,
+     "tone": "cream",
+     "at": 5.4
+    },
+    {
+     "type": "text",
+     "text": "June",
+     "font": "hand",
+     "x": 0.52,
+     "y": 0.28,
+     "size": 64,
+     "max_w": 0.6,
+     "color": "#f6efe2",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 5.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "bignum",
+     "text": "1.2%",
+     "x": 0.8,
+     "y": 0.45,
+     "size": 110,
+     "tone": "cream",
+     "at": 7.4
+    },
+    {
+     "type": "text",
+     "text": "July",
+     "font": "hand",
+     "x": 0.8,
+     "y": 0.28,
+     "size": 64,
+     "max_w": 0.6,
+     "color": "#f6efe2",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 7.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "marker",
+     "shape": "arrow",
+     "at": 4.6,
+     "sfx": "marker",
+     "from": [
+      0.3,
+      0.62
+     ],
+     "to": [
+      0.45,
+      0.62
+     ],
+     "color": "#2f8f4a"
+    },
+    {
+     "type": "marker",
+     "shape": "arrow",
+     "at": 7.0,
+     "sfx": "none",
+     "from": [
+      0.6,
+      0.62
+     ],
+     "to": [
+      0.75,
+      0.62
+     ],
+     "color": "#2f8f4a"
+    },
+    {
+     "type": "tag",
+     "text": "SOURCE: SEMMELWEIS (1861), VIA BRITANNICA & WIKIPEDIA",
+     "x": 0.965,
+     "y": 0.84,
+     "align": "right",
+     "at": 1.4
+    }
+   ],
+   "transition": "paper",
+   "transition_frames": 14,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.3,
+       0.45
+      ]
+     },
+     {
+      "t": 8.5,
+      "zoom": 1.06,
+      "focus": [
+       0.7,
+       0.45
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "say": "In the year that followed, there were even months with *no* deaths from the fever at all.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.5535,
+     "y": 0.5285,
+     "h": 0.1754,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "hat": [
+        "headscarf",
+        "#f6efe2"
+       ],
+       "top": [
+        "#5b86b8",
+        "dress"
+       ],
+       "apron": "#f6efe2",
+       "hair": [
+        "#2b1d14",
+        "bun"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.47,
+     "y": 0.5939,
+     "h": 0.3281,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "cheer",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc6a2",
+       "build": "round",
+       "hair": [
+        "#5a3e28",
+        "short"
+       ],
+       "top": [
+        "#2a2f3a",
+        "jacket"
+       ],
+       "tie": "#7c2533",
+       "bottom": [
+        "#2a2f3a",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.3,
+       0.04,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "cheer",
+     "x": 0.386,
+     "y": 0.6314,
+     "h": 0.4154,
+     "enter": "none",
+     "acting": [
+      [
+       "cheer",
+       1.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48d",
+       "build": "slim",
+       "hair": [
+        "#2b1d14",
+        "short"
+       ],
+       "top": [
+        "#5a4636",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.5858,
+     "y": 0.6543,
+     "h": 0.4688,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e8bfa0",
+       "hat": [
+        "headscarf",
+        "#7c2533"
+       ],
+       "top": [
+        "#efe3c8",
+        "dress"
+       ],
+       "hair": [
+        "#5a3e28",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "zero.",
+     "font": "hand",
+     "x": 0.5,
+     "y": 0.14,
+     "size": 120,
+     "max_w": 0.6,
+     "color": "#f2d06a",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 2.8,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "look": "archival",
+   "transition": "cut",
+   "leak": [
+    0.6,
+    2.4,
+    0.4
+   ]
+  },
+  {
+   "say": "About ten times fewer deaths. From a bowl of water. You'd think they'd build him a statue.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_wash.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.73,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "warm",
+       2.6
+      ],
+      [
+       "smirk",
+       4.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/jar.png",
+     "x": 0.3,
+     "y": 0.42,
+     "w": 0.1,
+     "enter": "fade",
+     "at": 1.6
+    },
+    {
+     "type": "text",
+     "text": "about *10×* fewer deaths",
+     "font": "serif_i",
+     "x": 0.33,
+     "y": 0.7,
+     "size": 60,
+     "max_w": 0.5,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 0.6,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "dur": 2.8,
+   "captions": false,
+   "transition": "cut",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_wash_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10
+    },
+    {
+     "type": "paper",
+     "kind": "note",
+     "text": "Statue status: pending.",
+     "paper": "#f6e27f",
+     "font": "hand",
+     "text_size": 0.11,
+     "w": 0.34,
+     "x": 0.5,
+     "y": 0.45,
+     "rotate": 4,
+     "at": 0.2,
+     "enter": "slam",
+     "enter_dur": 0.3,
+     "sfx": "paper",
+     "tape": [
+      "tc"
+     ]
+    }
+   ],
+   "camera": {
+    "zoom": [
+     1.04,
+     1.08
+    ],
+    "focus": [
+     0.5,
+     0.45
+    ]
+   }
+  },
+  {
+   "dur": 2.8,
+   "transition": "dip",
+   "transition_frames": 14,
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "blur_keys": [
+      [
+       0,
+       4
+      ],
+      [
+       1.2,
+       16
+      ]
+     ],
+     "pan": [
+      0,
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "chapter",
+     "num": 5,
+     "title": "Why they said no",
+     "at": 0.15
+    }
+   ],
+   "sfx": "hit",
+   "camera": {
+    "zoom": [
+     1.02,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "Instead, many senior doctors pushed back. Some were insulted. A gentleman's hands, they felt, were clean.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 18,
+     "opacity": 0.45
+    },
+    {
+     "type": "shape",
+     "shape": "rect",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 0.6,
+     "color": "#07090b",
+     "opacity": 0.6,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "“Doctors are gentlemen, and gentlemen's hands are clean.”",
+     "font": "serif_i",
+     "x": 0.5,
+     "y": 0.44,
+     "size": 58,
+     "max_w": 0.72,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 1.6,
+     "at": 0.6,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "text",
+     "text": "ATTRIBUTED TO CHARLES MEIGS, PHILADELPHIA OBSTETRICIAN",
+     "font": "cond",
+     "x": 0.5,
+     "y": 0.62,
+     "size": 26,
+     "max_w": 0.8,
+     "color": "accent",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 2.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "bg": {
+    "type": "solid",
+    "colors": [
+     "#0b0d10"
+    ]
+   },
+   "transition": "dip",
+   "transition_frames": 12,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.04
+    ],
+    "focus": [
+     0.5,
+     0.45
+    ]
+   },
+   "pad": 0.6
+  },
+  {
+   "say": "But to be fair, they had reasons. Medicine then blamed disease on bad air and imbalances in the body. Germs weren't part of the picture yet. Semmelweis had a result... but no mechanism to explain it.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "pan": [
+      0.01,
+      0,
+      0.03
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "THE DOCTORS' CASE",
+     "text": "Disease = bad air (miasma) and imbalance of the body's humours. No known germs. A result without a cause.",
+     "w": 0.34,
+     "x": 0.29,
+     "y": 0.44,
+     "rotate": -3,
+     "at": 0.6,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "SEMMELWEIS'S CASE",
+     "text": "18.3% -> 1.2% after hand washing. Clear numbers. But WHY? No mechanism yet.",
+     "w": 0.34,
+     "x": 0.71,
+     "y": 0.48,
+     "rotate": 3,
+     "at": 6.4,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "marker",
+     "shape": "underline",
+     "at": 11.0,
+     "sfx": "marker",
+     "box": [
+      0.6,
+      0.6,
+      0.84,
+      0.6
+     ],
+     "color": "#c0392b"
+    }
+   ],
+   "transition": "paper",
+   "transition_frames": 14,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "And he made it harder. His full book only came out in eighteen sixty-one. And he wrote furious open letters, calling his critics *murderers*.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6851,
+     "y": 0.5476,
+     "h": 0.6324,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       4.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0c8a8",
+       "build": "round",
+       "hair": [
+        "#cfcfcf",
+        "short"
+       ],
+       "top": [
+        "#25262b",
+        "jacket"
+       ],
+       "tie": "#f6efe2",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ],
+       "belt": "#1a1a1a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 1.0172,
+     "y": 0.7244,
+     "h": 1.2117,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       3.0
+      ],
+      [
+       "point",
+       6.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc6a2",
+       "build": "round",
+       "hair": [
+        "#5a3e28",
+        "short"
+       ],
+       "top": [
+        "#2a2f3a",
+        "jacket"
+       ],
+       "tie": "#7c2533",
+       "bottom": [
+        "#2a2f3a",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "paper",
+     "kind": "clip",
+     "masthead": "Open letter, 1861",
+     "title": "To all professors of obstetrics",
+     "w": 0.24,
+     "x": 0.2,
+     "y": 0.34,
+     "rotate": -4,
+     "at": 4.4,
+     "enter": "slam",
+     "sfx": "paper",
+     "stamp": "1861"
+    }
+   ],
+   "look": "archival",
+   "transition": "cut"
+  },
+  {
+   "say": "In eighteen forty-nine, his post in Vienna wasn't renewed. He went home to Hungary.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.6226,
+     "y": 0.5041,
+     "h": 0.4926,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc6a2",
+       "build": "round",
+       "hair": [
+        "#5a3e28",
+        "short"
+       ],
+       "top": [
+        "#2a2f3a",
+        "jacket"
+       ],
+       "tie": "#7c2533",
+       "bottom": [
+        "#2a2f3a",
+        "trousers"
+       ],
+       "shoes": "#1a1410"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.5861,
+       "y": 0.6329,
+       "scale": 1.8461
+      },
+      {
+       "t": 4.0,
+       "x": 0.6955,
+       "y": 0.4459,
+       "scale": 0.624,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "lower_third",
+     "title": "Vienna, 1849",
+     "sub": "his assistant's post is not renewed",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 0.8
+    }
+   ],
+   "look": "archival",
+   "transition": "cut",
+   "min_dur": 4.2
+  },
+  {
+   "say": "And there, he did it again. At St. Rochus Hospital in Pest, from eighteen fifty-one to fifty-five, just eight mothers died out of nine hundred and thirty-three births. Under *one percent*.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward2_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "pan": [
+      0,
+      0,
+      0.06
+     ]
+    },
+    {
+     "type": "lower_third",
+     "title": "Pest, Hungary",
+     "sub": "St. Rochus Hospital, 1851-1855",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 0.8,
+     "until": 5.0,
+     "exit_dur": 0.4
+    },
+    {
+     "type": "shape",
+     "shape": "rect",
+     "x": 0.5,
+     "y": 0.27,
+     "w": 0.5,
+     "h": 0.3,
+     "color": "#07090b",
+     "opacity": 0.55,
+     "enter": "fade",
+     "at": 6.8
+    },
+    {
+     "type": "bignum",
+     "text": "0.85%",
+     "x": 0.5,
+     "y": 0.23,
+     "size": 120,
+     "tone": "cream",
+     "at": 7.0
+    },
+    {
+     "type": "text",
+     "text": "8 deaths in 933 births",
+     "font": "serif_i",
+     "x": 0.5,
+     "y": 0.36,
+     "size": 46,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 7.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "tag",
+     "text": "SOURCE: BRITANNICA; MED. J. AUSTRALIA (2018)",
+     "x": 0.965,
+     "y": 0.84,
+     "align": "right",
+     "at": 7.6
+    }
+   ],
+   "look": "archival",
+   "transition": "cut"
+  },
+  {
+   "say": "But the fight wore him down. In eighteen sixty-five, his health and behaviour failing, he was taken to an asylum. Two weeks later he died, aged forty-seven... from an infected wound.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_bed.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 6,
+     "opacity": 0.6,
+     "pan": [
+      0,
+      0,
+      0.04
+     ]
+    },
+    {
+     "type": "shape",
+     "shape": "rect",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "color": "#07090b",
+     "opacity": 0.45,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "Ignaz Semmelweis",
+     "font": "serif",
+     "x": 0.5,
+     "y": 0.42,
+     "size": 72,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 6.8,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "text",
+     "text": "1818 - 1865",
+     "font": "serif_i",
+     "x": 0.5,
+     "y": 0.53,
+     "size": 44,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 7.6,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "bg": {
+    "type": "solid",
+    "colors": [
+     "#0b0d10"
+    ]
+   },
+   "transition": "dip",
+   "transition_frames": 16,
+   "letterbox": 0.11,
+   "letterbox_in": 1.0,
+   "pad": 1.0
+  },
+  {
+   "say": "The kind of infection he'd spent his life fighting.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_ward_bed.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.5,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "transition": "cut",
+   "letterbox": 0.11,
+   "pad": 0.8
+  },
+  {
+   "dur": 2.8,
+   "transition": "dip",
+   "transition_frames": 14,
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "blur_keys": [
+      [
+       0,
+       4
+      ],
+      [
+       1.2,
+       16
+      ]
+     ],
+     "pan": [
+      0,
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "chapter",
+     "num": 6,
+     "title": "The proof arrives",
+     "at": 0.15
+    }
+   ],
+   "sfx": "hit",
+   "camera": {
+    "zoom": [
+     1.02,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "Science caught up only around the time he died. In the eighteen-sixties, Louis Pasteur showed that tiny living microbes cause fermentation and decay.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/fg_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.2534,
+     "y": 0.6227,
+     "h": 0.2983,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       4.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#ecc4a2",
+       "hair": [
+        "#3a2a1e",
+        "short"
+       ],
+       "top": [
+        "#2a2d33",
+        "jacket"
+       ],
+       "tie": "#25262b",
+       "bottom": [
+        "#2a2d33",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "lower_third",
+     "title": "Louis Pasteur",
+     "sub": "chemist, Paris. 1860s",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 1.4,
+     "until": 7.0,
+     "exit_dur": 0.4
+    }
+   ],
+   "look": "archival",
+   "sfx": "projector",
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.7,
+     1.75
+    ],
+    "focus": [
+     0.2,
+     0.6
+    ]
+   }
+  },
+  {
+   "say": "In eighteen sixty-seven, the surgeon Joseph Lister published his method of killing germs in wounds with carbolic acid.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.334,
+     "y": 0.6354,
+     "h": 0.5241,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ],
+      [
+       "explain",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#f0cdb0",
+       "build": "slim",
+       "hair": [
+        "#6b4423",
+        "short"
+       ],
+       "top": [
+        "#34425c",
+        "jacket"
+       ],
+       "tie": "#f6efe2",
+       "bottom": [
+        "#25262b",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/fg_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "lower_third",
+     "title": "Joseph Lister",
+     "sub": "surgeon, Glasgow. The Lancet, 1867",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 1.0,
+     "until": 6.4,
+     "exit_dur": 0.4
+    }
+   ],
+   "look": "archival",
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.6,
+     1.65
+    ],
+    "focus": [
+     0.3,
+     0.62
+    ]
+   }
+  },
+  {
+   "say": "And Robert Koch proved that one specific germ causes one specific disease, starting with anthrax in eighteen seventy-six.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "pan": [
+      0.01,
+      0,
+      0.03
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "ROBERT KOCH, 1876",
+     "text": "Anthrax: one specific germ causes one specific disease.",
+     "w": 0.34,
+     "x": 0.36,
+     "y": 0.42,
+     "rotate": -2,
+     "at": 0.4,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "ROBERT KOCH, 1882",
+     "text": "Tuberculosis: he finds the bacterium behind it.",
+     "w": 0.3,
+     "x": 0.7,
+     "y": 0.5,
+     "rotate": 3,
+     "at": 2.4,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "lower_third",
+     "title": "Robert Koch",
+     "sub": "physician, Germany. Anthrax, 1876",
+     "x": 0.055,
+     "y": 0.78,
+     "at": 0.8,
+     "until": 6.0,
+     "exit_dur": 0.4
+    }
+   ],
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "Germ theory finally gave Semmelweis the mechanism he never had. He was right. He just couldn't show why.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "opacity": 0.45
+    },
+    {
+     "type": "timeline",
+     "x0": 0.1,
+     "x1": 0.9,
+     "y": 0.78,
+     "draw_dur": 1.6,
+     "at": 0.2,
+     "active": 5,
+     "events": [
+      {
+       "pos": 0.0,
+       "year": "1846",
+       "label": "two doors"
+      },
+      {
+       "pos": 0.17,
+       "year": "1847",
+       "label": "the bowl"
+      },
+      {
+       "pos": 0.4,
+       "year": "1861",
+       "label": "his book"
+      },
+      {
+       "pos": 0.6,
+       "year": "1865",
+       "label": "he dies"
+      },
+      {
+       "pos": 0.8,
+       "year": "1867",
+       "label": "Lister"
+      },
+      {
+       "pos": 1.0,
+       "year": "1876",
+       "label": "Koch"
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "he was *right*.",
+     "font": "serif_i",
+     "x": 0.5,
+     "y": 0.34,
+     "size": 96,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 4.2,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "text",
+     "text": "he just couldn't show why",
+     "font": "hand",
+     "x": 0.5,
+     "y": 0.5,
+     "size": 70,
+     "max_w": 0.6,
+     "color": "#f2d06a",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 5.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "bg": {
+    "type": "solid",
+    "colors": [
+     "#120e0b"
+    ]
+   },
+   "transition": "paper",
+   "transition_frames": 14,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.04
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "dur": 2.8,
+   "transition": "dip",
+   "transition_frames": 14,
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/plate_cafe_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "blur_keys": [
+      [
+       0,
+       4
+      ],
+      [
+       1.2,
+       16
+      ]
+     ],
+     "pan": [
+      0,
+      0,
+      0.05
+     ]
+    },
+    {
+     "type": "chapter",
+     "num": 7,
+     "title": "The Semmelweis reflex",
+     "at": 0.15
+    }
+   ],
+   "sfx": "hit",
+   "camera": {
+    "zoom": [
+     1.02,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "Today, there's a name for what happened to him. The *Semmelweis reflex*: the urge to reject new evidence, because it clashes with what everyone already believes.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/plate_cafe_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.3769,
+     "y": 0.5716,
+     "h": 0.263,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       4.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "round",
+       "hair": [
+        "#1d1712",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#2f6f8f"
+       ],
+       "top": [
+        "#e8e2d4",
+        "shirt"
+       ],
+       "apron": "#f6efe2",
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.8947,
+     "y": 0.5757,
+     "h": 0.2716,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       3.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#b97a55",
+       "top": [
+        "#7c2533",
+        "kurta"
+       ],
+       "bottom": [
+        "#efe3c8",
+        "trousers"
+       ],
+       "hair": [
+        "#2a2320",
+        "curly"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.7837,
+     "y": 0.5783,
+     "h": 0.2768,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e6b996",
+       "top": [
+        "#9b59b6",
+        "dress"
+       ],
+       "hair": [
+        "#6b4423",
+        "bun"
+       ],
+       "earrings": "#f2b04a"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/fg_cafe_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6497,
+     "y": 0.6245,
+     "h": 0.3724,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "point",
+       5.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "hat": [
+        "headscarf",
+        "#d9534f"
+       ],
+       "top": [
+        "#f2b04a",
+        "dress"
+       ],
+       "necklace": "#6fc3c0",
+       "earrings": "#f2b04a",
+       "bag": "#8a5a3c",
+       "hair": [
+        "#140f0c",
+        "long"
+       ]
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.39,
+     "y": 0.6575,
+     "h": 0.4531,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       3.0
+      ],
+      [
+       "shrug",
+       7.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.8692,
+       "y": 0.6852,
+       "scale": 1.1302
+      },
+      {
+       "t": 1.4,
+       "x": 0.39,
+       "y": 0.6575,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "text": "the *Semmelweis reflex*",
+     "font": "serif_i",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 80,
+     "max_w": 0.8,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 2.2,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut",
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.52
+    ]
+   }
+  },
+  {
+   "say": "And his lesson still isn't finished. The World Health Organization says that out of every hundred patients in acute-care hospitals, *seven* in richer countries and *fifteen* in poorer ones catch an infection there.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/doc/cork.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.04,
+     "enter": "none",
+     "pan": [
+      0.01,
+      0,
+      0.03
+     ]
+    },
+    {
+     "type": "paper",
+     "kind": "doc",
+     "title": "WHO GLOBAL REPORT, 2022",
+     "text": "Per 100 patients in acute-care hospitals, at least one health-care-associated infection:",
+     "w": 0.44,
+     "x": 0.5,
+     "y": 0.3,
+     "rotate": -1.5,
+     "at": 0.4,
+     "enter": "slam",
+     "sfx": "paper",
+     "tape": [
+      "tl",
+      "tr"
+     ]
+    },
+    {
+     "type": "bignum",
+     "text": "7",
+     "x": 0.3,
+     "y": 0.64,
+     "size": 140,
+     "tone": "cream",
+     "at": 6.4
+    },
+    {
+     "type": "text",
+     "text": "richer countries",
+     "font": "hand",
+     "x": 0.3,
+     "y": 0.8,
+     "size": 60,
+     "max_w": 0.6,
+     "color": "#f6efe2",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 6.6,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "bignum",
+     "text": "15",
+     "x": 0.7,
+     "y": 0.64,
+     "size": 140,
+     "tone": "gold",
+     "at": 8.6
+    },
+    {
+     "type": "text",
+     "text": "poorer countries",
+     "font": "hand",
+     "x": 0.7,
+     "y": 0.8,
+     "size": 60,
+     "max_w": 0.6,
+     "color": "#f6efe2",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 8.8,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "tag",
+     "text": "SOURCE: WHO, 6 MAY 2022",
+     "x": 0.965,
+     "y": 0.84,
+     "align": "right",
+     "at": 1.0
+    }
+   ],
+   "transition": "paper",
+   "transition_frames": 14,
+   "camera": {
+    "zoom": [
+     1.0,
+     1.05
+    ],
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "say": "Where good hand hygiene and other simple practices are followed, the WHO says about *seventy percent* of those infections can be prevented.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/plate_cafe_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 6,
+       "scale": 1.196
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.27,
+     "y": 0.86,
+     "h": 1.2,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       3.4
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-18-a/assets/soap.png",
+     "x": 0.68,
+     "y": 0.3,
+     "w": 0.12,
+     "enter": "fade",
+     "at": 1.0
+    },
+    {
+     "type": "bignum",
+     "text": "70%",
+     "x": 0.68,
+     "y": 0.54,
+     "size": 130,
+     "tone": "gold",
+     "at": 4.6
+    },
+    {
+     "type": "text",
+     "text": "preventable",
+     "font": "serif_i",
+     "x": 0.68,
+     "y": 0.7,
+     "size": 60,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 5.0,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "tag",
+     "text": "SOURCE: WHO, 2022",
+     "x": 0.965,
+     "y": 0.84,
+     "align": "right",
+     "at": 5.0
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "So the next time a fact feels inconvenient, check the evidence... before the reflex.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/plate_cafe_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/fg_cafe_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.2658,
+     "y": 0.6008,
+     "h": 0.8428,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "point",
+       2.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "evidence first. reflex second.",
+     "font": "hand",
+     "x": 0.62,
+     "y": 0.16,
+     "size": 74,
+     "max_w": 0.6,
+     "color": "#f2d06a",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 2.6,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut"
+  },
+  {
+   "say": "Because the hardest thing to wash off... is *we've always done it this way*.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-21-L/assets/plate_wash.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 16,
+     "opacity": 0.5
+    },
+    {
+     "type": "shape",
+     "shape": "rect",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "color": "#07090b",
+     "opacity": 0.55,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "The hardest thing to wash off",
+     "font": "serif",
+     "x": 0.5,
+     "y": 0.42,
+     "size": 76,
+     "max_w": 0.85,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 0.2,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "text",
+     "text": "is *“we've always done it this way.”*",
+     "font": "serif_i",
+     "x": 0.5,
+     "y": 0.56,
+     "size": 76,
+     "max_w": 0.85,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 2.0,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "bg": {
+    "type": "solid",
+    "colors": [
+     "#0b0d10"
+    ]
+   },
+   "transition": "dip",
+   "transition_frames": 12,
+   "letterbox": 0.11,
+   "min_dur": 5.0,
+   "pad": 1.2
+  },
+  {
+   "say": "If this changed how you see a bar of soap, subscribe. Every week, one big idea, made simple.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/plate_cafe_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-L/assets/fg_cafe_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.2658,
+     "y": 0.6008,
+     "h": 0.8428,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ],
+      [
+       "warm",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "text",
+     "text": "THE EXPLAINER",
+     "font": "cond",
+     "x": 0.62,
+     "y": 0.14,
+     "size": 46,
+     "max_w": 0.6,
+     "color": "accent",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 0.5,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    },
+    {
+     "type": "text",
+     "text": "one big idea, every week",
+     "font": "serif_i",
+     "x": 0.62,
+     "y": 0.23,
+     "size": 58,
+     "max_w": 0.6,
+     "color": "primary",
+     "highlight": "accent",
+     "enter": "rise",
+     "enter_dur": 0.7,
+     "at": 1.4,
+     "shadow": true,
+     "align": "center",
+     "stroke": "#120e0a",
+     "stroke_width": 3
+    }
+   ],
+   "transition": "cut"
+  }
+ ],
+ "music": {
+  "cues": [
+   {
+    "scene": 0,
+    "style": "wonder",
+    "key": "D",
+    "scale": "dorian",
+    "bpm": 64
+   },
+   {
+    "scene": 4,
+    "style": "doc",
+    "key": "D"
+   },
+   {
+    "scene": 11,
+    "style": "tension",
+    "key": "A",
+    "scale": "minor"
+   },
+   {
+    "scene": 17,
+    "style": "tension",
+    "key": "E",
+    "scale": "minor"
+   },
+   {
+    "scene": 20,
+    "style": "none"
+   },
+   {
+    "scene": 21,
+    "style": "tension",
+    "key": "E",
+    "scale": "minor",
+    "gain": 1.2
+   },
+   {
+    "scene": 23,
+    "style": "wonder",
+    "key": "G",
+    "scale": "dorian"
+   },
+   {
+    "scene": 30,
+    "style": "tension",
+    "key": "A",
+    "scale": "minor"
+   },
+   {
+    "scene": 36,
+    "style": "none"
+   },
+   {
+    "scene": 38,
+    "style": "doc",
+    "key": "D"
+   },
+   {
+    "scene": 43,
+    "style": "wonder",
+    "key": "D",
+    "scale": "dorian"
+   }
+  ]
+ },
+ "meta": {
+  "format": "deep-dive",
+  "topic": "Ignaz Semmelweis and hand washing in depth: two clinics (1846: 11.4% vs 2.8%), suspects ruled out, Kolletschka's autopsy death, chlorine hand wash (18.3% -> 1.2%), rejection and the fair reasons, Pest (0.85%), death 1865, Pasteur/Lister/Koch, the Semmelweis reflex, WHO 2022 infection figures",
+  "hook": "story",
+  "idea_source": "this week's wild-story Short (2026-11-18-a Semmelweis) taken much deeper; viral-shaped + unique (a detective story with a twist)",
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ignaz_Semmelweis",
+   "https://www.britannica.com/biography/Ignaz-Semmelweis",
+   "https://www.mja.com.au/journal/2018/209/11/ignaz-philipp-semmelweis-1818-1865-herald-hygienic-medicine",
+   "https://en.wikipedia.org/wiki/Semmelweis_reflex",
+   "https://www.who.int/news/item/06-05-2022-who-launches-first-ever-global-report-on-infection-prevention-and-control",
+   "https://www.britannica.com/science/history-of-medicine/Verification-of-the-germ-theory",
+   "https://daily.jstor.org/joseph-lister-antiseptic-revolution/"
+  ],
+  "overrides": "documentary cut (doc toolkit), treatment in TREATMENT.md; style donor: visual investigation (grammar only)",
+  "humour": {
+   "trend": "dry handwritten sticky notes: 'Hospital review: 1 star. The street was cleaner.', 'Statue status: pending.'",
+   "beat": "sticky-note inserts",
+   "scene": [
+    4,
+    10,
+    11,
+    17,
+    23,
+    29,
+    30,
+    38,
+    43
+   ]
+  },
+  "claims": [
+   {
+    "claim": "1846: First Clinic 459 of 4,010 mothers died (11.4%), Second Clinic 105 of 3,754 (2.8%)",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Ignaz_Semmelweis"
+   },
+   {
+    "claim": "women begged not to enter the First Clinic; street births rarely caught the fever",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Ignaz_Semmelweis"
+   },
+   {
+    "claim": "he ruled out overcrowding, climate, birth position; considered the priest's bell",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Ignaz_Semmelweis"
+   },
+   {
+    "claim": "Kolletschka was poked by a student's scalpel at an autopsy (1847) and died of an illness like childbed fever",
+    "tag": "PROVEN",
+    "source": "https://www.mja.com.au/journal/2018/209/11/ignaz-philipp-semmelweis-1818-1865-herald-hygienic-medicine"
+   },
+   {
+    "claim": "chlorinated lime hand washing from mid-May 1847; April 18.3%, June 2.2%, July 1.2%; zero-death months in 1848",
+    "tag": "PROVEN",
+    "source": "https://www.britannica.com/biography/Ignaz-Semmelweis"
+   },
+   {
+    "claim": "objections: miasma/humours, no mechanism, offended gentlemen; Meigs quote attributed",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Semmelweis_reflex"
+   },
+   {
+    "claim": "book 1861; open letters calling critics murderers; post not renewed 1849",
+    "tag": "PROVEN",
+    "source": "https://en.wikipedia.org/wiki/Ignaz_Semmelweis"
+   },
+   {
+    "claim": "St. Rochus, Pest 1851-55: 8 deaths in 933 births (0.85%)",
+    "tag": "PROVEN",
+    "source": "https://www.britannica.com/biography/Ignaz-Semmelweis"
+   },
+   {
+    "claim": "1865 asylum, died two weeks later aged 47 of an infected wound",
+    "tag": "PROVEN",
+    "source": "https://www.mja.com.au/journal/2018/209/11/ignaz-philipp-semmelweis-1818-1865-herald-hygienic-medicine"
+   },
+   {
+    "claim": "Pasteur 1860s microbes; Lister carbolic acid 1867; Koch anthrax 1876",
+    "tag": "PROVEN",
+    "source": "https://www.britannica.com/science/history-of-medicine/Verification-of-the-germ-theory"
+   },
+   {
+    "claim": "WHO 2022: per 100 acute-care patients, 7 (high-income) and 15 (LMIC) get an HAI; 70% preventable with good hand hygiene and IPC",
+    "tag": "PROVEN",
+    "source": "https://www.who.int/news/item/06-05-2022-who-launches-first-ever-global-report-on-infection-prevention-and-control"
+   }
+  ]
+ }
+}
