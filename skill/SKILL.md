@@ -164,7 +164,7 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   time allows; it never blocks a post. Make it fast with fewer words per screen, never by cutting before people can read.
 - **Reelsmith looks (our own engine, owner 2026-11-21)**: `look` layers play animated pieces drawn as web pages and
   captured by `reelsmith/` (catalogue RS-01 Receipt, RS-02 Dot Map, RS-03 Balance, RS-04 Flipboard, RS-05 Blueprint,
-  RS-06 Bubbles, RS-07 Chalk, RS-08 Sweep, RS-09 Word Beat, RS-10 Bite, RS-11 Riso, RS-12 Terminal; props in each `LOOK.md`, keys in
+  RS-06 Bubbles, RS-07 Chalk, RS-08 Sweep, RS-09 Word Beat, RS-10 Bite, RS-11 Riso, RS-12 Terminal, RS-13 Whiteboard, RS-14 Silent Card, RS-15 Ink Brush; props in each `LOOK.md`, keys in
   `docs/job-spec.md` "Reelsmith looks"). Use one or two per Short where they explain better than a card (a bill, a
   comparison, a formula, a route), always mixed with Ved, the town and the house captions; `backdrop: "dim"` over bright
   plates, `pad` 1-2 s on the scene so the payoff reads, captions moved clear of the look (`caption_y`). Reference demo

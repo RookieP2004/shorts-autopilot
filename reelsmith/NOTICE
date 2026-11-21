@@ -18,5 +18,7 @@ used under the MIT licence:
   COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
   OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+Fonts added for the silent-film look: Old Standard TT and Playfair Display SC (SIL Open Font License 1.1; fonts/OFL-*.txt).
+
 Everything in looks/ (the look guides and their renderers) is our own work. No text, style guide, demo code or film
 from Lemo-Opuscar's styles/ folder is included.

@@ -20,6 +20,10 @@ def prep(slug):
     keep = [l for l in lines if re.search(r"fonts?\.sh|fetch_fonts|fonts\.mjs", l) or re.match(r"\[ -[fs] .*\] \|\|", l)]
     keep = [l for l in keep if not re.search(r"video|mux|tts|asr|music|mix\.py|score", l)]
     keep = [l.replace('$(dirname "$0")', d).replace("$(dirname $0)", d) for l in keep]
+    for f, runner in (("tools/fetch_fonts.py", sys.executable), ("tools/fetch_fonts.mjs", "node"), ("fetch_fonts.mjs", "node"),
+                      ("tools/fonts.sh", "sh"), ("fetch_fonts.py", sys.executable)):
+        if os.path.exists(os.path.join(d, f)):              # every font fetcher the demo ships, whatever build.sh calls it
+            subprocess.run([runner, f], cwd=d, capture_output=True, text=True, timeout=300)
     env = dict(os.environ, LIB=LEMO, HERE=d, PY=sys.executable, D=f"styles/{slug}/demo")
     script = "\n".join([f'HERE="{d}"; LIB="{LEMO}"; PY="{sys.executable}"; D=styles/{slug}/demo; cd "{LEMO}"'] + keep)
     r = subprocess.run(["sh", "-c", script], env=env, capture_output=True, text=True, timeout=600)

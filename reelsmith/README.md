@@ -18,6 +18,9 @@ same t = same picture), so any frame renders alone, in any order, on any worker.
 | RS-09 | Word Beat | 2-4 s hooks, chapter punches. | full frame |
 | RS-11 | Riso | One big number or rule as a self-printing three-ink poster (Lemo riso engine) | full frame |
 | RS-12 | Terminal | Logs, leaks, audits on a CRT (Lemo CRT post) | full frame |
+| RS-13 | Whiteboard | Processes and chains, drawn in marker (Lemo whiteboard engine) | full frame |
+| RS-14 | Silent Card | 1920s intertitle on scratched film (Lemo silent-film engine) | full frame |
+| RS-15 | Ink Brush | One weighty word in a brushed circle (Lemo ink-wash engine) | full frame |
 | RS-10 | Bite | Tax, fees, middlemen, "what you actually keep". | overlay; backdrop: dim on bright sets |
 
 Use in a job: `{"type": "look", "look": "RS-03" | "balance" | "RS-03-balance", "props": {...}, "x", "y", "w", "h", "at", "dur"}`.
@@ -37,7 +40,9 @@ full); give every visible action a cue with a name from our sound library. Add `
 
 ## Lemo-Opuscar engines
 `vendor/lemo/` holds Lemo-Opuscar style engines we build looks on, unchanged and credited (MIT): `riso.js` (risograph
-print, RS-11) and `crt.js` (CRT post, RS-12). `engine/lemo.mjs` renders any Lemo style's own demo page from a library
+print, RS-11), `crt.js` (CRT post, RS-12), `whiteboard/wb.js` (marker strokes, RS-13), `silent-film/` (film post,
+damage, intertitles, RS-14), `ink-wash-ink.js` (brush strokes, RS-15) and `core/lib.js` (their helpers). Where a file was
+changed, its header says how (only import paths). `engine/lemo.mjs` renders any Lemo style's own demo page from a library
 clone (`scripts/lemo_bank.py` prepares and checks all of them) so an engine can be studied before it becomes a look.
 
 ## Credits

@@ -12,7 +12,8 @@ const W = innerWidth, H = innerHeight, P = Object.assign({}, window.PROPS || {})
 const FONTS = { display: 'DMSerifDisplay-Regular.ttf', body: 'Poppins-ExtraBold.ttf', semi: 'Poppins-SemiBold.ttf',
   serif: 'LibreBaskerville.ttf', serif_i: 'LibreBaskerville-Italic.ttf', hand: 'Caveat.ttf', marker: 'PermanentMarker-Regular.ttf',
   cond: 'Oswald.ttf', bebas: 'BebasNeue-Regular.ttf', mono: 'CourierPrime-Regular.ttf', mono_b: 'CourierPrime-Bold.ttf',
-  type: 'SpecialElite-Regular.ttf', dot: 'Doto.ttf', dotg: 'DotGothic16-Regular.ttf', playfair: 'PlayfairDisplay.ttf', anton: 'Anton-Regular.ttf' };
+  type: 'SpecialElite-Regular.ttf', dot: 'Doto.ttf', 'Old Standard TT': 'OldStandard-Regular.ttf', oldstd_i: 'OldStandard-Italic.ttf',
+  'Playfair Display SC': 'PlayfairDisplaySC-Bold.ttf', dotg: 'DotGothic16-Regular.ttf', playfair: 'PlayfairDisplay.ttf', anton: 'Anton-Regular.ttf' };
 await Promise.all(Object.entries(FONTS).map(async ([fam, f]) => {
   const ff = new FontFace(fam, `url(/fonts/${f})`); await ff.load(); document.fonts.add(ff);
 }));
