@@ -66,16 +66,12 @@ def main(out=os.path.join(ROOT, "docs/sheets/professor_ved_model_sheet_v9.png"))
         im = night.rim(base, ["#3fa9ff", "#9b6bff"], 1.0, 0.8) if st == "night" else charstyle.apply(base, st)
         cell.paste(im, (50, 10), im)
         sheet.paste(cell, (100 + i * 470, 2900))
-    title("3D VED", 3820, "modelled in Blender: front · three-quarter · side · back · close-up")
+    title("3D VED", 3820, "the same Ved as a layered paper standee in a lit 3D set (characters/ved/ved3d.py)")
     y = 3990
-    for i, v in enumerate(["front", "three_q", "side", "back"]):
-        im = Image.open(os.path.join(ROOT, f"docs/sheets/ved3d/ved3d_{v}.png")).convert("RGB")
-        im = im.crop((150, 180, 570, 1000)).resize((440, 860))
-        sheet.paste(im, (100 + i * 470, y))
-    hd = Image.open(os.path.join(ROOT, "docs/sheets/ved3d/ved3d_head.png")).convert("RGB").crop((0, 120, 720, 1000))
-    hd = hd.resize((int(720 * 860 / 880), 860))
-    sheet.paste(hd, (100 + 4 * 470, y))
-    sheet = sheet.crop((0, 0, W, y + 960))
+    for i, f in enumerate(["idle_+0.png", "explain_-32.png", "think_+20.png"]):
+        im = Image.open(os.path.join(ROOT, "docs/sheets/ved3d", f)).convert("RGB").crop((20, 60, 520, 960)).resize((600, 1080))
+        sheet.paste(im, (100 + i * 660, y))
+    sheet = sheet.crop((0, 0, W, y + 1140))
     sheet.save(out)
     return out
 
