@@ -1,4 +1,6 @@
 """Townspeople: faceless supporting cast in the channel's flat style (no outlines, two-tone shading, light from the left).
+v2 (2026-11-21, with Ved v9.1): hanging arms sit beside the body, mitten hands with thumbs, hips join the legs,
+skirts are drawn, long hair falls behind the head (never under the chin), arms across the body read a shade darker.
 
 One rig, any person: the job gives each layer an `outfit` (via "rig_args": {"outfit": {...}}), e.g.
   {"skin": "#c98e62", "build": "round", "hair": ["#2a1d17", "bun"], "hat": ["headscarf", "#d9534f"],
@@ -72,17 +74,17 @@ def _limb(s, pts, w0, w1, col, dark=False):
 # ------------------------------------------------------------------ arms (shoulder, elbow, wrist, hand, front)
 L_SH, R_SH = (182, 356), (418, 356)
 ARMS = {
-    "down": [(L_SH, (150, 560), (150, 750), "open", False), (R_SH, (450, 560), (450, 750), "open", False)],
+    "down": [(L_SH, (132, 560), (126, 750), "open", False), (R_SH, (468, 560), (474, 750), "open", False)],
     "up_v": [(L_SH, (120, 220), (96, 70), "open", False), (R_SH, (480, 220), (504, 70), "open", False)],
-    "cheer": [(L_SH, (130, 220), (150, 70), "fist", False), (R_SH, (424, 560), (418, 760), "open", False)],
+    "cheer": [(L_SH, (130, 220), (150, 70), "fist", False), (R_SH, (468, 560), (474, 750), "open", False)],
     "sad": [(L_SH, (210, 560), (250, 740), "open", True), (R_SH, (390, 560), (350, 740), "open", True)],
-    "give": [(L_SH, (176, 560), (182, 760), "open", False), (R_SH, (500, 470), (600, 470), "open", False)],
-    "take": [(L_SH, (100, 470), (2, 470), "open", False), (R_SH, (424, 560), (418, 760), "open", False)],
+    "give": [(L_SH, (132, 560), (126, 750), "open", False), (R_SH, (494, 470), (566, 470), "open", False)],
+    "take": [(L_SH, (106, 470), (34, 470), "open", False), (R_SH, (468, 560), (474, 750), "open", False)],
     "hold": [(L_SH, (190, 560), (276, 620), "open", True), (R_SH, (410, 560), (324, 620), "open", True)],
     "shrug": [(L_SH, (150, 540), (60, 470), "open", False), (R_SH, (450, 540), (540, 470), "open", False)],
-    "point": [(L_SH, (120, 420), (40, 290), "point", False), (R_SH, (424, 560), (418, 760), "open", False)],
-    "explain": [(L_SH, (150, 560), (110, 420), "open", False), (R_SH, (424, 560), (418, 760), "open", False)],
-    "wave": [(L_SH, (110, 300), (130, 120), "open", False), (R_SH, (424, 560), (418, 760), "open", False)],
+    "point": [(L_SH, (120, 420), (40, 290), "point", False), (R_SH, (468, 560), (474, 750), "open", False)],
+    "explain": [(L_SH, (150, 560), (110, 420), "open", False), (R_SH, (468, 560), (474, 750), "open", False)],
+    "wave": [(L_SH, (110, 300), (130, 120), "open", False), (R_SH, (468, 560), (474, 750), "open", False)],
     "surprised": [(L_SH, (130, 480), (120, 330), "open", False), (R_SH, (470, 480), (480, 330), "open", False)],
 }
 # gesture -> (arms, posture, look); posture drives head/shoulder height
@@ -95,28 +97,56 @@ BASES = {
 POSTURE = {"neutral": (0, 0), "happy": (-14, -6), "sad": (46, 16), "warm": (0, 0)}   # (head drop px, shoulder drop px)
 
 
-def _hand(s, wrist, kind, col):
+def _hand(s, wrist, kind, col, ang=0.0, right=False):
+    """Mitten hand along the forearm direction ang (degrees, 0 = pointing down): palm, thumb, and a finger for point."""
     x, y = wrist
-    r = 27
-    s.add(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{col}"/>')
-    s.add(f'<path d="M{x},{y - r} A{r},{r} 0 0 1 {x},{y + r} Z" fill="{shade(col, 0.86)}"/>')
-    if kind == "point":
-        s.add(f'<circle cx="{x - 22}" cy="{y - 26}" r="11" fill="{col}"/>')
+    sh = shade(col, 0.86)
+    g = f'<g transform="translate({x:.1f},{y:.1f}) rotate({ang:.1f}) scale(1.2)">'
+    if kind == "fist":
+        body = f'<ellipse cx="0" cy="14" rx="25" ry="24" fill="{col}"/><path d="M0,-10 A25,24 0 0 1 0,38 Z" fill="{sh}"/>'
+    else:
+        tx = 20 if right else -20
+        body = (f'<ellipse cx="{tx:.0f}" cy="10" rx="9" ry="17" fill="{sh if right else col}" transform="rotate({-28 if right else 28} {tx} 10)"/>'
+                f'<path d="M-20,-4 C-22,22 -18,46 -6,52 C2,56 12,54 18,46 C24,30 22,8 20,-4 Z" fill="{col}"/>'
+                f'<path d="M4,-4 L20,-4 C22,8 24,30 18,46 C14,52 8,55 4,54 Z" fill="{sh}"/>')
+        if kind == "point":
+            body += f'<rect x="-6" y="40" width="12" height="38" rx="6" fill="{col}"/>'
+    s.add(g + body + '</g>')
 
 
-def arm(s, sh, el, wr, kind, o, right, drop):
+def arm(s, sh, el, wr, kind, o, right, drop, front=False):
+    import math
     sh = (sh[0], sh[1] + drop)
     sleeve = o["top"][0]
     long_sleeve = o["top"][1] in ("shirt", "jacket", "kurta")
-    _limb(s, [sh, el], 62, 54, sleeve, dark=right)
-    _limb(s, [el, wr], 52 if long_sleeve else 46, 44 if long_sleeve else 40, sleeve if long_sleeve else o["skin"], dark=right)
-    _hand(s, wr, kind, o["skin"])
+    sc = shade(sleeve, 0.9) if front else sleeve           # an arm across the body reads a step darker than the body
+    _limb(s, [sh, el], 62, 54, sc, dark=right)
+    fc = sc if long_sleeve else o["skin"]
+    _limb(s, [el, wr], 52 if long_sleeve else 42, 44 if long_sleeve else 36, fc, dark=right)
+    if not long_sleeve:                                    # short sleeve hem just above the elbow
+        dx, dy = el[0] - sh[0], el[1] - sh[1]
+        L = math.hypot(dx, dy) or 1
+        ux, uy = dx / L, dy / L
+        hx, hy = el[0] - ux * 40, el[1] - uy * 40
+        s.add(f'<path d="M{hx - uy * 30:.1f},{hy + ux * 30:.1f} L{hx + uy * 30:.1f},{hy - ux * 30:.1f}" '
+              f'stroke="{shade(sleeve, 0.78)}" stroke-width="7" stroke-linecap="round"/>')
+    else:                                                  # cuff
+        dx, dy = wr[0] - el[0], wr[1] - el[1]
+        L = math.hypot(dx, dy) or 1
+        ux, uy = dx / L, dy / L
+        cx, cy = wr[0] - ux * 14, wr[1] - uy * 14
+        s.add(f'<path d="M{cx - uy * 24:.1f},{cy + ux * 24:.1f} L{cx + uy * 24:.1f},{cy - ux * 24:.1f}" '
+              f'stroke="{shade(sleeve, 0.75)}" stroke-width="6" stroke-linecap="round"/>')
+    ang = math.degrees(math.atan2(-(wr[0] - el[0]), wr[1] - el[1]))
+    _hand(s, wr, kind, o["skin"], ang, right)
 
 
 # ------------------------------------------------------------------ body parts
 def legs(s, o, lift):
     bcol, bstyle = o["bottom"]
     shoes = o.get("shoes", "#25262b")
+    if bstyle in ("trousers", "shorts"):                   # hips: the legs grow out of one pelvis, no gap at the crotch
+        s.part("M196,790 L404,790 L398,880 C360,900 330,900 300,880 C270,900 240,900 202,880 Z", bcol)
     for side, lx in ((0, 250), (1, 350)):
         lf = lift[side]
         k = 1 - lf / 650.0
@@ -130,6 +160,9 @@ def legs(s, o, lift):
         s.add(f'<ellipse cx="{sx}" cy="1426" rx="62" ry="30" fill="{shoes}"/>')
         s.add(f'<ellipse cx="{sx + 10}" cy="1434" rx="50" ry="20" fill="{shade(shoes, 0.75)}"/>')
         s.add('</g>')
+    if bstyle == "skirt":
+        s.part("M176,790 L424,790 L470,1090 C400,1110 200,1110 130,1090 Z", bcol,
+               hl="M180,800 L214,800 L190,1096 L140,1090 Z")
 
 
 def torso(s, o, drop):
@@ -179,13 +212,19 @@ def torso(s, o, drop):
 def head(s, o, drop, tilt):
     cx, cy, r = 300, 178 + drop, 96
     skin = o["skin"]
-    s.add(f'<rect x="272" y="{240 + drop * 0.5:.0f}" width="56" height="{100 - drop * 0.4:.0f}" fill="{shade(skin, 0.85)}"/>')   # neck
-    s.add(f'<g transform="rotate({tilt} {cx} {cy + 60})">')
     hair = o.get("hair") or [None, "bald"]
     hc, hs = hair if isinstance(hair, list) else (hair, "short")
-    if hs == "long" and hc:
-        s.add(f'<path d="M{cx - 104},{cy - 10} C{cx - 110},{cy + 120} {cx - 90},{cy + 190} {cx - 60},{cy + 200} L{cx + 60},{cy + 200} '
-              f'C{cx + 90},{cy + 190} {cx + 110},{cy + 120} {cx + 104},{cy - 10} Z" fill="{hc}"/>')
+    s.add(f'<g transform="rotate({tilt} {cx} {cy + 60})">')
+    if hs == "long" and hc:                                # back of the hair and two locks to the shoulders, behind the head
+        s.add(f'<circle cx="{cx}" cy="{cy - 6}" r="{r + 12}" fill="{shade(hc, 0.85)}"/>')
+        for k in (-1, 1):
+            s.add(f'<path d="M{cx + k * 60},{cy - 40} C{cx + k * 122},{cy + 10} {cx + k * 122},{cy + 130} {cx + k * 104},{cy + 190} '
+                  f'L{cx + k * 66},{cy + 176} C{cx + k * 80},{cy + 120} {cx + k * 76},{cy + 40} {cx + k * 60},{cy - 40} Z" '
+                  f'fill="{hc if k < 0 else shade(hc, 0.85)}"/>')
+    s.add('</g>')
+    s.add(f'<rect x="272" y="{240 + drop * 0.5:.0f}" width="56" height="{100 - drop * 0.4:.0f}" fill="{shade(skin, 0.85)}"/>')   # neck
+    s.add(f'<ellipse cx="{cx}" cy="{cy + r - 8}" rx="40" ry="14" fill="{shade(skin, 0.72)}" opacity="0.6"/>')            # chin shadow
+    s.add(f'<g transform="rotate({tilt} {cx} {cy + 60})">')
     s.add(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{skin}"/>')
     s.add(f'<path d="M{cx + 30},{cy - r + 6} A{r},{r} 0 0 1 {cx + 30},{cy + r - 6} C{cx + 70},{cy + 40} {cx + 74},{cy - 40} {cx + 30},{cy - r + 6} Z" fill="{shade(skin, 0.85)}"/>')
     s.add(f'<ellipse cx="{cx - r + 4}" cy="{cy + 10}" rx="16" ry="24" fill="{shade(skin, 0.9)}"/><ellipse cx="{cx + r - 4}" cy="{cy + 10}" rx="16" ry="24" fill="{shade(skin, 0.8)}"/>')
@@ -251,14 +290,21 @@ def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None, ar
     if shadow:
         s.add('<ellipse cx="300" cy="1456" rx="180" ry="20" fill="#000" opacity="0.22"/>')
     arms = arms if arms is not None else ARMS[pose]
+    def beside(a):                                         # an arm hanging at the side goes behind the body
+        sh, el, wr, kind, front = a
+        return not front and abs(wr[0] - 300) > 140 and wr[1] > el[1] > sh[1]
     s.add(f'<g transform="translate(300,0) scale({bw:.3f},1) translate(-300,0)">')
+    for a in arms:
+        if beside(a):
+            arm(s, a[0], a[1], a[2], a[3], o, a[0][0] > 300, shd)
     legs(s, o, lift)
     torso(s, o, shd)
     s.add('</g>')
     head(s, o, hd, tilt)
     s.add(f'<g transform="translate(300,0) scale({bw:.3f},1) translate(-300,0)">')
-    for sh, el, wr, kind, front in arms:                  # arms over the body: flat style, always readable
-        arm(s, sh, el, wr, kind, o, sh[0] > 300, shd)
+    for a in arms:                                         # gesturing arms over the body
+        if not beside(a):
+            arm(s, a[0], a[1], a[2], a[3], o, a[0][0] > 300, shd, front=a[4])
     s.add('</g>')
     return s.svg()
 
