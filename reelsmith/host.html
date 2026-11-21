@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Reelsmith host</title>
+<style>html,body{margin:0;background:transparent;overflow:hidden}canvas{position:absolute;left:0;top:0}</style>
+</head><body>
+<script type="module">
+// One host for every look: loads the house fonts, builds the canvas, imports looks/<id>/look.js and exposes the
+// page contract the engine captures (DUR, render(t), READY, EV, TEXTS). A look module exports default
+//   { dur, gl?, setup(api), draw(t), texts?(t), cues? }   — draw must depend on t only (any frame, any order).
+import * as kit from '/reelsmith/kit/core.js';
+const q = new URLSearchParams(location.search), id = q.get('look');
+const W = innerWidth, H = innerHeight, P = Object.assign({}, window.PROPS || {});
+const FONTS = { display: 'DMSerifDisplay-Regular.ttf', body: 'Poppins-ExtraBold.ttf', semi: 'Poppins-SemiBold.ttf',
+  serif: 'LibreBaskerville.ttf', serif_i: 'LibreBaskerville-Italic.ttf', hand: 'Caveat.ttf', marker: 'PermanentMarker-Regular.ttf',
+  cond: 'Oswald.ttf', bebas: 'BebasNeue-Regular.ttf', mono: 'CourierPrime-Regular.ttf', mono_b: 'CourierPrime-Bold.ttf',
+  type: 'SpecialElite-Regular.ttf', dot: 'Doto.ttf', dotg: 'DotGothic16-Regular.ttf', playfair: 'PlayfairDisplay.ttf', anton: 'Anton-Regular.ttf' };
+await Promise.all(Object.entries(FONTS).map(async ([fam, f]) => {
+  const ff = new FontFace(fam, `url(/fonts/${f})`); await ff.load(); document.fonts.add(ff);
+}));
+const mod = (await import(`/reelsmith/looks/${id}/look.js`)).default;
+const canvas = document.createElement('canvas'); canvas.width = W; canvas.height = H; canvas.id = 'look';
+document.body.appendChild(canvas);
+const ctx = mod.gl ? null : canvas.getContext('2d');
+const api = { canvas, ctx, W, H, P, kit, S: Math.min(W, H) / 1080 };   // S: scale against a 1080-wide Short
+await (mod.setup ? mod.setup(api) : null);
+window.DUR = window.WANT_DUR || P.dur || mod.dur || 4;
+api.DUR = window.DUR;
+// fit: when the slot is shorter than the look's natural length, its whole action plays faster so it lands by 85% of
+// the slot and holds; a longer slot plays it at natural speed and holds the end. fit:false keeps natural speed.
+const nat = mod.dur || window.DUR, K = (P.fit === false || window.DUR >= nat) ? 1 : nat / (window.DUR * 0.85);
+api.timeScale = K;
+// backdrop: "dim" lays a soft night scrim behind the look (light-on-dark looks over bright town plates), fading in
+const scrim = t => { if (!ctx || !P.backdrop) return; const a = Math.min(1, t / 0.25) * (P.backdrop_alpha ?? .78);
+  ctx.fillStyle = `rgba(22,35,43,${a})`; ctx.fillRect(0, 0, W, H); };
+window.render = t => { if (ctx) { ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, W, H); } scrim(t); mod.draw(t * K, api); };
+window.TEXTS = t => (mod.texts ? mod.texts(t * K, api) : []);
+window.EV = (typeof mod.cues === 'function' ? mod.cues(api) : (mod.cues || [])).map(c => ({ ...c, t: c.t / K })).filter(c => c.t < window.DUR);
+window.render(0);
+window.READY = true;
+</script>
+</body></html>

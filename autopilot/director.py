@@ -87,6 +87,25 @@ def text_holds(ctx, fast=True):
     bad = []
     for i, s in enumerate(ctx.job["scenes"]):
         for L in s.get("layers", []):
+            if L.get("type") == "look" and L.get("_frames_dir"):      # a look reports its own text boxes
+                from .looks import texts
+                at = L.get("at", 0.0)
+                end = (L["at"] + L["dur"]) if "dur" in L else ctx.dur[i]
+                first, last = {}, {}
+                for fr in texts(L["_frames_dir"]):
+                    for b in fr.get("boxes") or []:
+                        if b.get("pass"):
+                            continue
+                        k = (b["id"], b["text"])
+                        first.setdefault(k, fr["t"])
+                        last[k] = fr["t"]
+                for (bid, txt), t0 in first.items():
+                    seen = min(last[(bid, txt)] + 0.1, end - at) - t0
+                    need = len(txt.replace(" ", "")) / rate + base
+                    if seen < need - 0.05:
+                        bad.append({"scene": i, "type": f"look {L['look']}", "text": txt[:40], "seen": round(seen, 2),
+                                    "need": round(need, 2)})
+                continue
             txt = next((L[k] for k in TEXT_KEYS if isinstance(L.get(k), str)), None)
             if not txt or L.get("type") in ("caption", "captions") or L.get("readable") is False:
                 continue

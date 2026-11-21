@@ -1,0 +1,327 @@
+{
+  "id": "2026-11-21-looks",
+  "title": "DEMO: Reelsmith looks mixed into the house style",
+  "privacy": "private",
+  "speaker": "ved",
+  "meta": {
+    "format": "DEMO",
+    "topic": "Rule of 72 with savings vs prices (hypothetical numbers, not for posting)",
+    "characters": [
+      "ved"
+    ],
+    "sources": []
+  },
+  "tags": [
+    "demo"
+  ],
+  "description": "Demo of Reelsmith looks (not for posting).",
+  "music": {
+    "style": "ambient",
+    "cues": [
+      {
+        "scene": 0,
+        "style": "ambient"
+      },
+      {
+        "scene": 5,
+        "style": "none"
+      },
+      {
+        "scene": 5,
+        "offset": 0.9,
+        "style": "ambient"
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "say": "Your money is *shrinking*. Here's the maths.",
+      "caption_y": 0.8,
+      "layers": [
+        {
+          "type": "look",
+          "look": "RS-09",
+          "props": {
+            "words": [
+              "Your",
+              "money",
+              "is",
+              "shrinking"
+            ],
+            "key": 3,
+            "bpm": 96
+          },
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1,
+          "h": 1,
+          "at": 0
+        }
+      ],
+      "pad": 0.3
+    },
+    {
+      "say": "Say your bank pays *3%*. But prices rise *6%* a year.",
+      "transition": "whip",
+      "caption_y": 0.86,
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "zoom": 1.0,
+            "focus": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "t": 4,
+            "zoom": 1.06,
+            "focus": [
+              0.5,
+              0.45
+            ]
+          }
+        ]
+      },
+      "layers": [
+        {
+          "type": "image",
+          "path": "jobs/2026-11-08-m2/assets/plate_bank.png",
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1.0,
+          "enter": "none",
+          "blur": 14
+        },
+        {
+          "type": "look",
+          "look": "balance",
+          "props": {
+            "title": "Savings vs prices",
+            "left": {
+              "label": "Bank interest",
+              "value": 3,
+              "unit": "%"
+            },
+            "right": {
+              "label": "Prices",
+              "value": 6,
+              "unit": "%"
+            },
+            "verdict": "you lose 3% a year",
+            "backdrop": "dim"
+          },
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1,
+          "h": 1.0,
+          "at": 0
+        },
+        {
+          "type": "character",
+          "id": "ved",
+          "pose": "explain",
+          "x": 0.78,
+          "y": 1.0,
+          "h": 0.42,
+          "enter": "none",
+          "acting": [
+            [
+              "explain",
+              0
+            ],
+            [
+              "point",
+              1.8
+            ]
+          ],
+          "ground": false,
+          "allow_outside_safe": true
+        }
+      ],
+      "pad": 1.6
+    },
+    {
+      "say": "The trick: divide *72* by the rate.",
+      "transition": "cut",
+      "caption_y": 0.86,
+      "layers": [
+        {
+          "type": "look",
+          "look": "RS-07",
+          "props": {
+            "title": "Rule of 72",
+            "lines": [
+              "72 \u00f7 rate = years",
+              "72 \u00f7 6 = 12",
+              "@y:prices double in 12 years"
+            ],
+            "answer": 2
+          },
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1,
+          "h": 1,
+          "at": 0
+        },
+        {
+          "type": "character",
+          "id": "ved",
+          "pose": "smirk",
+          "x": 0.84,
+          "y": 1.02,
+          "h": 0.34,
+          "enter": "none",
+          "acting": [
+            [
+              "smirk",
+              0
+            ]
+          ],
+          "ground": false,
+          "allow_outside_safe": true
+        }
+      ],
+      "pad": 1.8
+    },
+    {
+      "say": "So the bill you pay today...",
+      "transition": "push",
+      "caption_y": 0.86,
+      "layers": [
+        {
+          "type": "image",
+          "path": "jobs/2026-11-08-m2/assets/plate_market_wide.png",
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1.0,
+          "enter": "none",
+          "blur": 16
+        },
+        {
+          "type": "look",
+          "look": "RS-01",
+          "props": {
+            "title": "Your month, today",
+            "items": [
+              [
+                "Rent",
+                15000
+              ],
+              [
+                "Groceries",
+                8000
+              ],
+              [
+                "Travel",
+                3000
+              ]
+            ],
+            "note": "today"
+          },
+          "x": 0.5,
+          "y": 0.42,
+          "w": 1,
+          "h": 0.8,
+          "at": 0
+        }
+      ],
+      "pad": 1.2
+    },
+    {
+      "say": "...costs *double* in twelve years.",
+      "transition": "cut",
+      "caption_y": 0.86,
+      "layers": [
+        {
+          "type": "image",
+          "path": "jobs/2026-11-08-m2/assets/plate_market_wide.png",
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1.0,
+          "enter": "none",
+          "blur": 16
+        },
+        {
+          "type": "look",
+          "look": "RS-04",
+          "props": {
+            "from": 26000,
+            "to": 52000,
+            "prefix": "\u20b9",
+            "label": "same month, 12 years on",
+            "tone": "red",
+            "backdrop": "dim"
+          },
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1,
+          "h": 1.0,
+          "at": 0
+        }
+      ],
+      "pad": 1.7
+    },
+    {
+      "say": "Beat the *6*, or you're paying for it.",
+      "transition": "zoom",
+      "caption_y": 0.42,
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "zoom": 1.1,
+            "focus": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "t": 3.5,
+            "zoom": 1.0,
+            "focus": [
+              0.5,
+              0.5
+            ]
+          }
+        ]
+      },
+      "layers": [
+        {
+          "type": "image",
+          "path": "jobs/2026-11-08-b/assets/plate_town_all.png",
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1.0,
+          "enter": "none",
+          "blur": 0
+        },
+        {
+          "type": "character",
+          "id": "ved",
+          "pose": "warm",
+          "x": 0.5,
+          "y": 1.0,
+          "h": 0.6,
+          "enter": "none",
+          "acting": [
+            [
+              "warm",
+              0
+            ],
+            [
+              "point",
+              1.2
+            ]
+          ],
+          "ground": false,
+          "allow_outside_safe": true
+        }
+      ],
+      "pad": 0.6,
+      "lead": 0.7,
+      "sfx": "none"
+    }
+  ]
+}

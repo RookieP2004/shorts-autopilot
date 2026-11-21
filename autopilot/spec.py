@@ -43,7 +43,7 @@ LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d", "ble
                "headline", "figures",                                                   # reference-reel style
                "hud", "eqbar", "tracker", "stamp", "optcard", "phone", "crowd", "nodes", "burst",   # night set (night.py)
                "dottext", "bignum", "dateline", "tiles", "tipnum", "clock", "blinds", "flows",       # case file (dossier.py)
-               "motion"}                                                                 # Remotion/GSAP/three.js clips (remotion.py)
+               "motion", "look"}                                                                 # Remotion/GSAP/three.js clips (remotion.py)
 LOOKS = {"town", "night", "moody"}
 MONEY_WORDS = ("\u20b9", "$", "rs", "crore", "lakh")
 SHAPES3D = {"box", "sphere", "cylinder", "cone", "plane", "terrain", "person", "tree", "building"}
@@ -263,6 +263,12 @@ def validate_job(job, style, chars, root=ROOT):
                 from .remotion import COMPS
                 if L.get("comp") not in COMPS:
                     errs.append(f"{w}: motion comp '{L.get('comp')}' not in {sorted(COMPS)}")
+            elif t == "look":
+                from .looks import resolve
+                try:
+                    resolve(str(L.get("look")))
+                except KeyError as e:
+                    errs.append(f"{w}: {e.args[0]}")
             elif t == "dottext" and not L.get("text"):
                 errs.append(f"{w}: dottext needs 'text'")
             elif t == "bignum" and not any(k in L for k in ("value", "to", "steps", "text")):

@@ -66,6 +66,18 @@ def render_shots(ctx, log=print):
         return
     for i, s in enumerate(ctx.job["scenes"]):
         for j, L in enumerate(s.get("layers", [])):
+            if L.get("type") == "look":                   # Reelsmith look (autopilot/looks.py, reelsmith/looks/<id>)
+                from . import looks
+                dur = L.get("dur", ctx.dur[i] - L.get("at", 0.0))
+                fps = L.get("fps", ctx.fps)
+                res = L.get("res", 1.0)
+                w = int(round(ctx.W * L.get("w", 1.0) * res / 2)) * 2
+                h = int(round(ctx.H * L.get("h", 1.0) * res / 2)) * 2
+                out = os.path.join(ctx.shots_dir, f"k{i:02d}_l{j:02d}")
+                log(f"  look scene {i} layer {j}: {L['look']} {w}x{h} {dur:.1f}s")
+                looks.render_clip(L["look"], L.get("props", {}), out, w, h, fps, dur, log)
+                L["_frames_dir"], L["_fps"] = out, fps
+                continue
             if L.get("type") == "motion":                 # Remotion / GSAP / three.js clip (autopilot/remotion.py)
                 from . import remotion
                 dur = L.get("dur", ctx.dur[i] - L.get("at", 0.0))
@@ -259,6 +271,11 @@ def auto_sfx(L, scene_dur):
     return [(max(0.0, o), n_, g) for o, n_, g in out if o < scene_dur]
 
 
+def audio_names():
+    from .spec import SFX
+    return SFX
+
+
 def auto_sting(L):
     """The score answers the picture's biggest moments with an orchestral hit (real instruments only).
     Returns (seconds after the layer's `at`, kind) or None. "sting": "none" turns it off; "sting": kind forces one."""
@@ -301,6 +318,11 @@ def mix(ctx):
                 stings.append((ctx.start[i] + L.get("at", 0) + sg[0], sg[1]))
             if L.get("sfx") and L["sfx"] != "none":
                 cues.append((ctx.start[i] + L.get("at", 0), L["sfx"], L.get("sfx_gain", 1.0)))
+            elif L.get("type") == "look" and "sfx" not in L and L.get("_frames_dir"):   # a look brings its own cues
+                from . import looks
+                for c in looks.cues(L["_frames_dir"]):
+                    if c.get("t", 0) < ctx.dur[i] - L.get("at", 0) and c.get("sfx") in audio_names():
+                        cues.append((ctx.start[i] + L.get("at", 0) + c["t"], c["sfx"], c.get("gain", 1.0)))
             elif "sfx" not in L and st["sfx"].get("auto", True):       # every visible action brings its own sound
                 for off, nm, g in auto_sfx(L, ctx.dur[i]):
                     cues.append((ctx.start[i] + L.get("at", 0) + off, nm, g))
@@ -449,7 +471,12 @@ def render(job_path, out_dir, root=ROOT, workers=None, log=print):
         kbps = int(kbps * cap_mb / mb * 0.92)
         log(f"{mb:.1f} MB is over {cap_mb} MB, re-encoding at {kbps} kb/s")
     os.replace(tmp, final)
-    info = {"duration": round(total, 2), "frames": sum(ctx.frames), "scenes": n,
+    try:                                                 # CC BY instruments (grand piano) must be credited in the description
+        from . import orchestra
+        info_credits = orchestra.credits() if orchestra.available() else []
+    except Exception:
+        info_credits = []
+    info = {"duration": round(total, 2), "frames": sum(ctx.frames), "scenes": n, "credits": info_credits,
             "size_mb": round(os.path.getsize(final) / 1e6, 1), "w": ctx.W, "h": ctx.H,
             "scene_starts": [round(s, 2) for s in ctx.start]}
     try:                                                 # measured, not heard: loudness, sync, clutter, balance

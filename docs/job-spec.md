@@ -328,6 +328,21 @@ letters/15 + 1.5 s in a long video, after 0.35 s of entrance; `"readable": false
 `black_frames` (blackdetect; `dip` transitions excepted). Packs: `cd third_party/lemo && sh tools/fetch.sh instruments
 vsco2ce && sh tools/fetch.sh instruments vcsl && sh tools/fetch.sh instruments freepats` (~1.1 GB, from GitHub releases).
 
+## Reelsmith looks (`look` layer; owner 2026-11-21: our own Lemo-style engine; reelsmith/, autopilot/looks.py)
+`{"type": "look", "look": "RS-03" | "balance" | "RS-03-balance", "props": {...}, "x", "y", "w", "h", "at", "dur"}` plays a
+Reelsmith look: a web page that draws any moment t, captured once in headless Chrome to transparent PNGs (cached by look
+code + props + size) and composited like a `motion` clip. Catalogue (props in `reelsmith/looks/<id>/LOOK.md`):
+RS-01 Receipt (bills, totals), RS-02 Dot Map (routes; never outlines or borders), RS-03 Balance (A vs B), RS-04
+Flipboard (hook numbers, then vs now), RS-05 Blueprint (how a thing works), RS-06 Bubbles (shares by area), RS-07 Chalk
+(formulas), RS-08 Sweep (investigations), RS-09 Word Beat (2-4 s hooks), RS-10 Bite (what you keep). Common props:
+`backdrop: "dim"` (night scrim behind light-on-dark looks over bright town plates), `fit: false` (by default a look
+speeds up to land by 85% of a short slot, then holds). Each look brings its own sound cues (library names; a layer
+`"sfx"` replaces them) and its own text boxes for the director's reading check. Give a look scene `pad` 1-2 s so its
+payoff can be read. New looks: `reelsmith/README.md`. Instruments: the Salamander grand piano (CC BY 3.0) is used by
+the `lofi` and `doc` palettes and is credited automatically ("Music: ..." in the YouTube description and the Reel
+caption, from `out/render.json` "credits"); `folk` adds a physically modelled guitar. Blender: `world_hdri("studio" |
+"lounge", strength)` lights a set from a real room (Poly Haven CC0) while the camera sees a plain backdrop.
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

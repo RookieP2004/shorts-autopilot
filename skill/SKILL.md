@@ -58,7 +58,8 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
    For a bonus run (slot `b`/`c`), run section 3c step 1 now, before installing anything.
    Then `pip install -q -r requirements.txt --break-system-packages`, `bash scripts/fetch_models.sh` (~350 MB, about 1 minute),
    `bash scripts/fetch_blender.sh` (Blender from the repo's `deps` branch, about 10 s) and `sh scripts/fetch_instruments.sh`
-   (the score's CC0 instrument samples, ~1.1 GB, about 15 s; if it fails the music falls back to the synth).
+   (the score's instrument samples and two HDRIs, ~1.4 GB, about 20 s; if it fails the music falls back to the synth).
+   Reelsmith looks install their own Node packages the first time a job uses one (`npm install` in `reelsmith/`, ~5 s).
 2. **Connectors**: load the Zapier tools with ToolSearch ("zapier"). Check *YouTube: Upload Video* is enabled (in a review, also
    *YouTube: Make API GET Request* and the Google Docs actions *Get Document Content* and *Append Text to Document*);
    enable missing ones with Zapier's discover/enable tools. If Zapier isn't connected at all, stop and tell the owner.
@@ -156,6 +157,14 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   variety (Shorts 3 kinds, long 4: push, pull, pan, tilt, snap), at least 2 cuts carried by sound, real near-silences
   before the turns (Shorts 1, long 2; the first sound after one is a key sound), no blank frames. Fix what it flags when
   time allows; it never blocks a post. Make it fast with fewer words per screen, never by cutting before people can read.
+- **Reelsmith looks (our own engine, owner 2026-11-21)**: `look` layers play animated pieces drawn as web pages and
+  captured by `reelsmith/` (catalogue RS-01 Receipt, RS-02 Dot Map, RS-03 Balance, RS-04 Flipboard, RS-05 Blueprint,
+  RS-06 Bubbles, RS-07 Chalk, RS-08 Sweep, RS-09 Word Beat, RS-10 Bite; props in each `LOOK.md`, keys in
+  `docs/job-spec.md` "Reelsmith looks"). Use one or two per Short where they explain better than a card (a bill, a
+  comparison, a formula, a route), always mixed with Ved, the town and the house captions; `backdrop: "dim"` over bright
+  plates, `pad` 1-2 s on the scene so the payoff reads, captions moved clear of the look (`caption_y`). Reference demo
+  `jobs/2026-11-21-looks`. A new look is a new style: build it in `reelsmith/looks/RS-NN-name` with stills and a
+  `LOOK.md`, and it needs the owner's OK before a public video uses it.
 - **Style donors (Lemo-Opuscar's 99 film styles)**: `sh scripts/lemo_styles.sh` fetches the library into /tmp/lemo and lists
   the styles that suit us (dark documentary, halftone dossier, visual investigation, news package, map explainer,
   telestrator, text flash cuts, countdown, data physicalization...). For a Deep Dive, or a Short that needs a new idea, pick

@@ -33,12 +33,26 @@ def chapters(job, job_path):
     return [f"{stamp(t)} {c['title']}" for t, c in zip(ts, ch)]
 
 
+def render_credits(job_path):
+    """Attribution lines the render recorded (out/render.json "credits"): CC BY instruments such as the grand piano."""
+    if not job_path:
+        return []
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(job_path)), "out", "render.json")) as f:
+            return list(json.load(f).get("credits", []))
+    except (OSError, ValueError):
+        return []
+
+
 def zapier_fields(job, style, job_path=None):
     yt = {**style.get("youtube", {}), **job.get("youtube", {})}
     desc = job.get("description", "").strip()
     ch = chapters(job, job_path)
     if ch:
         desc = (desc + "\n\nChapters\n" + "\n".join(ch)).strip()
+    cr = render_credits(job_path)
+    if cr:
+        desc = (desc + "\n\nMusic: " + " · ".join(cr)).strip()
     tags = [t.lstrip("#") for t in job.get("tags", [])][:30]
     hashtags = list(yt.get("hashtags", []))
     hashtags += [h for h in job.get("hashtags", []) if h not in hashtags]

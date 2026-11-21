@@ -17,6 +17,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 LEMO = os.path.join(os.path.dirname(HERE), "third_party", "lemo")
 INST = os.path.join(LEMO, "core", "audio", "instruments")
 PACKS = ("vsco2ce", "vcsl", "freepats")       # all CC0
+USED = set()                                  # libraries played in this process (render writes the credits from it)
 _S = None
 
 # style -> palette. Parts: bass (root per chord), pad (held chord), fig (arpeggio figure), spark (bar-start
@@ -26,7 +27,7 @@ PALETTES = {
     "ambient": dict(bass=("cellos_pizz", .55), pad=("violas", .22), fig=("marimba", .42, "up8"),
                     spark=("glockenspiel", .30), perc=[("shaker", "down", "x.x.x.x.x.x.x.x.", .16),
                                                        ("woodblock", "b", "............x...", .20)]),
-    "lofi": dict(bass=("contrabass_pizz", .55), pad=("upright", .30, "comp"), fig=("vibraphone", .26, "sparse"),
+    "lofi": dict(bass=("jazz_bass", .55), pad=("piano", .30, "comp"), fig=("vibraphone", .26, "sparse"),
                  spark=None, perc=[("hihat", "closed", "x.x.x.x.x.x.x.x.", .22), ("claves", None, "....x.......x...", .22),
                                    ("frame_drum", None, "x.......x.x.....", .38)]),
     "upbeat": dict(bass=("contrabass_pizz", .60), pad=None, fig=("xylophone", .40, "up16"),
@@ -35,16 +36,30 @@ PALETTES = {
                                                       ("shaker", "down", "xxxxxxxxxxxxxxxx", .12)]),
     "suspense": dict(bass=("contrabass_pizz", .55, "pulse"), pad=("violins_trem", .20), fig=None,
                      spark=("triangle", .18), perc=[("timpani", "ROOT", "x...............", .30)]),
-    "doc": dict(bass=("contrabass", .45), pad=("cellos", .34), fig=("upright", .30, "motif"),
+    "doc": dict(bass=("contrabass", .45), pad=("cellos", .34), fig=("piano", .30, "motif"),
                 spark=("tubular_bells", .22), perc=[("frame_drum", None, "x.......x.......", .34)], swell=("horn", .30)),
     "tension": dict(bass=("contrabass", .45), pad=("violins_trem", .24), fig=("cellos_spic", .40, "ostinato"),
                     spark=None, perc=[("timpani", "ROOT", "x.......x.......", .40), ("toms", None, "..........x..x..", .24)],
                     riser=("gran_cassa", "roll")),
     "wonder": dict(bass=("cellos", .30), pad=("violins", .22), fig=("harp", .38, "up8"), spark=("glockenspiel", .26),
                    perc=[], swell=("horn", .24)),
+    # warm, hand-played: finger-picked guitar (physically modelled), plucked bass, kalimba (stories, people, places)
+    "folk": dict(bass=("jazz_bass", .50), pad=None, fig=("pluck:acoustic_guitar", .55, "up8"), spark=("kalimba", .30),
+                 perc=[("frame_drum", "hand", "x.....x...x.....", .30), ("shaker", "down", "..x...x...x...x.", .14)]),
     "night": dict(bass=("electric_bass", .55), pad=("vibraphone_bowed", .26), fig=("hang", .30, "sparse"),
                   spark=None, perc=[("hihat", "closed", "x.x.x.x.x.x.x.x.", .18), ("cajon", None, "x.......x.......", .34)]),
 }
+
+
+def libs_of(names):
+    S = sampler()
+    return {S._lic(n) for n in names}
+
+
+def credits():
+    """Lines a video description must carry for the instruments it used (CC BY ones; CC0 needs none)."""
+    S = sampler()
+    return [S.LIC[l][2] for l in sorted(USED) if l in S.LIC and S.LIC[l][2]]
 
 
 def available():
@@ -179,7 +194,15 @@ def music(duration, cfg, root, sc, prog, bars_per_chord, beat, SR):
     S = sampler()
     ev = write(duration, cfg, root, sc, prog, bars_per_chord, beat)
     S.seed(int(cfg.get("seed", 7)))
+    pl = [e for e in ev if e[1].startswith("pluck:")]
+    ev = [e for e in ev if not e[1].startswith("pluck:")]
+    USED.update(libs_of({e[1] for e in ev}))
     st = S.render(ev, dur=duration + 1.5)
+    if pl:                                         # physically modelled strings (Karplus-Strong; no samples, no licence)
+        from core.audio import pluck as PL
+        from core.audio.sfx import add as sadd
+        for t, inst, p, d, v, pan in pl:
+            sadd(st, PL.pluck(inst.split(":", 1)[1], p, max(0.4, d), vel=v), t, 1.0, pan)
     room = {"doc": .32, "tension": .26, "wonder": .45, "suspense": .3, "night": .22}.get(cfg.get("style"), .18)
     st = S.room(st, size=.4 + room / 2, mix=room)
     x = st.mean(axis=1).astype(np.float32)
@@ -224,6 +247,7 @@ def stinger(kind, key_root, SR):
         if isinstance(p, str) and p[:1] in "ABCDEFG" and len(p) <= 3 and inst not in ("gran_cassa", "sus_cymbal"):
             p = S.midi(p) + shift
         ev.append((t, inst, p, d, v, pan))
+    USED.update(libs_of({e[1] for e in ev}))
     st = S.render(ev, dur=3.5)
     x = st.mean(axis=1).astype(np.float32)
     if S.SR != SR:

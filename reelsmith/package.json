@@ -1,0 +1,9 @@
+{
+  "name": "reelsmith",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reelsmith: The Explainer's code-film engine. Looks are web pages that draw any moment t; the engine captures them frame by frame for the compositor.",
+  "engines": { "node": ">=20" },
+  "dependencies": { "playwright-core": "^1.56.0", "three": "^0.170.0" }
+}

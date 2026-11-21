@@ -57,9 +57,13 @@ def hashtags(job):
     return out[:MAX_TAGS]
 
 
-def caption(job):
+def caption(job, job_path=None):
     title = job.get("title", "").strip()
     desc = (job.get("description") or "").split("\n\nSources:")[0].strip()
+    from .publish import render_credits
+    cr = render_credits(job_path)
+    if cr:
+        desc = (desc + "\n\nMusic: " + " · ".join(cr)).strip()
     text = (f"{title}\n\n{desc}\n\nFollow for a new \"wait, what?\" explainer every day 🧠\n"
             f"Longer videos on YouTube: The Explainer\n\n{' '.join(hashtags(job))}")
     return text[:2200]
@@ -104,7 +108,7 @@ def post_reel(job_path, video_url=None, cover_url=None, wait_s=300):
     jid = job["id"]
     video_url = video_url or f"{RAW}/media/{jid}.mp4"
     ig = os.environ.get("IG_USER_ID", "17841428825494803")
-    params = dict(media_type="REELS", video_url=video_url, share_to_feed="true", caption=caption(job))
+    params = dict(media_type="REELS", video_url=video_url, share_to_feed="true", caption=caption(job, job_path))
     if cover_url:
         params["cover_url"] = cover_url
     cid = _call("POST", f"{ig}/media", **params)["id"]

@@ -85,6 +85,55 @@ def world_color(rgb, strength=1.0):
     return w
 
 
+HDRI_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "third_party", "lemo", "core", "assets",
+                        "polyhaven")
+HDRIS = {"lounge": "lythwood_lounge_2k.hdr", "studio": "photo_studio_loft_hall_2k.hdr"}   # Poly Haven, CC0
+
+
+def world_hdri(name="studio", strength=0.35, rotate=0.0, tint=None, backdrop=(0.6, 0.6, 0.62)):
+    """Image-based light from a real room (Poly Haven CC0, fetched with scripts/fetch_instruments.sh): softer, more "real"
+    reflections and fill than flat world light. Keep it low (0.2-0.5) and let the set's own key light lead. The room
+    itself is never seen: camera rays see `backdrop` (a colour; None shows the room). Falls back to world_color."""
+    path = os.path.join(HDRI_DIR, HDRIS.get(name, name))
+    if not os.path.exists(path):
+        return world_color(tint or (0.8, 0.8, 0.82), strength)
+    w = bpy.data.worlds.get("World") or bpy.data.worlds.new("World")
+    bpy.context.scene.world = w
+    w.use_nodes = True
+    nt = w.node_tree
+    bg = nt.nodes.get("Background")
+    env = nt.nodes.new("ShaderNodeTexEnvironment")
+    env.image = bpy.data.images.load(path, check_existing=True)
+    mp = nt.nodes.new("ShaderNodeMapping")
+    tc = nt.nodes.new("ShaderNodeTexCoord")
+    mp.inputs["Rotation"].default_value[2] = math.radians(rotate)
+    nt.links.new(tc.outputs["Generated"], mp.inputs["Vector"])
+    nt.links.new(mp.outputs["Vector"], env.inputs["Vector"])
+    if tint:
+        mix = nt.nodes.new("ShaderNodeMix")
+        mix.data_type = "RGBA"
+        mix.blend_type = "MULTIPLY"
+        mix.inputs[0].default_value = 1.0
+        mix.inputs[7].default_value = (*(hexrgb(tint) if isinstance(tint, str) else tint)[:3], 1)
+        nt.links.new(env.outputs["Color"], mix.inputs[6])
+        nt.links.new(mix.outputs[2], bg.inputs[0])
+    else:
+        nt.links.new(env.outputs["Color"], bg.inputs[0])
+    bg.inputs[1].default_value = strength
+    if backdrop is not None:                      # light from the room, but the camera sees a plain backdrop
+        out = nt.nodes.get("World Output")
+        flat = nt.nodes.new("ShaderNodeBackground")
+        flat.inputs[0].default_value = (*(hexrgb(backdrop) if isinstance(backdrop, str) else backdrop)[:3], 1)
+        flat.inputs[1].default_value = 1.0
+        lp = nt.nodes.new("ShaderNodeLightPath")
+        mx = nt.nodes.new("ShaderNodeMixShader")
+        nt.links.new(lp.outputs["Is Camera Ray"], mx.inputs[0])
+        nt.links.new(bg.outputs[0], mx.inputs[1])
+        nt.links.new(flat.outputs[0], mx.inputs[2])
+        nt.links.new(mx.outputs[0], out.inputs["Surface"])
+    return w
+
+
 def frames(seconds):
     return max(1, int(round(seconds * FPS)) + 1)
 

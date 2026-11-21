@@ -15,13 +15,19 @@ CFG = {"style": "ambient", "key": "D", "scale": "dorian", "bpm": 78, "progressio
 needs_packs = pytest.mark.skipif(not orchestra.available(), reason="sample packs not downloaded")
 
 
-def test_palettes_use_only_cc0_instruments():
+def test_palettes_use_cc0_or_credited_instruments():
     S = orchestra.sampler()
     for style, P in orchestra.PALETTES.items():
         names = [P[k][0] for k in ("bass", "pad", "fig", "spark", "swell") if P.get(k)] + [p[0] for p in P.get("perc", [])]
         for n in names:
-            lib = S.REG[n]["src"][0].split("/")[0] if isinstance(S.REG[n]["src"], tuple) else S.REG[n]["src"].split("/")[0]
-            assert S.LIC.get(lib, ("", "?"))[1] == "CC0 1.0", (style, n, lib)
+            if n.startswith("pluck:"):
+                continue                                                  # modelled in code, no samples
+            lic = S.LIC[S._lic(n)]
+            assert lic[1] == "CC0 1.0" or lic[2], (style, n)              # CC BY only with its credit line
+    orchestra.USED.clear()
+    orchestra.USED.update({"salamander", "vsco2ce"})
+    assert len(orchestra.credits()) == 1 and "Salamander" in orchestra.credits()[0]
+    orchestra.USED.clear()
     assert set(orchestra.STINGERS) | {"none"} == STINGS
 
 
