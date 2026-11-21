@@ -113,12 +113,12 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
 ## 4. Cast 🔒
 | id | name | role | personality | voice | poses |
 |---|---|---|---|---|---|
-| ved | Professor Ved | host and explainer | about 25, sharp, calm, quietly funny; white shirt, top button open, sleeves rolled | Kokoro bm_george, speed 0.95, en-gb | idle, warm, serious, explain, point, think, welcome, surprised, crossed + reaction faces deadpan, side_eye, smirk |
+| ved | Professor Ved | host and explainer | about 25, sharp, calm, quietly funny; white shirt, top button open, sleeves rolled | Kokoro bm_lewis, speed 1.0, en-us (owner's nearest voice, since 2026-11-21; was bm_george) | idle, warm, serious, explain, point, think, welcome, surprised, crossed + reaction faces deadpan, side_eye, smirk |
 
 Rule: characters are made only by `characters/<id>/make.py`. Colours, proportions and voice never change.
 
 ## 5. Sound 🔒
-- Voice: bm_george (style.json / character.json).
+- Voice: bm_lewis, en-us, speed 1.0 (style.json / character.json). Owner, 2026-11-21: "use my audio... similar sound of my audio to create my videos". Chosen offline as the nearest of the 54 Kokoro voices to the owner's own recording (speaker likeness 0.876 vs 0.815 for the old bm_george; `scripts/voice_match.py`). Ved speaks in this voice in every video from now on.
 - Music signature: ambient, D dorian, 78 bpm, seed 21, ducked under the voice, loudness -14 LUFS.
 - SFX meanings: pop = new item, whoosh = scene change, ding = payoff/CTA, boom = big reveal, scratch/crickets/wah = comedy beats only.
 
@@ -246,6 +246,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | 2026-11-21 | 3 | score on real sampled instruments (Lemo-Opuscar sampler, CC0 packs; same key/tempo/progression), orchestral stings on slams, chapters and stamps, director's checks on every render (hook, reading time, pace, camera variety, sound-carried cuts, silences, blank frames), treatment step for Deep Dives, Lemo styles as technique donors | owner request (lemo-opuscar) |
 | 2026-11-21 | 3 | Reelsmith: our own code-film engine (look layers captured in headless Chrome) with 10 original looks RS-01..RS-10, grand piano (credited automatically), folk palette with modelled guitar, HDRI room light in Blender; DEMO jobs/2026-11-21-looks, awaiting owner OK | owner request (lemo-opuscar, "same or better, our own names") |
 | 2026-11-21 | 3 | Cutaway (owner-purchased) connected: 3D cutaway shots as `video` layers from the private install (never in the public repo); its CC0 sounds in the library; freeze check; DEMO jobs/2026-11-21-cutaway | owner request |
+| 2026-11-21 | 2 | Ved's voice changed to bm_lewis (en-us, 1.0): the nearest built-in voice to the owner's own recording | owner request (voice recording) |
 | 2026-11-18 | 3 | motion clips made more dynamic (NumberSlam, Stack3D, slam titles); long documentary recipe + sample 2026-11-18-doc | owner request |
 | 2026-11-18 | 3 | motion clips added (Remotion + GSAP + three.js: kinetic titles, self-drawing cream-card flows, real-time 3D coin/bars/globe), mixed into the house style; DEMO 2026-11-18-motion | owner request (learn remotion, gsap, three.js skills) |
 | 2026-11-18 | 3 | case-file pieces added (noir desk + blinds light, dottext, bignum, dateline, tipnum, tiles, clock, flows, evidence props); DEMO awaiting owner OK | owner request (reference documentary study) |

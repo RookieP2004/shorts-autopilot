@@ -41,9 +41,9 @@
     "uppercase": true
   },
   "voice": {
-    "voice": "bm_george",
-    "speed": 0.95,
-    "lang": "en-gb"
+    "voice": "bm_lewis",
+    "speed": 1.0,
+    "lang": "en-us"
   },
   "music": {
     "enabled": true,

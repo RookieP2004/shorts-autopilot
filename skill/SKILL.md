@@ -189,7 +189,8 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   in `meta.notes`; the owner approves any new recurring look before it goes public, as with every new style.
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
-- **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,
+- **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_lewis, en-us, speed 1.0 since 2026-11-21: the nearest
+  built-in voice to the owner's own recording; was bm_george). The music settings (`style`, `key`, `bpm`,
   `progression`, `seed`) are the channel's signature sound, so don't change them per video.
 - **Acting**: Professor Ved is rigged (`characters/ved/make.py`) and drawn fresh every frame. While he talks he changes
   gesture at natural pauses and moves smoothly between poses (`"acting": "auto"`, the default). When a gesture must land
