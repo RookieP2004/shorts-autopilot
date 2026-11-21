@@ -12,6 +12,7 @@ import json
 import os
 import subprocess
 import urllib.parse
+import urllib.error
 import urllib.request
 
 API = "https://api.openverse.org/v1"
@@ -29,14 +30,25 @@ def _get(url, timeout=25):
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return r.read()
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 429):                            # reached it; Openverse refused this request (rate or size)
+            raise RuntimeError(f"Openverse answered {e.code} for {url}") from e
+        raise OpenverseBlocked(f"cannot reach {urllib.parse.urlparse(url).netloc}: {e}. Allow api.openverse.org and the "
+                               f"file hosts (cdn.freesound.org, upload.wikimedia.org) for this workspace.") from e
     except Exception as e:                                  # proxy refusal shows up as a URLError / 403
         raise OpenverseBlocked(f"cannot reach {urllib.parse.urlparse(url).netloc}: {e}. Allow api.openverse.org and the file "
                                f"hosts (cdn.freesound.org, upload.wikimedia.org) for this workspace.") from e
 
 
-def search_audio(q, max_s=6.0, n=12, licence=OK_AUDIO, category="sound_effect", fetch=None):
+def search_audio(q, max_s=6.0, n=20, licence=OK_AUDIO, category=None, fetch=None, source="freesound", page=1):
+    n = min(n, 20)                                          # anonymous callers get at most 20 a page (401 above)
     """Short openly licensed sound effects for a query, best first. fetch = injectable getter (tests)."""
-    params = {"q": q, "license": licence, "page_size": n, "category": category, "mature": "false"}
+    # Freesound is where the real foley lives; Openverse's CC0 audio is otherwise mostly spoken-word recordings
+    params = {"q": q, "license": licence, "page_size": n, "mature": "false", "page": page}
+    if category:
+        params["category"] = category
+    if source:
+        params["source"] = source
     raw = (fetch or _get)(f"{API}/audio/?{urllib.parse.urlencode(params)}")
     out = []
     for r in json.loads(raw).get("results", []):
@@ -84,16 +96,14 @@ def download(item, dst, max_s=None, lufs=None, fetch=None):
     with open(tmp, "wb") as f:
         f.write(data)
     if dst.endswith(".flac"):
-        af = []
+        af = ["silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.01"]   # start on the sound itself
         if max_s:
             af.append(f"afade=t=out:st={max(0.0, max_s - 0.08)}:d=0.08")
         if lufs:
             af.append(f"loudnorm=I={lufs}:TP=-1.5:LRA=11")
-        cmd = ["ffmpeg", "-loglevel", "error", "-y", "-i", tmp, "-ac", "1", "-ar", "48000"]
+        cmd = ["ffmpeg", "-loglevel", "error", "-y", "-i", tmp, "-ac", "1", "-ar", "48000", "-af", ",".join(af)]
         if max_s:
             cmd += ["-t", str(max_s)]
-        if af:
-            cmd += ["-af", ",".join(af)]
         subprocess.run(cmd + [dst], check=True)
         os.remove(tmp)
     else:

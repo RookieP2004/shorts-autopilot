@@ -21,6 +21,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", default="")
     ap.add_argument("--per", type=int, default=3)
+    ap.add_argument("--verify", action="store_true", help="keep only takes YAMNet hears as the right sound (scripts/sfx_listen_qa.py)")
     a = ap.parse_args()
     only = set(filter(None, a.only.split(",")))
     mpath = os.path.join(LIB, "manifest.json")
@@ -30,24 +31,40 @@ def main():
         if only and name not in only:
             continue
         lufs, max_s = EARSHOT.get(name, (None, -19, 1.5))[1:]
-        res = openverse.search_audio(q, max_s=max(4.0, max_s * 3))
+        res = openverse.search_audio(q, max_s=max(4.0, max_s * 3), n=20) + openverse.search_audio(q, max_s=max(4.0, max_s * 3), n=20, page=2)
         d = os.path.join(LIB, name)
         os.makedirs(d, exist_ok=True)
-        got = 0
+        have = sorted(f for f in os.listdir(d) if f.startswith("ov_"))
+        used = {v.get("id") for k, v in man.items() if k.startswith(name + "/")}
+        got, k = len(have), 0
         for r in res:
             if got >= a.per:
                 break
-            out = f"ov_{got}.flac"
+            if r["id"] in used:
+                continue
+            while f"ov_{k}.flac" in have:
+                k += 1
+            out = f"ov_{k}.flac"
+            have.append(out)
             try:
                 openverse.download(r, os.path.join(d, out), max_s=max_s, lufs=lufs)
             except Exception as e:
                 print(f"  skip {r['id']}: {e}")
+                have.remove(out)
                 continue
+            if a.verify:
+                from sfx_listen_qa import heard_ok
+                ok, tags = heard_ok(name, os.path.join(d, out))
+                if not ok:
+                    os.remove(os.path.join(d, out)); have.remove(out)
+                    print(f"  heard as {tags[:60]!r}: not a {name}, skipped")
+                    continue
             man[f"{name}/{out}"] = {"source": f"openverse/{r['source']}", "id": r["id"], "title": r["title"], "creator": r["creator"],
                                     "licence": f"{r['license']} {r.get('license_version') or ''}".strip(), "landing": r["landing"]}
             credits.append(f"- {name}/{out}: \"{r['title']}\" by {r['creator']} ({r['source']}, {r['license'].upper()}) {r['landing']}")
             got += 1
         print(f"{name}: {got} real recordings")
+        man.update({kk: vv for kk, vv in man.items()})
     json.dump(dict(sorted(man.items())), open(mpath, "w"), indent=1)
     with open(os.path.join(os.path.dirname(LIB), "CREDITS.md"), "a") as f:
         f.write("\n".join(credits) + ("\n" if credits else ""))

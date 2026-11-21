@@ -334,7 +334,8 @@ Reelsmith look: a web page that draws any moment t, captured once in headless Ch
 code + props + size) and composited like a `motion` clip. Catalogue (props in `reelsmith/looks/<id>/LOOK.md`):
 RS-01 Receipt (bills, totals), RS-02 Dot Map (routes; never outlines or borders), RS-03 Balance (A vs B), RS-04
 Flipboard (hook numbers, then vs now), RS-05 Blueprint (how a thing works), RS-06 Bubbles (shares by area), RS-07 Chalk
-(formulas), RS-08 Sweep (investigations), RS-09 Word Beat (2-4 s hooks), RS-10 Bite (what you keep). Common props:
+(formulas), RS-08 Sweep (investigations), RS-09 Word Beat (2-4 s hooks), RS-10 Bite (what you keep), RS-11 Riso
+(a self-printing three-ink poster; Lemo riso engine), RS-12 Terminal (a CRT log; Lemo CRT post). Common props:
 `backdrop: "dim"` (night scrim behind light-on-dark looks over bright town plates), `fit: false` (by default a look
 speeds up to land by 85% of a short slot, then holds). Each look brings its own sound cues (library names; a layer
 `"sfx"` replaces them) and its own text boxes for the director's reading check. Give a look scene `pad` 1-2 s so its

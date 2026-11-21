@@ -1,0 +1,45 @@
+- coin/ov_0.flac: "Coin dropped on table 3" by HoseNoseSounds (freesound, CC0) https://freesound.org/people/HoseNoseSounds/sounds/510732
+- coin/ov_1.flac: "Coin dropped on table 4" by HoseNoseSounds (freesound, CC0) https://freesound.org/people/HoseNoseSounds/sounds/510731
+- coin/ov_2.flac: "spilled coins" by Norman_Hittle (freesound, CC0) https://freesound.org/people/Norman_Hittle/sounds/395824
+- paper/ov_1.flac: "10-PáginaLibro.wav" by juan9826 (freesound, CC0) https://freesound.org/people/juan9826/sounds/429905
+- tape/ov_2.flac: "duct tape tear rip" by AlaskaRobotics (freesound, CC0) https://freesound.org/people/AlaskaRobotics/sounds/245198
+- type/ov_2.flac: "keyboard5.wav" by jim-ph (freesound, CC0) https://freesound.org/people/jim-ph/sounds/194799
+- splash/ov_1.flac: "water splashing" by ssierra1202 (freesound, CC0) https://freesound.org/people/ssierra1202/sounds/391943
+- bubbles/ov_0.flac: "Bubbles_Single2.wav" by BMacZero (freesound, CC0) https://freesound.org/people/BMacZero/sounds/96125
+- bubbles/ov_2.flac: "bubbles" by jeremy123 (freesound, CC0) https://freesound.org/people/jeremy123/sounds/460100
+- door/ov_0.flac: "Door - Close 03.wav" by JarredGibb (freesound, CC0) https://freesound.org/people/JarredGibb/sounds/219495
+- door/ov_1.flac: "Cabinet Door Close" by jackthemurray (freesound, CC0) https://freesound.org/people/jackthemurray/sounds/433587
+- register/ov_0.flac: "Cash register" by MaoDin204 (freesound, CC0) https://freesound.org/people/MaoDin204/sounds/721774
+- register/ov_1.flac: "Cash Register Sound Effect.mp3" by kayliebenson (freesound, CC0) https://freesound.org/people/kayliebenson/sounds/474239
+- tick/ov_0.flac: "Clock Tick (Tik Tak)" by KaosMakinesi (freesound, CC0) https://freesound.org/people/KaosMakinesi/sounds/403001
+- marker/ov_0.flac: "Sharpie marker drawing circle 01.wav" by elliott.klein (freesound, CC0) https://freesound.org/people/elliott.klein/sounds/321137
+- marker/ov_1.flac: "PEN SIGNATURE SIGNING 2.wav" by ListenTonyBoy (freesound, CC0) https://freesound.org/people/ListenTonyBoy/sounds/326961
+- thud/ov_0.flac: "One Heavy Thud" by AVstudent (freesound, CC0) https://freesound.org/people/AVstudent/sounds/732783
+- thud/ov_1.flac: "thud.wav" by OtisJames (freesound, CC0) https://freesound.org/people/OtisJames/sounds/215162
+- whoosh/ov_0.flac: "Deep Whoosh #1" by Kinoton (freesound, CC0) https://freesound.org/people/Kinoton/sounds/351256
+- projector/ov_0.flac: "ambiance cabine de projection.wav" by skyn production (freesound, CC0) https://freesound.org/people/skyn%20production/sounds/86619
+- tape/ov_0.flac: "Scotch Tape.wav" by Mrthenoronha (freesound, CC0) https://freesound.org/people/Mrthenoronha/sounds/369915
+- tape/ov_1.flac: "Short Ripping Sound" by Kodack (freesound, CC0) https://freesound.org/people/Kodack/sounds/256307
+- shutter/ov_0.flac: "Camera Shutter" by roachpowder (freesound, CC0) https://freesound.org/people/roachpowder/sounds/170229
+- shutter/ov_1.flac: "Camera shutter in Sony A55" by matthiastidlund (freesound, CC0) https://freesound.org/people/matthiastidlund/sounds/249750
+- shutter/ov_2.flac: "Polaroid Camera Shutter" by StevenMyat_ (freesound, CC0) https://freesound.org/people/StevenMyat_/sounds/676387
+- type/ov_0.flac: "Typewriter bell & carriage reset" by knufds (freesound, CC0) https://freesound.org/people/knufds/sounds/345955
+- type/ov_1.flac: "Typewriter - single key - type 3.wav" by yottasounds (freesound, CC0) https://freesound.org/people/yottasounds/sounds/380136
+- splash/ov_0.flac: "water splash 2.wav" by VacekH (freesound, CC0) https://freesound.org/people/VacekH/sounds/189499
+- splash/ov_2.flac: "Water splash 5.wav" by deleted_user_2104797 (freesound, CC0) https://freesound.org/people/deleted_user_2104797/sounds/164596
+- bubbles/ov_1.flac: "Bubbles_Single3.wav" by BMacZero (freesound, CC0) https://freesound.org/people/BMacZero/sounds/96126
+- door/ov_2.flac: "metal elevator door close" by gamedog74 (freesound, CC0) https://freesound.org/people/gamedog74/sounds/432495
+- register/ov_2.flac: "cash register chching" by disman (freesound, CC0) https://freesound.org/people/disman/sounds/728224
+- heartbeat/ov_0.flac: "Heavy Heartbeat" by MickBoere (freesound, CC0) https://freesound.org/people/MickBoere/sounds/276578
+- heartbeat/ov_1.flac: "Simple heartbeat" by Bpianoholic (freesound, CC0) https://freesound.org/people/Bpianoholic/sounds/493132
+- heartbeat/ov_2.flac: "Heartbeat V2.wav" by morganpurkis (freesound, CC0) https://freesound.org/people/morganpurkis/sounds/390429
+- tick/ov_1.flac: "clock-tick-01.flac" by pbimal (freesound, CC0) https://freesound.org/people/pbimal/sounds/534094
+- tick/ov_2.flac: "clock tick tock" by rustica (freesound, CC0) https://freesound.org/people/rustica/sounds/199066
+- vibrate/ov_0.flac: "phone vibration buzz sound" by Sanderboah (freesound, CC0) https://freesound.org/people/Sanderboah/sounds/615788
+- vibrate/ov_1.flac: "phone vibrate.wav" by lartti (freesound, CC0) https://freesound.org/people/lartti/sounds/529979
+- vibrate/ov_2.flac: "smartphone6.aif" by poison x (freesound, CC0) https://freesound.org/people/poison%20x/sounds/242000
+- marker/ov_2.flac: "marker-whiteboard-squeak02" by newagesoup (freesound, CC0) https://freesound.org/people/newagesoup/sounds/335955
+- thud/ov_2.flac: "ANI Big Pipe Hit" by ani_music (freesound, CC0) https://freesound.org/people/ani_music/sounds/244983
+- whoosh/ov_1.flac: "13th Whoosh Swing Sound" by qubodup (freesound, CC0) https://freesound.org/people/qubodup/sounds/60000
+- whoosh/ov_2.flac: "Backwards Whoosh" by SlavicMagic (freesound, CC0) https://freesound.org/people/SlavicMagic/sounds/446010
+- projector/ov_1.flac: "projectr.wav" by Jedimichael (freesound, CC0) https://freesound.org/people/Jedimichael/sounds/83896

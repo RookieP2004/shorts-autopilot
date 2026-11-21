@@ -77,6 +77,32 @@
   "seed": 2,
   "licence": "made with earshot (MIT); output is ours"
  },
+ "bubbles/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "70f8ad93-12c1-4d69-8120-3011b49da448",
+  "title": "Bubbles_Single2.wav",
+  "creator": "BMacZero",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/BMacZero/sounds/96125",
+  "heard": "Plop (19%); Alarm (10%)"
+ },
+ "bubbles/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "0111e399-362c-454a-95a7-98c3a7c9ac2c",
+  "title": "Bubbles_Single3.wav",
+  "creator": "BMacZero",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/BMacZero/sounds/96126"
+ },
+ "bubbles/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "3702c218-67d6-4aaf-88b8-a377c48b704f",
+  "title": "bubbles",
+  "creator": "jeremy123",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/jeremy123/sounds/460100",
+  "heard": "Plop (92%)"
+ },
  "cash/es_0.flac": {
   "source": "earshot",
   "design": "coins/handful",
@@ -195,6 +221,33 @@
   "seed": 2,
   "licence": "made with earshot (MIT); output is ours"
  },
+ "coin/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "62b8da72-1890-4548-a39b-b7e04bb979aa",
+  "title": "Coin dropped on table 3",
+  "creator": "HoseNoseSounds",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/HoseNoseSounds/sounds/510732",
+  "heard": "Coin (dropping) (40%); Ratchet, pawl (34%); Mechanisms (31%); Gears (30%); Wood block (29%); Camera (23%)"
+ },
+ "coin/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "0bd343a5-9f04-442e-8e52-41c15b1a997a",
+  "title": "Coin dropped on table 4",
+  "creator": "HoseNoseSounds",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/HoseNoseSounds/sounds/510731",
+  "heard": "Wood block (49%); Coin (dropping) (44%); Percussion (34%); Musical instrument (27%); Music (27%); Gears (25%)"
+ },
+ "coin/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "a09f8e52-03e2-4066-809f-e3c3cc8dd77d",
+  "title": "spilled coins",
+  "creator": "Norman_Hittle",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/Norman_Hittle/sounds/395824",
+  "heard": "Mechanisms (32%); Ratchet, pawl (26%); Gears (21%); Coin (dropping) (16%); Blender (13%); Biting (13%)"
+ },
  "ding/es_0.flac": {
   "source": "earshot",
   "design": "coin/bright",
@@ -264,6 +317,32 @@
   "design": "door/knock",
   "seed": 2,
   "licence": "made with earshot (MIT); output is ours"
+ },
+ "door/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "03a6e3f8-4f31-4fc0-a631-0a140bd389e2",
+  "title": "Door - Close 03.wav",
+  "creator": "JarredGibb",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/JarredGibb/sounds/219495",
+  "heard": "Knock (73%); Thunk (69%); Glass (57%); Shatter (56%); Thump, thud (50%); Breaking (49%)"
+ },
+ "door/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "fe8a452e-b240-43ec-bc5f-1f1a9a7133e3",
+  "title": "Cabinet Door Close",
+  "creator": "jackthemurray",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/jackthemurray/sounds/433587",
+  "heard": "Thunk (77%); Knock (77%); Door (76%); Thump, thud (50%); Arrow (49%); Slam (47%)"
+ },
+ "door/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "09a41202-f9af-4d81-b678-1219105ff7b3",
+  "title": "metal elevator door close",
+  "creator": "gamedog74",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/gamedog74/sounds/432495"
  },
  "error/ui_0.flac": {
   "source": "uisfx (via Clipwing real-sfx)",
@@ -347,6 +426,30 @@
   "seed": 3,
   "licence": "made with earshot (MIT); output is ours"
  },
+ "heartbeat/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "1e4e76b3-a0d3-4f3a-bad6-f3c4f343988e",
+  "title": "Heavy Heartbeat",
+  "creator": "MickBoere",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/MickBoere/sounds/276578"
+ },
+ "heartbeat/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "1d6c8dfa-136d-4d34-9f6b-013bfba431aa",
+  "title": "Simple heartbeat",
+  "creator": "Bpianoholic",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/Bpianoholic/sounds/493132"
+ },
+ "heartbeat/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "9b6a9e98-66e5-4580-ad01-771bc433f8a7",
+  "title": "Heartbeat V2.wav",
+  "creator": "morganpurkis",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/morganpurkis/sounds/390429"
+ },
  "hit/es_0.flac": {
   "source": "earshot",
   "design": "slam/title",
@@ -411,6 +514,32 @@
   "seed": 3,
   "licence": "made with earshot (MIT); output is ours"
  },
+ "marker/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "48169ecd-3e45-4844-b575-fd6bdfb7a89a",
+  "title": "Sharpie marker drawing circle 01.wav",
+  "creator": "elliott.klein",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/elliott.klein/sounds/321137",
+  "heard": "Spray (24%); Liquid (23%); Wood (11%); Rub (8%)"
+ },
+ "marker/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "97e433f8-cdc7-4968-b348-3a68add7e3af",
+  "title": "PEN SIGNATURE SIGNING 2.wav",
+  "creator": "ListenTonyBoy",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/ListenTonyBoy/sounds/326961",
+  "heard": "Wood (27%); Power windows, electric windows (24%); Mechanisms (17%); Printer (16%); Rub (15%); Tools (15%)"
+ },
+ "marker/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "62d45125-f6db-4568-9d52-dcbc7719eed1",
+  "title": "marker-whiteboard-squeak02",
+  "creator": "newagesoup",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/newagesoup/sounds/335955"
+ },
  "notify/ui_0.flac": {
   "source": "uisfx (via Clipwing real-sfx)",
   "file": "minimal/notification.mp3",
@@ -462,6 +591,15 @@
   "seed": 2,
   "licence": "made with earshot (MIT); output is ours"
  },
+ "paper/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "ddd24fa9-1fca-4632-9d98-5155258c540b",
+  "title": "10-P\u00e1ginaLibro.wav",
+  "creator": "juan9826",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/juan9826/sounds/429905",
+  "heard": "Crack (79%); Coin (dropping) (45%); Crunch (42%); Scrape (41%); Breaking (36%); Tearing (33%)"
+ },
  "pop/ui_0.flac": {
   "source": "uisfx (via Clipwing real-sfx)",
   "file": "soft/select.mp3",
@@ -495,6 +633,23 @@
   "seed": 3,
   "licence": "made with earshot (MIT); output is ours"
  },
+ "projector/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "d5f6ee7d-5468-435c-a4a2-1358ea5664d6",
+  "title": "ambiance cabine de projection.wav",
+  "creator": "skyn production",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/skyn%20production/sounds/86619",
+  "heard": "Sewing machine (83%); Mechanisms (71%); Gears (37%); Vehicle (30%); Ratchet, pawl (30%); Engine (21%)"
+ },
+ "projector/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "670232e7-921d-4591-8b69-ad83cb9ee0ab",
+  "title": "projectr.wav",
+  "creator": "Jedimichael",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/Jedimichael/sounds/83896"
+ },
  "register/es_0.flac": {
   "source": "earshot",
   "design": "cash_register/open",
@@ -512,6 +667,32 @@
   "design": "cash_register/open",
   "seed": 3,
   "licence": "made with earshot (MIT); output is ours"
+ },
+ "register/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "deafdf72-1f73-4d0a-a849-356212e09e83",
+  "title": "Cash register",
+  "creator": "MaoDin204",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/MaoDin204/sounds/721774",
+  "heard": "Ding (22%); Glass (19%); Chink, clink (16%); Clang (13%); Door (9%); Ping (8%)"
+ },
+ "register/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "59e9bcbc-64ef-4316-aa82-1c91be63f0da",
+  "title": "Cash Register Sound Effect.mp3",
+  "creator": "kayliebenson",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/kayliebenson/sounds/474239",
+  "heard": "Ding (87%); Bicycle bell (81%); Clock (61%); Telephone bell ringing (61%); Chink, clink (58%); Tick (51%)"
+ },
+ "register/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "4999927c-74ba-46db-96ba-5b023c5f50a1",
+  "title": "cash register chching",
+  "creator": "disman",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/disman/sounds/728224"
  },
  "riser/es_0.flac": {
   "source": "earshot",
@@ -548,6 +729,30 @@
   "design": "camera/shutter",
   "seed": 3,
   "licence": "made with earshot (MIT); output is ours"
+ },
+ "shutter/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "3290f0e3-a217-48c9-bafb-06401b961c21",
+  "title": "Camera Shutter",
+  "creator": "roachpowder",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/roachpowder/sounds/170229"
+ },
+ "shutter/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "caa2b182-ad3a-4da3-84de-60d50a703355",
+  "title": "Camera shutter in Sony A55",
+  "creator": "matthiastidlund",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/matthiastidlund/sounds/249750"
+ },
+ "shutter/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "9cd54e05-dbf0-49eb-a379-64858bd3a86a",
+  "title": "Polaroid Camera Shutter",
+  "creator": "StevenMyat_",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/StevenMyat_/sounds/676387"
  },
  "slide/es_0.flac": {
   "source": "earshot",
@@ -608,6 +813,31 @@
   "design": "splash/big",
   "seed": 2,
   "licence": "made with earshot (MIT); output is ours"
+ },
+ "splash/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "8fa84d2a-9834-4c79-931b-8afb795c4219",
+  "title": "water splash 2.wav",
+  "creator": "VacekH",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/VacekH/sounds/189499"
+ },
+ "splash/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "46712ee7-0f9b-45ec-9e51-430c99c47353",
+  "title": "water splashing",
+  "creator": "ssierra1202",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/ssierra1202/sounds/391943",
+  "heard": "Blender (65%); Water (50%); Toilet flush (35%); Tools (25%); Power tool (22%); Wood (19%)"
+ },
+ "splash/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "bce7f4bc-2142-4f1c-85dd-beab79afe326",
+  "title": "Water splash 5.wav",
+  "creator": "deleted_user_2104797",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/deleted_user_2104797/sounds/164596"
  },
  "stamp/es_0.flac": {
   "source": "earshot",
@@ -727,6 +957,31 @@
   "seed": 3,
   "licence": "made with earshot (MIT); output is ours"
  },
+ "tape/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "3e5d3622-bd69-4929-a4ca-61094568f0ca",
+  "title": "Scotch Tape.wav",
+  "creator": "Mrthenoronha",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/Mrthenoronha/sounds/369915"
+ },
+ "tape/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "8ba7f1aa-b64d-4bda-9192-de3c558ad518",
+  "title": "Short Ripping Sound",
+  "creator": "Kodack",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/Kodack/sounds/256307"
+ },
+ "tape/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "a14b6385-de14-4425-951d-9cf6a5a72304",
+  "title": "duct tape tear rip",
+  "creator": "AlaskaRobotics",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/AlaskaRobotics/sounds/245198",
+  "heard": "Single-lens reflex camera (87%); Camera (87%); Mechanisms (34%); Scrape (16%); Zipper (clothing) (12%); Ratchet, pawl (1"
+ },
  "thud/es_0.flac": {
   "source": "earshot",
   "design": "hit/drop",
@@ -762,6 +1017,32 @@
   "design": "boom/door",
   "seed": 2,
   "licence": "made with earshot (MIT); output is ours"
+ },
+ "thud/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "6dc6acb6-de62-4ee5-abc0-dd5efd73ef8e",
+  "title": "One Heavy Thud",
+  "creator": "AVstudent",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/AVstudent/sounds/732783",
+  "heard": "Explosion (73%); Fireworks (62%); Firecracker (33%); Burst, pop (29%); Bang (13%); Arrow (8%)"
+ },
+ "thud/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "a2721242-e1b3-40a3-a554-db0416da8f3c",
+  "title": "thud.wav",
+  "creator": "OtisJames",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/OtisJames/sounds/215162",
+  "heard": "Whack, thwack (28%); Arrow (24%); Knock (20%); Door (19%); Thump, thud (14%); Thunk (14%)"
+ },
+ "thud/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "7a6daca6-2501-4c2a-a034-e1f4778deecb",
+  "title": "ANI Big Pipe Hit",
+  "creator": "ani_music",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/ani_music/sounds/244983"
  },
  "tick/es_0.flac": {
   "source": "earshot",
@@ -799,6 +1080,31 @@
   "seed": 2,
   "licence": "made with earshot (MIT); output is ours"
  },
+ "tick/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "815ccec4-47ad-432a-bde7-791709e2e5de",
+  "title": "Clock Tick (Tik Tak)",
+  "creator": "KaosMakinesi",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/KaosMakinesi/sounds/403001",
+  "heard": "Tick (28%); Clock (23%); Tick-tock (21%); Mechanisms (10%)"
+ },
+ "tick/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "14b2945e-2907-4d9d-9ca6-347700d457e8",
+  "title": "clock-tick-01.flac",
+  "creator": "pbimal",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/pbimal/sounds/534094"
+ },
+ "tick/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "591bee71-63e1-4ce4-88e7-4d86c1e2ffb3",
+  "title": "clock tick tock",
+  "creator": "rustica",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/rustica/sounds/199066"
+ },
  "type/es_0.flac": {
   "source": "earshot",
   "design": "type/run",
@@ -835,6 +1141,31 @@
   "seed": 2,
   "licence": "made with earshot (MIT); output is ours"
  },
+ "type/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "b3b9eac2-5bda-4bc6-87b1-a94052ce967b",
+  "title": "Typewriter bell & carriage reset",
+  "creator": "knufds",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/knufds/sounds/345955"
+ },
+ "type/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "9b7702dc-4f8d-4876-b174-8991d49c8ebd",
+  "title": "Typewriter - single key - type 3.wav",
+  "creator": "yottasounds",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/yottasounds/sounds/380136"
+ },
+ "type/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "8966b2e2-7df0-4e0a-8cea-26013ab852de",
+  "title": "keyboard5.wav",
+  "creator": "jim-ph",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/jim-ph/sounds/194799",
+  "heard": "Typing (45%); Computer keyboard (43%); Rattle (12%)"
+ },
  "vibrate/es_0.flac": {
   "source": "earshot",
   "design": "phone/vibrate",
@@ -852,6 +1183,30 @@
   "design": "phone/vibrate",
   "seed": 3,
   "licence": "made with earshot (MIT); output is ours"
+ },
+ "vibrate/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "2fe0763d-9eaf-4598-bc5f-ba4b5457be5d",
+  "title": "phone vibration buzz sound",
+  "creator": "Sanderboah",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/Sanderboah/sounds/615788"
+ },
+ "vibrate/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "e2209148-6843-4445-86e0-367b846652e3",
+  "title": "phone vibrate.wav",
+  "creator": "lartti",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/lartti/sounds/529979"
+ },
+ "vibrate/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "b3db712b-574c-48ce-a536-eb86c416c0eb",
+  "title": "smartphone6.aif",
+  "creator": "poison x",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/poison%20x/sounds/242000"
  },
  "whoosh/es_0.flac": {
   "source": "earshot",
@@ -888,5 +1243,30 @@
   "design": "swoosh/in",
   "seed": 2,
   "licence": "made with earshot (MIT); output is ours"
+ },
+ "whoosh/ov_0.flac": {
+  "source": "openverse/freesound",
+  "id": "eab8a6e2-0ac8-4615-9e0d-ebde30523783",
+  "title": "Deep Whoosh #1",
+  "creator": "Kinoton",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/Kinoton/sounds/351256",
+  "heard": "Whoosh, swoosh, swish (97%); Arrow (92%)"
+ },
+ "whoosh/ov_1.flac": {
+  "source": "openverse/freesound",
+  "id": "416a411f-c8e5-4279-a985-466c19f21794",
+  "title": "13th Whoosh Swing Sound",
+  "creator": "qubodup",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/qubodup/sounds/60000"
+ },
+ "whoosh/ov_2.flac": {
+  "source": "openverse/freesound",
+  "id": "99eb6767-2f94-4879-a223-3d0a3053c748",
+  "title": "Backwards Whoosh",
+  "creator": "SlavicMagic",
+  "licence": "cc0 1.0",
+  "landing": "https://freesound.org/people/SlavicMagic/sounds/446010"
  }
 }

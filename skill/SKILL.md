@@ -144,6 +144,11 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   gets `stamp`, money gets `cash`/`coin`, a phone gets `notify`/`vibrate`, a big reveal gets `braam`/`hit`), but never two
   in the same instant. Openverse photos for documentaries: CC0/PDM only (CC BY only with the credit in the description).
   See `docs/job-spec.md` "Sound". Optional at setup: `pip install "earshot @ git+https://github.com/Leonxlnx/earshot" librosa`.
+- **Voice check and listening (owner 2026-11-21)**: every render transcribes Ved's lines back (faster-whisper base.en,
+  `autopilot/voicecheck.py` -> `out/voice.json`, a `voice: n/m lines heard back clearly` log line); re-voice or reword a
+  line it flags. Real recordings come from Openverse/Freesound (CC0/PDM) and are kept only if YAMNet hears them as the
+  right sound (`python scripts/openverse_fetch.py --verify`, `scripts/sfx_listen_qa.py`; Real SFX's `listen.py install --yes`
+  once per machine).
 - **Score and director (Lemo-Opuscar, owner 2026-11-21; learned and mixed in, our own rules)**: the music is played on real
   sampled instruments (Lemo-Opuscar's sampler, vendored MIT, CC0 packs only: VSCO 2 CE, VCSL, FreePats), from the same
   channel settings (`style`, `key`, `scale`, `bpm`, `progression`, `seed`), so the signature sound stays and only gets real.
@@ -159,11 +164,13 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   time allows; it never blocks a post. Make it fast with fewer words per screen, never by cutting before people can read.
 - **Reelsmith looks (our own engine, owner 2026-11-21)**: `look` layers play animated pieces drawn as web pages and
   captured by `reelsmith/` (catalogue RS-01 Receipt, RS-02 Dot Map, RS-03 Balance, RS-04 Flipboard, RS-05 Blueprint,
-  RS-06 Bubbles, RS-07 Chalk, RS-08 Sweep, RS-09 Word Beat, RS-10 Bite; props in each `LOOK.md`, keys in
+  RS-06 Bubbles, RS-07 Chalk, RS-08 Sweep, RS-09 Word Beat, RS-10 Bite, RS-11 Riso, RS-12 Terminal; props in each `LOOK.md`, keys in
   `docs/job-spec.md` "Reelsmith looks"). Use one or two per Short where they explain better than a card (a bill, a
   comparison, a formula, a route), always mixed with Ved, the town and the house captions; `backdrop: "dim"` over bright
   plates, `pad` 1-2 s on the scene so the payoff reads, captions moved clear of the look (`caption_y`). Reference demo
-  `jobs/2026-11-21-looks`. A new look is a new style: build it in `reelsmith/looks/RS-NN-name` with stills and a
+  `jobs/2026-11-21-looks`. Lemo-Opuscar's style engines (MIT, 97 of 99 styles) are our donor bank: `python scripts/lemo_bank.py`
+  prepares and checks them, `reelsmith/engine/lemo.mjs` renders one for study, and a look may build on a vendored engine
+  (`reelsmith/vendor/lemo/`, credited in NOTICE), never on their written guides. A new look is a new style: build it in `reelsmith/looks/RS-NN-name` with stills and a
   `LOOK.md`, and it needs the owner's OK before a public video uses it.
 - **Style donors (Lemo-Opuscar's 99 film styles)**: `sh scripts/lemo_styles.sh` fetches the library into /tmp/lemo and lists
   the styles that suit us (dark documentary, halftone dossier, visual investigation, news package, map explainer,

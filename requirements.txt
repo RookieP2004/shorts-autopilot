@@ -6,3 +6,5 @@ soundfile>=0.12
 scipy>=1.10
 soxr>=0.3
 numba>=0.59
+faster-whisper>=1.0
+num2words>=0.5

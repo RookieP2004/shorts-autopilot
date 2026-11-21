@@ -490,6 +490,13 @@ def render(job_path, out_dir, root=ROOT, workers=None, log=print):
         info["director"] = {"score": d["score"], "of": d["of"]}
     except Exception as e:
         log(f"director: skipped ({e})")
+    if style.get("voice_check", True) and not os.environ.get("NO_VOICE_CHECK"):
+        try:                                             # every line transcribed back and compared with the script
+            from . import voicecheck
+            vr = voicecheck.check(ctx, out_dir, log)
+            info["voice"] = {"clear": sum(r["ok"] for r in vr), "lines": len(vr)}
+        except Exception as e:
+            log(f"voice: skipped ({str(e)[:120]})")
     with open(os.path.join(out_dir, "render.json"), "w") as f:
         json.dump(info, f, indent=2)
     log(f"done -> {final}")
