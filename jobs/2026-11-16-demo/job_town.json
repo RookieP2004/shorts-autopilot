@@ -1,0 +1,915 @@
+{
+ "privacy": "private",
+ "speaker": "ved",
+ "description": "mock-up",
+ "tags": [],
+ "meta": {
+  "format": "demo",
+  "humour": {
+   "beat": "side_eye",
+   "scene": 4
+  }
+ },
+ "id": "2026-11-16-demo",
+ "title": "demo",
+ "scenes": [
+  {
+   "say": "Why does your cup of chai cost more every year?",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2606,
+     "y": 0.5815,
+     "h": 0.4291,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a8693f",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "top": [
+        "#e9e6df",
+        "apron"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b"
+      }
+     }
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.768,
+     "y": 0.5878,
+     "h": 0.4562,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 240'><rect x='6' y='6' width='888' height='228' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><text x='450' y='100' text-anchor='middle' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>WHY IS MY CHAI</text><text x='450' y='190' text-anchor='middle' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>₹5 MORE?</text></svg>",
+     "x": 0.5,
+     "y": 0.22,
+     "w": 0.8,
+     "enter": "pop",
+     "at": 0.1,
+     "rotate": -2,
+     "sfx": "pop"
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Same cup. Same stall. But the price keeps ticking up.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.2606,
+     "y": 0.5815,
+     "h": 0.4291,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#a8693f",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "top": [
+        "#e9e6df",
+        "apron"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#25262b"
+      }
+     }
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "hold",
+     "x": 0.5139,
+     "y": 0.5568,
+     "h": 0.3816,
+     "enter": "none",
+     "acting": [
+      [
+       "hold",
+       0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#d9a27a",
+       "build": "slim",
+       "hair": [
+        "#2a2320",
+        "bun"
+       ],
+       "top": [
+        "#2f8f5a",
+        "shirt"
+       ],
+       "bottom": [
+        "#23262d",
+        "trousers"
+       ],
+       "shoes": "#151515"
+      }
+     }
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.8665,
+     "y": 0.5915,
+     "h": 0.4637,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "hud",
+     "label": "price of one chai",
+     "steps": [
+      [
+       0,
+       10
+      ],
+      [
+       0.8,
+       15
+      ]
+     ],
+     "prefix": "₹",
+     "tone": "gold",
+     "x": 0.5,
+     "y": 0.2,
+     "enter": "pop",
+     "width_of": "₹15"
+    },
+    {
+     "type": "tag",
+     "text": "ILLUSTRATIVE NUMBERS",
+     "x": 0.5,
+     "y": 0.3,
+     "at": 0.3,
+     "size": 26
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Picture a thousand shoppers. Each year, a few more can't afford their usual cup.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "crowd",
+     "plate": "jobs/2026-11-08-m3/assets/plate_market_wide.json",
+     "area": [
+      -2.4,
+      2.4,
+      -2.3,
+      0.4
+     ],
+     "n": 1000,
+     "fig_h": 0.34,
+     "color": "#f6efe2",
+     "in_dur": 0,
+     "seed": 2,
+     "steps": [
+      {
+       "at": 0,
+       "split": "x",
+       "colors": [
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "red"
+       ],
+       "dur": 0
+      },
+      {
+       "at": 0,
+       "keep": 0,
+       "dur": 0
+      },
+      {
+       "at": 0.2,
+       "color": "blue",
+       "dur": 0
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.792,
+     "y": 0.5935,
+     "h": 0.2067,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "hud",
+     "label": "can still afford it",
+     "steps": [
+      [
+       0,
+       1000
+      ],
+      [
+       0.6,
+       800
+      ]
+     ],
+     "tone": "blue",
+     "x": 0.5,
+     "y": 0.2,
+     "enter": "pop"
+    },
+    {
+     "type": "eqbar",
+     "keys": [
+      [
+       0.1,
+       "₹10 × 1.05^8 ≈ *₹15*"
+      ]
+     ],
+     "tone": "gold",
+     "x": 0.5,
+     "y": 0.3,
+     "enter": "fade"
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "More money chasing the same goods means higher prices.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_close.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 8
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.78,
+     "y": 0.92,
+     "h": 0.7,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='6' y='6' width='888' height='138' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><text x='450' y='100' text-anchor='middle' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>1. MORE MONEY</text></svg>",
+     "x": 0.42,
+     "y": 0.24,
+     "w": 0.7,
+     "enter": "pop",
+     "at": 0.1,
+     "rotate": -3,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='6' y='6' width='888' height='138' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><text x='450' y='100' text-anchor='middle' font-size='74' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>2. SAME GOODS</text></svg>",
+     "x": 0.42,
+     "y": 0.37,
+     "w": 0.7,
+     "enter": "pop",
+     "at": 0.3,
+     "rotate": 2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 150'><rect x='6' y='6' width='888' height='138' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><text x='450' y='100' text-anchor='middle' font-size='74' fill='#d63a2f' font-family='Anton, DejaVu Sans, sans-serif'>3. HIGHER PRICES</text></svg>",
+     "x": 0.42,
+     "y": 0.5,
+     "w": 0.7,
+     "enter": "pop",
+     "at": 0.5,
+     "rotate": -2,
+     "sfx": "pop"
+    },
+    {
+     "type": "tracker",
+     "n": 3,
+     "done": [
+      0.2,
+      0.4,
+      0.6
+     ],
+     "x": 0.42,
+     "y": 0.62,
+     "enter": "none"
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "dur": 1.6,
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-08-m3/assets/plate_market_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.4,
+    "who": "ved",
+    "text": "chai wala every year:\n*just ₹1 more, beta*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "What if your IQ was three hundred?",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "welcome",
+     "x": 0.6274,
+     "y": 0.6192,
+     "h": 0.222,
+     "enter": "none",
+     "acting": [
+      [
+       "welcome",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 240'><rect x='6' y='6' width='888' height='228' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><text x='450' y='100' text-anchor='middle' font-size='80' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>WHAT IF YOUR</text><text x='450' y='190' text-anchor='middle' font-size='80' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>IQ WAS 300?</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.8,
+     "enter": "pop",
+     "at": 0.1,
+     "rotate": -2,
+     "sfx": "pop"
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Line up ten thousand people. Not one would think like you.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "crowd",
+     "plate": "jobs/2026-11-14-b/assets/plate_lab_wide.json",
+     "area": [
+      -2.4,
+      2.4,
+      -2.2,
+      0.6
+     ],
+     "n": 2400,
+     "fig_h": 0.3,
+     "color": "#f6efe2",
+     "in_dur": 0,
+     "seed": 5,
+     "steps": [
+      {
+       "at": 0,
+       "split": "x",
+       "colors": [
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue"
+       ],
+       "dur": 0
+      },
+      {
+       "at": 0,
+       "keep": 12,
+       "dur": 0,
+       "lost": "grey"
+      },
+      {
+       "at": 0,
+       "split": "y",
+       "colors": [
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue"
+       ],
+       "dur": 0
+      },
+      {
+       "at": 0,
+       "keep": 60,
+       "dur": 0,
+       "lost": "grey"
+      },
+      {
+       "at": 0.2,
+       "glow": "green",
+       "dur": 0.3
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "surprised",
+     "x": 0.8534,
+     "y": 0.6301,
+     "h": 0.2464,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "hud",
+     "label": "people in the line",
+     "value": 10000,
+     "tone": "blue",
+     "x": 0.5,
+     "y": 0.2,
+     "enter": "pop"
+    },
+    {
+     "type": "optcard",
+     "label": "thinks like you",
+     "text": "ZERO",
+     "tone": "green",
+     "x": 0.5,
+     "y": 0.33,
+     "w": 0.36,
+     "enter": "pop",
+     "at": 0.3
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Every choice would branch into ideas no one else can follow.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-14-b/assets/plate_lab_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10
+    },
+    {
+     "type": "nodes",
+     "x": 0.45,
+     "y": 0.42,
+     "yaw": [
+      -16,
+      10
+     ],
+     "nodes": [
+      {
+       "id": "r",
+       "pos": [
+        0,
+        1.6,
+        0
+       ],
+       "at": 0,
+       "tone": "blue",
+       "label": "1 question"
+      },
+      {
+       "id": "a",
+       "pos": [
+        -1.5,
+        0.4,
+        0.3
+       ],
+       "at": 0.2,
+       "tone": "green"
+      },
+      {
+       "id": "b",
+       "pos": [
+        0,
+        0.4,
+        -0.4
+       ],
+       "at": 0.2,
+       "tone": "green"
+      },
+      {
+       "id": "c",
+       "pos": [
+        1.5,
+        0.4,
+        0.2
+       ],
+       "at": 0.2,
+       "tone": "green"
+      },
+      {
+       "id": "d",
+       "pos": [
+        -2.0,
+        -0.8,
+        0.5
+       ],
+       "at": 0.4,
+       "tone": "gold"
+      },
+      {
+       "id": "e",
+       "pos": [
+        -0.9,
+        -0.8,
+        0.0
+       ],
+       "at": 0.4,
+       "tone": "gold"
+      },
+      {
+       "id": "f",
+       "pos": [
+        0.4,
+        -0.8,
+        -0.3
+       ],
+       "at": 0.4,
+       "tone": "gold"
+      },
+      {
+       "id": "g",
+       "pos": [
+        1.9,
+        -0.8,
+        0.4
+       ],
+       "at": 0.4,
+       "tone": "gold",
+       "label": "100 ideas"
+      }
+     ],
+     "edges": [
+      [
+       "r",
+       "a",
+       0.2,
+       "green"
+      ],
+      [
+       "r",
+       "b",
+       0.2,
+       "green"
+      ],
+      [
+       "r",
+       "c",
+       0.2,
+       "green"
+      ],
+      [
+       "a",
+       "d",
+       0.4,
+       "gold"
+      ],
+      [
+       "a",
+       "e",
+       0.4,
+       "gold"
+      ],
+      [
+       "b",
+       "f",
+       0.4,
+       "gold"
+      ],
+      [
+       "c",
+       "g",
+       0.4,
+       "gold"
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.82,
+     "y": 0.92,
+     "h": 0.62,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "But would anyone understand you?",
+   "look": "night",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.5411,
+     "y": 0.5381,
+     "h": 0.3184,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "stamp",
+     "text": "LONELY AT THE TOP?",
+     "tone": "red",
+     "angle": -8,
+     "size": 92,
+     "x": 0.5,
+     "y": 0.27,
+     "at": 0.2
+    }
+   ],
+   "pad": 0.14
+  }
+ ]
+}

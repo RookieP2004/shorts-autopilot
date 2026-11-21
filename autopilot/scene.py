@@ -444,6 +444,9 @@ def draw_scene(ctx, scene_idx, t):
             from . import night
             rc = L.get("rim") if isinstance(L.get("rim"), list) else ctx.style.get("rim", ["#3fa9ff", "#9b6bff"])
             img = night.rim(img, rc, L.get("rim_strength", 1.0), L.get("rim_dim", 0.8))
+        if L.get("type") == "character" and L.get("style"):  # Ved drawn in the scene's look (marker, chalk, riso, film, ink)
+            from . import charstyle
+            img = charstyle.apply(img, L["style"])
         cx = L.get("x", 0.5) * W + dx
         cy = L.get("y", 0.5) * H + dy
         if L.get("iris"):                                 # reveal through a growing soft circle (x-ray / look-inside shots)

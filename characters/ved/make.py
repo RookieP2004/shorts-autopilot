@@ -1,4 +1,5 @@
-"""Professor Ved - the channel's explainer.  Style v8: clean flat-vector illustration.
+"""Professor Ved - the channel's explainer.  Style v9.1 (2026-11-21, owner: cleaner, subtler): clean flat-vector illustration, plus a cool
+rim light on the shadow side, forehead and under-arm occlusion, richer eyes and brows, shirt drape and a signature.
 
 Look: 25 years old, handsome, athletic. Black hair in a swept-up quiff with a skin fade, crisp full beard
 and a distinct moustache (they meet at the mouth corners; clean skin right below the lower lip), slightly
@@ -141,9 +142,34 @@ class Svg:
                 self.add(f'<circle cx="{a[0]:.1f}" cy="{a[1]:.1f}" r="{wa/2:.1f}" fill="url(#{gid})"/>')
             self.add(f'<path d="{d}" fill="url(#{gid})"/>')
 
+    def rim(self, d, dx=-7, dy=2, color=None, op=0.5, from_x=None):
+        """v9: a thin cool rim of back light along the shadow side (viewer's right) of shape d: d minus d shifted left.
+        Built from a clip path and an even-odd cut (no masks: the SVG rasteriser handles clips reliably)."""
+        cid = self.uid()
+        self.defs.append(f'<clipPath id="{cid}"><path d="{d}"/></clipPath>')
+        cut = f"M-10,-10 L{W+10},-10 L{W+10},{H+10} L-10,{H+10} Z " + shift(d, dx, dy)
+        body = f'<path d="{cut}" fill-rule="evenodd" fill="{color or RIM}" opacity="{op}"/>'
+        if from_x is not None:                       # only the outer contour on the shadow side
+            hid = self.uid()
+            self.defs.append(f'<clipPath id="{hid}"><rect x="{from_x}" y="0" width="{W}" height="{H}"/></clipPath>')
+            body = f'<g clip-path="url(#{hid})">{body}</g>'
+        self.add(f'<g clip-path="url(#{cid})">{body}</g>')
+
     def svg(self):
         return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">'
                 f'<defs>{"".join(self.defs)}</defs>{"".join(self.body)}</svg>')
+
+
+def shift(d, dx, dy):
+    """Translate an absolute SVG path (M/L/C/Q/Z with x,y pairs) by (dx, dy)."""
+    out = []
+    for tok in re.findall(r"[MLCQZ]|-?[\d.]+,-?[\d.]+", d):
+        if "," in tok:
+            x, y = tok.split(",")
+            out.append(f"{float(x) + dx:g},{float(y) + dy:g}")
+        else:
+            out.append(tok)
+    return " ".join(out)
 
 
 def mirror(d):
@@ -201,7 +227,7 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
     else:
         s.add(f'<path d="{rb}" fill="{BROW}"/>')
     # brow ridge / eye socket shading
-    s.add(f'<path d="M250,128 C264,124 282,125 292,132 C280,130 264,130 252,134 Z" fill="{SKIN_SH}" opacity="0.5"/>')
+    s.add(f'<path d="M250,128 C264,124 282,125 292,132 C280,130 264,130 252,134 Z" fill="{SKIN_SH}" opacity="0.3"/>')
     s.add(f'<path d="{mirror("M250,128 C264,124 282,125 292,132 C280,130 264,130 252,134 Z")}" fill="{SKIN_SH}" opacity="0.7"/>')
 
     # eyes: almond, slightly narrowed (confident), dark upper lid
@@ -219,6 +245,7 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
         s.defs.append(f'<clipPath id="{eid}"><path d="{eye}"/></clipPath>')
         s.add(f'<path d="{eye}" fill="#f6f1ea"/>')
         s.add(f'<g clip-path="url(#{eid})"><circle cx="{cx+lx}" cy="{141.5+ly}" r="6.2" fill="{IRIS}"/>'
+              f'<circle cx="{cx+lx}" cy="{141.5+ly}" r="5.8" fill="none" stroke="#24150b" stroke-width="0.9" opacity="0.6"/>'
               f'<circle cx="{cx+lx}" cy="{141.5+ly}" r="3" fill="#0e0907"/>'
               f'<circle cx="{cx+lx-2}" cy="{139.5+ly}" r="1.7" fill="#fff"/>'
               f'<rect x="{cx-20}" y="120" width="40" height="{24-open_}" fill="#000" opacity="0.14"/></g>')
@@ -226,9 +253,11 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
                f"L{cx+16},{138.5} C{cx+8},{138-open_-3} {cx-8},{138-open_-3} {cx-16},{140.5} Z")
         s.add(f'<path d="{lid}" fill="{BROW}"/>')                                    # upper lid + lashes
         s.add(f'<path d="M{cx-13},{136-open_} C{cx-5},{131-open_} {cx+6},{131-open_} {cx+14},{135-open_}" '
-              f'fill="none" stroke="{SKIN_SH}" stroke-width="2" opacity="0.8"/>')      # crease
+              f'fill="none" stroke="{SKIN_SH}" stroke-width="1.6" opacity="0.35"/>')      # crease
         if expr in ("smile", "warm"):
-            s.add(f'<path d="M{cx-12},{146} C{cx-4},{141} {cx+5},{141} {cx+12},{146}" fill="none" stroke="{SKIN_SH}" stroke-width="2"/>')
+            yb = 142 + open_ * 0.7 + 4.5                     # cheek lift sits under the eye, never across it
+            s.add(f'<path d="M{cx-10},{yb+1.5:.1f} C{cx-4},{yb-1:.1f} {cx+4},{yb-1:.1f} {cx+10},{yb+1.5:.1f}" fill="none" '
+                  f'stroke="{SKIN_SH}" stroke-width="1.6" opacity="0.55"/>')
 
     # nose: shadow plane on the right, nostrils, tip light
     s.add(f'<path d="M303,146 C307,164 313,180 314,190 C310,197 304,198 300,196 L304,190 C304,176 303,160 300,148 Z" fill="{SKIN_SH}"/>')
@@ -289,6 +318,7 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
             s.add(f'<path d="M286,224 Q300,{224+curve} 314,224" fill="none" stroke="#5a2c22" stroke-width="2.6" stroke-linecap="round"/>')
             s.add(f'<path d="M289,227 Q300,{236+curve*0.4:.1f} 311,227 Q300,{231+curve*0.3:.1f} 289,227 Z" fill="{LIPS}"/>')
     s.add(f'<path d="M292,241 Q300,244 308,241" fill="none" stroke="{SKIN_SH}" stroke-width="2" opacity="0.8"/>')  # chin dimple
+
 
     # hair: swept-up quiff, black, with a skin fade on the sides
     for d in ("M231,156 C226,130 228,106 238,90 L252,98 C244,112 240,132 240,158 Z",):
@@ -374,6 +404,8 @@ def torso(s):
     s.add(f'<path d="M298,360 L302,360 L304,786 L298,786 Z" fill="{SHIRT_SH}"/>')
     for y in (420, 490, 560, 630, 700, 770):
         s.add(f'<circle cx="304" cy="{y}" r="3.6" fill="#e2e5eb"/><circle cx="304" cy="{y}" r="1.6" fill="#b9bfcb"/>')
+    for d in ("M196,770 C230,760 262,764 290,778 C262,772 228,772 200,780 Z", "M310,778 C340,764 372,760 404,770 L400,780 C372,772 340,772 310,778 Z"):
+        s.add(f'<path d="{d}" fill="{SHIRT_DEEP}" opacity="0.35"/>')               # blouse over the belt
     # belt
     s.part("M188,786 L412,786 L414,814 L186,814 Z", BELT, shadow="M300,780 L420,780 L420,820 L300,820 Z", shadow_col="#0a0a0b")
     s.add(f'<rect x="286" y="788" width="28" height="24" rx="3" fill="none" stroke="{SILVER}" stroke-width="4"/>')
@@ -450,8 +482,16 @@ def arm(s, shoulder, elbow, wrist, kind, flip, upper=True, watch=False):
     s.add(f'<path d="{band}" fill="url(#{gid})"/>')
     s.add(f'<path d="M{a[0]+nx*hw:.1f},{a[1]+ny*hw:.1f} L{a[0]-nx*hw:.1f},{a[1]-ny*hw:.1f}" stroke="{SHIRT_DEEP}" stroke-width="2.4"/>')
     s.add(f'<path d="M{roll[0]+nx*hw:.1f},{roll[1]+ny*hw:.1f} L{roll[0]-nx*hw:.1f},{roll[1]-ny*hw:.1f}" stroke="{SHIRT_SH}" stroke-width="2"/>')
-    s.add(f'<path d="M{elbow[0]-nx*24-ux*30:.1f},{elbow[1]-ny*24-uy*30:.1f} q{nx*14:.1f},{ny*14+8:.1f} {nx*34:.1f},{ny*34:.1f}" '
-          f'fill="none" stroke="{SHIRT_SH}" stroke-width="3"/>')
+    # elbow crease: a short fold across the sleeve just above the elbow, measured along the upper arm so it always
+    # sits inside the sleeve (it used to follow the forearm and could land outside the body on folded arms)
+    ex, ey = elbow[0] - shoulder[0], elbow[1] - shoulder[1]
+    eL = math.hypot(ex, ey) or 1
+    ex, ey = ex / eL, ey / eL
+    px, py = -ey, ex
+    cx, cy = elbow[0] - ex * 24, elbow[1] - ey * 24
+    hw2 = (SLEEVE - 6) * 0.3
+    s.add(f'<path d="M{cx-px*hw2:.1f},{cy-py*hw2:.1f} Q{cx+ex*6:.1f},{cy+ey*6:.1f} {cx+px*hw2:.1f},{cy+py*hw2:.1f}" '
+          f'fill="none" stroke="{SHIRT_SH}" stroke-width="2.6" stroke-linecap="round"/>')
     hand(s, wrist, math.degrees(math.atan2(-dx, dy)), kind, flip, watch)
 
 
@@ -469,28 +509,70 @@ ARMS = {
 }
 
 
-def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None, arms=None, lift=(0.0, 0.0), shadow=True):
-    """arms: optional list of (shoulder, elbow, wrist, hand_kind, forearm_in_front) - used by the renderer
+SIG = os.environ.get("VED_SIG", "pen,pin")   # owner pick 2026-11-21: A + B      # v9 signature candidates: "pen" | "pin" | "specs" (owner picks one)
+
+
+def signature_torso(s, sig):
+    if "pen" in sig:                          # breast pocket with a gold mechanical pencil: the tool that draws the ideas
+        s.add(f'<rect x="236" y="366" width="9" height="44" rx="3" fill="{GOLD}"/>'
+              f'<rect x="242" y="366" width="3" height="44" rx="1.5" fill="#b8892f"/>'
+              f'<rect x="236" y="359" width="9" height="9" rx="2" fill="#2b2b30"/>')
+        s.add(f'<path d="M212,402 L266,401 L266,444 Q239,450 212,445 Z" fill="{SHIRT}"/>'
+              f'<path d="M212,445 Q239,451 266,444" fill="none" stroke="{SHIRT_SH}" stroke-width="2.4"/>'
+              f'<path d="M212,402 L266,401" stroke="{SHIRT_SH}" stroke-width="2.4"/>'
+              f'<path d="M214,407 L264,406" stroke="{SHIRT_SH}" stroke-width="1" stroke-dasharray="3 3" opacity="0.8"/>')
+    if "pin" in sig:                          # a small spark pin on the chest by the collar: the channel's mark
+        s.add(f'<g transform="translate(226,334) scale(1.05)"><circle r="11" fill="#16232b"/>'
+              f'<path d="M0,-8 L2.4,-2.4 L8,0 L2.4,2.4 L0,8 L-2.4,2.4 L-8,0 L-2.4,-2.4 Z" fill="{GOLD}"/>'
+              f'<circle r="11" fill="none" stroke="{GOLD}" stroke-width="1.6"/></g>')
+
+
+def signature_head(s, sig):
+    if "specs" in sig:                        # reading glasses pushed up into the quiff
+        for cx in (276, 328):
+            s.add(f'<ellipse cx="{cx}" cy="58" rx="21" ry="13" fill="#9fd3e6" opacity="0.25"/>'
+                  f'<ellipse cx="{cx}" cy="58" rx="21" ry="13" fill="none" stroke="#2a1d16" stroke-width="5"/>')
+        s.add('<path d="M297,56 Q302,50 307,56" fill="none" stroke="#2a1d16" stroke-width="4"/>'
+              '<ellipse cx="270" cy="54" rx="6" ry="3" fill="#fff" opacity="0.5"/>')
+
+
+def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None, arms=None, lift=(0.0, 0.0), shadow=True, sig=None,
+           layer="all"):
+    """layer: "all", or one depth layer for the 3D standee - "body" (legs, back arms, torso), "head", "front" (forearms
+    in front of the body).  arms: optional list of (shoulder, elbow, wrist, hand_kind, forearm_in_front) - used by the renderer
     to interpolate smoothly between poses. lift: leg lifts for walking/jumping. shadow: draw the floor shadow
     (the renderer draws its own when the character moves)."""
     s = Svg()
-    if shadow:
+    want = (lambda part: layer in ("all", part))
+    if shadow and layer == "all":
         s.add('<ellipse cx="300" cy="1456" rx="190" ry="20" fill="#000" opacity="0.22"/>')
-    legs(s, lift)
     arms = arms if arms is not None else ARMS[pose]
-    for shoulder, elbow, wrist, kind, front in arms:      # sleeves sit behind the torso's shoulder line
-        if not front:
-            arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, watch=shoulder[0] > 300)
-    torso(s)
-    for right in (False, True):                           # shoulder caps over the sleeve tops
-        d = "M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z"
-        d = mirror(d) if right else d
-        s.part(d, SHIRT, shadow="M408,290 L470,290 L470,420 L408,420 Z" if right else None, shadow_col=SHIRT_SH)
-    head(s, expr, blink, look, mouth)
-    for shoulder, elbow, wrist, kind, front in arms:      # forearms in front of the body (think, crossed)
-        if front:
-            s.limb([shoulder, elbow], [SLEEVE, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
-            arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, upper=False, watch=shoulder[0] > 300)
+    sig = SIG if sig is None else sig
+    if want("body"):
+        legs(s, lift)
+        for shoulder, elbow, wrist, kind, front in arms:      # sleeves sit behind the torso's shoulder line
+            if not front:
+                arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, watch=shoulder[0] > 300)
+        torso(s)
+        for right in (False, True):                           # shoulder caps over the sleeve tops
+            d = "M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z"
+            d = mirror(d) if right else d
+            s.part(d, SHIRT, shadow="M408,290 L470,290 L470,420 L408,420 Z" if right else None, shadow_col=SHIRT_SH)
+        signature_torso(s, sig)
+    if want("head"):
+        head(s, expr, blink, look, mouth)
+        signature_head(s, sig)
+    if want("front"):
+        for shoulder, elbow, wrist, kind, front in arms:      # forearms in front of the body (think, crossed)
+            if front:
+                s0 = (shoulder[0] + (elbow[0] - shoulder[0]) * 0.2, shoulder[1] + (elbow[1] - shoulder[1]) * 0.2)
+                s.add(f'<circle cx="{s0[0]:.1f}" cy="{s0[1]:.1f}" r="{SLEEVE / 2 - 1:.1f}" fill="{SHIRT}"/>')   # round top
+                s.limb([s0, elbow], [SLEEVE - 2, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
+                right = shoulder[0] > 300                 # round the sleeve top into the shoulder again (no flat corner)
+                d = "M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z"
+                s.part(mirror(d) if right else d, SHIRT,
+                       shadow="M408,290 L470,290 L470,420 L408,420 Z" if right else None, shadow_col=SHIRT_SH)
+                arm(s, shoulder, elbow, wrist, kind, right, upper=False, watch=right)
     return s.svg()
 
 
@@ -579,6 +661,31 @@ def head_only(expr, blink=False, look=(0, 0)):
     s = Svg()
     head(s, expr, blink, look)
     return s.svg().replace(f'viewBox="0 0 {W} {H}" width="{W}" height="{H}"', 'viewBox="196 0 208 300" width="208" height="300"')
+
+
+def mascot(expr="smile", variant="badge", size=1024):
+    """Channel icon: Ved's bust in a round badge (avatar, watermark, end cards). variant: badge | mono | wink."""
+    if variant == "wink":
+        bust = figure("down", "smile", blink=False, look=(0, 0), shadow=False)
+    else:
+        bust = figure("down", expr, shadow=False)
+    inner = re.sub(r'<svg[^>]*>', '<svg x="72" y="70" width="880" height="1027" viewBox="120 -20 360 420">', bust, count=1)
+    cid = "mclip"
+    if variant == "mono":                     # one-colour gold mark for the watermark
+        inner = inner.replace('<svg x=', '<svg filter="url(#mono)" x=', 1)
+    disc, ring = ("#16232b", GOLD) if variant != "mono" else ("none", GOLD)
+    spark = ('<path d="M0,-58 L15,-15 L58,0 L15,15 L0,58 L-15,15 L-58,0 L-15,-15 Z" fill="%s" '
+             'stroke="#efe3c8" stroke-width="10" stroke-linejoin="round"/>' % GOLD)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="{size}" height="{size}">'
+            f'<defs><clipPath id="{cid}"><circle cx="512" cy="512" r="470"/></clipPath>'
+            f'<radialGradient id="glow" cx="50%" cy="38%" r="60%"><stop offset="0" stop-color="#2a4150"/>'
+            f'<stop offset="1" stop-color="{disc}"/></radialGradient>'
+            f'<filter id="mono"><feColorMatrix type="matrix" values="0 0 0 0 0.83  0 0 0 0 0.65  0 0 0 0 0.29  0 0 0 1 0"/></filter></defs>'
+            + (f'<circle cx="512" cy="512" r="470" fill="url(#glow)"/>' if variant != "mono" else "")
+            + f'<g clip-path="url(#{cid})">{inner}</g>'
+            f'<circle cx="512" cy="512" r="478" fill="none" stroke="{ring}" stroke-width="26"/>'
+            f'<g transform="translate(850,174)">{spark}</g>'
+            '</svg>')
 
 
 # base poses: (body pose, expression, eye look). Each gets <name>, <name>_blink and 5 mouth shapes

@@ -1,0 +1,372 @@
+{
+ "privacy": "private",
+ "speaker": "ved",
+ "description": "mock-up",
+ "tags": [],
+ "meta": {
+  "format": "demo",
+  "humour": {
+   "beat": "side_eye",
+   "scene": 4
+  }
+ },
+ "id": "2026-11-16-demo",
+ "title": "demo",
+ "scenes": [
+  {
+   "say": "How do you send money abroad without sending any money?",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7166,
+     "y": 0.5558,
+     "h": 0.3625,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "phone",
+     "sprite": "jobs/2026-11-16-n/assets/phone.png",
+     "screen": {
+      "kind": "chat",
+      "name": "Rafiq Bhai",
+      "sub": "online",
+      "msgs": [
+       {
+        "text": "Need to send 1 lakh to Dubai today",
+        "side": "out",
+        "time": "8:02"
+       },
+       {
+        "text": "Give cash here. Your cousin collects there in 1 hour. Code word: KITE",
+        "time": "8:03"
+       }
+      ]
+     },
+     "x": 0.34,
+     "y": 0.45,
+     "w": 0.44,
+     "tilt": [
+      [
+       0,
+       -16,
+       5
+      ],
+      [
+       3,
+       8,
+       2
+      ]
+     ],
+     "enter": "rise"
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Two brokers, two cities. The cash never crosses the border. Only trust does.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_mid.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.2896,
+     "y": 0.4535,
+     "h": 0.1535,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c68a5e",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "top": [
+        "#2f3a52",
+        "jacket"
+       ],
+       "bottom": [
+        "#23262d",
+        "trousers"
+       ],
+       "shoes": "#151515"
+      }
+     }
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.9017,
+     "y": 0.4832,
+     "h": 0.1843,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "round",
+       "hair": [
+        "#1a1410",
+        "short"
+       ],
+       "top": [
+        "#e9e6df",
+        "shirt"
+       ],
+       "bottom": [
+        "#3a3e48",
+        "trousers"
+       ],
+       "shoes": "#151515",
+       "hat": [
+        "cap",
+        "#d63a2f"
+       ]
+      }
+     }
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.515,
+     "y": 0.5132,
+     "h": 0.1982,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "nodes",
+     "x": 0.5,
+     "y": 0.36,
+     "yaw": [
+      0,
+      0
+     ],
+     "cam": {
+      "pitch": 0
+     },
+     "nodes": [
+      {
+       "id": "m",
+       "pos": [
+        -1.9,
+        0,
+        0
+       ],
+       "at": 0,
+       "tone": "blue",
+       "label": "MUMBAI",
+       "label_side": "right"
+      },
+      {
+       "id": "d",
+       "pos": [
+        1.9,
+        0,
+        0
+       ],
+       "at": 0,
+       "tone": "blue",
+       "label": "DUBAI",
+       "label_side": "left"
+      }
+     ],
+     "edges": [
+      [
+       "m",
+       "d",
+       0.2,
+       "gold"
+      ]
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 240'><rect x='6' y='6' width='888' height='228' rx='34' fill='#f6efe2' stroke='#1a1410' stroke-width='7'/><text x='450' y='100' text-anchor='middle' font-size='70' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>NO TRANSFER.</text><text x='450' y='190' text-anchor='middle' font-size='70' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>JUST TRUST.</text></svg>",
+     "x": 0.5,
+     "y": 0.2,
+     "w": 0.7,
+     "enter": "pop",
+     "at": 0.3,
+     "rotate": -2,
+     "sfx": "pop"
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Is it legal in India? No.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "crossed",
+     "x": 0.7166,
+     "y": 0.5558,
+     "h": 0.3625,
+     "enter": "none",
+     "acting": [
+      [
+       "crossed",
+       0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "legal in India?",
+     "text": "NO",
+     "sub": "FEMA · PMLA",
+     "tone": "blue",
+     "x": 0.36,
+     "y": 0.32,
+     "w": 0.44,
+     "verdict": "cross",
+     "verdict_at": 0.2,
+     "enter": "pop"
+    },
+    {
+     "type": "stamp",
+     "text": "ILLEGAL",
+     "tone": "red",
+     "angle": -10,
+     "size": 110,
+     "x": 0.38,
+     "y": 0.52,
+     "at": 0.4
+    },
+    {
+     "type": "tag",
+     "text": "SOURCE: FEMA 1999, PMLA 2002",
+     "x": 0.5,
+     "y": 0.66,
+     "at": 0.4,
+     "size": 26
+    }
+   ],
+   "pad": 0.14
+  },
+  {
+   "say": "Ever got a message like this? Comment YES or NO.",
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-16-n/assets/plate_arena_hero.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 16
+    },
+    {
+     "type": "phone",
+     "sprite": "jobs/2026-11-16-n/assets/phone.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 0.6,
+     "tilt": [
+      [
+       0,
+       6,
+       4
+      ]
+     ],
+     "enter": "rise",
+     "screen": {
+      "kind": "lock",
+      "time": "8:04",
+      "date": "Friday",
+      "cta": "Comment YES or NO",
+      "cta_at": 0.2,
+      "notes": [
+       {
+        "app": "Rafiq Bhai",
+        "title": "Code word: KITE",
+        "body": "Collect at the shop near the market, 1 hour."
+       }
+      ]
+     }
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.85,
+     "y": 0.92,
+     "h": 0.5,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "pad": 0.14
+  }
+ ],
+ "look": "night"
+}
