@@ -1,0 +1,37 @@
+{
+ "source": "Cutaway reel (owner's licence); clip and cues are our output",
+ "from": null,
+ "to": null,
+ "cues": [
+  {
+   "t": 0.05,
+   "sfx": "sweep",
+   "gain": 0.8
+  },
+  {
+   "t": 0.3,
+   "sfx": "hum",
+   "gain": 0.55
+  },
+  {
+   "t": 0.55,
+   "sfx": "ding",
+   "gain": 0.5
+  },
+  {
+   "t": 0.85,
+   "sfx": "ding",
+   "gain": 0.45
+  },
+  {
+   "t": 1.15,
+   "sfx": "ding",
+   "gain": 0.45
+  },
+  {
+   "t": 2.1,
+   "sfx": "whoosh",
+   "gain": 0.6
+  }
+ ]
+}
