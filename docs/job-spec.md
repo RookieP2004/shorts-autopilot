@@ -366,10 +366,11 @@ characters/ved/make.py; on in every front pose). Model sheet: docs/sheets/profes
   `riso` (RS-11), `film` (RS-14 silent card), `ink` (RS-15). Night sets keep using `"look": "night"` (rim light).
   Same poses, lip-sync and blinks; only the rendering changes (autopilot/charstyle.py).
 - Icon: assets/brand/ved_icon_badge.png (avatar, end card), ved_icon_laugh.png, ved_icon_mono.png (gold watermark).
-- 3D Ved: `python characters/ved/ved3d.py --pose explain --angles -30,0,28 --out DIR` builds him as a layered paper
-  standee (body, head, front forearm at three depths, cream card edge) on a gold-ringed base in a lit Blender set;
-  `--orbit 2` renders an orbit. About 20 s a still at 540x960 on CPU. Use the stills as `image` layers or the frames
-  as a `video` clip. All of this is a DEMO until the owner approves the sheet.
+- 3D Ved: `python characters/ved/ved3d_model.py --pose idle|explain --views front,three_q,side,back,head --out DIR`
+  builds him as a real model in Blender (body, hands, head, beard, hair, shirt details, belt, shoes, watch, pin and
+  pencil), turns him for each view and renders (about 30 s a view at 720x1280 on CPU); `--save file.blend` keeps the
+  model. The older paper-standee version (characters/ved/ved3d.py) is kept for flat cut-out shots. DEMO until the
+  owner approves the sheet.
 
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);

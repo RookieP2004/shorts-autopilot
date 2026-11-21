@@ -19,7 +19,7 @@ def _png(svg, w=240):
 
 def test_signature_on_by_default():
     svg = make.figure(**make.POSES["explain"])
-    assert "#d4a64a" in svg and "translate(262,326)" in svg      # gold pencil + spark pin
+    assert "#d4a64a" in svg and "translate(226,334)" in svg      # gold pencil + spark pin
 
 
 def test_layers_split_the_figure():

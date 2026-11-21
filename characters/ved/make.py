@@ -1,4 +1,4 @@
-"""Professor Ved - the channel's explainer.  Style v9 (2026-11-21 refine): clean flat-vector illustration, plus a cool
+"""Professor Ved - the channel's explainer.  Style v9.1 (2026-11-21, owner: cleaner, subtler): clean flat-vector illustration, plus a cool
 rim light on the shadow side, forehead and under-arm occlusion, richer eyes and brows, shirt drape and a signature.
 
 Look: 25 years old, handsome, athletic. Black hair in a swept-up quiff with a skin fade, crisp full beard
@@ -226,12 +226,8 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
         s.add(f'<g transform="translate(0,-7) rotate(-4 330 115)"><path d="{rb}" fill="{BROW}"/></g>')
     else:
         s.add(f'<path d="{rb}" fill="{BROW}"/>')
-    for k in range(5):                                       # v9: brow hair texture
-        x0 = 252 + k * 8
-        s.add(f'<path d="M{x0},{120+bo-k*0.6:.1f} l7,-3" stroke="#3a3d48" stroke-width="1.1" opacity="0.6"/>')
-        s.add(f'<path d="M{600-x0},{120+bo-k*0.6:.1f} l-7,-3" stroke="#3a3d48" stroke-width="1.1" opacity="0.5"/>')
     # brow ridge / eye socket shading
-    s.add(f'<path d="M250,128 C264,124 282,125 292,132 C280,130 264,130 252,134 Z" fill="{SKIN_SH}" opacity="0.5"/>')
+    s.add(f'<path d="M250,128 C264,124 282,125 292,132 C280,130 264,130 252,134 Z" fill="{SKIN_SH}" opacity="0.3"/>')
     s.add(f'<path d="{mirror("M250,128 C264,124 282,125 292,132 C280,130 264,130 252,134 Z")}" fill="{SKIN_SH}" opacity="0.7"/>')
 
     # eyes: almond, slightly narrowed (confident), dark upper lid
@@ -249,22 +245,19 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
         s.defs.append(f'<clipPath id="{eid}"><path d="{eye}"/></clipPath>')
         s.add(f'<path d="{eye}" fill="#f6f1ea"/>')
         s.add(f'<g clip-path="url(#{eid})"><circle cx="{cx+lx}" cy="{141.5+ly}" r="6.2" fill="{IRIS}"/>'
+              f'<circle cx="{cx+lx}" cy="{141.5+ly}" r="5.8" fill="none" stroke="#24150b" stroke-width="0.9" opacity="0.6"/>'
               f'<circle cx="{cx+lx}" cy="{141.5+ly}" r="3" fill="#0e0907"/>'
-              f'<circle cx="{cx+lx}" cy="{141.5+ly}" r="6.2" fill="none" stroke="#2a180e" stroke-width="1.4"/>'
-              f'<circle cx="{cx+lx+1.5}" cy="{143+ly}" r="3.4" fill="#6b4329" opacity="0.55"/>'
-              f'<circle cx="{cx+lx}" cy="{141.5+ly}" r="3" fill="#0e0907"/>'
-              f'<circle cx="{cx+lx-2}" cy="{139.5+ly}" r="1.8" fill="#fff"/>'
-              f'<circle cx="{cx+lx+2.2}" cy="{143.2+ly}" r="0.9" fill="#fff" opacity="0.8"/>'
+              f'<circle cx="{cx+lx-2}" cy="{139.5+ly}" r="1.7" fill="#fff"/>'
               f'<rect x="{cx-20}" y="120" width="40" height="{24-open_}" fill="#000" opacity="0.14"/></g>')
         lid = (f"M{cx-16},142 C{cx-8},{141-open_-1.5} {cx+8},{141-open_-1.5} {cx+16},140 "
                f"L{cx+16},{138.5} C{cx+8},{138-open_-3} {cx-8},{138-open_-3} {cx-16},{140.5} Z")
         s.add(f'<path d="{lid}" fill="{BROW}"/>')                                    # upper lid + lashes
-        s.add(f'<path d="M{cx-11},{143+open_*0.62:.1f} C{cx-4},{145.5+open_*0.6:.1f} {cx+5},{145.5+open_*0.6:.1f} {cx+12},{142.5+open_*0.6:.1f}" '
-              f'fill="none" stroke="{SKIN_DEEP}" stroke-width="1.3" opacity="0.55"/>')      # v9: lower lid
         s.add(f'<path d="M{cx-13},{136-open_} C{cx-5},{131-open_} {cx+6},{131-open_} {cx+14},{135-open_}" '
-              f'fill="none" stroke="{SKIN_SH}" stroke-width="2" opacity="0.8"/>')      # crease
+              f'fill="none" stroke="{SKIN_SH}" stroke-width="1.6" opacity="0.35"/>')      # crease
         if expr in ("smile", "warm"):
-            s.add(f'<path d="M{cx-12},{146} C{cx-4},{141} {cx+5},{141} {cx+12},{146}" fill="none" stroke="{SKIN_SH}" stroke-width="2"/>')
+            yb = 142 + open_ * 0.7 + 4.5                     # cheek lift sits under the eye, never across it
+            s.add(f'<path d="M{cx-10},{yb+1.5:.1f} C{cx-4},{yb-1:.1f} {cx+4},{yb-1:.1f} {cx+10},{yb+1.5:.1f}" fill="none" '
+                  f'stroke="{SKIN_SH}" stroke-width="1.6" opacity="0.55"/>')
 
     # nose: shadow plane on the right, nostrils, tip light
     s.add(f'<path d="M303,146 C307,164 313,180 314,190 C310,197 304,198 300,196 L304,190 C304,176 303,160 300,148 Z" fill="{SKIN_SH}"/>')
@@ -326,11 +319,6 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
             s.add(f'<path d="M289,227 Q300,{236+curve*0.4:.1f} 311,227 Q300,{231+curve*0.3:.1f} 289,227 Z" fill="{LIPS}"/>')
     s.add(f'<path d="M292,241 Q300,244 308,241" fill="none" stroke="{SKIN_SH}" stroke-width="2" opacity="0.8"/>')  # chin dimple
 
-    # v9: the quiff casts a soft shadow on the forehead; cool rim light on the jaw and cheek (shadow side)
-    s.add(f'<path d="M238,104 C258,92 284,88 306,92 C326,88 346,92 364,104 L366,116 C346,106 326,104 306,108 '
-          f'C284,104 260,106 240,118 Z" fill="{SKIN_SH}" opacity="0.55"/>')
-    s.rim(FACE, dx=-6, dy=1, op=0.42)
-    s.rim(beard, dx=-6, dy=0, color="#7a8aa8", op=0.4, from_x=340)
 
     # hair: swept-up quiff, black, with a skin fade on the sides
     for d in ("M231,156 C226,130 228,106 238,90 L252,98 C244,112 240,132 240,158 Z",):
@@ -344,7 +332,6 @@ def head(s, expr="neutral", blink=False, look=(0, 0), mouth=None):
            shadow_col="#0b0b0e",
            hl="M250,70 C262,52 282,40 304,34 C318,24 336,22 350,26 C332,30 316,38 302,48 C284,56 268,68 258,84 Z",
            hl_col=SHEEN)
-    s.rim(hair, dx=-6, dy=3, color="#8fa6c8", op=0.45)
     for d in ("M262,86 C270,66 292,50 320,42", "M284,86 C298,66 322,54 350,52", "M306,88 C322,72 344,66 366,70"):
         s.line(d, 2.2, color="#5a5f70", op=0.7)
     for d in ("M286,42 C292,34 300,30 310,30 C302,36 296,42 292,50 Z", "M328,24 C340,22 352,26 360,34 C350,32 340,32 332,34 Z"):
@@ -417,13 +404,8 @@ def torso(s):
     s.add(f'<path d="M298,360 L302,360 L304,786 L298,786 Z" fill="{SHIRT_SH}"/>')
     for y in (420, 490, 560, 630, 700, 770):
         s.add(f'<circle cx="304" cy="{y}" r="3.6" fill="#e2e5eb"/><circle cx="304" cy="{y}" r="1.6" fill="#b9bfcb"/>')
-    # v9: drape and light
-    s.add(f'<path d="M150,400 C160,430 170,452 176,470 L190,470 C184,446 176,424 168,402 Z" fill="{SHIRT_DEEP}" opacity="0.5"/>')
-    s.add(f'<path d="{mirror("M150,400 C160,430 170,452 176,470 L190,470 C184,446 176,424 168,402 Z")}" fill="{SHIRT_DEEP}" opacity="0.6"/>')
     for d in ("M196,770 C230,760 262,764 290,778 C262,772 228,772 200,780 Z", "M310,778 C340,764 372,760 404,770 L400,780 C372,772 340,772 310,778 Z"):
-        s.add(f'<path d="{d}" fill="{SHIRT_DEEP}" opacity="0.7"/>')                # blouse over the belt
-    s.add(f'<path d="M268,298 Q300,312 332,298 L330,306 Q300,320 270,306 Z" fill="{SKIN_DEEP}" opacity="0.35"/>')  # collar shadow
-    s.rim(TORSO, dx=-8, dy=0, color="#c6d6ee", op=0.6)
+        s.add(f'<path d="{d}" fill="{SHIRT_DEEP}" opacity="0.35"/>')               # blouse over the belt
     # belt
     s.part("M188,786 L412,786 L414,814 L186,814 Z", BELT, shadow="M300,780 L420,780 L420,820 L300,820 Z", shadow_col="#0a0a0b")
     s.add(f'<rect x="286" y="788" width="28" height="24" rx="3" fill="none" stroke="{SILVER}" stroke-width="4"/>')
@@ -500,8 +482,16 @@ def arm(s, shoulder, elbow, wrist, kind, flip, upper=True, watch=False):
     s.add(f'<path d="{band}" fill="url(#{gid})"/>')
     s.add(f'<path d="M{a[0]+nx*hw:.1f},{a[1]+ny*hw:.1f} L{a[0]-nx*hw:.1f},{a[1]-ny*hw:.1f}" stroke="{SHIRT_DEEP}" stroke-width="2.4"/>')
     s.add(f'<path d="M{roll[0]+nx*hw:.1f},{roll[1]+ny*hw:.1f} L{roll[0]-nx*hw:.1f},{roll[1]-ny*hw:.1f}" stroke="{SHIRT_SH}" stroke-width="2"/>')
-    s.add(f'<path d="M{elbow[0]-nx*24-ux*30:.1f},{elbow[1]-ny*24-uy*30:.1f} q{nx*14:.1f},{ny*14+8:.1f} {nx*34:.1f},{ny*34:.1f}" '
-          f'fill="none" stroke="{SHIRT_SH}" stroke-width="3"/>')
+    # elbow crease: a short fold across the sleeve just above the elbow, measured along the upper arm so it always
+    # sits inside the sleeve (it used to follow the forearm and could land outside the body on folded arms)
+    ex, ey = elbow[0] - shoulder[0], elbow[1] - shoulder[1]
+    eL = math.hypot(ex, ey) or 1
+    ex, ey = ex / eL, ey / eL
+    px, py = -ey, ex
+    cx, cy = elbow[0] - ex * 24, elbow[1] - ey * 24
+    hw2 = (SLEEVE - 6) * 0.3
+    s.add(f'<path d="M{cx-px*hw2:.1f},{cy-py*hw2:.1f} Q{cx+ex*6:.1f},{cy+ey*6:.1f} {cx+px*hw2:.1f},{cy+py*hw2:.1f}" '
+          f'fill="none" stroke="{SHIRT_SH}" stroke-width="2.6" stroke-linecap="round"/>')
     hand(s, wrist, math.degrees(math.atan2(-dx, dy)), kind, flip, watch)
 
 
@@ -524,18 +514,15 @@ SIG = os.environ.get("VED_SIG", "pen,pin")   # owner pick 2026-11-21: A + B     
 
 def signature_torso(s, sig):
     if "pen" in sig:                          # breast pocket with a gold mechanical pencil: the tool that draws the ideas
-        s.add(f'<path d="M206,430 L272,428 L272,488 Q240,498 208,490 Z" fill="{SHIRT}"/>'
-              f'<path d="M252,429 L272,428 L272,488 Q262,492 252,494 Z" fill="{SHIRT_SH}" opacity="0.7"/>'
-              f'<path d="M208,490 Q240,500 272,488" fill="none" stroke="{SHIRT_DEEP}" stroke-width="2.2" opacity="0.8"/>'
-              f'<path d="M206,430 L206,488 M272,428 L272,488" stroke="{SHIRT_DEEP}" stroke-width="1.4" opacity="0.5"/>')
-        s.add(f'<rect x="234" y="394" width="10" height="44" rx="3" fill="{GOLD}"/>'
-              f'<rect x="237" y="394" width="3" height="44" fill="#f2d48a" opacity="0.8"/>'
-              f'<rect x="234" y="387" width="10" height="9" rx="2" fill="#2b2b30"/>'
-              f'<path d="M244,398 L249,398 L249,440 L244,438 Z" fill="#b8892f"/>')
-        s.add(f'<path d="M206,430 L272,428 L272,438 L206,440 Z" fill="{SHIRT}"/>'
-              f'<path d="M206,438 L272,436" stroke="{SHIRT_DEEP}" stroke-width="2" opacity="0.8"/>')   # pocket lip over the pencil
-    if "pin" in sig:                          # a small spark pin on the collar: the channel's mark
-        s.add(f'<g transform="translate(262,326) rotate(-12) scale(1.35)"><circle r="11" fill="#16232b"/>'
+        s.add(f'<rect x="236" y="366" width="9" height="44" rx="3" fill="{GOLD}"/>'
+              f'<rect x="242" y="366" width="3" height="44" rx="1.5" fill="#b8892f"/>'
+              f'<rect x="236" y="359" width="9" height="9" rx="2" fill="#2b2b30"/>')
+        s.add(f'<path d="M212,402 L266,401 L266,444 Q239,450 212,445 Z" fill="{SHIRT}"/>'
+              f'<path d="M212,445 Q239,451 266,444" fill="none" stroke="{SHIRT_SH}" stroke-width="2.4"/>'
+              f'<path d="M212,402 L266,401" stroke="{SHIRT_SH}" stroke-width="2.4"/>'
+              f'<path d="M214,407 L264,406" stroke="{SHIRT_SH}" stroke-width="1" stroke-dasharray="3 3" opacity="0.8"/>')
+    if "pin" in sig:                          # a small spark pin on the chest by the collar: the channel's mark
+        s.add(f'<g transform="translate(226,334) scale(1.05)"><circle r="11" fill="#16232b"/>'
               f'<path d="M0,-8 L2.4,-2.4 L8,0 L2.4,2.4 L0,8 L-2.4,2.4 L-8,0 L-2.4,-2.4 Z" fill="{GOLD}"/>'
               f'<circle r="11" fill="none" stroke="{GOLD}" stroke-width="1.6"/></g>')
 
@@ -578,8 +565,14 @@ def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None, ar
     if want("front"):
         for shoulder, elbow, wrist, kind, front in arms:      # forearms in front of the body (think, crossed)
             if front:
-                s.limb([shoulder, elbow], [SLEEVE, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
-                arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, upper=False, watch=shoulder[0] > 300)
+                s0 = (shoulder[0] + (elbow[0] - shoulder[0]) * 0.2, shoulder[1] + (elbow[1] - shoulder[1]) * 0.2)
+                s.add(f'<circle cx="{s0[0]:.1f}" cy="{s0[1]:.1f}" r="{SLEEVE / 2 - 1:.1f}" fill="{SHIRT}"/>')   # round top
+                s.limb([s0, elbow], [SLEEVE - 2, SLEEVE - 6], SHIRT, SHIRT_SH, None, 0.62)
+                right = shoulder[0] > 300                 # round the sleeve top into the shoulder again (no flat corner)
+                d = "M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z"
+                s.part(mirror(d) if right else d, SHIRT,
+                       shadow="M408,290 L470,290 L470,420 L408,420 Z" if right else None, shadow_col=SHIRT_SH)
+                arm(s, shoulder, elbow, wrist, kind, right, upper=False, watch=right)
     return s.svg()
 
 
