@@ -43,8 +43,18 @@ def silences(x, sr=16000, win=0.05, min_len=0.35, drop_db=24):
     return out
 
 
+def freezes(path, min_s=1.2):
+    """Stretches where nothing on screen moves for min_s or longer (a still frame reads as a stall)."""
+    r = subprocess.run(["ffmpeg", "-v", "info", "-i", path, "-vf", f"freezedetect=n=0.002:d={min_s}", "-an", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    st = re.findall(r"freeze_start: ([\d.]+)", r.stderr)
+    du = re.findall(r"freeze_duration: ([\d.]+)", r.stderr)
+    return [(round(float(a), 2), round(float(b), 2)) for a, b in zip(st, du)]
+
+
 def blackframes(path):
-    r = subprocess.run(["ffmpeg", "-v", "info", "-i", path, "-vf", "blackdetect=d=0.08:pix_th=0.06", "-an",
+    # picture_black_ratio 0.998: a dark set (night look, a Cutaway dark bench) is not a blank frame
+    r = subprocess.run(["ffmpeg", "-v", "info", "-i", path, "-vf", "blackdetect=d=0.08:pix_th=0.04:pic_th=0.998", "-an",
                         "-f", "null", "-"], capture_output=True, text=True)
     return [(round(float(a), 2), round(float(d), 2))
             for a, d in re.findall(r"black_start:([\d.]+).*?black_duration:([\d.]+)", r.stderr)]
@@ -155,6 +165,11 @@ def check(ctx, final_mp4, out_dir, log=print):
     dips = [ctx.start[i] for i, s in enumerate(scenes) if i and s.get("transition") in ("dip", "fade_black")]
     bl = [b for b in bl if not any(abs(b[0] - d) < 0.4 for d in dips)]      # a dip to black is meant
     rep["black_frames"] = {"spans": bl, "ok": not bl}
+    try:                                                 # learned from Cutaway's verdict: nothing may stand still > 1.2 s
+        fz = freezes(final_mp4)
+    except Exception:
+        fz = []
+    rep["motion"] = {"frozen": fz, "ok": not fz}
     rep["stings"] = getattr(ctx, "stings", [])
     for v in rep.values():
         if isinstance(v, dict) and "ok" in v:

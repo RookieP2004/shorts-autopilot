@@ -345,6 +345,19 @@ the `lofi` and `doc` palettes and is credited automatically ("Music: ..." in the
 caption, from `out/render.json` "credits"); `folk` adds a physically modelled guitar. Blender: `world_hdri("studio" |
 "lounge", strength)` lights a set from a real room (Poly Haven CC0) while the camera sees a plain backdrop.
 
+## Video clips and Cutaway 3D cutaways (owner 2026-11-21; autopilot/cutaway.py)
+`{"type": "video", "path": "jobs/<id>/assets/clip.mp4", "x", "y", "w", "h", "at", "from", "speed"}` plays any clip inside a
+scene (decoded to frames at the layer's size, cached; after its end it holds the last frame). A sidecar
+`clip.mp4.cues.json` (`{"cues": [{t, sfx, gain}]}`) adds its sounds to the mix; a layer `"sfx"` replaces them.
+**Cutaway** (the owner's purchased skill) makes the 3D "how it works" shots: a three.js subject at three scales (macro,
+cut open, whole), labels pinned to parts as the voice names them, 3D word stamps, honesty plates ("Cutaway illustration ·
+movement exaggerated"), a comment-keyword bubble. Its licence forbids a public copy, so it is read from the owner's private
+install and never copied into this public repo: `python -m autopilot.cutaway where | new <name> | render <reel_dir>
+jobs/<id>/assets/cutaway_<name>.mp4 --from S --to S` (reel folders live in /tmp/cutaway-reels; only the rendered clip and
+its cues come into the job). No GPU here: about 5 s a frame at 1080x1920, so keep a cutaway shot to 3-6 s. Hide our
+captions on that scene (`"captions": false`) when the clip carries its own. Its 55 CC0 sounds are in the library as `cw_`
+takes, with new names `press`, `latch`, `ratchet`, `chime`, `sweep`, `hum`.
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

@@ -44,3 +44,13 @@ def test_publish_appends_instrument_credits(tmp_path):
     (tmp_path / "out" / "render.json").write_text(json.dumps({"credits": ['Piano: "Salamander Grand Piano V3" by Alexander Holm, CC BY 3.0']}))
     f = publish.zapier_fields({"title": "x", "description": "d"}, {}, str(job))
     assert "Music: Piano" in f["description"]
+
+
+def test_cutaway_cues_map_to_library_sounds(tmp_path):
+    from autopilot import cutaway
+    (tmp_path / "cue-sheet.json").write_text(json.dumps({"seconds": 10, "ticks": [5.5, 9.9], "events": [
+        {"t": 1.0, "role": "press"}, {"t": 5.2, "role": "swoosh"}, {"t": 6.0, "role": "ratchet"}, {"t": 7.0, "role": "click"}]}))
+    c = cutaway.cues_from_sheet(str(tmp_path), 5.0, 9.0)
+    assert [x["sfx"] for x in c] == ["whoosh", "tick", "ratchet", "latch"] and c[0]["t"] == 0.2
+    assert all(x["sfx"] in SFX for x in c)
+    assert all(v in SFX for v in cutaway.ROLE.values())

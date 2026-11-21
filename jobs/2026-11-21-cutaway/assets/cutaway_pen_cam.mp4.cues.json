@@ -1,0 +1,57 @@
+{
+ "source": "Cutaway reel (owner's licence); clip and cues are our output",
+ "from": 5.4,
+ "to": 9.6,
+ "cues": [
+  {
+   "t": 0.1,
+   "sfx": "whoosh",
+   "gain": 0.8
+  },
+  {
+   "t": 0.9,
+   "sfx": "press",
+   "gain": 0.8
+  },
+  {
+   "t": 1.06,
+   "sfx": "ratchet",
+   "gain": 0.8
+  },
+  {
+   "t": 1.22,
+   "sfx": "ding",
+   "gain": 0.8
+  },
+  {
+   "t": 1.22,
+   "sfx": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 1.27,
+   "sfx": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 1.32,
+   "sfx": "tick",
+   "gain": 0.45
+  },
+  {
+   "t": 1.8,
+   "sfx": "ratchet",
+   "gain": 0.8
+  },
+  {
+   "t": 2.08,
+   "sfx": "latch",
+   "gain": 0.8
+  },
+  {
+   "t": 2.6,
+   "sfx": "whoosh",
+   "gain": 0.8
+  }
+ ]
+}

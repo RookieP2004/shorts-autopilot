@@ -43,3 +43,4 @@
 - whoosh/ov_1.flac: "13th Whoosh Swing Sound" by qubodup (freesound, CC0) https://freesound.org/people/qubodup/sounds/60000
 - whoosh/ov_2.flac: "Backwards Whoosh" by SlavicMagic (freesound, CC0) https://freesound.org/people/SlavicMagic/sounds/446010
 - projector/ov_1.flac: "projectr.wav" by Jedimichael (freesound, CC0) https://freesound.org/people/Jedimichael/sounds/83896
+- cw_*: Cutaway SFX set (55 sounds generated from oscillators and noise by its synth_sfx.py, seed 7), CC0 1.0

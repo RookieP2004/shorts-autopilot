@@ -66,6 +66,27 @@ def render_shots(ctx, log=print):
         return
     for i, s in enumerate(ctx.job["scenes"]):
         for j, L in enumerate(s.get("layers", [])):
+            if L.get("type") == "video":                  # a clip (e.g. a Cutaway 3D cutaway) decoded to frames at the layer's size
+                src = L["path"] if os.path.isabs(L["path"]) else os.path.join(ctx.root, L["path"])
+                fps = L.get("fps", ctx.fps)
+                w = int(round(ctx.W * L.get("w", 1.0) / 2)) * 2
+                h = int(round(ctx.H * L.get("h", 1.0) / 2)) * 2
+                out = os.path.join(ctx.shots_dir, f"v{i:02d}_l{j:02d}")
+                key = f"{src}|{os.path.getmtime(src)}|{w}x{h}|{fps}|{L.get('from', 0)}|{L.get('speed', 1)}"
+                done = os.path.join(out, ".done")
+                if not (os.path.exists(done) and open(done).read() == key):
+                    shutil.rmtree(out, ignore_errors=True)
+                    os.makedirs(out, exist_ok=True)
+                    sp = float(L.get("speed", 1.0))
+                    vf = f"setpts=PTS/{sp},fps={fps},scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h}"
+                    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", str(L.get("from", 0)), "-i", src, "-vf", vf,
+                                    os.path.join(out, "f_%05d.png")], check=True)
+                    open(done, "w").write(key)
+                log(f"  video scene {i} layer {j}: {os.path.basename(src)} {w}x{h}")
+                L["_frames_dir"], L["_fps"] = out, fps
+                cf = src + ".cues.json"
+                L["_cues"] = json.load(open(cf)).get("cues", []) if os.path.exists(cf) else []
+                continue
             if L.get("type") == "look":                   # Reelsmith look (autopilot/looks.py, reelsmith/looks/<id>)
                 from . import looks
                 dur = L.get("dur", ctx.dur[i] - L.get("at", 0.0))
@@ -318,6 +339,12 @@ def mix(ctx):
                 stings.append((ctx.start[i] + L.get("at", 0) + sg[0], sg[1]))
             if L.get("sfx") and L["sfx"] != "none":
                 cues.append((ctx.start[i] + L.get("at", 0), L["sfx"], L.get("sfx_gain", 1.0)))
+            elif L.get("type") == "video" and "sfx" not in L and L.get("_cues"):          # a clip's sidecar cues (Cutaway)
+                sp = float(L.get("speed", 1.0))
+                for c in L["_cues"]:
+                    tt = (c["t"] - L.get("from", 0)) / sp
+                    if 0 <= tt < ctx.dur[i] - L.get("at", 0) and c.get("sfx") in audio_names():
+                        cues.append((ctx.start[i] + L.get("at", 0) + tt, c["sfx"], c.get("gain", 1.0)))
             elif L.get("type") == "look" and "sfx" not in L and L.get("_frames_dir"):   # a look brings its own cues
                 from . import looks
                 for c in looks.cues(L["_frames_dir"]):

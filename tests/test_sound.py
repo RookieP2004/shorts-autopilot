@@ -14,7 +14,7 @@ from autopilot.spec import SFX  # noqa: E402
 
 def test_library_ranks_sources_and_varies_takes():
     takes = audio.lib_takes("whoosh")
-    assert takes and all(os.path.basename(t).startswith(("ov_", "ui_", "es_")) for t in takes)
+    assert takes and all(os.path.basename(t).startswith(("ov_", "ui_", "cw_", "es_")) for t in takes)
     pre = os.path.basename(takes[0])[:3]
     assert all(os.path.basename(t)[:3] == pre for t in takes)            # only the best source is used
     a, b = audio.sfx("whoosh", 0), audio.sfx("whoosh", 1)

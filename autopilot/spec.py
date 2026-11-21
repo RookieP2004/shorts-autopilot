@@ -43,7 +43,7 @@ LAYER_TYPES = {"character", "text", "shape", "image", "counter", "scene3d", "ble
                "headline", "figures",                                                   # reference-reel style
                "hud", "eqbar", "tracker", "stamp", "optcard", "phone", "crowd", "nodes", "burst",   # night set (night.py)
                "dottext", "bignum", "dateline", "tiles", "tipnum", "clock", "blinds", "flows",       # case file (dossier.py)
-               "motion", "look"}                                                                 # Remotion/GSAP/three.js clips (remotion.py)
+               "motion", "look", "video"}                                                                 # Remotion/GSAP/three.js clips (remotion.py)
 LOOKS = {"town", "night", "moody"}
 MONEY_WORDS = ("\u20b9", "$", "rs", "crore", "lakh")
 SHAPES3D = {"box", "sphere", "cylinder", "cone", "plane", "terrain", "person", "tree", "building"}
@@ -52,7 +52,8 @@ TRANSITIONS = {"cut", "fade", "slide_left", "slide_up", "zoom", "flash", "whip",
 SFX = {"pop", "whoosh", "ding", "click", "boom", "riser", "scratch", "crickets", "wah", "none",
        "paper", "tape", "marker", "shutter", "type", "thud", "hit", "swoosh_soft", "projector",   # documentary
        "splash", "bubbles", "footsteps", "stomp", "heartbeat", "tick", "slide", "cash", "drone",  # foley kit
-       "braam", "stamp", "coin", "register", "glitch", "door", "vibrate", "notify", "error", "success", "lock"}  # sound library
+       "braam", "stamp", "coin", "register", "glitch", "door", "vibrate", "notify", "error", "success", "lock",  # sound library
+       "press", "latch", "ratchet", "chime", "sweep", "hum"}  # mechanisms (Cutaway CC0 set)
 # comedy beats: a short, unexpected moment (see docs/job-spec.md "Beats"). Defaults per kind.
 BEATS = {
     "deadpan":    {"dur": 1.3, "sfx": "none",     "music": "cut",  "zoom": 1.55},   # flat stare at camera, arms cross
@@ -263,6 +264,10 @@ def validate_job(job, style, chars, root=ROOT):
                 from .remotion import COMPS
                 if L.get("comp") not in COMPS:
                     errs.append(f"{w}: motion comp '{L.get('comp')}' not in {sorted(COMPS)}")
+            elif t == "video":
+                vp = L.get("path", "")
+                if not vp or not os.path.exists(vp if os.path.isabs(vp) else os.path.join(root, vp)):
+                    errs.append(f"{w}: video needs 'path' to an existing clip (e.g. a Cutaway render in jobs/<id>/assets/)")
             elif t == "look":
                 from .looks import resolve
                 try:

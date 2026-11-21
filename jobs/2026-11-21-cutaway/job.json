@@ -1,0 +1,153 @@
+{
+  "id": "2026-11-21-cutaway",
+  "title": "DEMO: a Cutaway 3D cutaway inside a house-style Short",
+  "privacy": "private",
+  "speaker": "ved",
+  "meta": {
+    "format": "DEMO",
+    "topic": "click pen mechanism (Cutaway template subject), not for posting",
+    "characters": [
+      "ved"
+    ],
+    "sources": []
+  },
+  "tags": [
+    "demo"
+  ],
+  "description": "Demo (not for posting).",
+  "music": {
+    "style": "ambient"
+  },
+  "scenes": [
+    {
+      "say": "Every pen *click* hides a tiny machine.",
+      "caption_y": 0.42,
+      "pad": 0.2,
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "zoom": 1.0,
+            "focus": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "t": 3,
+            "zoom": 1.08,
+            "focus": [
+              0.5,
+              0.45
+            ]
+          }
+        ]
+      },
+      "layers": [
+        {
+          "type": "image",
+          "path": "jobs/2026-11-08-b/assets/plate_town_all.png",
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1.0,
+          "enter": "none"
+        },
+        {
+          "type": "character",
+          "id": "ved",
+          "pose": "surprised",
+          "x": 0.5,
+          "y": 1.0,
+          "h": 0.6,
+          "enter": "none",
+          "acting": [
+            [
+              "surprised",
+              0
+            ],
+            [
+              "explain",
+              1.4
+            ]
+          ],
+          "ground": false,
+          "allow_outside_safe": true
+        }
+      ]
+    },
+    {
+      "say": "It's a cam with six teeth. Push, and it turns one notch.",
+      "transition": "whip",
+      "captions": false,
+      "pad": 0.1,
+      "layers": [
+        {
+          "type": "video",
+          "path": "jobs/2026-11-21-cutaway/assets/cutaway_pen_cam.mp4",
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1.0,
+          "h": 1.0,
+          "at": 0
+        }
+      ]
+    },
+    {
+      "say": "No battery. No code. Just clever *plastic*.",
+      "transition": "zoom",
+      "caption_y": 0.42,
+      "pad": 0.5,
+      "camera": {
+        "keys": [
+          {
+            "t": 0,
+            "zoom": 1.1,
+            "focus": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "t": 3,
+            "zoom": 1.0,
+            "focus": [
+              0.5,
+              0.5
+            ]
+          }
+        ]
+      },
+      "layers": [
+        {
+          "type": "image",
+          "path": "jobs/2026-11-08-b/assets/plate_town_all.png",
+          "x": 0.5,
+          "y": 0.5,
+          "w": 1.0,
+          "enter": "none"
+        },
+        {
+          "type": "character",
+          "id": "ved",
+          "pose": "warm",
+          "x": 0.5,
+          "y": 1.0,
+          "h": 0.6,
+          "enter": "none",
+          "acting": [
+            [
+              "warm",
+              0
+            ],
+            [
+              "point",
+              1.5
+            ]
+          ],
+          "ground": false,
+          "allow_outside_safe": true
+        }
+      ]
+    }
+  ]
+}

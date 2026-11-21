@@ -338,7 +338,7 @@ def _doc_music(duration, cfg, rng, root, sc, prog, bars_per_chord, bar, beat):
 # ---------------- sfx ----------------
 LIB = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "sfx", "lib")
 _LIB_CACHE = {}
-SOURCE_RANK = ("ov_", "ui_", "es_")          # real recordings (Openverse CC0) > CC0 UI pack > earshot renders > synth
+SOURCE_RANK = ("ov_", "ui_", "cw_", "es_")   # real recordings (Openverse CC0) > CC0 UI pack > Cutaway CC0 set > earshot renders > synth
 
 
 def lib_takes(name):
@@ -364,9 +364,9 @@ def _load(path):
     return _LIB_CACHE[path]
 
 
-PEAK_SYNC = {"hit", "thud", "stomp", "stamp", "boom", "pop", "click", "ding", "coin", "cash", "shutter", "door", "splash", "tick",
+PEAK_SYNC = {"press","latch","ratchet","chime","hit", "thud", "stomp", "stamp", "boom", "pop", "click", "ding", "coin", "cash", "shutter", "door", "splash", "tick",
              "braam", "register", "notify", "error", "success", "lock", "glitch", "slide", "paper", "tape"}
-APEX_LATE = {"whoosh", "swoosh_soft", "riser"}
+APEX_LATE = {"whoosh", "swoosh_soft", "riser", "sweep"}
 
 
 def peak_time(x, smooth=0.01):

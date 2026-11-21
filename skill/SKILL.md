@@ -172,6 +172,14 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   prepares and checks them, `reelsmith/engine/lemo.mjs` renders one for study, and a look may build on a vendored engine
   (`reelsmith/vendor/lemo/`, credited in NOTICE), never on their written guides. A new look is a new style: build it in `reelsmith/looks/RS-NN-name` with stills and a
   `LOOK.md`, and it needs the owner's OK before a public video uses it.
+- **Cutaway 3D cutaways (owner bought it, 2026-11-21)**: for "how does X work" topics, one 3-6 s Cutaway shot per Short
+  (macro -> cut open -> whole, parts labelled as Ved names them, an honesty plate on anything magnified or exaggerated),
+  played as a `video` layer between Ved's town scenes. Follow the owner's Cutaway skill for building the reel; use
+  `python -m autopilot.cutaway` to set it up outside the repo and render the clip into `jobs/<id>/assets/`. Never copy
+  Cutaway's code, text or guides into this public repo. If the skill is not installed in the session, skip the shot.
+  Lessons we adopted from it (our rules): scale tells the story (cut only on a big change of magnification), every beat
+  starts with a visible trigger, name every part when it is said, plate every exaggeration, a number shows its source or
+  "illustrative", end on a hard stop 0.4-1 s after the last word (no fade-out), nothing on screen frozen over 1.2 s.
 - **Style donors (Lemo-Opuscar's 99 film styles)**: `sh scripts/lemo_styles.sh` fetches the library into /tmp/lemo and lists
   the styles that suit us (dark documentary, halftone dossier, visual investigation, news package, map explainer,
   telestrator, text flash cuts, countdown, data physicalization...). For a Deep Dive, or a Short that needs a new idea, pick
