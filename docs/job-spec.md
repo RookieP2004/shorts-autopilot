@@ -358,6 +358,19 @@ its cues come into the job). No GPU here: about 5 s a frame at 1080x1920, so kee
 captions on that scene (`"captions": false`) when the clip carries its own. Its 55 CC0 sounds are in the library as `cw_`
 takes, with new names `press`, `latch`, `ratchet`, `chime`, `sweep`, `hum`.
 
+## Ved v9 and character styles (owner 2026-11-21: character redesign, "refine, same Ved")
+Ved is the same character, drawn with more craft (cool rim light, quiff shadow, richer eyes and brows, shirt drape)
+and a signature the owner picked: a gold pencil in a breast pocket and a gold spark pin on the collar (`VED_SIG` in
+characters/ved/make.py; on in every front pose). Model sheet: docs/sheets/professor_ved_model_sheet_v9.png.
+- `"style"` on a character layer draws him in the scene's look: `marker` (whiteboard, RS-13), `chalk` (RS-07),
+  `riso` (RS-11), `film` (RS-14 silent card), `ink` (RS-15). Night sets keep using `"look": "night"` (rim light).
+  Same poses, lip-sync and blinks; only the rendering changes (autopilot/charstyle.py).
+- Icon: assets/brand/ved_icon_badge.png (avatar, end card), ved_icon_laugh.png, ved_icon_mono.png (gold watermark).
+- 3D Ved: `python characters/ved/ved3d.py --pose explain --angles -30,0,28 --out DIR` builds him as a layered paper
+  standee (body, head, front forearm at three depths, cream card edge) on a gold-ringed base in a lit Blender set;
+  `--orbit 2` renders an orbit. About 20 s a still at 540x960 on CPU. Use the stills as `image` layers or the frames
+  as a `video` clip. All of this is a DEMO until the owner approves the sheet.
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

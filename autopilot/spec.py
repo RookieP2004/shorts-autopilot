@@ -211,6 +211,8 @@ def validate_job(job, style, chars, root=ROOT):
                 if cid not in chars:
                     errs.append(f"{w}: character '{cid}' not found")
                 else:
+                    if L.get("style") and L["style"] not in ("marker", "chalk", "riso", "film", "ink"):
+                        errs.append(f"{w}: character style '{L['style']}' not in marker/chalk/riso/film/ink")
                     pose = L.get("pose", "idle")
                     if pose not in chars[cid]["poses"]:
                         errs.append(f"{w}: pose '{pose}' missing for '{cid}' "
