@@ -212,25 +212,108 @@ def write_wav(path, x):
         w.writeframes((x * 32767).astype("<i2").tobytes())
 
 
+def auto_sfx(L, scene_dur):
+    """Default sounds for layers that did not name one (Real SFX: a moment on screen gets a real sound on its frame).
+    Returns [(seconds after the layer's `at`, name, gain)]. "sfx": "none" on a layer silences it."""
+    t = L.get("type")
+    out = []
+    if t == "stamp":
+        out.append((0.14, "stamp", 1.0))
+    elif t == "optcard":
+        out.append((0.05, "pop", 0.6))
+        if L.get("verdict"):
+            out.append((L.get("verdict_at", 0) - L.get("at", 0) + 0.05, "error" if L["verdict"] == "cross" else "success", 0.8))
+    elif t == "tracker":
+        out += [(d - L.get("at", 0), "tick", 0.7) for d in L.get("done", [])]
+    elif t == "tiles":
+        out += [(pt, "tick", 0.6) for pt, _ in L.get("progress", [])]
+    elif t == "hud":
+        out.append((0.05, "pop", 0.5))
+        out += [(st_ - 0.0, "tick", 0.5) for st_, _ in L.get("steps", [])[1:]]
+    elif t in ("bignum", "tipnum"):
+        out.append((0.05, "hit", 0.7))
+    elif t in ("dateline", "dottext"):
+        out.append((0.02, "type", 0.45))
+    elif t == "phone":
+        out.append((0.0, "swoosh_soft", 0.6))
+        sc = L.get("screen") or {}
+        for el in sc.get("msgs", []) + sc.get("notes", []) + sc.get("rows", []):
+            if "at" in el:
+                out.append((el["at"], "notify", 0.55))
+    elif t == "burst":
+        out.append((0.0, "cash", 0.9))
+    elif t == "motion":
+        comp = L.get("comp")
+        if comp == "NumberSlam":
+            out.append((0.15 + (L.get("props") or {}).get("roll", 0.9), "hit", 1.0))
+        elif comp == "KineticTitle":
+            out.append((0.1, "hit" if (L.get("props") or {}).get("style") == "slam" else "whoosh", 0.8))
+        elif comp == "Stack3D":
+            out += [(0.25 + k * 0.35, "thud", 0.45) for k in range(4)]
+        elif comp == "FlowDiagram":
+            n = len((L.get("props") or {}).get("nodes", []))
+            st_ = (L.get("props") or {}).get("step", 0.45)
+            out += [(0.1 + k * st_, "pop", 0.55) for k in range(n)]
+    elif t == "chapter":
+        out.append((0.0, "swoosh_soft", 0.8))
+    return [(max(0.0, o), n_, g) for o, n_, g in out if o < scene_dur]
+
+
 def mix(ctx):
     st = ctx.style
     n = int(round(ctx.total * audio.SR))
     vo = np.zeros(n, dtype=np.float32)
     fx = np.zeros(n, dtype=np.float32)
+    cues = []                                            # every sound effect: (time, name, gain), checked by autopilot.ears
     for i, s in enumerate(ctx.job["scenes"]):
         audio.add(vo, ctx.vo[i], ctx.start[i] + ctx.lead_of(i))
         name = s.get("sfx")
         if name is None and i > 0:
             tr = s.get("transition", st["transition"]["type"])
-            name = "whoosh" if tr in ("slide_left", "slide_up", "zoom") else None
+            name = "whoosh" if tr in ("slide_left", "slide_up", "zoom", "push", "whip") else None
         if name and name != "none":
-            audio.add(fx, audio.sfx(name, i) * st["sfx"]["volume"], ctx.start[i] + s.get("sfx_at", 0))
+            cues.append((ctx.start[i] + s.get("sfx_at", 0), name, 1.0))
         for b in ctx.beats[i]:
             if b.get("sfx", "none") != "none":
-                audio.add(fx, audio.sfx(b["sfx"], i) * st["sfx"]["volume"] * b.get("sfx_gain", 1.0), ctx.start[i] + b["at"])
+                cues.append((ctx.start[i] + b["at"], b["sfx"], b.get("sfx_gain", 1.0)))
         for L in s.get("layers", []):
             if L.get("sfx") and L["sfx"] != "none":
-                audio.add(fx, audio.sfx(L["sfx"], i) * st["sfx"]["volume"], ctx.start[i] + L.get("at", 0))
+                cues.append((ctx.start[i] + L.get("at", 0), L["sfx"], L.get("sfx_gain", 1.0)))
+            elif "sfx" not in L and st["sfx"].get("auto", True):       # every visible action brings its own sound
+                for off, nm, g in auto_sfx(L, ctx.dur[i]):
+                    cues.append((ctx.start[i] + L.get("at", 0) + off, nm, g))
+    # real-sfx rules: no doubling (two effects inside 90 ms -> keep the first), a different take for every use
+    cues.sort()
+    kept = []
+    for t, nm, g in cues:
+        if kept and t - kept[-1][0] < 0.09:
+            continue
+        kept.append((t, nm, g))
+    uses = {}
+    placed = []
+    for t, nm, g in kept:
+        k = uses.get(nm, 0)
+        uses[nm] = k + 1
+        x = audio.sfx(nm, k + int(t * 7)) * st["sfx"]["volume"] * g
+        pk = audio.peak_time(x)                          # real-sfx rule: the PEAK lands on the frame, not the start
+        if nm in audio.APEX_LATE:                        # whooshes: the apex lands just after the cut
+            at = t - pk + 0.08
+        elif nm in audio.PEAK_SYNC:
+            at = t - pk
+        else:
+            at = t
+        at = max(0.0, at)
+        audio.add(fx, x, at)
+        placed.append((t, nm, round(at, 3), round(pk, 3)))
+    # voice-safe: effects step back about 4 dB while Ved speaks (hits and stamps keep their punch: only the tail ducks)
+    if st["sfx"].get("voice_safe", True):
+        env = np.abs(vo)
+        k = int(0.06 * audio.SR)
+        env = np.convolve(env, np.ones(k) / k, mode="same")
+        speech = np.clip(env / (env.max() + 1e-9) * 6, 0, 1)
+        fx = fx * (1 - 0.37 * speech)
+    ctx.sfx_cues = placed
+    ctx.fx_stem = fx
     m = st["music"]
     jm = ctx.job.get("music", {})
     m = {**m, **jm}
@@ -320,6 +403,11 @@ def render(job_path, out_dir, root=ROOT, workers=None, log=print):
     info = {"duration": round(total, 2), "frames": sum(ctx.frames), "scenes": n,
             "size_mb": round(os.path.getsize(final) / 1e6, 1), "w": ctx.W, "h": ctx.H,
             "scene_starts": [round(s, 2) for s in ctx.start]}
+    try:                                                 # measured, not heard: loudness, sync, clutter, balance
+        from . import ears
+        info["ears"] = {k: v for k, v in ears.check(ctx, final, out_dir, log).items() if k != "sync"}
+    except Exception as e:                               # the ears never block a render
+        log(f"ears: skipped ({e})")
     with open(os.path.join(out_dir, "render.json"), "w") as f:
         json.dump(info, f, indent=2)
     log(f"done -> {final}")

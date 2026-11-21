@@ -1,0 +1,892 @@
+{
+ "boom/es_0.flac": {
+  "source": "earshot",
+  "design": "boom/deep",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "boom/es_1.flac": {
+  "source": "earshot",
+  "design": "boom/deep",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "boom/es_2.flac": {
+  "source": "earshot",
+  "design": "boom/heavy",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "boom/es_3.flac": {
+  "source": "earshot",
+  "design": "boom/heavy",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "boom/es_4.flac": {
+  "source": "earshot",
+  "design": "boom/short",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "boom/es_5.flac": {
+  "source": "earshot",
+  "design": "boom/short",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "braam/es_0.flac": {
+  "source": "earshot",
+  "design": "braam/brass",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "braam/es_1.flac": {
+  "source": "earshot",
+  "design": "braam/brass",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "braam/es_2.flac": {
+  "source": "earshot",
+  "design": "braam/brass",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "bubbles/es_0.flac": {
+  "source": "earshot",
+  "design": "bubble/rise",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "bubbles/es_1.flac": {
+  "source": "earshot",
+  "design": "bubble/rise",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "bubbles/es_2.flac": {
+  "source": "earshot",
+  "design": "water/plop",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "bubbles/es_3.flac": {
+  "source": "earshot",
+  "design": "water/plop",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "cash/es_0.flac": {
+  "source": "earshot",
+  "design": "coins/handful",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "cash/es_1.flac": {
+  "source": "earshot",
+  "design": "coins/handful",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "cash/es_2.flac": {
+  "source": "earshot",
+  "design": "coin/drop",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "cash/es_3.flac": {
+  "source": "earshot",
+  "design": "coin/drop",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "cash/es_4.flac": {
+  "source": "earshot",
+  "design": "cash_register/open",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "cash/es_5.flac": {
+  "source": "earshot",
+  "design": "cash_register/open",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "click/es_0.flac": {
+  "source": "earshot",
+  "design": "tick/switch",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "click/es_1.flac": {
+  "source": "earshot",
+  "design": "tick/switch",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "click/es_2.flac": {
+  "source": "earshot",
+  "design": "pen/click",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "click/es_3.flac": {
+  "source": "earshot",
+  "design": "pen/click",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "click/es_4.flac": {
+  "source": "earshot",
+  "design": "tick/key",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "click/es_5.flac": {
+  "source": "earshot",
+  "design": "tick/key",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "click/ui_0.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "minimal/select.mp3",
+  "licence": "CC0 1.0"
+ },
+ "click/ui_1.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "mechanical/press.mp3",
+  "licence": "CC0 1.0"
+ },
+ "coin/es_0.flac": {
+  "source": "earshot",
+  "design": "coin/drop",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "coin/es_1.flac": {
+  "source": "earshot",
+  "design": "coin/drop",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "coin/es_2.flac": {
+  "source": "earshot",
+  "design": "coin/flip",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "coin/es_3.flac": {
+  "source": "earshot",
+  "design": "coin/flip",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "coin/es_4.flac": {
+  "source": "earshot",
+  "design": "tick/metal",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "coin/es_5.flac": {
+  "source": "earshot",
+  "design": "tick/metal",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "ding/es_0.flac": {
+  "source": "earshot",
+  "design": "coin/bright",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "ding/es_1.flac": {
+  "source": "earshot",
+  "design": "coin/bright",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "ding/es_2.flac": {
+  "source": "earshot",
+  "design": "success/done",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "ding/es_3.flac": {
+  "source": "earshot",
+  "design": "success/done",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "ding/ui_0.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "glass/success.mp3",
+  "licence": "CC0 1.0"
+ },
+ "ding/ui_1.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "minimal/complete.mp3",
+  "licence": "CC0 1.0"
+ },
+ "door/es_0.flac": {
+  "source": "earshot",
+  "design": "door/close",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "door/es_1.flac": {
+  "source": "earshot",
+  "design": "door/close",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "door/es_2.flac": {
+  "source": "earshot",
+  "design": "door/slam",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "door/es_3.flac": {
+  "source": "earshot",
+  "design": "door/slam",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "door/es_4.flac": {
+  "source": "earshot",
+  "design": "door/knock",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "door/es_5.flac": {
+  "source": "earshot",
+  "design": "door/knock",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "error/ui_0.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "minimal/error.mp3",
+  "licence": "CC0 1.0"
+ },
+ "error/ui_1.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "glass/error.mp3",
+  "licence": "CC0 1.0"
+ },
+ "footsteps/es_0.flac": {
+  "source": "earshot",
+  "design": "step/tile",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "footsteps/es_1.flac": {
+  "source": "earshot",
+  "design": "step/tile",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "footsteps/es_2.flac": {
+  "source": "earshot",
+  "design": "step/concrete",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "footsteps/es_3.flac": {
+  "source": "earshot",
+  "design": "step/concrete",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "footsteps/es_4.flac": {
+  "source": "earshot",
+  "design": "step/wood",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "footsteps/es_5.flac": {
+  "source": "earshot",
+  "design": "step/wood",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "glitch/es_0.flac": {
+  "source": "earshot",
+  "design": "glitch/short",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "glitch/es_1.flac": {
+  "source": "earshot",
+  "design": "glitch/short",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "glitch/es_2.flac": {
+  "source": "earshot",
+  "design": "glitch/short",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "heartbeat/es_0.flac": {
+  "source": "earshot",
+  "design": "heartbeat/pulse",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "heartbeat/es_1.flac": {
+  "source": "earshot",
+  "design": "heartbeat/pulse",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "heartbeat/es_2.flac": {
+  "source": "earshot",
+  "design": "heartbeat/pulse",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "hit/es_0.flac": {
+  "source": "earshot",
+  "design": "slam/title",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "hit/es_1.flac": {
+  "source": "earshot",
+  "design": "slam/title",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "hit/es_2.flac": {
+  "source": "earshot",
+  "design": "impact/suck",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "hit/es_3.flac": {
+  "source": "earshot",
+  "design": "impact/suck",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "hit/es_4.flac": {
+  "source": "earshot",
+  "design": "hit/crit",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "hit/es_5.flac": {
+  "source": "earshot",
+  "design": "hit/crit",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "lock/ui_0.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "minimal/lock.mp3",
+  "licence": "CC0 1.0"
+ },
+ "lock/ui_1.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "mechanical/lock.mp3",
+  "licence": "CC0 1.0"
+ },
+ "marker/es_0.flac": {
+  "source": "earshot",
+  "design": "marker/whiteboard",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "marker/es_1.flac": {
+  "source": "earshot",
+  "design": "marker/whiteboard",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "marker/es_2.flac": {
+  "source": "earshot",
+  "design": "marker/whiteboard",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "notify/ui_0.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "minimal/notification.mp3",
+  "licence": "CC0 1.0"
+ },
+ "notify/ui_1.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "glass/notification.mp3",
+  "licence": "CC0 1.0"
+ },
+ "notify/ui_2.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "soft/notification.mp3",
+  "licence": "CC0 1.0"
+ },
+ "paper/es_0.flac": {
+  "source": "earshot",
+  "design": "slide/paper",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "paper/es_1.flac": {
+  "source": "earshot",
+  "design": "slide/paper",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "paper/es_2.flac": {
+  "source": "earshot",
+  "design": "paper/page",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "paper/es_3.flac": {
+  "source": "earshot",
+  "design": "paper/page",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "paper/es_4.flac": {
+  "source": "earshot",
+  "design": "paper/card",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "paper/es_5.flac": {
+  "source": "earshot",
+  "design": "paper/card",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "pop/ui_0.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "soft/select.mp3",
+  "licence": "CC0 1.0"
+ },
+ "pop/ui_1.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "glass/select.mp3",
+  "licence": "CC0 1.0"
+ },
+ "pop/ui_2.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "minimal/press.mp3",
+  "licence": "CC0 1.0"
+ },
+ "projector/es_0.flac": {
+  "source": "earshot",
+  "design": "an old film projector running, a mechanical clatter",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "projector/es_1.flac": {
+  "source": "earshot",
+  "design": "an old film projector running, a mechanical clatter",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "projector/es_2.flac": {
+  "source": "earshot",
+  "design": "an old film projector running, a mechanical clatter",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "register/es_0.flac": {
+  "source": "earshot",
+  "design": "cash_register/open",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "register/es_1.flac": {
+  "source": "earshot",
+  "design": "cash_register/open",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "register/es_2.flac": {
+  "source": "earshot",
+  "design": "cash_register/open",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "riser/es_0.flac": {
+  "source": "earshot",
+  "design": "a rising cinematic tension riser that swells and stops",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "riser/es_1.flac": {
+  "source": "earshot",
+  "design": "a rising cinematic tension riser that swells and stops",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "riser/es_2.flac": {
+  "source": "earshot",
+  "design": "a rising cinematic tension riser that swells and stops",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "shutter/es_0.flac": {
+  "source": "earshot",
+  "design": "camera/shutter",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "shutter/es_1.flac": {
+  "source": "earshot",
+  "design": "camera/shutter",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "shutter/es_2.flac": {
+  "source": "earshot",
+  "design": "camera/shutter",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "slide/es_0.flac": {
+  "source": "earshot",
+  "design": "slide/panel",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "slide/es_1.flac": {
+  "source": "earshot",
+  "design": "slide/panel",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "slide/es_2.flac": {
+  "source": "earshot",
+  "design": "slide/paper",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "slide/es_3.flac": {
+  "source": "earshot",
+  "design": "slide/paper",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "splash/es_0.flac": {
+  "source": "earshot",
+  "design": "splash/small",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "splash/es_1.flac": {
+  "source": "earshot",
+  "design": "splash/small",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "splash/es_2.flac": {
+  "source": "earshot",
+  "design": "splash/plunge",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "splash/es_3.flac": {
+  "source": "earshot",
+  "design": "splash/plunge",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "splash/es_4.flac": {
+  "source": "earshot",
+  "design": "splash/big",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "splash/es_5.flac": {
+  "source": "earshot",
+  "design": "splash/big",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "stamp/es_0.flac": {
+  "source": "earshot",
+  "design": "stamp/press",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "stamp/es_1.flac": {
+  "source": "earshot",
+  "design": "stamp/press",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "stamp/es_2.flac": {
+  "source": "earshot",
+  "design": "stamp/press",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "stomp/es_0.flac": {
+  "source": "earshot",
+  "design": "hit/crit",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "stomp/es_1.flac": {
+  "source": "earshot",
+  "design": "hit/crit",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "stomp/es_2.flac": {
+  "source": "earshot",
+  "design": "slam/title",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "stomp/es_3.flac": {
+  "source": "earshot",
+  "design": "slam/title",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "stomp/es_4.flac": {
+  "source": "earshot",
+  "design": "hit/drop",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "stomp/es_5.flac": {
+  "source": "earshot",
+  "design": "hit/drop",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "success/ui_0.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "glass/success.mp3",
+  "licence": "CC0 1.0"
+ },
+ "success/ui_1.flac": {
+  "source": "uisfx (via Clipwing real-sfx)",
+  "file": "soft/success.mp3",
+  "licence": "CC0 1.0"
+ },
+ "swoosh_soft/es_0.flac": {
+  "source": "earshot",
+  "design": "whoosh/soft",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "swoosh_soft/es_1.flac": {
+  "source": "earshot",
+  "design": "whoosh/soft",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "swoosh_soft/es_2.flac": {
+  "source": "earshot",
+  "design": "swoosh/out",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "swoosh_soft/es_3.flac": {
+  "source": "earshot",
+  "design": "swoosh/out",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "swoosh_soft/es_4.flac": {
+  "source": "earshot",
+  "design": "whoosh/airy",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "swoosh_soft/es_5.flac": {
+  "source": "earshot",
+  "design": "whoosh/airy",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "tape/es_0.flac": {
+  "source": "earshot",
+  "design": "tape/peel",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "tape/es_1.flac": {
+  "source": "earshot",
+  "design": "tape/peel",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "tape/es_2.flac": {
+  "source": "earshot",
+  "design": "tape/peel",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "thud/es_0.flac": {
+  "source": "earshot",
+  "design": "hit/drop",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "thud/es_1.flac": {
+  "source": "earshot",
+  "design": "hit/drop",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "thud/es_2.flac": {
+  "source": "earshot",
+  "design": "boom/short",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "thud/es_3.flac": {
+  "source": "earshot",
+  "design": "boom/short",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "thud/es_4.flac": {
+  "source": "earshot",
+  "design": "boom/door",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "thud/es_5.flac": {
+  "source": "earshot",
+  "design": "boom/door",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "tick/es_0.flac": {
+  "source": "earshot",
+  "design": "clock/tick",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "tick/es_1.flac": {
+  "source": "earshot",
+  "design": "clock/tick",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "tick/es_2.flac": {
+  "source": "earshot",
+  "design": "tick/wood",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "tick/es_3.flac": {
+  "source": "earshot",
+  "design": "tick/wood",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "tick/es_4.flac": {
+  "source": "earshot",
+  "design": "tick/metal",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "tick/es_5.flac": {
+  "source": "earshot",
+  "design": "tick/metal",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "type/es_0.flac": {
+  "source": "earshot",
+  "design": "type/run",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "type/es_1.flac": {
+  "source": "earshot",
+  "design": "type/run",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "type/es_2.flac": {
+  "source": "earshot",
+  "design": "keyboard/mechanical",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "type/es_3.flac": {
+  "source": "earshot",
+  "design": "keyboard/mechanical",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "type/es_4.flac": {
+  "source": "earshot",
+  "design": "typewriter/key",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "type/es_5.flac": {
+  "source": "earshot",
+  "design": "typewriter/key",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "vibrate/es_0.flac": {
+  "source": "earshot",
+  "design": "phone/vibrate",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "vibrate/es_1.flac": {
+  "source": "earshot",
+  "design": "phone/vibrate",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "vibrate/es_2.flac": {
+  "source": "earshot",
+  "design": "phone/vibrate",
+  "seed": 3,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "whoosh/es_0.flac": {
+  "source": "earshot",
+  "design": "whoosh/fast",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "whoosh/es_1.flac": {
+  "source": "earshot",
+  "design": "whoosh/fast",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "whoosh/es_2.flac": {
+  "source": "earshot",
+  "design": "whoosh/soft",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "whoosh/es_3.flac": {
+  "source": "earshot",
+  "design": "whoosh/soft",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "whoosh/es_4.flac": {
+  "source": "earshot",
+  "design": "swoosh/in",
+  "seed": 1,
+  "licence": "made with earshot (MIT); output is ours"
+ },
+ "whoosh/es_5.flac": {
+  "source": "earshot",
+  "design": "swoosh/in",
+  "seed": 2,
+  "licence": "made with earshot (MIT); output is ours"
+ }
+}

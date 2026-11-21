@@ -328,7 +328,59 @@ def _doc_music(duration, cfg, rng, root, sc, prog, bars_per_chord, bar, beat):
 
 
 # ---------------- sfx ----------------
-def sfx(name, seed=1):
+LIB = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "sfx", "lib")
+_LIB_CACHE = {}
+SOURCE_RANK = ("ov_", "ui_", "es_")          # real recordings (Openverse CC0) > CC0 UI pack > earshot renders > synth
+
+
+def lib_takes(name):
+    """Library files for a sound name, best source first (scripts/build_sfx_lib.py, scripts/openverse_fetch.py)."""
+    d = os.path.join(LIB, name)
+    if not os.path.isdir(d):
+        return []
+    fs = sorted(f for f in os.listdir(d) if f.endswith((".flac", ".wav", ".ogg")))
+    for pre in SOURCE_RANK:
+        best = [f for f in fs if f.startswith(pre)]
+        if best:
+            return [os.path.join(d, f) for f in best]
+    return [os.path.join(d, f) for f in fs]
+
+
+def _load(path):
+    if path not in _LIB_CACHE:
+        import soundfile as sf
+        x, sr = sf.read(path, dtype="float32", always_2d=False)
+        if x.ndim > 1:
+            x = x.mean(axis=1)
+        _LIB_CACHE[path] = resample(x, sr, SR).astype(np.float32) if sr != SR else x
+    return _LIB_CACHE[path]
+
+
+PEAK_SYNC = {"hit", "thud", "stomp", "stamp", "boom", "pop", "click", "ding", "coin", "cash", "shutter", "door", "splash", "tick",
+             "braam", "register", "notify", "error", "success", "lock", "glitch", "slide", "paper", "tape"}
+APEX_LATE = {"whoosh", "swoosh_soft", "riser"}
+
+
+def peak_time(x, smooth=0.01):
+    """Seconds from the start of a sound to its loudest moment (smoothed envelope)."""
+    if len(x) < 4:
+        return 0.0
+    k = max(1, int(smooth * SR))
+    env = np.convolve(np.abs(x), np.ones(k) / k, mode="same")
+    return float(np.argmax(env)) / SR
+
+
+def sfx(name, seed=1, source=None):
+    """A sound effect by name. Library first (real recordings, CC0 UI sounds, earshot renders; a different take per seed so
+    repeats never sound identical), then the built-in synth. source="synth" forces the old synthesized version."""
+    if source != "synth" and os.environ.get("SFX_SOURCE", "library") != "synth":
+        takes = lib_takes(name)
+        if takes:
+            return _load(takes[seed % len(takes)]) * 1.0
+    return _sfx_synth(name, seed)
+
+
+def _sfx_synth(name, seed=1):
     rng = np.random.default_rng(seed)
     if name == "pop":
         n = int(0.12 * SR)

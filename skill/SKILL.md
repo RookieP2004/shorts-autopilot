@@ -135,6 +135,13 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
 - **Long documentary pace (sample `jobs/2026-11-18-doc`)**: new shot every 3-5 s, every shot moving; cold open with dateline +
   kinetic title slam; Ved on his town set; per chapter a mix of sets, case-file desk shots, motion clips (FlowDiagram,
   NumberSlam, Stack3D, Hero3D), night verdicts, the comic beat, a tipnum takeaway and a "Next:" title. See the Bible recipe.
+- **Sound (Openverse + Real SFX + earshot, owner 2026-11-21)**: effects come from the sound library (real CC0 recordings
+  > CC0 UI pack > earshot renders > synth), a new take each use, peaks on the frame, no doubling, voice-safe ducking. Every
+  render is measured by `autopilot/ears.py` (LUFS, true peak, effect sync, clutter, holes, effects vs voice): read the
+  `ears:` lines in the log and fix any warning before posting if time allows. Give every visible action a sound (a stamp
+  gets `stamp`, money gets `cash`/`coin`, a phone gets `notify`/`vibrate`, a big reveal gets `braam`/`hit`), but never two
+  in the same instant. Openverse photos for documentaries: CC0/PDM only (CC BY only with the credit in the description).
+  See `docs/job-spec.md` "Sound". Optional at setup: `pip install "earshot @ git+https://github.com/Leonxlnx/earshot" librosa`.
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,

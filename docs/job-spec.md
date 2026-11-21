@@ -288,6 +288,23 @@ beats a still: a kinetic hook title, a cause-and-effect flow of cream cards with
 (coin, bars, dot globe with arcs). Mix with the house pieces; it never replaces Ved, captions, cards or plates.
 Reference demo: `jobs/2026-11-18-motion`.
 
+## Sound (owner, 2026-11-21: Openverse + Real SFX + earshot)
+Every `sfx` name (scene `sfx`, layer `sfx`, beat `sfx`) plays from the **sound library** `assets/sfx/lib/<name>/` first, best
+source first: `ov_` real recordings from Openverse (CC0 / public domain only, `scripts/openverse_fetch.py`), then `ui_` CC0
+interface sounds (uisfx, shipped with Clipwing's Real SFX skill), then `es_` earshot renders (realistic designs rebuilt in
+code, several takes). A different take is used each time a sound repeats. Names without library files use the built-in
+synth (comedy sounds: scratch, crickets, wah; the drone). Names: whoosh, swoosh_soft, riser, boom, hit, thud, stomp, braam,
+paper, tape, marker, shutter, type, stamp, splash, bubbles, footsteps, heartbeat, tick, slide, cash, coin, register,
+glitch, door, vibrate, click, ding, pop, notify, error, success, lock, projector (+ synth-only names).
+Mix rules taken from Real SFX: the PEAK of an effect lands on its frame (hits, stamps, pops, coins...); a whoosh's apex
+lands just after the cut; two effects inside 90 ms never double (the first wins); effects step back ~4 dB under Ved's voice
+(`style.sfx.voice_safe`). `push` and `whip` transitions get a whoosh automatically, like slides.
+**Ears**: after every render `autopilot/ears.py` measures the result (earshot `measure`: LUFS, true peak, LRA; plus effect
+sync in ms, clutter, holes over 6 s, effects vs voice in dB) into `out/ears.json` and the log. Warnings never block a post.
+Rebuild the library: `python scripts/build_sfx_lib.py --uisfx <uisfx/sounds>` (needs `pip install "earshot @
+git+https://github.com/Leonxlnx/earshot"`); add real recordings: `python scripts/openverse_fetch.py` (needs api.openverse.org
+and the file hosts allowed). Credits: `assets/sfx/lib/manifest.json`, `assets/sfx/CREDITS.md`.
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

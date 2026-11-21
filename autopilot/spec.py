@@ -51,7 +51,8 @@ SHAPES = {"circle", "ring", "rect", "arrow", "line", "burst"}
 TRANSITIONS = {"cut", "fade", "slide_left", "slide_up", "zoom", "flash", "whip", "dip", "burn", "paper", "push"}
 SFX = {"pop", "whoosh", "ding", "click", "boom", "riser", "scratch", "crickets", "wah", "none",
        "paper", "tape", "marker", "shutter", "type", "thud", "hit", "swoosh_soft", "projector",   # documentary
-       "splash", "bubbles", "footsteps", "stomp", "heartbeat", "tick", "slide", "cash", "drone"}  # foley kit
+       "splash", "bubbles", "footsteps", "stomp", "heartbeat", "tick", "slide", "cash", "drone",  # foley kit
+       "braam", "stamp", "coin", "register", "glitch", "door", "vibrate", "notify", "error", "success", "lock"}  # sound library
 # comedy beats: a short, unexpected moment (see docs/job-spec.md "Beats"). Defaults per kind.
 BEATS = {
     "deadpan":    {"dur": 1.3, "sfx": "none",     "music": "cut",  "zoom": 1.55},   # flat stare at camera, arms cross
