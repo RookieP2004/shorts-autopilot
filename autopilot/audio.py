@@ -214,6 +214,14 @@ def music(duration, cfg):
         d0 = d - 1
         return root + sc[d0 % 7] + 12 * (d0 // 7 + octave)
 
+    if cfg.get("instruments", "real") == "real" and os.environ.get("MUSIC_SOURCE") != "synth":
+        from . import orchestra                    # sampled CC0 instruments (Lemo-Opuscar's sampler)
+        if orchestra.available():
+            try:
+                return orchestra.music(duration, cfg, root, sc, prog, bars_per_chord, beat, SR)
+            except Exception as e:                 # a broken pack never blocks a render: fall back to the synth
+                print(f"orchestra: {e}; using the synth")
+
     if style in ("doc", "tension", "wonder"):
         return _doc_music(duration, cfg, rng, root, sc, prog, bars_per_chord, bar, beat)
     arp_pat = rng.permutation([0, 1, 2, 3, 2, 1, 0, 2])
@@ -629,7 +637,11 @@ def score(duration, base, cues, fps_starts):
             k = min(xf, len(seg))
             seg[:k] *= np.linspace(0, 1, k)
         end = int((b - a) * SR)
-        if end < len(seg):
+        if i + 1 < len(cues) and cues[i + 1].get("style") == "none":
+            k = min(int(0.6 * SR), end)                  # into a held silence: out BEFORE the cue, so the silence is real
+            seg[end - k:end] *= np.linspace(1, 0, k)
+            seg[end:] = 0
+        elif end < len(seg):
             k = min(xf, len(seg) - end)
             seg[end:end + k] *= np.linspace(1, 0, k)
             seg[end + k:] = 0

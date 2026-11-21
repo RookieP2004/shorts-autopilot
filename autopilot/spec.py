@@ -145,6 +145,9 @@ def hex_rgba(c, alpha=1.0):
     return (r, g, b, int(round(255 * a * alpha)))
 
 
+STINGS = {"slam", "chapter", "reveal", "turn", "none"}   # orchestra.STINGERS + none
+
+
 def validate_job(job, style, chars, root=ROOT):
     """Return a list of problems (empty list = valid)."""
     errs = []
@@ -194,6 +197,8 @@ def validate_job(job, style, chars, root=ROOT):
                 continue
             if L.get("enter", "none") not in ENTER:
                 errs.append(f"{w}: enter '{L['enter']}' not in {sorted(ENTER)}")
+            if "sting" in L and L["sting"] not in STINGS:
+                errs.append(f"{w}: sting '{L['sting']}' not in {sorted(STINGS)}")
             if L.get("loop", "none") not in LOOP:
                 errs.append(f"{w}: loop '{L['loop']}' not in {sorted(LOOP)}")
             sz = style.get("safe_zone", {})

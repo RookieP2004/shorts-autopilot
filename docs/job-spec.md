@@ -305,6 +305,29 @@ Rebuild the library: `python scripts/build_sfx_lib.py --uisfx <uisfx/sounds>` (n
 git+https://github.com/Leonxlnx/earshot"`); add real recordings: `python scripts/openverse_fetch.py` (needs api.openverse.org
 and the file hosts allowed). Credits: `assets/sfx/lib/manifest.json`, `assets/sfx/CREDITS.md`.
 
+## Score and director (owner, 2026-11-21: Lemo-Opuscar; autopilot/orchestra.py, director.py, third_party/lemo)
+**Music** keeps the same settings (`style`, `key`, `scale`, `bpm`, `progression`, `bars_per_chord`, `seed`, `volume`,
+`duck`, `cues`) but is played on sampled real instruments (Lemo-Opuscar's `sampler.py`, MIT, vendored unchanged; CC0 packs
+VSCO 2 CE, VCSL, FreePats only). Styles are palettes: `ambient` (marimba, pizzicato cellos, violas, glockenspiel, shaker,
+woodblock), `lofi` (upright piano comps, pizzicato bass, vibraphone, hi-hat, claves, frame drum), `upbeat` (xylophone,
+pizz bass, congas, tambourine), `suspense` (tremolo violins, pizz bass pulse, timpani, triangle), `doc` (cellos, contrabass,
+upright-piano motif, tubular bells, frame drum, horn swell), `tension` (tremolo violins, spiccato cellos, tuned timpani,
+toms, bass-drum roll into every 8th bar), `wonder` (harp, violins, glockenspiel, horn), `night` (bowed vibraphone, electric
+bass, hang, hi-hat, cajon). The score is written for the whole length (every 4th bar turns around, velocities breathe), the
+low end is held about 3 dB under the rest, and it is levelled to the synth's loudness so `volume` keeps its meaning.
+`"instruments": "synth"` in `music` (or env `MUSIC_SOURCE=synth`) uses the old synth; missing packs fall back to it.
+**Stings**: `slam` (bass drum + timpani + low strings), `chapter` (timpani, cellos, cymbal), `reveal` (tubular bells,
+glockenspiel, harp), `turn` (tremolo strings, low cellos, bass-drum roll), transposed to the score's key. Automatic on
+NumberSlam, slam KineticTitles, `chapter` cards and `stamp`s; any layer can set `"sting": kind` (+ `sting_at`) or `"none"`.
+At most one every 2.5 s; the bed dips under each so it reads as the music's own hit. `music.stingers: false` turns them off.
+**Director's checks** (after the ears, never blocking; `out/director.json`): `hook`, `pace` (scene-length variation >= 0.25
+and one breath >= 1.5x the median), `camera` (distinct moves from scene `camera.keys`: push, pull, pan, tilt, snap; Shorts
+3, long 4), `sound_transitions` (cuts with a sound starting in the 0.5 s before them; >= 2), `silences` (near-silences
+>= 0.35 s, 24 dB under the film's median; Shorts 1, long 2), `reading` (text layers stay up letters/18 + 0.8 s in a Short,
+letters/15 + 1.5 s in a long video, after 0.35 s of entrance; `"readable": false` exempts a text meant to flash by),
+`black_frames` (blackdetect; `dip` transitions excepted). Packs: `cd third_party/lemo && sh tools/fetch.sh instruments
+vsco2ce && sh tools/fetch.sh instruments vcsl && sh tools/fetch.sh instruments freepats` (~1.1 GB, from GitHub releases).
+
 ## Rules the validator enforces
 Known types/enters/loops/shapes/transitions/sfx; characters and poses exist; `y` ≤ safe-zone bottom (0.78);
 total length ≤ `max_duration` (58 s).

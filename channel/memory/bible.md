@@ -243,6 +243,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 | date | section | change | evidence |
 |---|---|---|---|
 | 2026-11-21 | 3 | sound library (earshot renders + CC0 UI pack; Openverse real recordings once allowed), peak-on-frame sync, no doubling, voice-safe ducking, ears measurements on every render | owner request (Openverse, Real SFX, earshot) |
+| 2026-11-21 | 3 | score on real sampled instruments (Lemo-Opuscar sampler, CC0 packs; same key/tempo/progression), orchestral stings on slams, chapters and stamps, director's checks on every render (hook, reading time, pace, camera variety, sound-carried cuts, silences, blank frames), treatment step for Deep Dives, Lemo styles as technique donors | owner request (lemo-opuscar) |
 | 2026-11-18 | 3 | motion clips made more dynamic (NumberSlam, Stack3D, slam titles); long documentary recipe + sample 2026-11-18-doc | owner request |
 | 2026-11-18 | 3 | motion clips added (Remotion + GSAP + three.js: kinetic titles, self-drawing cream-card flows, real-time 3D coin/bars/globe), mixed into the house style; DEMO 2026-11-18-motion | owner request (learn remotion, gsap, three.js skills) |
 | 2026-11-18 | 3 | case-file pieces added (noir desk + blinds light, dottext, bignum, dateline, tipnum, tiles, clock, flows, evidence props); DEMO awaiting owner OK | owner request (reference documentary study) |

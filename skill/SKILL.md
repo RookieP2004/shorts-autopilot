@@ -56,8 +56,9 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
 1. **Repo**: `add_repo(owner="RookieP2004", repo="shorts-autopilot", access="push")`, run the clone command it returns, then
    `register_repo_root`. If the repo can't be attached, stop and tell the owner.
    For a bonus run (slot `b`/`c`), run section 3c step 1 now, before installing anything.
-   Then `pip install -q -r requirements.txt --break-system-packages`, `bash scripts/fetch_models.sh` (~350 MB, about 1 minute)
-   and `bash scripts/fetch_blender.sh` (Blender from the repo's `deps` branch, about 10 s).
+   Then `pip install -q -r requirements.txt --break-system-packages`, `bash scripts/fetch_models.sh` (~350 MB, about 1 minute),
+   `bash scripts/fetch_blender.sh` (Blender from the repo's `deps` branch, about 10 s) and `sh scripts/fetch_instruments.sh`
+   (the score's CC0 instrument samples, ~1.1 GB, about 15 s; if it fails the music falls back to the synth).
 2. **Connectors**: load the Zapier tools with ToolSearch ("zapier"). Check *YouTube: Upload Video* is enabled (in a review, also
    *YouTube: Make API GET Request* and the Google Docs actions *Get Document Content* and *Append Text to Document*);
    enable missing ones with Zapier's discover/enable tools. If Zapier isn't connected at all, stop and tell the owner.
@@ -142,6 +143,26 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   gets `stamp`, money gets `cash`/`coin`, a phone gets `notify`/`vibrate`, a big reveal gets `braam`/`hit`), but never two
   in the same instant. Openverse photos for documentaries: CC0/PDM only (CC BY only with the credit in the description).
   See `docs/job-spec.md` "Sound". Optional at setup: `pip install "earshot @ git+https://github.com/Leonxlnx/earshot" librosa`.
+- **Score and director (Lemo-Opuscar, owner 2026-11-21; learned and mixed in, our own rules)**: the music is played on real
+  sampled instruments (Lemo-Opuscar's sampler, vendored MIT, CC0 packs only: VSCO 2 CE, VCSL, FreePats), from the same
+  channel settings (`style`, `key`, `scale`, `bpm`, `progression`, `seed`), so the signature sound stays and only gets real.
+  Palettes: town Shorts = marimba, pizzicato cellos, glockenspiel, shaker; doc = cellos/contrabass, a sparse upright-piano
+  motif, frame drum, horn swells; tension = tremolo violins, spiccato cellos, tuned timpani; night = bowed vibraphone, hang.
+  The score answers the biggest picture moments with an orchestral **sting** (NumberSlam and slam titles = slam, chapter
+  cards = chapter, stamps = turn; at most one per 2.5 s; `"sting": "none"|kind` on a layer). Missing packs fall back to
+  the synth (fetch: `third_party/lemo/README.md`). Every render also runs **the director's checks**
+  (`autopilot/director.py` -> `out/director.json`, a `director: n/7` log line): hook (voice < 1 s, a sound < 3 s), reading
+  time for every on-screen text (Shorts letters/18 + 0.8 s, long letters/15 + 1.5 s), varied pace with one breath, camera
+  variety (Shorts 3 kinds, long 4: push, pull, pan, tilt, snap), at least 2 cuts carried by sound, real near-silences
+  before the turns (Shorts 1, long 2; the first sound after one is a key sound), no blank frames. Fix what it flags when
+  time allows; it never blocks a post. Make it fast with fewer words per screen, never by cutting before people can read.
+- **Style donors (Lemo-Opuscar's 99 film styles)**: `sh scripts/lemo_styles.sh` fetches the library into /tmp/lemo and lists
+  the styles that suit us (dark documentary, halftone dossier, visual investigation, news package, map explainer,
+  telestrator, text flash cuts, countdown, data physicalization...). For a Deep Dive, or a Short that needs a new idea, pick
+  one donor and read its STYLE.md for grammar only: its native moves, transitions and sound palette. Rebuild the idea with
+  our own toolkit inside our house style (Ved, the town, cream cards, our captions), never their text, code, demo films,
+  layouts or fonts (their guides are CC BY-NC; only the vendored sampler code is MIT). Note the donor and what was learned
+  in `meta.notes`; the owner approves any new recurring look before it goes public, as with every new style.
 - **Cast**: characters are made only by `characters/<id>/make.py`, from one base drawing. To add a pose, add an entry to `POSES`
   and re-run it. Never hand-draw a new version of a character. A character's colours, proportions, voice and personality never change.
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_george). The music settings (`style`, `key`, `bpm`,
@@ -258,7 +279,8 @@ card is readable and Ved's reaction face reads clearly. Fix and repeat.
 
 **g. Render.** Run `python -m autopilot render jobs/<id>/job.json` (assets are cached, so this is 2–3 min; if the job has animated
 `blender` shots, run it with `nohup ... > /tmp/render.log 2>&1 &` and poll until it prints `done`). Check `out/render.json`: the
-length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). Then pull 3–4 frames from `out/final.mp4` with ffmpeg and look at them.
+length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). Read the `ears:` and `director:` log lines
+(`out/ears.json`, `out/director.json`) and fix what they flag if time allows. Then pull 3–4 frames from `out/final.mp4` with ffmpeg and look at them.
 
 **h. Publish.**
 1. Run `scripts/push_media.sh jobs/<id>/out/final.mp4 <id>`. It prints the public URL and waits until the URL serves the file.
@@ -332,7 +354,13 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
 2. **Topic.** Prefer the idea behind the best recent Short (log + last review), taken much deeper; otherwise research as in 3a
    (6-10 searches). Verify every claim (3c), put the URLs in `meta.sources` and name the main sources in the description.
    Where experts disagree, give both views briefly.
-3. **Script.** 5-8 min (about 750-1100 words), 5-8 chapters. Cold open with a concrete object or question and a promise of the
+3. **Treatment first** (`jobs/<id>/TREATMENT.md`, before any drawing): three candidate shapes for the film (a journey, a
+   before/after, a countdown, a case that turns...) and why you chose one; a one-line logline with setup, turn, ending; one
+   or two benchmark works for this topic with what to learn (pacing, camera grammar, colour, score shape) and what never to
+   take; the one native move at the emotional peak (a moment only our toolkit can do: a case file that unfolds into the
+   next set, a number that slams through the town); an ending that echoes the opening. Then a shot list (framing, camera move
+   and why) and a cue map (which section of the score, which sting and which silence lands on which line).
+   **Script.** 5-8 min (about 750-1100 words), 5-8 chapters. Cold open with a concrete object or question and a promise of the
    payoff; each chapter is a small story acted out by Ved and the townspeople; 2 dry jokes as handwritten sticky notes; a one-line
    payoff; a short outro. Plan a new shot, cut or graphic every 3-6 s.
 4. **Edit plan (documentary).** Map every scene to a device: letterboxed cold open with serif type and no headlines, then a
@@ -341,7 +369,8 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
    typed notes, `string`, `marker` circles/arrows/underlines) for "how we know"; a `timeline` when dates matter; full-screen
    quote cards for real quotes (exact wording, credited); `source` tags on numbers; Ved to camera for the big lines only.
    Transitions mostly cuts, plus `whip`, `paper` (into boards), `dip` (chapters, quotes) and `burn` (a shock). One held
-   silence (`music` cue "none") on the biggest reveal. Type: serif / serif_i / hand / cond, never Anton headlines or pop-ins.
+   silence (`music` cue "none", plus `lead` 0.8-1.1 s on that scene so Ved breathes first, its layers entering only after the breath) before the biggest turn, and a
+   second near-silence elsewhere; the stamp or sting right after it is the loudest moment of the chapter. Type: serif / serif_i / hand / cond, never Anton headlines or pop-ins.
 5. **Build** `jobs/<id>/assets.py` (sets at 1920x1080, reuse and extend the props) and `build_doc.py` (copy the reference's
    helpers); `"kind": "long"`, `chapters`, `music.cues`, `thumbnail`. See docs/job-spec.md "Long videos" and "Documentary toolkit".
 6. **QA.** Preview sets (`BK_PREVIEW=1`, look at every plate), then `frames` for every scene (look at all of them: framing, panels

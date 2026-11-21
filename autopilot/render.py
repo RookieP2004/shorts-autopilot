@@ -259,12 +259,31 @@ def auto_sfx(L, scene_dur):
     return [(max(0.0, o), n_, g) for o, n_, g in out if o < scene_dur]
 
 
+def auto_sting(L):
+    """The score answers the picture's biggest moments with an orchestral hit (real instruments only).
+    Returns (seconds after the layer's `at`, kind) or None. "sting": "none" turns it off; "sting": kind forces one."""
+    if "sting" in L:
+        return None if L["sting"] == "none" else (L.get("sting_at", 0.0), L["sting"])
+    t, comp = L.get("type"), L.get("comp")
+    p = L.get("props") or {}
+    if t == "motion" and comp == "NumberSlam":
+        return (0.15 + p.get("roll", 0.9), "slam")
+    if t == "motion" and comp == "KineticTitle" and p.get("style") == "slam":
+        return (0.1, "slam")
+    if t == "chapter":
+        return (0.0, "chapter")
+    if t == "stamp":
+        return (0.14, "turn")
+    return None
+
+
 def mix(ctx):
     st = ctx.style
     n = int(round(ctx.total * audio.SR))
     vo = np.zeros(n, dtype=np.float32)
     fx = np.zeros(n, dtype=np.float32)
     cues = []                                            # every sound effect: (time, name, gain), checked by autopilot.ears
+    stings = []                                          # orchestral hits on the biggest moments: (time, kind)
     for i, s in enumerate(ctx.job["scenes"]):
         audio.add(vo, ctx.vo[i], ctx.start[i] + ctx.lead_of(i))
         name = s.get("sfx")
@@ -277,6 +296,9 @@ def mix(ctx):
             if b.get("sfx", "none") != "none":
                 cues.append((ctx.start[i] + b["at"], b["sfx"], b.get("sfx_gain", 1.0)))
         for L in s.get("layers", []):
+            sg = auto_sting(L)
+            if sg and sg[0] < ctx.dur[i]:
+                stings.append((ctx.start[i] + L.get("at", 0) + sg[0], sg[1]))
             if L.get("sfx") and L["sfx"] != "none":
                 cues.append((ctx.start[i] + L.get("at", 0), L["sfx"], L.get("sfx_gain", 1.0)))
             elif "sfx" not in L and st["sfx"].get("auto", True):       # every visible action brings its own sound
@@ -327,6 +349,33 @@ def mix(ctx):
         else:
             mus = audio.music(ctx.total, m)[:n]
         mus = np.pad(mus, (0, n - len(mus)))
+        ctx.stings = []
+        from . import orchestra
+        if (m.get("stingers", True) and m.get("instruments", "real") == "real" and orchestra.available()
+                and os.environ.get("MUSIC_SOURCE") != "synth"):
+            last = -9.0
+            key = audio.NOTE.get(m.get("key", "D"), 2) + 60
+            for t, kind in sorted(stings):
+                if t - last < 2.5 or kind not in orchestra.STINGERS:     # a sting is rare, or it stops meaning anything
+                    continue
+                try:
+                    x = orchestra.stinger(kind, key, audio.SR)
+                except Exception as e:
+                    log_ = getattr(ctx, "log", print)
+                    log_(f"sting {kind}: {e}")
+                    continue
+                a = int(t * audio.SR)
+                pk = int(np.argmax(np.abs(x[: int(0.3 * audio.SR)])))   # its attack lands on the frame
+                a0 = max(0, a - pk)
+                seg = x[: max(0, n - a0)] * m.get("sting_gain", 2.2)
+                # the bed ducks under the sting for a moment so the hit reads as the music's own
+                dk = np.ones(n, np.float32)
+                e0, e1 = a0, min(n, a0 + int(1.2 * audio.SR))
+                dk[e0:e1] = np.linspace(0.45, 1, e1 - e0)
+                mus = mus * dk
+                mus[a0:a0 + len(seg)] += seg
+                ctx.stings.append((round(t, 2), kind))
+                last = t
         gain = np.ones(n, dtype=np.float32)            # beats with music "cut": a sudden, comic silence
         r = int(0.05 * audio.SR)
         for i, bl in enumerate(ctx.beats):
@@ -408,6 +457,12 @@ def render(job_path, out_dir, root=ROOT, workers=None, log=print):
         info["ears"] = {k: v for k, v in ears.check(ctx, final, out_dir, log).items() if k != "sync"}
     except Exception as e:                               # the ears never block a render
         log(f"ears: skipped ({e})")
+    try:                                                 # the director's checks: hook, reading, pace, camera, silences
+        from . import director
+        d = director.check(ctx, final, out_dir, log)
+        info["director"] = {"score": d["score"], "of": d["of"]}
+    except Exception as e:
+        log(f"director: skipped ({e})")
     with open(os.path.join(out_dir, "render.json"), "w") as f:
         json.dump(info, f, indent=2)
     log(f"done -> {final}")
