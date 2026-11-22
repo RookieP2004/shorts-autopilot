@@ -77,6 +77,10 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   reference or toolkit is ADDED to what the channel already has, adapted to fit it. Ved, the townspeople, the bright town, the
   cream infographic cards, the house captions, his voice and the comic beat always stay. Each video mixes old and new pieces
   that suit its topic (e.g. a cream card in one beat, a ticking hud chip in the next); a new piece never wipes out an old one.
+- **🔒 Mix styles inside every Short (owner, 2026-11-22: "Permanent rule that you mix the styles").** No Short uses one
+  style only: each cuts between at least three visual styles that fit its beats (Ved + townspeople in the 3D town, a 3D
+  mechanism shot from Cutaway or Blender, cream cards / hud chips, Reelsmith looks, motion clips, night set, case-file
+  pieces). Ved comes and goes between them. New shot every 2-4 s; one continuous move only where travel is the point.
 - **Motion & graphics standard for EVERY Short (owner, 2026-11-16: "take notes from these for your normal shorts also").**
   The night pilot's graphics are now house graphics in the bright town too (only the night lighting, rim light and highlight
   captions stay night-only; town captions are unchanged). In every Short:
@@ -242,6 +246,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-22 | 3 | Mix styles inside every Short: at least three visual styles cut together per Short, Ved comes and goes, new shot every 2-4 s (reference jobs/2026-11-22-m1) | owner: "Permanent rule that you mix the styles" |
 | 2026-11-21 | 3 | Professor Ved v9 (same Ved, cleaner): eyes and pocket redrawn, stray lines and overlaps removed; signature = gold pencil in pocket + gold spark pin (owner picked A + B); Ved drawn in every look (marker, chalk, riso, film, ink; night rim); mascot badge + gold watermark; 3D Ved = the layered paper standee (owner kept it over a fully modelled 3D Ved). v9.1 cleanup: no lines across the eyes, no stray folds or sleeve corners. Sheet: docs/sheets/professor_ved_model_sheet_v9.png. Owner approved 2026-11-21 ("keep the old one in 3d and move ahead") | owner request (character redesign) |
 | 2026-11-21 | 3 | sound library (earshot renders + CC0 UI pack; Openverse real recordings once allowed), peak-on-frame sync, no doubling, voice-safe ducking, ears measurements on every render | owner request (Openverse, Real SFX, earshot) |
 | 2026-11-21 | 3 | score on real sampled instruments (Lemo-Opuscar sampler, CC0 packs; same key/tempo/progression), orchestral stings on slams, chapters and stamps, director's checks on every render (hook, reading time, pace, camera variety, sound-carried cuts, silences, blank frames), treatment step for Deep Dives, Lemo styles as technique donors | owner request (lemo-opuscar) |

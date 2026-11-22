@@ -1,0 +1,610 @@
+{
+ "id": "2026-11-22-m1",
+ "title": "Your Wi-Fi router fires MICROWAVES 📶",
+ "description": "Wi-Fi and microwave ovens both use the 2.4 GHz band. So why doesn't your router cook you? Power: an oven pumps roughly 1,000 watts into a sealed metal box, while a Wi-Fi router is capped at about 0.1 watt, spread through your house. The wave is ~12 cm long and the holes in the door screen ~1 mm, so it stays inside, flipping 2.45 billion times a second; water molecules try to turn with it, and that jostling is heat.\n\nSources: Illinois Physics Van (door screen); FCC Part 15 power limits; Physics Forums summary (oven vs router power).",
+ "tags": [
+  "wifi",
+  "microwave",
+  "microwave oven",
+  "how microwaves work",
+  "2.4 ghz",
+  "wifi router",
+  "physics",
+  "science explained"
+ ],
+ "hashtags": [
+  "#physics",
+  "#wifi"
+ ],
+ "meta": {
+  "format": "big-question",
+  "topic": "why Wi-Fi doesn't cook you though microwave ovens use the same band",
+  "hook": "contradiction",
+  "idea_source": "owner showcase (manual)",
+  "characters": [
+   "ved"
+  ],
+  "overrides": "documentary edit: Cutaway 3D shots between Ved's kitchen shots; captions 2 words, low; sound mixed by hand",
+  "sources": [
+   "https://van.physics.illinois.edu/",
+   "https://www.fcc.gov/"
+  ]
+ },
+ "speaker": "ved",
+ "music": {
+  "enabled": false
+ },
+ "style_override": {
+  "sfx": {
+   "auto": false
+  },
+  "scene_pad": 0.2,
+  "captions": {
+   "y": 0.7,
+   "words_per_chunk": 2,
+   "uppercase": false,
+   "size": 80,
+   "stroke_width": 10
+  }
+ },
+ "instagram": {
+  "hashtags": [
+   "#science",
+   "#wifi",
+   "#microwave",
+   "#physics",
+   "#explained"
+  ]
+ },
+ "thumbnail": {
+  "title": "WI-FI = *MICROWAVES*",
+  "title_y": 0.2,
+  "title_size": 140,
+  "max_w": 0.95,
+  "blur": 10,
+  "glow": "#ffb45a",
+  "glow_x": 0.3,
+  "glow_y": 0.62,
+  "glow_strength": 1.2,
+  "bg_saturation": 1.2,
+  "tint": [
+   "#2f6fe0",
+   "#f08a24"
+  ],
+  "tint_amount": 0.2,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-22-m1/assets/plate_wifi.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.62,
+    "y": 0.95,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true,
+    "rim": [
+     "#f2b04a",
+     "#3a6fb0"
+    ]
+   }
+  ]
+ },
+ "scenes": [
+  {
+   "name": "hook",
+   "say": "Your Wi-Fi router fires *microwaves.*",
+   "pad": 0.15,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.06,
+      "focus": [
+       0.58,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-22-m1/assets/plate_kitchen.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 2.5,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.04
+      },
+      {
+       "t": 3.0,
+       "scale": 1.08
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.0,
+     "y": 0.83,
+     "h": 0.84,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       0.75
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true,
+     "rim": [
+      "#f2b04a",
+      "#3a6fb0"
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.02
+      },
+      {
+       "t": 0.7,
+       "x": 0.3,
+       "walk": true
+      }
+     ],
+     "flip": true
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "same",
+   "say": "The same wave your oven uses to boil *water.*",
+   "pad": 0.12,
+   "captions": true,
+   "layers": [
+    {
+     "type": "video",
+     "path": "jobs/2026-11-22-m1/assets/shot_router_wave.mp4",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "h": 1,
+     "at": 0,
+     "from": 1.6,
+     "speed": 0.95,
+     "sfx": "none",
+     "enter": "none"
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "why",
+   "say": "So... why aren't you *cooking?*",
+   "pad": 0.3,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 2.0,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-22-m1/assets/plate_oven.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      },
+      {
+       "t": 2.0,
+       "scale": 1.4
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "shrug",
+     "x": 0.5,
+     "y": 0.82,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "side_eye",
+       0
+      ],
+      [
+       "shrug",
+       0.55
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true,
+     "rim": [
+      "#f2b04a",
+      "#3a6fb0"
+     ]
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "power",
+   "say": "Power. Your router *whispers* a tenth of a watt.",
+   "pad": 0.1,
+   "layers": [
+    {
+     "type": "video",
+     "path": "jobs/2026-11-22-m1/assets/shot_router_power.mp4",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "h": 1,
+     "at": 0,
+     "from": 0.0,
+     "speed": 0.74,
+     "sfx": "none",
+     "enter": "none"
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "shouts",
+   "say": "But the oven *shouts* a thousand watts.",
+   "pad": 0.05,
+   "layers": [
+    {
+     "type": "video",
+     "path": "jobs/2026-11-22-m1/assets/shot_oven.mp4",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "h": 1,
+     "at": 0,
+     "from": 0.0,
+     "speed": 0.54,
+     "sfx": "none",
+     "enter": "none"
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "ten",
+   "say": "*Ten thousand* times more.",
+   "lead": 0.05,
+   "pad": 0.25,
+   "layers": [
+    {
+     "type": "video",
+     "path": "jobs/2026-11-22-m1/assets/shot_oven.mp4",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "h": 1,
+     "at": 0,
+     "from": 1.52,
+     "speed": 0.95,
+     "sfx": "none",
+     "enter": "none"
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "box",
+   "say": "Into a sealed metal *box.* And it can't *escape.*",
+   "pad": 0.75,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.05,
+      "focus": [
+       0.42,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-22-m1/assets/plate_oven.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 2.5,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.04
+      },
+      {
+       "t": 4.0,
+       "scale": 1.07
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.72,
+     "y": 0.83,
+     "h": 0.84,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       0.25
+      ],
+      [
+       "serious",
+       2.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true,
+     "rim": [
+      "#f2b04a",
+      "#3a6fb0"
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.72
+      },
+      {
+       "t": 3.25,
+       "x": 0.72
+      },
+      {
+       "t": 4.1,
+       "x": 1.3,
+       "walk": true
+      }
+     ]
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "holes",
+   "say": "The door's holes are a *millimetre.* The wave? *Twelve* centimetres.",
+   "pad": 0.15,
+   "layers": [
+    {
+     "type": "video",
+     "path": "jobs/2026-11-22-m1/assets/shot_door.mp4",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "h": 1,
+     "at": 0,
+     "from": 0.0,
+     "speed": 0.91,
+     "sfx": "none",
+     "enter": "none"
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "flips",
+   "say": "Trapped, it flips back and forth, two and a half *billion* times a second.",
+   "pad": 0.12,
+   "layers": [
+    {
+     "type": "video",
+     "path": "jobs/2026-11-22-m1/assets/shot_inside.mp4",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "h": 1,
+     "at": 0,
+     "from": 0.0,
+     "speed": 0.92,
+     "sfx": "none",
+     "enter": "none"
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "water",
+   "say": "Water molecules try to turn with it. They can't keep up. That struggle is *heat.*",
+   "pad": 0.2,
+   "layers": [
+    {
+     "type": "video",
+     "path": "jobs/2026-11-22-m1/assets/shot_molecules.mp4",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "h": 1,
+     "at": 0,
+     "from": 0.0,
+     "speed": 1.0,
+     "sfx": "none",
+     "enter": "none"
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  },
+  {
+   "name": "end",
+   "say": "Same wave. One *whispers.* One *shouts.*",
+   "pad": 0.55,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-22-m1/assets/plate_wifi.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 2.5,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.04
+      },
+      {
+       "t": 3.4,
+       "scale": 1.08
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "warm",
+     "x": 0.4,
+     "y": 0.83,
+     "h": 0.84,
+     "enter": "none",
+     "acting": [
+      [
+       "warm",
+       0
+      ],
+      [
+       "explain",
+       0.9
+      ],
+      [
+       "point",
+       1.75
+      ],
+      [
+       "smirk",
+       2.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true,
+     "rim": [
+      "#f2b04a",
+      "#3a6fb0"
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.4
+      },
+      {
+       "t": 2.85,
+       "x": 0.4
+      },
+      {
+       "t": 3.4,
+       "x": 0.75,
+       "walk": true
+      }
+     ]
+    }
+   ],
+   "transition": "cut",
+   "sfx": "none"
+  }
+ ]
+}

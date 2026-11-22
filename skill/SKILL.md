@@ -118,6 +118,13 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
 - **Mix, never replace (owner rule)**: every new style reference or toolkit is added to the existing house style and adapted
   to fit it, never swapped in for it. Ved, the townspeople, the bright town, cream cards, house captions, his voice and the comic
   beat always stay; each video mixes old and new pieces to suit its topic.
+- **Mix styles inside every Short (owner, permanent, 2026-11-22: "Permanent rule that you mix the styles")**: no Short is
+  made in one style only. Each one cuts between at least three different visual styles that suit its beats, e.g. Ved and
+  the townspeople in the 3D town, a Cutaway or Blender 3D shot of the mechanism, a cream infographic card or hud chip, a
+  Reelsmith look, a motion clip (NumberSlam, FlowDiagram...), the night set or case-file pieces. Ved comes and goes between
+  them (walks in, reacts, leaves) rather than staying on screen. Cut to a new shot every 2-4 s; keep one continuous move only
+  where travel is the point (into a machine, through a wall). Reference: jobs/2026-11-22-m1 (Ved's kitchen shots cut with
+  Cutaway 3D shots).
 - **Motion & graphics in EVERY Short (town look too; owner 2026-11-16)**: use the night-pilot graphics in normal Shorts as well
   (they work on bright sets; see the Bible "Motion & graphics standard"). Numbers tick in a `hud` chip with an `eqbar` building
   the maths; a number of people becomes a `crowd` on the town floor that splits / fades / glows; steps build one by one
