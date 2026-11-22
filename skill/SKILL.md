@@ -199,6 +199,13 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
 - **Sound**: the voice comes from `style.json` or `character.json` (Ved: bm_lewis, en-us, speed 1.0 since 2026-11-21: the nearest
   built-in voice to the owner's own recording; was bm_george). The music settings (`style`, `key`, `bpm`,
   `progression`, `seed`) are the channel's signature sound, so don't change them per video.
+- **Dynamic, story-first sound (owner, permanent 2026-11-22)**: explaining is the main thing, so every word must be easy to
+  follow. Levels move with the moment instead of sitting flat: the score dips under the voice and breathes up in the pauses;
+  small texture sounds (ticks, clicks, pops, typing) almost vanish while Ved speaks; the story hits (a slam, stamp, ding,
+  whoosh on a big cut) keep their punch and are best placed in the pauses. Effects never pile up into noise: one at a time
+  (a bigger moment cuts the earlier tail), at most 3 in any 2 s, and fewer is better. The renderer does this by default
+  (`style.sfx.dynamic`, tiers in `audio.sfx_priority`); `ears:` lists dropped effects and warns when effects crowd the voice.
+  Turn any sound up or down per video as the story needs (`sfx_gain` on a layer or beat, `music.volume` in the job).
 - **Acting**: Professor Ved is rigged (`characters/ved/make.py`) and drawn fresh every frame. While he talks he changes
   gesture at natural pauses and moves smoothly between poses (`"acting": "auto"`, the default). When a gesture must land
   on a word, script it with `"acting": [["point", 1.4], ...]`. Never put loop animations (bob, float, wiggle, shake) on a

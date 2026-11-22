@@ -360,8 +360,17 @@ def mix(ctx):
         if kept and t - kept[-1][0] < 0.09:
             continue
         kept.append((t, nm, g))
+    # Dynamic, story-first mix (owner, permanent 2026-11-22): explaining is the main thing. One effect at a time (a new one
+    # waits until the last has faded, unless it matters more, then the old tail is cut), at most 3 in any 2 s, and every
+    # effect's level follows the moment: small ones nearly vanish under the voice, the story hits keep their punch and
+    # play full in the pauses.
+    env = np.abs(vo)
+    k = int(0.06 * audio.SR)
+    env = np.convolve(env, np.ones(k) / k, mode="same")
+    speech = np.clip(env / (np.percentile(env[env > 1e-4], 70) if np.any(env > 1e-4) else 1), 0, 1)
+    dyn = st["sfx"].get("dynamic", True)
     uses = {}
-    placed = []
+    items = []
     for t, nm, g in kept:
         k = uses.get(nm, 0)
         uses[nm] = k + 1
@@ -374,17 +383,59 @@ def mix(ctx):
         else:
             at = t
         at = max(0.0, at)
-        audio.add(fx, x, at)
-        placed.append((t, nm, round(at, 3), round(pk, 3)))
-    # voice-safe: effects step back about 4 dB while Ved speaks (hits and stamps keep their punch: only the tail ducks)
-    if st["sfx"].get("voice_safe", True):
-        env = np.abs(vo)
-        k = int(0.06 * audio.SR)
-        env = np.convolve(env, np.ones(k) / k, mode="same")
-        speech = np.clip(env / (env.max() + 1e-9) * 6, 0, 1)
-        fx = fx * (1 - 0.37 * speech)
+        prio = audio.sfx_priority(nm)
+        if dyn:                                          # level by moment: how much is Ved speaking at the effect's peak?
+            j = min(len(speech) - 1, int((at + pk) * audio.SR))
+            sp = float(speech[max(0, j - int(0.1 * audio.SR)):j + int(0.1 * audio.SR) + 1].max()) if len(speech) else 0.0
+            x = x * 10 ** ({1: -10, 2: -6, 3: -2}.get(prio, -6) * sp / 20)
+        pkv = np.abs(x).max() + 1e-9
+        loud = np.where(np.abs(x) > pkv * 10 ** (-24 / 20))[0]
+        s0 = at + (loud[0] / audio.SR if len(loud) else 0)
+        e0 = at + (loud[-1] / audio.SR if len(loud) else len(x) / audio.SR)
+        items.append({"t": t, "nm": nm, "x": x, "at": at, "pk": pk, "prio": prio, "s": s0, "e": e0, "bed": nm in audio.SFX_BEDS})
+    dropped = []
+    if dyn:
+        keep2 = []
+        for it in items:
+            if it["bed"]:                                # beds sit under everything, 6 dB down
+                it["x"] = it["x"] * 0.5
+                keep2.append(it)
+                continue
+            last = next((o for o in reversed(keep2) if not o["bed"]), None)
+            if last and it["s"] < last["e"]:
+                if it["prio"] > last["prio"]:            # the bigger story moment wins; the earlier tail is cut
+                    last["cut"] = it["s"]
+                else:
+                    dropped.append((round(it["t"], 2), it["nm"], "overlap"))
+                    continue
+            busy = [o for o in keep2 if not o["bed"] and it["t"] - o["t"] < 2.0]
+            if len(busy) >= 3:
+                weakest = min(busy + [it], key=lambda o: (o["prio"], -o["t"]))
+                if weakest is it:
+                    dropped.append((round(it["t"], 2), it["nm"], "busy"))
+                    continue
+                keep2.remove(weakest)
+                dropped.append((round(weakest["t"], 2), weakest["nm"], "busy"))
+            keep2.append(it)
+        items = keep2
+    placed = []
+    for it in items:
+        x = it["x"]
+        if "cut" in it:                                  # 40 ms fade where the bigger moment starts
+            c = int((it["cut"] - it["at"]) * audio.SR)
+            f = int(0.04 * audio.SR)
+            if 0 < c < len(x):
+                x = x.copy()
+                x[c:c + f] *= np.linspace(1, 0, len(x[c:c + f]))
+                x[c + f:] = 0
+        audio.add(fx, x, it["at"])
+        placed.append((it["t"], it["nm"], round(it["at"], 3), round(it["pk"], 3)))
+    ctx.sfx_dropped = dropped
+    if st["sfx"].get("voice_safe", True):                # tails step back a little more while he speaks
+        fx = fx * (1 - (0.3 if dyn else 0.37) * speech)
     ctx.sfx_cues = placed
     ctx.fx_stem = fx
+    ctx.vo_stem = vo
     m = st["music"]
     jm = ctx.job.get("music", {})
     m = {**m, **jm}

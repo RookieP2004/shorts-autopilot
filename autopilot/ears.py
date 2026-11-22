@@ -70,6 +70,17 @@ def check(ctx, final_mp4, out_dir, log=print):
         times = [c[0] for c in cues]
         rep["sfx_count"] = len(cues)
         rep["clutter"] = sum(1 for a_, b_ in zip(times, times[1:]) if b_ - a_ < 0.25)
+        rep["sfx_dropped"] = getattr(ctx, "sfx_dropped", [])      # removed by the one-at-a-time rule (overlap / busy)
+        vo = getattr(ctx, "vo_stem", None)
+        if vo is not None and len(vo) == len(fx):                   # how far the voice stands over the effects while he speaks
+            w = int(0.4 * audio.SR)
+            ev = np.sqrt(np.convolve(vo ** 2, np.ones(w) / w, mode="same"))
+            ef = np.sqrt(np.convolve(fx ** 2, np.ones(w) / w, mode="same"))
+            sp = (ev > np.percentile(ev, 40)) & (ef > ev * 10 ** (-40 / 20))   # moments when he speaks AND an effect plays
+            if sp.any():
+                rep["voice_over_sfx_db"] = round(float(np.median(20 * np.log10((ev[sp] + 1e-9) / (ef[sp] + 1e-9)))), 1)
+                if rep["voice_over_sfx_db"] < 14:
+                    warn.append(f"effects crowd the voice (only {rep['voice_over_sfx_db']} dB under it while he speaks)")
         gaps = [(round(a_, 1), round(b_ - a_, 1)) for a_, b_ in zip([0.0] + times, times + [ctx.total]) if b_ - a_ > 6.0]
         rep["holes"] = gaps
         if gaps and ctx.total < 70:                     # a Short with a dead stretch loses people

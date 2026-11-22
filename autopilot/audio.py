@@ -656,3 +656,13 @@ def duck_curve(vo, amount, smooth=0.18):
     e = np.convolve(a, k, mode="same")
     e = np.clip(e / (np.percentile(e[e > 1e-4], 50) if np.any(e > 1e-4) else 1), 0, 1)
     return 1 - amount * e
+
+
+# Dynamic mix tiers (owner 2026-11-22): 3 = story hits (keep their punch), 2 = motion, 1 = texture / UI (vanish under the voice)
+SFX_TIER3 = {"boom", "braam", "hit", "stamp", "stomp", "thud", "ding", "success", "error", "cash", "register", "splash", "door", "glitch"}
+SFX_TIER1 = {"tick", "click", "pop", "type", "paper", "marker", "tape", "footsteps", "vibrate", "scratch"}
+SFX_BEDS = {"drone", "hum", "crickets", "projector", "bubbles"}
+
+
+def sfx_priority(name):
+    return 3 if name in SFX_TIER3 else 1 if name in SFX_TIER1 else 2

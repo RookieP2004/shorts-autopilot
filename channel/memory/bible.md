@@ -122,6 +122,11 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
 Rule: characters are made only by `characters/<id>/make.py`. Colours, proportions and voice never change.
 
 ## 5. Sound 🔒
+- **🔒 Dynamic, story-first sound (owner, 2026-11-22: "explaining is the main thing... the sound effect doesn't pile up too much
+  and become noise... volume up, volume lower the voice and sound effect as you like but according to need of video").**
+  The listener must always follow the explanation. Levels move with the moment: the score dips under the voice and rises in
+  pauses; small texture sounds nearly vanish under speech; story hits keep their punch, ideally in a pause. One effect at a
+  time, at most 3 in any 2 s, fewer is better. Any level can go up or down per video when the story needs it.
 - Voice: bm_lewis, en-us, speed 1.0 (style.json / character.json). Owner, 2026-11-21: "use my audio... similar sound of my audio to create my videos". Chosen offline as the nearest of the 54 Kokoro voices to the owner's own recording (speaker likeness 0.876 vs 0.815 for the old bm_george; `scripts/voice_match.py`). Ved speaks in this voice in every video from now on.
 - Music signature: ambient, D dorian, 78 bpm, seed 21, ducked under the voice, loudness -14 LUFS.
 - SFX meanings: pop = new item, whoosh = scene change, ding = payoff/CTA, boom = big reveal, scratch/crickets/wah = comedy beats only.
@@ -246,6 +251,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-22 | 5 | Dynamic, story-first sound: voice always easy to follow, levels move with the moment, effects one at a time (max 3 per 2 s), small sounds vanish under speech, hits keep punch; renderer enforces it and ears reports dropped effects | owner: "explaining is the main thing... doesn't pile up too much and become noise" |
 | 2026-11-22 | 3 | Mix styles inside every Short: at least three visual styles cut together per Short, Ved comes and goes, new shot every 2-4 s (reference jobs/2026-11-22-m1) | owner: "Permanent rule that you mix the styles" |
 | 2026-11-21 | 3 | Professor Ved v9 (same Ved, cleaner): eyes and pocket redrawn, stray lines and overlaps removed; signature = gold pencil in pocket + gold spark pin (owner picked A + B); Ved drawn in every look (marker, chalk, riso, film, ink; night rim); mascot badge + gold watermark; 3D Ved = the layered paper standee (owner kept it over a fully modelled 3D Ved). v9.1 cleanup: no lines across the eyes, no stray folds or sleeve corners. Sheet: docs/sheets/professor_ved_model_sheet_v9.png. Owner approved 2026-11-21 ("keep the old one in 3d and move ahead") | owner request (character redesign) |
 | 2026-11-21 | 3 | sound library (earshot renders + CC0 UI pack; Openverse real recordings once allowed), peak-on-frame sync, no doubling, voice-safe ducking, ears measurements on every render | owner request (Openverse, Real SFX, earshot) |
