@@ -198,6 +198,14 @@ def validate_job(job, style, chars, root=ROOT):
                 continue
             if L.get("enter", "none") not in ENTER:
                 errs.append(f"{w}: enter '{L['enter']}' not in {sorted(ENTER)}")
+            wear = (L.get("rig_args") or {}).get("wear") if t == "character" and L.get("id") == "ved" else None
+            if wear:                                       # occasional role pieces, only from Ved's wardrobe
+                WEAR_OK = {"jacket", "blazer", "goggles", "sunglasses", "hardhat", "headset", "cap", "sash", "scarf", "badge"}
+                bad = [x for x in wear.split(",") if x.strip() and x.strip() not in WEAR_OK]
+                if bad:
+                    errs.append(f"{w}: Ved can't wear {bad}; wardrobe is {sorted(WEAR_OK)}")
+                if len([x for x in wear.split(",") if x.strip()]) > 2:
+                    errs.append(f"{w}: at most 2 wardrobe pieces at once (he must still read as Ved)")
             if "sting" in L and L["sting"] not in STINGS:
                 errs.append(f"{w}: sting '{L['sting']}' not in {sorted(STINGS)}")
             if L.get("loop", "none") not in LOOP:
@@ -300,4 +308,11 @@ def validate_job(job, style, chars, root=ROOT):
             errs.append("long video: every chapter needs a valid scene index and a title")
         if [c.get("scene") for c in ch] != sorted({c.get("scene") for c in ch}):
             errs.append("long video: chapter scenes must be strictly increasing")
+    # wardrobe pieces are an accent for a scene or two, never the whole video (owner 2026-11-22)
+    ved = [(k, L) for k, sc in enumerate(job.get("scenes", [])) for L in sc.get("layers", [])
+           if L.get("type") == "character" and L.get("id") == "ved"]
+    if ved:
+        worn = {k for k, L in ved if (L.get("rig_args") or {}).get("wear")}
+        if worn and len(worn) > max(2, len({k for k, _ in ved}) // 2):
+            errs.append(f"Ved wears role pieces in {len(worn)} of {len({k for k, _ in ved})} scenes: keep them to a scene or two")
     return errs

@@ -55,6 +55,15 @@ ROLES = {
     "documentary narrator": ("the narrator of a nature or history documentary", "wide 3D world, slow camera", "none: voice-led", "calm, serif titles, cinematic"),
 }
 
+# optional role pieces from Ved's wardrobe (characters/ved/make.py WEAR_ITEMS): for one or two scenes only, never the
+# whole video, at most two at once; most videos need none. Layer: "rig_args": {"wear": "jacket,goggles"}
+ROLE_WEAR = {"hacker": "jacket", "detective": "jacket", "explorer": "goggles", "inventor": "goggles", "time traveller": "goggles",
+             "engineer": "hardhat", "city planner": "hardhat", "project lead": "badge", "project planner": "badge",
+             "mayor": "sash", "ship captain": "cap", "pilot": "headset,sunglasses", "mission control": "headset",
+             "radio host": "headset", "podcast host": "headset", "sports commentator": "headset", "news anchor": "blazer",
+             "judge": "blazer", "banker": "blazer", "magician": "blazer", "tour guide": "scarf", "enthusiast": "badge",
+             "fellow friend": "sunglasses"}
+
 EXPLAIN = {
     "analogy demo": "one everyday object stands in for the idea and is shown doing it",
     "experiment": "set up, run, measure, surprising result",
@@ -127,6 +136,7 @@ def report(seed=None):
         f"ROLE     {role}: Ved as {who}",
         f"         set: {where} | props: {props}",
         f"         talks: {talk}",
+        f"         wear (optional, one or two scenes only): {ROLE_WEAR.get(role, 'none needed')}",
         f"EXPLAIN  {mode}: {EXPLAIN[mode]}",
         "STYLES   " + " + ".join(names.get(s, s) for s in styles),
         "         (cut between them every 2-4 s; Ved, his white shirt and his voice never change)",

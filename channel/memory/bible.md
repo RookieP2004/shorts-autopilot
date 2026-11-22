@@ -88,6 +88,9 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   story, build, scale zoom, versus, what-if, quiz, countdown, timeline, inside the machine, debate, case file) and the art
   styles it mixes. The role lives in the set, the props, his words and the framing; Ved's drawing, white shirt and voice
   never change. `python -m autopilot variety` suggests a fresh combination; the log records role / explain / styles.
+  Wardrobe accents (owner, 2026-11-22: "he can sometimes change his look also, like leather jacket, goggles... only when
+  needed, not always and not in full videos"): one or two pieces (jacket, blazer, goggles, sunglasses, hard hat, headset,
+  cap, sash, scarf, badge) for a scene or two when the role calls for it; he always still reads as Ved.
 - **Motion & graphics standard for EVERY Short (owner, 2026-11-16: "take notes from these for your normal shorts also").**
   The night pilot's graphics are now house graphics in the bright town too (only the night lighting, rim light and highlight
   captions stay night-only; town captions are unchanged). In every Short:
@@ -126,7 +129,8 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
 |---|---|---|---|---|---|
 | ved | Professor Ved | host and explainer | about 25, sharp, calm, quietly funny; white shirt, top button open, sleeves rolled | Kokoro bm_lewis, speed 1.0, en-us (owner's nearest voice, since 2026-11-21; was bm_george) | idle, warm, serious, explain, point, think, welcome, surprised, crossed + reaction faces deadpan, side_eye, smirk |
 
-Rule: characters are made only by `characters/<id>/make.py`. Colours, proportions and voice never change.
+Rule: characters are made only by `characters/<id>/make.py`. Colours, proportions and voice never change. Exception: Ved's
+occasional wardrobe accents (section 3, Versatility), drawn by make.py on top of him, for a scene or two only.
 
 ## 5. Sound 🔒
 - **🔒 Dynamic, story-first sound (owner, 2026-11-22: "explaining is the main thing... the sound effect doesn't pile up too much
@@ -270,6 +274,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-22 | 3, 4 | Ved wardrobe accents: jacket, blazer, goggles, sunglasses, hard hat, headset, cap, sash, scarf, badge; max 2 at once, a scene or two only, when the role needs it | owner: "only when needed, not always and not in full videos" |
 | 2026-11-22 | 3 | Versatility: every Short changes Ved's role, the explain mode and the art-style mix (no role twice in 10 videos); only Ved stays constant; `autopilot variety` + log cells role/explain/styles | owner: "ADHD person yt... the only constant is me... versatility" |
 | 2026-11-22 | 6 | weights: dark-files 0.20 -> 0.10, myth-bust 0.23 -> 0.28, scale-shock 0.12 -> 0.17; dark-files titles calm and literal | review: dark-files 202 / 911 / 2 views vs channel median 1,042; myth-bust median 1,112 |
 | 2026-11-22 | 7 | "you've been told X" tested: occasional only; countdown is next week's experiment | review: 4 Shorts, median 983 views, 15.6 likes per 1k |

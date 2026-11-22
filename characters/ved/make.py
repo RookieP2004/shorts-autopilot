@@ -536,8 +536,98 @@ def signature_head(s, sig):
               '<ellipse cx="270" cy="54" rx="6" ry="3" fill="#fff" opacity="0.5"/>')
 
 
+# ---------------- wardrobe: occasional role pieces (owner 2026-11-22) ----------------
+# Ved is always Ved: same face, white shirt, colours and proportions. For a role he may *add* one or two pieces for a
+# scene or two (never a whole video, never by default): rig_args {"wear": "jacket,goggles"}.
+WEAR_ITEMS = ("jacket", "blazer", "goggles", "sunglasses", "hardhat", "headset", "cap", "sash", "scarf", "badge")
+COATS = {"jacket": ("#3d2a20", "#251812", "#170e09", "#5a4032"),        # leather: base, shadow, deep, sheen
+         "blazer": ("#2b3551", "#1b2238", "#121828", "#3d4a6e")}
+
+
+class _Sleeves:
+    """draw the sleeves / shoulder caps in the coat's colours, then put the shirt colours back"""
+    def __init__(self, coat):
+        self.coat = coat
+
+    def __enter__(self):
+        global SHIRT, SHIRT_SH, SHIRT_DEEP
+        self.old = (SHIRT, SHIRT_SH, SHIRT_DEEP)
+        if self.coat:
+            SHIRT, SHIRT_SH, SHIRT_DEEP = COATS[self.coat][:3]
+
+    def __exit__(self, *a):
+        global SHIRT, SHIRT_SH, SHIRT_DEEP
+        SHIRT, SHIRT_SH, SHIRT_DEEP = self.old
+
+
+def wear_torso(s, wear):
+    coat = next((c for c in COATS if c in wear), None)
+    if coat:
+        base, sh, deep, sheen = COATS[coat]
+        left = ("M268,288 C232,291 198,297 170,304 C146,312 136,330 136,356 L140,404 C148,432 162,452 172,470 "
+                "L178,838 L264,842 L264,436 L234,384 L252,332 Z")
+        s.part(left, base, shadow="M150,330 L196,330 L206,842 L178,842 Z", shadow_col=sh)
+        s.part(mirror(left), base, shadow=mirror("M268,300 L240,380 L264,436 L264,842 L300,842 L300,300 Z"), shadow_col=deep)
+        lapel = "M268,288 L252,332 L234,384 L264,436 L276,330 Z"
+        s.add(f'<path d="{lapel}" fill="{sheen}"/><path d="{mirror(lapel)}" fill="{sh}"/>')
+        s.add(f'<path d="M190,560 C200,620 204,700 200,820" fill="none" stroke="{sheen}" stroke-width="5" opacity="0.6"/>')
+        if coat == "jacket":                                   # zip line and a pocket welt
+            s.add(f'<path d="M262,520 L262,830" stroke="{SILVER}" stroke-width="3" opacity="0.7"/>'
+                  f'<path d="M196,640 L246,632" stroke="{deep}" stroke-width="5" stroke-linecap="round"/>')
+        else:
+            for y in (600, 680):
+                s.add(f'<circle cx="252" cy="{y}" r="6" fill="{deep}"/>')
+    if "scarf" in wear:
+        s.add('<path d="M262,282 C280,300 320,300 338,282 L346,318 C320,334 280,334 254,318 Z" fill="#b8323a"/>'
+              '<path d="M318,318 L340,320 L336,452 L310,446 Z" fill="#9c2830"/>'
+              '<path d="M310,446 L336,452 L334,470 L308,464 Z" fill="#7d1f26"/>')
+    if "sash" in wear:                                         # mayor's sash, right shoulder to left hip, with a medal
+        s.add('<path d="M406,300 L442,322 L214,800 L180,780 Z" fill="#b22f35"/>'
+              '<path d="M406,300 L414,305 L188,785 L180,780 Z" fill="#e2b24e"/>'
+              '<path d="M434,317 L442,322 L214,800 L206,795 Z" fill="#e2b24e"/>')
+        s.add(f'<circle cx="300" cy="600" r="24" fill="{GOLD}"/><circle cx="300" cy="600" r="17" fill="#e9c46a"/>'
+              f'<path d="M300,588 L304,597 L313,598 L306,604 L308,613 L300,608 L292,613 L294,604 L287,598 L296,597 Z" fill="#a8792a"/>')
+    if "badge" in wear:                                        # lanyard + ID card (fictional, no logos)
+        s.add('<path d="M276,300 L292,500 M324,300 L308,500" stroke="#2f6fd0" stroke-width="7" fill="none"/>')
+        s.add('<rect x="268" y="496" width="64" height="86" rx="8" fill="#f2f4f7" stroke="#c9ccd1" stroke-width="3"/>'
+              '<rect x="280" y="510" width="40" height="30" rx="4" fill="#9fb4cc"/>'
+              '<rect x="280" y="550" width="40" height="6" rx="3" fill="#7a8899"/><rect x="280" y="562" width="28" height="6" rx="3" fill="#7a8899"/>')
+
+
+def wear_head(s, wear):
+    if "hardhat" in wear:
+        s.add('<path d="M214,104 C210,40 254,8 300,8 C346,8 390,40 386,104 Z" fill="#f2b632"/>'
+              '<path d="M300,8 C346,8 390,40 386,104 L352,104 C356,52 336,18 300,8 Z" fill="#d1931c"/>'
+              '<path d="M292,10 L308,10 L310,104 L290,104 Z" fill="#f7cb5e"/>'
+              '<path d="M196,98 L404,98 Q410,112 398,116 L202,116 Q190,112 196,98 Z" fill="#e0a426"/>')
+    if "cap" in wear:                                          # captain's cap, sitting high on the quiff
+        s.add('<g transform="translate(0,-18)">' '<path d="M222,96 C214,52 252,24 300,22 C352,20 392,46 380,96 Z" fill="#f4f4f2"/>'
+              '<path d="M220,86 L382,86 L380,104 L222,104 Z" fill="#1d2433"/>'
+              '<path d="M226,102 C262,124 338,124 374,102 L368,112 C336,132 264,132 232,112 Z" fill="#101318"/>'
+              f'<ellipse cx="300" cy="94" rx="18" ry="11" fill="{GOLD}"/><path d="M290,94 L310,94" stroke="#8a6420" stroke-width="3"/></g>')
+    if "goggles" in wear:                                      # pushed up on the forehead
+        s.add('<path d="M224,92 C260,80 340,80 378,92 L378,106 C340,94 260,94 224,106 Z" fill="#3a2a20"/>')
+        for cx in (270, 330):
+            s.add(f'<circle cx="{cx}" cy="90" r="25" fill="#8a6a3a"/><circle cx="{cx}" cy="90" r="19" fill="#5fb8c9"/>'
+                  f'<circle cx="{cx}" cy="90" r="19" fill="url(#none)" opacity="0"/>'
+                  f'<path d="M{cx-10},{82} A12,12 0 0 1 {cx+4},{77}" stroke="#fff" stroke-width="4" fill="none" opacity="0.7"/>')
+        s.add('<rect x="292" y="84" width="16" height="10" rx="3" fill="#8a6a3a"/>')
+    if "sunglasses" in wear:
+        for cx in (269, 331):
+            s.add(f'<path d="M{cx-23},128 L{cx+23},128 L{cx+20},150 Q{cx},160 {cx-20},150 Z" fill="#14161b"/>'
+                  f'<path d="M{cx-14},133 L{cx-4},133 L{cx-12},146 Z" fill="#fff" opacity="0.35"/>')
+        s.add('<path d="M292,132 Q300,127 308,132" stroke="#14161b" stroke-width="5" fill="none"/>'
+              '<path d="M246,131 L228,136 M354,131 L372,136" stroke="#14161b" stroke-width="5"/>')
+    if "headset" in wear:
+        s.add('<path d="M222,150 C214,60 386,60 378,150" fill="none" stroke="#22252c" stroke-width="12" stroke-linecap="round"/>')
+        for x in (206, 370):
+            s.add(f'<rect x="{x}" y="122" width="26" height="56" rx="12" fill="#2e323b"/><rect x="{x+4}" y="128" width="8" height="44" rx="4" fill="#4a505c"/>')
+        s.add('<path d="M384,168 C392,210 364,226 330,222" fill="none" stroke="#2e323b" stroke-width="6" stroke-linecap="round"/>'
+              '<ellipse cx="328" cy="222" rx="9" ry="7" fill="#14161b"/>')
+
+
 def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None, arms=None, lift=(0.0, 0.0), shadow=True, sig=None,
-           layer="all"):
+           layer="all", wear=""):
     """layer: "all", or one depth layer for the 3D standee - "body" (legs, back arms, torso), "head", "front" (forearms
     in front of the body).  arms: optional list of (shoulder, elbow, wrist, hand_kind, forearm_in_front) - used by the renderer
     to interpolate smoothly between poses. lift: leg lifts for walking/jumping. shadow: draw the floor shadow
@@ -548,21 +638,32 @@ def figure(pose="down", expr="neutral", blink=False, look=(0, 0), mouth=None, ar
         s.add('<ellipse cx="300" cy="1456" rx="190" ry="20" fill="#000" opacity="0.22"/>')
     arms = arms if arms is not None else ARMS[pose]
     sig = SIG if sig is None else sig
+    wear = {w.strip() for w in (wear or "").split(",") if w.strip()}
+    coat = next((c for c in COATS if c in wear), None)
+    if coat:
+        sig = sig.replace("pen", "")                          # the pocket is under the coat; the pin goes on the lapel
     if want("body"):
         legs(s, lift)
-        for shoulder, elbow, wrist, kind, front in arms:      # sleeves sit behind the torso's shoulder line
-            if not front:
-                arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, watch=shoulder[0] > 300)
+        with _Sleeves(coat):
+            for shoulder, elbow, wrist, kind, front in arms:  # sleeves sit behind the torso's shoulder line
+                if not front:
+                    arm(s, shoulder, elbow, wrist, kind, shoulder[0] > 300, watch=shoulder[0] > 300)
         torso(s)
-        for right in (False, True):                           # shoulder caps over the sleeve tops
-            d = "M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z"
-            d = mirror(d) if right else d
-            s.part(d, SHIRT, shadow="M408,290 L470,290 L470,420 L408,420 Z" if right else None, shadow_col=SHIRT_SH)
+        if wear:
+            wear_torso(s, wear)
+        with _Sleeves(coat):
+            for right in (False, True):                       # shoulder caps over the sleeve tops
+                d = "M170,304 C146,312 136,330 136,356 L140,404 C152,410 174,406 190,392 C200,370 202,332 198,306 Z"
+                d = mirror(d) if right else d
+                s.part(d, SHIRT, shadow="M408,290 L470,290 L470,420 L408,420 Z" if right else None, shadow_col=SHIRT_SH)
         signature_torso(s, sig)
     if want("head"):
         head(s, expr, blink, look, mouth)
         signature_head(s, sig)
+        if wear:
+            wear_head(s, wear)
     if want("front"):
+      with _Sleeves(coat):
         for shoulder, elbow, wrist, kind, front in arms:      # forearms in front of the body (think, crossed)
             if front:
                 s0 = (shoulder[0] + (elbow[0] - shoulder[0]) * 0.2, shoulder[1] + (elbow[1] - shoulder[1]) * 0.2)

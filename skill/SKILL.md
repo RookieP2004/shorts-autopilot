@@ -137,6 +137,10 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   voice never change. Before scripting run `python -m autopilot variety` (it reads the log and suggests a fresh role, mode
   and style mix; swap them when the topic fits another better) and put `role`, `explain` and `styles` in `meta` so the log
   records them.
+  Now and then, only when the role needs it, Ved may add one or two wardrobe pieces for a scene or two (never the whole
+  video): `"rig_args": {"wear": "jacket,goggles"}` from jacket, blazer, goggles, sunglasses, hardhat, headset, cap, sash,
+  scarf, badge. He still reads as Ved: same face, white shirt showing, same voice. The validator refuses more than two
+  pieces at once or pieces in more than half his scenes.
 - **Motion & graphics in EVERY Short (town look too; owner 2026-11-16)**: use the night-pilot graphics in normal Shorts as well
   (they work on bright sets; see the Bible "Motion & graphics standard"). Numbers tick in a `hud` chip with an `eqbar` building
   the maths; a number of people becomes a `crowd` on the town floor that splits / fades / glows; steps build one by one

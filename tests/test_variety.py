@@ -12,3 +12,13 @@ def test_suggest_avoids_recent_roles_and_fills_styles():
 
 def test_report_has_meta_line():
     assert '"role":' in variety.report(seed=2)
+
+
+def test_ved_wardrobe_draws_and_is_limited():
+    import importlib.util, os
+    spec_ = importlib.util.spec_from_file_location("vedmake", os.path.join(os.path.dirname(__file__), "..", "characters", "ved", "make.py"))
+    m = importlib.util.module_from_spec(spec_); spec_.loader.exec_module(m)
+    plain = m.figure(pose="explain", expr="warm")
+    worn = m.figure(pose="explain", expr="warm", wear="jacket,goggles")
+    assert worn != plain and "#3d2a20" in worn and "#3d2a20" not in plain
+    assert m.figure(pose="explain", expr="warm") == plain          # the shirt colours come back after a coat
