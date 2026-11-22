@@ -141,6 +141,16 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   video): `"rig_args": {"wear": "jacket,goggles"}` from jacket, blazer, goggles, sunglasses, hardhat, headset, cap, sash,
   scarf, badge. He still reads as Ved: same face, white shirt showing, same voice. The validator refuses more than two
   pieces at once or pieces in more than half his scenes.
+- **Real reference photos (owner, 2026-11-22)**: when a Short talks about a real incident, place, object or document, show a
+  real photo of it for a moment as a reference accent: a polaroid (shutter click), a postage stamp, a photo pinned under a
+  sticky note, or a newspaper clipping, whatever suits that shot. `python -m autopilot refphoto get "<Commons file name>"
+  --license "<licence>" --author "<author>" --frame polaroid|stamp|sticky|clipping|plain --caption "<date or place>"
+  --job jobs/<id> --out <name>.png` downloads it from Wikimedia Commons, frames it and records the credit, which is added to
+  the YouTube description automatically; use the PNG as an `image` layer with keys (drop in, slight turn, its own sfx).
+  Find the file and read its licence and author on its Commons page with WebFetch first. Only public domain, CC0 or CC BY
+  (the tool refuses BY-SA, NC, ND and fair-use files). Never a photo of a person's face, famous or not: for a real person
+  show a name card with their date, their invention, place or a document. Never graphic, violent or victim images, never
+  logos. One to three per Short, a second or two each, only where the story needs the reference.
 - **Motion & graphics in EVERY Short (town look too; owner 2026-11-16)**: use the night-pilot graphics in normal Shorts as well
   (they work on bright sets; see the Bible "Motion & graphics standard"). Numbers tick in a `hud` chip with an `eqbar` building
   the maths; a number of people becomes a `crowd` on the town floor that splits / fades / glows; steps build one by one

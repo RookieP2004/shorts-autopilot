@@ -53,6 +53,10 @@ def zapier_fields(job, style, job_path=None):
     cr = render_credits(job_path)
     if cr:
         desc = (desc + "\n\nMusic: " + " · ".join(cr)).strip()
+    from .refphoto import credits as photo_credits          # reference photos used in the video (licence + author)
+    pc = photo_credits(os.path.dirname(job_path)) if job_path else []
+    if pc:
+        desc = (desc + "\n\nPhotos: " + "\n".join(pc)).strip()
     tags = [t.lstrip("#") for t in job.get("tags", [])][:30]
     hashtags = list(yt.get("hashtags", []))
     hashtags += [h for h in job.get("hashtags", []) if h not in hashtags]

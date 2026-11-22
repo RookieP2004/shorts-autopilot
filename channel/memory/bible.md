@@ -91,6 +91,11 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   Wardrobe accents (owner, 2026-11-22: "he can sometimes change his look also, like leather jacket, goggles... only when
   needed, not always and not in full videos"): one or two pieces (jacket, blazer, goggles, sunglasses, hard hat, headset,
   cap, sash, scarf, badge) for a scene or two when the role calls for it; he always still reads as Ved.
+- **🔒 Real reference photos (owner, 2026-11-22: "use the real photo of that incident... just to give reference, like a stamp in
+  some shot, a click photograph, a sticky note").** For real incidents, places, objects and documents: a real photo as a
+  small accent (polaroid, stamp, sticky note, clipping) in the shot that talks about it, one to three per Short. Only public
+  domain / CC0 / CC BY files from Wikimedia Commons, credited in the description (`autopilot refphoto`). Never people's faces
+  (a name card, their date, invention or place instead), never graphic or victim images, never logos.
 - **Motion & graphics standard for EVERY Short (owner, 2026-11-16: "take notes from these for your normal shorts also").**
   The night pilot's graphics are now house graphics in the bright town too (only the night lighting, rim light and highlight
   captions stay night-only; town captions are unchanged). In every Short:
@@ -274,6 +279,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-22 | 3 | Real reference photos as accents (polaroid, stamp, sticky note, clipping) for real incidents, places, objects, documents; PD / CC0 / CC BY from Wikimedia Commons, auto-credited; never faces, graphic images or logos | owner: "use the real photo... just to give reference" |
 | 2026-11-22 | 3, 4 | Ved wardrobe accents: jacket, blazer, goggles, sunglasses, hard hat, headset, cap, sash, scarf, badge; max 2 at once, a scene or two only, when the role needs it | owner: "only when needed, not always and not in full videos" |
 | 2026-11-22 | 3 | Versatility: every Short changes Ved's role, the explain mode and the art-style mix (no role twice in 10 videos); only Ved stays constant; `autopilot variety` + log cells role/explain/styles | owner: "ADHD person yt... the only constant is me... versatility" |
 | 2026-11-22 | 6 | weights: dark-files 0.20 -> 0.10, myth-bust 0.23 -> 0.28, scale-shock 0.12 -> 0.17; dark-files titles calm and literal | review: dark-files 202 / 911 / 2 views vs channel median 1,042; myth-bust median 1,112 |

@@ -22,3 +22,13 @@ def test_ved_wardrobe_draws_and_is_limited():
     worn = m.figure(pose="explain", expr="warm", wear="jacket,goggles")
     assert worn != plain and "#3d2a20" in worn and "#3d2a20" not in plain
     assert m.figure(pose="explain", expr="warm") == plain          # the shirt colours come back after a coat
+
+
+def test_refphoto_licences_and_credits(tmp_path):
+    from autopilot import refphoto
+    assert refphoto.license_ok("Public domain") and refphoto.license_ok("CC BY 4.0") and refphoto.license_ok("CC0")
+    for bad in ("CC BY-SA 4.0", "CC BY-NC 2.0", "Fair use", "All rights reserved"):
+        assert not refphoto.license_ok(bad)
+    assert refphoto.thumb_url("Apollo 11 Launch - GPN-2000-000630.jpg", 960).endswith("/960px-Apollo_11_Launch_-_GPN-2000-000630.jpg")
+    (tmp_path / "photo_credits.json").write_text('["NASA (Public domain), via Wikimedia Commons: x"]')
+    assert refphoto.credits(str(tmp_path))

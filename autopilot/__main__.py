@@ -28,6 +28,10 @@ def main(argv=None):
     f = sub.add_parser("frames"); f.add_argument("job"); f.add_argument("--at"); f.add_argument("--out"); f.add_argument("--no-guides", action="store_true")
     r = sub.add_parser("render"); r.add_argument("job"); r.add_argument("--out"); r.add_argument("--workers", type=int)
     z = sub.add_parser("zapier"); z.add_argument("job")
+    rp = sub.add_parser("refphoto"); rp.add_argument("action", choices=["get"]); rp.add_argument("name")
+    rp.add_argument("--license", required=True); rp.add_argument("--author", required=True)
+    rp.add_argument("--frame", default="polaroid"); rp.add_argument("--caption", default=""); rp.add_argument("--out", required=True)
+    rp.add_argument("--job", default=None); rp.add_argument("--seed", type=int, default=0)
     vr = sub.add_parser("variety"); vr.add_argument("--seed", type=int, default=None)
     lg = sub.add_parser("logline"); lg.add_argument("job"); lg.add_argument("--youtube-id", default="")
     th = sub.add_parser("thumbnail"); th.add_argument("job"); th.add_argument("--out")
@@ -61,6 +65,9 @@ def main(argv=None):
         from .publish import zapier_fields
         job = load_json(args.job)
         print(json.dumps(zapier_fields(job, job_style(job), args.job), indent=2, ensure_ascii=False))
+    elif args.cmd == "refphoto":
+        from .refphoto import get
+        print(get(args.name, args.license, args.author, args.frame, args.caption, args.out, args.job, args.seed))
     elif args.cmd == "variety":
         from .variety import report
         print(report(args.seed))
