@@ -2,6 +2,31 @@
 
 The weekly review writes a new entry at the top: date · data window · findings with numbers · decisions · next week's experiment.
 
+## 2026-11-22 · window 2026-10-25 to 2026-11-22 (28 days; YouTube API, 37 public Shorts + 2 public long, 1 held long)
+- Totals (all 40): 33,297 views, 633 likes, 19 comments. 36 public videos older than 48 h: median 1,042 views (last week 1,129),
+  ~20 likes per 1k. Still a ceiling, no breakout: best ever is blue blood 1,466; this week's best were mantis shrimp and
+  foot-asleep (1,159 / 1,141).
+- Dark-files is the clear loser: Capone laundering 202, hawala 911 (8.8 likes per 1k), and the Escobar hippos Short has
+  **2 views after 35 h** (posted 24 h after the previous Short, so not spacing). That pattern (like ants, 4 views) looks like the
+  feed never tested it; possible limited distribution for a "drug lord" title. Owner: please check that Short in YouTube Studio
+  (restrictions / ad suitability / copyright checks).
+- Myth-bust 10 Shorts, median 1,112, floor 989: still the safest. Scale-shock median 1,059 (21.9 likes per 1k, the best rate).
+  Wild-story 1,042, frontier 1,033, what-if 965. Big-question median 990 with the lowest likes (14.9 per 1k).
+- Experiment result: "you've been told X" (senses 990, DNA 434, meteorite 989, leap year 977): median 983, likes 15.6 per 1k,
+  i.e. no better than the median. Keep it occasional.
+- Length: every Short this week ran 36-41 s, above the 25-35 s target; 30-40 s median 1,084 vs 40-61 s 1,038 (noise). Next
+  week's Shorts must actually land at 25-35 s so the target can be tested.
+- Comments: knuckle cracking 3 and gold 3 (a "test it yourself" / "why" angle draws replies).
+- Long videos get almost no traffic: "How Money Actually Works" 33 views in 8 days (182 likes per 1k), "Empty Space" 5 views in
+  15 h. Semmelweis is held until 2026-11-28. Suggestion for the owner (🔒 section, not changed): link each long video from the
+  matching Short's description / pinned comment and as a related video, since ~97% of our views come from the Shorts feed.
+- Manual experiment 2026-11-22-m1 (Wi-Fi, mixed styles with Cutaway 3D): 104 views in the first hour; judge next week.
+- Decisions (Bible §6, §7, §11): dark-files 0.20 -> 0.10, myth-bust 0.23 -> 0.28, scale-shock 0.12 -> 0.17; dark-files titles calm
+  and literal; "you've been told X" occasional only; humour notes updated. No owner edits in the Bible doc this week. Bible doc re-synced in full (it was missing everything since 11-17); the owner's
+  new 🔒 sound rule (2026-11-22, added after the sync) is waiting to sync next week.
+- Next week's experiment: the countdown hook on 2 Shorts (a scale-shock and a myth-bust), and hold every Short to 25-35 s;
+  compare 48 h views with this week's median (1,042).
+
 ## 2026-11-15 · window 2026-10-18 to 2026-11-15 (28 days; YouTube API, 20 public Shorts + 1 public long, 1 held long)
 - Totals: 20,150 views, 416 likes, 13 comments. 15 Shorts older than 48 h: median 1,129 views, 23 likes per 1k views.
 - A ceiling, not a breakout: no Short has passed ~1.3x the median (best: blue blood 1,462, brain 1,358, cells 1,357). Most land at

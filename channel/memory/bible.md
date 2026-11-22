@@ -135,13 +135,13 @@ Rule: characters are made only by `characters/<id>/make.py`. Colours, proportion
 | format | weight | length | structure | hooks |
 |---|---|---|---|---|
 | big-question | 0.18 | 25-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
-| myth-bust | 0.23 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
-| scale-shock | 0.12 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
+| myth-bust | 0.28 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
+| scale-shock | 0.17 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
 | what-if | 0.09 | 30-40 s | "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today | what-if |
 | frontier | 0.08 | 30-40 s | "HOW COULD WE REALLY...?" (teleportation, interstellar travel, fusion, CERN) → what already works today (PROVEN) → what the best current research is trying (R&D, with the lab or experiment named) → what is still missing → how far away it really is | question |
 | wild-story | 0.07 | 30-45 s | a true, crazy story behind a discovery, experiment or thinker, told as a mini-drama with the townspeople as the cast → the twist → what it taught us | story |
 | deep-question | 0.03 | 35-45 s | occasional philosophy ("Are humans a kind of AI?", "Can communism actually work?", "Are your facts real or propaganda?") → the strongest answers on each side, fairly → a thinking tool the viewer can use → Ved leaves the final call to the viewer | question |
-| dark-files | 0.20 | 30-45 s (and Deep Dives) | a hidden economy or crime world (drug markets, cartels, mafias and the underworld, hawala, money laundering, gambling, smuggling, illegal trades) → one true case as a mini-drama → how the system really works, at the level of a news documentary → where it touches your everyday world (prices, banks, sport, phones, elections) → what it costs people and how it ends for those involved → what actually works against it (the evidence) | story / number-shock |
+| dark-files | 0.10 | 30-45 s (and Deep Dives) | a hidden economy or crime world (drug markets, cartels, mafias and the underworld, hawala, money laundering, gambling, smuggling, illegal trades) → one true case as a mini-drama → how the system really works, at the level of a news documentary → where it touches your everyday world (prices, banks, sport, phones, elections) → what it costs people and how it ends for those involved → what actually works against it (the evidence) | story / number-shock |
 
 **Added 2026-11-13 by the owner (additions only; nothing above changes):** what-if thought experiments, frontier
 "how could it really work" explainers, wild true stories from science and philosophy, and occasional philosophy questions.
@@ -180,6 +180,11 @@ pay YOU interest?") got more and won the most subscribers: frame money topics ar
 40-57 s ones got in a week, so keep 25-35 s. Myth-busts are the steadiest (7 of 7 at 994-1,462 views); every big-question below
 850 views was abstract economics (commons 94, opportunity cost 380, bank interest 836), so big-questions should be concrete and
 physical (gold, goosebumps, prisoner's dilemma all 1,100+), and economics stays wallet-first.
+**Review 2026-11-22 (28-day stats, 36 public videos older than 48 h):** channel median 1,042 views; still a ceiling at
+~1,000-1,470, no breakout. Myth-bust stays the steadiest (10 Shorts, median 1,112, floor 989). Dark-files is the weakest Short
+format (Capone laundering 202, hawala 911, Escobar hippos 2 views after 35 h, likes 13.5 per 1k vs ~20 for the others), so its
+weight drops to the 0.10 minimum and its titles stay calm and literal (no "drug lord", "cartel", "crime" words in the title).
+Big-questions earn the fewest likes (14.9 per 1k; foot-asleep 1,141 views but 6 per 1k): concrete and physical only.
 Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in a row. Deep Dives can use any format too
 (a what-if or frontier topic makes a great long video).
 
@@ -214,7 +219,10 @@ Skeletons: `jobs/_templates/<format>.json`. Never the same format three days in 
 question · myth-bust · number-shock · "you've been told X" · countdown. The hook is on screen at frame 0 and spoken in the first 1.5 s.
 - Preferred (2026-11-15): myth-bust (median 1,129 views, never below 994) and number-shock (median 1,142 when posted >= 5 h apart).
   "Question" hooks work when the question is about a physical thing the viewer can picture; avoid textbook-term questions.
-- Untested: "you've been told X" and countdown (next week's experiment, at most 2 slots).
+- "You've been told X" tested 2026-11-15 to 11-19 (4 Shorts: 990, 434, 989, 977 views; 15.6 likes per 1k): no better than the
+  median (1,042), so it is an occasional hook only, not preferred. Myth-bust (median 1,089 as a hook) and number-shock (1,042,
+  21 likes per 1k) stay preferred.
+- Untested: countdown (next week's experiment, at most 2 slots).
 
 ## 8. Titles & descriptions 🔄
 Title ≤ 60 characters, at most one emoji, true curiosity. Description: one-line summary, then "Sources:" with links.
@@ -247,10 +255,17 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 - Flopped (provisional): 'Me when / me trying to' caption (goosebumps, 12.2/1k); 'Always Has Been' is mixed (sugar cube 25/1k,
   brain 10/1k), so rest it for a while; timeless cards do as well as trends when the topic is strong (gold 1,141 views).
 - Don't reuse one meme more than twice a week ('What's up brah?' ran 3 times).
+- Review 2026-11-22 (provisional): timeless dry cards did as well as trends ('Caesar: close enough' leap year 20/1k, Semmelweis
+  hand-wash card 22/1k, Jupiter 'glow-up' 20/1k); 'I Got So Mad' landed (Voyager 23/1k); 'My Type Quiz' (hawala 8.8/1k) and the
+  Tony Stark head-turn (senses 8/1k) flopped; 'foot.exe has stopped responding' 6/1k. When no rising trend fits, a timeless
+  card is fine.
 
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-22 | 6 | weights: dark-files 0.20 -> 0.10, myth-bust 0.23 -> 0.28, scale-shock 0.12 -> 0.17; dark-files titles calm and literal | review: dark-files 202 / 911 / 2 views vs channel median 1,042; myth-bust median 1,112 |
+| 2026-11-22 | 7 | "you've been told X" tested: occasional only; countdown is next week's experiment | review: 4 Shorts, median 983 views, 15.6 likes per 1k |
+| 2026-11-22 | 11 | humour notes: timeless cards hold up; 'I Got So Mad' landed; 'My Type Quiz', Tony Stark head-turn flopped | review: likes per 1k |
 | 2026-11-22 | 5 | Dynamic, story-first sound: voice always easy to follow, levels move with the moment, effects one at a time (max 3 per 2 s), small sounds vanish under speech, hits keep punch; renderer enforces it and ears reports dropped effects | owner: "explaining is the main thing... doesn't pile up too much and become noise" |
 | 2026-11-22 | 3 | Mix styles inside every Short: at least three visual styles cut together per Short, Ved comes and goes, new shot every 2-4 s (reference jobs/2026-11-22-m1) | owner: "Permanent rule that you mix the styles" |
 | 2026-11-21 | 3 | Professor Ved v9 (same Ved, cleaner): eyes and pocket redrawn, stray lines and overlaps removed; signature = gold pencil in pocket + gold spark pin (owner picked A + B); Ved drawn in every look (marker, chalk, riso, film, ink; night rim); mascot badge + gold watermark; 3D Ved = the layered paper standee (owner kept it over a fully modelled 3D Ved). v9.1 cleanup: no lines across the eyes, no stray folds or sleeve corners. Sheet: docs/sheets/professor_ved_model_sheet_v9.png. Owner approved 2026-11-21 ("keep the old one in 3d and move ahead") | owner request (character redesign) |

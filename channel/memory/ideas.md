@@ -2,8 +2,10 @@
 
 `- [format] idea · why it should work · source link`. Production runs add runners-up and delete what they use.
 
-**Steer (review 2026-11-15):** myth-busts and picturable physics/body questions are the safest bets; economics only wallet-first
-("why does YOUR..."), never a textbook term as the hook. Try the "you've been told X" hook on 2 Shorts this week.
+**Steer (review 2026-11-22):** lean on myth-busts and scale-shocks (the steadiest and best-liked); big-questions only about a
+physical thing you can picture; economics only wallet-first. Dark-files at most about once a week, with a calm, literal title
+(no "drug lord" / "cartel" in it). Try the countdown hook on 2 Shorts; keep every Short at 25-35 s.
+(Previous steer 2026-11-15: myth-busts and picturable physics/body questions; "you've been told X" on 2 Shorts — done.)
 
 - [scale-shock] How many atoms are in one grain of sand? · physics niche, counter-up hook · https://en.wikipedia.org/wiki/Avogadro_constant
 - [big-question] Why does your brain eat 20% of your energy? · follow-up angle on the brain myth: the costliest organ, shown as a city power grid · https://www.livescience.com/health/neuroscience/do-we-really-use-only-10-of-our-brains
