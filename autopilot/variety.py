@@ -64,6 +64,25 @@ ROLE_WEAR = {"hacker": "jacket", "detective": "jacket", "explorer": "goggles", "
              "judge": "blazer", "banker": "blazer", "magician": "blazer", "tour guide": "scarf", "enthusiast": "badge",
              "fellow friend": "sunglasses"}
 
+# topic lanes (owner, permanent 2026-11-22: an ADHD viewer's channel jumps between very different worlds). The next Short
+# comes from a lane not used in the last 4 videos.
+LANES = {
+    "everyday mechanisms": "how a scale, a lock, a zip, a fridge, a toilet flush, a lift really works",
+    "cosmos and physics": "why galaxies are flying apart, black holes, time, light, quantum weirdness",
+    "the body": "what your organs, cells, brain and senses are really doing",
+    "human upgrades": "how to build the perfect soldier, fighter, athlete, sprinter, diver: training, genetics, tech, limits",
+    "bio-engineering what-ifs": "a human with four arms, gills, night vision, a tail, photosynthesis skin: what would it take",
+    "fiction made real": "could a Narnia-style wardrobe portal, dragons, invisibility, a flying carpet, a hollow Earth work",
+    "philosophy and God": "is God real, free will, what is consciousness, is the universe a simulation, what is time",
+    "mind and psychology": "why you procrastinate, why crowds panic, memory tricks, why we believe things",
+    "money and power": "why prices rise, how banks make money, why empires fall, who really owns things",
+    "history's wild stories": "true crazy stories, inventions by accident, strange experiments, lost cities",
+    "engineering and megaprojects": "how to build a city on Mars, why bridges don't fall, the deepest hole, an unsinkable ship",
+    "animals and nature": "animal superpowers, weird ecosystems, why trees talk, how volcanoes work",
+    "tech and the internet": "how the internet reaches you, how AI learns, how GPS knows where you are",
+    "dark side of the real world": "hidden economies and crime worlds as a documentary (Bible dark-files guardrails)",
+}
+
 EXPLAIN = {
     "analogy demo": "one everyday object stands in for the idea and is shown doing it",
     "experiment": "set up, run, measure, surprising result",
@@ -109,30 +128,33 @@ def recent(n=12):
     out = []
     for l in rows:
         cell = lambda k: (re.search(rf"\| {k}: ([^|]+)", l) or [None, ""])[1].strip()
-        out.append((cell("role"), cell("explain"), [s.strip() for s in cell("styles").split("+") if s.strip()]))
+        out.append((cell("role"), cell("explain"), [s.strip() for s in cell("styles").split("+") if s.strip()], cell("lane")))
     return out
 
 
 def suggest(seed=None, k_styles=4):
     rec = recent()
-    used_roles = {r for r, _, _ in rec[-10:] if r}
-    used_explain = {e for _, e, _ in rec[-4:] if e}
+    used_roles = {x[0] for x in rec[-10:] if x[0]}
+    used_explain = {x[1] for x in rec[-4:] if x[1]}
+    used_lanes = {x[3] for x in rec[-4:] if x[3]}
     last_styles = set(rec[-1][2]) if rec else set()
     rng = random.Random(seed if seed is not None else dt.date.today().toordinal())
     roles = [r for r in ROLES if r not in used_roles] or list(ROLES)
     modes = [m for m in EXPLAIN if m not in used_explain] or list(EXPLAIN)
-    role, mode = rng.choice(roles), rng.choice(modes)
+    lanes = [l for l in LANES if l not in used_lanes] or list(LANES)
+    role, mode, lane = rng.choice(roles), rng.choice(modes), rng.choice(lanes)
     pool = [s for s in STYLES.values() if s not in last_styles]
     styles = ["town"] if "town" not in last_styles else []           # Ved's world appears in most videos, but not by rote
     styles += rng.sample([s for s in pool if s not in styles], k_styles - len(styles))
-    return role, mode, styles
+    return role, mode, styles, lane
 
 
 def report(seed=None):
-    role, mode, styles = suggest(seed)
+    role, mode, styles, lane = suggest(seed)
     who, where, props, talk = ROLES[role]
     names = {v: k for k, v in STYLES.items()}
     lines = [
+        f"LANE     {lane}: {LANES[lane]}  (pick the topic from this lane; see ideas.md)",
         f"ROLE     {role}: Ved as {who}",
         f"         set: {where} | props: {props}",
         f"         talks: {talk}",
@@ -140,8 +162,8 @@ def report(seed=None):
         f"EXPLAIN  {mode}: {EXPLAIN[mode]}",
         "STYLES   " + " + ".join(names.get(s, s) for s in styles),
         "         (cut between them every 2-4 s; Ved, his white shirt and his voice never change)",
-        f'meta:    "role": "{role}", "explain": "{mode}", "styles": {json.dumps(styles)}',
+        f'meta:    "lane": "{lane}", "role": "{role}", "explain": "{mode}", "styles": {json.dumps(styles)}',
         "Suggestions, not orders: swap any of them when the topic clearly fits another role, mode or style better",
-        "(but never repeat a role used in the last 10 videos).",
+        "(but never repeat a role used in the last 10 videos, nor a lane used in the last 4).",
     ]
     return "\n".join(lines)

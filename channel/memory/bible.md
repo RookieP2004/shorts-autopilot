@@ -150,14 +150,16 @@ occasional wardrobe accents (section 3, Versatility), drawn by make.py on top of
 ## 6. Formats 🔄
 | format | weight | length | structure | hooks |
 |---|---|---|---|---|
-| big-question | 0.18 | 25-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
-| myth-bust | 0.28 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
-| scale-shock | 0.17 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
-| what-if | 0.09 | 30-40 s | "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today | what-if |
+| big-question | 0.14 | 25-35 s | Ved asks, question on screen at frame 0 → the mechanism as full-screen 2D/3D visuals (voice-over) → Ved reaction beat → payoff that answers it | question |
+| myth-bust | 0.19 | 20-30 s | "MYTH:" headline + Ved deadpan → the truth shown as visuals/evidence (voice-over) → why the myth exists | myth-bust |
+| scale-shock | 0.13 | 20-30 s | huge number counting up at frame 0 → make it visible in full-screen 3D (voice-over) → a comparison the viewer feels | number-shock |
+| what-if | 0.08 | 30-40 s | "WHAT IF...?" at frame 0 → the real science it starts from (PROVEN tag) → play it out step by step in the town, each leap tagged THEORY or SPECULATION → the surprising consequence → what it means for us today | what-if |
 | frontier | 0.08 | 30-40 s | "HOW COULD WE REALLY...?" (teleportation, interstellar travel, fusion, CERN) → what already works today (PROVEN) → what the best current research is trying (R&D, with the lab or experiment named) → what is still missing → how far away it really is | question |
 | wild-story | 0.07 | 30-45 s | a true, crazy story behind a discovery, experiment or thinker, told as a mini-drama with the townspeople as the cast → the twist → what it taught us | story |
-| deep-question | 0.03 | 35-45 s | occasional philosophy ("Are humans a kind of AI?", "Can communism actually work?", "Are your facts real or propaganda?") → the strongest answers on each side, fairly → a thinking tool the viewer can use → Ved leaves the final call to the viewer | question |
-| dark-files | 0.10 | 30-45 s (and Deep Dives) | a hidden economy or crime world (drug markets, cartels, mafias and the underworld, hawala, money laundering, gambling, smuggling, illegal trades) → one true case as a mini-drama → how the system really works, at the level of a news documentary → where it touches your everyday world (prices, banks, sport, phones, elections) → what it costs people and how it ends for those involved → what actually works against it (the evidence) | story / number-shock |
+| deep-question | 0.05 | 35-45 s | occasional philosophy ("Are humans a kind of AI?", "Can communism actually work?", "Are your facts real or propaganda?") → the strongest answers on each side, fairly → a thinking tool the viewer can use → Ved leaves the final call to the viewer | question |
+| dark-files | 0.08 | 30-45 s (and Deep Dives) | a hidden economy or crime world (drug markets, cartels, mafias and the underworld, hawala, money laundering, gambling, smuggling, illegal trades) → one true case as a mini-drama → how the system really works, at the level of a news documentary → where it touches your everyday world (prices, banks, sport, phones, elections) → what it costs people and how it ends for those involved → what actually works against it (the evidence) | story / number-shock |
+| build-it | 0.12 | 30-40 s | "HOW TO BUILD THE PERFECT...?" (soldier, fighter, athlete, a human with four arms, a city on Mars, an unsinkable ship) → the design brief → one upgrade per shot from real science (training, genetics, biology, tech), each with its cost and an honesty tag → the trade-off nobody escapes → the closest real thing today | build-it / what-if |
+| fiction-made-real | 0.06 | 30-40 s | "COULD <A FAMOUS FICTIONAL WORLD OR POWER> BE REAL?" (a wardrobe portal to another world, dragons, invisibility, flying carpets, a hollow Earth) → what the story asks of physics or biology → the real science that comes closest (PROVEN / THEORY / R&D) → where it breaks → the coolest real thing that does part of it | what-if |
 
 **Added 2026-11-13 by the owner (additions only; nothing above changes):** what-if thought experiments, frontier
 "how could it really work" explainers, wild true stories from science and philosophy, and occasional philosophy questions.
@@ -176,6 +178,21 @@ examples of the kind of video, not a to-do list: find new topics of these kinds 
   trending (people are talking about or searching it this week) or viral-shaped (a famous "impossible" subject made shockingly
   easy, like rocket science in 40 seconds), ideally two or three at once.
 - Mix: about 1 in 3 Shorts uses the new formats; deep-question at most about once a week. The review tunes the weights.
+- **🔒 Topic spread (owner, 2026-11-22: "this is an ADHD person's channel... from how a scale works to how galaxies are
+  moving apart to is God real to how Narnia could be... wide spread of explainers").** The channel jumps between very
+  different worlds, video to video. Every Short belongs to one **topic lane** and the next Short must come from a different
+  lane (no lane twice within 4 videos); `python -m autopilot variety` picks it and the log records `lane:`. Lanes:
+  everyday mechanisms (how a scale, a lock, a zip works) · cosmos and physics · the body and biology · human upgrades and
+  performance (the perfect soldier, fighter, athlete; training, genetics, enhancement) · bio-engineering what-ifs (four
+  arms, gills, night vision) · fiction made real (Narnia-style portals, dragons, superpowers) · big philosophy and God
+  questions · mind and psychology · money and power · history's wild stories · engineering and megaprojects · animals and
+  nature · tech and the internet · the dark side of the real world. The review may tune format weights but never narrows
+  this spread.
+  **Guardrails for the wild lanes:** human upgrades and bio-engineering are told as science and thought experiments with
+  honesty tags, never as instructions: no drug or doping doses, no weapons how-to, no self-surgery, no gore; real
+  enhancement history (e.g. doping scandals) as documentary only. God and religion: the strongest arguments on each side,
+  what science can and cannot test, respect for every faith and for none, no verdict. Fiction: name the work in words only;
+  every picture is our own original art, never its characters, maps or designs.
 - **Dark files (owner, 2026-11-15): the hidden side of the real world**, from fiction to fact. Drug markets and cartels, mafias
   and the underworld (D-Company, Yakuza, 'Ndrangheta...), hawala and money laundering, gambling and match-fixing, smuggling and
   illegal trades, and how they link to the normal world (the banks that laundered cartel money, the dirty money in property and
@@ -279,6 +296,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-22 | 6 | Topic spread: 14 topic lanes, a different lane every video (none twice in 4); new formats build-it (0.12) and fiction-made-real (0.06); weights rebalanced (big-question 0.14, myth-bust 0.19, scale-shock 0.13, what-if 0.08, deep-question 0.05, dark-files 0.08); guardrails for the wild lanes | owner: "ADHD person yt... wide spread of explainers" |
 | 2026-11-22 | 3 | Real reference photos as accents (polaroid, stamp, sticky note, clipping) for real incidents, places, objects, documents; PD / CC0 / CC BY from Wikimedia Commons, auto-credited; never faces, graphic images or logos | owner: "use the real photo... just to give reference" |
 | 2026-11-22 | 3, 4 | Ved wardrobe accents: jacket, blazer, goggles, sunglasses, hard hat, headset, cap, sash, scarf, badge; max 2 at once, a scene or two only, when the role needs it | owner: "only when needed, not always and not in full videos" |
 | 2026-11-22 | 3 | Versatility: every Short changes Ved's role, the explain mode and the art-style mix (no role twice in 10 videos); only Ved stays constant; `autopilot variety` + log cells role/explain/styles | owner: "ADHD person yt... the only constant is me... versatility" |

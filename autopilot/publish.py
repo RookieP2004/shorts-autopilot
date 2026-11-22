@@ -89,6 +89,8 @@ def log_line(job_path, youtube_id=""):
              f"{dur}s" if dur else "", url, youtube_id]
     if is_long(job):
         cells.append("LONG")
+    if m.get("lane"):                                    # topic spread: the next run picks another lane
+        cells.append("lane: " + m["lane"])
     if m.get("role"):                                    # versatility: the next run avoids recent roles / modes / styles
         cells.append("role: " + m["role"])
     if m.get("explain"):

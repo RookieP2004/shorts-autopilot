@@ -2,6 +2,11 @@
 
 `- [format] idea · why it should work · source link`. Production runs add runners-up and delete what they use.
 
+**Owner's spread rule (2026-11-22, permanent, beats any steer below):** an ADHD viewer's channel. Every Short comes from a
+different topic lane than the last 4 (`python -m autopilot variety` picks the lane). Jump worlds: a scale's spring one day,
+galaxies flying apart the next, then "is God real?", then a Narnia-style portal, then the perfect fighter. Lines are tagged
+`[format | lane]`; verify every fact before use (Bible section 9).
+
 **Steer (review 2026-11-22):** lean on myth-busts and scale-shocks (the steadiest and best-liked); big-questions only about a
 physical thing you can picture; economics only wallet-first. Dark-files at most about once a week, with a calm, literal title
 (no "drug lord" / "cartel" in it). Try the countdown hook on 2 Shorts; keep every Short at 25-35 s.
@@ -113,3 +118,58 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [big-question] Why are hippos so dangerous? · fast, territorial, cut through boats; picturable body/nature question, runner-up 2026-11-20 · https://en.wikipedia.org/wiki/Hippopotamus
 - [dark-files] How match-fixing gets caught by betting data · Sportradar/IBIA alert systems (2025-26 reports), documentary view, runner-up 2026-11-20 · https://sportradar.com/content-hub/news/sports-integrity-strengthens-as-global-match-fixing-declines-in-2025/
 - [scale-shock] A hippo can weigh as much as 3 cars · scale-shock companion to the Escobar hippos Short, runner-up 2026-11-20 · https://en.wikipedia.org/wiki/Hippopotamus
+
+## Wide-spread backlog (owner, 2026-11-22): pick across lanes
+- [build-it | human upgrades] How to build the perfect soldier · training, sleep, genetics, exoskeletons, the limits; documentary, never a doping how-to · verify
+- [build-it | human upgrades] How to build the perfect fighter · reach, fast-twitch fibres, chin, cardio, reaction time; what each costs · verify
+- [build-it | human upgrades] How to build the perfect sprinter · Bolt's stride maths, tendon springs, why taller isn't always faster · verify
+- [build-it | human upgrades] How to build the perfect free diver · the mammalian dive reflex, spleen squeeze, the Bajau people's bigger spleens · verify
+- [build-it | human upgrades] How to build a human who never sleeps · the short-sleeper gene (DEC2), what sleep cleans out, why it fails · verify
+- [build-it | bio-engineering what-ifs] How to add a second pair of arms to a human · Hox genes, where the shoulder goes, the brain's body map, extra heart load · SPECULATION tags
+- [build-it | bio-engineering what-ifs] Could a human breathe underwater with gills? · oxygen in water vs air, gill surface you'd need (a body-sized cape) · verify
+- [build-it | bio-engineering what-ifs] Giving humans night vision like a cat · tapetum lucidum, rods vs cones, the price in daylight sharpness · verify
+- [build-it | bio-engineering what-ifs] Could humans photosynthesise? · skin area vs calories needed: you'd need a tennis court of skin · verify
+- [build-it | bio-engineering what-ifs] Building a human with a tail · why we lost ours (TBXT gene), what a tail would actually do for balance · verify
+- [fiction-made-real | fiction made real] Could a wardrobe portal to another world (Narnia-style) exist? · wormholes, negative energy, why time runs differently there · original art only
+- [fiction-made-real | fiction made real] Could a dragon actually fly and breathe fire? · square-cube law, wing loading, bombardier beetle chemistry · verify
+- [fiction-made-real | fiction made real] Could an invisibility cloak work? · metamaterials bend light (R&D), why you'd be blind inside it · verify
+- [fiction-made-real | fiction made real] Could a flying carpet fly? · lift, a carpet-sized wing, the closest real thing (wingsuits, ground effect) · verify
+- [fiction-made-real | fiction made real] Could the Earth be hollow? · gravity maths says no, and seismic waves prove the core · verify
+- [fiction-made-real | fiction made real] Could a giant like in fairy tales stand up? · square-cube law: bones snap above ~3 m · verify
+- [deep-question | philosophy and God] Is God real? What science can and can't test · the strongest arguments on each side, no verdict, respectful · even-handed
+- [deep-question | philosophy and God] Do you have free will? · Libet experiment, what it does and doesn't show · verify
+- [deep-question | philosophy and God] Are we living in a simulation? · Bostrom's trilemma, why it can't be tested yet · verify
+- [deep-question | philosophy and God] What happens to "you" if you're copied atom by atom? · the teleporter paradox · thought experiment
+- [deep-question | philosophy and God] Why is there something rather than nothing? · physics' "nothing" vs philosophy's nothing · even-handed
+- [big-question | everyday mechanisms] How does a bathroom scale know your weight? · strain gauges: a metal bar bends by microns · verify
+- [big-question | everyday mechanisms] How does a key actually open a lock? · pin tumbler, shear line, shown cut open (no lock-picking how-to) · verify
+- [big-question | everyday mechanisms] How does a zip zip? · hooks and hollows, the slider as a wedge · verify
+- [big-question | everyday mechanisms] How does a fridge make cold? · it moves heat out, the back is warm, evaporation · verify
+- [big-question | everyday mechanisms] How does a toilet flush with no pump? · the siphon, shown with glass pipes · verify
+- [big-question | everyday mechanisms] How does a lift know which floor to stop at? · the controller's queue, counterweight saves energy · verify
+- [scale-shock | cosmos and physics] Galaxies are flying apart: how fast? · Hubble's law, 70 km/s per megaparsec, the raisin-bread loaf · verify
+- [big-question | cosmos and physics] Why is space dark if there are infinite stars? · Olbers' paradox · verify
+- [what-if | cosmos and physics] What if you fell into a black hole? · spaghettification, time freezing for the watcher · verify
+- [big-question | cosmos and physics] Why does time slow down when you move fast? · GPS satellites must correct for it daily · verify
+- [myth-bust | the body] "You use only 10% of your brain" follow-up: what the other parts do at night · verify
+- [big-question | the body] Why do you get hiccups? · a leftover reflex from our fish-like ancestors (theory) · verify
+- [big-question | the body] How do your eyes see colour that isn't there? · magenta isn't on the rainbow · verify
+- [big-question | mind and psychology] Why does a crowd panic? · density above ~6 people per m2 becomes a fluid · verify
+- [big-question | mind and psychology] Why do you procrastinate? · the brain treats future-you as a stranger (fMRI study) · verify
+- [big-question | mind and psychology] Why do you remember embarrassing moments forever? · emotional tagging by the amygdala · verify
+- [big-question | money and power] Why did the Roman Empire fall? Follow the money · coin debasement, silver from 90% to under 5% · verify
+- [big-question | money and power] Who owns the Moon? · the Outer Space Treaty, the 2020s mining race · verify
+- [wild-story | history's wild stories] The man who survived both atomic bombs · Tsutomu Yamaguchi (name card, no face photo) · verify
+- [wild-story | history's wild stories] The dancing plague of 1518 · a town that couldn't stop dancing · verify
+- [wild-story | history's wild stories] The Great Emu War · soldiers vs birds, the birds won · verify
+- [wild-story | history's wild stories] Penicillin was found because someone left a dish out · Fleming's holiday mould · verify
+- [build-it | engineering and megaprojects] How to build a city on Mars · radiation, pressure, water from ice, why underground · verify
+- [build-it | engineering and megaprojects] How to build a truly unsinkable ship · compartments, why the Titanic's weren't sealed at the top · verify
+- [big-question | engineering and megaprojects] Why don't skyscrapers fall over in the wind? · tuned mass dampers (Taipei 101's 660-tonne ball) · verify
+- [scale-shock | engineering and megaprojects] The deepest hole humans ever dug · Kola Superdeep, 12 km, rock flowed like plastic · verify
+- [big-question | animals and nature] How does a mantis shrimp punch faster than a bullet? · cavitation bubbles boil the water · verify
+- [big-question | animals and nature] Do trees talk to each other? · fungal networks, what is proven and what is hype · verify
+- [big-question | animals and nature] Why can't you outrun a volcano's ash cloud? · pyroclastic flows at 100+ km/h · verify
+- [big-question | tech and the internet] How does a message cross the ocean in 0.1 s? · undersea cables, light in glass · verify
+- [big-question | tech and the internet] How does GPS know where you are? · four satellites, timing to a billionth of a second · verify
+- [big-question | tech and the internet] How does an AI "learn" a cat? · weights nudged millions of times, shown with dials · verify

@@ -72,6 +72,17 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   medicine, society and psychology, famous experiments, political-economic systems (capitalism, communism, how markets and
   governments work), surprising facts. The skill is making the hard thing feel easy: one concrete analogy (10 apples and 10 dollars
   = inflation), shown, not just said.
+  **Topic spread (owner, permanent 2026-11-22): this is an ADHD viewer's channel, so it jumps between very different worlds.**
+  Every Short comes from one of 14 topic lanes and never from a lane used in the last 4 videos: everyday mechanisms (how a
+  scale or a lock works), cosmos and physics (why galaxies fly apart), the body, human upgrades (how to build the perfect
+  soldier, fighter, athlete), bio-engineering what-ifs (a human with four arms, gills, night vision), fiction made real (a
+  Narnia-style portal, dragons, invisibility), philosophy and God (is God real, free will, simulation), mind and psychology,
+  money and power, history's wild stories, engineering and megaprojects, animals and nature, tech and the internet, and the
+  dark side of the real world. `python -m autopilot variety` picks the lane (with role, explain mode and styles); record it
+  as `meta.lane`. The weekly review may tune format weights but never narrows the spread. Wild lanes keep their guardrails
+  (Bible section 6): upgrades and bio-engineering are science and thought experiments with honesty tags, never doping
+  doses, weapons how-tos, self-surgery or gore; God questions get every side's best case and no verdict; fiction is named in
+  words only, with our own original art.
 - **Even-handed:** political and economic ideas are explained neutrally (what it is, how it's meant to work, the strongest case for
   and the strongest criticism, historical facts). No parties, candidates or current elections; Ved never takes a side. Medical videos
   explain how the body works and never tell viewers what to take or do.
@@ -262,7 +273,9 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   experiments, frontier "how could it really work" explainers (teleportation, star travel, CERN), wild true stories behind
   discoveries and thinkers, occasional deep-question philosophy, and (owner, 2026-11-15) dark-files: hidden economies
   and crime worlds (drugs, cartels, mafias, hawala, laundering, gambling) told as a documentary journalist would, never as a
-  manual; follow the Bible's dark-files guardrails exactly. Follow the Bible's weights (about 1 in 3 Shorts uses the new
+  manual; follow the Bible's dark-files guardrails exactly; and (owner, 2026-11-22) build-it ("how to build the perfect
+  soldier / fighter / four-armed human / city on Mars", template `build-it.json`) and fiction-made-real ("could a Narnia-style
+  portal / dragons / invisibility be real?", template `fiction-made-real.json`). Follow the Bible's weights (about 1 in 3 Shorts uses the new
   ones; deep-question at most about weekly). In these formats every claim carries an on-screen honesty tag (PROVEN / THEORY /
   R&D / SPECULATION), Ved says out loud where known science ends, and speculation is never presented as fact. Fill
   `meta.claims` with each claim, its tag and its source.
@@ -316,8 +329,10 @@ and hooks that win) · can be **shown** with 2D graphics or simple 3D (not just 
 `meta.idea_source` which of unique / trending / viral it hits. The owner's example topics in `ideas.md` are inspiration for the
 kind of video, not a to-do list.
 
-**b2. Role, explain mode, styles.** Run `python -m autopilot variety` and choose Ved's role, the explain mode and the style
-mix for this topic (section 1, Versatility); write them into `meta.role`, `meta.explain`, `meta.styles`.
+**b2. Lane, role, explain mode, styles.** Run `python -m autopilot variety` **before picking the topic**: it names the topic
+lane for today (not used in the last 4 videos), so pick the candidate from that lane (the "Wide-spread backlog" in `ideas.md`
+has ideas for every lane; research fresh ones too). Then choose Ved's role, the explain mode and the style mix (section 1,
+Versatility); write them into `meta.lane`, `meta.role`, `meta.explain`, `meta.styles`.
 
 **c. Verify.** Check every factual claim with a search. Drop anything you can't confirm, and put the URLs in `meta.sources`.
 

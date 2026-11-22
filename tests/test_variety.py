@@ -3,9 +3,10 @@ from autopilot import variety
 
 def test_suggest_avoids_recent_roles_and_fills_styles():
     rec = variety.recent()
-    role, mode, styles = variety.suggest(seed=1)
-    assert role in variety.ROLES and mode in variety.EXPLAIN
-    assert role not in {r for r, _, _ in rec[-10:] if r}
+    role, mode, styles, lane = variety.suggest(seed=1)
+    assert role in variety.ROLES and mode in variety.EXPLAIN and lane in variety.LANES
+    assert role not in {x[0] for x in rec[-10:] if x[0]}
+    assert lane not in {x[3] for x in rec[-4:] if x[3]}
     assert len(styles) == 4 and len(set(styles)) == 4
     assert not (set(styles) - set(variety.STYLES.values()))
 
