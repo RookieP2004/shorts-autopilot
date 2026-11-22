@@ -125,6 +125,18 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   them (walks in, reacts, leaves) rather than staying on screen. Cut to a new shot every 2-4 s; keep one continuous move only
   where travel is the point (into a machine, through a wall). Reference: jobs/2026-11-22-m1 (Ved's kitchen shots cut with
   Cutaway 3D shots).
+- **Versatility: change everything except Ved (owner, permanent 2026-11-22: "this is a ADHD person yt, make it change
+  styles... the only constant is me the person in white dress... versatility")**. Every Short changes three things from the
+  last ones: Ved's **role** (teacher, project lead, fellow friend, enthusiast, hacker, guide, mayor, project planner, city
+  planner, detective, news anchor, scientist, chef, commentator, curator, game-show host, captain, mission control, historian,
+  inventor, judge, magician, time traveller and more: never the same role within 10 videos), the **way it explains**
+  (analogy demo, experiment, myth vs fact, story, step-by-step build, scale zoom, versus, what-if, quiz, countdown,
+  timeline, inside the machine, debate, case file...) and the **art styles** it mixes (3D town, Cutaway 3D, Blender props,
+  cards, hud, crowds, night set, case-file, motion clips, Reelsmith looks RS-01..15, phone screens, comic beat). The role is
+  played through the set, props on the set or beside his hand, his words and the framing; Ved's drawing, white shirt and
+  voice never change. Before scripting run `python -m autopilot variety` (it reads the log and suggests a fresh role, mode
+  and style mix; swap them when the topic fits another better) and put `role`, `explain` and `styles` in `meta` so the log
+  records them.
 - **Motion & graphics in EVERY Short (town look too; owner 2026-11-16)**: use the night-pilot graphics in normal Shorts as well
   (they work on bright sets; see the Bible "Motion & graphics standard"). Numbers tick in a `hud` chip with an `eqbar` building
   the maths; a number of people becomes a `crowd` on the town floor that splits / fades / glows; steps build one by one
@@ -289,6 +301,9 @@ with the channel promise · format fit · novelty (no topic repeated within 30 d
 and hooks that win) · can be **shown** with 2D graphics or simple 3D (not just talked about). Take the top score, and note in
 `meta.idea_source` which of unique / trending / viral it hits. The owner's example topics in `ideas.md` are inspiration for the
 kind of video, not a to-do list.
+
+**b2. Role, explain mode, styles.** Run `python -m autopilot variety` and choose Ved's role, the explain mode and the style
+mix for this topic (section 1, Versatility); write them into `meta.role`, `meta.explain`, `meta.styles`.
 
 **c. Verify.** Check every factual claim with a search. Drop anything you can't confirm, and put the URLs in `meta.sources`.
 

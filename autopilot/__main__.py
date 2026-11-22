@@ -28,6 +28,7 @@ def main(argv=None):
     f = sub.add_parser("frames"); f.add_argument("job"); f.add_argument("--at"); f.add_argument("--out"); f.add_argument("--no-guides", action="store_true")
     r = sub.add_parser("render"); r.add_argument("job"); r.add_argument("--out"); r.add_argument("--workers", type=int)
     z = sub.add_parser("zapier"); z.add_argument("job")
+    vr = sub.add_parser("variety"); vr.add_argument("--seed", type=int, default=None)
     lg = sub.add_parser("logline"); lg.add_argument("job"); lg.add_argument("--youtube-id", default="")
     th = sub.add_parser("thumbnail"); th.add_argument("job"); th.add_argument("--out")
     ig = sub.add_parser("instagram"); ig.add_argument("job"); ig.add_argument("--video-url"); ig.add_argument("--cover-url")
@@ -60,6 +61,9 @@ def main(argv=None):
         from .publish import zapier_fields
         job = load_json(args.job)
         print(json.dumps(zapier_fields(job, job_style(job), args.job), indent=2, ensure_ascii=False))
+    elif args.cmd == "variety":
+        from .variety import report
+        print(report(args.seed))
     elif args.cmd == "logline":
         from .publish import log_line
         print(log_line(args.job, args.youtube_id))

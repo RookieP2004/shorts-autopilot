@@ -85,6 +85,12 @@ def log_line(job_path, youtube_id=""):
              f"{dur}s" if dur else "", url, youtube_id]
     if is_long(job):
         cells.append("LONG")
+    if m.get("role"):                                    # versatility: the next run avoids recent roles / modes / styles
+        cells.append("role: " + m["role"])
+    if m.get("explain"):
+        cells.append("explain: " + m["explain"])
+    if m.get("styles"):
+        cells.append("styles: " + "+".join(m["styles"]))
     if m.get("overrides"):
         cells.append("one-off: " + m["overrides"])
     return " | ".join(str(c).replace("|", "/") for c in cells)

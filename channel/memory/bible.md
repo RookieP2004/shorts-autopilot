@@ -81,6 +81,13 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   style only: each cuts between at least three visual styles that fit its beats (Ved + townspeople in the 3D town, a 3D
   mechanism shot from Cutaway or Blender, cream cards / hud chips, Reelsmith looks, motion clips, night set, case-file
   pieces). Ved comes and goes between them. New shot every 2-4 s; one continuous move only where travel is the point.
+- **🔒 Versatility (owner, 2026-11-22: "this is a ADHD person yt, make it change styles... the only constant is me the person in
+  white dress... versatility").** Every Short changes Ved's role (teacher, project lead, friend, enthusiast, hacker, guide,
+  mayor, planner, city planner, detective, anchor, scientist, chef, commentator, host, captain, historian, inventor, judge,
+  magician, time traveller and more; no role twice within 10 videos), the way it explains (analogy, experiment, myth vs fact,
+  story, build, scale zoom, versus, what-if, quiz, countdown, timeline, inside the machine, debate, case file) and the art
+  styles it mixes. The role lives in the set, the props, his words and the framing; Ved's drawing, white shirt and voice
+  never change. `python -m autopilot variety` suggests a fresh combination; the log records role / explain / styles.
 - **Motion & graphics standard for EVERY Short (owner, 2026-11-16: "take notes from these for your normal shorts also").**
   The night pilot's graphics are now house graphics in the bright town too (only the night lighting, rim light and highlight
   captions stay night-only; town captions are unchanged). In every Short:
@@ -263,6 +270,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-22 | 3 | Versatility: every Short changes Ved's role, the explain mode and the art-style mix (no role twice in 10 videos); only Ved stays constant; `autopilot variety` + log cells role/explain/styles | owner: "ADHD person yt... the only constant is me... versatility" |
 | 2026-11-22 | 6 | weights: dark-files 0.20 -> 0.10, myth-bust 0.23 -> 0.28, scale-shock 0.12 -> 0.17; dark-files titles calm and literal | review: dark-files 202 / 911 / 2 views vs channel median 1,042; myth-bust median 1,112 |
 | 2026-11-22 | 7 | "you've been told X" tested: occasional only; countdown is next week's experiment | review: 4 Shorts, median 983 views, 15.6 likes per 1k |
 | 2026-11-22 | 11 | humour notes: timeless cards hold up; 'I Got So Mad' landed; 'My Type Quiz', Tony Stark head-turn flopped | review: likes per 1k |
