@@ -303,20 +303,21 @@ Leave it null until they have read it off the billing page; never guess it. If t
 (Zapier may pro-rate it), lower `zapier.plan_tasks` for that cycle or run `budget --sync`, and tell the owner.
 
 ## 3. Produce mode (unattended, one video)
-Slots (live times, chosen for the US-majority audience and >= 5 h apart; each run starts ~55 min earlier, at 22:36 / 16:36 /
-04:06, because making a Short takes 40-50 min): `a` ~23:30 IST (the regular daily Short), `b` ~17:30 and `c` ~05:00 IST (bonus: every day during the trial, otherwise only near the
-end of the Zapier billing cycle, section 3c). The slot id is `YYYY-MM-DD-<slot>`, using the IST date. Never post the same format three
+Slots (live times from the owner's YouTube Studio data, 2026-11-22; each run starts ~55 min earlier, at 12:36 / 18:06 /
+22:36, because making a Short takes 40-50 min): `a` ~13:30 IST (the regular daily Short), `b` ~19:00 and `c` ~23:30 IST
+(bonus: only near the end of the Zapier billing cycle, section 3c). The slot id is `YYYY-MM-DD-<slot>`, using the IST date. Never post the same format three
 days in a row, nor the same format twice on one day. If `log.md` already has that id, or `jobs/<id>/` exists in the repo, the slot is done. Stop.
 **Budget first:** run `python -m autopilot budget --need upload` before researching. If it exits 3, don't make the video;
 send the owner one SendUserMessage saying today's Short was skipped because the Zapier budget is used up, and stop.
-For slot `a`, pass `--ref <slot id>`: exit code 4 means today's long video already took this slot (free plan). Stop quietly.
+For slot `a`, pass `--ref <slot id>`: exit code 4 means today is the long video's day (Saturday, free plan). Stop quietly.
 
 **a. Research (4–8 searches, send them in parallel).** Look at what is trending in the niche this week, news hooks, evergreen
 questions people ask, and what's working for similar Shorts. If the vidIQ connector is available, use its trending and
 outlier tools. Collect 5 candidates, and add `ideas.md` as candidates too.
-Also run 2–3 searches for **humour that is current right now**: meme formats, catchphrases and slang trending this week on
-YouTube Shorts, Instagram Reels and X (e.g. "trending meme format this week", "viral phrase <month year>", Know Your Meme's recent
-entries). Note 2–3 that are still rising (not peaked or dead), what each means, and where the Bible's Humour list says it flopped before.
+Also run 2–3 searches for **humour that is current right now in the US** (owner, 2026-11-22: most viewers are American): meme
+formats, catchphrases and slang rising this week in American internet culture (US TikTok, Reels, X, Reddit, US sports and
+late-night moments; e.g. "trending meme format this week", "viral phrase <month year>", Know Your Meme's recent entries, US
+TikTok trend round-ups). Never politics, elections or culture-war fights. Note 2–3 that are still rising (not peaked or dead), what each means, and where the Bible's Humour list says it flopped before.
 
 **b. Pick.** A new topic every run (owner's rule): it must be at least one of these, and ideally two or three at once:
 - **Unique**: a fresh topic or a fresh angle that few Shorts have done (check YouTube search results for it in your research);
@@ -443,7 +444,9 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
    take; the one native move at the emotional peak (a moment only our toolkit can do: a case file that unfolds into the
    next set, a number that slams through the town); an ending that echoes the opening. Then a shot list (framing, camera move
    and why) and a cue map (which section of the score, which sting and which silence lands on which line).
-   **Script.** 5-8 min (about 750-1100 words), 5-8 chapters. Cold open with a concrete object or question and a promise of the
+   **Script.** 4-6 min (about 600-850 words), 4-6 chapters (owner's analytics 2026-11-22: viewers left after ~45 s). The first
+15 s show the payoff promise and the single strongest visual; the title is one short curiosity question or promise
+(<= 50 characters, e.g. "Where Does Money Actually Come From?"), never "How X Works (From A to B)". Cold open with a concrete object or question and a promise of the
    payoff; each chapter is a small story acted out by Ved and the townspeople; 2 dry jokes as handwritten sticky notes; a one-line
    payoff; a short outro. Plan a new shot, cut or graphic every 3-6 s.
 4. **Edit plan (documentary).** Map every scene to a device: letterboxed cold open with serif type and no headlines, then a
@@ -472,7 +475,9 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
    processing (at least 20 minutes after the upload for a long video), then call Zapier *YouTube: Update Video
    Thumbnail* (video_id, thumbnail = the thumb URL) and `budget --add thumb --ref <id>`. If YouTube refuses because the channel
    isn't phone-verified, or there's no budget, send the owner the thumbnail file to set in YouTube Studio.
-9. Log (`logline` marks it LONG), commit, push, and report as 3i with the link and the chapter list.
+9. Log (`logline` marks it LONG), commit, push, and report as 3i with the link and the chapter list. When a long video goes
+   public, name the 1-2 best-performing Shorts on the same theme (from the log and the last review) so the owner can set the
+   long video as their **Related video** in YouTube Studio (the API can't set it).
 
 ## 4. Review mode (every 7 days): 3 Zapier calls, plus an optional 4th
 1. **Collect stats (1 call).** Take every video id from `log.md` for the last 28 days (skip PILOT lines). Get views, likes,
@@ -508,8 +513,8 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
 
 ## 5. Scheduled tasks
 Created in setup with `create_trigger` (time zone Asia/Calcutta, `requires_local_device` false):
-- Production slot a, daily 22:36 (live ~23:30): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
-- Bonus slots b and c, daily 16:36 and 04:06 (live ~17:30 and ~05:00): "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
+- Production slot a, daily 12:36 (live ~13:30): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
+- Bonus slots b and c, daily 18:06 and 22:36 (live ~19:00 and ~23:30): "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
   `budget --bonus` first and stop quietly if it is 0."
 - Review, Sunday 10:20: "Use the shorts-autopilot skill in Review mode."
 - Deep Dive, Saturday 19:56 (live ~21:30): "Use the shorts-autopilot skill in Deep Dive mode (slot `L`, IST date). Post one long video."

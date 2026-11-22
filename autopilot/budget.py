@@ -116,18 +116,23 @@ def status(now=None, path=LEDGER, style=None):
     long_today = any(e.get("ref", "").endswith("-L") for e in uploads_today)
     todays = [e for e in uploads_today if not e.get("ref", "").endswith("-L")]   # the 3-a-day cap is for Shorts
     today_uploads = len(todays)
+    deep_dive_day = today.weekday() == DEEP_DIVE_WEEKDAY        # slot a now runs at midday, before the evening long video
     regular_done = any(e.get("ref", "").endswith("-a") for e in todays) or (
-        long_today and s["cycle_day"] not in (None, "trial"))   # slot a = the daily regular Short
+        (long_today or deep_dive_day) and s["cycle_day"] not in (None, "trial"))   # slot a = the daily regular Short
     return {"calls_used": len(used), "tasks_used": len(used) * s["tasks_per_call"], "cap_calls": cap,
             "calls_left": cap - len(used), "plan_calls": s["plan_tasks"] // s["tasks_per_call"], "plan_tasks": s["plan_tasks"], "keep_for_review": s["keep_for_review"],
             "window_days": s["window_days"], "cycle_day": s["cycle_day"], "reset": reset, "days_left": days_left,
-            "today": today, "today_uploads": today_uploads, "regular_done": regular_done, "long_today": long_today, "reviews_left": reviews_left, "bonus_days": s["bonus_days"],
+            "today": today, "today_uploads": today_uploads, "regular_done": regular_done, "long_today": long_today, "deep_dive_day": deep_dive_day, "reviews_left": reviews_left, "bonus_days": s["bonus_days"],
             "max_per_day": s["max_per_day"]}
+
+
+DEEP_DIVE_WEEKDAY = 5   # Saturday (IST): the weekly long video is made and uploaded that evening
 
 
 def replaced_by_long(ref, st):
     """On the free plan the weekly long video takes the place of that day's regular Short (slot a)."""
-    return (ref.endswith("-a") and st.get("long_today") and st["cycle_day"] not in (None, "trial"))
+    return (ref.endswith("-a") and (st.get("long_today") or st.get("deep_dive_day"))
+            and st["cycle_day"] not in (None, "trial"))
 
 
 def allowed(kind, st):

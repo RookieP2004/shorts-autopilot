@@ -2,6 +2,16 @@
 
 The weekly review writes a new entry at the top: date · data window · findings with numbers · decisions · next week's experiment.
 
+## 2026-11-22 (owner's YouTube Studio overview, all time)
+- Totals: 34,295 views, 125.1 watch hours, +38 subscribers; long-form impressions 2,849 at 3.12% CTR.
+- Best Shorts: blue blood 1,466 (54.7% stayed, 0:23), 30 trillion cells 1,365 (64.4%), 10% brain 1,361 (51.3%), Great Wall
+  1,284 (58.1%), prisoner's dilemma 1,248 (65.6%). All body/myth-bust or a picturable question.
+- Posting hour (owner's view): 13:00-14:30 IST ~1,300 avg; 18:30-20:00 ~1,200-1,360; 22:30-23:30 ~1,000-1,150. Topic and
+  time overlap (the midday posts were the first week's best myth-busts), so slot a moved to 13:30 IST as a 2-week test.
+- Long-form is weak: Money 33 views (1.4-1.8% CTR, 45 s of 5:18 watched, 12 of 33 views from shares); Empty Space 11 (3.0%).
+  Decisions: curiosity-question titles, payoff + strongest visual in the first 15 s, 4-6 min, Related-video links from Shorts.
+- Humour: target US internet trends (owner).
+
 ## 2026-11-22 · window 2026-10-25 to 2026-11-22 (28 days; YouTube API, 37 public Shorts + 2 public long, 1 held long)
 - Totals (all 40): 33,297 views, 633 likes, 19 comments. 36 public videos older than 48 h: median 1,042 views (last week 1,129),
   ~20 likes per 1k. Still a ceiling, no breakout: best ever is blue blood 1,466; this week's best were mantis shrimp and

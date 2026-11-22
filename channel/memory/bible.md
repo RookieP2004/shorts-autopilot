@@ -260,6 +260,11 @@ question · myth-bust · number-shock · "you've been told X" · countdown. The 
 ## 8. Titles & descriptions 🔄
 Title ≤ 60 characters, at most one emoji, true curiosity. Description: one-line summary, then "Sources:" with links.
 5-10 tags, plus #shorts and 2 niche hashtags.
+- **Long videos (owner's analytics 2026-11-22: CTR 1.4-3.1%, average view 45 s of 5:18 = 14%).** Titles are one short
+  curiosity question or promise (<= 50 characters, e.g. "Where Does Money Actually Come From?"), never "How X Works (From A
+  to B)". The first 15 s show the payoff promise and the single strongest visual (no slow letterbox build-up before it); a
+  new beat every 3-5 s; target 4-6 min (not 8). After each long video goes public, the report names the 1-2 best-performing
+  Shorts on the same theme so the owner can set it as their **Related video** in YouTube Studio (the API can't set that).
 
 ## 9. Accuracy 🔒
 Every factual claim is checked with a search in the same run, with sources in `meta.sources`. Anything unverified is dropped.
@@ -270,17 +275,26 @@ Every factual claim is checked with a search in the same run, with sources in `m
   2027-03-14, then ET + 9:30: re-check the times then).
 - Spacing rule (owner, 2026-11-12): at least ~5 hours between Shorts. Our first week showed it: the first Short after an
   18-hour gap always got 800-1,400 views, while Shorts posted 1-3 hours after the previous one got 4, 86, 164 and 565.
-- Shorts go live at about 05:00 IST (6:30 PM ET, slot c), 17:30 IST (7 AM ET; India evening, slot b) and 23:30 IST
-  (1 PM ET, slot a = the regular daily Short). Runs start ~55 min earlier (04:06, 16:36, 22:36) because each takes 40-50 min.
-  Zapier Pro trial until 2026-11-20: all three every day.
-- After the trial (free plan, 100 tasks/month): slot a (~23:30 IST) daily; bonus slots b/c only near the end of the billing cycle.
+- **Times moved (owner, 2026-11-22, from his YouTube Studio view by posting hour: ~1,300 views for 13:00-14:30 IST posts,
+  ~1,200-1,360 for 18:30-20:00, ~1,000-1,150 for 22:30-23:30).** Shorts now go live at about **13:30 IST** (slot a = the
+  regular daily Short; run starts 12:36), **19:00 IST** (bonus slot b; starts 18:06) and **23:30 IST** (bonus slot c; starts
+  22:36). Caveat: the midday numbers come mostly from the first week's strongest myth-busts, so topic and time are mixed up;
+  the review compares slot a's new midday posts with the old 23:30 ones after 2 weeks (~14 Shorts) and reports to the owner.
+- Free plan (100 tasks/month): slot a daily; bonus slots b/c only near the end of the billing cycle.
 - Deep Dive (long video): Saturday, live ~21:30 IST (11 AM ET Saturday; run starts 19:56), weekly (1 upload + 1 thumbnail call). On the free plan it replaces that
-  Saturday's regular Short (`budget --need upload --ref <id>-a` exits 4).
+  Saturday's regular Short (`budget --need upload --ref <id>-a` exits 4 on Saturdays, since slot a now runs before it).
 - Weekly review: Sunday 10:20 IST (stats + sync with the Google Docs: 3 Zapier calls).
 
 ## 11. Humour 🔄
 One comic beat per video (job-spec "Beats"): deadpan, side_eye, smirk, freeze, zoom_punch or silence, with an optional
-meme-caption card. Current (last 2-3 weeks), sneaky, on-topic, dry and quick. Banned: dead memes, punching down, politics,
+meme-caption card. Current (last 2-3 weeks), sneaky, on-topic, dry and quick.
+- **🔒 American internet first (owner, 2026-11-22: "the majority of the audience is from America, so the jokes and punches in
+  between should mostly be the latest trends going up in the American space").** Most of the audience is in the US (~78%), so
+  the joke borrows a meme format, phrase or slang that is rising right now in US internet culture (US TikTok, Reels, X, Reddit,
+  late-night and sports moments, US school/office/food life), checked in that week's research (Know Your Meme recent entries,
+  "trending meme this week", US TikTok trend round-ups). Still on-topic, dry, quick and in our own art; never politics,
+  elections or culture-war fights, never tragedy, never real people's photos or copied meme images/audio. A timeless dry
+  card is the fallback when nothing rising fits. Banned: dead memes, punching down, politics,
 tragedy, crude jokes, real people's photos, copied meme images or audio.
 - Landed (provisional, likes per 1k views; views alone can't separate the joke from the topic): 'Is This a Pigeon?' card (Great
   Wall, 34/1k, the channel's best), 'Remember November 2026' card (cells, 29.5/1k), 'W chews / L nibbles' card (prisoner's
@@ -296,6 +310,9 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-22 | 10 | Slot times: a ~13:30 IST (run 12:36), b ~19:00 (18:06), c ~23:30 (22:36); Saturday's slot a skips by date on the free plan; review re-checks times after 2 weeks | owner's YouTube Studio data by posting hour |
+| 2026-11-22 | 11 | Humour: American internet trends first (US meme formats, phrases, slang rising this week); timeless card as fallback | owner: "majority of audience is from America" |
+| 2026-11-22 | 8 | Long videos: curiosity-question titles (<= 50 chars), payoff promise + strongest visual in the first 15 s, 4-6 min, Related-video links from the best Shorts | owner's analytics: long CTR 1.4-3.1%, 45 s average view of 5:18 |
 | 2026-11-22 | 6 | Topic spread: 14 topic lanes, a different lane every video (none twice in 4); new formats build-it (0.12) and fiction-made-real (0.06); weights rebalanced (big-question 0.14, myth-bust 0.19, scale-shock 0.13, what-if 0.08, deep-question 0.05, dark-files 0.08); guardrails for the wild lanes | owner: "ADHD person yt... wide spread of explainers" |
 | 2026-11-22 | 3 | Real reference photos as accents (polaroid, stamp, sticky note, clipping) for real incidents, places, objects, documents; PD / CC0 / CC BY from Wikimedia Commons, auto-credited; never faces, graphic images or logos | owner: "use the real photo... just to give reference" |
 | 2026-11-22 | 3, 4 | Ved wardrobe accents: jacket, blazer, goggles, sunglasses, hard hat, headset, cap, sash, scarf, badge; max 2 at once, a scene or two only, when the role needs it | owner: "only when needed, not always and not in full videos" |
