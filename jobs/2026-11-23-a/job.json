@@ -1,0 +1,1008 @@
+{
+ "id": "2026-11-23-a",
+ "title": "Sugar makes kids hyper? Scientists tested it 🧁",
+ "description": "Does sugar make kids hyper? In a 1994 double-blind study (New England Journal of Medicine), children lived on three diets for three weeks each: high in sugar, or sweetened with aspartame or saccharin. Nobody knew which diet was which. For the children their parents called sugar-sensitive, there was no difference on 39 behavior and thinking measures. Another 1994 study gave 35 boys a sugar-free drink and told half of their mothers it was a big dose of sugar. Those mothers rated their sons as more hyperactive and stayed physically closer to them. A 1995 JAMA meta-analysis of the research found that sugar does not affect children's behavior or thinking. The likely real culprits: exciting parties and our own expectations. (Sugar still matters for teeth and health; this is how the mind works, not medical advice.)\n\nSources: Wolraich et al., NEJM 1994; Hoover & Milich, Journal of Abnormal Child Psychology 1994; Wolraich, Wilson & White, JAMA 1995.",
+ "tags": [
+  "sugar rush",
+  "does sugar make kids hyper",
+  "sugar hyperactivity myth",
+  "placebo",
+  "psychology",
+  "expectation effect",
+  "parenting",
+  "myth busted",
+  "science facts"
+ ],
+ "hashtags": [
+  "#psychology",
+  "#science"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#psychology",
+   "#sugarrush",
+   "#mythbusting",
+   "#parentingtips",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "myth-bust",
+  "topic": "the sugar-hyperactivity myth: 1994 NEJM double-blind study, three 3-week diets (sugar / aspartame / saccharin), no difference on 39 measures for 'sugar-sensitive' kids; Hoover & Milich 1994: 35 boys all got a placebo, mothers told 'sugar' rated sons more hyperactive and stayed closer; JAMA 1995 meta-analysis: no effect; it's the party and the expectation",
+  "hook": "myth-bust",
+  "idea_source": "trending + viral-shaped: Thanksgiving week in the US (most viewers) is peak 'sugar rush' talk; a belief nearly every parent holds, busted by a sneaky placebo experiment; ideas.md backlog",
+  "lane": "mind and psychology",
+  "role": "chef",
+  "explain": "myth vs fact",
+  "styles": [
+   "town",
+   "blender",
+   "RS-03",
+   "hud",
+   "cards"
+  ],
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://pubmed.ncbi.nlm.nih.gov/8277950/",
+   "https://pubmed.ncbi.nlm.nih.gov/7963081/",
+   "https://uknowledge.uky.edu/psychology_facpub/13",
+   "https://pubmed.ncbi.nlm.nih.gov/7474248/",
+   "https://www.urmc.rochester.edu/news/publications/health-matters/does-halloween-candy-really-cause-a-sugar-rush",
+   "https://www.eatright.org/health/wellness/healthful-habits/sugar-does-it-really-cause-hyperactivity"
+  ],
+  "humour": {
+   "trend": "Charlie Conspiracy (Always Sunny) evidence-board meme, rising on Imgflip in Nov 2026, as a text card only: \"mom's evidence board: cake -> chaos\"",
+   "beat": "side_eye",
+   "scene": 4
+  },
+  "claims": [
+   {
+    "claim": "1994 NEJM double-blind study: three consecutive 3-week diets (high sucrose / aspartame / saccharin)",
+    "tag": "PROVEN",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/8277950/"
+   },
+   {
+    "claim": "no significant differences on 39 behavioral and cognitive measures for sugar-sensitive children",
+    "tag": "PROVEN",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/8277950/"
+   },
+   {
+    "claim": "35 boys aged 5-7 all received a placebo (aspartame); half the mothers were told it was a large dose of sugar",
+    "tag": "PROVEN",
+    "source": "https://uknowledge.uky.edu/psychology_facpub/13"
+   },
+   {
+    "claim": "those mothers rated their sons significantly more hyperactive and maintained physical closeness",
+    "tag": "PROVEN",
+    "source": "https://uknowledge.uky.edu/psychology_facpub/13"
+   },
+   {
+    "claim": "1995 JAMA meta-analysis: sugar does not affect children's behavior or cognition",
+    "tag": "PROVEN",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/7474248/"
+   },
+   {
+    "claim": "excitement of parties/holidays and expectations are the likely explanation",
+    "tag": "THEORY",
+    "source": "https://www.urmc.rochester.edu/news/publications/health-matters/does-halloween-candy-really-cause-a-sugar-rush"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "SUGAR *RUSH?*",
+  "title_y": 0.2,
+  "title_size": 170,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#ffd23a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.4,
+  "tint": [
+   "#3f7fbf",
+   "#f4a6c0"
+  ],
+  "tint_amount": 0.28,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-23-a/assets/plate_kit_cake.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-23-a/assets/cupcake.png",
+    "x": 0.2,
+    "y": 0.47,
+    "w": 0.3,
+    "enter": "none",
+    "rotate": -8
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-23-a/assets/cup.png",
+    "x": 0.8,
+    "y": 0.45,
+    "w": 0.26,
+    "enter": "none",
+    "rotate": 8
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.95,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-23-a/assets.py",
+ "scenes": [
+  {
+   "say": "Sugar makes kids *hyper*? Scientists tested it. *It doesn't.*",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-23-a/assets/plate_kit_cake.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "stamp",
+     "text": "MYTH?",
+     "tone": "red",
+     "angle": -6,
+     "size": 80,
+     "x": 0.5,
+     "y": 0.1,
+     "at": 0.0,
+     "enter": "none"
+    },
+    {
+     "type": "text",
+     "text": "SUGAR MAKES KIDS *HYPER?*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 88,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.8,
+     "y": 0.98,
+     "h": 0.56,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       1.6
+      ],
+      [
+       "smirk",
+       2.8
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-23-a/assets/cupcake.png",
+     "x": 0.18,
+     "y": 0.62,
+     "w": 0.2,
+     "enter": "pop",
+     "at": 0.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "stamp",
+     "text": "NOPE",
+     "tone": "green",
+     "angle": 6,
+     "size": 70,
+     "x": 0.25,
+     "y": 0.75,
+     "at": 2.6,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "In 1994, kids spent three weeks on each of three diets: *sugar*, or *sweeteners*.",
+   "transition": "slide_left",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.6
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-23-a/assets/plate_kit_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.199,
+     "y": 0.5951,
+     "h": 0.228,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ],
+      [
+       "cheer",
+       2.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "curly"
+       ],
+       "top": [
+        "#46965a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#f4a6c0",
+        "skirt"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.6,
+       0.05,
+       0.45
+      ],
+      [
+       2.4,
+       0.05,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "cheer",
+     "x": 0.4812,
+     "y": 0.6025,
+     "h": 0.243,
+     "enter": "none",
+     "acting": [
+      [
+       "cheer",
+       0
+      ],
+      [
+       "happy",
+       1.8
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48c",
+       "build": "slim",
+       "hair": [
+        "#6b4a2b",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#d6483e"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.2,
+       0.05,
+       0.45
+      ],
+      [
+       3.0,
+       0.05,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.6737,
+     "y": 0.6635,
+     "h": 0.6092,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ],
+      [
+       "point",
+       3.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.6868,
+       "y": 0.6635,
+       "scale": 1.0
+      },
+      {
+       "t": 1.1,
+       "x": 0.6737,
+       "y": 0.6635,
+       "scale": 1.0,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "dateline",
+     "date": "1994",
+     "place": "DOUBLE-BLIND STUDY",
+     "size": 56,
+     "x": 0.5,
+     "y": 0.15,
+     "at": 0.1,
+     "enter": "fade",
+     "sfx": "type"
+    },
+    {
+     "type": "hud",
+     "label": "weeks on each diet",
+     "x": 0.5,
+     "y": 0.27,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "to": 3,
+     "count_dur": 0.6,
+     "at": 1.6,
+     "tone": "blue",
+     "sub": "3 DIETS"
+    },
+    {
+     "type": "optcard",
+     "label": "diet 1",
+     "text": "SUGAR",
+     "tone": "gold",
+     "x": 0.27,
+     "y": 0.62,
+     "w": 0.34,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 3.4,
+     "sfx": "pop"
+    },
+    {
+     "type": "optcard",
+     "label": "diets 2 + 3",
+     "text": "SWEETENER",
+     "tone": "blue",
+     "x": 0.73,
+     "y": 0.62,
+     "w": 0.34,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 4.0,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "say": "Nobody knew which was which. On *39* behavior and brain tests: *no difference*.",
+   "transition": "zoom",
+   "caption_y": 0.74,
+   "pad": 0.8,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-23-a/assets/plate_kit_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      },
+      {
+       "t": 5,
+       "scale": 1.27
+      }
+     ]
+    },
+    {
+     "type": "look",
+     "look": "RS-03",
+     "x": 0.5,
+     "y": 0.39,
+     "w": 1.0,
+     "h": 0.6,
+     "at": 0.0,
+     "props": {
+      "title": "39 TESTS",
+      "backdrop": "dim",
+      "left": {
+       "label": "SUGAR",
+       "value": 39,
+       "unit": ""
+      },
+      "right": {
+       "label": "SWEETENER",
+       "value": 39,
+       "unit": ""
+      },
+      "verdict": "NO DIFFERENCE"
+     }
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.12,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 2.8,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Then *35 boys* got a sugar-free drink. But half their moms were told: *loaded with sugar*.",
+   "transition": "slide_up",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 5.0,
+      "zoom": 1.1,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-23-a/assets/plate_kit_cups.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "hud",
+     "label": "boys, age 5 to 7",
+     "x": 0.5,
+     "y": 0.16,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "to": 35,
+     "count_dur": 0.8,
+     "at": 0.2,
+     "tone": "blue"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#f2b04a' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#f2b04a' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PLACEBO</text></svg>",
+     "x": 0.5,
+     "y": 0.27,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 1.2,
+     "sfx": "click"
+    },
+    {
+     "type": "optcard",
+     "label": "moms told",
+     "text": "NO SUGAR",
+     "tone": "blue",
+     "x": 0.73,
+     "y": 0.68,
+     "w": 0.36,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "optcard",
+     "label": "moms told",
+     "text": "SUGAR!",
+     "tone": "red",
+     "x": 0.27,
+     "y": 0.68,
+     "w": 0.36,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 3.6,
+     "sfx": "pop"
+    },
+    {
+     "type": "stamp",
+     "text": "SAME DRINK",
+     "tone": "green",
+     "angle": -6,
+     "size": 62,
+     "x": 0.5,
+     "y": 0.35,
+     "at": 1.6,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-23-a/assets/plate_kit_cake.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "mom's evidence board: *cake -> chaos*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Those moms rated their sons *more hyper*, and hovered *closer*.",
+   "transition": "cut",
+   "caption_y": 0.42,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.05,
+      "focus": [
+       0.45,
+       0.6
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.14,
+      "focus": [
+       0.42,
+       0.62
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-23-a/assets/plate_kit_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.4617,
+     "y": 0.6045,
+     "h": 0.247,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       2.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#e2b48c",
+       "build": "slim",
+       "hair": [
+        "#6b4a2b",
+        "short"
+       ],
+       "hat": [
+        "cap",
+        "#d6483e"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": -0.2836,
+     "y": 0.6259,
+     "h": 0.466,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ],
+      [
+       "explain",
+       2.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "regular",
+       "hair": [
+        "#2a1d17",
+        "long"
+       ],
+       "top": [
+        "#3f7fbf",
+        "dress"
+       ],
+       "necklace": "#f2b04a",
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.4277,
+       "y": 0.6205,
+       "scale": 0.9635
+      },
+      {
+       "t": 1.6,
+       "x": 0.1931,
+       "y": 0.6132,
+       "scale": 0.9134,
+       "walk": true
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.7026,
+     "y": 0.6635,
+     "h": 0.6092,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "side_eye",
+       2.4
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "hud",
+     "label": "mom's hyper rating",
+     "x": 0.5,
+     "y": 0.17,
+     "enter": "pop",
+     "sfx": "click",
+     "indian": false,
+     "steps": [
+      [
+       0,
+       0
+      ],
+      [
+       0.4,
+       1
+      ],
+      [
+       0.8,
+       2
+      ],
+      [
+       1.2,
+       3
+      ]
+     ],
+     "suffix": " / 3",
+     "at": 0.2,
+     "tone": "red",
+     "width_of": "3 / 3"
+    },
+    {
+     "type": "stamp",
+     "text": "IT'S EXPECTATION",
+     "tone": "red",
+     "angle": -6,
+     "size": 58,
+     "x": 0.5,
+     "y": 0.3,
+     "at": 2.0,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "So the sugar rush? Mostly in the *grown-ups'* heads. Blame the *party*, not the pie.",
+   "transition": "cut",
+   "caption_y": 0.6,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-23-a/assets/plate_kit_cake.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      },
+      {
+       "t": 5.0,
+       "scale": 1.38
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.0
+      ],
+      [
+       "smirk",
+       3.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "the cause",
+     "text": "SUGAR",
+     "tone": "red",
+     "x": 0.27,
+     "y": 0.14,
+     "w": 0.37,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop",
+     "verdict": "cross",
+     "verdict_at": 0.5
+    },
+    {
+     "type": "optcard",
+     "label": "the cause",
+     "text": "PARTY",
+     "tone": "green",
+     "x": 0.71,
+     "y": 0.14,
+     "w": 0.37,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "pop",
+     "verdict": "tick",
+     "verdict_at": 0.4
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-23-a/assets/cupcake.png",
+     "x": 0.84,
+     "y": 0.38,
+     "w": 0.16,
+     "enter": "none",
+     "at": 1.0,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1
+      },
+      {
+       "t": 0.5,
+       "y": 0.38,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "stamp",
+     "text": "MYTH BUSTED",
+     "tone": "red",
+     "angle": -6,
+     "size": 62,
+     "x": 0.27,
+     "y": 0.29,
+     "at": 3.4,
+     "sfx": "thud"
+    }
+   ]
+  }
+ ]
+}

@@ -111,7 +111,9 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [myth-bust] "Jupiter protects Earth from asteroids" · the 'cosmic shield' idea is debated: it deflects some, flings others inward; runner-up 2026-11-19 · https://en.wikipedia.org/wiki/Jupiter
 - [wild-story] Barry Marshall-style self-experimenters: Werner Forssmann threaded a catheter into his own heart (1929) and later shared a Nobel · picturable true story, runner-up 2026-11-19-b · https://en.wikipedia.org/wiki/Werner_Forssmann
 - [big-question] Why can't you crack the same knuckle twice in a row? · the ~20-minute reset as the gas redissolves into joint fluid; follow-up only if the knuckle Short does well, runner-up 2026-11-19-b · https://www.sciencenews.org/article/researchers-pull-fingers-solve-why-knuckles-crack
-- [myth-bust] "Sugar makes kids hyper" · double-blind studies found no effect; parents' expectations did; runner-up 2026-11-19-b · https://en.wikipedia.org/wiki/Sugar_hyperactivity_myth
+- [myth-bust | mind and psychology] "Left-brained vs right-brained people" · brain-imaging study of ~1,000 people found no "dominant side" personalities (Utah 2013) · verify · runner-up 2026-11-23-a
+- [big-question | mind and psychology] Why does a crowd panic? · runner-up 2026-11-23-a (also in the backlog) · verify
+- [myth-bust | the body] "Turkey makes you sleepy" (tryptophan) · Thanksgiving hook; turkey has about as much as chicken · verify · runner-up 2026-11-23-a
 - [wild-story] The year Britain lost 11 days (1752) · the calendar switch, 'give us our eleven days' riot myth vs records, follows the leap-year Short · https://www.britannica.com/science/calendar/The-Gregorian-calendar
 - [big-question] Why is February only 28 days? · Roman calendar history, winter months, picturable · https://www.britannica.com/story/why-does-february-have-28-days
 - [big-question] Why are flamingos pink? · born grey, carotenoids from brine shrimp and algae turn them pink · https://www.britannica.com/story/why-are-flamingos-pink
