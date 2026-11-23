@@ -132,7 +132,9 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
 - **🔒 The bar (owner, 2026-11-23).** The Wi-Fi Short (`jobs/2026-11-22-m1`) is the minimum, not a one-off: real moving 3D
   (>= 8 s), a new shot every 2-4 s, Ved coming and going, at most 2 text pieces on screen besides 2-word captions, the role
   visible on screen, voice-first sound. The render gate (`gate: PASS/FAIL`) checks it; never post on a FAIL. Runs start
-  ~6 h before posting to make room for the 3D.
+  ~6 h before posting to make room for the 3D. The bar is quality, not a template: all the owner's other rules (style mix,
+  versatility, lanes, wardrobe, reference photos, sound, humour) still apply and the gate checks the style mix and the
+  variety choices too. Match the Wi-Fi Short's polish; never copy its look.
 
 ## 4. Cast 🔒
 | id | name | role | personality | voice | poses |

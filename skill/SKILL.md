@@ -323,6 +323,12 @@ and posts at ~13:30, so a run has about 6 hours. Render the moving 3D first (Cut
 else animated Blender shots at ~7 s a frame: 10 s of shots is about 30 minutes; run them with `nohup` and poll), then the
 edit. Upload no earlier than 13:25 IST (`sleep` until then); if the gate still fails at 15:30 IST, post the best version,
 and say plainly in the report which gate items failed and why.
+The bar is about **quality, not a template**: every earlier owner rule still applies on top of it, and the gate checks them
+too: mix at least 3 visual styles besides Ved (moving 3D, Reelsmith looks, motion clips, data graphics, cards, real
+reference photos, case/device pieces...), a fresh topic lane, Ved's role, explain mode and style mix from
+`python -m autopilot variety` (recorded in `meta`), occasional wardrobe pieces and real reference photos where they fit,
+dynamic voice-first sound and US-first humour. Never copy the Wi-Fi Short's look (kitchen, serif numbers, one long 3D
+world): match its polish, change everything else.
 
 **a. Research (4–8 searches, send them in parallel).** Look at what is trending in the niche this week, news hooks, evergreen
 questions people ask, and what's working for similar Shorts. If the vidIQ connector is available, use its trending and

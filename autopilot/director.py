@@ -224,6 +224,32 @@ def gate(ctx, log=print):
     m = job.get("meta", {})
     if m.get("role") and not (m.get("role_visual") or "").strip():
         miss.append(f"role '{m['role']}' is not shown: set meta.role_visual to the set, prop or wear piece that shows it")
+    fam = set()                                                  # the owner's mix rules still apply under the bar
+    for sc in scenes:
+        for L in sc.get("layers", []):
+            t = L.get("type")
+            if t == "video" or (t == "blender" and float(L.get("dur", 0.034)) > 0.05) or t == "scene3d":
+                fam.add("moving 3D")
+            elif t == "character":
+                fam.add("Ved in the world")
+            elif t == "look":
+                fam.add("look " + str(L.get("look", ""))[:5])
+            elif t == "motion":
+                fam.add("motion clip")
+            elif t in ("hud", "eqbar", "crowd", "nodes", "tracker"):
+                fam.add("data graphics")
+            elif t in ("card", "panel", "optcard"):
+                fam.add("cards")
+            elif t == "image" and "photo" in str(L.get("path", "")).lower():
+                fam.add("real photo")
+            elif t in ("phone", "burst", "stamp", "dateline", "bignum", "tipnum", "dottext"):
+                fam.add("case / device pieces")
+    fam.discard("Ved in the world")
+    if len(fam) < 3:
+        miss.append(f"only {len(fam)} visual style(s) besides Ved ({', '.join(sorted(fam)) or 'none'}): mix at least 3")
+    for k in ("lane", "role", "explain", "styles"):
+        if not m.get(k):
+            miss.append(f"meta.{k} missing: run `python -m autopilot variety` and record the choice")
     cap = {**ctx.style.get("captions", {}), **(job.get("style_override", {}).get("captions", {}))}
     if int(cap.get("words_per_chunk", 3)) > 2:
         miss.append("captions show more than 2 words at a time")
