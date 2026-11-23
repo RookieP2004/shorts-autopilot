@@ -249,8 +249,8 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
   character, because they read as shaking. Use loops only for props and text. Lip-sync is automatic: 5 mouth shapes chosen from the voice.
 - **Props**: draw them as inline SVG in the channel's flat style, with palette colours only. In SVG and headline text use plain
   ASCII for chemistry and maths (CO2, H2O, Na+, x2): the fonts have no subscript/superscript glyphs and show empty boxes.
-- **Layout**: visuals and the headline go at y 0.10–0.34, captions at y≈0.41, Professor Ved at y≈0.68 with h≈0.40. In voice-over
-  scenes use the space above and below the captions (y 0.10–0.34 and 0.50–0.76). Ved's feet may sit in the bottom UI zone, because
+- **Layout**: visuals and the headline go at y 0.10–0.34, captions at y≈0.70 (2 words at a time, since 2026-11-23), Professor Ved
+  at y≈0.68 with h≈0.40 or bigger (medium shots: h≈0.84, y≈0.83). Keep the caption band (y 0.64–0.76) clear of key objects. Ved's feet may sit in the bottom UI zone, because
   that's only ground. Nothing that matters goes below y 0.78 or right of x 0.86, because YouTube's UI covers those areas.
 - **World**: the home base is `assets/bg/study.svg`. Cut to `world.svg` (landscapes, nature, history outdoors) or `cosmos.svg`
   (space, physics) when the topic travels; use plain gradient backgrounds for diagram scenes. New sets are written into
@@ -303,13 +303,26 @@ Leave it null until they have read it off the billing page; never guess it. If t
 (Zapier may pro-rate it), lower `zapier.plan_tasks` for that cycle or run `budget --sync`, and tell the owner.
 
 ## 3. Produce mode (unattended, one video)
-Slots (live times from the owner's YouTube Studio data, 2026-11-22; each run starts ~55 min earlier, at 12:36 / 18:06 /
-22:36, because making a Short takes 40-50 min): `a` ~13:30 IST (the regular daily Short), `b` ~19:00 and `c` ~23:30 IST
+Slots (live times from the owner's YouTube Studio data, 2026-11-22; each run starts ~6 h earlier, at 07:06 / 13:06 /
+17:36, so there is time for real moving 3D): `a` ~13:30 IST (the regular daily Short), `b` ~19:00 and `c` ~23:30 IST
 (bonus: only near the end of the Zapier billing cycle, section 3c). The slot id is `YYYY-MM-DD-<slot>`, using the IST date. Never post the same format three
 days in a row, nor the same format twice on one day. If `log.md` already has that id, or `jobs/<id>/` exists in the repo, the slot is done. Stop.
 **Budget first:** run `python -m autopilot budget --need upload` before researching. If it exits 3, don't make the video;
 send the owner one SendUserMessage saying today's Short was skipped because the Zapier budget is used up, and stop.
 For slot `a`, pass `--ref <slot id>`: exit code 4 means today is the long video's day (Saturday, free plan). Stop quietly.
+
+**The bar (owner, 2026-11-23: "compare this with what we created yesterday... is it really the improved version?").** Every
+Short must match `jobs/2026-11-22-m1` (the Wi-Fi Short), not the old house Shorts: real **moving 3D** (at least 8 s of
+Cutaway shots, animated `blender` shots with a moving camera, `scene3d` or motion 3D; a 2D push on a still does not count),
+a new shot every 2-4 s (at least one shot per 3.5 s), Ved coming and going between shots, at most 2 text pieces on screen
+at once besides the captions (no headline + chips + stamps + cards piled together), clean 2-word captions low on the screen
+(the style default since 2026-11-23), the role actually **visible** (a set, a prop or a wardrobe piece, named in
+`meta.role_visual`), and the dynamic voice-first mix. Every render prints `gate: PASS` or `gate: FAIL; ...`
+(`autopilot/director.py gate`). **Never post on a FAIL**: fix and re-render. Time is there for it: slot a starts at 07:06 IST
+and posts at ~13:30, so a run has about 6 hours. Render the moving 3D first (Cutaway if the owner's install is present,
+else animated Blender shots at ~7 s a frame: 10 s of shots is about 30 minutes; run them with `nohup` and poll), then the
+edit. Upload no earlier than 13:25 IST (`sleep` until then); if the gate still fails at 15:30 IST, post the best version,
+and say plainly in the report which gate items failed and why.
 
 **a. Research (4–8 searches, send them in parallel).** Look at what is trending in the niche this week, news hooks, evergreen
 questions people ask, and what's working for similar Shorts. If the vidIQ connector is available, use its trending and
@@ -513,8 +526,8 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
 
 ## 5. Scheduled tasks
 Created in setup with `create_trigger` (time zone Asia/Calcutta, `requires_local_device` false):
-- Production slot a, daily 12:36 (live ~13:30): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
-- Bonus slots b and c, daily 18:06 and 22:36 (live ~19:00 and ~23:30): "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
+- Production slot a, daily 07:06 (live ~13:30): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
+- Bonus slots b and c, daily 13:06 and 17:36 (live ~19:00 and ~23:30): "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
   `budget --bonus` first and stop quietly if it is 0."
 - Review, Sunday 10:20: "Use the shorts-autopilot skill in Review mode."
 - Deep Dive, Saturday 19:56 (live ~21:30): "Use the shorts-autopilot skill in Deep Dive mode (slot `L`, IST date). Post one long video."

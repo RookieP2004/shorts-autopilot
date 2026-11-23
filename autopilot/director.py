@@ -182,3 +182,50 @@ def check(ctx, final_mp4, out_dir, log=print):
     log(f"director: {rep['score']}/{rep['of']}" + (f"; to look at: {', '.join(miss)}" if miss else "")
         + f"; {len(rep['stings'])} stings, {len(sil)} silences, camera {'/'.join(distinct) or 'hold'}")
     return rep
+
+
+TEXTY = {"text", "hud", "optcard", "stamp", "dateline", "tipnum", "bignum", "dottext", "eqbar", "tracker", "lower_third",
+         "card", "panel", "quote", "source", "chapter", "tiles", "clock", "nodes"}
+MOVING_3D = {"video", "scene3d", "motion"}
+
+
+def gate(ctx, log=print):
+    """The showcase gate (owner, 2026-11-23: the bar is the 2026-11-22 Wi-Fi Short). Shorts only. Returns a list of misses;
+    the run must fix them before posting (skill 3f/3g)."""
+    job, scenes = ctx.job, ctx.job["scenes"]
+    if ctx.W > ctx.H:
+        return []
+    miss = []
+    total = float(sum(ctx.dur))
+    want = int(total // 3.5)                                     # a new shot at least every 3.5 s
+    shots = len(scenes)
+    if shots < want:
+        miss.append(f"only {shots} shots in {total:.0f} s (need >= {want}: a new shot every 2-4 s)")
+    worst, where = 0, None                                       # on-screen text load, captions not counted
+    for i, sc in enumerate(scenes):
+        spans = []
+        for L in sc.get("layers", []):
+            if L.get("type") in TEXTY or (L.get("type") == "look" and L.get("texts", True)):
+                a = float(L.get("at", 0)); b = float(L.get("until", L.get("at", 0) + L.get("dur", ctx.dur[i])))
+                spans.append((a, b))
+        for a, _ in spans:
+            n = sum(1 for x, y in spans if x <= a + 0.05 < y)
+            if n > worst:
+                worst, where = n, i
+    if worst > 2:
+        miss.append(f"{worst} text pieces on screen at once in scene {where} (max 2 besides the captions)")
+    mov = 0.0
+    for i, sc in enumerate(scenes):
+        if any(L.get("type") in MOVING_3D or (L.get("type") == "blender" and float(L.get("dur", 0.034)) > 0.05)
+               for L in sc.get("layers", [])):
+            mov += ctx.dur[i]
+    if mov < 8.0:
+        miss.append(f"only {mov:.1f} s of real moving 3D (need >= 8 s: Cutaway / animated Blender / scene3d / motion 3D)")
+    m = job.get("meta", {})
+    if m.get("role") and not (m.get("role_visual") or "").strip():
+        miss.append(f"role '{m['role']}' is not shown: set meta.role_visual to the set, prop or wear piece that shows it")
+    cap = {**ctx.style.get("captions", {}), **(job.get("style_override", {}).get("captions", {}))}
+    if int(cap.get("words_per_chunk", 3)) > 2:
+        miss.append("captions show more than 2 words at a time")
+    log("gate: PASS" if not miss else "gate: FAIL; " + " | ".join(miss))
+    return miss

@@ -565,6 +565,9 @@ def render(job_path, out_dir, root=ROOT, workers=None, log=print):
     try:                                                 # the director's checks: hook, reading, pace, camera, silences
         from . import director
         d = director.check(ctx, final, out_dir, log)
+        d["gate"] = director.gate(ctx, log)
+        with open(os.path.join(out_dir, "director.json"), "w") as f:
+            json.dump(d, f, indent=2, default=lambda o: o.item() if hasattr(o, "item") else str(o))
         info["director"] = {"score": d["score"], "of": d["of"]}
     except Exception as e:
         log(f"director: skipped ({e})")

@@ -31,14 +31,14 @@
   "captions": {
     "enabled": true,
     "font": "body",
-    "size": 72,
+    "size": 80,
     "color": "primary",
     "highlight": "accent",
     "stroke": "#1a1410",
-    "stroke_width": 9,
-    "y": 0.41,
-    "words_per_chunk": 3,
-    "uppercase": true
+    "stroke_width": 10,
+    "y": 0.7,
+    "words_per_chunk": 2,
+    "uppercase": false
   },
   "voice": {
     "voice": "bm_lewis",

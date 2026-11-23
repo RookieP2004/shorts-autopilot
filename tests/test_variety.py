@@ -33,3 +33,16 @@ def test_refphoto_licences_and_credits(tmp_path):
     assert refphoto.thumb_url("Apollo 11 Launch - GPN-2000-000630.jpg", 960).endswith("/960px-Apollo_11_Launch_-_GPN-2000-000630.jpg")
     (tmp_path / "photo_credits.json").write_text('["NASA (Public domain), via Wikimedia Commons: x"]')
     assert refphoto.credits(str(tmp_path))
+
+
+def test_gate_fails_old_style_and_passes_wifi():
+    import json
+    from types import SimpleNamespace
+    from autopilot import director
+    style = json.load(open("channel/style.json"))
+    wifi = json.load(open("jobs/2026-11-22-m1/job.json"))
+    n = len(wifi["scenes"])
+    assert director.gate(SimpleNamespace(job=wifi, style=style, W=1080, H=1920, dur=[36.8 / n] * n), log=lambda *a: None) == []
+    old = {"meta": {"role": "chef"}, "scenes": [{"layers": [{"type": "text"}, {"type": "hud"}, {"type": "stamp"}]}] * 4}
+    miss = director.gate(SimpleNamespace(job=old, style=style, W=1080, H=1920, dur=[8.0] * 4), log=lambda *a: None)
+    assert len(miss) >= 4

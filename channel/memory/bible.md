@@ -129,6 +129,11 @@ every week, and edits the owner makes in the Google Doc are pulled back in by th
   youtu.be/QFhXI3hT9Ik). This is the quality bar and the house style: every new video should look at least this alive, in its own
   new world and story.
 
+- **🔒 The bar (owner, 2026-11-23).** The Wi-Fi Short (`jobs/2026-11-22-m1`) is the minimum, not a one-off: real moving 3D
+  (>= 8 s), a new shot every 2-4 s, Ved coming and going, at most 2 text pieces on screen besides 2-word captions, the role
+  visible on screen, voice-first sound. The render gate (`gate: PASS/FAIL`) checks it; never post on a FAIL. Runs start
+  ~6 h before posting to make room for the 3D.
+
 ## 4. Cast 🔒
 | id | name | role | personality | voice | poses |
 |---|---|---|---|---|---|
@@ -275,6 +280,7 @@ Every factual claim is checked with a search in the same run, with sources in `m
   2027-03-14, then ET + 9:30: re-check the times then).
 - Spacing rule (owner, 2026-11-12): at least ~5 hours between Shorts. Our first week showed it: the first Short after an
   18-hour gap always got 800-1,400 views, while Shorts posted 1-3 hours after the previous one got 4, 86, 164 and 565.
+- Runs start ~6 h before going live (07:06 / 13:06 / 17:36) so each Short has time for real moving 3D (owner, 2026-11-23).
 - **Times moved (owner, 2026-11-22, from his YouTube Studio view by posting hour: ~1,300 views for 13:00-14:30 IST posts,
   ~1,200-1,360 for 18:30-20:00, ~1,000-1,150 for 22:30-23:30).** Shorts now go live at about **13:30 IST** (slot a = the
   regular daily Short; run starts 12:36), **19:00 IST** (bonus slot b; starts 18:06) and **23:30 IST** (bonus slot c; starts
@@ -310,6 +316,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-23 | 3, 10 | The bar = the Wi-Fi Short: render gate (shots every <=3.5 s, >= 8 s moving 3D, <= 2 text pieces, role visible, 2-word captions); caption default 2 words at y 0.70; runs start ~6 h early | owner on the 11-23 sugar Short: "is it really the improved version?" |
 | 2026-11-22 | 10 | Slot times: a ~13:30 IST (run 12:36), b ~19:00 (18:06), c ~23:30 (22:36); Saturday's slot a skips by date on the free plan; review re-checks times after 2 weeks | owner's YouTube Studio data by posting hour |
 | 2026-11-22 | 11 | Humour: American internet trends first (US meme formats, phrases, slang rising this week); timeless card as fallback | owner: "majority of audience is from America" |
 | 2026-11-22 | 8 | Long videos: curiosity-question titles (<= 50 chars), payoff promise + strongest visual in the first 15 s, 4-6 min, Related-video links from the best Shorts | owner's analytics: long CTR 1.4-3.1%, 45 s average view of 5:18 |
