@@ -328,7 +328,9 @@ too: mix at least 3 visual styles besides Ved (moving 3D, Reelsmith looks, motio
 reference photos, case/device pieces...), a fresh topic lane, Ved's role, explain mode and style mix from
 `python -m autopilot variety` (recorded in `meta`), occasional wardrobe pieces and real reference photos where they fit,
 dynamic voice-first sound and US-first humour. Never copy the Wi-Fi Short's look (kitchen, serif numbers, one long 3D
-world): match its polish, change everything else.
+world): match its polish, change everything else. The 3D should be a lit place the camera travels through (a room, a street, inside a
+machine or a body), not just an object floating on a dark grid; and no stretch of mostly-black screen over 1.2 s (the
+gate checks it).
 
 **a. Research (4–8 searches, send them in parallel).** Look at what is trending in the niche this week, news hooks, evergreen
 questions people ask, and what's working for similar Shorts. If the vidIQ connector is available, use its trending and

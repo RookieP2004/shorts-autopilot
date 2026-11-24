@@ -189,7 +189,14 @@ TEXTY = {"text", "hud", "optcard", "stamp", "dateline", "tipnum", "bignum", "dot
 MOVING_3D = {"video", "scene3d", "motion"}
 
 
-def gate(ctx, log=print):
+def dark_spans(path, min_s=1.2):
+    """stretches where most of the picture is near-black (a mostly empty frame), not only pure black"""
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-i", path, "-vf", f"blackdetect=d={min_s}:pix_th=0.10:pic_th=0.80",
+                        "-an", "-f", "null", "-"], capture_output=True, text=True).stderr
+    return [(float(a), float(b)) for a, b in re.findall(r"black_start:([\d.]+) black_end:([\d.]+)", r)]
+
+
+def gate(ctx, log=print, final_mp4=None):
     """The showcase gate (owner, 2026-11-23: the bar is the 2026-11-22 Wi-Fi Short). Shorts only. Returns a list of misses;
     the run must fix them before posting (skill 3f/3g)."""
     job, scenes = ctx.job, ctx.job["scenes"]
@@ -253,5 +260,13 @@ def gate(ctx, log=print):
     cap = {**ctx.style.get("captions", {}), **(job.get("style_override", {}).get("captions", {}))}
     if int(cap.get("words_per_chunk", 3)) > 2:
         miss.append("captions show more than 2 words at a time")
+    if final_mp4:
+        try:
+            dk = [(a, b) for a, b in dark_spans(final_mp4) if b - a >= 1.2]
+        except Exception:
+            dk = []
+        if dk:
+            miss.append("mostly-black frames for " + ", ".join(f"{a:.1f}-{b:.1f} s" for a, b in dk)
+                        + " (light the set or fill the frame; a dark beat may last < 1.2 s)")
     log("gate: PASS" if not miss else "gate: FAIL; " + " | ".join(miss))
     return miss
