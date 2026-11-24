@@ -38,6 +38,10 @@ physical thing you can picture; economics only wallet-first. Dark-files at most 
 - [big-question] Why do cows (and bulls) see the world in two colours? · follow-up angle on the bull video: dichromat vision vs ours, reuses the ranch arena set · https://www.mentalfloss.com/article/28488/what-really-happens-if-you-wear-red-front-bull
 - [what-if] What if the Pauli exclusion principle switched off? · Dyson & Lenard 1967: matter would collapse; grounded what-if from the Deep Dive · https://web.math.ku.dk/~solovej/science-news.html
 
+- [build-it | bio-engineering what-ifs] Could a human ever breathe underwater with gills? · water holds ~3% of the oxygen air does, so gills for a human body would be huge; artificial-gill prototypes and why they fail; runner-up 2026-11-24 · https://www.livescience.com/planet-earth/evolution/why-dont-humans-have-gills
+- [build-it | human upgrades] A robotic third thumb rewires your brain · UCL's Third Thumb (2021): wearers learned it in days, and the brain's map of the hand shifted; runner-up 2026-11-24 · https://www.ucl.ac.uk/news/2021/may/robotic-third-thumb-use-can-alter-brain-representation-hand
+- [big-question | animals and nature] Why do cats' eyes glow in the dark? · the tapetum lucidum mirror sends light through the retina twice; cats need ~1/6 of our light; runner-up 2026-11-24 · https://www.allaboutvision.com/eye-care/pets-animals/cat-vision/
+
 ## Examples of the new kinds (owner, 2026-11-13)
 These are only **examples of the type** of video the owner means, not a list that must be made. Use them as inspiration for
 fresh topics of the same kind; pick one only if it wins on the topic rule (unique / trending / viral-shaped) like any other idea.
