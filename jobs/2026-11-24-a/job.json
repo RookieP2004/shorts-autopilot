@@ -1,0 +1,848 @@
+{
+ "id": "2026-11-24-a",
+ "title": "Scientists hacked human eyes to see infrared 👁️",
+ "description": "Your eyes only catch light from about 400 to 700 nanometers, so near-infrared light is invisible to you. In 2019, researchers (University of Science and Technology of China and UMass Medical School, in the journal Cell) injected tiny upconversion nanoparticles into mice's eyes: the particles turn ~980 nm infrared into green light, and the mice could see infrared for up to 10 weeks. In 2025, Tian Xue's team (USTC, Cell) put the same kind of nanoparticles into contact lenses, and people could see flashing near-infrared light. They saw it even better with their eyes closed, because near-infrared passes through the eyelid better than visible light. The catch: it only works with bright infrared sources like LEDs, and fine detail is blurry. Research, not a product, and not medical advice.\n\nSources: Cell Press / ScienceDaily (2025); Physics World (2025); ScienceDaily (2019); Physics World (2019).",
+ "tags": [
+  "infrared vision",
+  "night vision",
+  "contact lenses",
+  "nanoparticles",
+  "human eye",
+  "science news",
+  "biohacking",
+  "how eyes work",
+  "science explained"
+ ],
+ "hashtags": [
+  "#science",
+  "#eyes"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#science",
+   "#nightvision",
+   "#infrared",
+   "#biohacking",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "build-it",
+  "topic": "hacking human eyes to see infrared: humans see ~400-700 nm; 2019 Cell: nanoparticle injection let mice see ~980 nm IR (as green) for up to 10 weeks; 2025 Cell (Tian Xue, USTC): upconversion contact lenses let people see near-infrared, better with eyes closed (IR passes the eyelid); limits: bright IR only, blurry",
+  "hook": "build-it",
+  "idea_source": "unique + viral-shaped: 'night vision' made shockingly simple with a real lab hack; few Shorts explain the eyes-closed twist; lane bio-engineering what-ifs (night vision)",
+  "lane": "bio-engineering what-ifs",
+  "role": "hacker",
+  "explain": "step-by-step build",
+  "role_visual": "hacker's den on the night set: dark desk, laptop and two monitors running a fictional EYE.PATCH terminal, a code wall behind; Ved in a jacket in the first two scenes",
+  "styles": [
+   "blender-3d",
+   "night-den",
+   "RS-12",
+   "hud",
+   "cards",
+   "comic"
+  ],
+  "characters": [
+   "ved"
+  ],
+  "sources": [
+   "https://www.sciencedaily.com/releases/2025/05/250522124556.htm",
+   "https://physicsworld.com/a/new-contact-lenses-allow-wearers-to-see-in-the-near-infrared/",
+   "https://www.sciencedaily.com/releases/2019/02/190228141412.htm",
+   "https://physicsworld.com/a/upconverting-nanoparticles-allow-mice-to-see-in-infrared",
+   "https://www.allaboutvision.com/eye-care/pets-animals/cat-vision/"
+  ],
+  "humour": {
+   "trend": "timeless US school-life card (no rising trend fit cleanly): \"eyes closed in 1st period: it's for science\"",
+   "beat": "side_eye",
+   "scene": 7
+  },
+  "claims": [
+   {
+    "claim": "humans typically see light from about 400 to 700 nm",
+    "tag": "PROVEN",
+    "source": "https://physicsworld.com/a/new-contact-lenses-allow-wearers-to-see-in-the-near-infrared/"
+   },
+   {
+    "claim": "2019: a single injection of upconversion nanoparticles let mice see ~980 nm infrared (as green) for up to 10 weeks",
+    "tag": "PROVEN",
+    "source": "https://www.sciencedaily.com/releases/2019/02/190228141412.htm"
+   },
+   {
+    "claim": "2025: contact lenses with upconversion nanoparticles let people see near-infrared light",
+    "tag": "R&D",
+    "source": "https://www.sciencedaily.com/releases/2025/05/250522124556.htm"
+   },
+   {
+    "claim": "infrared vision was better with eyes closed because near-infrared passes through eyelids better than visible light",
+    "tag": "PROVEN",
+    "source": "https://www.sciencedaily.com/releases/2025/05/250522124556.htm"
+   },
+   {
+    "claim": "only bright infrared (LED sources) is seen, and fine detail is limited",
+    "tag": "R&D",
+    "source": "https://www.sciencedaily.com/releases/2025/05/250522124556.htm"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "INFRARED *EYES?*",
+  "title_y": 0.2,
+  "title_size": 165,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#35e08a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.3,
+  "bg_saturation": 1.3,
+  "tint": [
+   "#0b1a3a",
+   "#35e08a"
+  ],
+  "tint_amount": 0.25,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-24-a/assets/plate_den_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-24-a/assets/lens.png",
+    "x": 0.2,
+    "y": 0.47,
+    "w": 0.3,
+    "enter": "none",
+    "rotate": -8
+   },
+   {
+    "type": "image",
+    "path": "jobs/2026-11-24-a/assets/mouse.png",
+    "x": 0.82,
+    "y": 0.47,
+    "w": 0.28,
+    "enter": "none",
+    "rotate": 6
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.5,
+    "y": 0.95,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-24-a/assets.py",
+ "scenes": [
+  {
+   "say": "How do you *hack* a human eye to see in the *dark*?",
+   "layers": [
+    {
+     "dur": 4.167,
+     "type": "blender",
+     "script": "jobs/2026-11-24-a/shots/a_hook.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "text",
+     "text": "HACK YOUR EYES FOR *NIGHT VISION*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.17,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.8,
+     "y": 1.0,
+     "h": 0.56,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       2.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true,
+     "rig_args": {
+      "wear": "jacket"
+     }
+    }
+   ]
+  },
+  {
+   "say": "Bug one: you only see *400 to 700* nanometers.",
+   "transition": "slide_left",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.56
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-24-a/assets/plate_den_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.6022,
+     "y": 0.5821,
+     "h": 0.4936,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       1.3
+      ],
+      [
+       "point",
+       2.8
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1.5018,
+       "y": 0.6002,
+       "scale": 1.1684
+      },
+      {
+       "t": 1.2,
+       "x": 0.6022,
+       "y": 0.5821,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "rig_args": {
+      "wear": "jacket"
+     }
+    },
+    {
+     "type": "hud",
+     "label": "your eyes see",
+     "text": "400-700 NM",
+     "x": 0.5,
+     "y": 0.16,
+     "enter": "pop",
+     "at": 0.5,
+     "sfx": "click",
+     "tone": "blue"
+    },
+    {
+     "type": "stamp",
+     "text": "BUG #1",
+     "tone": "red",
+     "angle": -6,
+     "size": 64,
+     "x": 0.5,
+     "y": 0.3,
+     "at": 2.8,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "Infrared? *Pitch black* to you.",
+   "transition": "zoom",
+   "caption_y": 0.74,
+   "pad": 1.1,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-24-a/assets/plate_den_screen.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.15
+      },
+      {
+       "t": 4,
+       "scale": 1.22
+      }
+     ]
+    },
+    {
+     "type": "look",
+     "look": "RS-12",
+     "x": 0.5,
+     "y": 0.36,
+     "w": 1.0,
+     "h": 0.6,
+     "at": 0.0,
+     "props": {
+      "title": "EYE.SCAN",
+      "color": "green",
+      "backdrop": "dim",
+      "lines": [
+       "> scan 550 nm",
+       "  signal OK",
+       "> scan 980 nm (IR)",
+       "  NO SIGNAL"
+      ],
+      "key": 3
+     }
+    }
+   ]
+  },
+  {
+   "say": "The patch: nanoparticles that make infrared *visible*.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.7,
+   "layers": [
+    {
+     "dur": 4.533,
+     "type": "blender",
+     "script": "jobs/2026-11-24-a/shots/b_patch.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "text",
+     "text": "PATCH: *IR -> VISIBLE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 90,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#f2b04a' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#f2b04a' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>R&amp;D</text></svg>",
+     "x": 0.5,
+     "y": 0.26,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 1.6,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "In 2019, injected *mice* saw infrared for up to *ten weeks*.",
+   "transition": "cut",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 3.6,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-24-a/assets/plate_den_low.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.1236,
+     "y": 0.5375,
+     "h": 0.5759,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "surprised",
+       1.8
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-24-a/assets/mouse.png",
+     "x": 0.66,
+     "y": 0.47,
+     "w": 0.24,
+     "enter": "none",
+     "at": 0.3,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "y": -0.1
+      },
+      {
+       "t": 0.55,
+       "y": 0.47,
+       "ease": "bounce"
+      }
+     ]
+    },
+    {
+     "type": "dateline",
+     "date": "2019",
+     "place": "MICE  -  CELL JOURNAL",
+     "size": 54,
+     "x": 0.5,
+     "y": 0.13,
+     "at": 0.1,
+     "enter": "fade",
+     "sfx": "type"
+    },
+    {
+     "type": "hud",
+     "label": "weeks of infrared vision",
+     "to": 10,
+     "count_dur": 0.8,
+     "x": 0.5,
+     "y": 0.27,
+     "at": 1.6,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "green",
+     "indian": false
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.62,
+     "y": 0.38,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 2.6,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "In 2025, *humans* got them as contact lenses,",
+   "transition": "slide_up",
+   "caption_y": 0.62,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-24-a/assets/plate_den_screen.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 8,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.3
+      },
+      {
+       "t": 3,
+       "scale": 1.36
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.1
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-24-a/assets/lens.png",
+     "x": 0.24,
+     "y": 0.38,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 0.4,
+     "sfx": "pop",
+     "keys": [
+      {
+       "t": 0,
+       "rot": -10
+      },
+      {
+       "t": 2.4,
+       "rot": 8
+      }
+     ]
+    },
+    {
+     "type": "dateline",
+     "date": "2025",
+     "place": "HUMANS  -  CONTACT LENSES",
+     "size": 50,
+     "x": 0.5,
+     "y": 0.13,
+     "at": 0.1,
+     "enter": "fade",
+     "sfx": "type"
+    }
+   ]
+  },
+  {
+   "say": "and saw *better* with eyes *closed*.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.7,
+   "pad": 0.4,
+   "layers": [
+    {
+     "dur": 2.633,
+     "type": "blender",
+     "script": "jobs/2026-11-24-a/shots/c_closed.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "text",
+     "text": "EYES *CLOSED* = BETTER",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 92,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.15,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-24-a/assets/plate_den_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.35
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "side_eye",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "side_eye",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "eyes closed in 1st period: *it's for science*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Infrared slips *through* eyelids. Normal light can't.",
+   "transition": "cut",
+   "caption_y": 0.72,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.4,
+      "zoom": 1.05,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-24-a/assets/plate_den_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 9,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.12
+      },
+      {
+       "t": 3.4,
+       "scale": 1.18
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 620'><rect x='10' y='10' width='880' height='600' rx='36' fill='#f6efe2' stroke='#1a1410' stroke-width='8'/><text x='450' y='92' text-anchor='middle' font-size='64' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>YOUR EYELID</text><rect x='420' y='130' width='60' height='420' rx='26' fill='#c98e62' stroke='#1a1410' stroke-width='6'/><g stroke='#e0a31a' stroke-width='16' stroke-linecap='round'><line x1='90' y1='220' x2='380' y2='220'/><line x1='90' y1='300' x2='380' y2='300'/></g><path d='M372,198 l40,22 l-40,22 z M372,278 l40,22 l-40,22 z' fill='#e0a31a'/><path d='M520,210 l40,40 M560,210 l-40,40 M520,290 l40,40 M560,290 l-40,40' stroke='#d6302c' stroke-width='12' stroke-linecap='round'/><text x='90' y='185' font-size='40' fill='#8a6a12' font-family='Anton, DejaVu Sans, sans-serif'>NORMAL LIGHT</text><g stroke='#d6302c' stroke-width='16' stroke-linecap='round'><line x1='90' y1='420' x2='800' y2='420'/><line x1='90' y1='490' x2='800' y2='490'/></g><path d='M790,398 l40,22 l-40,22 z M790,468 l40,22 l-40,22 z' fill='#d6302c'/><text x='90' y='392' font-size='40' fill='#a3201d' font-family='Anton, DejaVu Sans, sans-serif'>INFRARED</text><text x='620' y='575' font-size='38' fill='#2f7f4f' font-family='Anton, DejaVu Sans, sans-serif'>GETS THROUGH</text></svg>",
+     "x": 0.5,
+     "y": 0.27,
+     "w": 0.86,
+     "rotate": -2,
+     "enter": "pop",
+     "at": 0.1,
+     "sfx": "paper"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.62,
+     "y": 0.98,
+     "h": 0.6,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "explain",
+       2.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "The catch: bright infrared only, and *blurry*. Version one.",
+   "transition": "cut",
+   "caption_y": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-24-a/assets/plate_den_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2927,
+     "y": 0.583,
+     "h": 0.4978,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "crossed",
+       2.6
+      ],
+      [
+       "smirk",
+       4.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "optcard",
+     "label": "the catch",
+     "text": "BRIGHT IR\nONLY",
+     "tone": "red",
+     "x": 0.28,
+     "y": 0.18,
+     "w": 0.38,
+     "rotate": -3,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop",
+     "until": 2.7,
+     "exit": "fade"
+    },
+    {
+     "type": "optcard",
+     "label": "the catch",
+     "text": "BLURRY",
+     "tone": "red",
+     "x": 0.72,
+     "y": 0.18,
+     "w": 0.38,
+     "rotate": 3,
+     "enter": "pop",
+     "at": 0.9,
+     "sfx": "pop",
+     "until": 2.7,
+     "exit": "fade"
+    },
+    {
+     "type": "stamp",
+     "text": "VERSION 1.0",
+     "tone": "green",
+     "angle": -6,
+     "size": 66,
+     "x": 0.5,
+     "y": 0.36,
+     "at": 2.8,
+     "sfx": "thud"
+    }
+   ]
+  }
+ ]
+}
