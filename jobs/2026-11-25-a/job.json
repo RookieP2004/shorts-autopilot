@@ -1,0 +1,746 @@
+{
+ "id": "2026-11-25-a",
+ "title": "Skyscrapers stand still? This one hides a 660-ton ball 🏙️",
+ "description": "Tall buildings sway in the wind, and Taipei 101 (508 m) fights back with the world's largest tuned mass damper: a 660-tonne steel ball made of 41 steel plates, hanging between the 87th and 92nd floors. When the tower moves one way, the heavy ball lags and swings the other way, and hydraulic pistons turn that motion into heat. The builder says it cuts the sway by up to 40%. Its biggest recorded swing was about 1 metre, during Typhoon Soudelor in August 2015 (design maximum: 1.5 m).\n\nSources: Guinness World Records (largest tuned mass damper); Business Insider via Yahoo News; Taiwan News; Boing Boing.",
+ "tags": [
+  "Taipei 101",
+  "tuned mass damper",
+  "skyscraper",
+  "engineering",
+  "how buildings work",
+  "physics",
+  "architecture",
+  "myth busting",
+  "science explained"
+ ],
+ "hashtags": [
+  "#engineering",
+  "#physics"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#engineering",
+   "#taipei101",
+   "#skyscraper",
+   "#architecture",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "myth-bust",
+  "topic": "skyscrapers sway: Taipei 101 (508 m) and its 660-tonne tuned mass damper (41 steel plates, floors 87-92, Guinness largest); the ball lags and swings opposite, hydraulic pistons turn motion into heat; up to 40% less sway (A+H); record swing ~1 m in Typhoon Soudelor (Aug 2015)",
+  "hook": "myth-bust",
+  "idea_source": "viral-shaped + unique: a famous engineering marvel made simple with one model and one gold ball; most Shorts only show the ball, few explain why it swings the other way; lane engineering and megaprojects",
+  "lane": "engineering and megaprojects",
+  "role": "enthusiast",
+  "explain": "analogy demo",
+  "role_visual": "Ved's model room: a work table with his model of the tiered tower (clear top with a tiny gold ball), other skyscraper models, blueprint posters signed 'drawn by Ved'; fan badge in two scenes",
+  "styles": [
+   "blender-3d",
+   "model-room",
+   "RS-05",
+   "hud",
+   "stamp",
+   "comic"
+  ],
+  "characters": [
+   "ved"
+  ],
+  "sources": [
+   "https://www.guinnessworldrecords.com/world-records/774616-largest-tuned-mass-damper",
+   "https://ca.news.yahoo.com/660-ton-pendulum-protects-taiwans-180430672.html",
+   "https://www.taiwannews.com.tw/news/5963038",
+   "https://boingboing.net/2022/09/19/watch-the-tuned-mass-damper-inside-a-taipei-skyscraper-react-to-this-weekends-6-9-magnitude-earthquake.html"
+  ],
+  "humour": {
+   "trend": "timeless US school-life card (no rising US trend fit cleanly this week): \"the ball in every group project: does all of it\"",
+   "beat": "deadpan",
+   "scene": 5
+  },
+  "claims": [
+   {
+    "claim": "Taipei 101 is 508 m tall",
+    "tag": "PROVEN",
+    "source": "https://www.guinnessworldrecords.com/world-records/774616-largest-tuned-mass-damper"
+   },
+   {
+    "claim": "its tuned mass damper is a 660-tonne steel sphere of 41 plates hung between floors 87 and 92; the largest TMD (Guinness)",
+    "tag": "PROVEN",
+    "source": "https://www.guinnessworldrecords.com/world-records/774616-largest-tuned-mass-damper"
+   },
+   {
+    "claim": "it lags and moves opposite to the building's sway; hydraulic dampers turn the motion into heat",
+    "tag": "PROVEN",
+    "source": "https://www.guinnessworldrecords.com/world-records/774616-largest-tuned-mass-damper"
+   },
+   {
+    "claim": "reduces sway by up to 40% (builder A+H)",
+    "tag": "PROVEN",
+    "source": "https://ca.news.yahoo.com/660-ton-pendulum-protects-taiwans-180430672.html"
+   },
+   {
+    "claim": "largest recorded swing ~100 cm in Typhoon Soudelor, 8 Aug 2015; design max 1.5 m",
+    "tag": "PROVEN",
+    "source": "https://www.taiwannews.com.tw/news/5963038"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "660-TON *BALL?*",
+  "title_y": 0.2,
+  "title_size": 165,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#f2b04a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.2,
+  "bg_saturation": 1.3,
+  "tint": [
+   "#1c3f73",
+   "#f2b04a"
+  ],
+  "tint_amount": 0.22,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-25-a/assets/plate_room_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-25-a/assets/ball.png",
+    "x": 0.22,
+    "y": 0.46,
+    "w": 0.34,
+    "enter": "none",
+    "rotate": -6
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.6,
+    "y": 0.95,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-25-a/assets.py",
+ "scenes": [
+  {
+   "say": "Skyscrapers stand still? *Nope.* They *sway*.",
+   "layers": [
+    {
+     "dur": 3.8,
+     "type": "blender",
+     "script": "jobs/2026-11-25-a/shots/a_sway.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "text",
+     "text": "MYTH: SKYSCRAPERS STAND *STILL*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "stamp",
+     "text": "BUSTED",
+     "tone": "red",
+     "angle": -7,
+     "size": 72,
+     "x": 0.5,
+     "y": 0.29,
+     "at": 1.5,
+     "sfx": "thud"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.82,
+     "y": 1.0,
+     "h": 0.55,
+     "enter": "none",
+     "acting": [
+      [
+       "deadpan",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "Taipei 101: *508 meters* tall, and it fights *back*.",
+   "transition": "slide_left",
+   "caption_y": 0.72,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.45
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-25-a/assets/plate_room_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.2878,
+     "y": 0.6009,
+     "h": 0.3421,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       1.2
+      ],
+      [
+       "point",
+       2.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.3163,
+       "y": 0.6009,
+       "scale": 1.0
+      },
+      {
+       "t": 1.1,
+       "x": 0.2878,
+       "y": 0.6009,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "rig_args": {
+      "wear": "badge"
+     }
+    },
+    {
+     "type": "hud",
+     "label": "taipei 101",
+     "to": 508,
+     "suffix": " M",
+     "count_dur": 1.0,
+     "x": 0.5,
+     "y": 0.14,
+     "at": 0.4,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "blue",
+     "indian": false
+    }
+   ]
+  },
+  {
+   "say": "With *this*: a *660-ton* steel ball near the top.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "dur": 4.2,
+     "type": "blender",
+     "script": "jobs/2026-11-25-a/shots/b_ball.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "hud",
+     "label": "the damper ball",
+     "to": 660,
+     "suffix": " TONNES",
+     "count_dur": 1.0,
+     "x": 0.5,
+     "y": 0.13,
+     "at": 0.5,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "gold",
+     "indian": false
+    },
+    {
+     "type": "image",
+     "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 84'><rect x='4' y='4' width='322' height='76' rx='38' fill='#6fc3c0' stroke='#1a1410' stroke-width='5'/><circle cx='44' cy='42' r='16' fill='#1a1410'/><path d='M36,42 l6,7 l11,-14' stroke='#6fc3c0' stroke-width='5' fill='none'/><text x='188' y='60' text-anchor='middle' font-size='50' fill='#1a1410' font-family='Anton, DejaVu Sans, sans-serif'>PROVEN</text></svg>",
+     "x": 0.5,
+     "y": 0.235,
+     "w": 0.26,
+     "enter": "pop",
+     "at": 1.8,
+     "sfx": "click"
+    }
+   ]
+  },
+  {
+   "say": "Watch my model. Wind shoves the tower *one* way...",
+   "transition": "zoom",
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-25-a/assets/plate_room_model.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.0
+      },
+      {
+       "t": 3.2,
+       "scale": 1.07
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.25,
+     "y": 1.02,
+     "h": 0.62,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true,
+     "rig_args": {
+      "wear": "badge"
+     }
+    }
+   ]
+  },
+  {
+   "say": "the heavy ball swings the *other* way, pulling it back.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "dur": 4.8,
+     "type": "blender",
+     "script": "jobs/2026-11-25-a/shots/c_opposite.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "text",
+     "text": "BALL SWINGS *OPPOSITE*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.13,
+     "size": 88,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "pop",
+     "at": 0.2,
+     "sfx": "pop"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-25-a/assets/plate_room_model.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "the ball in every group project: *does all of it*",
+    "text_y": 0.2
+   }
+  },
+  {
+   "say": "Then giant pistons turn that swing into *heat*.",
+   "transition": "cut",
+   "caption_y": 0.74,
+   "pad": 1.0,
+   "layers": [
+    {
+     "type": "look",
+     "look": "RS-05",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "at": 0.0,
+     "props": {
+      "title": "TUNED MASS DAMPER",
+      "parts": [
+       {
+        "label": "STEEL BALL",
+        "shape": "circle",
+        "note": "41 plates"
+       },
+       {
+        "label": "CABLES",
+        "shape": "cyl",
+        "note": "hang it"
+       },
+       {
+        "label": "PISTONS",
+        "shape": "cyl",
+        "note": "swing -> heat"
+       },
+       {
+        "label": "BUMPER RING",
+        "shape": "circle",
+        "note": "max 1.5 m"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "say": "Result? Up to *40 percent* less sway.",
+   "transition": "slide_up",
+   "caption_y": 0.72,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.06,
+      "focus": [
+       0.5,
+       0.55
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-25-a/assets/plate_room_low.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.293,
+     "y": 0.5696,
+     "h": 0.6043,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "surprised",
+       1.4
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.5,
+       0.06,
+       0.45
+      ]
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "less sway",
+     "prefix": "UP TO ",
+     "to": 40,
+     "suffix": "%",
+     "count_dur": 0.9,
+     "x": 0.5,
+     "y": 0.14,
+     "at": 0.4,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "green",
+     "indian": false
+    }
+   ]
+  },
+  {
+   "say": "In a 2015 typhoon, it swung a full *meter*.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-25-a/assets/plate_room_model.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 12,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.25
+      },
+      {
+       "t": 3.2,
+       "scale": 1.32
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-25-a/assets/ball.png",
+     "x": 0.5,
+     "y": 0.46,
+     "w": 0.5,
+     "enter": "none",
+     "keys": [
+      {
+       "t": 0,
+       "x": 0.34,
+       "rot": 8
+      },
+      {
+       "t": 0.9,
+       "x": 0.66,
+       "rot": -8
+      },
+      {
+       "t": 1.8,
+       "x": 0.34,
+       "rot": 8
+      },
+      {
+       "t": 2.7,
+       "x": 0.64,
+       "rot": -7
+      },
+      {
+       "t": 3.4,
+       "x": 0.4,
+       "rot": 5
+      }
+     ]
+    },
+    {
+     "type": "hud",
+     "label": "august 2015",
+     "text": "TYPHOON SOUDELOR",
+     "x": 0.5,
+     "y": 0.13,
+     "at": 0.1,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "blue"
+    },
+    {
+     "type": "hud",
+     "label": "record swing",
+     "text": "1 METER",
+     "x": 0.5,
+     "y": 0.25,
+     "at": 1.4,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "red"
+    }
+   ]
+  },
+  {
+   "say": "They don't stand still. They *dance*, with a 660-ton partner.",
+   "transition": "cut",
+   "caption_y": 0.72,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 4.5,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-25-a/assets/plate_room_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.2878,
+     "y": 0.6009,
+     "h": 0.3421,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "warm",
+       2.2
+      ],
+      [
+       "smirk",
+       3.6
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "stamp",
+     "text": "MYTH BUSTED",
+     "tone": "green",
+     "angle": -6,
+     "size": 70,
+     "x": 0.5,
+     "y": 0.2,
+     "at": 2.3,
+     "sfx": "thud"
+    }
+   ]
+  }
+ ]
+}
