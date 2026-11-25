@@ -282,7 +282,8 @@ Every factual claim is checked with a search in the same run, with sources in `m
   2027-03-14, then ET + 9:30: re-check the times then).
 - Spacing rule (owner, 2026-11-12): at least ~5 hours between Shorts. Our first week showed it: the first Short after an
   18-hour gap always got 800-1,400 views, while Shorts posted 1-3 hours after the previous one got 4, 86, 164 and 565.
-- Runs start ~6 h before going live (07:06 / 13:06 / 17:36) so each Short has time for real moving 3D (owner, 2026-11-23).
+- Runs start early enough for real moving 3D (slot a 11:06 IST) and **post as soon as the gate passes**, in the same run; never wait
+  for a later time (2026-11-25: a run told to wait ended without posting).
 - **Times moved (owner, 2026-11-22, from his YouTube Studio view by posting hour: ~1,300 views for 13:00-14:30 IST posts,
   ~1,200-1,360 for 18:30-20:00, ~1,000-1,150 for 22:30-23:30).** Shorts now go live at about **13:30 IST** (slot a = the
   regular daily Short; run starts 12:36), **19:00 IST** (bonus slot b; starts 18:06) and **23:30 IST** (bonus slot c; starts

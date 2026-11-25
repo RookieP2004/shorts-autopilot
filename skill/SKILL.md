@@ -303,8 +303,8 @@ Leave it null until they have read it off the billing page; never guess it. If t
 (Zapier may pro-rate it), lower `zapier.plan_tasks` for that cycle or run `budget --sync`, and tell the owner.
 
 ## 3. Produce mode (unattended, one video)
-Slots (live times from the owner's YouTube Studio data, 2026-11-22; each run starts ~6 h earlier, at 07:06 / 13:06 /
-17:36, so there is time for real moving 3D): `a` ~13:30 IST (the regular daily Short), `b` ~19:00 and `c` ~23:30 IST
+Slots (live times from the owner's YouTube Studio data, 2026-11-22; each run starts earlier, at 11:06 / 13:06 /
+17:36, so there is time for real moving 3D, and posts as soon as it passes the gate): `a` ~13:30 IST (the regular daily Short), `b` ~19:00 and `c` ~23:30 IST
 (bonus: only near the end of the Zapier billing cycle, section 3c). The slot id is `YYYY-MM-DD-<slot>`, using the IST date. Never post the same format three
 days in a row, nor the same format twice on one day. If `log.md` already has that id, or `jobs/<id>/` exists in the repo, the slot is done. Stop.
 **Budget first:** run `python -m autopilot budget --need upload` before researching. If it exits 3, don't make the video;
@@ -318,11 +318,13 @@ a new shot every 2-4 s (at least one shot per 3.5 s), Ved coming and going betwe
 at once besides the captions (no headline + chips + stamps + cards piled together), clean 2-word captions low on the screen
 (the style default since 2026-11-23), the role actually **visible** (a set, a prop or a wardrobe piece, named in
 `meta.role_visual`), and the dynamic voice-first mix. Every render prints `gate: PASS` or `gate: FAIL; ...`
-(`autopilot/director.py gate`). **Never post on a FAIL**: fix and re-render. Time is there for it: slot a starts at 07:06 IST
-and posts at ~13:30, so a run has about 6 hours. Render the moving 3D first (Cutaway if the owner's install is present,
-else animated Blender shots at ~7 s a frame: 10 s of shots is about 30 minutes; run them with `nohup` and poll), then the
-edit. Upload no earlier than 13:25 IST (`sleep` until then); if the gate still fails at 15:30 IST, post the best version,
-and say plainly in the report which gate items failed and why.
+(`autopilot/director.py gate`). **Never post on a FAIL**: fix and re-render. Time is there for it: slot a starts at 11:06 IST,
+so a run has hours. Render the moving 3D first (Cutaway if the owner's install is present, else animated Blender shots at
+~7 s a frame: 10 s of shots is about 30 minutes; run them with `nohup` and poll), then the edit. **Upload as soon as the
+gate passes, in the same run. Never wait for a later time and never end the run with a rendered video that isn't posted**
+(on 2026-11-25 a run that was told to wait until 13:25 ended at 08:16 without posting). If the gate still fails 4 hours
+after the run started, post the best version and say plainly in the report which gate items failed and why. The last
+thing before the report: check that `log.md` has today's line with a YouTube id.
 The bar is about **quality, not a template**: every earlier owner rule still applies on top of it, and the gate checks them
 too: mix at least 3 visual styles besides Ved (moving 3D, Reelsmith looks, motion clips, data graphics, cards, real
 reference photos, case/device pieces...), a fresh topic lane, Ved's role, explain mode and style mix from
@@ -534,7 +536,7 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
 
 ## 5. Scheduled tasks
 Created in setup with `create_trigger` (time zone Asia/Calcutta, `requires_local_device` false):
-- Production slot a, daily 07:06 (live ~13:30): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
+- Production slot a, daily 11:06 (posts when ready, about 12:00-15:00): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
 - Bonus slots b and c, daily 13:06 and 17:36 (live ~19:00 and ~23:30): "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
   `budget --bonus` first and stop quietly if it is 0."
 - Review, Sunday 10:20: "Use the shorts-autopilot skill in Review mode."
