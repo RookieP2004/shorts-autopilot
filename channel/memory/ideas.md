@@ -179,3 +179,6 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [big-question | tech and the internet] How does a message cross the ocean in 0.1 s? · undersea cables, light in glass · verify
 - [big-question | tech and the internet] How does GPS know where you are? · four satellites, timing to a billionth of a second · verify
 - [big-question | tech and the internet] How does an AI "learn" a cat? · weights nudged millions of times, shown with dials · verify
+- [myth-bust | animals and nature] "Dogs only see in black and white" · dichromats (blue-yellow); runner-up 2026-11-26 · verify
+- [big-question | animals and nature] Why do cats' eyes glow in the dark? · tapetum lucidum mirror; runner-up 2026-11-26 · https://www.allaboutvision.com/eye-care/pets-animals/cat-vision/
+- [scale-shock | animals and nature] Farm turkeys doubled in weight since 1929 (13 lb -> 30 lb) · breeding made visible; runner-up 2026-11-26 · https://www.popsci.com/science/why-are-turkeys-so-big/
