@@ -27,4 +27,5 @@ for i in $(seq 1 20); do
   [ "$code" = "200" ] && break; sleep 6
 done
 echo "$url"
+echo "ALT https://github.com/$slug/raw/$branch/$name.$ext" >&2   # second address for the same file, if Zapier throttles the first
 [ "$code" = "200" ] || { echo "WARNING: URL not reachable yet (HTTP $code). Is the repo public?" >&2; exit 2; }

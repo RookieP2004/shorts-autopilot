@@ -397,7 +397,11 @@ length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). Rea
    tags (list), privacy_status, category_id "27", made_for_kids "false", notify_subscribers "true", default_language and
    default_audio_language "en". Check `channelId` in the response equals `zapier.youtube_channel_id`; if not, tell the owner at once.
    Read the video id, then run `python -m autopilot budget --add upload --ref <slot id>`.
-   If the call fails (an error costs 0 tasks), retry once. If it fails again, stop and notify the owner.
+   If the call fails (an error costs 0 tasks) with 429 or "throttled without retry", **don't repeat the same URL**: Zapier
+   holds back identical failing requests (2026-11-24 and 11-26 were blocked this way while the account was fine). Retry
+   with the second address of the same file, `https://github.com/RookieP2004/shorts-autopilot/raw/media/<id>.mp4` (push_media
+   prints it as `ALT`); that posted on 2026-11-26 at once. If that fails too, wait 5 minutes and try the second address once
+   more, then notify the owner with the video link and the ready-to-paste title and description.
    Never upload twice: before a retry, check `log.md`. Use *YouTube: Find Video* (2 tasks) only if the first call timed out with no clear result.
 4. **Thumbnail** (Shorts too: it shows in search, on the channel page and in suggestions, not in the swipe feed). Do this step
    **last**, after steps 5-6 and at least 10 minutes after the upload (`sleep 600` if needed): a thumbnail set while YouTube is
