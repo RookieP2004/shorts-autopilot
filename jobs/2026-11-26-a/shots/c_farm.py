@@ -1,0 +1,37 @@
+# The farm turkey: a big white bird in a sunny barn flaps its small wings with all it has... and barely leaves the straw
+# (moving 3D). The camera pushes in.
+import os
+exec(open(os.path.join(ROOT, "jobs/2026-11-26-a/shots/turkeykit.py")).read())
+reset(W, H, FPS, DUR, samples=SAMPLES, bloom=0.2, exposure=0.15)
+world_hdri("lounge", 0.35, backdrop=(0.9, 0.85, 0.75))
+plane(30, 30, (0, 0, 0), material=mat("straw", "#e2c26a", rough=0.95, noise_bump=0.4), name="floor")
+rnd = random.Random(4)
+for k in range(140):
+    cylinder(0.006, rnd.uniform(0.15, 0.35), (rnd.uniform(-3, 3), rnd.uniform(-1, 3), 0.01), (90, 0, rnd.uniform(0, 180)),
+             mat(f"str{k % 3}", ("#f0d27a", "#c9a24a", "#e8c060")[k % 3], rough=0.9), verts=6, bevel=0)
+plank = wood("#b5533c", "#8a3a2a", "barn", 4.0, 0.7)
+box((14, 0.2, 8), (0, 3.2, 4.0), material=plank, bevel=0)
+box((0.2, 8, 8), (-4.5, 0, 4.0), material=plank, bevel=0)
+box((1.4, 0.1, 1.0), (1.2, 3.08, 2.4), material=mat("winframe", "#f6efe2", rough=0.5), bevel=0.02)
+plane(1.25, 0.85, (1.2, 3.02, 2.4), (90, 0, 0), material=glow("#fff3cf", 3.0, "barnwin"))
+for k in range(3):
+    box((0.9, 0.7, 0.55), (-2.6 + k * 0.2, 2.2 - k * 0.1, 0.28 + k * 0.0), (0, 0, k * 8), mat("bale", "#d9b24a", rough=0.95), bevel=0.05)
+box((0.9, 0.7, 0.55), (-2.5, 2.2, 0.83), (0, 0, 4), mat("bale", "#d9b24a", rough=0.95), bevel=0.05)
+area_light((-3, -3, 4), (0, 1, 0.5), 900, 4, "#fff0dc", "key")
+area_light((1.2, 2.6, 2.4), (0, 0.8, 0.5), 400, 1.5, "#ffe2a8", "window")
+area_light((3, -2, 2), (0, 1, 0.5), 250, 4, "#dbe8ff", "fill")
+tk, pv = turkey(1.0, False, "ft")
+folded(tk, pv, 0, True)
+key(tk, 0, loc=(0, 1.0, 0), rot=(0, 0, -68), ease="LINEAR")
+key(tk, 0.55, loc=(0, 1.0, 0), rot=(0, 0, -68))
+folded(tk, pv, 0.6, False)
+flap(pv, DUR, period=0.16, up=70, down=-30, t0=0.6, t1=DUR * 0.8)
+key(tk, 1.1, loc=(0.05, 1.0, 0.1), rot=(0, -8, -68))
+key(tk, 1.5, loc=(0.1, 1.0, 0.13), rot=(0, -10, -66))
+key(tk, 1.9, loc=(0.15, 1.0, 0.0), rot=(0, 0, -64))
+key(tk, 2.0, loc=(0.15, 1.0, 0.0), rot=(0, 4, -64), scale=(1.06, 1.06, 0.92))
+key(tk, 2.2, loc=(0.15, 1.0, 0.0), rot=(0, 0, -64), scale=(1, 1, 1))
+folded(tk, pv, DUR * 0.82, True)
+key(tk, DUR, loc=(0.15, 1.0, 0.0), rot=(0, 0, -64))
+cam, tgt = camera((1.0, -2.0, 0.9), (0.05, 1.0, 0.55), lens=30, fstop=4.0)
+key(cam, 0, loc=(1.0, -2.0, 0.9)); key(cam, DUR, loc=(0.6, -1.0, 0.7))

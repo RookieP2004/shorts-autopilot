@@ -1,0 +1,941 @@
+{
+ "id": "2026-11-26-a",
+ "title": "Turkeys can't fly? Wild ones hit 55 mph 🦃",
+ "description": "Happy Thanksgiving! Wild turkeys can run up to 25 mph and fly in short bursts at up to 55 mph, often about 100 yards at a time, and every night they fly up into trees to roost. The turkey on your plate is a different story: farm turkeys are bred for bigger breasts and legs, weigh about 20-35 lb alive, and are too heavy to fly.\n\nSources: PBS Nature (wild turkey fact sheet); Live Science; Popular Science; National Wild Turkey Federation.",
+ "tags": [
+  "turkey",
+  "wild turkey",
+  "can turkeys fly",
+  "Thanksgiving",
+  "animals",
+  "birds",
+  "nature",
+  "myth busting",
+  "science explained"
+ ],
+ "hashtags": [
+  "#animals",
+  "#thanksgiving"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#animals",
+   "#wildturkey",
+   "#thanksgiving",
+   "#birds",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "myth-bust",
+  "topic": "can turkeys fly: wild turkeys run up to 25 mph and fly short bursts up to 55 mph (~100 yards), roost in trees at night; farm turkeys bred for bigger breasts/legs, 20-35 lb alive, can't fly",
+  "hook": "myth-bust",
+  "idea_source": "trending + viral-shaped: posted on US Thanksgiving Day (most viewers are American), a myth almost everyone believes, flipped with one number; lane animals and nature",
+  "lane": "animals and nature",
+  "role": "coach",
+  "explain": "debate",
+  "role_visual": "Coach Ved's locker room: teal lockers, bench with a football, a tactics board of X's and O's (the RS-07 chalk scene is that board), cap on in two scenes; two players in jerseys argue and he rules after 'rolling the tape'",
+  "styles": [
+   "blender-3d",
+   "locker-room",
+   "RS-07",
+   "hud",
+   "stamp",
+   "comic"
+  ],
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://www.pbs.org/wnet/nature/blog/wild-turkey-fact-sheet",
+   "https://www.livescience.com/32868-five-fascinating-turkey-truths.html",
+   "https://www.popsci.com/science/why-are-turkeys-so-big/",
+   "https://www.nwtf.org/content-hub/domestic-vs-wild-turkeys"
+  ],
+  "humour": {
+   "trend": "timeless US gym card (no rising US meme fit cleanly this week): \"farm turkey: all leg day, no wing day\"",
+   "beat": "deadpan",
+   "scene": 7
+  },
+  "claims": [
+   {
+    "claim": "wild turkeys run up to 25 mph and fly up to 55 mph",
+    "tag": "PROVEN",
+    "source": "https://www.pbs.org/wnet/nature/blog/wild-turkey-fact-sheet"
+   },
+   {
+    "claim": "turkey flights are short bursts, often around 100 yards",
+    "tag": "PROVEN",
+    "source": "https://www.popsci.com/science/why-are-turkeys-so-big/"
+   },
+   {
+    "claim": "wild turkeys fly up into trees to roost at night",
+    "tag": "PROVEN",
+    "source": "https://www.pbs.org/wnet/nature/blog/wild-turkey-fact-sheet"
+   },
+   {
+    "claim": "farm turkeys are bred for bigger breasts and legs and are too heavy to fly",
+    "tag": "PROVEN",
+    "source": "https://www.nwtf.org/content-hub/domestic-vs-wild-turkeys"
+   },
+   {
+    "claim": "farm turkeys weigh 20-35 lb alive at 12-16 weeks",
+    "tag": "PROVEN",
+    "source": "https://www.nwtf.org/content-hub/domestic-vs-wild-turkeys"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "TURKEYS *FLY?*",
+  "title_y": 0.2,
+  "title_size": 165,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#f2b04a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.2,
+  "bg_saturation": 1.3,
+  "tint": [
+   "#1c3f73",
+   "#e0702e"
+  ],
+  "tint_amount": 0.22,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-26-a/assets/plate_locker_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-26-a/assets/wild_turkey.png",
+    "x": 0.26,
+    "y": 0.45,
+    "w": 0.46,
+    "enter": "none",
+    "rotate": -8
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.62,
+    "y": 0.95,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-26-a/assets.py",
+ "scenes": [
+  {
+   "say": "Turkeys can't fly? *Wrong.* Wild ones hit *55 miles an hour*.",
+   "layers": [
+    {
+     "dur": 5.4,
+     "type": "blender",
+     "script": "jobs/2026-11-26-a/shots/a_fly.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "text",
+     "text": "MYTH: TURKEYS CAN'T *FLY*",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    },
+    {
+     "type": "stamp",
+     "text": "BUSTED",
+     "tone": "red",
+     "angle": -7,
+     "size": 72,
+     "x": 0.5,
+     "y": 0.29,
+     "at": 1.5,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "Half-time debate. Max swears turkeys *can't* fly.",
+   "transition": "slide_left",
+   "caption_y": 0.72,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.5,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-26-a/assets/plate_locker_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.8481,
+     "y": 0.5995,
+     "h": 0.3617,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "explain",
+     "x": 0.6315,
+     "y": 0.6093,
+     "h": 0.3904,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "regular",
+       "hair": [
+        "#2a1d17",
+        "short"
+       ],
+       "top": [
+        "#d6483e",
+        "tshirt"
+       ],
+       "bottom": [
+        "#f6efe2",
+        "shorts"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.1905,
+     "y": 0.6018,
+     "h": 0.3824,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "explain",
+       1.3
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.2646,
+       "y": 0.6018,
+       "scale": 1.0
+      },
+      {
+       "t": 1.1,
+       "x": 0.1905,
+       "y": 0.6018,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "rig_args": {
+      "wear": "cap"
+     }
+    }
+   ]
+  },
+  {
+   "say": "Rosa thinks they *can*. Coach? Roll the tape.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.72,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.1,
+      "focus": [
+       0.42,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.1,
+      "focus": [
+       0.58,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-26-a/assets/plate_locker_low.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.6292,
+     "y": 0.5596,
+     "h": 0.4297,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "shrug",
+       1.4
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "regular",
+       "hair": [
+        "#2a1d17",
+        "short"
+       ],
+       "top": [
+        "#d6483e",
+        "tshirt"
+       ],
+       "bottom": [
+        "#f6efe2",
+        "shorts"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "point",
+     "x": 0.9613,
+     "y": 0.5443,
+     "h": 0.4483,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "cheer",
+       1.3
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       1.3,
+       0.05,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.1664,
+     "y": 0.5704,
+     "h": 0.4604,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.6
+      ]
+     ],
+     "allow_outside_safe": true,
+     "rig_args": {
+      "wear": "cap"
+     }
+    }
+   ]
+  },
+  {
+   "say": "They run *25*, and fly *100-yard* bursts at *55*.",
+   "transition": "zoom",
+   "caption_y": 0.74,
+   "pad": 0.6,
+   "layers": [
+    {
+     "type": "look",
+     "look": "RS-07",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "at": 0.0,
+     "props": {
+      "title": "WILD TURKEY",
+      "lines": [
+       "RUN: 25 MPH",
+       "FLY: 55 MPH",
+       "@y:~100 YARDS A BURST"
+      ],
+      "answer": "THEY FLY"
+     }
+    }
+   ]
+  },
+  {
+   "say": "And every night, they flap up into *trees* to sleep.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "dur": 4.0,
+     "type": "blender",
+     "script": "jobs/2026-11-26-a/shots/b_roost.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "hud",
+     "label": "every night",
+     "text": "ROOST IN TREES",
+     "x": 0.5,
+     "y": 0.13,
+     "at": 0.4,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "green"
+    }
+   ]
+  },
+  {
+   "say": "But Max is half right. *Farm* turkeys can't.",
+   "transition": "cut",
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-26-a/assets/plate_locker_board.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.0
+      },
+      {
+       "t": 3.0,
+       "scale": 1.06
+      }
+     ]
+    },
+    {
+     "type": "image",
+     "path": "jobs/2026-11-26-a/assets/farm_turkey.png",
+     "x": 0.7,
+     "y": 0.5,
+     "w": 0.42,
+     "enter": "drop",
+     "at": 1.2,
+     "sfx": "pop"
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.3,
+     "y": 1.0,
+     "h": 0.72,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.3
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ]
+  },
+  {
+   "say": "They're bred so heavy, *20 to 35 pounds*, they can't take off.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "dur": 4.4,
+     "type": "blender",
+     "script": "jobs/2026-11-26-a/shots/c_farm.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "hud",
+     "label": "farm turkey",
+     "text": "20-35 LB",
+     "x": 0.5,
+     "y": 0.13,
+     "at": 0.5,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "red"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-26-a/assets/plate_locker_board.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "farm turkey: all leg day, *no wing day*",
+    "text_y": 0.2,
+    "sfx": "scratch"
+   }
+  },
+  {
+   "say": "Ruling: wild turkeys *fly*.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-26-a/assets/plate_locker_low.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "sad",
+     "x": 0.6292,
+     "y": 0.5596,
+     "h": 0.4297,
+     "enter": "none",
+     "acting": [
+      [
+       "sad",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "regular",
+       "hair": [
+        "#2a1d17",
+        "short"
+       ],
+       "top": [
+        "#d6483e",
+        "tshirt"
+       ],
+       "bottom": [
+        "#f6efe2",
+        "shorts"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "cheer",
+     "x": 0.9613,
+     "y": 0.5443,
+     "h": 0.4483,
+     "enter": "none",
+     "acting": [
+      [
+       "cheer",
+       0.2
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.4,
+       0.06,
+       0.4
+      ]
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "point",
+     "x": 0.1664,
+     "y": 0.5704,
+     "h": 0.4604,
+     "enter": "none",
+     "acting": [
+      [
+       "point",
+       0
+      ],
+      [
+       "warm",
+       1.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "hops": [
+      [
+       0.3,
+       0.05,
+       0.4
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "say": "The one on your plate? It *never* could.",
+   "transition": "cut",
+   "caption_y": 0.72,
+   "pad": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.5,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-26-a/assets/plate_locker_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "happy",
+     "x": 0.8481,
+     "y": 0.5995,
+     "h": 0.3617,
+     "enter": "none",
+     "acting": [
+      [
+       "happy",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "slim",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "top": [
+        "#f2b04a",
+        "tshirt"
+       ],
+       "bottom": [
+        "#34425c",
+        "shorts"
+       ],
+       "shoes": "#f6efe2"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.6315,
+     "y": 0.6093,
+     "h": 0.3904,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#c98e62",
+       "build": "regular",
+       "hair": [
+        "#2a1d17",
+        "short"
+       ],
+       "top": [
+        "#d6483e",
+        "tshirt"
+       ],
+       "bottom": [
+        "#f6efe2",
+        "shorts"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.1905,
+     "y": 0.6018,
+     "h": 0.3824,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "smirk",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "stamp",
+     "text": "MYTH BUSTED",
+     "tone": "green",
+     "angle": -6,
+     "size": 70,
+     "x": 0.5,
+     "y": 0.2,
+     "at": 0.5,
+     "sfx": "thud"
+    }
+   ]
+  }
+ ]
+}
