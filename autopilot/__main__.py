@@ -32,6 +32,7 @@ def main(argv=None):
     rp.add_argument("--license", required=True); rp.add_argument("--author", required=True)
     rp.add_argument("--frame", default="polaroid"); rp.add_argument("--caption", default=""); rp.add_argument("--out", required=True)
     rp.add_argument("--job", default=None); rp.add_argument("--seed", type=int, default=0)
+    pc = sub.add_parser("postcheck"); pc.add_argument("id")
     vr = sub.add_parser("variety"); vr.add_argument("--seed", type=int, default=None)
     lg = sub.add_parser("logline"); lg.add_argument("job"); lg.add_argument("--youtube-id", default="")
     th = sub.add_parser("thumbnail"); th.add_argument("job"); th.add_argument("--out")
@@ -68,6 +69,9 @@ def main(argv=None):
     elif args.cmd == "refphoto":
         from .refphoto import get
         print(get(args.name, args.license, args.author, args.frame, args.caption, args.out, args.job, args.seed))
+    elif args.cmd == "postcheck":
+        from .postcheck import main as pcm
+        raise SystemExit(pcm([args.id]))
     elif args.cmd == "variety":
         from .variety import report
         print(report(args.seed))

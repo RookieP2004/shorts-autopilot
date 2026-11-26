@@ -63,7 +63,8 @@ When the backbone does change, update `skill/SKILL.md` in the repo too, so the G
 2. **Connectors**: load the Zapier tools with ToolSearch ("zapier"). Check *YouTube: Upload Video* is enabled (in a review, also
    *YouTube: Make API GET Request* and the Google Docs actions *Get Document Content* and *Append Text to Document*);
    enable missing ones with Zapier's discover/enable tools. If Zapier isn't connected at all, stop and tell the owner.
-3. **Read the channel**: `channel/memory/bible.md`, the top entry of `insights.md`, `ideas.md`, and the last 30 lines of `log.md`.
+3. **Read the channel**: `channel/memory/lessons.md` first (mistakes that must never repeat, and the rule each one set), then
+   `channel/memory/bible.md`, the top entry of `insights.md`, `ideas.md`, and the last 30 lines of `log.md`.
    Then `channel/style.json` and `docs/job-spec.md`, and run `python -m autopilot characters`.
 
 ## 1. Consistency rules (never break these)
@@ -434,7 +435,13 @@ length must be ≤ 45 s (aim for 25-35 s: viewers stay ~10-19 s on average). Rea
       (`... instagram jobs/<id>/job.json --cover-url <thumb URL>`); if it fails again, mention the error in the report.
    Long videos (16:9) are not posted to Instagram.
 
-**i. Report.** Send the owner one SendUserMessage: title, YouTube link (and the Instagram Reel link), format and hook, the joke used (one line), and why you picked it (one line).
+**i. Postcheck, then report.** Run `python -m autopilot postcheck <id>`. It must print `POSTCHECK OK` (on YouTube, thumbnail
+set, Reel handled); fix whatever it lists before reporting. **Learn from every problem** (owner, 2026-11-26: "learn from
+problems like this, they should not repeat"): when anything goes wrong in a run, add an entry to `channel/memory/lessons.md`
+(what, real cause, rule), change the tooling or the skill so it can't happen again, and tell the owner in one line what
+was learned.
+
+**Report.** Send the owner one SendUserMessage: title, YouTube link (and the Instagram Reel link), format and hook, the joke used (one line), and why you picked it (one line).
 
 ## 3b. Manual run with the owner's one-off changes
 1. Do Produce mode (sections 3a–3i) for an extra slot, with id `YYYY-MM-DD-m1`, `-m2`, and so on, so it never takes a scheduled slot.
