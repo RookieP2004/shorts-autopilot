@@ -1,0 +1,756 @@
+{
+ "id": "2026-11-27-a",
+ "title": "Where do your returns actually go? 📦",
+ "description": "Americans sent back about $850 billion of merchandise in 2025 (NRF), roughly 16% of everything bought. Each return has to be shipped back, inspected, cleaned and repacked, which often costs more than the item is worth. Opened items rarely go back on the shelf as new; many are sold in bulk to liquidators and resellers, and experts estimate about a quarter are thrown away, nearly 6 billion pounds of landfill a year (Optoro estimate). Retailers say 9% of returns are fraudulent. The receipt costs in the video are illustrative.\n\nSources: National Retail Federation & Happy Returns, 2025 Retail Returns Landscape; NPR; Mental Floss.",
+ "tags": [
+  "returns",
+  "Black Friday",
+  "online shopping",
+  "where do returns go",
+  "retail",
+  "landfill",
+  "free returns",
+  "money",
+  "explained"
+ ],
+ "hashtags": [
+  "#blackfriday",
+  "#shopping"
+ ],
+ "instagram": {
+  "hashtags": [
+   "#money",
+   "#blackfriday",
+   "#onlineshopping",
+   "#returns",
+   "#explained"
+  ]
+ },
+ "meta": {
+  "format": "scale-shock",
+  "topic": "where returns go: US returns ~$850B in 2025 (NRF, 15.8% of sales); shipping + inspection + cleaning often costs more than the item; opened items rarely resold as new; liquidated in bulk; ~a quarter thrown away, ~6B lb landfill/yr (Optoro est.); 9% of returns fraudulent (NRF)",
+  "hook": "number-shock",
+  "idea_source": "trending + unique: posted on Black Friday (most viewers are American, the biggest shopping and returns season), wallet-first, a hidden economy few Shorts follow end to end; lane dark side",
+  "lane": "dark side of the real world",
+  "role": "detective",
+  "explain": "case file (follow one item)",
+  "role_visual": "Detective Ved with a badge and a gold magnifier at an inspection table with a case-file folder in the returns warehouse; he 'tails' one box and stamps CASE CLOSED",
+  "styles": [
+   "blender-3d",
+   "warehouse",
+   "RS-01",
+   "hud",
+   "stamp",
+   "comic"
+  ],
+  "characters": [
+   "ved",
+   "extra"
+  ],
+  "sources": [
+   "https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025",
+   "https://www.npr.org/2022/01/12/1072066943/from-living-rooms-to-landfills-some-holiday-shopping-returns-take-a-very-sad-path",
+   "https://www.mentalfloss.com/culture/business/where-online-shopping-returns-go"
+  ],
+  "humour": {
+   "trend": "timeless dry card (this week's rising US memes didn't fit the topic cleanly): the box: \"I was promised a shelf\"",
+   "beat": "deadpan",
+   "scene": 7
+  },
+  "claims": [
+   {
+    "claim": "US consumers returned about $850B (15.8% of sales) in 2025",
+    "tag": "PROVEN",
+    "source": "https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025"
+   },
+   {
+    "claim": "9% of all returns are fraudulent (retailer survey)",
+    "tag": "PROVEN",
+    "source": "https://nrf.com/media-center/press-releases/consumers-expected-to-return-nearly-850-billion-in-merchandise-in-2025"
+   },
+   {
+    "claim": "processing a return can cost more than the item is worth",
+    "tag": "PROVEN",
+    "source": "https://www.npr.org/2022/01/12/1072066943/from-living-rooms-to-landfills-some-holiday-shopping-returns-take-a-very-sad-path"
+   },
+   {
+    "claim": "opened items rarely go back on the shelf as new",
+    "tag": "PROVEN",
+    "source": "https://www.mentalfloss.com/culture/business/where-online-shopping-returns-go"
+   },
+   {
+    "claim": "many returns are sold in bulk to liquidators/resellers",
+    "tag": "PROVEN",
+    "source": "https://www.npr.org/2022/01/12/1072066943/from-living-rooms-to-landfills-some-holiday-shopping-returns-take-a-very-sad-path"
+   },
+   {
+    "claim": "about a quarter of returns are thrown away; ~6 billion lb landfill a year",
+    "tag": "THEORY (expert / Optoro estimate)",
+    "source": "https://www.npr.org/2022/01/12/1072066943/from-living-rooms-to-landfills-some-holiday-shopping-returns-take-a-very-sad-path"
+   },
+   {
+    "claim": "receipt costs ($8/$4/$5 for a $15 item)",
+    "tag": "ILLUSTRATIVE",
+    "source": "https://www.npr.org/2022/01/12/1072066943/from-living-rooms-to-landfills-some-holiday-shopping-returns-take-a-very-sad-path"
+   }
+  ]
+ },
+ "thumbnail": {
+  "title": "WHERE'S MY *RETURN?*",
+  "title_y": 0.2,
+  "title_size": 150,
+  "max_w": 0.95,
+  "blur": 14,
+  "glow": "#f2b04a",
+  "glow_x": 0.5,
+  "glow_y": 0.5,
+  "glow_strength": 1.2,
+  "bg_saturation": 1.3,
+  "tint": [
+   "#1c3f73",
+   "#e0702e"
+  ],
+  "tint_amount": 0.22,
+  "bg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-27-a/assets/plate_wh_wide.png",
+    "x": 0.5,
+    "y": 0.5,
+    "w": 1.0,
+    "enter": "none",
+    "blur": 0
+   }
+  ],
+  "fg": [
+   {
+    "type": "image",
+    "path": "jobs/2026-11-27-a/assets/returnbox.png",
+    "x": 0.26,
+    "y": 0.48,
+    "w": 0.42,
+    "enter": "none",
+    "rotate": -8
+   },
+   {
+    "type": "character",
+    "id": "ved",
+    "pose": "surprised",
+    "x": 0.62,
+    "y": 0.95,
+    "h": 0.95,
+    "enter": "none",
+    "acting": "none",
+    "talk": false,
+    "ground": false,
+    "allow_outside_safe": true
+   }
+  ]
+ },
+ "privacy": "public",
+ "speaker": "ved",
+ "assets_script": "jobs/2026-11-27-a/assets.py",
+ "scenes": [
+  {
+   "say": "Americans sent back *850 billion dollars* of stuff in one year.",
+   "layers": [
+    {
+     "dur": 4.8,
+     "type": "blender",
+     "script": "jobs/2026-11-27-a/shots/a_hook.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "text",
+     "text": "*850 BILLION* DOLLARS SENT BACK",
+     "font": "display",
+     "x": 0.5,
+     "y": 0.15,
+     "size": 96,
+     "max_w": 0.88,
+     "stroke": "#0b0f12",
+     "stroke_width": 7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "say": "Where does it go? I tailed one box.",
+   "transition": "slide_left",
+   "caption_y": 0.72,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.0,
+      "zoom": 1.07,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-27-a/assets/plate_wh_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "idle",
+     "x": 0.729,
+     "y": 0.5431,
+     "h": 0.2164,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "hold",
+       1.0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "cap",
+        "#f2b04a"
+       ],
+       "top": [
+        "#f28c28",
+        "vest"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "idle",
+     "x": 0.3382,
+     "y": 0.5661,
+     "h": 0.2834,
+     "enter": "none",
+     "acting": [
+      [
+       "idle",
+       0
+      ],
+      [
+       "think",
+       1.2
+      ]
+     ],
+     "allow_outside_safe": true,
+     "keys": [
+      {
+       "t": 0,
+       "x": -0.0932,
+       "y": 0.5661,
+       "scale": 1.0
+      },
+      {
+       "t": 1.1,
+       "x": 0.3382,
+       "y": 0.5661,
+       "scale": 1.0,
+       "walk": true
+      }
+     ],
+     "rig_args": {
+      "wear": "badge"
+     }
+    }
+   ]
+  },
+  {
+   "say": "It rides back to a warehouse to get *checked*.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "dur": 3.6,
+     "type": "blender",
+     "script": "jobs/2026-11-27-a/shots/b_belt.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "hud",
+     "label": "step 1",
+     "text": "INSPECTION",
+     "x": 0.5,
+     "y": 0.13,
+     "at": 0.4,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "blue"
+    }
+   ]
+  },
+  {
+   "say": "Shipping, checking, cleaning, repacking. Often it costs *more* than it's worth.",
+   "transition": "zoom",
+   "caption_y": 0.74,
+   "pad": 0.8,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-27-a/assets/plate_wh_table.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 14,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.1
+      },
+      {
+       "t": 5.0,
+       "scale": 1.18
+      }
+     ]
+    },
+    {
+     "type": "look",
+     "look": "RS-01",
+     "x": 0.5,
+     "y": 0.42,
+     "w": 0.9,
+     "h": 0.6,
+     "at": 0.0,
+     "props": {
+      "title": "COST TO RESELL",
+      "subtitle": "one $15 return",
+      "items": [
+       [
+        "Shipping back",
+        8
+       ],
+       [
+        "Inspection",
+        4
+       ],
+       [
+        "Clean + repack",
+        5
+       ]
+      ],
+      "currency": "$",
+      "total_label": "TOTAL",
+      "note": "ILLUSTRATIVE"
+     }
+    }
+   ]
+  },
+  {
+   "say": "Seal broken? It rarely goes back on the shelf as *new*.",
+   "transition": "cut",
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-27-a/assets/plate_wh_table.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.0
+      },
+      {
+       "t": 3.2,
+       "scale": 1.06
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.72,
+     "y": 1.0,
+     "h": 0.7,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "point",
+       1.2
+      ]
+     ],
+     "ground": false,
+     "allow_outside_safe": true
+    },
+    {
+     "type": "stamp",
+     "text": "NOT NEW",
+     "tone": "red",
+     "angle": -7,
+     "size": 70,
+     "x": 0.4,
+     "y": 0.18,
+     "at": 1.6,
+     "sfx": "thud"
+    }
+   ]
+  },
+  {
+   "say": "So lots get *auctioned off* in bulk to resellers.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "dur": 3.6,
+     "type": "blender",
+     "script": "jobs/2026-11-27-a/shots/c_pallet.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "hud",
+     "label": "liquidation",
+     "text": "SOLD BY THE PALLET",
+     "x": 0.5,
+     "y": 0.13,
+     "at": 0.4,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "gold"
+    }
+   ]
+  },
+  {
+   "say": "About a *quarter*? Tossed. Nearly *6 billion pounds* a year.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.74,
+   "layers": [
+    {
+     "dur": 4.4,
+     "type": "blender",
+     "script": "jobs/2026-11-27-a/shots/d_dump.py",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "h": 1.0,
+     "enter": "none",
+     "fps": 15,
+     "res": 0.45,
+     "samples": 20
+    },
+    {
+     "type": "hud",
+     "label": "landfill, est.",
+     "text": "~6 BILLION LB / YEAR",
+     "x": 0.5,
+     "y": 0.13,
+     "at": 1.4,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "red"
+    }
+   ]
+  },
+  {
+   "dur": 1.6,
+   "transition": "cut",
+   "captions": false,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-27-a/assets/plate_wh_table.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 10,
+     "keys": [
+      {
+       "t": 0,
+       "scale": 1.2
+      }
+     ]
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "deadpan",
+     "x": 0.5,
+     "y": 0.8,
+     "h": 1.06,
+     "enter": "none",
+     "acting": "none",
+     "ground": false,
+     "allow_outside_safe": true
+    }
+   ],
+   "beat": {
+    "kind": "deadpan",
+    "at": 0.1,
+    "dur": 1.45,
+    "who": "ved",
+    "text": "the box: \"I was promised a *shelf*\"",
+    "text_y": 0.2,
+    "sfx": "scratch"
+   }
+  },
+  {
+   "say": "And retailers say *9 percent* of returns? Fraud.",
+   "transition": "cut",
+   "sfx": "whoosh",
+   "caption_y": 0.72,
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-27-a/assets/plate_wh_low.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "surprised",
+     "x": 0.95,
+     "y": 0.5737,
+     "h": 0.3106,
+     "enter": "none",
+     "acting": [
+      [
+       "surprised",
+       0.6
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "cap",
+        "#f2b04a"
+       ],
+       "top": [
+        "#f28c28",
+        "vest"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "serious",
+     "x": 0.4083,
+     "y": 0.5445,
+     "h": 0.3449,
+     "enter": "none",
+     "acting": [
+      [
+       "serious",
+       0
+      ],
+      [
+       "point",
+       1.0
+      ]
+     ],
+     "allow_outside_safe": true
+    },
+    {
+     "type": "hud",
+     "label": "NRF 2025",
+     "text": "9% FRAUD",
+     "x": 0.5,
+     "y": 0.13,
+     "at": 0.8,
+     "enter": "pop",
+     "sfx": "click",
+     "tone": "red"
+    }
+   ]
+  },
+  {
+   "say": "Case closed. A *free* return is never really free.",
+   "transition": "cut",
+   "caption_y": 0.72,
+   "pad": 0.7,
+   "camera": {
+    "keys": [
+     {
+      "t": 0,
+      "zoom": 1.08,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "t": 3.5,
+      "zoom": 1.0,
+      "focus": [
+       0.5,
+       0.5
+      ]
+     }
+    ]
+   },
+   "layers": [
+    {
+     "type": "image",
+     "path": "jobs/2026-11-27-a/assets/plate_wh_wide.png",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.0,
+     "enter": "none",
+     "blur": 0
+    },
+    {
+     "type": "character",
+     "id": "extra",
+     "pose": "shrug",
+     "x": 0.729,
+     "y": 0.5431,
+     "h": 0.2164,
+     "enter": "none",
+     "acting": [
+      [
+       "shrug",
+       0
+      ]
+     ],
+     "talk": false,
+     "rig_args": {
+      "outfit": {
+       "skin": "#8d5a3b",
+       "build": "regular",
+       "hair": [
+        "#1a1410",
+        "bun"
+       ],
+       "hat": [
+        "cap",
+        "#f2b04a"
+       ],
+       "top": [
+        "#f28c28",
+        "vest"
+       ],
+       "bottom": [
+        "#34425c",
+        "trousers"
+       ],
+       "shoes": "#25262b"
+      }
+     },
+     "allow_outside_safe": true
+    },
+    {
+     "type": "character",
+     "id": "ved",
+     "pose": "explain",
+     "x": 0.3382,
+     "y": 0.5661,
+     "h": 0.2834,
+     "enter": "none",
+     "acting": [
+      [
+       "explain",
+       0
+      ],
+      [
+       "smirk",
+       2.0
+      ]
+     ],
+     "allow_outside_safe": true,
+     "rig_args": {
+      "wear": "badge"
+     }
+    },
+    {
+     "type": "stamp",
+     "text": "CASE CLOSED",
+     "tone": "green",
+     "angle": -6,
+     "size": 70,
+     "x": 0.5,
+     "y": 0.2,
+     "at": 0.5,
+     "sfx": "thud"
+    }
+   ]
+  }
+ ]
+}

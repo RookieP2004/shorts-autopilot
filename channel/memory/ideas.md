@@ -42,6 +42,9 @@ physical thing you can picture; economics only wallet-first. Dark-files at most 
 - [build-it | human upgrades] A robotic third thumb rewires your brain · UCL's Third Thumb (2021): wearers learned it in days, and the brain's map of the hand shifted; runner-up 2026-11-24 · https://www.ucl.ac.uk/news/2021/may/robotic-third-thumb-use-can-alter-brain-representation-hand
 - [big-question | animals and nature] Why do cats' eyes glow in the dark? · the tapetum lucidum mirror sends light through the retina twice; cats need ~1/6 of our light; runner-up 2026-11-24 · https://www.allaboutvision.com/eye-care/pets-animals/cat-vision/
 
+- [scale-shock | dark side of the real world] How big is the fake-shop scam season? · Black Friday fake stores and lookalike sites; documentary view, protective, calm title; runner-up 2026-11-27 · https://money.com/black-friday-scams-fake-online-stores/
+- [myth-bust | money and power] "Black Friday has the year's best prices" · price-tracking studies on pre-sale price bumps; wallet-first; runner-up 2026-11-27 · https://www.nrf.com/research/2025-retail-returns-landscape
+
 ## Examples of the new kinds (owner, 2026-11-13)
 These are only **examples of the type** of video the owner means, not a list that must be made. Use them as inspiration for
 fresh topics of the same kind; pick one only if it wins on the topic rule (unique / trending / viral-shaped) like any other idea.
