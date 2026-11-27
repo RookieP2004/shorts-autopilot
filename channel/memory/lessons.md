@@ -46,3 +46,9 @@ tells the owner what it learned. The owner's words (2026-11-26): "learn from pro
 - **Cause:** amounts were passed as strings ("$8") and the currency prop was left at its ₹ default.
 - **Rule:** RS-01 `items` amounts are plain numbers and `currency` is set explicitly ("$" for US-facing Shorts); always pull
   a frame from the look scene before posting.
+
+## 2026-11-22 to 11-27: posting time set from the wrong data
+- **What:** Shorts were moved to ~13:30 IST, which the audience heatmap shows is one of the quietest times for our viewers.
+- **Cause:** the time was chosen from "views by posting hour", which mixed the first week's strongest topics with the hour.
+- **Rule:** choose posting times from YouTube Studio's "When your viewers are on YouTube" heatmap (audience activity), not
+  from a few videos' view counts; re-check it in the weekly review.

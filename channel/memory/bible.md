@@ -282,7 +282,10 @@ Every factual claim is checked with a search in the same run, with sources in `m
   2027-03-14, then ET + 9:30: re-check the times then).
 - Spacing rule (owner, 2026-11-12): at least ~5 hours between Shorts. Our first week showed it: the first Short after an
   18-hour gap always got 800-1,400 views, while Shorts posted 1-3 hours after the previous one got 4, 86, 164 and 565.
-- Runs start early enough for real moving 3D (slot a 11:06 IST) and **post as soon as the gate passes**, in the same run; never wait
+- **Posting times from the audience heatmap (owner, 2026-11-27): viewers are on YouTube most at 18:00-23:59 IST (peak Sat
+  19-22, Sun evening), least at 12:00-17:59; 56.6% US.** Slot a starts 13:06 and goes live ~15:00-17:30, just before the
+  peak; b 16:36, c 21:06. This replaces the 11-22 midday test (that data mixed topic with time).
+- Runs start early enough for real moving 3D and **post as soon as the gate passes**, in the same run; never wait
   for a later time (2026-11-25: a run told to wait ended without posting).
 - **Times moved (owner, 2026-11-22, from his YouTube Studio view by posting hour: ~1,300 views for 13:00-14:30 IST posts,
   ~1,200-1,360 for 18:30-20:00, ~1,000-1,150 for 22:30-23:30).** Shorts now go live at about **13:30 IST** (slot a = the
@@ -319,6 +322,7 @@ tragedy, crude jokes, real people's photos, copied meme images or audio.
 ## 12. Change log
 | date | section | change | evidence |
 |---|---|---|---|
+| 2026-11-27 | 10 | Slot a starts 13:06 (live ~15:00-17:30, before the 18:00-23:59 IST viewer peak); b 16:36; c 21:06; midday test dropped | owner's 'When your viewers are on YouTube' heatmap + geography (US 56.6%) |
 | 2026-11-23 | 3, 10 | The bar = the Wi-Fi Short: render gate (shots every <=3.5 s, >= 8 s moving 3D, <= 2 text pieces, role visible, 2-word captions); caption default 2 words at y 0.70; runs start ~6 h early | owner on the 11-23 sugar Short: "is it really the improved version?" |
 | 2026-11-22 | 10 | Slot times: a ~13:30 IST (run 12:36), b ~19:00 (18:06), c ~23:30 (22:36); Saturday's slot a skips by date on the free plan; review re-checks times after 2 weeks | owner's YouTube Studio data by posting hour |
 | 2026-11-22 | 11 | Humour: American internet trends first (US meme formats, phrases, slang rising this week); timeless card as fallback | owner: "majority of audience is from America" |

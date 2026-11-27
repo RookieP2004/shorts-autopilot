@@ -2,6 +2,15 @@
 
 The weekly review writes a new entry at the top: date · data window · findings with numbers · decisions · next week's experiment.
 
+## 2026-11-27 (owner's YouTube Studio: viewer heatmap + geography, last 28 days)
+- When viewers are on YouTube (IST): peak 18:00-23:59 every day, brightest Sat 19:00-22:00, strong Sun evening and Sun/Mon
+  00:00-01:00, Sat/Sun mornings 06:00-09:00 fair; the quietest block is 12:00-17:59 (Tue 17:00 the exception).
+- Geography (views): US 56.6%, Philippines 5.7%, India 4.7%, Indonesia 3.7%, UK 1.4%, Malaysia 1.1%, Australia, Turkiye,
+  Vietnam 0.8% each. SE Asia together ~11% (their evening overlaps our 16:00-20:00 IST window).
+- Decision: Shorts go live ~15:00-17:30 IST (US 5:30-8 AM ET, just before the evening IST / US-morning peak); the
+  Saturday long video's ~20:00 IST release already sits in the strongest window. The 11-22 midday move is dropped: that
+  data mixed the first week's best topics with the hour.
+
 ## 2026-11-22 (owner's YouTube Studio overview, all time)
 - Totals: 34,295 views, 125.1 watch hours, +38 subscribers; long-form impressions 2,849 at 3.12% CTR.
 - Best Shorts: blue blood 1,466 (54.7% stayed, 0:23), 30 trillion cells 1,365 (64.4%), 10% brain 1,361 (51.3%), Great Wall

@@ -304,9 +304,13 @@ Leave it null until they have read it off the billing page; never guess it. If t
 (Zapier may pro-rate it), lower `zapier.plan_tasks` for that cycle or run `budget --sync`, and tell the owner.
 
 ## 3. Produce mode (unattended, one video)
-Slots (live times from the owner's YouTube Studio data, 2026-11-22; each run starts earlier, at 11:06 / 13:06 /
-17:36, so there is time for real moving 3D, and posts as soon as it passes the gate): `a` ~13:30 IST (the regular daily Short), `b` ~19:00 and `c` ~23:30 IST
-(bonus: only near the end of the Zapier billing cycle, section 3c). The slot id is `YYYY-MM-DD-<slot>`, using the IST date. Never post the same format three
+Slots (owner's YouTube Studio data, 2026-11-27: "When your viewers are on YouTube" shows the peak at 18:00-23:59 IST every
+day, strongest Sat 19:00-22:00 and Sun evening, and the quietest hours 12:00-17:59; 56.6% of views are from the US, then
+the Philippines 5.7%, India 4.7%, Indonesia 3.7%). Runs start at 13:06 / 16:36 / 21:06 IST and post as soon as they pass
+the gate, so the daily Short goes live ~15:00-17:30, 1-3 h before the evening peak (time to process and get its first test
+views as US mornings start); `a` = the regular daily Short, `b` (~18:00-20:30) and `c` (~22:30-01:00) are bonus slots
+(only near the end of the Zapier billing cycle, section 3c). YouTube says publish time doesn't directly change a video's
+long-term performance, so never delay a ready video to hit a time. The slot id is `YYYY-MM-DD-<slot>`, using the IST date. Never post the same format three
 days in a row, nor the same format twice on one day. If `log.md` already has that id, or `jobs/<id>/` exists in the repo, the slot is done. Stop.
 **Budget first:** run `python -m autopilot budget --need upload` before researching. If it exits 3, don't make the video;
 send the owner one SendUserMessage saying today's Short was skipped because the Zapier budget is used up, and stop.
@@ -319,7 +323,7 @@ a new shot every 2-4 s (at least one shot per 3.5 s), Ved coming and going betwe
 at once besides the captions (no headline + chips + stamps + cards piled together), clean 2-word captions low on the screen
 (the style default since 2026-11-23), the role actually **visible** (a set, a prop or a wardrobe piece, named in
 `meta.role_visual`), and the dynamic voice-first mix. Every render prints `gate: PASS` or `gate: FAIL; ...`
-(`autopilot/director.py gate`). **Never post on a FAIL**: fix and re-render. Time is there for it: slot a starts at 11:06 IST,
+(`autopilot/director.py gate`). **Never post on a FAIL**: fix and re-render. Time is there for it: slot a starts at 13:06 IST,
 so a run has hours. Render the moving 3D first (Cutaway if the owner's install is present, else animated Blender shots at
 ~7 s a frame: 10 s of shots is about 30 minutes; run them with `nohup` and poll), then the edit. **Upload as soon as the
 gate passes, in the same run. Never wait for a later time and never end the run with a rendered video that isn't posted**
@@ -547,8 +551,8 @@ Slot id `YYYY-MM-DD-L` (IST date). If `log.md` already has it, stop.
 
 ## 5. Scheduled tasks
 Created in setup with `create_trigger` (time zone Asia/Calcutta, `requires_local_device` false):
-- Production slot a, daily 11:06 (posts when ready, about 12:00-15:00): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
-- Bonus slots b and c, daily 13:06 and 17:36 (live ~19:00 and ~23:30): "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
+- Production slot a, daily 13:06 (posts when ready, about 15:00-17:30, before the 18-23h IST peak): "Use the shorts-autopilot skill in Produce mode for today's slot `a` (IST date). Post one Short."
+- Bonus slots b and c, daily 16:36 and 21:06 (post ~18:00-20:30 and ~22:30-01:00): "Use the shorts-autopilot skill: bonus slot `<b|c>` (IST date). Check
   `budget --bonus` first and stop quietly if it is 0."
 - Review, Sunday 10:20: "Use the shorts-autopilot skill in Review mode."
 - Deep Dive, Saturday 19:56 (live ~21:30): "Use the shorts-autopilot skill in Deep Dive mode (slot `L`, IST date). Post one long video."
