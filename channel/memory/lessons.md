@@ -40,3 +40,9 @@ tells the owner what it learned. The owner's words (2026-11-26): "learn from pro
 - **Cause:** the 10-minute thumbnail wait was skipped when posting outside the normal run, then forgotten.
 - **Rule:** any upload (scheduled, manual or a rescue) is not finished until the thumbnail is set 10-15 minutes later and
   the Reel is handled. `python -m autopilot postcheck <id>` must print `POSTCHECK OK` before the final report.
+
+## 2026-11-27: the RS-01 receipt showed "₹NaN" in the first render (caught before posting)
+- **What:** the receipt look printed ₹NaN for every amount.
+- **Cause:** amounts were passed as strings ("$8") and the currency prop was left at its ₹ default.
+- **Rule:** RS-01 `items` amounts are plain numbers and `currency` is set explicitly ("$" for US-facing Shorts); always pull
+  a frame from the look scene before posting.
