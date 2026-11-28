@@ -169,8 +169,10 @@ fresh topics of the same kind; pick one only if it wins on the topic rule (uniqu
 - [big-question | money and power] Why did the Roman Empire fall? Follow the money · coin debasement, silver from 90% to under 5% · verify
 - [big-question | money and power] Who owns the Moon? · the Outer Space Treaty, the 2020s mining race · verify
 - [wild-story | history's wild stories] The man who survived both atomic bombs · Tsutomu Yamaguchi (name card, no face photo) · verify
+- [wild-story | history's wild stories] The 1910 'comet pills' panic as a versus (people vs a comet tail that couldn't hurt them) · runner-up 2026-11-28 · https://en.wikipedia.org/wiki/Halley%27s_Comet
+- [scale-shock | animals and nature] An emu can sprint ~50 km/h on 3 toes · how its legs work like springs; follow-up to the Emu War Short (verify speed) · runner-up 2026-11-28 · verify
+- [wild-story | history's wild stories] The Great Stink of 1858: London's smell built its sewers · runner-up 2026-11-28 · https://en.wikipedia.org/wiki/Great_Stink
 - [wild-story | history's wild stories] The dancing plague of 1518 · a town that couldn't stop dancing · verify
-- [wild-story | history's wild stories] The Great Emu War · soldiers vs birds, the birds won · verify
 - [wild-story | history's wild stories] Penicillin was found because someone left a dish out · Fleming's holiday mould · verify
 - [build-it | engineering and megaprojects] How to build a city on Mars · radiation, pressure, water from ice, why underground · verify
 - [build-it | engineering and megaprojects] How to build a truly unsinkable ship · compartments, why the Titanic's weren't sealed at the top · verify
